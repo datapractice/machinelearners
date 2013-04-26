@@ -1,0 +1,38 @@
+# call for 4s panel
+
+Machine learning (ML) is so pervasive today that you probably use
+applications based on it many times without knowing it. It enables
+search engines, spam detectors, video tracking systems, self-driving
+cars, automated trading, and credit card fraud detection. ML
+technologies help to settle disputes in sports, achieve situational
+awareness in robotics, and pick the right novel for your reading
+pleasure. Economists Brynjolfsson and McAfee (2011) suggest that the
+next few decades will see rapid advancements in the power of machines;
+the nature and political economy of work will thus be irrevocably
+transformed. They cite as evidence the recent advances in machine
+translation (e.g. Google) and software agents (e.g. ?Watson??). These
+tools are the result of ML practices involving large amounts of Big
+Data and computing power.
+
+This panel is comprised of empirical and theoretical contributions
+that deepen our understanding of the politics and values of ML
+practices.  We welcome, but not exclusively, discussions of questions
+like:
+
+* How does ML research exist along with imaginations of people,
+societies, work and workplaces?
+* How have different fields within and outside computer science --
+language translation, computer vision, computational neuroscience and
+genomics, theoretical physics -- used ML?
+* How does the work of ML ?theoreticians?? differ from those who
+practice "applied" ML?
+* Classifying is a political act (Bowker/Star 1999). As classifiers,
+what kind of values and assumptions are inscribed into ML systems?
+* What kinds of realities do these systems enact?
+* Contrary to what the term ?machine learning?? suggests, doing ML
+actually requires a lot of ?human intuition??. The system's designer
+must specify how the data is to be represented and the mechanisms used
+to model the data. How can we grasp practices such as calibrating
+sensors, tinkering with parameters, and adjusting models?
+* What methodological innovations would be needed to study ML
+practices empirically?
