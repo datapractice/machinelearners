@@ -113,7 +113,7 @@ In STS, work on calculation [@callon_qualculation_2005], data practice [@edwards
 
 #### Key examples: Eulerian motion pulse detection; machine vision- Google's cat;
 
-The introduction will begin with a several relatively straight-forward and accessible  examples drawn from a variety of fields -- handwriting recognition, face recognition, social media trend 'nowcasting', finance, security, robotics, and cancer prognosis. It will highlight these examples as symptoms of the wide-ranging investments in knowledge, control, and decision associated with data flows, and at the same time, suggest how these tracking some of the transformations  might elicit changes in how humanities and social science researchers understand their own work. 
+The introduction will begin with a several relatively straight-forward and accessible  examples drawn from a variety of fields over the last decade or so -- handwriting recognition, face recognition, social media trend 'nowcasting', finance, security, autonomous robotics [@thrun_stanley_2006], and cancer prognosis. It will highlight these examples as symptoms of the wide-ranging investments in knowledge, control, and decision associated with data flows, and at the same time, suggest how these tracking some of the transformations  might elicit changes in how humanities and social science researchers understand their own work. 
 
 The entry point for the wider questions in the book will come from burgeoning debates about the promise of data. These include the notorious 'end of theory' prediction (Chris Anderson, _Wired_ magazine, 2008), and the many claims and controversies about data analytics, machine learning and the 'power of big data.'
 
