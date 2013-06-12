@@ -1,11 +1,6 @@
-ggplot2
-RCurl
-bitops
-methods
-knitr
-stats
-graphics
-grDevices
-utils
-datasets
+animation
 base
+bitops
+ggplot2
+knitr
+RCurl

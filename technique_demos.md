@@ -147,4 +147,14 @@ ex2plot + geom_abline(intercept = theta[1], slope = theta[2])
 ![plot of chunk gradient_descent_matrix](figure/gradient_descent_matrix.png) 
 
 
+### gradient descent animation
+
+
+```
+## LaTeX document created at: /tmp/RtmpKroe66/test.tex
+```
+
+```
+## successfully compiled: pdflatex test.tex
+```
 
