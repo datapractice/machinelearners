@@ -1,0 +1,230 @@
+# A praxiography of machine learning
+
+## Overview
+
+- reconstruction vs problematization -- Rabinow
+- data: its giveness, abstraction and actuality
+    - the case of iris (science), digits (transactions), spam (media) and kittens -- in that order
+- practice and writing about practice - developing Mol
+    - observant participation -- developing Wacquant; participating by observing
+    - writing recursively -- developing Kelty w.r.t subjects
+    - implementation as a practice -- the executable paper 
+- Implementing machine learning
+    - the case of R -- the scientific
+    - the case of Python -- the business/industry
+    - the case of javascript -- popular culture
+- computation -- psychic engagement - Wilson
+- convergence and learning: for fitting a line; but then for choosing which features to use to learn
+- learning about learning -- coursera
+- things to include:
+    - my R books
+    - the architecture of CRAN
+    - knitr/ipython notebooks - executable
+    - folding/plying
+
+## Quotes to use
+
+    >The main point of this description is the concept of actuality as something that matters, by reason of its own self-enjoyment, which includes enjoyment of others and transitions towards the future. Whitehead, Modes, 161
+
+    >But this enhancement of energy presupposes that the abstraction is preserved with its adequate relevance to the concrete sense of value-attainment from which it is derived. In this way, the effect of the abstraction stimulates the vividness and depth of the whole of experience. 169
+
+    >Matter-of-fact is an abstraction, arrived at by confining thought to purely formal relations which then masquerade as the final reality. 25
+
+    >A feeling in which the forms exemplified in the datum concern geometrical, straight, and flat loci will be called a 'strain.' In a strain, qualitative elements, other than the geometrical forms, express themselves as qualities implicated in those forms Whitehead,  PR, 310
+
+    >Sometimes machines are the very means by which we can stay alive psychically, and they can  just as readily be a means for affective expansion and amplification as for affective attenuation. This is especially the case of computational machines. 30
+
+## Introduction
+
+The broad project of artificial intelligence, at least as envisaged in its 1960s-1970s heydey, is today largely regarded as a failure. There is no general, well-rounded artificial intelligence in existence. But in the course of its failure, many interesting problems were generated. [TBA - references on the history of AI] The field of machine learning might be seen as one such offshoot. The so-called 'learning problem' and the theory of learning machines was developed largely by researchers in the 1960-1970s based on work already done in the 1950s on learning machines such as the perceptron, the  neural network model developed by the psychologist Frank Rosenblatt in the 1950s [@rosenblatt_perceptron:_1958]. Drawing on McCulloch-Pitts model of the neurone, Rosenblatt implemented the perceptron, which today would be called a single-layer neural network on a computer at the Cornell University Aeronautical Laboratory in 1957. As Vladimir Vapnik, a leading machine learning theorist, observes: 'the perceptron was constructed to solve pattern recognition problems; in the simplest case this is the problem of constructing a rule for separating data of two different categories using given examples' [@vapnik_nature_1999, 2]. While computer scientists in artificial intelligence of the time, such as Marvin Minsky and Seymour Papert, were sceptical about the capacity of the perceptron model to distinguish  or 'learn' different patterns [@minsky_perceptron:_1969], later work showed that perceptrons could 'learn universally.' For present purposes, the key point is not that neural networks have turned out several decades later to be extremely powerful algorithms in learning to distinguish patterns, and that intense research in neural networks has led to their ongoing development and increasing sophistication in many 'real world' applications (see for instance, for their use in sciences [@hinton_reducing_2006], or in commercial applications such as drug prediction[@dahl_deep_2012]). Rather, the important point is that it began to introduce learning machines as an ongoing project in which trying to understand what machines can learn, and to predict how they will classify or predict became central concerns. At the same time, and less visibly, the proliferation of implementations and applications of techniques derived from artificial intelligence and adjacent scientific disciplines gathered pace. 
+
+In describing these techniques, I'm not attempting to provide any detailed history of their development. For the most part, I leave controversies about the techniques to one side. Also, in describing these developments, I focus mainly on what happens from the 1980s onwards. Rather than history or controversies, I focus on implementations, and the many configurational shifts associated with their implementations. While many of the machine learning techniques I discuss have much longer lineages (in some cases, runnning back to the 1930s), machine learning techniques begin to circulate much more widely in the 1980s as a result of personal computers, and then in the mid-1990s, the internet. The proliferation of programming languages such as FORTRAN, C, C++, Pascal, then Perl, Java, Python and R, and computational scripting environments such as Matlab, multiplied the paths along which  implementation of machine learning techniques could proceed. For instance, a  perceptron that 'learns' the binary logical operation NAND (Not-AND) is  expressed in twenty lines of python code on the Wikipedia 'Perceptron' page [@perceptron_2013]. 
+
+```{r perceptron, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup', engine='python' }
+    
+    threshold = 0.5
+    learning_rate = 0.1
+    weights = [0, 0, 0]
+    training_set = [((1, 0, 0), 1), ((1, 0, 1), 1), ((1, 1, 0), 1), ((1, 1, 1), 0)]
+     
+    def dot_product(values):
+        return sum(value * weight for value, weight in zip(values, weights))
+     
+    while True:
+        print '-' * 60
+        error_count = 0
+        for input_vector, desired_output in training_set:
+            print weights
+            result = dot_product(input_vector) > threshold
+            error = desired_output - result
+            if error != 0:
+                error_count += 1
+                for index, value in enumerate(input_vector):
+                    weights[index] += learning_rate * error * value
+        if error_count == 0:
+            break
+ ```
+
+While perceptrons and neural networks are the topic of a later chapter, the typical features of this code as the implementation of a machine learning algorithm are the presence of the 'learning rate', a 'training_set,' 'weights', an 'error count', a loop function that  multiplies values ('dot_product'). Some of the terms present in the code bear the marks of the theory of learning machines that we will discuss. But much of the code here is much more familiar, generic programming. It defines variables, sets up data structures (lists of numerical values), checks conditions, loops through statements or prints results. Executing this code (by pasting it into a python terminal) produces several dozen lines of numbers that are initially different to each other, but that gradually converge on the same values (see printout). These numbers are the 'weights' of the nodes of the perceptron as it iteratively learns to recognise patterns in the input values. None of the workings of the perceptron need concern us at the moment. It is a typical machine learning algorithm, almost always included in ML textbooks and usually taught in introductory ML classes.  Perhaps more strikingly than its persistence as an algorith over half a century, the implementation of the whole algorithm in twenty lines of code on a Wikipedia page suggests the mobility of these methods. What required the resources of a major research engineering laboratory in the 1950s can be re-implemented by a cut and paste operation between wikipedia pages and a terminal window on a laptop in 2013. This is now a familiar observation, and perhaps not very striking at all. But the question of who implements perceptrons or neural networks, and where they implement them today is rather more interesting. 
+
+
+## Notion of praxiography: where practices are the feature
+
+What would we learn by studying the proliferation of implementations of artificial intelligence or machine learning algorithms rather than their history or the controversies associated with them? The question that guides much of this book is how to live with machine learning? This is a largely affirmative question, rather than a critical one. I am looking for ways of thinking with machine learning. Several general  possibilities present themselves here. 
+
+Science studies scholars such as Anne-Marie Mol and John Law have long urged the need to keep practice together with ontology. Towards the beginning of _The Body Multiple: Ontology in Medical Practice_[@TBA], Mol writes:
+
+>If it is not removed from the practices that sustain it, reality is multiple. This may be read as a description that beautifully fits the facts. But attending to the multiplicity of reality is also an act. It is something that may be done – or left undone [@mol_body_2003, 6]
+
+Mol's work offers a cogent case for developing accounts of what is real steeped in the practices that make it real. Similar affirmations of the sustaining role of practice can be found in many parts of social sciences and humanities. So for the first part, looking at implementations and the flow of implementations is a way of keeping practices in the picture, and therefore, a heuristic for learning reality as multiple. This already suggests that describing machine learning in terms of practices could be an act that attends to their multiplicity. Mol's notion of *praxiography*, a variant on ethnography, as an act of describing practice in the name of preserving their multiple-making value, has particular resonance for work with data, which is itself always heavily entwined in writing and reading practices. Could we praxiographically go into data?
+
+A second  and related tack comes from the work of Alfred North Whitehead. Whitehead's work on how abstractions are embodied is highly relevant to thinking about machine learning. While Whitehead is comprehensively critical of certain tendencies in modern science (the fallacy of misplaced concreteness; the reduction of space-time to discrete locations, etc), he is very enthusiastic about the potential for better abstractions. While voiced in terminology that takes some getting used to, the broad affirmative point can be grasped:
+
+> But this enhancement of energy presupposes that the abstraction is preserved with its adequate relevance to the concrete sense of value-attainment from which it is derived. In this way, the effect of the abstraction stimulates the vividness and depth of the whole of experience. [@whitehead_modes_1958,169]
+
+The enhancement of energy Whitehead talks about here is concerned with the 'fortunate use of abstractions' (169). machine learning and  much work with data today can be seen as a form of abstraction (as can much of science). The crucial question for Whitehead, however, is how to abstract well. Like Mol, he advocates keeping abstractions together ('adequate relevance') with something like practice ('the concrete sense of value-attainment from which it is derived'). Like Mol too, the virtue of this bundling together of abstractions with their concrete sense affects the 'whole of the experience.' Abstractions can make experience more vivid or deep if they are aligned and assembled connectively. Here I pin some methodological hope on Whitehead's work as a way to experiment with abstraction as stimulant and enrichment, not as reduction as pale imitation.
+
+A final and perhaps much higher level connection here comes from the Elizabeth Wilson's study, _Affect and Artificial Intelligence_ [@wilson_affect_2010]. Drawing on a combination of psychoanalytic, psychological and archival materials, Wilson discusses the work of key figures in the early history of artificial intelligence such as Alan Turing, Warren McCulloch and Walter Pitts on neural nets, and recent examples of affective computing and robots such as Kismet. The framing of her project is interesting:
+    
+    > Sometimes machines are the very means by which we can stay alive psychically, and they can  just as readily be a means for affective expansion and amplification as for affective attenuation. This is especially the case of computational machines. 30 
+
+Under what conditions do machines and for present purposes, computational machines, become 'the very means we can stay alive psychically'? She  addresses this question by positing 'some kind of intrinsic affinity, some kind of intuitive alliance between the machinic and the affective, between calculation and feeling' (31), and suggesting that the 'one of the most important challenges will be to operationalize affectivity in ways that facilitate pathways of introjection between humans and machines' (31). Introjection, the process of bringing the world within self is, according to psychoanalytic accounts of subjectivity, crucial to the formation of 'a stable subject position' (25). Wilson envisages introjection of machine processes as a good, not as a failure or attenuation of relation to the world. 
+
+These three takes on how to think about practices, abstraction and machines work on somewhat different levels, but they broadly share an interest or even a commitment to multiple, plural or surprising conjunctions between what people do, what the world is, and the many adjustments, alignments and slippages that connect them through data. It might be possible to treat them as offering guidance or methodological hints on how to work with data, with models and with machine learning somewhat differently. The question is how would one practically explore such insights.
+
+## Mobility of statistical methods in the 1990s: the case of R
+
+- The number of packages
+- The history of the language
+- The increase in popularity
+
+R is a well-known and widely used statistical programming language and environment  [@(R Development Core Team n.d.). An open source programming language, according to surveys of business and scientific users, R is replacing popular software packages such as SPSS, SAS and Stata as the statistical and data analysis tool of choice for many people in business, government, and sciences ranging from political science to genomics, from quantitative finance to climatology (Rexer Analytics 2010). Developed in New Zealand in the mid-1990s, and like many open source software projects, emulating S, a commercialised predecessor developed at AT&T Bell Labs during the 1980s, R is now extremely widely used across life and physical sciences, as well as quantitative social sciences. Many undergraduate and graduate students learn R as a basic tool for statistics. Skills in R are often seen as essential pre-requisite for scientific researchers, especially in the life sciences. Estimates of its number of users range between 250000 and 2 million. Increasingly, R is integrated into commercial services and products (for instance, SAS, a widely used business data analysis system now has an R interface; Norman Nie, one of the original developers of the SPSS package heavily used in social sciences, now leads a business, Revolution, devoted to commercialising R; R is heavily used at Google, at FaceBook, and by quantitative traders in hedge funds, etc.).  R is an interestingly diffuse entity. Some ways of working with data are way more clearly focused on equations and calculation. For instance, in order to pursue number practices in physical sciences and engineering, maybe MATLAB or Mathematica would be better. In business or government, many ways of working with data are more focused on ordering and searching. For instance, in order to the look at the organisation of large aggregates of data, relational databases, query languages, data-centre architectures, and perhaps the techniques of aggregating and disaggregating data en-masse would be worth studying. 
+
+Why then choose R, a statistical programming language, a language initiated by academic statisticians rather than computer scientists, software engineers or hackers? R is an evocative object, to use the psychoanalyst Christopher Bollas' term [@bollas_evocative_2009], an object through which run hundreds of different ways to think. Bollas suggests that 'our encounter, engagement with, and sometimes our employment of, actual things is a _way_ of thinking' [@bollas_evocative_2009, 92].  R embodies something of plurality of practices of working with measurements, numbers, text, images, models and equations, with techniques for sampling and sorting, with probability distributions and random numbers. It engages immediately, practically and widely with  words, numbers, images, symbols, signals, sensors, forms, instruments and above all abstract forms such as mathematical functions like probability distributions and many different architectural forms (vectors, matrices, arrays, etc), as it employs data. By virtue of thousands of packages that flow across boundaries between nature and culture, between aesthetic, epistemic and pragmatic domain, R embodies a wide-with data economies, cultures, sciences, politics and technologies. Somewhere between calculation and searching, R channels counting and sorting, in the estimation of likelihoods.
+
+How would we describe the R-based practices in ways that deepen our perception of their plurality, their relevance, and potential amplification of affect? Note that Bollas distinguishs encounter, engagement and employment of things. Employment, in his terms, is less likely to lead become a way of thinking than encounter and engagement. On balance, I'd have to admit that the employment dimension of R dominates.  It is easy today to find an employment-centric view of data practice. The 'chief economist' at Google, Hal Varian in 2009 made a widely quoted prediction about data:
+
+> The ability to take data — to be able to understand it, to process it, to extract value from it, to visualize it, to communicate it — that’s going to be a hugely important skill in the next decades, not only at the professional level but even at the educational level for elementary school kids, for high school kids, for college kids. Because now we really do have essentially free and ubiquitous data. So the complimentary [sic] scarce factor is the ability to understand that data and extract value from it.” Hal Varian, chief economist at Google: [@mckinsey_&_company_hal_2009]
+
+While cited here in a report prepared by the global business consultancy, McKinsey & Co, I have seen this quote or selections from it in many different contexts, ranging from government reports on higher education to the student noticeboard in the statistics department at the university. What Varian presents as an 'important skill'  also has a 'scarce factor':  the 'ability to understand that data.' While Varian presents understanding data as the prelude to 'extract[ing] value from it,' understanding might take different forms, depending on the kind of encounter or engagement that precedes it. 
+
+Encounters with R are by no means limited to employment. A somewhat broader framing of the value of data practice can be found associated with R. Some people – admittedly a small group – explicitly promote R in association with the wider growth of data democracy or open data. I say somewhat, because the promotion of R as a valuable software object is linked to individual entrepreneurship. Norman Nie, the original developer of the widely-used SPSS social science statistics software (see [uprichard_spss_2008]), is a proponent of R. Here is Norman Nie interviewed in _Forbes_, a leading business news magazine, evangelising for R:
+
+> Everyone can, with open-source R, afford to know exactly the value of their house, their automobile, their spouse and their children--negative and positive  … It's a great power equalizer, a Magna Carta for the devolution of analytic rights [@hardy_power_2010].
+
+While strictly speaking referring to R for employment purposes, Nie, the founder of Revolution Analytics, a company that provides software and support services to R users, promotes R as a way of protect individual liberties to know what they own. In the context of the global financial crisis of 2007, it may be that the value of houses became much more problematic, and understandably, harder to know. And the reference to 'spouse and their children' must be flippant. Yet the 'devolution of analytic rights' that Nie speaks here, even as he frames it in terms of entrepreneurial individualism, is important. While Nie's company  Revolution Analytics promotes the incorporation of  R into  powerful and pervasive business and government prediction systems (such as SAS and IBM's Pure Data [@ibm_ibm_2013]), Nie here points to the problem of 'manipulation and control' of customers associated with just that incorporation. The 'analytic rights' he advocates in the form of R are meant to help individuals counterbalance the power of large scale data analysis conducted by corporations and governments. 
+
+Nie's advocacy of R points towards a surfeit or overflowing sense of possibility associated with R. It would be possible to cite many other instances of this belief and desire in the potential of R. A good indication of this overflow is the aggregate blog, [R-bloggers](R-bloggers.com). R-bloggers brings together several hundred R-related blogs in one place. The range of topics discussed there on any one day – Merrill-Lynch Bond Return indices, how to run R on an iPhone, using US Department of Agriculture commodity prices, analysing human genetic variation using PLINK/SEQ via R, using the 'Rhipe' (sic!) package to program big data applications on Map-Reduce cloud architectures, doing meta-analysis of phylogenetic trees, etc., etc (R-bloggers 2011) – suggest how widely desires/beliefs in R range. Many of the applications, experiments, or techniques reported there can be reduced to employment or to individual uses of R. They might, as we will see, suggest the potential for encounters and engagements. 
+
+## Aleatory encounters with  data
+
+If we were to try to describe these encounters and engagements in which R as an actual thing is also a way of thinking, how would we go about it? The act of describing the practices of working with R might, at least this is my hope, be a way of staging an encounter with those aspects of data practice that exceed employment, and that instead do something like vivify experience. In many cases, data practice begins from data. This a fairly banal observation, but acquiring, generating, finding or, to use the term often used by database architects, 'discovering' data is a signficant process. While there are many different ways to encounter data, let us imagine it happens by chance, as when walking down the street we notice something about a building for the first time. Some feature, old or new, attracts our attention. Something similar happens in discovering data. For instance,  there are many potentially interesting, relevant or important datasets to be found, for instance, in the [World Bank Data catalog](http://data.worldbank.org/developers/data-catalog-api). The World Bank publishes much data on global economic activity. Much of this data can be retrieved from its Application Programmer Interface (API) using R code. It could also be downloaded using a web browser, and then imported into a spreadsheet, but in this case, since I'm interested in how a programming language affects encounters with data, the R code is more relevant. 
+
+```{r worldbank, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
+    library(RCurl)
+    library(rjson)
+    url = 'http://api.worldbank.org/countries?incomeLevel=OEC&format=json'
+    high_income_countries = fromJSON(getURL(url))
+    countries = unlist(sapply(high_income_countries[[2]], '[', 'name'), use.names=FALSE)
+```
+The R code shown here requests a list of high-income countries (members of the OECD). The World Bank database returns a nested list describing `r length(countries)` countries. The list is hardly surprising (`r paste(countries[1:7],collapse=', ')` ... ). But the point of this code is to show something of the economy of movement and reshaping of data associated with R.  In this code, the first line loads an R library (the 'RCurl' package) to make requests to internet servers. The second line loads an R library  (the 'rjson' package) that can process data in the JSON (Javascript Standard Object Notation) format, a data format commonly used by servers to transfer data. Lines 3-4 provide the internet address of the World Bank API, request the data, receive the response, and convert the JSON data into a typical R data structure, a list. The final line selects from the list, which has many sub-lists nested within it, just the names of the countries.  Although this somewhat trivial code vignette does do any of the understanding or extracting of value that Hal Varian propounds, it does begin to process some data. Processing here includes choosing a path into the World Bank datasets via the selection of the query terms (`r cat(url)`). It also includes the re-formatting operations that first transform JSON data into an R list, and then traverse the nested list structure, selecting only the items of data labelled 'name.' 
+
+```{r world_bank_flat, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' }
+
+    countries_table = do.call('rbind', high_income_countries[[2]])
+    df=do.call('rbind', apply(countries_table, MARGIN=2, 
+        FUN =unlist, use.names=FALSE))
+    df = t(df)
+    head(df)
+ ```
+
+[HERE] -- comment on the further manipulations; could provide some examples from the books
+
+Let's return to the example of house prices mentioned by Norman Nie. This is possibly the worst example for my case, since house prices seem so webbed into employment, salaries, class position, etc. It will be interesting to see if it is possible to write about predictive modelling of house prices in a way that responds to what Mol, Whitehead and Wilson propose. The house price dataset I use comes from around San Francisco, prior to the global financial crisis, but I will say more about how I encountered this dataset below. The dataset is fairly small and simple. Only the first few lines are shown below. 
+
+```{r house_price, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' }
+
+    house_prices = read.csv('data/ex1data2.txt', header=FALSE)
+    names(house_prices) = c('size', 'bedrooms', 'price')
+    head(house_prices)
+    summary(house_prices)
+ ```
+Two architectures come together here. On the one hand, around fifty houses are described in terms of the number of bedrooms, their total floor area and the price they sold for. This is a very sparse description of architecture, and it reduces the encounter with the psychically rich form of houses to a cognitive minimum. On the other hand, this description has its own architecture -- the  very familiar form of the table, grid or matrix. Whatever else happens to the data in machine learning, the matrix form pervades much data practice. As we will see below, in modelling this data, certain parts of the matrix will be separated out and treated differently. For the moment, only the bare architecture of the matrix frame concerns us.
+
+How do we encounter such things? Bollas describes some of the ways in which we encounter things in the world as a mixture of determining and selecting processes: 
+
+> the ability to move freely in the object world, to use its thing-ness as a matrix for thinking-by-action, pivots around whether the aleatory object determines - whether we move on quickly due to the dynamic of our last encounter with the object - or whether we select objects because we are unconsciously grazing: finding food for thought that only retrospectively could be seen to have a logic. [@bollas_evocative_2009, 93]
+
+Although he refers to 'thing-ness as matrix', Bollas was probably not thinking about houses presented as a matrix of numbers. However, the house price dataset is an aleatory object for me in the sense that I encountered it by chance, and the question is, can it be used praxiographically, or for what Bollas calls, 'thinking-by-action'? 
+
+
+## Learning to predict online
+
+I'm not choosing the house price example at random. It is a surprisingly common teaching or demonstration example in machine learning, alongside other iconic datasets including R.A. Fisher's 'iris', the MNIST handwritten digits dataset [@lecun_mnist_2012]  (derived from U.S. National Institute of Standards and Technology (NIST)), or the cat photo dataset discussed in the previous chapter. A typical house price dataset might be used for teaching purposes, as in Professor Andrew Ng's course 'Machine Learning' CS229 at Stanford (http://cs229.stanford.edu/) and also delivered on [Coursera.org](https://class.coursera.org/ml-003/class/index). These two  courses, and especially CS229, are fairly typical expositions of machine learning. In these lectures, a dataset derived from house prices in San Francisco. Given the course was running before 2007, it is likely that this dataset does not reflect the financial crisis that began in 2007 and led to drastic reductions in house prices from 2008 onwards. Having sat through several dozen hours of Ng's online lectures, and attempted many of the review questions and programming exercises, including implementing well-known algorithms using R, I have some sense of how predictive models are constructed, and what kinds of algorithmic architectures and forms of data are preferred in machine learning. Importantly, these courses have been viewed by many other people. Ng's machine learning course on Coursera (of which he is co-founder, along with Daphne Koller, another machine learning scientist from Stanford), has a typical enrolment of 100,000. Youtube videos of his Stanford University lectures have viewing figures of around 500,000. My participation in these courses was a kind of arduous experiment. Like the hundreds of thousands of other students, I was trying to learn about machine learning. At the same time, however, I was trying to keep open a set of potentials that much of the course was trying to minimise or shutdown, even as instructor's such as Ng from Stanford or Pedro Domingo from the University of Washington sought to convey their excitement about the content of their courses. In both the Coursera  and Stanford courses, Ng uses the house price dataset to demonstrate certain techniques of predictive modelling. 
+
+
+## Reshaping of data and the problem of spatiality
+
+The dimensionality of data practice is something that we hardly think of when we think of models, algorithms, predictions and smart devices. But in terms of multiplyin matrices, dimensionality is 
+
+- multiplying
+- commutative
+- associative
+- identity matrix
+- inverse - singular/degenerate
+- transpose
+
+> Almost any programming language you use will have great linear algebra libraries. And they will be high optimised to do that matrix-matrix multiplication very efficiently including taking advantage of any parallelism your computer. So that you can very efficiently make lots of predictions of lots of hypotheses [Ng, lecture 10.50]
+
+```{r matrix, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
+    
+    a_vector = c(1,2,3)
+    a_matrix = matrix(c(1,2,3,4,5,6,7,8,9), nrow=3)
+    matrix_product = a_matrix %*% a_vector
+    
+    cat('Matrix:', a_matrix, '\n')
+    cat('Vector:', a_vector, '\n')
+    cat('Matrix times vector:', matrix_product, '\n')
+
+
+[HERE] -- write about matrix manipulations, their architecture and why they are essential to prediction, and house prices ... 
+
+Add in Animation and Automation – The Liveliness and Labours of Bodies and Machines Body & Society March 2012 18: 1-46, 
+
+
+As a programming language, R is striking for its '-ply' constructs. There are several in the core language and many to be found in packages (especially the popular 'plyr' package).  These include apply, sapply, tapply, lapply, mapply. All of the -ply constructs have a common feature: they take some collection of things (it may be ordered in many different ways – as a list, as a table, as an array, etc), do something to it, and return something else. This hardly sounds startling. But while most programming languages in common use offer constructs to help deal with collections of things sequentially (for instance, by accessing each element of data set in turn and doing something), R offers ways of dealing with with them all at once. Deriving its -ply constructs ultimately from the functional logic developed by Alonzo Church in the 1930s, R presents difficulties for programmers used to so-called procedural programming languages. The functional programming style of applying functions to functions seems strangely abstract. Once you get a feel for them, these -ply constructs they are very convenient to write, and the code runs much faster. They implicitly parallelise operations on data, and this adapts well to the increasingly parallel contemporary chip architectures. The -ply operations reduce both data and computational frictions. The real stake in -plying data, however, is not speed but transformation. -Plying make data less like inscription (number, text, table, list, etc), and more like a pliable material, something that can be reshaped and folded. Such shifts in feeling for data are very mundane yet crucial to the flow of data.  Plying, in the sense of plying trade, seems much closer to the kinds of work done on data than the figures of data flow or data deluge. 
+
+
+Actually, this is a key problem for me – having just said that desires/beliefs in R travel widely, I'm not sure what I mean by 'widely' or 'travel.' Maybe it would be better to say they that they do not travel very far, but undergo some kind of modulation that reduces data and computational friction (Edwards, 2010), and allows them to slip around the corners that separate things. As a preliminary take on this question, I would say that frictions are handled R in several ways: 
+1. Habit formation. Because R is a  programming language, it allow scripts to be written and run very on everything from laptops to cloud computing. In this it differs greatly from statistics software applications such as SPSS, SAS, or STATA that, arguably, change less often and under the control of business or scientific needs. Learning R is learning to read, write and run scripts, rather than how to carry out operations using the standard interfaces of menus, buttons and windows found in more conventional software applications. There is also much about its connection to programming and computing cultures (Unix operating system, open source scripting languages such as Perl, scientific programming languages such as FORTRAN) that mobilises R in a different way to statistics software applications. Scripts are much more fragmented, mobile elements than software applications. Their mutability and malleability means they can make and move data across many different interstices. At the same time, learning to use and write R opens pathways to habit-forming investments. 
+2. Believing is seeing. Given that seeing something in data, finding patterns, showing connections or regularities, or locating important or relevant parameters animates all work with data, the endless variations in visualization found in R play an important role. The many forms of visualization it allows are very closely connected to debates, trends, fashions concerning how data should be made visible – as table, scatterplot, network diagram, tag-cloud, histogram, heatmap, map, etc. The associated minutiae of visual grammars also connect R directly into the literary technologies of many scientific, government, and business knowledges. It would be hard to over-estimate the role played by 'low science' graphing and diagramming in some of these domains.  
+3. The latest and greatest. The latest statistical and algorithmic techniques and models developed by statisticians, domain scientists and computer scientists are often published as R packages (or libraries), especially on CRAN, the Comprehensive R Archive Network (CRAN 2010).  The deposit of an R package  - a collection of functions, data structures, data sets or interfaces to data sources – into CRAN often accompanies journal or book publication in certain fields. The quick rollout of techniques in the form of packages means that people resort to R to keep up. To understand what precipitates the data deluge, how people handle it, and what kinds of resistances, we might think more about the different things that become a package. Maybe it would be worth thinking about packages as monads, as world-making inscriptive-perspectives. This question is approached below in the discussion of the 'Bayesian revolution.'
+
+All of this might indicate how R becomes believable, or how people are prepared to believe in R. But it doesn't say how belief actually is actually worked on in R. Here I think my position could move in two directions – either heading towards an analysis of some localised practices of working with data in R or towards an analysis of how the grounds on which data are made and analysed shift. This is returning to my broader position or hunch that a fairly subtle but important change in what counts as  empirically credible is occurring in many domains. This change troubles the negotiated settlement between beliefs and events achieved in the last 200-300 years of statistical reasoning practice. Any such change is inevitably hard to infer, especially as it is taking place. How could we apprehend something whose forms, practices and position are fluxing? 
+What counts as data is subject to constant reshaping. Taking data and changing its form through various rearrangements has become a matter of central economic, commercial, political and scientific importance. While data has long been gathered and published in tables, in files and in databases, the injunction to re-use and re-analyse generates re-shaping or 'data munging' imperatives. We could approach these imperatives from the perspective of various discourses (transparency, sharing, accountability, democracy, Mertonian science, etc), or from the perspective of the world of analytics, data-mining and machine learning where data is seen as a valuable material whose inherent patterns promise new forms of economic, aesthetic or epistemic value. All of this deserves further analysis and comment. However, between the strategies of openness or pattern-finding and the data sources lies a terrain where data is re-shaped, transformed and plied into forms and patterns. The practices of plying, multiplying and applying data seem to me crucial in understanding belief in data. 
+
+## Python: connectivity of practices
+
+- The place of python amongst languages
+- Python as symptom of industry, business and science more broadly
+- The rise of industrial machine learning
+
+
+```
+
+## Learning about machine learning
+
+    There are some tremendous opportunities to be had from this kind of framework. The first is that it has the potential of giving us a completely unprecedented look into understanding human learning. Because the data that we can collect here is unique. You can collect every click, every homework submission, every forum post from tens of thousands of students. So you can turn the study of human learning from the hypothesis-driven mode to the data-driven mode, a transformation that, for example, has revolutionized biology. You can use these data to understand fundamental questions like, what are good learning strategies that are effective versus ones that are not? And in the context of particular courses, you can ask questions like, what are some of the misconceptions that are more common and how do we help students fix them? [@koller_daphne_2012]
+
+Every chapter in this book has a loop -- the loop here is learning about learning. Reading textbooks, reading articles, etc,  
+
+## Irises, digits, spam and kittens, titanic survivors: iterating through data
+
+
+## Reconstruction and problematization
+
+Dewey on the need for reconstruction
+Foucault on problematization
+'Problematic implementation'
+
+## Conclusion
