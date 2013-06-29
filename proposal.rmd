@@ -110,7 +110,7 @@ Finally, this chapter is somewhat autoethnographic too, in that it reports on th
 
 ### 3. From straight lines to curved surfaces
 
-#### Key examples: housing price prediction; cancer prognosis
+#### Key examples: housing price prediction; cancer prognosis; digit recognition
 #### Key techniques: logistic regression; _k_-nearest neighbours
 
 -- recursion, movement, evocative objects, partial observers, visualisation, etc; functions and states of things; linear regression
