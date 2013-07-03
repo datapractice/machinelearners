@@ -1,0 +1,10 @@
+# Finding functions: lines and curves
+
+## to add in
+
+- gradient descent
+- Deleuze and other on  functions
+- learning as finding an approximation to the function that generated
+- probability density functions as curves
+- Tim Ingold on lines
+- 
