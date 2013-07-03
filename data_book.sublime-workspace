@@ -163,7 +163,7 @@
 			"file": "proposal.rmd",
 			"settings":
 			{
-				"buffer_size": 38786,
+				"buffer_size": 38805,
 				"line_ending": "Unix"
 			}
 		},
@@ -171,8 +171,17 @@
 			"file": "ch1-learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 40936,
+				"buffer_size": 56203,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/Massumi, Brian, Parables of the Virtual, Duke Univ.mdown",
+			"settings":
+			{
+				"buffer_size": 13975,
+				"line_ending": "Unix",
+				"name": "Massumi, Brian, Parables of the Virtual, Duke Univ"
 			}
 		},
 		{
@@ -197,7 +206,7 @@
 			"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 			"settings":
 			{
-				"buffer_size": 1610,
+				"buffer_size": 1611,
 				"line_ending": "Unix",
 				"name": "Rabinow, P. 2003. Anthropos Today. Reflections on"
 			}
@@ -260,42 +269,10 @@
 			}
 		},
 		{
-			"file": "build.sh",
-			"settings":
-			{
-				"buffer_size": 57,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "pandoc.sh",
-			"settings":
-			{
-				"buffer_size": 247,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "animations/grad_desc.R",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "references/refs.bib",
 			"settings":
 			{
-				"buffer_size": 41400,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "references/Exported Items.bib",
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 41626,
 				"line_ending": "Unix"
 			}
 		},
@@ -314,20 +291,40 @@
 				"buffer_size": 38819,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "references/R.bib",
+			"settings":
+			{
+				"buffer_size": 66730,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "Packages/R Tools/R.sublime-build",
 	"command_palette":
 	{
-		"height": 75.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"set mark",
-				"Set Syntax: Markdown"
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"set",
+				"Set Syntax: Markdown"
+			],
+			[
+				"set mark",
 				"Set Syntax: Markdown"
 			],
 			[
@@ -395,7 +392,7 @@
 				"Set Syntax: R"
 			]
 		],
-		"width": 449.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -412,6 +409,12 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/R/coursera/linal/matrix/hw0.py",
+		"/home/mackenza/Documents/data_intensive/book/references/Exported Items.bib",
+		"/home/mackenza/Dropbox/metacommunities/StackExchange data readme.txt",
+		"/home/mackenza/Documents/data_intensive/book/pandoc.sh",
+		"/home/mackenza/Documents/data_intensive/book/build.sh",
+		"/home/mackenza/Documents/data_intensive/book/animations/grad_desc.R",
 		"/home/mackenza/Documents/data_intensive/book/references/R.bib",
 		"/home/mackenza/Documents/data_intensive/book/ch1/ch1_praxis.rmd",
 		"/home/mackenza/Documents/data_intensive/book/references/machine_learning.bib",
@@ -437,15 +440,12 @@
 		"/home/mackenza/Documents/notes/milleplateux.md",
 		"/home/mackenza/Desktop/jss725-tikzDictionary",
 		"/home/mackenza/Documents/data_intensive/book/template.latex",
-		"/home/mackenza/Documents/data_intensive/book/references/Exported Items.bib",
 		"/home/mackenza/Documents/data_intensive/book/references/refs.bib",
 		"/home/mackenza/.cache/.fr-BlOcAR/2012-04-08-9.json",
 		"/home/mackenza/Documents/google_analytics_spet2012/google.sublime-workspace",
 		"/home/mackenza/Documents/notes/dewey_reconstruction_1957.odt",
 		"/home/mackenza/Documents/data_intensive/lse_cambridge_markets_algorithms/markets_algorithms.Rmd",
 		"/home/mackenza/Documents/data_intensive/book/Sources.md",
-		"/home/mackenza/Documents/data_intensive/book/build.sh",
-		"/home/mackenza/Documents/data_intensive/book/pandoc.sh",
 		"/home/mackenza/Desktop/drawing-1.svg",
 		"/home/mackenza/Documents/data_intensive/book/markets_algorithms.Rmd",
 		"/home/mackenza/R/igem/igem.sublime-workspace",
@@ -546,6 +546,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			" ",
+			"church",
+			"matloff",
 			"uprichard",
 			"IBM",
 			"white",
@@ -662,7 +665,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -670,15 +673,15 @@
 					"file": "proposal.rmd",
 					"settings":
 					{
-						"buffer_size": 38786,
+						"buffer_size": 38805,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								38781,
-								38781
+								24354,
+								24354
 							]
 						],
 						"settings":
@@ -686,7 +689,7 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 121.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -696,15 +699,15 @@
 					"file": "ch1-learning/ch1_praxis.rmd",
 					"settings":
 					{
-						"buffer_size": 40936,
+						"buffer_size": 56203,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								26233,
-								26233
+								1079,
+								1079
 							]
 						],
 						"settings":
@@ -714,13 +717,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4562.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "/home/mackenza/Documents/notes/Massumi, Brian, Parables of the Virtual, Duke Univ.mdown",
+					"settings":
+					{
+						"buffer_size": 13975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1511,
+								1511
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Massumi, Brian, Parables of the Virtual, Duke Univ",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "ch2-curves/davis_tweak_workshop_paper.rmd",
 					"settings":
 					{
@@ -747,7 +777,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "/home/mackenza/Documents/notes/bollas, the evocative object world.md",
 					"settings":
 					{
@@ -774,19 +804,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 					"settings":
 					{
-						"buffer_size": 1610,
+						"buffer_size": 1611,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								768,
-								768
+								769,
+								769
 							]
 						],
 						"settings":
@@ -801,7 +831,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "/home/mackenza/Documents/notes/Wilson,_Affect and Artificial Intelligence2009.md",
 					"settings":
 					{
@@ -827,7 +857,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "technique_demos.rmd",
 					"settings":
 					{
@@ -854,7 +884,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "/home/mackenza/Documents/notes/Whitehead_PR.mdown",
 					"settings":
 					{
@@ -881,7 +911,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 					"settings":
 					{
@@ -907,7 +937,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "techniques.md",
 					"settings":
 					{
@@ -934,7 +964,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "ch2-curves/functions.mdown",
 					"settings":
 					{
@@ -960,7 +990,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "/home/mackenza/Documents/data_intensive/transformation_soc_sci_oxford_2013/mackenzie_slides_oxford_feb_2013.Rmd",
 					"settings":
 					{
@@ -982,147 +1012,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 383.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "build.sh",
-					"settings":
-					{
-						"buffer_size": 57,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								57,
-								57
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 341.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 13,
-					"file": "pandoc.sh",
+					"file": "references/refs.bib",
 					"settings":
 					{
-						"buffer_size": 247,
+						"buffer_size": 41626,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12,
-								12
+								29380,
+								29380
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 201.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 14,
-					"file": "animations/grad_desc.R",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/R/R.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "references/refs.bib",
-					"settings":
-					{
-						"buffer_size": 41400,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40973,
-								40973
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 20554.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "references/Exported Items.bib",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
 					"file": "references/machine_learning.bib",
 					"settings":
 					{
@@ -1149,7 +1072,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 15,
 					"file": "proposal.md",
 					"settings":
 					{
@@ -1170,6 +1093,33 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "references/R.bib",
+					"settings":
+					{
+						"buffer_size": 66730,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1468.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1212,6 +1162,10 @@
 	{
 		"height": 142.0
 	},
+	"output.git":
+	{
+		"height": 124.0
+	},
 	"replace":
 	{
 		"height": 64.0
@@ -1222,6 +1176,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"r",
+				"book/references/R.bib"
+			],
+			[
+				"r.",
+				"book/references/R.bib"
+			],
+			[
+				"ch1",
+				"book/ch1-learning/ch1_praxis.rmd"
+			],
+			[
+				"ch",
+				"book/ch1-learning/ch1_praxis.rmd"
+			],
+			[
+				"rab",
+				"/home/mackenza/Documents/notes/rabinow_anthropos_2003.md"
+			]
 		],
 		"width": 0.0
 	},
@@ -1240,7 +1214,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 338.0,
 	"status_bar_visible": true
 }
