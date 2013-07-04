@@ -168,18 +168,10 @@
 			}
 		},
 		{
-			"file": "/home/mackenza/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
-			"settings":
-			{
-				"buffer_size": 1783,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "ch1-learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 59945,
+				"buffer_size": 63750,
 				"line_ending": "Unix"
 			}
 		},
@@ -319,7 +311,7 @@
 			"file": "references/R.bib",
 			"settings":
 			{
-				"buffer_size": 68959,
+				"buffer_size": 70469,
 				"line_ending": "Unix"
 			}
 		}
@@ -444,6 +436,7 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 		"/home/mackenza/.config/sublime-text-2/Packages/SublimeIPythonNotebook/SublimeIPythonNotebook.sublime-settings",
 		"/home/mackenza/Documents/notes/Massumi, Brian, Parables of the Virtual, Duke Univ.mdown",
 		"/home/mackenza/R/coursera/linal/matrix/hw0.py",
@@ -521,7 +514,6 @@
 		"/home/mackenza/Dropbox/data-economy/ngs_paper/template.latex",
 		"/home/mackenza/Dropbox/data-economy/ngs_paper/latex.template",
 		"/home/mackenza/Dropbox/data-economy/ngs_paper/pandoc_format_paper.sh",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 		"/home/mackenza/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/mackenza/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/mackenza/.config/sublime-text-2/Packages/User/Markdown.sublime-settings",
@@ -702,7 +694,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -822,134 +814,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/home/mackenza/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
-					"settings":
-					{
-						"buffer_size": 1783,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1641,
-								1641
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 124.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "ch1-learning/ch1_praxis.rmd",
 					"settings":
 					{
-						"buffer_size": 59945,
+						"buffer_size": 63750,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								660,
-								660
+								295,
+								295
 							]
 						],
 						"settings":
@@ -1054,7 +930,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "/home/mackenza/.config/sublime-text-2/Packages/SublimeIPythonNotebook/README.md",
 					"settings":
 					{
@@ -1171,7 +1047,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "ch2-curves/ch2_curves_function.rmd",
 					"settings":
 					{
@@ -1286,7 +1162,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "/home/mackenza/Documents/notes/Massumi, Brian, Parables of the Virtual, Duke Univ.mdown",
 					"settings":
 					{
@@ -1401,7 +1277,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "ch2-curves/davis_tweak_workshop_paper.rmd",
 					"settings":
 					{
@@ -1517,7 +1393,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "/home/mackenza/Documents/notes/bollas, the evocative object world.md",
 					"settings":
 					{
@@ -1633,7 +1509,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 					"settings":
 					{
@@ -1749,7 +1625,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "/home/mackenza/Documents/notes/Wilson,_Affect and Artificial Intelligence2009.md",
 					"settings":
 					{
@@ -1864,7 +1740,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "technique_demos.rmd",
 					"settings":
 					{
@@ -1980,7 +1856,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "/home/mackenza/Documents/notes/Whitehead_PR.mdown",
 					"settings":
 					{
@@ -2096,7 +1972,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 					"settings":
 					{
@@ -2211,7 +2087,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "techniques.md",
 					"settings":
 					{
@@ -2327,7 +2203,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 13,
 					"file": "ch2-curves/functions.mdown",
 					"settings":
 					{
@@ -2442,7 +2318,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 14,
 					"file": "/home/mackenza/Documents/data_intensive/transformation_soc_sci_oxford_2013/mackenzie_slides_oxford_feb_2013.Rmd",
 					"settings":
 					{
@@ -2559,7 +2435,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 15,
 					"file": "references/refs.bib",
 					"settings":
 					{
@@ -2570,8 +2446,8 @@
 						"selection":
 						[
 							[
-								29374,
-								29374
+								29239,
+								29239
 							]
 						],
 						"settings":
@@ -2669,13 +2545,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13818.0,
+						"translation.y": 16382.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 16,
 					"file": "references/machine_learning.bib",
 					"settings":
 					{
@@ -2686,8 +2562,8 @@
 						"selection":
 						[
 							[
-								6826,
-								6826
+								7134,
+								7134
 							]
 						],
 						"settings":
@@ -2785,13 +2661,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2266.0,
+						"translation.y": 2808.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 17,
 					"file": "proposal.md",
 					"settings":
 					{
@@ -2906,19 +2782,23 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 18,
 					"file": "references/R.bib",
 					"settings":
 					{
-						"buffer_size": 68959,
+						"buffer_size": 70469,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12935,
-								12935
+								68968,
+								68968
+							],
+							[
+								69454,
+								69454
 							]
 						],
 						"settings":
@@ -3016,7 +2896,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1278.0,
+						"translation.y": 31394.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -3078,12 +2958,16 @@
 				"book/references/R.bib"
 			],
 			[
+				"mac",
+				"book/references/machine_learning.bib"
+			],
+			[
 				"r.",
 				"book/references/R.bib"
 			],
 			[
-				"mac",
-				"book/references/machine_learning.bib"
+				"ref",
+				"book/references/refs.bib"
 			],
 			[
 				"",
@@ -3119,7 +3003,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 338.0,
 	"status_bar_visible": true
 }
