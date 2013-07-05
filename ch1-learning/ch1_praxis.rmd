@@ -18,6 +18,7 @@
 - computation -- psychic engagement - Wilson
 - convergence and learning: for fitting a line; but then for choosing which features to use to learn
 - learning about learning -- coursera, youtube, textbooks, the pile of books (across the gamut)
+    - the Literature - landeker and kelty on treating literature as the informant
 - things to include:
     - my R books, libraries, papers, competitions, blogs, talking, courses
         - The number of packages
@@ -29,6 +30,7 @@
     - folding/plying
     - Add in Animation and Automation – The Liveliness and Labours of Bodies and Machines Body & Society March 2012 18: 1-46, 
     - machine learning textbooks -- hastie, williams, manning, see document archive
+    - the github version of the book
 
 ## Quotes to use
 
