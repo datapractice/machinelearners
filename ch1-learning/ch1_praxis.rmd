@@ -28,6 +28,7 @@
     - the notion of repl -- read-evaluate-print-loop
     - folding/plying
     - Add in Animation and Automation – The Liveliness and Labours of Bodies and Machines Body & Society March 2012 18: 1-46, 
+    - machine learning textbooks -- hastie, williams, manning, see document archive
 
 ## Quotes to use
 
@@ -157,7 +158,7 @@ While there are many different ways to encounter data, let us imagine it happens
 
 > the ability to move freely in the object world, to use its thing-ness as a matrix for thinking-by-action, pivots around whether the aleatory object determines - whether we move on quickly due to the dynamic of our last encounter with the object - or whether we select objects because we are unconsciously grazing: finding food for thought that only retrospectively could be seen to have a logic [@bollas_evocative_2009, 93].
 
-Something similar happens in encountering data. There are many potentially interesting, relevant or important datasets out there. Our encounters with them are necessarily 'aleatory' due to their extent. Huge public scientific databases across the gamut of disciplines, social media datasets, government statistical data, data from various environmental sensors, let alone all the media forms -- images, text, video -- that can be rendered into data, congregate on the internet. Even researchers within specific fields struggle to 'discover' the data  in their field.   
+Something similar happens in encountering data. There are many potentially interesting, relevant or important datasets out there. Our encounters with them are necessarily 'aleatory' due to their extent. Huge public scientific databases across the gamut of disciplines, social media datasets, government statistical data, data from various environmental sensors, financial market and other price data (so much of this!), let alone all the media forms -- images, text, video -- that can be rendered into data, congregate on the internet. Even researchers within specific fields struggle to 'discover' the data  in their field.   
 For instance, via the [World Bank Data catalog](http://data.worldbank.org/developers/data-catalog-api), the World Bank publishes much data on global economic activity. Much of this data can be retrieved from its Application Programmer Interface (API) using R code. The World Bank Data is a thing. How can its thing-ness be used a 'matrix for thinking-by-action'? This data could also be downloaded using a web browser, and then imported into a spreadsheet, but in this case, since I'm interested in how a programming language affects encounters with data, the R code helps us slow down the dynamics of the encounter a bit. The lines of code, unlike a series of mouse movements, pointing, clicking and typing into a spreadsheet, make it possible to track the movements and gestures involved much more closely. Ironically, coding by hand slows down practice in some ways. Sometimes code is criticised for its unreadability or inaccessibility. Actually, in many ways, code makes it possible to follow practice much more closely.
 
 ```{r worldbank, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
@@ -238,7 +239,7 @@ People reshape data for different ends.
 - transpose
 
 
-## Datasets as evocative objects
+## Datasets as evocative objects at what price?
 
 Let's return to the example of house prices mentioned by Norman Nie. This is possibly the worst example for my case, since house prices seem so webbed into employment, salaries, class position, etc. It will be interesting to see if it is possible to write about predictive modelling of house prices in a way that responds to what Mol, Whitehead and Wilson propose. The house price dataset I use comes from around San Francisco, prior to the global financial crisis, but I will say more about how I encountered this dataset below. The dataset is fairly small and simple. Only the first few lines are shown below. 
 
@@ -269,7 +270,7 @@ Both the textbooks and the online university courses on machine learning have a 
     There are some tremendous opportunities to be had from this kind of framework. The first is that it has the potential of giving us a completely unprecedented look into understanding human learning. Because the data that we can collect here is unique. You can collect every click, every homework submission, every forum post from tens of thousands of students. So you can turn the study of human learning from the hypothesis-driven mode to the data-driven mode, a transformation that, for example, has revolutionized biology. You can use these data to understand fundamental questions like, what are good learning strategies that are effective versus ones that are not? And in the context of particular courses, you can ask questions like, what are some of the misconceptions that are more common and how do we help students fix them? [@koller_daphne_2012]
 
 Whether the turn from 'hypothesis-driven mode to the data-driven mode' has 'revolutionized biology' is debatable (I return to this in a later chapter). And whether or not the data generated by my participation in Coursera's courses on machine learning generates data supports understanding of fundamental questions, that seems also improbable. Nevertheless, the loopiness of this description interests and appeals to me. I learn about machine learning, a way for computer models to optimise their predictions on the basis of 'experience'/data, but at the same time, my learning is learned by machine learners. This is not something that could happen very easily with a printed text, although versions of it happen all the time as teachers work with students on reading texts. 
-
+    
 
 ## Where does this stuff go?
 
@@ -292,8 +293,20 @@ What counts as data is subject to constant reshaping. Taking data and changing i
 
 
 
-## Irises, digits, spam and kittens, titanic survivors: iterating through data
+## Linear models: Irises, digits, spam and kittens, titanic survivors: iterating through data
 
+The first full mathematical expression in _The Elements of Statistical Learning_ is shown below: 
+> The linear model has been a mainstay of statistics for the past 30 years and remains one of our most important tools. Given a vector of inputs
+$X^T = (X_1 , X_2, . . . , X_p)$, we predict the output $Y$ via the model
+p
+Y
+ = β0 ˆ
+ +
+ Xj βj ˆ
+ .
+j=1
+(2.1)
+[@hastie_elements_2009, 12]
 
 ## Reconstruction and problematization
 
