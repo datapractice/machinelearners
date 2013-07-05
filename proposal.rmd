@@ -82,7 +82,7 @@ The book has a standard chapter format. It will include several dozen code-gener
 
 ## Chapter outline
 
-### 1. Introduction: into data
+### 0. Introduction: into data
 
 #### Key examples: Eulerian motion pulse detection; kittydar and cat detection; DARPA challenges
 
@@ -94,7 +94,7 @@ The entry point for the wider questions in the book will come from burgeoning de
 
 Finally, the introduction will also provide a preliminary overview of the techniques of machine learning discussed in the book -- clustering, linear modelling, Bayesian inference, etc -- but very much with a view to exemplifying  the   of the book concerning data as a material-semiotic entity: dimensioning, diagrams and mapping, generating and discriminating, convolution and multiples, optimality and predictivity.   
 
-### 2. Associating with data: classifiers and predictions
+### 1. Associating with data: classifiers and predictions
 
 #### Key examples: Pfizer's 'discovery' of Viagra; R programming language as the 'Magna Carta' of analytic rights; Python scikit-learn & pandas; the Titanic survivors;
 
@@ -108,7 +108,7 @@ Via a discussion of the development of R, the chapter analyses the  transverse, 
 Finally, this chapter is somewhat autoethnographic too, in that it reports on the author's own trajectory through coding competitions, online and face-to-face 'machine learning' courses, as well as more broadly on various forms of database and visualization practices. 
 
 
-### 3. From straight lines to curved surfaces
+### 2. From straight lines to curved surfaces
 
 #### Key examples: housing price prediction; cancer prognosis; digit recognition
 #### Key techniques: logistic regression; _k_-nearest neighbours
@@ -128,7 +128,7 @@ This chapter examines the proliferation of data-supported curves and lines in te
 
 Connecting aesthetic and mathematical data practices, this chapter suggests that finding the functions that generate lines and surfaces in data is a powerful form of imitation that tends to remake the world in certain ways. This re-making may be inimical to social life, or not. The chapter also suggests that the production of curves through software packages and libraries and through various visualization techniques is worth investigating as a signifying social practice in its own right. The architecture and practices associated with graphics and plotting libraries offer a way to trace some of the processes of imitation and invention associated with forms of data thought. 
 
-### 4. Patterns in the data: dimensional exuberance
+### 3. Patterns in the data: dimensional exuberance
 
 #### Key examples: hunch.com; 
 #### Key techniques: k-means, support vector machines
@@ -137,7 +137,7 @@ Connecting aesthetic and mathematical data practices, this chapter suggests that
 For the last decade, the best-performing 'off-the-shelf' machine learning algorithm has been a technique known broadly as 'support vector machines' (SVM; see [@vapnik_nature_1999]). The chapter examines the architecture of this widely used algorithm both against the background of a spectrum of other statistical machine learning techniques, and more importantly, in terms of the *forms of movement* it brings to data practice. The key focus in this discussion is the dimensionality of data, and how dimensionality is managed in machine learning.  While curves and functions, as discussed the previous chapter, engender senses of change and movement, the advent of increasingly extended and particularly 'wide' datasets (many variables) implies models that embrace high-dimensional abstract spaces. Since the 1950s, scientists  have been aware of the 'curse of dimensionality' [@bellman, TBA], which arises when the dimensions of the data increase. Algorithms such as SVM, and implicitly other highly successful ML algorithms such as neural networks, manage this dimensionality very differently to the regression models that have been the mainstay of statistical modelling for a century. Rather than trying to reduce the dimensionality of the model to a line, plane or hyperplane that best fits the datasets, SVM expands the dimensionality  of the model massively, sometimes infinitely.
 
 
-### 5. Cruel optimisation and algorithmic competition
+### 4. Cruel optimisation and algorithmic competition
 
 #### Key examples: spam filter; Kaggle facebook retention; Kaggle R recommendation engine; TopCoder; Sage Bionetworks
 #### Key techniques: ensembles, RandomForests
@@ -147,7 +147,7 @@ For the last decade, the best-performing 'off-the-shelf' machine learning algori
 The chapter focuses on the forms of subjectivity associated with contemporary data practice, situated within  plural data and knowledge economies. Software developers, hackers, statisticians, 'data scientists,' as well as social scientists, are changed by forms of data thought.  The case study in this chapter is data prediction contests run by the [Kaggle.com](kaggle.com) as well as academic-based competitions. In these competitions, competitors from diverse technical and geographic backgrounds compete to construct predictive models for specific datasets -- the Netflix recommendation competition; the Facebook 'find a friend' competition; or the Titanic survivor problem -- using whatever machine learning techniques they can bring to bear. These competitions, conducted on web-based platforms, are useful ways to track contemporary data practices. Combined with some examples of presentations by academic researchers (for instance, Stanford University's Andrew Ng whose YouTube lectures haved attracted 100,000s of views), industry conferences (for instance, at the annual Predictive Analytics World events), this chapter will track the kinds of technical and affective investment associated with popular data modelling techniques such as Random Forest. It is possible, I will suggest, to read a technique as a partial subjectification, in that it affects how they experience and materially engage with data. In order to apprehend the character and texture of these subjectifications, the chapter links university research, commercial and non-commercial adoption, and flows of technical expertise. Again, this chapter has some auto-ethnographic vignettes, as the author has participated in some of these competitions. 
 
     
-### 6. Belief and desires in data
+### 5. Belief and desires in data
 
 #### Key examples:  Microsoft TrueSkill; Obama election data team
 #### Key techniques: Monte Carlo simulations and MCMC; Bayesian networks; 
@@ -159,7 +159,7 @@ The topic in this chapter is the so-called 'Bayesian revolution' in statistical 
 
 The chapter traces two important implications of this technique. First, because it is so computationally intensive, MCMC and Bayesian inference, although statistically powerful, are difficult to apply to many dimensional datasets. So Bayesian computation iconically figures the limits of contemporary data practices, with their ambitions to incorporate all available data into calculation. Second, in certain ways this technique challenges us to re-evaluate how we think about numbers. By following some of the ways numbers circulate through MCMC algorithms, we can discern to a semiotic-material faultline running through contemporary number formations. Numbers semiotically and materially embrace both events and degrees of belief. If numbers are crucial in the data economy, then instabilities in their mode of existence will affect much of what happens to data. While much of the machine learning taking place in commercial and operational settings is decidedly non-Bayesian, the popularity of MCMC and Bayesian approaches in contemporary sciences suggests a tension in what counts as number.
 
-### 7. Contagious number flows
+### 6. Contagious number flows
 
 #### Key examples: A/H1N1, Google Flu;
 #### Key techniques: transmission models, nested models
@@ -168,7 +168,7 @@ The chapter traces two important implications of this technique. First, because 
 
 A predominant narrative around data in many contemporary settings urges that more data makes all problems solveable. This narrative is usefully accompanied by an 'abundance of data' ('big data', 'data deluge', etc) narrative, in which the advent of data corresponds to a groundswell change in how we make sense of and intervene in events. Versions of these narratives surface in genomics, business analytics, and infrastructure management (e.g. in smart energy grids), as well as crisis-events such as financial collapses or epidemics. Via a case study of different data flows during the 2009 A/H1N1 'swine flu' epidemic, this chapter develops an alternative narrative of data flow in terms of number supply chain logistics. The chapter reconstructs a real-time epidemiological model that combines clinical reports, laboratory test data, web surveys, urban population mixing patterns in order to disentangle biological and social forms of contagion and infection during the 2009 epidemic in London. In reconstructing this model, a model that is typical in complicated engagement with numbers of diverse origins, the chapter will suggest that the largely  homogeneous data flows envisaged and embraced in many forms of data practice largely ignore the problem of the interactions between different agents. It specifically contrasts  the much publicised Google Flu Trends approach to 'flu prediction, which is based on search query volumes, with epidemiological models based on multiple forms of surveillance data. The chapter argues  that data practices during crises or times of great uncertainty, entail hybrid integrations of existing data practice and new forms of data.
 
-### 8. Genomic topologies and the data superfold
+### 7. Genomic topologies and the data superfold
 
 #### Key examples: the ENCODE project; METABRIC; 
 #### Key techniques: decision trees, random forests, self-organising maps
@@ -177,7 +177,7 @@ A predominant narrative around data in many contemporary settings urges that mor
 
 The final chapter of the book concerns data-generating instruments and data archives in contemporary genomics (that is, post-Human Genome Project and after the advent of so-called 'high-throughput' or 'next generation sequencers';, this is roughly 2007 onwards). Genomics is a provocative form of data thought in several respects. First, it relentlessly treats one type of quite flat or mono-dimensional data -- nucleic acid sequences -- as the key to potentially biological processes in all their plasticity and mutability. While it is not at all clear that this treatment will be effective, it has generated ways of generating shape or pattern from data that stand as a limit case for data-driven research more generally.  Second, genomics is a scientific discipline almost overwhelmed by the  effectiveness of its own instruments in generating data. The rate of production of sequence data from next generation sequencers exceeds Moore's Law, the standard 18-24 month doubling time for the number of transistors in an integrated circuits. This sequence data needs to be stored and analysed in rhythms that differ from  many other settings where the growth of data can be managed through more memory and computer processing speed. Third, genomic researchers have been extraordinarily adaptive in positioning their work on the borders of cutting edge infrastructure development, machine learning and data-mining, and the life sciences. The flatness of sequence data has been heavily leveraged by this positioning. This chapter experiments conceptually with the increasing topological character of machine learning (and particularly, the growth of 'topological data analysis' [@carlsson_topology_2009; @singh_topological_2007] as well as the topological turn in culture [@lury_introduction_2012]), and practically, with the rich ecology of programmatically accessible bioinformatics tools and archives that on the one hand permits sequence data to move relatively freely (especially in comparison to much commercial or even social media data), but on the one hand poses question as to who wants or needs the data. 
     
-### 9. Conclusion
+### 8. Conclusion
 
 #### Key examples:
 #### Key techniques:
