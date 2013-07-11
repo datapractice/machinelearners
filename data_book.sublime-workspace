@@ -180,15 +180,7 @@
 			"file": "ch1-learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 69204,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/mackenza/.config/sublime-text-2/Packages/SublimeIPythonNotebook/README.md",
-			"settings":
-			{
-				"buffer_size": 1467,
+				"buffer_size": 71106,
 				"line_ending": "Unix"
 			}
 		},
@@ -204,7 +196,7 @@
 			"file": "/home/mackenza/Documents/notes/Massumi, Brian, Parables of the Virtual, Duke Univ.mdown",
 			"settings":
 			{
-				"buffer_size": 13975,
+				"buffer_size": 13976,
 				"line_ending": "Unix"
 			}
 		},
@@ -312,7 +304,7 @@
 			"file": "proposal.md",
 			"settings":
 			{
-				"buffer_size": 38819,
+				"buffer_size": 38876,
 				"line_ending": "Unix"
 			}
 		},
@@ -325,15 +317,59 @@
 			}
 		}
 	],
-	"build_system": "Packages/R Tools/R.sublime-build",
+	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 348.0,
 		"selected_items":
 		[
 			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"package ",
+				"Package Control: Add Repository"
+			],
+			[
 				"set",
 				"Set Syntax: Markdown"
+			],
+			[
+				"lat",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"pac",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pack",
+				"Package Control: Add Repository"
+			],
+			[
+				"",
+				"Build: Pandown: LaTeX - PDF"
+			],
+			[
+				"pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"set ",
+				"Set Syntax: Markdown"
+			],
+			[
+				"insta",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ist",
+				"Package Control: Install Package"
 			],
 			[
 				"ipy",
@@ -360,14 +396,6 @@
 				"Set Syntax: Markdown"
 			],
 			[
-				"pack",
-				"Package Control: Upgrade Package"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"set mark",
 				"Set Syntax: Markdown"
 			],
@@ -392,16 +420,8 @@
 				"Set Syntax: Markdown"
 			],
 			[
-				"pa",
-				"Package Control: Install Package"
-			],
-			[
 				"set syntax py",
 				"Set Syntax: Python"
-			],
-			[
-				"pac",
-				"Package Control: Install Package"
 			],
 			[
 				"set s",
@@ -410,10 +430,6 @@
 			[
 				"p",
 				"Package Control: Install Package"
-			],
-			[
-				"",
-				"View: Toggle Side Bar"
 			],
 			[
 				"se",
@@ -428,11 +444,14 @@
 				"Set Syntax: R"
 			]
 		],
-		"width": 449.0
+		"width": 575.0
 	},
 	"console":
 	{
-		"height": 139.0
+		"height": 455.0,
+		"history":
+		[
+		]
 	},
 	"distraction_free":
 	{
@@ -445,7 +464,24 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/Documents/data_intensive/book/ch2-curves/ch2_curves_function.rmd",
+		"/home/mackenza/Documents/data_intensive/book/proposal.rmd",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mackenza/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/WordCount.sublime-settings",
+		"/home/mackenza/Documents/data_intensive/book/build.sh",
+		"/home/mackenza/Documents/data_intensive/book/template.latex",
+		"/home/mackenza/Documents/data_intensive/book/ch0-introduction/template.latex",
+		"/home/mackenza/.config/sublime-text-3/Packages/WordCount/WordCount.sublime-settings",
+		"/home/mackenza/.config/sublime-text-3/Packages/Pandown/README.mdown",
 		"/home/mackenza/Documents/data_intensive/book/ch1-learning/ch1_praxis.rmd",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/Pandoc.sublime-settings",
+		"/home/mackenza/.config/sublime-text-3/Packages/Pandoc/Pandoc.sublime-settings",
+		"/home/mackenza/.config/sublime-text-2/Packages/SublimeIPythonNotebook/README.md",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/mackenza/.config/sublime-text-3/Packages/SmartMarkdown/Default.sublime-keymap",
+		"/home/mackenza/.config/sublime-text-3/Packages/SmartMarkdown/SmartMarkdown.sublime-settings",
+		"/home/mackenza/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/mackenza/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 		"/home/mackenza/.config/sublime-text-2/Packages/SublimeIPythonNotebook/SublimeIPythonNotebook.sublime-settings",
 		"/home/mackenza/Documents/notes/Massumi, Brian, Parables of the Virtual, Duke Univ.mdown",
@@ -453,7 +489,6 @@
 		"/home/mackenza/Documents/data_intensive/book/references/Exported Items.bib",
 		"/home/mackenza/Dropbox/metacommunities/StackExchange data readme.txt",
 		"/home/mackenza/Documents/data_intensive/book/pandoc.sh",
-		"/home/mackenza/Documents/data_intensive/book/build.sh",
 		"/home/mackenza/Documents/data_intensive/book/animations/grad_desc.R",
 		"/home/mackenza/Documents/data_intensive/book/references/R.bib",
 		"/home/mackenza/Documents/data_intensive/book/ch1/ch1_praxis.rmd",
@@ -479,7 +514,6 @@
 		"/home/mackenza/Desktop/jss725.Rnw",
 		"/home/mackenza/Documents/notes/milleplateux.md",
 		"/home/mackenza/Desktop/jss725-tikzDictionary",
-		"/home/mackenza/Documents/data_intensive/book/template.latex",
 		"/home/mackenza/Documents/data_intensive/book/references/refs.bib",
 		"/home/mackenza/.cache/.fr-BlOcAR/2012-04-08-9.json",
 		"/home/mackenza/Documents/google_analytics_spet2012/google.sublime-workspace",
@@ -557,20 +591,11 @@
 		"/home/mackenza/.config/sublime-text-2/Packages/User/untitled.sublime-snippet",
 		"/home/mackenza/Dropbox/data-economy/paper/4S EASST talk.docx",
 		"/home/mackenza/Desktop/build.R",
-		"/home/mackenza/Desktop/test3.md",
-		"/home/mackenza/Desktop/test4.R",
-		"/home/mackenza/Desktop/test2.mdown",
-		"/home/mackenza/Desktop/test1.md",
-		"/home/mackenza/R/montecarlo/data/refs.bib",
-		"/home/mackenza/Desktop/test6.rmd",
-		"/home/mackenza/R/ngs/data/geo_schema.sql",
-		"/home/mackenza/Desktop/test.sublime-project",
-		"/media/0031-014A/Documents/supervision/xaroula/chapter 2 attempt.doc",
-		"/home/mackenza/Desktop/scrivener-manual-a4.pdf"
+		"/home/mackenza/Desktop/test3.md"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -585,6 +610,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			" the ability to move freely",
+			"whitehead",
+			"false",
 			"@bollas_evocative_2009,",
 			" ",
 			"church",
@@ -705,12 +733,13 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
 					"file": "proposal.rmd",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 38823,
@@ -720,101 +749,13 @@
 						"selection":
 						[
 							[
-								27263,
-								27263
+								130,
+								130
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
+							"WordCountShouldRun": false,
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -826,6 +767,7 @@
 				{
 					"buffer": 1,
 					"file": "ch0-introduction/ch0_introduction.rmd",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 105,
@@ -835,12 +777,13 @@
 						"selection":
 						[
 							[
-								105,
-								105
+								37,
+								37
 							]
 						],
 						"settings":
 						{
+							"WordCountShouldRun": true,
 							"annotations":
 							[
 								"TODO",
@@ -942,241 +885,37 @@
 				{
 					"buffer": 2,
 					"file": "ch1-learning/ch1_praxis.rmd",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 69204,
+						"buffer_size": 71106,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1779,
-								1779
+								51061,
+								51061
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"spell_check": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
+							"WordCountShouldRun": true,
 							"syntax": "Packages/Markdown/Markdown.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 232.0,
+						"translation.y": 15062.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/home/mackenza/.config/sublime-text-2/Packages/SublimeIPythonNotebook/README.md",
-					"settings":
-					{
-						"buffer_size": 1467,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "ch2-curves/ch2_curves_function.rmd",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 242,
@@ -1186,127 +925,41 @@
 						"selection":
 						[
 							[
-								242,
-								242
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/home/mackenza/Documents/notes/Massumi, Brian, Parables of the Virtual, Duke Univ.mdown",
-					"settings":
-					{
-						"buffer_size": 13975,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
 								0,
 								0
 							]
 						],
 						"settings":
 						{
+							"WordCountShouldRun": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/mackenza/Documents/notes/Massumi, Brian, Parables of the Virtual, Duke Univ.mdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13976,
+								13976
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
 							"annotations":
 							[
 								"TODO",
@@ -1399,14 +1052,15 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2912.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "ch2-curves/davis_tweak_workshop_paper.rmd",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 36735,
@@ -1416,8 +1070,8 @@
 						"selection":
 						[
 							[
-								1778,
-								1778
+								169,
+								169
 							]
 						],
 						"settings":
@@ -1521,8 +1175,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "/home/mackenza/Documents/notes/bollas, the evocative object world.md",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 551,
@@ -1637,8 +1292,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1611,
@@ -1753,8 +1409,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "/home/mackenza/Documents/notes/Wilson,_Affect and Artificial Intelligence2009.md",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 678,
@@ -1868,8 +1525,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "technique_demos.rmd",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 4842,
@@ -1984,8 +1642,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "/home/mackenza/Documents/notes/Whitehead_PR.mdown",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 614,
@@ -2100,8 +1759,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 4209,
@@ -2215,8 +1875,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "techniques.md",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 4068,
@@ -2331,8 +1992,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 13,
 					"file": "ch2-curves/functions.mdown",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 10729,
@@ -2446,8 +2108,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 14,
 					"file": "/home/mackenza/Documents/data_intensive/transformation_soc_sci_oxford_2013/mackenzie_slides_oxford_feb_2013.Rmd",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 2789,
@@ -2563,8 +2226,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 15,
 					"file": "references/refs.bib",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 41626,
@@ -2574,12 +2238,13 @@
 						"selection":
 						[
 							[
-								29239,
-								29239
+								20169,
+								20169
 							]
 						],
 						"settings":
 						{
+							"WordCountShouldRun": false,
 							"annotations":
 							[
 								"TODO",
@@ -2673,14 +2338,15 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 16382.0,
+						"translation.y": 13218.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 16,
 					"file": "references/machine_learning.bib",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 27133,
@@ -2795,11 +2461,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 17,
 					"file": "proposal.md",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 38819,
+						"buffer_size": 38876,
 						"regions":
 						{
 						},
@@ -2910,8 +2577,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 18,
 					"file": "references/R.bib",
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 70469,
@@ -3024,7 +2692,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 31394.0,
+						"translation.y": 719.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -3034,7 +2702,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 41.0
 	},
 	"input":
 	{
@@ -3071,9 +2739,10 @@
 	{
 		"height": 124.0
 	},
+	"project": "data_book.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -3081,6 +2750,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"te",
+				"book/template.latex"
+			],
+			[
+				"data",
+				"book/references/data_forms_thought.bib"
+			],
+			[
+				"re",
+				"book/references/refs.bib"
+			],
 			[
 				"r",
 				"book/references/R.bib"
@@ -3128,10 +2809,24 @@
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 338.0,
-	"status_bar_visible": true
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }
