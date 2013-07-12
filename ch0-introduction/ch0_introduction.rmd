@@ -1,7 +1,16 @@
 # Introduction
 
+
 ## overview
+
+
 
 ## to do
 - bring in materials from warwick talk
 - recursiveness of this text
+- the role of industry -- machine learning as industrial
+- the form of writing; finding oneself experimenting with code
+- trying to find experiments and experiences
+
+## quotes to use
+it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. 87 Rabinow
