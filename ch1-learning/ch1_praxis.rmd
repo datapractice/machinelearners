@@ -1,4 +1,4 @@
-# A praxiography of machine learning
+# Associating with data: a praxiography of machine learning
 
 ## Overview
 
@@ -226,13 +226,13 @@ The first full mathematical expression in _The Elements of Statistical Learning_
 
     > The linear model has been a mainstay of statistics for the past 30 years and remains one of our most important tools. Given a vector of inputs
     $X^T = (X_1 , X_2, . . . , X_p)$, we predict the output $Y$ via the model
-    >$\hat(Y) = \hat(\beta_0)  + \sum^p_(j=1) X_j \hat(\beta_j)$
-    >The term $\hat(\beta_0)$ is the intercept, also known as the _bias_ in machine learning [@hastie_elements_2009, 11].
+    >$\hat{Y} = \hat{\beta_0}  + \sum^p_(j=1) X_j \hat{\beta_j)$
+    >The term $\hat{\beta_0}$ is the intercept, also known as the _bias_ in machine learning [@hastie_elements_2009, 11].
 
 This is such an important expression in machine learning that learning to read it is almost indispensable to thinking about machine learning more generally.  This model is the 'simple but powerful linear model' (11) in which $Y$, the so-called 'response variable' is modelled on some additive combination (the $\sum$ operator means adding them) of input variables $X_j$ and a value of the intercept $\beta_0$.  Even if this does not make much sense, I am hoping that you can see that the linear model relies deeply on the spatial forms of vectors and matrices.  The subscripts $j=1$ refer to individual input variables.   Importantly, as Hastie and co-authors go on to say, 
 
-    > Often it is convenient to include the constant variable 1 in $X$, include $\hat(\beta_0)$ in the vector of coefficients $\hat(\beta)$, and then write the linear model in the vector form as an inner product:
-    $\hat(Y) = X^T \hat(\beta)$
+    > Often it is convenient to include the constant variable 1 in $X$, include $\hat{\beta_0)$ in the vector of coefficients $\hat{\beta}$, and then write the linear model in the vector form as an inner product:
+    $\hat{Y} = X^T \hat{\beta}$
     > where $X^T$ denotes vector or matrix transpose [@hastie_elements_2009, 12-13].
 
 We will need further explanation to make more sense of these expressions, but for the moment, the only thing that needs to come across is the heavy reliance on vectors and matrices, which means that entire models can be expressed highly concisely as matrix multiplication operations. In this case, with the convenient convention of making the intercept into a constant input variable, linear models can be written simply as an 'inner product', that is,  as a matrix-matrix multiplication. Learning machine learning, as I say, and learning to implement machine learning techniques, is largely a matter of implementing series of matrix multiplications. As Andrew Ng advises his students,
@@ -243,9 +243,9 @@ This is one case where implementation does not facilitate learning. Ng advises h
 
 How do we 'efficiently make lots of predictions' using matrices? Let's return to the example of house prices mentioned by Norman Nie. In this example, house price is generally treated as the response variable ($Y$), and the number of bedrooms and overall size in square feet are the input variables ($X_1$, $X_2$).  A linear model seeks to find a line (or a plane, or as we will see, a hyperplane) that best fits the points. While I will discuss in the next chapter how such a line can be found, here I want to only show one solution to this problem because it takes the form of a matrix multiplication. As Hastie and co-authors write, the 'unique solution' to the problem of fitting a linear model to a given dataset using the most popular method of 'least squares' [@hastie_elements_2009, 12] is given by:
 
->$\hat(\beta) = (\mathbf{X}^T\mathbf{X})^-1\mathbf{X}^T\mathbf{y}
+>$\hat{\beta} = (\mathbf{X}^T\mathbf{X})^-1\mathbf{X}^T\mathbf{y}
 
-This is quite a tightly coiled expression of how to calculate the parameters $\hat(\beta)$ for a linear model. The two matrices involved are the $X$ input variables (house size and number of bedrooms) and a 1-dimensional matrix $y$, the house price. These matrices are multiplied, transposed (a form of rotation that swaps rows for columns) and inverted (a more complex operation that finds another matrix) Implementing it for  the San Francisco house price data only requires a few extra lines of code:
+This is quite a tightly coiled expression of how to calculate the parameters $\hat{\beta}$ for a linear model. The two matrices involved are the $X$ input variables (house size and number of bedrooms) and a 1-dimensional matrix $y$, the house price. These matrices are multiplied, transposed (a form of rotation that swaps rows for columns) and inverted (a more complex operation that finds another matrix) Implementing it for  the San Francisco house price data only requires a few extra lines of code:
 
 ```{r house_price, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
  
@@ -264,7 +264,7 @@ This is quite a tightly coiled expression of how to calculate the parameters $\h
     abline(beta_hat[1], beta_hat[2])
 ```
 
-Given the values of $\hat(\beta)$, we can make predictions of house prices for any given number of bedrooms and house area. For instance, a house with 4 bedrooms and area of 1000 sq. feet should cost around $`'r predicted_price`. As the plot of the house price data shows, albeit without showing all the variables, the line that has been fitted passes through many of the points. This line or surface is the predictive element of the function. We don't need to grasp all the details of the matrix operations working to fit this prediction surface. As in the case of the infrastructural concision shown in the code that fetches data from the World Bank databases, I want to point here to the tightly coiled matrices  that produce predictions.  
+Given the values of $\hat{\beta}$, we can make predictions of house prices for any given number of bedrooms and house area. For instance, a house with 4 bedrooms and area of 1000 sq. feet should cost around $`'r predicted_price`. As the plot of the house price data shows, albeit without showing all the variables, the line that has been fitted passes through many of the points. This line or surface is the predictive element of the function. We don't need to grasp all the details of the matrix operations working to fit this prediction surface. As in the case of the infrastructural concision shown in the code that fetches data from the World Bank databases, I want to point here to the tightly coiled matrices  that produce predictions.  
 
 The basic question is whether by unwinding some of these operations, we get closer to the vitality of the multiple/multiplying concrete value-situations that connection calculation and feeling.  My feeling is that the praxiographic implementation of the machine learning techniques provides a way begin to name the processes of knowing, predicting and deciding on which many aspects of the turn to data rely.  As the next chapter will suggest, the matrix operations we have just been viewing are themselves organised by other layers of intuition that explore shape, movement and surfaces in much more convoluted forms. 
 

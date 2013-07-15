@@ -1,10 +1,81 @@
 # Finding functions: lines and curves
 
-## to add in
+## techniques
+- logistic regression - on what?
+- *k-nn* 
+- decision tree
 
-- gradient descent
+## examples
+- housing price prediction; 
+- cancer prognosis; 
+- digit recognition; 
+- credit scoring
+
+## overview
+- connection to matrix/vector manipulations
+- machine learning as finding an approximation to the function that generated the data
+    - the linear model
+- the visual forms of data -- nearly always a curve or line to find
+    - Tim Ingold on lines
+    - probability density functions as curves
 - Deleuze and other on  functions
-- learning as finding an approximation to the function that generated
-- probability density functions as curves
-- Tim Ingold on lines
-- 
+- gradient descent
+    - cost functions and optimisation
+    - partial observers
+
+## quotes to use
+
+The problematization of classifications, practices, things is an event.  Rabinow
+
+### Whitehead
+
+Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns 195
+
+It is the reason why ... in our direct apprehension of the world around us we find that curious habit of claiming a two-fold unity with the observed data. We are in the world and the world is in us. W, MoT, 227
+
+'Value' is the world I use for the intrinsic reality of an event.  ... We have only to transfer to the very texture of realisation in itself that value which we recognise so readily in terms of human life. SMW, 116
+
+The aboriginal data in terms of which pattern weaves itself are the shapes, of sense-objects, and of other eternal objects whose self-identity is not dependent on the flux of things SMW, 187-8
+
+### Stengers:
+
+the challenge, which I deem a materialist challenge, is that whatever the mess and perplexity that may result, we should resist the temptation to pick and choose among practices Stengers, wondering, 2011, 379
+
+I propose as a materialist motto: we never get a relevant answer if our practices have not enabled us to produce a relevant question Stengers, wondering, 373
+Celebrating the exceptional character of the experimental achievemnt very effectively limits the claims made in the name of science. Stengers, wondering, 376
+
+Taking seriously the singularity of experimental practices aslo leads us to understand the strong possibility of their destruction by the coming knowledge economy. The points is not that the scientific enterprise would lose a neutrality it never had.  … What is at risk is rather the very social fabric of scientific reliability, that is, the constitutive relation between an epxerimental achievmenet and the gathering of what can be called 'competent colleagues' Stengers, wondering, 377
+
+## Introduction
+
+## The scientific function and its data
+
+Machine learning has  treats data as a learning problem.  Learning in machine learning means finding a function that can identify or render patterns in the data. As _Elements of Statistical Learning_ puts it, ' our goal is to find a useful approximation $\hat{f}(x)$ to the function $f(x)$ that underlies the predictive relationship between input and output' [@hastie_elements_2009, 28].  The linear  regression model that fits a line to a set of points ($ \hat{Y} = X^T \hat{\beta}$) is just such a useful approximation to  the actual function that generated the data. The kind of visual pattern it identifies is really elementary: a straight line. The lengths to which machine learning is prepared to go to fit lines to situations is, as we will see, quite extraordinary. 
+
+A couple of critical questions present themselves when it comes to the practices of function finding and pattern recognition in machine learning.  First of these is fundamental. Can a function ever be said to learn? The philosopher of science Isabelle Stengers writes:
+
+ > No function can deal with learning, producing, or empowering new habits, as all require and achieve the production of different worlds, non-consensual worlds, actively diverging worlds [@stengers_deleuze_2005, 162]
+
+
+Functions pervade all data. That is, there is no raw data, except in a humanist empiricism. All other data is preformed, collected, ordered and analysed through functions. Functions are data’s necessary prosthesis. 
+
+How do functions work? A wide variety of mathematical functions exist. They are of various genres, provenances, textures and shapes: polynomial functions, differential equations, series functions, algebraic or topological functions, etc. Various fields of mathematics have pursued the invention of functions. At the same time, functions exist as operational processes, as for instance, when a programmer write a function to sort records by date. This means that operate on data in the world, and introduce procedures into its many states of affairs. Both kinds of functions share some features. They both invoke numbers and symbols. They are both written in formal ways (equations, code). They both have arguments or variables. They both have various kinds of operators (+, -, =,etc.) that articulate variables together, usually expressed in the form of symbols. 
+
+The question is how we can relate these two different kinds of functions to data?  Does a mathematical or scientific function have the same mode of existence as an operation that proceduralises a state of affairs? Do the matters of facts map onto states of affairs through functions? I would suggest that although the two kind of functions are entwined, they do quite different things, and that comprehending their differences is vital to thinking through contemporary forms of data. 
+
+According to Deleuze and Guattari in *What is Philosophy*, the function is the central inventive process in science. Functions are not demonstrated or deduced, but created (cf. Manuel Delanda on this). Their account of scientific functions offers one way of understanding how these two different kinds of functions relate. The key accomplishment of functions for them consists in a slowing down of chaos (or what we might call, following William James, ‘pure experience’). A function is  ‘a fantastic slowing down, and it is by slowing down that matter, as well as the scientific thought able to penetrate it with propositions, is actualized. A function is a Slow-motion’ {Deleuze, 1994,118}.  They see functions as particular way of constructing references within chaos or noise. Here chaos is understood as) formlessness that arises from speed, from the fact that forms appear and disappear rapidly. While it is hardly a commensense account of a world, we might think of it as the degree zero on knowing or thinking, the background noise or dark screen against which all form, differentiation, pattern or order eventuates. 
+
+As Isabelle Stengers writes:
+
+>Deleuze and Guattari defined the “creation of scientific function by science’s own specific means” they certainly did not agree with the old bearded-face explanation, but they nevertheless asked us to relate science as creation with science’s “own specific means,” which are associated, one way or the other, {Stengers, 2005, 154}
+
+The specific means through scientific functions are created is different to the ‘functions of the lived’ that map onto perceptions and affections. Functions of the lived have ‘consensual perceptions and affections’ as their arguments {Stengers, 2005, 154}, and to that extent, are not creative. They are complicated forms of recognition. By contrast, insofar as they are creative, scientific functions diverge from functions of the lived, and their implicitly consensual recognition. By means of experiment, they transform functions of the lived into matters of fact articulated through a mathematical function, or as Stengers write, into a scientific matter of fact correlated to a scientific mathematical function’ (156).’Correlated’ here is the key term. What does it mean to correlate something a mathematical function? 
+On this point, Stengers is quite precise: 
+
+>The reference of a mathematical function to an experimental matter of fact is neither some kind of right belonging to scientific reason nor is it an enigma, but actually the very meaning of an experimental achievement. {Stengers, 2005,157}
+
+In referring to an experimental situation or to matters of fact, variables re-articulate what perceived state of affairs in terms of a function. The function, as a relation, allows these variables to vary, and indeed suggests that they can vary in more or less constrained ways. The relation of variables to each other can be tested, and it can produce further matters of fact. The scientific function, then, is a kind of convention that remakes the ground on which it stands. As Stengers is at pains to point out, here and elsewhere in her work, the scientific function and matter of fact needs a specific kind of collective, animated by objections, in order to survive. The scientific collective raises objections to the convention and put it to the test. The scientific function is powerful to the extent that it leaves itself open to objections.  Matters of fact bifurcate states of affairs and functions of the lived. They make a difference between knowledge as matters of fact and consensual perception or discourse. Scientific functions become vulnerable to takeover by functions of the lived to the extent that they are not open to objection. 
+
+    This is why the power of such a convention changes in nature as soon as it leaves its birthplace and concerns human affairs where all protagonists are not enabled to object, where some are a priori defined as not mattering. The effectuation of the event, the meaning of the ‘‘it works,’’ radically changes as soon as the tent is pitched on the settled ground of interests and power, and as soon as the habit of the public to accept being addressed as powerless, mere opinion, unable to object and propose, is an ingredient in its concept (Stengers, 2005, 162).
+
+   

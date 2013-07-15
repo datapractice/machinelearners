@@ -1,4 +1,3 @@
-
 # Book Proposal
 
 ## In the data: modes of machine thought
@@ -10,7 +9,7 @@ Bailrigg, LA14YD, UK
 ## Overview
 
 
->The key question isn't 'How much will be automated?' It's how we'll conceive of whatever _can't_ be automated at a given time. Lanier, _Who Owns the Future_, 2012, 77
+>The key question isn't 'How much will be automated?' It's how we'll conceive of whatever _can't_ be automated at a given time. [@Lanier_Who Owns the Future_, 2012, 77]
 
 In recent years, a really marked trend towards aggregation of data ('big data,' 'data-intensive research') has been easy to see in many different settings. Responding to the many promises about the scientific, commercial, political, and financial uses of data (such as the former _Wired_ editor Chris Andersons 'end of theory' [@anderson_end_2008], a fairly broadly skeptical set of responses coming from scientists, social scientists and humanities scholars point to some of the problems with over-commitment to digital data as the answer to all questions. They also suggest that the opacity of data practices pose significant ethico-political problems. 
 
@@ -82,24 +81,21 @@ The book has a standard chapter format. It will include several dozen code-gener
 
 ## Chapter outline
 
-### 0. Introduction: into data
+### 0. Introduction: into the data
 
 #### Key examples: Eulerian motion pulse detection; kittydar and cat detection; DARPA challenges
-
 
 The introduction will begin with a several relatively straight-forward and accessible  examples drawn from a variety of fields over the last decade or so -- handwriting recognition, face recognition, social media trend 'nowcasting', finance, autonomous robots [@thrun_stanley_2006], and cancer prognosis. It will highlight these examples as symptoms of the wide-ranging investments in knowledge, control, prediction and decision-making associated with data flows, and at the same time, suggest how these tracking some of the transformations might elicit changes in how humanities and social science researchers understand their own work. 
 
 The entry point for the wider questions in the book will come from burgeoning debates about the promise of data. These include the notorious 'end of theory' prediction (Chris Anderson, _Wired_ magazine, 2008), and the many claims and controversies about data analytics, machine learning and the 'power of big data.' In broad terms, the  themes of 'in the data' and  'modes of machine thought' will be characterised, drawing on a range of work drawn from pragmatist philosophers such as C.S. Peirce (abduction and diagrams), William James on experience [@james_essays_1996],  John Dewey on 'reconstruction' [@dewey_reconstruction_1957], Alfred N. Whitehead on 'abstraction' [@whitehead_modes_1958] and from recent social and cultural theory  such as Isabelle Stengers on experiment [@stengers_experimenting_2008]; Gilles Deleuze & Felix Guattari on scientific functions, and [@deleuze_what_1994]; Celia Lury on topology [@lury_introduction_2012]). In order to contextualise forms of data thought, the introduction will also sketch some points of departure drawn from software studies work on algorithms and databases, science studies work on calculation, statistics, number, device, image and diagram, , as well as accounts of subjectivity, experience [@berlant, 2007] or [@murphie, 2010] and materiality cross-cutting all of the above. This spectrum of work from across disciplines provide  scaffolding and departure points for much of the book. 
 
-
 Finally, the introduction will also provide a preliminary overview of the techniques of machine learning discussed in the book -- clustering, linear modelling, Bayesian inference, etc -- but very much with a view to exemplifying  the   of the book concerning data as a material-semiotic entity: dimensioning, diagrams and mapping, generating and discriminating, convolution and multiples, optimality and predictivity.   
-
-### 1. Associating with data: classifiers and predictions
+	
+### 1.  Associating with data: a praxiography of machine learning
 
 #### Key examples: Pfizer's 'discovery' of Viagra; R programming language as the 'Magna Carta' of analytic rights; Python scikit-learn & pandas; the Titanic survivors;
 
-#### Key techniques: perceptrons, stochastic gradient descent, decision trees
-
+#### Key techniques: perceptrons, linear models
 
 This chapter is primary a methodological discussion, in the form of a series of vignettes that display some of the ways in which research and writing critical accounts of data cultures and data economies can make use of the tools, techniques, instruments and services of 'data science' to generate textual, diagrammatic and modelised accounts of contemporary culture.  The vignettes come from either the author's own history of working with machine learning or online accounts of machine learning, set against the background a particular software ecology, associated with the statistical programming language R. 
 
@@ -110,7 +106,7 @@ Finally, this chapter is somewhat autoethnographic too, in that it reports on th
 
 ### 2. From straight lines to curved surfaces
 
-#### Key examples: housing price prediction; cancer prognosis; digit recognition
+#### Key examples: housing price prediction; cancer prognosis; digit recognition; credit scoring
 #### Key techniques: logistic regression; _k_-nearest neighbours
 
 -- recursion, movement, evocative objects, partial observers, visualisation, etc; functions and states of things; linear regression
@@ -135,7 +131,6 @@ Connecting aesthetic and mathematical data practices, this chapter suggests that
 :  regularisation - dimensional reduction, dimensional explosion -- infinite dimensional spaces; recommender engine - svd as well; ebay; hunch.com
 
 For the last decade, the best-performing 'off-the-shelf' machine learning algorithm has been a technique known broadly as 'support vector machines' (SVM; see [@vapnik_nature_1999]). The chapter examines the architecture of this widely used algorithm both against the background of a spectrum of other statistical machine learning techniques, and more importantly, in terms of the *forms of movement* it brings to data practice. The key focus in this discussion is the dimensionality of data, and how dimensionality is managed in machine learning.  While curves and functions, as discussed the previous chapter, engender senses of change and movement, the advent of increasingly extended and particularly 'wide' datasets (many variables) implies models that embrace high-dimensional abstract spaces. Since the 1950s, scientists  have been aware of the 'curse of dimensionality' [@bellman, TBA], which arises when the dimensions of the data increase. Algorithms such as SVM, and implicitly other highly successful ML algorithms such as neural networks, manage this dimensionality very differently to the regression models that have been the mainstay of statistical modelling for a century. Rather than trying to reduce the dimensionality of the model to a line, plane or hyperplane that best fits the datasets, SVM expands the dimensionality  of the model massively, sometimes infinitely.
-
 
 ### 4. Cruel optimisation and algorithmic competition
 

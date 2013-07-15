@@ -1,10 +1,14 @@
 # scientific functions
 
-The scientific function
+## The scientific function
 Functions pervade all data. That is, there is no raw data, except in a humanist empiricism. All other data is preformed, collected, ordered and analysed through functions. Functions are data’s necessary prosthesis. 
+
 How do functions work? A wide variety of mathematical functions exist. They are of various genres, provenances, textures and shapes: polynomial functions, differential equations, series functions, algebraic or topological functions, etc. Various fields of mathematics have pursued the invention of functions. At the same time, functions exist as operational processes, as for instance, when a programmer write a function to sort records by date. This means that operate on data in the world, and introduce procedures into its many states of affairs. Both kinds of functions share some features. They both invoke numbers and symbols. They are both written in formal ways (equations, code). They both have arguments or variables. They both have various kinds of operators (+, -, =,etc.) that articulate variables together, usually expressed in the form of symbols. 
+
 The question is how we can relate these two different kinds of functions to data?  Does a mathematical or scientific function have the same mode of existence as an operation that proceduralises a state of affairs? Do the matters of facts map onto states of affairs through functions? I would suggest that although the two kind of functions are entwined, they do quite different things, and that comprehending their differences is vital to thinking through contemporary forms of data. 
+
 According to Deleuze and Guattari in *What is Philosophy*, the function is the central inventive process in science. Functions are not demonstrated or deduced, but created (cf. Manuel Delanda on this). Their account of scientific functions offers one way of understanding how these two different kinds of functions relate. The key accomplishment of functions for them consists in a slowing down of chaos (or what we might call, following William James, ‘pure experience’). A function is  ‘a fantastic slowing down, and it is by slowing down that matter, as well as the scientific thought able to penetrate it with propositions, is actualized. A function is a Slow-motion’ {Deleuze, 1994,118}.  They see functions as particular way of constructing references within chaos or noise. Here chaos is understood as) formlessness that arises from speed, from the fact that forms appear and disappear rapidly. While it is hardly a commensense account of a world, we might think of it as the degree zero on knowing or thinking, the background noise or dark screen against which all form, differentiation, pattern or order eventuates. 
+
 As Isabelle Stengers writes:
 
 >Deleuze and Guattari defined the “creation of scientific function by science’s own specific means” they certainly did not agree with the old bearded-face explanation, but they nevertheless asked us to relate science as creation with science’s “own specific means,” which are associated, one way or the other, {Stengers, 2005, 154}
@@ -15,77 +19,10 @@ On this point, Stengers is quite precise:
 >The reference of a mathematical function to an experimental matter of fact is neither some kind of right belonging to scientific reason nor is it an enigma, but actually the very meaning of an experimental achievement. {Stengers, 2005,157}
 
 In referring to an experimental situation or to matters of fact, variables re-articulate what perceived state of affairs in terms of a function. The function, as a relation, allows these variables to vary, and indeed suggests that they can vary in more or less constrained ways. The relation of variables to each other can be tested, and it can produce further matters of fact. The scientific function, then, is a kind of convention that remakes the ground on which it stands. As Stengers is at pains to point out, here and elsewhere in her work, the scientific function and matter of fact needs a specific kind of collective, animated by objections, in order to survive. The scientific collective raises objections to the convention and put it to the test. The scientific function is powerful to the extent that it leaves itself open to objections.  Matters of fact bifurcate states of affairs and functions of the lived. They make a difference between knowledge as matters of fact and consensual perception or discourse. Scientific functions become vulnerable to takeover by functions of the lived to the extent that they are not open to objection. 
+
 This is why the power of such a convention changes in nature as soon as it leaves its birthplace and concerns human affairs where all protagonists are not enabled to object, where some are a priori defined as not mattering. The effectuation of the event, the meaning of the ‘‘it works,’’ radically changes as soon as the tent is pitched on the settled ground of interests and power, and as soon as the habit of the public to accept being addressed as powerless, mere opinion, unable to object and propose, is an ingredient in its concept (Stengers, 2005, 162).
-
-
 
 No function can deal with learning, producing, or empowering new habits, as all require and achieve the production of different worlds, non-consensual
 worlds, actively diverging worlds (Stengers, 2005, 162).
 Comment on this — on what functions cannot do. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## deleuze & guattari
-
-*What is philosophy?*
-
-The object of science is not concepts but rather functions that are presented as propositions in discursive systems. 117
-
-The elements of functions are called functives. 117
-
-When an object – a geometrical space, for example – is scientifically constructed by functions, its philosophical concept, which is by no means given in the function, must still be discovered. 117
-
-It is a fantastic slowing down, and it is by slowing down that matter, as well as the scientific thought able to penetrate it with propositions, is actualized. A function is a Slow-motion. 118
-
-The first functives are therefore the limit and the variable, and reference is a relationship between values of the variable or, more profoundly, the relationship of the variable, as abscissa of speeds, with the limit. 118-9
-
-The respective independence of variables appears in mathematics when one of them is at a higher power than the first. 122
-
-The etats des choses is a function: it is a complex variable that depends on a relation between at least two independent variables 122
-
-An etats des choses or “derivative” function depends on such a relation: an operation of depotentialization has been carried out that makes possible the comparison of distinct powers starting from which a thing or a body may well develop (integration). 122
-
-When we go from the state of affairs to the thing itself, we see that a thing is always related to several axes at once according to variables that are functions of each other, even if the internal unit remains undetermined. 122
-
-But when the thing itself undergoes changes of coordinates, strictly speaking it becomes a body, and instead of the function taking the limit and the variable as reference, it takes an invariant and a group of transformations. 122
-
-The difference between body and state of affairs (or thing) pertains to the individuation of the body, which proceeds by a cascade of actualizations. 123
-
-Thus we find ourselves confronting a new string of functives, systems of coordinates, potentials, states of affairs (etats des choses), things and bodies. Etats des choses are ordered mixtures, of very different types, which may even only concern trajectories. But things are interactions, and bodies are communications. Etats des choses refer to geometrical coordinates of supposedly closed systems, things refer to energetic coordinates of coupled systmes, and bodies refer to informational coordinates of spearated, unconnected systems. 123
-
-The independence of variables, in relationships that can be conditioned, is essential to the function. 126
-Scientific functions have states of affairs or mixtures for reference.  126
-
-Concepts and functions thus appear as two types of multiplicities or varieties whose natures are different. 127
-
-science brings to light partial observers in relation to functions within systems of reference.129
-
-in short, the role of the partial observer is to perceive and to experience , although these perceptions and affections are not those of a man, in the currently accepted sense, but belong to the things studied. 130
-These partial observers belong to the neighbourhood of the singularities of a curve, of a physical system, of an organism (130)
-
-Rather than oppose sensory knowledge and scientific knowledge, we should identify the sensibilia that populate systems of coordinates and are peculiar to science 131
-
-Far from sensibilia being defined by instruments, since the latter are waiting for a real observer to come and see, it is instruments that presuppose the ideal partial observer situated at a good vantage point in things: 131
-
-But the fact that there are specifically philosophical perceptions and affections and specifically scientific ones --- in short, sensibilia of the concept and sensibilia of the function – already indicates the basis of a relationship between science and philosophy, science and art … such that we can say that a function is beautiful. 132
-
-The function in science determines a state of affairs, thing, or body that actualizes the virtual on a plane of reference and in a system of coordinates 133
-
-How are we to conceive of practical transitions between the two sorts of problems? 133
-Functions derive all their power from reference, whether this be reference to states of affairs, things, or other propositions. 138
-Acts of reference are finite movements of thought by which science constitutes or modifies states of affairs and bodies. 
-States of affairs … are mixtures 153

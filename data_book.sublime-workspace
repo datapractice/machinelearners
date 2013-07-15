@@ -171,7 +171,7 @@
 			"file": "ch0-introduction/ch0_introduction.rmd",
 			"settings":
 			{
-				"buffer_size": 105,
+				"buffer_size": 550,
 				"line_ending": "Unix",
 				"name": "# Introduction"
 			}
@@ -180,15 +180,18 @@
 			"file": "ch1-learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 71106,
+				"buffer_size": 73518,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "\n# Finding functions: lines and curves\n\n## to add in\n\n- gradient descent\n- Deleuze and other on  functions\n- learning as finding an approximation to the function that generated\n- probability density functions as curves\n- Tim Ingold on lines\n- ",
 			"file": "ch2-curves/ch2_curves_function.rmd",
+			"file_size": 242,
+			"file_write_time": 130173291168254193,
 			"settings":
 			{
-				"buffer_size": 242,
+				"buffer_size": 243,
 				"line_ending": "Unix"
 			}
 		},
@@ -222,7 +225,7 @@
 			"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 			"settings":
 			{
-				"buffer_size": 1611,
+				"buffer_size": 2256,
 				"line_ending": "Unix",
 				"name": "Rabinow, P. 2003. Anthropos Today. Reflections on"
 			}
@@ -293,18 +296,13 @@
 			}
 		},
 		{
+			"contents": "\n@misc{stanforduniversity_lecture_2008,\n	title = {Lecture 2 {\\textbar} Machine Learning (Stanford)},\n	lccn = {0000},\n	url = {http://www.youtube.com/watch?v=5u4G23_OohI&feature=youtube_gdata_player},\n	abstract = {Lecture by Professor Andrew Ng for Machine Learning ({CS} 229) in the Stanford Computer Science department.  Professor Ng lectures on linear regression, gradient descent, and normal equations and discusses how they relate to machine learning. \n\nThis course provides a broad introduction to machine learning and statistical pattern recognition. Topics include supervised learning, unsupervised learning, learning theory, reinforcement learning and adaptive control.   Recent applications of machine learning, such as to robotic control, data mining, autonomous navigation, bioinformatics, speech recognition, and text and web data processing are also discussed.\n\nComplete Playlist for the Course:\n{http://www.youtube.com/view\\_play\\_list?p=A89DCFA6ADACE599}\n\n{CCS} 229 Course Website:\nhttp://www.stanford.edu/class/cs229/\n\nStanford University:\nhttp://www.stanford.edu/\n\nStanford University Channel on {YouTube:}\nhttp://www.youtube.com/stanford},\n	urldate = {2013-02-11},\n	collaborator = {{{StanfordUniversity}}},\n	month = jul,\n	year = {2008}\n},\n\n@article{_grill:_2010,\n	title = {The Grill: Tom Mitchell},\n	lccn = {0000},\n	shorttitle = {The Grill},\n	url = {http://www.computerworld.com/s/article/346917/The_Grill_Tom_Mitchell},\n	urldate = {2012-03-09},\n	journal = {Computerworld},\n	month = feb,\n	year = {2010},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/NKP5QXI2/The_Grill_Tom_Mitchell.html:text/html}\n},\n\n@misc{_company_????,\n	title = {The Company for Apache Lucene Solr Open Source Search {\\textbar} Lucid Imagination},\n	url = {http://www.lucidimagination.com/},\n	urldate = {2012-03-15}\n},\n\n@book{clarke_information_2010,\n	title = {Information Retrieval: Implementing and Evaluating Search Engines},\n	isbn = {0262026511},\n	lccn = {0000},\n	shorttitle = {Information Retrieval},\n	publisher = {The {MIT} Press},\n	author = {Clarke, Charles L. A. and Buettcher, Stefan and Cormack, Gordon V.},\n	month = jul,\n	year = {2010}\n},\n\n@book{manning_introduction_2008,\n	edition = {1},\n	title = {Introduction to Information Retrieval},\n	isbn = {0521865719},\n	lccn = {0036},\n	publisher = {Cambridge University Press},\n	author = {Manning, Christopher D. and Raghavan, Prabhakar and Schütze, Hinrich},\n	month = jul,\n	year = {2008}\n},\n\n@article{breiman_random_2001,\n	title = {Random forests},\n	volume = {45},\n	lccn = {6381},\n	number = {1},\n	journal = {Machine learning},\n	author = {Breiman, L.},\n	year = {2001},\n	pages = {5–32}\n},\n\n@article{ensmenger_is_2012,\n	title = {Is Chess the Drosophila of Artificial Intelligence? A Social History of an Algorithm},\n	volume = {42},\n	issn = {0306-3127, 1460-3659},\n	lccn = {0000},\n	shorttitle = {Is chess the drosophila of artificial intelligence?},\n	url = {http://sss.sagepub.com.ezproxy.lancs.ac.uk/content/42/1/5},\n	doi = {10.1177/0306312711424596},\n	abstract = {Since the mid 1960s, researchers in computer science have famously referred to chess as the ‘drosophila’ of artificial intelligence ({AI).} What they seem to mean by this is that chess, like the common fruit fly, is an accessible, familiar, and relatively simple experimental technology that nonetheless can be used productively to produce valid knowledge about other, more complex systems. But for historians of science and technology, the analogy between chess and drosophila assumes a larger significance. As Robert Kohler has ably described, the decision to adopt drosophila as the organism of choice for genetics research had far-reaching implications for the development of 20th century biology. In a similar manner, the decision to focus on chess as the measure of both human and computer intelligence had important and unintended consequences for {AI} research. This paper explores the emergence of chess as an experimental technology, its significance in the developing research practices of the {AI} community, and the unique ways in which the decision to focus on chess shaped the program of {AI} research in the decade of the 1970s. More broadly, it attempts to open up the virtual black box of computer software – and of computer games in particular – to the scrutiny of historical and sociological analysis.},\n	language = {en},\n	number = {1},\n	urldate = {2012-05-28},\n	journal = {Social Studies of Science},\n	author = {Ensmenger, Nathan},\n	month = feb,\n	year = {2012},\n	keywords = {artificial intelligence, computing, drosophila, experimental technology},\n	pages = {5--30},\n	file = {Is chess the drosophila of artificial intelligence? A social history of an algorithm:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/V3KGKEKN/5.html:text/html;Is chess the drosophila of artificial intelligence? A social history of an algorithm:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/SXFNK8TD/5.html:text/html}\n},\n\n@misc{bacon_hilary_2012,\n	title = {Hilary Mason - Machine Learning for Hackers},\n	url = {http://vimeo.com/43547079},\n	abstract = {Vimeo is the home for high-quality videos and the people who love them.},\n	urldate = {2012-07-06},\n	author = {Bacon},\n	month = jun,\n	year = {2012},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/XXH9QQJS/43547079.html:text/html}\n},\n\n@book{koren_matrix_2009,\n	title = {Matrix Factorization Techniques for Recommender Systems},\n	abstract = {As the Netflix Prize competition has demonstrated, matrix factorization models are superior to classic nearest-neighbor techniques for producing product recommendations, allowing the incorporation of additional information such as implicit feedback, temporal effects, and confidence levels. Modern consumers are inundated with choices. Electronic retailers and content providers offer a huge selection of products, with unprecedented opportunities to meet a variety of special needs and tastes. Matching consumers with the most appropriate products is key to enhancing user satisfaction and loyalty. Therefore, more retailers have become interested in recommender systems, which analyze patterns of user interest in products to provide personalized recommendations that suit a user’s taste. Because good personalized recommendations can add another dimension to the user experience, e-commerce leaders like Amazon.com and Netflix have made recommender systems a salient part of their websites. Such systems are particularly useful for entertainment products such as movies, music, and {TV} shows. Many customers will view the same movie, and each customer is likely to view numerous different movies. Customers have proven willing to indicate their level of satisfaction with particular movies, so a huge volume of data is available about which movies appeal to which customers. Companies can analyze this data to recommend movies to particular customers. Recommender system strategies Broadly speaking, recommender systems are based on one of two strategies. The content filtering approach creates a profile for each user or product to characterize its nature. For example, a movie profile could include attributes regarding its genre, the participating actors, its box office popularity, and so forth. User profiles might include demographic information or answers provided on a suitable questionnaire. The profiles allow programs to associate users with matching products. Of course, content-based strategies require gathering external information that might not be available or easy to collect. A known successful realization of content filtering is the Music Genome Project, which is used for the Internet radio service Pandora.com. A trained music analyst scores},\n	author = {Koren, Yehuda and Bell, Robert and Volinsky, Chris},\n	year = {2009},\n	file = {Citeseer - Full Text PDF:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/KSM4IF25/Koren et al. - 2009 - Matrix Factorization Techniques for Recommender Sy.pdf:application/pdf;Citeseer - Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/RHNCXHWT/summary.html:text/html}\n},\n\n@misc{_dataists_????,\n	title = {dataists » A Taxonomy of Data Science},\n	url = {http://www.dataists.com/2010/09/a-taxonomy-of-data-science/},\n	urldate = {2012-07-06},\n	file = {dataists » A Taxonomy of Data Science:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/6VAB8TUH/a-taxonomy-of-data-science.html:text/html}\n},\n\n@article{wagstaff_machine_2012,\n	title = {Machine Learning that Matters},\n	url = {http://arxiv.org/abs/1206.4656},\n	abstract = {Much of current machine learning ({ML)} research has lost its connection to problems of import to the larger world of science and society. From this perspective, there exist glaring limitations in the data sets we investigate, the metrics we employ for evaluation, and the degree to which results are communicated back to their originating domains. What changes are needed to how we conduct research to increase the impact that {ML} has? We present six Impact Challenges to explicitly focus the field?s energy and attention, and we discuss existing obstacles that must be addressed. We aim to inspire ongoing discussion and focus on {ML} that matters.},\n	urldate = {2012-07-16},\n	journal = {{arXiv:1206.4656}},\n	author = {Wagstaff, Kiri},\n	month = jun,\n	year = {2012},\n	keywords = {Computer Science - Artificial Intelligence, Computer Science - Learning, Statistics - Machine Learning},\n	file = {1206.4656 PDF:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/UZRQSNZ9/Wagstaff - 2012 - Machine Learning that Matters.pdf:application/pdf;arXiv.org Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/XGPZ3HCN/1206.html:text/html}\n},\n\n@article{langley_changing_2011,\n	title = {The changing science of machine learning},\n	volume = {82},\n	lccn = {0003},\n	url = {http://www.springerlink.com/index/J067H855N8223338.pdf},\n	number = {3},\n	urldate = {2012-06-21},\n	journal = {Machine Learning},\n	author = {Langley, P.},\n	year = {2011},\n	pages = {275–279}\n},\n\n@article{carstens_sentiment_2011,\n	title = {Sentiment Analysis},\n	lccn = {0000},\n	url = {http://www.doc.ic.ac.uk/teaching/distinguished-projects/2011/l.carstens.pdf},\n	urldate = {2012-06-21},\n	author = {Carstens, L. and Intelligence, S. A},\n	year = {2011}\n},\n\n@article{wagstaff_machine_2012-1,\n	title = {Machine Learning that Matters},\n	lccn = {0000},\n	url = {http://ml.jpl.nasa.gov/papers/wagstaff/wagstaff-MLmatters-icml12.pdf},\n	urldate = {2012-06-21},\n	author = {Wagstaff, K. L},\n	year = {2012}\n},\n\n@book{vapnik_nature_1999,\n	edition = {2nd ed. 2000},\n	title = {The Nature of Statistical Learning Theory},\n	isbn = {0387987800},\n	lccn = {0267},\n	publisher = {Springer},\n	author = {Vapnik, Vladimir},\n	month = dec,\n	year = {1999}\n},\n\n@inproceedings{ma_identifying_2009,\n	title = {Identifying suspicious {URLs:} an application of large-scale online learning},\n	lccn = {0108},\n	shorttitle = {Identifying suspicious {URLs}},\n	url = {http://dl.acm.org/citation.cfm?id=1553462},\n	urldate = {2013-03-18},\n	booktitle = {Proceedings of the 26th Annual International Conference on Machine Learning},\n	author = {Ma, Justin and Saul, Lawrence K. and Savage, Stefan and Voelker, Geoffrey M.},\n	year = {2009},\n	pages = {681–688},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/BS4JEB3N/citation.html:text/html}\n},\n\n@inproceedings{ma_beyond_2009,\n	title = {Beyond blacklists: learning to detect malicious web sites from suspicious {URLs}},\n	lccn = {0121},\n	shorttitle = {Beyond blacklists},\n	url = {http://dl.acm.org/citation.cfm?id=1557153},\n	urldate = {2013-03-18},\n	booktitle = {Proceedings of the 15th {ACM} {SIGKDD} international conference on Knowledge discovery and data mining},\n	author = {Ma, Justin and Saul, Lawrence K. and Savage, Stefan and Voelker, Geoffrey M.},\n	year = {2009},\n	pages = {1245–1254},\n	file = {[PDF] from sinica.edu.tw:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/V3934UNU/Ma et al. - 2009 - Beyond blacklists learning to detect malicious we.pdf:application/pdf;Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/3GI8RQQN/citation.html:text/html}\n},\n\n@article{ma_learning_2011,\n	title = {Learning to detect malicious {URLs}},\n	volume = {2},\n	lccn = {0009},\n	url = {http://dl.acm.org/citation.cfm?id=1961202},\n	number = {3},\n	urldate = {2013-03-18},\n	journal = {{ACM} Transactions on Intelligent Systems and Technology ({TIST)}},\n	author = {Ma, Justin and Saul, Lawrence K. and Savage, Stefan and Voelker, Geoffrey M.},\n	year = {2011},\n	pages = {30},\n	file = {[PDF] from berkeley.edu:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/BJ2GZCKP/Ma et al. - 2011 - Learning to detect malicious URLs.pdf:application/pdf;Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/VS6CUR7Z/citation.html:text/html}\n},\n\n@article{le_building_2011,\n	title = {Building high-level features using large scale unsupervised learning},\n	lccn = {0046},\n	url = {http://arxiv.org/abs/1112.6209},\n	abstract = {We consider the problem of building high- level, class-specific feature detectors from only unlabeled data. For example, is it possible to learn a face detector using only unlabeled images? To answer this, we train a 9-layered locally connected sparse autoencoder with pooling and local contrast normalization on a large dataset of images (the model has 1 bil- lion connections, the dataset has 10 million 200x200 pixel images downloaded from the Internet). We train this network using model parallelism and asynchronous {SGD} on a clus- ter with 1,000 machines (16,000 cores) for three days. Contrary to what appears to be a widely-held intuition, our experimental re- sults reveal that it is possible to train a face detector without having to label images as containing a face or not. Control experiments show that this feature detector is robust not only to translation but also to scaling and out-of-plane rotation. We also find that the same network is sensitive to other high-level concepts such as cat faces and human bod- ies. Starting with these learned features, we trained our network to obtain 15.8\\% accu- racy in recognizing 20,000 object categories from {ImageNet}, a leap of 70\\% relative im- provement over the previous state-of-the-art.},\n	urldate = {2013-04-21},\n	journal = {{arXiv:1112.6209}},\n	author = {Le, Quoc V. and Ranzato, {Marc'Aurelio} and Monga, Rajat and Devin, Matthieu and Chen, Kai and Corrado, Greg S. and Dean, Jeff and Ng, Andrew Y.},\n	month = dec,\n	year = {2011},\n	keywords = {Computer Science - Learning},\n	file = {1112.6209 PDF:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/QUF2DCRS/Le et al. - 2011 - Building high-level features using large scale uns.pdf:application/pdf;arXiv.org Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/TU8JVCMI/1112.html:text/html}\n},\n\n@book{bishop_pattern_2006,\n	title = {Pattern recognition and machine learning},\n	volume = {1},\n	url = {http://www.library.wisc.edu/selectedtocs/bg0137.pdf},\n	urldate = {2013-07-12},\n	publisher = {springer New York},\n	author = {Bishop, Christopher M. and Nasrabadi, Nasser M.},\n	year = {2006},\n	file = {[PDF] from wisc.edu:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/DWIDSVQD/Bishop and Nasrabadi - 2006 - Pattern recognition and machine learning.pdf:application/pdf}\n},\n\n@book{murphy_machine_2012,\n	address = {Cambridge, {MA}},\n	title = {Machine learning: a probabilistic perspective},\n	isbn = {9780262018029  0262018020},\n	shorttitle = {Machine learning},\n	abstract = {{\"This} textbook offers a comprehensive and self-contained introduction to the field of machine learning, based on a unified, probabilistic approach. The coverage combines breadth and depth, offering necessary background material on such topics as probability, optimization, and linear algebra as well as discussion of recent developments in the field, including conditional random fields, L1 regularization, and deep learning. The book is written in an informal, accessible style, complete with pseudo-code for the most important algorithms. All topics are copiously illustrated with color images and worked examples drawn from such application domains as biology, text processing, computer vision, and robotics. Rather than providing a cookbook of different heuristic methods, the book stresses a principled model-based approach, often using the language of graphical models to specify models in a concise and intuitive way. Almost all the models described have been implemented in a {MATLAB} software package--{PMTK} (probabilistic modeling toolkit)--that is freely available online\"--Back cover.},\n	language = {English},\n	publisher = {{MIT} Press},\n	author = {Murphy, Kevin P},\n	year = {2012}\n},\n\n@article{bbc_google_2012,\n	chapter = {Technology},\n	title = {Google 'brain' machine spots cats},\n	url = {http://www.bbc.co.uk/news/technology-18595351},\n	abstract = {A Google research team has trained a network of 1,000 computers wired up like the human brain to recognise cats.},\n	urldate = {2013-06-06},\n	journal = {{BBC} News},\n	author = {{BBC}},\n	month = jun,\n	year = {2012},\n	file = {BBC News Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/GX9SSXDE/technology-18595351.html:text/html}\n},\n\n@article{breiman_statistical_2001,\n	title = {Statistical modeling: The two cultures (with comments and a rejoinder by the author)},\n	volume = {16},\n	shorttitle = {Statistical modeling},\n	url = {http://projecteuclid.org/euclid.ss/1009213726},\n	number = {3},\n	urldate = {2013-06-10},\n	journal = {Statistical Science},\n	author = {Breiman, Leo},\n	year = {2001},\n	pages = {199–231},\n	file = {[PDF] from recognition.su:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/U23JA82S/Breiman - 2001 - Statistical modeling The two cultures (with comme.pdf:application/pdf;Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/XNW8S5Q5/DPubS.html:text/html}\n},\n\n@misc{stanforduniversity_lecture_2008-1,\n	title = {Lecture 1 {\\textbar} Machine Learning (Stanford)},\n	url = {http://www.youtube.com/watch?v=UzxYlbK2c7E&feature=youtube_gdata_player},\n	abstract = {Lecture by Professor Andrew Ng for Machine Learning ({CS} 229) in the Stanford Computer Science department.  Professor Ng provides an overview of the course in this introductory meeting. \n\nThis course provides a broad introduction to machine learning and statistical pattern recognition. Topics include supervised learning, unsupervised learning, learning theory, reinforcement learning and adaptive control.   Recent applications of machine learning, such as to robotic control, data mining, autonomous navigation, bioinformatics, speech recognition, and text and web data processing are also discussed.\n\nComplete Playlist for the Course:\n{http://www.youtube.com/view\\_play\\_list?p=A89DCFA6ADACE599}\n\n{CS} 229 Course Website:\nhttp://www.stanford.edu/class/cs229/\n\nStanford University:\nhttp://www.stanford.edu/\n\nStanford University Channel on {YouTube:}\nhttp://www.youtube.com/stanford},\n	urldate = {2013-06-10},\n	collaborator = {{{StanfordUniversity}}},\n	month = jul,\n	year = {2008}\n},\n\n@article{wacquant_13._2010,\n	title = {13. Participant {Observation/Observant} Participation},\n	url = {http://books.google.co.uk/books?hl=en&lr=&id=pLSAay_xwjEC&oi=fnd&pg=PA69&dq=wacquant+observant+&ots=LUgGkfHYRD&sig=WwrRprm32d0QB4H8LScW8zlINHc},\n	urldate = {2013-06-11},\n	journal = {Sociology: Introductory Readings},\n	author = {Wacquant, Loïc},\n	year = {2010},\n	pages = {69},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/JJ9N4N2X/books.html:text/html}\n},\n\n@book{barber_bayesian_2011,\n	address = {Cambridge; New York},\n	title = {Bayesian reasoning and machine learning},\n	isbn = {9780521518147 0521518148},\n	abstract = {{\"Machine} learning methods extract value from vast data sets quickly and with modest resources. They are established tools in a wide range of industrial applications, including search engines, {DNA} sequencing, stock market analysis, and robot locomotion, and their use is spreading rapidly. People who know the methods have their choice of rewarding jobs. This hands-on text opens these opportunities to computer science students with modest mathematical backgrounds. It is designed for final-year undergraduates and master's students with limited background in linear algebra and calculus. Comprehensive and coherent, it develops everything from basic reasoning to advanced techniques within the framework of graphical models. Students learn more than a menu of techniques, they develop analytical and problem-solving skills that equip them for the real world. Numerous examples and exercises, both computer based and theoretical, are included in every chapter. Resources for students and instructors, including a {MATLAB} toolbox, are available online\"-- {\"Vast} amounts of data present amajor challenge to all thoseworking in computer science, and its many related fields, who need to process and extract value from such data. Machine learning technology is already used to help with this task in a wide range of industrial applications, including search engines, {DNA} sequencing, stock market analysis and robot locomotion. As its usage becomes more widespread, no student should be without the skills taught in this book. Designed for final-year undergraduate and graduate students, this gentle introduction is ideally suited to readers without a solid background in linear algebra and calculus. It covers everything from basic reasoning to advanced techniques in machine learning, and rucially enables students to construct their own models for real-world problems by teaching them what lies behind the methods. Numerous examples and exercises are included in the text. Comprehensive resources for students and instructors are available online\"--},\n	language = {English},\n	publisher = {Cambridge University Press},\n	author = {Barber, David},\n	year = {2011}\n},\n\n@book{wacquant_body_2004,\n	address = {Oxford},\n	title = {Body and Soul. Notebooks of an apprentice boxer},\n	publisher = {Oxford University Press},\n	author = {Wacquant, Loic},\n	year = {2004}\n},\n\n@article{olazaran_sociological_1996,\n	title = {A Sociological Study of the Official History of the Perceptrons Controversy},\n	volume = {26},\n	issn = {0306-3127, 1460-3659},\n	lccn = {0023},\n	url = {http://sss.sagepub.com/content/26/3/611},\n	doi = {10.1177/030631296026003005},\n	abstract = {In this paper, I analyze the controversy within Artificial Intelligence ({AI)} which surrounded the `perceptron' project (and neural nets in general) in the late 1950s and early 1960s. I devote particular attention to the proofs and arguments of Minsky and Papert, which were interpreted as showing that further progress in neural nets was not possible, and that this approach to {AI} had to be abandoned. I maintain that this official interpretation of the debate was a result of the emergence, institutionalization and (importantly) legitimation of the symbolic {AI} approach (with its resource allocation system and authority structure). At the `research-area' level, there was considerable interpretative flexibility. This interpretative flexibility was further demonstrated by the revival of neural nets in the late 1980s, and subsequent rewriting of the official history of the debate.},\n	language = {en},\n	number = {3},\n	urldate = {2013-06-17},\n	journal = {Social Studies of Science},\n	author = {Olazaran, Mikel},\n	month = jan,\n	year = {1996},\n	pages = {611--659},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/U5C4XRIM/611.html:text/html}\n},\n\n@misc{ng_|_????,\n	title = {{\\textbar} Machine Learning {III:} Linear Algebra Review},\n	url = {https://class.coursera.org/ml-003/lecture/},\n	abstract = {Video Lecture:  in Machine Learning on Coursera.},\n	urldate = {2013-06-14},\n	journal = {Coursera},\n	author = {Ng, Andrew},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/N72CWJG4/index.html:text/html}\n},\n\n@article{rosenblatt_perceptron:_1958,\n	title = {The perceptron: A probabilistic model for information storage and organization in the brain},\n	volume = {65},\n	copyright = {(c) 2012 {APA}, all rights reserved},\n	issn = {1939-1471(Electronic);0033-{295X(Print)}},\n	lccn = {0004},\n	shorttitle = {The perceptron},\n	doi = {10.1037/h0042519},\n	abstract = {To answer the questions of how information about the physical world is sensed, in what form is information remembered, and how does information retained in memory influence recognition and behavior, a theory is developed for a hypothetical nervous system called a perceptron. The theory serves as a bridge between biophysics and psychology. It is possible to predict learning curves from neurological variables and vice versa. The quantitative statistical approach is fruitful in the understanding of the organization of cognitive systems. 18 references.},\n	number = {6},\n	journal = {Psychological Review},\n	author = {Rosenblatt, F.},\n	year = {1958},\n	keywords = {brain, information storage, probabilistic model},\n	pages = {386--408}\n},\n\n@article{minsky_perceptron:_1969,\n	title = {Perceptron: an introduction to computational geometry},\n	volume = {19},\n	lccn = {0299},\n	shorttitle = {Perceptron},\n	journal = {The {MIT} Press, Cambridge, expanded edition},\n	author = {Minsky, Marvin and Papert, Seymour},\n	year = {1969},\n	pages = {88}\n},\n\n@misc{dahl_deep_????,\n	title = {Deep Learning How I Did It: Merck 1st place interview},\n	shorttitle = {Deep Learning How I Did It},\n	url = {http://blog.kaggle.com/2012/11/01/deep-learning-how-i-did-it-merck-1st-place-interview/},\n	abstract = {What was your background prior to entering this challenge? We are a team of computer science and statistics academics. Ruslan Salakhutdinov and Geoff Hinton are professors at the University of Toro...},\n	urldate = {2013-06-17},\n	journal = {no free hunch},\n	author = {Dahl, George},\n	keywords = {code, geoff hinton, learning, machine, merck, model, neural, professor hinton},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/2M52PT7J/deep-learning-how-i-did-it-merck-1st-place-interview.html:text/html}\n},\n\n@article{hinton_reducing_2006,\n	title = {Reducing the dimensionality of data with neural networks},\n	volume = {313},\n	lccn = {0928},\n	url = {http://www.sciencemag.org/content/313/5786/504.short},\n	number = {5786},\n	urldate = {2013-06-17},\n	journal = {Science},\n	author = {Hinton, Geoffrey E. and Salakhutdinov, Ruslan R.},\n	year = {2006},\n	pages = {504–507},\n	file = {[PDF] from uni-saarland.de:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/KGM75BT4/Hinton and Salakhutdinov - 2006 - Reducing the dimensionality of data with neural ne.pdf:application/pdf;Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/WRD6BG4A/504.html:text/html}\n},\n\n@article{ackley_learning_1985,\n	title = {A learning algorithm for Boltzmann machines},\n	volume = {9},\n	lccn = {2119},\n	url = {http://www.sciencedirect.com/science/article/pii/S0364021385800124},\n	number = {1},\n	urldate = {2013-06-17},\n	journal = {Cognitive science},\n	author = {Ackley, David H. and Hinton, Geoffrey E. and Sejnowski, Terrence J.},\n	year = {1985},\n	pages = {147–169},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/G6CJZC4J/S0364021385800124.html:text/html}\n},\n\n@misc{_perceptron_2013,\n	title = {Perceptron},\n	copyright = {Creative Commons Attribution-{ShareAlike} License},\n	lccn = {0001},\n	url = {http://en.wikipedia.org/w/index.php?title=Perceptron&oldid=557301943},\n	abstract = {In computational geometry, the perceptron is an algorithm for supervised classification of an input into one of several possible non-binary outputs. It is a type of linear classifier, i.e. a classification algorithm that makes its predictions based on a linear predictor function combining a set of weights with the feature vector describing a given input using the delta rule. The learning algorithm for perceptrons is an online algorithm, in that it processes elements in the training set one at a time.},\n	language = {en},\n	urldate = {2013-06-17},\n	journal = {Wikipedia, the free encyclopedia},\n	month = may,\n	year = {2013},\n	note = {Page Version {ID:} 557301943},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/P3MWEXNI/index.html:text/html}\n},\n\n@article{patil_pymc:_2010,\n	title = {{PyMC:} Bayesian stochastic modelling in Python},\n	volume = {35},\n	lccn = {0071},\n	shorttitle = {{PyMC}},\n	url = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3097064/},\n	number = {4},\n	urldate = {2013-06-17},\n	journal = {Journal of statistical software},\n	author = {Patil, Anand and Huard, David and Fonnesbeck, Christopher J.},\n	year = {2010},\n	pages = {1},\n	file = {[HTML] from nih.gov:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/3NWB7TGN/PMC3097064.html:text/html}\n},\n\n@misc{koller_daphne_2012,\n	title = {Daphne Koller: What we're learning from online education {\\textbar} Video on {TED.com}},\n	shorttitle = {Daphne Koller},\n	url = {http://www.ted.com/talks/daphne_koller_what_we_re_learning_from_online_education.html},\n	abstract = {Daphne Koller is enticing top universities to put their most intriguing courses online for free -- not just as a service, but as a way to research how people learn. With Coursera (cofounded by Andrew Ng), each keystroke, quiz, peer-to-peer discussion and self-graded assignment builds an unprecedented pool of data on how knowledge is processed.},\n	urldate = {2013-06-24},\n	collaborator = {Koller, Daphne},\n	month = aug,\n	year = {2012},\n	keywords = {Computers, education, global issues, Internet, Talks, {TED}},\n	file = {Snapshot:/home/mackenza/.mozilla/firefox/w5dcspnj.default/zotero/storage/83HZTXGW/daphne_koller_what_we_re_learning_from_online_education.html:text/html}\n},\n\n@book{alpaydin_introduction_2010,\n	address = {Cambridge, Massachusetts; London},\n	title = {Introduction to machine learning},\n	isbn = {9780262012430  {026201243X}},\n	language = {English},\n	publisher = {The {MIT} Press},\n	author = {Alpaydin, E},\n	year = {2010}\n},\n\n@book{rasmussen_gaussian_2006,\n	address = {Cambridge, Mass.},\n	title = {Gaussian processes for machine learning},\n	isbn = {{026218253X} 9780262182539},\n	abstract = {{\"Gaussian} processes ({GPs)} provide a principled, practical, probabilistic approach to learning in kernel machines. {GPs} have received increased attention in the machine-learning community over the past decade, and this book provides a long-needed systematic and unified treatment of theoretical and practical aspects of {GPs} in machine learning. The treatment is comprehensive and self-contained, targeted at researchers and students in machine learning and applied statistics.\"--Jacket.},\n	language = {English},\n	publisher = {{MIT} Press},\n	author = {Rasmussen, Carl Edward and Williams, Christopher K. I},\n	year = {2006}\n},\n\n@book{marsland_machine_2009,\n	address = {Boca Raton, Mass. [u.a.},\n	title = {Machine learning: an algorithmic perspective},\n	isbn = {9781420067187  1420067184},\n	shorttitle = {Machine learning},\n	language = {English},\n	publisher = {{CRC} {Press/Taylor} \\& Francis},\n	author = {Marsland, Stephen},\n	year = {2009}\n},\n\n@book{mitchell_machine_1997,\n	address = {New York, {NY} [u.a.},\n	title = {Machine learning},\n	isbn = {0071154671 9780071154673},\n	language = {English},\n	publisher = {{McGraw-Hill}},\n	author = {Mitchell, Tom M},\n	year = {1997}\n}",
 			"file": "references/machine_learning.bib",
+			"file_size": 31615,
+			"file_write_time": 130180978825370522,
 			"settings":
 			{
-				"buffer_size": 27133,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "proposal.md",
-			"settings":
-			{
-				"buffer_size": 38876,
+				"buffer_size": 31587,
 				"line_ending": "Unix"
 			}
 		},
@@ -320,9 +318,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 348.0,
+		"height": 306.0,
 		"selected_items":
 		[
+			[
+				"Snippet: ",
+				"Snippet: ML"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -412,10 +414,6 @@
 				"Set Syntax: Python"
 			],
 			[
-				"Snippet: ",
-				"Snippet: knit-chunk"
-			],
-			[
 				"set syntaxm",
 				"Set Syntax: Markdown"
 			],
@@ -464,6 +462,10 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/R/coursera/linal/hw1.py",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/kcf.sublime-snippet",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/ML.sublime-snippet",
+		"/home/mackenza/Documents/data_intensive/book/proposal.md",
 		"/home/mackenza/Documents/data_intensive/book/ch2-curves/ch2_curves_function.rmd",
 		"/home/mackenza/Documents/data_intensive/book/proposal.rmd",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
@@ -508,7 +510,6 @@
 		"/home/mackenza/bank.txt",
 		"/home/mackenza/.cache/.fr-k5nMam/ghProjectInfo2013-Feb.txt",
 		"/home/mackenza/Documents/data_intensive/book/knit_all.R",
-		"/home/mackenza/Documents/data_intensive/book/proposal.md",
 		"/home/mackenza/Documents/notes/hayles_my_mother_2005.mdown",
 		"/home/mackenza/Dropbox/epistle/Data forms.txt",
 		"/home/mackenza/Desktop/jss725.Rnw",
@@ -588,10 +589,7 @@
 		"/home/mackenza/Dropbox/data-economy/paper/references/ngs.bib",
 		"/home/mackenza/Dropbox/data-economy/paper/pandoc_format_paper.sh",
 		"/home/mackenza/Dropbox/ngs_paper/build/pandoc.sublime-build",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/untitled.sublime-snippet",
-		"/home/mackenza/Dropbox/data-economy/paper/4S EASST talk.docx",
-		"/home/mackenza/Desktop/build.R",
-		"/home/mackenza/Desktop/test3.md"
+		"/home/mackenza/.config/sublime-text-2/Packages/User/untitled.sublime-snippet"
 	],
 	"find":
 	{
@@ -610,6 +608,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"machine",
 			" the ability to move freely",
 			"whitehead",
 			"false",
@@ -733,7 +732,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -770,15 +769,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 105,
+						"buffer_size": 550,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								37,
-								37
+								550,
+								550
 							]
 						],
 						"settings":
@@ -888,15 +887,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 71106,
+						"buffer_size": 73518,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								51061,
-								51061
+								13559,
+								13559
 							]
 						],
 						"settings":
@@ -907,7 +906,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 15062.0,
+						"translation.y": 2962.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -918,15 +917,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 242,
+						"buffer_size": 243,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1,
+								1
 							]
 						],
 						"settings":
@@ -1297,19 +1296,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1611,
+						"buffer_size": 2256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								769,
-								769
+								2256,
+								2256
 							]
 						],
 						"settings":
 						{
+							"WordCountShouldRun": true,
 							"annotations":
 							[
 								"TODO",
@@ -1427,6 +1427,7 @@
 						],
 						"settings":
 						{
+							"WordCountShouldRun": true,
 							"annotations":
 							[
 								"TODO",
@@ -2338,7 +2339,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13218.0,
+						"translation.y": 13314.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -2349,19 +2350,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27133,
+						"buffer_size": 31587,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7134,
-								7134
+								14980,
+								14980
 							]
 						],
 						"settings":
 						{
+							"WordCountShouldRun": false,
 							"annotations":
 							[
 								"TODO",
@@ -2455,129 +2457,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2808.0,
+						"translation.y": 7014.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 17,
-					"file": "proposal.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 38876,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 18,
 					"file": "references/R.bib",
 					"semi_transient": false,
 					"settings":
@@ -2589,16 +2475,13 @@
 						"selection":
 						[
 							[
-								68968,
-								68968
-							],
-							[
 								69454,
 								69454
 							]
 						],
 						"settings":
 						{
+							"WordCountShouldRun": false,
 							"annotations":
 							[
 								"TODO",
@@ -2692,7 +2575,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 719.0,
+						"translation.y": 34403.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -2823,7 +2706,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 338.0,
 	"status_bar_visible": true,
 	"template_settings":

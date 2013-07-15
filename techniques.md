@@ -61,6 +61,10 @@
 - Kirk L. Wagstaff
 - Jimmy Lin
 - Andrew Ng
+- Daphne Koller
+- Tom Mitchell
+-  Michael Jordan
+-  Rachel Schutt
 - Hansen? Downloaded all his course materials — really great stuff here — all in doc-archive/R/hansen
 
 
