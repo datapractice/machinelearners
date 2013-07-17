@@ -188,17 +188,17 @@
 			"file": "ch2-curves/ch2_curves_function.rmd",
 			"settings":
 			{
-				"buffer_size": 9906,
+				"buffer_size": 14233,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "ch3-dimensionality/ch3_dimensional_exuberance.md",
+			"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 			"settings":
 			{
-				"buffer_size": 256,
+				"buffer_size": 751,
 				"line_ending": "Unix",
-				"name": "# Dimensional exuberance"
+				"name": "Malley, Statistical Learning"
 			}
 		},
 		{
@@ -272,7 +272,7 @@
 			"file": "/home/mackenza/Documents/notes/stengers_wondering_materialism_2011.md.txt",
 			"settings":
 			{
-				"buffer_size": 2075,
+				"buffer_size": 2086,
 				"line_ending": "Unix"
 			}
 		},
@@ -280,7 +280,7 @@
 			"file": "/home/mackenza/Documents/notes/Stengers_d&G_2005.txt",
 			"settings":
 			{
-				"buffer_size": 2847,
+				"buffer_size": 2852,
 				"line_ending": "Unix"
 			}
 		},
@@ -329,7 +329,7 @@
 			"file": "references/data_forms_thought.bib",
 			"settings":
 			{
-				"buffer_size": 21694,
+				"buffer_size": 21949,
 				"line_ending": "Unix"
 			}
 		},
@@ -356,6 +356,10 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
 			[
 				"pa",
 				"Package Control: List Packages"
@@ -427,10 +431,6 @@
 			[
 				"set ",
 				"Set Syntax: Markdown"
-			],
-			[
-				"in",
-				"Package Control: Install Package"
 			],
 			[
 				"ist",
@@ -521,6 +521,8 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/Documents/data_intensive/book/ch3-dimensionality/ch3_dimensional_exuberance.md",
+		"/home/mackenza/.config/sublime-text-3/Installed Packages/WordCount-st3/WordCount.py",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/Package Control.cache/4b866486d124fe4bf800028de1dd1b4f.info",
 		"/home/mackenza/.config/sublime-text-3/Packages/Package Control/messages/1.3.0.txt",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/WordCount.sublime-settings",
@@ -646,9 +648,7 @@
 		"/var/tmp/kdecache-mackenza/krun/17104.0.projects",
 		"/home/mackenza/.config/sublime-text-2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
 		"/home/mackenza/.config/sublime-text-2/Packages/WordCount/WordCount.py",
-		"/home/mackenza/.config/sublime-text-2/Packages/SideBarEnhancements/Side Bar.sublime-settings",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/SmartMarkdown.sublime-settings",
-		"/home/mackenza/.config/sublime-text-2/Packages/IPython Integration/README.md"
+		"/home/mackenza/.config/sublime-text-2/Packages/SideBarEnhancements/Side Bar.sublime-settings"
 	],
 	"find":
 	{
@@ -667,6 +667,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"stengers",
+			"steng",
 			"Stengers",
 			"\\hat(",
 			"(\\beta)",
@@ -796,7 +798,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -958,8 +960,8 @@
 						"selection":
 						[
 							[
-								2954,
-								2954
+								3278,
+								3278
 							]
 						],
 						"settings":
@@ -981,49 +983,50 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9906,
+						"buffer_size": 14233,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2747,
-								2747
+								8497,
+								8497
 							]
 						],
 						"settings":
 						{
+							"WordCountShouldRun": true,
 							"syntax": "Packages/Markdown/Markdown.tmLanguage",
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1387.0,
+						"translation.y": 2637.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "ch3-dimensionality/ch3_dimensional_exuberance.md",
+					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 256,
+						"buffer_size": 751,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								107,
-								107
+								751,
+								751
 							]
 						],
 						"settings":
 						{
-							"WordCountShouldRun": false,
-							"auto_name": "# Dimensional exuberance",
+							"WordCountShouldRun": true,
+							"auto_name": "Malley, Statistical Learning",
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1711,15 +1714,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2075,
+						"buffer_size": 2086,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								824,
-								824
+								935,
+								935
 							]
 						],
 						"settings":
@@ -1739,15 +1742,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2847,
+						"buffer_size": 2852,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2,
-								2
+								1473,
+								1473
 							]
 						],
 						"settings":
@@ -2265,24 +2268,25 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21694,
+						"buffer_size": 21949,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5154,
-								5154
+								9160,
+								9160
 							]
 						],
 						"settings":
 						{
+							"WordCountShouldRun": true,
 							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3889.0,
+						"translation.y": 6989.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -2300,8 +2304,8 @@
 						"selection":
 						[
 							[
-								14980,
-								14980
+								16126,
+								16126
 							]
 						],
 						"settings":
@@ -2400,7 +2404,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7014.0,
+						"translation.y": 8039.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -2418,8 +2422,8 @@
 						"selection":
 						[
 							[
-								69454,
-								69454
+								69447,
+								69447
 							]
 						],
 						"settings":
@@ -2518,7 +2522,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 34403.0,
+						"translation.y": 37914.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -2577,12 +2581,20 @@
 		"selected_items":
 		[
 			[
-				"te",
-				"book/template.latex"
-			],
-			[
 				"data",
 				"book/references/data_forms_thought.bib"
+			],
+			[
+				"data_",
+				"book/references/data_forms_thought.bib"
+			],
+			[
+				"sten",
+				"~/Documents/notes/Stengers_d&G_2005.txt"
+			],
+			[
+				"te",
+				"book/template.latex"
 			],
 			[
 				"re",
@@ -2630,7 +2642,7 @@
 		[
 			[
 				"",
-				"~/R/coursera/linal/linal.sublime-project"
+				"~/R/metacommunities/metacommunities.sublime-project"
 			]
 		],
 		"width": 380.0
