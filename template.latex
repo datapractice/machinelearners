@@ -93,7 +93,7 @@
 
 
 
-\setmainfont{Source Sans Pro}
+\setmainfont{Times New Roman}
 
 %%% SECTION TITLE APPEARANCE
 \usepackage{sectsty}

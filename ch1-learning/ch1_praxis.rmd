@@ -243,11 +243,11 @@ This is one case where implementation does not facilitate learning. Ng advises h
 
 How do we 'efficiently make lots of predictions' using matrices? Let's return to the example of house prices mentioned by Norman Nie. In this example, house price is generally treated as the response variable ($Y$), and the number of bedrooms and overall size in square feet are the input variables ($X_1$, $X_2$).  A linear model seeks to find a line (or a plane, or as we will see, a hyperplane) that best fits the points. While I will discuss in the next chapter how such a line can be found, here I want to only show one solution to this problem because it takes the form of a matrix multiplication. As Hastie and co-authors write, the 'unique solution' to the problem of fitting a linear model to a given dataset using the most popular method of 'least squares' [@hastie_elements_2009, 12] is given by:
 
->$\hat{\beta} = (\mathbf{X}^T\mathbf{X})^-1\mathbf{X}^T\mathbf{y}
+>$\hat{\beta} = (\mathbf{X}^T\mathbf{X})^-1\mathbf{X}^T\mathbf{y}$
 
 This is quite a tightly coiled expression of how to calculate the parameters $\hat{\beta}$ for a linear model. The two matrices involved are the $X$ input variables (house size and number of bedrooms) and a 1-dimensional matrix $y$, the house price. These matrices are multiplied, transposed (a form of rotation that swaps rows for columns) and inverted (a more complex operation that finds another matrix) Implementing it for  the San Francisco house price data only requires a few extra lines of code:
 
-```{r house_price, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
+```{r house_price_predict, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
  
     library(MASS)
     houses = read.csv('data/ex1data2.txt', header=FALSE)
