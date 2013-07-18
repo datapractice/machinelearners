@@ -1,9 +1,9 @@
 # Dimensional exuberance
 
-## overview
+## to put in
 
 - curse of dimensionality
--
+- the local vs global structure discussion - Hastie 19-20 onwards
 
 ## quotes to use
 
