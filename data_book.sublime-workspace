@@ -168,14 +168,6 @@
 			}
 		},
 		{
-			"file": "ch8-conclusion/ch8_conclusion.rmd",
-			"settings":
-			{
-				"buffer_size": 89,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "ch1-learning/ch1_praxis.rmd",
 			"settings":
 			{
@@ -187,7 +179,15 @@
 			"file": "ch2-curves/ch2_curves_function.rmd",
 			"settings":
 			{
-				"buffer_size": 23659,
+				"buffer_size": 28844,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/R/coursera/ml-ng/ex1/ex1.R",
+			"settings":
+			{
+				"buffer_size": 1707,
 				"line_ending": "Unix"
 			}
 		},
@@ -200,10 +200,42 @@
 			}
 		},
 		{
+			"file": "ch8-conclusion/ch8_conclusion.rmd",
+			"settings":
+			{
+				"buffer_size": 89,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
+			"settings":
+			{
+				"buffer_size": 148,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "proposal.rmd",
 			"settings":
 			{
 				"buffer_size": 38818,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
+			"settings":
+			{
+				"buffer_size": 3975,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
+			"settings":
+			{
+				"buffer_size": 1623,
 				"line_ending": "Unix"
 			}
 		},
@@ -401,6 +433,8 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/R/coursera/ml-ng/mlclass-ex2/ex2.R",
+		"/home/mackenza/R/coursera/ml-ng/ex1/computeCostMulti.m",
 		"/home/mackenza/Documents/data_intensive/transformation_soc_sci_oxford_2013/mackenzie_slides_oxford_feb_2013.Rmd",
 		"/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
 		"/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
@@ -654,7 +688,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -687,35 +721,6 @@
 				},
 				{
 					"buffer": 1,
-					"file": "ch8-conclusion/ch8_conclusion.rmd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 89,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89,
-								89
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"auto_name": "",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "ch1-learning/ch1_praxis.rmd",
 					"semi_transient": false,
 					"settings":
@@ -745,20 +750,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "ch2-curves/ch2_curves_function.rmd",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23659,
+						"buffer_size": 28844,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18299,
-								18299
+								23481,
+								23481
 							]
 						],
 						"settings":
@@ -767,7 +772,35 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4512.0,
+						"translation.y": 8325.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/mackenza/R/coursera/ml-ng/ex1/ex1.R",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								907,
+								670
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/R/R.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 612.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -785,8 +818,8 @@
 						"selection":
 						[
 							[
-								123,
-								123
+								321,
+								321
 							]
 						],
 						"settings":
@@ -802,6 +835,63 @@
 				},
 				{
 					"buffer": 5,
+					"file": "ch8-conclusion/ch8_conclusion.rmd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 89,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								89,
+								89
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								148,
+								148
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/R/R.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "proposal.rmd",
 					"semi_transient": false,
 					"settings":
@@ -829,7 +919,65 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
+					"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1623,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/R/R.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "ch2-curves/pandoc.sh",
 					"semi_transient": false,
 					"settings":
@@ -857,7 +1005,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 11,
 					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
@@ -885,7 +1033,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 12,
 					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 					"semi_transient": false,
 					"settings":
@@ -914,7 +1062,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 13,
 					"file": "technique_demos.rmd",
 					"semi_transient": false,
 					"settings":
@@ -943,7 +1091,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 14,
 					"file": "/home/mackenza/Documents/notes/Whitehead_PR.mdown",
 					"semi_transient": false,
 					"settings":
@@ -971,7 +1119,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 15,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 					"semi_transient": false,
 					"settings":
@@ -998,7 +1146,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 16,
 					"file": "techniques.md",
 					"semi_transient": false,
 					"settings":
@@ -1016,6 +1164,7 @@
 						],
 						"settings":
 						{
+							"WordCountShouldRun": true,
 							"syntax": "Packages/Markdown/Markdown.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -1026,7 +1175,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 17,
 					"file": "functions.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1054,7 +1203,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 18,
 					"file": "references/machine_learning.bib",
 					"semi_transient": false,
 					"settings":
@@ -1083,7 +1232,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 19,
 					"file": "references/data_forms_thought.bib",
 					"semi_transient": false,
 					"settings":
@@ -1112,7 +1261,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 20,
 					"file": "references/refs.bib",
 					"semi_transient": false,
 					"settings":

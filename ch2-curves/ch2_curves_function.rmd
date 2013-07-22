@@ -92,9 +92,9 @@ This curviness of this function, as we will see, is very important in many class
 
 This description of the differences between functions in a mathematical sense as a mapping and functions in an algorithmic sense as an implementation of some operations that might express a mathematical function is meant to highlight a key issue in learning functions. As we move from the mathematical formula to the three lines of R code that produces a plot of the function what has happened?  This is a kind of implementation of a function, and perhaps we learn something about the logistic function, that for instance, that it the $y$ values change very rapidly, almost decisively between $0$ and $1$ across a very brief interval of $x$ values. Unlike the linear functions we saw in the house-price models (see previous chapter), logistic functions switch between $1$ and $0$, or other values such as  `yes` and `no`.  This rapid change in value will, as we see, prove incredibly useful machine learning. But the way in which we have learned the logistic function  by taking a textbook formula expression of it, implementing it in code and then plotting the function is not the way that machine learning typically learns the function that maps between the input data and the output variables (the so-called 'response variable'). It is not the way that mathematicians typically learn functions.  Much mathematical practice takes the form of finding a function that satisfies a set of constraints or limits. Typically, functions are learned by solving a problem posed in terms of equations. Mathematics textbooks are replete with demonstrations of this problem-solving activity, and learning mathematics is in large part becoming practiced in solving problems by finding a functions. Even in machine learning, some function-finding through solving systems of equations occurs.  For instance, the closed form solution of the least sum of squares problem for linear regression is given by  $\hat{\beta} = (\mathbf{X}^T\mathbf{X})^-1\mathbf{X}^T\mathbf{y}$. As we saw in the previous chapter, this expression provides a very quick way to calculate the parameters of a linear model given a matrix of input and output values.  This formula itself is derived by solving a set of equations for the values $\hat{\beta}$, the estimated parameters of the model. In Week 2 of  CS229 'Machine Learning' lectures of 2008, Andrew Ng writes the steps needed to derive this closed form solution on the blackboard in the Stanford lecture theatre. He advises students to  learn these derivations. To learn machine learning, he advocates, he should 'read it, cover over the derivation and then do it yourself' [@stanforduniversity_lecture_2008]. 
 
-# Functions and searching
+## Functions and the search for a good solution
 
-Unique 'closed form' solutions are quite unusual in machine learning. In machine learning, functions are normally learned through a process of approximation and optimisation that has little resemblance to the deductive solving of equations. Even the apparently simplest machine learning procedure of fitting a line to a set of points is usually implemented differently in machine learning settings. This is a point where machine learning differs substantially from conventional statistical techniques. The use of approximation, optimisation and heuristic learning approaches is much more prevalent for reasons that have to do with the situations in which machine learning is put work.  For instance, describing the  application of machine learning to biomedical and clinical research, James Malley, Karen Malley and Sinisa Pajevic  write:
+Unique 'closed form' solutions are quite unusual in machine learning. In machine learning, functions are normally learned through a process of approximation and optimisation that has little resemblance to the deductive solving of equations. Even the apparently simplest data modelling procedure of fitting a line to a set of points is usually implemented differently in machine learning settings. This is a point where machine learning differs substantially from conventional statistical techniques. The use of approximation, optimisation and heuristic learning approaches is much more prevalent for reasons that have to do with the situations in which machine learning is put work.  For instance, describing the  application of machine learning to biomedical and clinical research, James Malley, Karen Malley and Sinisa Pajevic  write:
 
 > working with statistical learning machines can push us to think about novel structures and functions in our data. This awareness is often counterintuitive, and familiar methods such as simple correlations, or slightly more evolved partial correlations, are often not sufficient to pin down these deeper connections. [@malley_statistical_2011, 5-6]
 
@@ -116,28 +116,32 @@ A more typical machine learning approach then is to find a way of approximating 
 
 One widely used algorithm called 'gradient descent' is quite easy to grasp intuitively and it illustrates the process of searching for an approximation to the function that  produced the data. The term 'gradient' refers to the direction and steepness of values that can be represented by a slope. In linear models, each variable usually has numbers that can be graphed as curves. The combination of all the variables can be imagined as a surface whose contours include peaks and valleys. As we have seen, a linear model tries to find a line or plane or hyperplane (a higher dimensional plane) that fits this topography. Many different planes more or less fit the contours, but how do we choose the best one?  If we can't produce an exact answer to this problem, we could spend time trying out different parameters, varying some, and keeping the others the same until we find a set of parameters that seems to fit well.This is a classic machine learning scenario, where the machine is meant to learn something that programmers, engineers, scientists or statisticians cannot. How would the machine learning the line/plane of best fit?
 
-In many machine learning techniques (especially in the so-called 'supervised learning'), the search for an approximation to the function that generated the data is guided by another function called the 'cost function.' In this case, the cost function is defined as: 
+In many machine learning techniques (especially in the so-called 'supervised learning'), the search for an approximation to the function that generated the data is guided by another function called the 'cost function' (also known as the 'objective function'). There are various ways of learning functions, but cost functions are a basic component of many machine learning algorithms. They view 'the act of fitting a model to data as an optimization problem' [@conway_machine_2012, 183]. The learning algorithm fits many models to the data, and uses the cost function to decide which fits best. The cost functions themselves only provide a way of testing whether a given model performs better than another model in terms of changes in the parameters. The kind of model or type of prediction it performs does not change radically. In this case, the cost function is defined as: 
+
 > $J(\theta) := min_(\theta) \frac{1}{m} \sum\limits^m(h_\theta(x^{(i)} - y^{(i)}))^2$
 
-Again, the reading this kind of formula expression of a function is not easy. But several key terms stand out. Firstly, the cost function $J(\theta)$ is a function of all the parameters of the model. Secondly, the function is defined in terms of minimization. The $min describesGradient descent explores this surface looking for the lowest points.  It is a low-level algorithm in the sense that it does not predict or classify anything directly, but searches for values of the linear model paramaters ($\hat{\beta}) that minimise the differences between the actual values and the predicted values. Effectively, gradient descent starts by drawing a line somewhere through the points, and then changes some of the parameters controlling slope and position of the line in order to reduce the difference between the predicted values and the actual values. Rather than calculating a single line that best fits the data, the gradient descent algorithm explores gradients or tendencies in the data. There is nothing magical about this. 
+Again, the reading this kind of formula expression of a function is not easy. But several key terms stand out. First, the cost function $J(\theta)$ is a function of all the parameters of the model. Second, the function is defined in terms of the goal of minimizing the overall value of the expression. The $min$ describes the results of the repeated application of the function. Third, the heart of the function is a kind of average: it adds ($\sum$) all the  differences between the values of $y$ predicted by the model and the known values of $y$, and divides them by the number of values of y ($\frac{1}{m}$). This  is the so-called 'mean squared error' measure of prediction, a core measure of prediction in machine learning, and the basis of many standard statistical procedures. Mean squared error (MSE) is so taken for granted that machine learning textbooks such as _The Elements of Statistical Learning_ [@hastie_elements_2009] often rely on it without any further explanation. 
+
+Importantly, the cost function itself does not say anything about how the values of the parameters are to be found. They could be generated randomly, or perhaps could be just a range of values  (e.g. 0 to 100). 
 
 ```{r gradient, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
 
-url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data'
-boston_house =read.delim(url, sep='', header=FALSE)
-X = as.matrix(boston_house[, 1:13])
-Y = as.matrix(boston_house[,14])
+	url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data'
+	boston_house =read.delim(url, sep='', header=FALSE)
+	X = as.matrix(boston_house[, 1:13])
+	Y = as.matrix(boston_house[,14])
 
-X_norm =cbind(X[,1], apply(X[,2:3], MARGIN=2, function(X) {(X-mean(X))/sd(X)}))
-Y_norm = (Y - mean(Y))/sd(Y)
+	//normalise the data
+	X_norm =cbind(X[,1], apply(X[,2:3], MARGIN=2, function(X) {(X-mean(X))/sd(X)}))
+	Y_norm = (Y - mean(Y))/sd(Y)
 
-X_means = colMeans(X)
-X_sd = apply(X=X,MARGIN=2,FUN=sd )
+	X_means = colMeans(X)
+	X_sd = apply(X=X,MARGIN=2,FUN=sd )
 
-Y_mean = mean(Y)
-Y_sd = sd(Y)
+	Y_mean = mean(Y)
+	Y_sd = sd(Y)
 
-theta = matrix(0, nrow = ncol(X_norm))
+	theta = matrix(0, nrow = ncol(X_norm))
 
 	gradientDescentMulti <- function(X,Y, theta, alpha, iterations) {
 
@@ -171,10 +175,13 @@ theta = matrix(0, nrow = ncol(X_norm))
 	    return(cost)
 	}
 
-
 ```
+ 
+How then are values of the parameters generated for the cost function to be minimized? This is a key problem since lowering the MSE implies a better model. If the values of the model parameters were generated randomly, there would be little guarantee that any model was the best one. Perhaps after trying enough random values, a good fit might appear. Or perhaps a good model might never appear. A more ordered approach might be to try a 'grid search' [@conway_machine_2012, 185] but with more than a few parameters, the matrix of values quickly becomes huge (100 different values for 10 parameters means calculating and comparing $100^10$ or $10^20$ values). Both random and grid search are likely to fail because they do not actually take into account any structure in the data. If implemented, they might minimize the cost function or they might not.
 
-[HERE]
+## Gradient descent and the search for a partial solution
+ 
+Gradient descent is an optimisation technique that takes some of the structure of the data into account as it tries to find the minimum value of the cost function. It explores this surface looking for the lowest points.  It is a low-level algorithm in the sense that it does not predict or classif3y anything directly, but searches for values of the linear model paramaters ($\hat{\beta}) that minimise the differences between the actual values and the predicted values. Effectively, gradient descent starts by drawing a line somewhere through the points, and then changes some of the parameters controlling slope and position of the line in order to reduce the difference between the predicted values and the actual values. Rather than calculating a single line that best fits the data, the gradient descent algorithm explores gradients or tendencies in the data. There is nothing magical about this. 
 
 Functions pervade all data practices. That is, there is no raw data. All other data is preformed, collected, ordered and analysed through functions. Functions are data’s necessary prosthesis. 
 
