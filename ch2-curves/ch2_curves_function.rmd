@@ -116,13 +116,14 @@ But how do we know whether a model is a good one, or that the function that a mo
 ```
 There is another problem with the closed form approximation. The closed form solution is run once, and the model it produces is subject to no further computation, elaboration or variation. That is, the closed form solution  based on the so-called 'normal equations' delivers a fixed solution. The parameters $\hat{beta}$ define the line of best fit for the datasets on which they are based. A more typical machine learning approach  is to find a way of modelling how well the model has dealt with the data. It replaces the exactitude and precision of mathematically-deduced closed-form solutions with algorithms that search for a good solution, not 'the' solution. The combination of all the variables can be imagined as a surface whose contours include peaks and valleys. As we have seen, a linear model tries to find a line or plane or hyperplane (a higher dimensional plane) that fits this topography. Many different planes more or less fit the contours, but how do we choose the best one?  If we can't produce an exact answer to this problem, we could spend time trying out different parameters, varying some, and keeping the others the same until we find a set of parameters that seems to fit well.This is a classic machine learning scenario, where the machine is meant to learn something that programmers, engineers, scientists or statisticians cannot. How would the machine learning approach the line/plane of best fit?
 
-HERE - write more on the cost/loss function as a Leibnizian approach. 
 
-In many machine learning techniques (especially in the so-called 'supervised learning'), the search for an approximation to the function that generated the data is guided by another function called the 'cost function' (also known as the 'objective function' or the 'loss function'; both terms are somewhat evocative). There are various ways of learning functions, but cost functions are a basic component of many machine learning algorithms. They view 'the act of fitting a model to data as an optimization problem' [@conway_machine_2012, 183]. The learning algorithm fits many models to the data, and uses the cost function to decide which fits best. The cost functions themselves only provide a way of testing whether a given model performs better than another model in terms of changes in the parameters. The kind of model or type of prediction it performs does not change radically. In this case, the cost function is defined as: 
+In many machine learning techniques (especially in the so-called 'supervised learning'), the search for an approximation to the function that generated the data is guided by another function called the 'cost function' (also known as the 'objective function' or the 'loss function'; both terms are somewhat evocative). There are various ways of learning functions, but cost functions are an essential component of many machine learning models. Deciding on the cost function means thinking about how the predictions relate to the values in the data set. Every cost function implicitly has some measure of the difference or distance between the prediction and the values actually measured. In supervised learning, cost functions work with the known values. Cost functions stage 'the act of fitting a model to data as an optimization problem' [@conway_machine_2012, 183]. Having defined a cost function, the learning algorithm can fit many models to the data, and use the cost function to decide which fits best. The cost functions themselves only provide a way of testing whether a given model performs better than another model in terms of changes in the parameters. So, the kind of model or type of prediction it performs does not change radically. If there is learning here, it is not some enigmatic form or a higher form of scientific reason. Just the opposite, the cost function does something more like create a place from which variations in  models can be viewed. 
 
-> $J(\theta) := min_(\theta) \frac{1}{m} \sum\limits^m(h_\theta(x^{(i)} - y^{(i)}))^2$
+A typical and widely cost function associated with regression is defined as: 
 
-Again, the reading this kind of formula expression of a function is not easy. But several key terms stand out. First, the cost function $J(\theta)$ is a function of all the parameters of the model. Second, the function is defined in terms of the goal of minimizing the overall value of the expression. The $min$ describes the results of the repeated application of the function. Third, the heart of the function is a kind of average: it adds ($\sum$) all the  differences between the values of $y$ predicted by the model and the known values of $y$, and divides them by the number of values of y ($\frac{1}{m}$). This  is the so-called 'mean squared error' measure of prediction, a core measure of prediction in machine learning, and the basis of many standard statistical procedures. Mean squared error (MSE) is so taken for granted that machine learning textbooks such as _The Elements of Statistical Learning_ [@hastie_elements_2009] often rely on it without any further explanation. 
+> $J(\beta) := min_(\beta) \frac{1}{m} \sum\limits^m(h_\beta(x^{(i)} - y^{(i)}))^2$
+
+Again, the reading this kind of formula expression of a function is not easy. But several key terms stand out. First, the cost function $J(\beta)$ is a function of all the parameters of the model. Second, the function is defined in terms of the goal of minimizing the overall value of the expression. The $min$ describes the results of the repeated application of the function. Third, the heart of the function is a kind of average: it adds ($\sum$) all the  differences between the values of $y$ predicted by the model and the known values of $y$, and divides them by the number of values of y ($\frac{1}{m}$). This  is the so-called 'mean squared error' measure of prediction, a core measure of prediction in machine learning, and the basis of many standard statistical procedures. Mean squared error (MSE) is so taken for granted that machine learning textbooks such as _The Elements of Statistical Learning_ [@hastie_elements_2009] often rely on it without any further explanation. 
 
 Importantly, the cost function itself does not say anything about how the values of the parameters are to be found. They could be generated randomly, or perhaps could be just a range of values  (e.g. 0 to 100). 
 
@@ -143,48 +144,50 @@ Importantly, the cost function itself does not say anything about how the values
 	Y_mean = mean(Y)
 	Y_sd = sd(Y)
 
-	theta = matrix(0, nrow = ncol(X_norm))
+	beta = matrix(0, nrow = ncol(X_norm))
 
-	computeCost <- function(X,Y, theta) {
+	computeCost <- function(X,Y, beta) {
 	    m = nrow(X)
-	    h = X %*% theta
+	    h = X %*% beta
 	    cost = 0.5 /m * sum( (h-Y)^2)
 	    return(cost)
 	}
 
 ```
- 
-How then are values of the parameters generated for the cost function to be minimized? This is a key problem since lowering the MSE implies a better model. If the values of the model parameters were generated randomly, there would be little guarantee that any model was the best one. Perhaps after trying enough random values, a good fit might appear. Or perhaps a good model might never appear. A more ordered approach might be to try a 'grid search' [@conway_machine_2012, 185] but with more than a few parameters, the matrix of values quickly becomes huge (100 different values for 10 parameters means calculating and comparing $100^10$ or $10^20$ values). Both random and grid search are likely to fail because they do not actually take into account any structure in the data. If implemented, they might minimize the cost function or they might not.
+ In the code fragment above, the R function `computeCost` takes as inputs the matrix of $X$ , the vector of $Y$ values (the outputs), and a vector of current values of   $\beta$, the model parameters. It predicts the $Y$ values by multiplying $X$ by $/beta$ (this is a linear model in which predictions are generated by multiplying variables by their respective parameters and then adding the result). In the cost line of code, it calculates the differences between all the predictions and known actual values, adds them, and averages them  to yield the 'cost' of these particular values of the parameters. In practice, the cost function will be calculated for each change in the model's parameters, and the calculated cost or loss will be checked to see if is lower or higher than previous values. If  lower, then the new model parameters are producing better predictions than previous values of the parameters. This is good because it means that the approximation to the function that generated the data is better.  Measures of error, or closeness and distance are crucial to machine learning. If we can learn functions non-deductively and if functions can learn functions, it is partly by virtue of the kinds of view on variation set up in the cost functions. 
 
 ## Gradient descent and the search for a partial solution
+
+How then are a stream values of the parameters generated for the cost function to be minimized? This is a key problem since lowering the MSE or any cost function implies a way to find better values. If the values of the model parameters were generated randomly, there would be little guarantee that any model was going to be better than the last one. Perhaps after trying enough random values, a good fit might appear. Or perhaps a good model might never appear. A more ordered approach might be to try a 'grid search' [@conway_machine_2012, 185], in which all the possible combinations of values for the model parameters are tested successively, just like a search party systematically combing some terrain for a missing person.   But with more than a few parameters, the matrix of values quickly becomes vast (100 different values for 10 parameters means calculating and comparing $100^10$ or $10^20$ values). It is impossible to move through large fields  of values without missing some important features. Both random and grid search are likely to fail because they do not actually take into account any structure in the data. If implemented, they might minimize the cost function or they might not.
  
+Hence, a third decision has to be made in any machine learning setting. Having chosen a type of model and a cost function, it is also necessary to choose an optimisation method. [HERE - say more about where optimisation comes from; link more to Stengers on this]. 
 One widely used optimisation algorithm called 'gradient descent' is quite easy to grasp intuitively and it illustrates the process of searching for an approximation to the function that  produced the data. The term 'gradient' refers to the direction and steepness of values that can be represented by a slope. In linear models, each variable usually has numbers that can be graphed as curves.  Gradient descent is an optimisation technique that takes some of the structure of the data into account as it tries to find the minimum value of the cost function. It explores this surface looking for the lowest points.  It is a low-level algorithm in the sense that it does not predict or classify anything directly, but searches for values of the linear model paramaters ($\hat{\beta}) that minimise the differences between the actual values and the predicted values. Effectively, gradient descent starts by drawing a line somewhere through the points, and then changes some of the parameters controlling slope and position of the line in order to reduce the difference between the predicted values and the actual values. Rather than calculating a single line that best fits the data, the gradient descent algorithm explores gradients or tendencies in the data. There is nothing magical about this. 
 
 ```{r gradient_algorithm, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
 
-	gradientDescentMulti <- function(X,Y, theta, alpha, iterations) {
+	gradientDescentMulti <- function(X,Y, beta, alpha, iterations) {
 
 	    m = nrow(X)
 	    par(mfrow = c(1,2))
-	    theta = as.matrix(theta, ncol=1)
-	    theta_temp = c()
+	    beta = as.matrix(beta, ncol=1)
+	    beta_temp = c()
 	    J = c()
-	    theta_all = matrix(nrow=iterations, ncol=length(theta))
+	    beta_all = matrix(nrow=iterations, ncol=length(beta))
 
 	    for (i in 1:iterations) {
-	        # compute theta
-	        h = X%*%theta
-	        theta_temp = theta - alpha/m *sum ( apply(X, MARGIN=2, FUN = function(x) {x*(h-Y)}))
+	        # compute beta
+	        h = X%*%beta
+	        beta_temp = beta - alpha/m *sum ( apply(X, MARGIN=2, FUN = function(x) {x*(h-Y)}))
 
-	        # update theta
-	        theta = theta_temp
-	        cat('theta current: ', theta, '\n')
-	        cost = computeCost(X,Y, theta)
+	        # update beta
+	        beta = beta_temp
+	        cat('beta current: ', beta, '\n')
+	        cost = computeCost(X,Y, beta)
 	        cat('cost: ',cost, '\n')
 	        J[i] = cost
-	        theta_all[i,]= theta
+	        beta_all[i,]= beta
 	    }
-	    return(list(theta=theta_all,J=J))    
+	    return(list(beta=beta_all,J=J))    
 	}
 
 

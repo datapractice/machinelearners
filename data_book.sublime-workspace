@@ -163,7 +163,15 @@
 			"file": "ch0-introduction/ch0_introduction.rmd",
 			"settings":
 			{
-				"buffer_size": 923,
+				"buffer_size": 982,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ch2-curves/ch2_curves_function.rmd",
+			"settings":
+			{
+				"buffer_size": 38491,
 				"line_ending": "Unix"
 			}
 		},
@@ -172,14 +180,6 @@
 			"settings":
 			{
 				"buffer_size": 73550,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "ch2-curves/ch2_curves_function.rmd",
-			"settings":
-			{
-				"buffer_size": 28844,
 				"line_ending": "Unix"
 			}
 		},
@@ -309,7 +309,7 @@
 			"file": "references/machine_learning.bib",
 			"settings":
 			{
-				"buffer_size": 31585,
+				"buffer_size": 35188,
 				"line_ending": "Unix"
 			}
 		},
@@ -333,15 +333,15 @@
 	"build_system": "Packages/R Tools/R.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 75.0,
 		"selected_items":
 		[
 			[
-				"set",
+				"set mark",
 				"Set Syntax: Markdown"
 			],
 			[
-				"set mark",
+				"set",
 				"Set Syntax: Markdown"
 			],
 			[
@@ -433,6 +433,7 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/Documents/data_intensive/book/ch2-curves/ch2_curves_function.rmd",
 		"/home/mackenza/R/coursera/ml-ng/mlclass-ex2/ex2.R",
 		"/home/mackenza/R/coursera/ml-ng/ex1/computeCostMulti.m",
 		"/home/mackenza/Documents/data_intensive/transformation_soc_sci_oxford_2013/mackenzie_slides_oxford_feb_2013.Rmd",
@@ -443,7 +444,6 @@
 		"/home/mackenza/Documents/data_intensive/book/animations/grad_desc.R",
 		"/home/mackenza/Documents/data_intensive/book/pandoc.sh",
 		"/home/mackenza/Documents/data_intensive/book/build.sh",
-		"/home/mackenza/Documents/data_intensive/book/ch2-curves/ch2_curves_function.rmd",
 		"/home/mackenza/Documents/data_intensive/book/references/Exported Items.bib",
 		"/media/0031-014A/digital contours_ software materiality_review.md",
 		"/home/mackenza/Documents/data_intensive/book/ch1/ch1_praxis.rmd",
@@ -572,6 +572,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"theta",
+			"KDD",
+			"conway_machine_2012",
+			"conway",
 			"Ng",
 			"library",
 			"white",
@@ -688,7 +692,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -697,15 +701,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 923,
+						"buffer_size": 982,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								833,
-								833
+								224,
+								224
 							]
 						],
 						"settings":
@@ -721,6 +725,34 @@
 				},
 				{
 					"buffer": 1,
+					"file": "ch2-curves/ch2_curves_function.rmd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 38491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31032,
+								31032
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 7762.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "ch1-learning/ch1_praxis.rmd",
 					"semi_transient": false,
 					"settings":
@@ -745,34 +777,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 20225.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "ch2-curves/ch2_curves_function.rmd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 28844,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								23481,
-								23481
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 8325.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1208,15 +1212,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31585,
+						"buffer_size": 35188,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								73,
-								73
+								27780,
+								27780
 							]
 						],
 						"settings":
@@ -1226,7 +1230,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 13289.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1244,8 +1248,8 @@
 						"selection":
 						[
 							[
-								9090,
-								9090
+								9495,
+								9495
 							]
 						],
 						"settings":
@@ -1255,7 +1259,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6789.0,
+						"translation.y": 7314.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1273,8 +1277,8 @@
 						"selection":
 						[
 							[
-								21724,
-								21724
+								23071,
+								23071
 							]
 						],
 						"settings":
@@ -1284,7 +1288,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 14264.0,
+						"translation.y": 15814.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1367,7 +1371,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 338.0,
 	"status_bar_visible": true,
 	"template_settings":
