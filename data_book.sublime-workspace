@@ -168,14 +168,6 @@
 			}
 		},
 		{
-			"file": "ch2-curves/ch2_curves_function.rmd",
-			"settings":
-			{
-				"buffer_size": 38491,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "ch1-learning/ch1_praxis.rmd",
 			"settings":
 			{
@@ -184,10 +176,18 @@
 			}
 		},
 		{
-			"file": "/home/mackenza/R/coursera/ml-ng/ex1/ex1.R",
+			"file": "ch2-curves/ch2_curves_function.rmd",
 			"settings":
 			{
-				"buffer_size": 1707,
+				"buffer_size": 45449,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ch2-curves/test.md",
+			"settings":
+			{
+				"buffer_size": 45,
 				"line_ending": "Unix"
 			}
 		},
@@ -197,6 +197,33 @@
 			{
 				"buffer_size": 321,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
+			"settings":
+			{
+				"buffer_size": 2303,
+				"line_ending": "Unix",
+				"name": "vapnik_nature of statistical learning theory 2000"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/James_1996.md",
+			"settings":
+			{
+				"buffer_size": 8880,
+				"line_ending": "Unix",
+				"name": "{James, 1996 #838}"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/Negri-HardtCommonwealth-2009.md",
+			"settings":
+			{
+				"buffer_size": 438,
+				"line_ending": "Unix",
+				"name": "Negri Hardt Commonwealth 2009"
 			}
 		},
 		{
@@ -251,7 +278,7 @@
 			"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 			"settings":
 			{
-				"buffer_size": 751,
+				"buffer_size": 858,
 				"line_ending": "Unix"
 			}
 		},
@@ -317,7 +344,7 @@
 			"file": "references/data_forms_thought.bib",
 			"settings":
 			{
-				"buffer_size": 21949,
+				"buffer_size": 22424,
 				"line_ending": "Unix"
 			}
 		},
@@ -338,6 +365,10 @@
 		[
 			[
 				"set mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"set mar",
 				"Set Syntax: Markdown"
 			],
 			[
@@ -433,13 +464,15 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/Documents/data_intensive/book/.gitignore",
+		"/home/mackenza/R/coursera/ml-ng/ex1/ex1.R",
 		"/home/mackenza/Documents/data_intensive/book/ch2-curves/ch2_curves_function.rmd",
+		"/home/mackenza/Documents/notes/james_pluralistic_1996.odt",
 		"/home/mackenza/R/coursera/ml-ng/mlclass-ex2/ex2.R",
 		"/home/mackenza/R/coursera/ml-ng/ex1/computeCostMulti.m",
 		"/home/mackenza/Documents/data_intensive/transformation_soc_sci_oxford_2013/mackenzie_slides_oxford_feb_2013.Rmd",
 		"/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
 		"/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
-		"/home/mackenza/R/coursera/ml-ng/ex1/ex1.R",
 		"/home/mackenza/Documents/notes/Wilson,_Affect and Artificial Intelligence2009.md",
 		"/home/mackenza/Documents/data_intensive/book/animations/grad_desc.R",
 		"/home/mackenza/Documents/data_intensive/book/pandoc.sh",
@@ -692,7 +725,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -725,34 +758,6 @@
 				},
 				{
 					"buffer": 1,
-					"file": "ch2-curves/ch2_curves_function.rmd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 38491,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								31032,
-								31032
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 7762.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "ch1-learning/ch1_praxis.rmd",
 					"semi_transient": false,
 					"settings":
@@ -776,35 +781,63 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 20225.0,
+						"translation.y": 1300.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/home/mackenza/R/coursera/ml-ng/ex1/ex1.R",
+					"buffer": 2,
+					"file": "ch2-curves/ch2_curves_function.rmd",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1707,
+						"buffer_size": 45449,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								907,
-								670
+								28553,
+								28553
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/R/R.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 612.0,
+						"translation.y": 1650.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "ch2-curves/test.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -839,6 +872,93 @@
 				},
 				{
 					"buffer": 5,
+					"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1536,
+								1536
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "vapnik_nature of statistical learning theory 2000",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/mackenza/Documents/notes/James_1996.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5573,
+								5573
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "{James, 1996 #838}",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 850.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/mackenza/Documents/notes/Negri-HardtCommonwealth-2009.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								438,
+								438
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "Negri Hardt Commonwealth 2009",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "ch8-conclusion/ch8_conclusion.rmd",
 					"semi_transient": false,
 					"settings":
@@ -867,7 +987,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
 					"semi_transient": false,
 					"settings":
@@ -895,7 +1015,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 10,
 					"file": "proposal.rmd",
 					"semi_transient": false,
 					"settings":
@@ -923,7 +1043,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 11,
 					"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
 					"semi_transient": false,
 					"settings":
@@ -935,8 +1055,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								2487,
+								2487
 							]
 						],
 						"settings":
@@ -945,13 +1065,13 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 237.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 12,
 					"file": "/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
 					"semi_transient": false,
 					"settings":
@@ -975,13 +1095,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 907.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 13,
 					"file": "ch2-curves/pandoc.sh",
 					"semi_transient": false,
 					"settings":
@@ -1009,20 +1129,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 14,
 					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 751,
+						"buffer_size": 858,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								126,
-								126
+								753,
+								753
 							]
 						],
 						"settings":
@@ -1037,7 +1157,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 15,
 					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 					"semi_transient": false,
 					"settings":
@@ -1066,7 +1186,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 16,
 					"file": "technique_demos.rmd",
 					"semi_transient": false,
 					"settings":
@@ -1095,7 +1215,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 17,
 					"file": "/home/mackenza/Documents/notes/Whitehead_PR.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1123,7 +1243,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 18,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1150,7 +1270,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 19,
 					"file": "techniques.md",
 					"semi_transient": false,
 					"settings":
@@ -1179,7 +1299,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 20,
 					"file": "functions.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1207,7 +1327,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 21,
 					"file": "references/machine_learning.bib",
 					"semi_transient": false,
 					"settings":
@@ -1236,20 +1356,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 22,
 					"file": "references/data_forms_thought.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21949,
+						"buffer_size": 22424,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9495,
-								9495
+								2094,
+								2094
 							]
 						],
 						"settings":
@@ -1259,13 +1379,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7314.0,
+						"translation.y": 1452.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 23,
 					"file": "references/refs.bib",
 					"semi_transient": false,
 					"settings":
@@ -1277,8 +1397,8 @@
 						"selection":
 						[
 							[
-								23071,
-								23071
+								19346,
+								19346
 							]
 						],
 						"settings":
@@ -1288,7 +1408,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 15814.0,
+						"translation.y": 12439.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1342,6 +1462,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"refs",
+				"book/references/refs.bib"
+			],
+			[
+				"re",
+				"book/references/refs.bib"
+			]
 		],
 		"width": 0.0
 	},
@@ -1369,7 +1497,7 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": true,
+	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
 	"side_bar_width": 338.0,
