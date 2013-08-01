@@ -187,55 +187,58 @@ At the heart of this reshaping lies a different mathematical formalism: the part
 
 As always, the diagram or plot shows one, two or at most three dimensions of a curve that may in actual cases have hundreds or thousands of dimensions. We have to imagine that this curve is a hyperdimensional surface, but even in many dimensions, it is still parabolic and has a minimum value at the bottom of the dish. An observer that can manage to traverse this curve or hypercurve carries with it the possibility of minimising the cost function $J(\theta)$ and thereby optimising the approximation of a function that fits the data. 
 
-How to move around on a surface in a way that tends to take you towards lower ground and into the valley? This problem hardly presents itself as a problem to us as we walk over hill and dale. But then maybe it would be more of a problem if we didn't have paths to follow and we were walking on a moonless night. Indeed the problem is more like crossing sand dunes at night than hiking in the mountains. The only sense of the way down is a feeling underfoot of which way the ground is sloping. This is the intuition that gradient descent abstractly follows in the data. The datasets in which gradient descent moves have no paths or roads in them. They algorithm has no gods' eye viewpoint on the data, even though it can run up and down the matrices as many times as it wants. No doubt datasets  are somewhat organised spaces in that the data has been cut into dimensions, and grids by the rows and columns, but these dimensions have no particular value in themselves. We don't know which dimension is more important. On the contrary, the whole point of modelling the dataset is to give us some sense of what dimensions matter most in the states of affairs they pertain to. 
-
-[HERE Tuesday]
-
-The parabolic curve embodied in the cost function $J(\theta)$ already suggests a navigational strategy. The term 'gradient' refers to the direction and steepness of values that can be represented by a slope.  Gradient descent is an optimisation technique that takes some of the structure of the data into account as it tries to find the minimum value of the cost function. It explores this surface looking for the lowest points.  It is a low-level algorithm in the sense that it does not predict or classify anything directly, but searches for values of the linear model paramaters ($\hat{\beta}) that minimise the differences between the actual values and the predicted values. Effectively, gradient descent starts by drawing a line somewhere through the points, and then changes some of the parameters controlling slope and position of the line in order to reduce the difference between the predicted values and the actual values. Rather than calculating a single line that best fits the data, the gradient descent algorithm explores gradients or tendencies in the data. There is nothing magical about this: it draws on methods developed in differential calculus several centuries ago (for instance, by Simon de Laplace). 
-
+How to move around on a surface in a way that tends to take you towards lower ground and into the valley? This problem hardly presents itself as a problem to us as we walk over hill and dale. But then maybe it would be more of a problem if we didn't have paths to follow and we were walking on a moonless night. Indeed the problem is perhaps more like crossing sand dunes at night than hiking in the mountains. The only sense of the way down is a feeling underfoot of which way the ground is sloping. This is the intuition that gradient descent abstractly follows in the data. On the one hand, the datasets in which gradient descent moves have no paths or roads in them. The algorithm has no gods' eye viewpoint on the data, even though it can move up and down the matrices as many times as it wants. Datasets  are in some respects highly organised spaces in that the data has been cut into dimensions, and grids by the rows and columns, but these dimensions have no particular value in themselves. We don't know which dimension is more important. On the contrary, the whole point of modelling the dataset is to give us some sense of what dimensions matter most in the states of affairs they pertain to.  But on the other hand, the parabolic curve/surface embodied in the cost function $J(\theta)$ already shapes the space traversed by the algorithm. A parabola, as mentioned above, is a kind of bowl (although this bowl might be in many dimensions). It is much easier to reach the bottom of a bowl, even a hyper-dimensional bowl, than to reach the bottom of a valley in  hilly terrain.  That is, there is little chance of  getting caught in some hollow halfway up the hillside. 
 
 [^1]: The derivative \frac {\partial }{\partial \theta_j}J(\theta_j) is _partial_ because $\theta$ is a vector $\theta_0, \theta_1 ... \theta_j$.
 
 ```{r gradient_algorithm, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
 
-	gradientDescentMulti <- function(X,Y, beta, alpha, iterations) {
+	gradientDescentMulti <- function(X,Y, theta, alpha, iterations) {
 
 	    m = nrow(X)
 	    par(mfrow = c(1,2))
-	    beta = as.matrix(beta, ncol=1)
-	    beta_temp = c()
+	    theta = as.matrix(theta, ncol=1)
+	    theta_temp = c()
 	    J = c()
-	    beta_all = matrix(nrow=iterations, ncol=length(beta))
+	    theta_all = matrix(nrow=iterations, ncol=length(theta))
 
 	    for (i in 1:iterations) {
-	        # compute beta
-	        h = X%*%beta
-	        beta_temp = beta - alpha/m *sum ( apply(X, MARGIN=2, FUN = function(x) {x*(h-Y)}))
+	        # compute theta
+	        h = X%*%theta
+	        theta_temp = theta - alpha/m *sum ( apply(X, MARGIN=2, FUN = function(x) {x*(h-Y)}))
 
-	        # update beta
-	        beta = beta_temp
-	        cat('beta current: ', beta, '\n')
-	        cost = computeCost(X,Y, beta)
+	        # update theta
+	        theta = theta_temp
+	        cat('theta current: ', theta, '\n')
+	        cost = computeCost(X,Y, theta)
 	        cat('cost: ',cost, '\n')
 	        J[i] = cost
-	        beta_all[i,]= beta
+	        theta_all[i,]= theta
 	    }
-	    return(list(beta=beta_all,J=J))    
+	    return(list(theta=theta_all,J=J))    
 	}		
-
 
 ```
 
+In the code snippet above, the implementation of gradient descent is quite brief. It occurs in one line: `theta_temp = theta - alpha/m *sum ( apply(X, MARGIN=2, FUN = function(x) {x*(h-Y)}))`. The brevity of this code again demonstrates the simplicity of the partial observer in many machine learning functions. refers to the direction and steepness of values on this slope.  The only structure that gradient descent takes into account is the value of the cost function, $J(\theta)$. It explores this surface by always trying to move downwards and given that the cost function is a parabolic curve, it is hard to move in the wrong direction. But the algorithm can move too quickly. It can overshoot the minimum value -- the base of the bowl   - and start climbing the other side, heading for even higher ground.  The value of the key parameter of the gradient descent algorithm itself $\alpha$  matters here. If $\alpha$ is too high, the algorithm might stride over the minimum value of $J(\theta)$. If $\alpha$ is too low, the algorithm might crawl too slowly down the gradient, and still be somewhere on the side of the parabolic curve before the algorithm ends.  When does the algorithm end?  In the simple implementation shown here, the algorithm ends after a certain number of iterations, typically several thousand times around  the gradient descent step. 
+
+Gradient descent is a low-level algorithm in the sense that it does not predict or classify anything directly. It only minimises the value of a function, and does so according to a relatively simple strategy of always stepping in the most steeply sloping direction in the expectation of reaching the lowest point sooner or later. The effect of this search is to gradually adjust values of the linear model ($\hat{\beta}) so the differences between the actual values and the predicted values is reduced. Effectively, gradient descent starts by drawing a line/plane at random through the points, and then changes some of the parameters controlling slope and position of the line in order to reduce the difference between the predicted values and the actual values. But everything here depends on the cost function, and its regular geometry. Without that, gradient descent would very likely be wandering the dunes for ever. 
+
+## Functions and  states of things
+
+What I have been describing about gradient descent is not restricted to linear models or the kinds of models that try to fit straight lines to data. Gradient descent is used much more widely. For instance, it is at the heart of the very important neural network models. It also can be used in classifiers such as logistic regression models.  All of these models -- linear models, logistic regression and neural networks -- are quintessential machine learners. The learning on data they perform relies on the way gradient descent navigates data by calculating partial derivatives in order to move downhill into the cost function valley. Deleuze and Guattari aptly describe this operation of learning: 'an etats des choses or “derivative” function depends on such a relation: an operation of depotentialization has been carried out that makes possible the comparison of distinct powers starting from which a thing or a body may well develop (integration)' [@deleuze_what_1994,122]. Two depotentializations can be seen in gradient descent. First, the algorithm sees all differences between the  distinct realities of actual and predicted in terms of a cost function. Second, the cost function itself is 'depotentialized' via the partial derivative operation $\frac {\partial }{\partial \theta_j}J(\theta_j)$. That is,  the rate of change of the cost function -- the partial derivatives -- become the guiding through for the comparisons that allow the cost function to be iteratively minimized and hence the parameters of the model to be optimised. But there is a massive missing bit here: the 'body or thing' has long been absent in this discussion. How do we get back to things or bodies from machine learning algorithms?
+
+[HERE - wednesday]
+
 [HERE - say more about where optimisation comes from; link more to Stengers on this]. 
-[HERE] -- say more about calculus and how they think about it; put the partial differentials for grad desc in. 
 
 Functions pervade all data practices. That is, there is no raw data. All other data is preformed, collected, ordered and analysed through functions. Functions are data’s necessary prosthesis. 
 
-How do functions work? A wide variety of mathematical functions exist.  At the same time, functions exist as operational processes, as for instance, when a programmer write a function to sort records by date. This means that operate on data in the world, and introduce procedures into its many states of affairs. Both kinds of functions share some features. They both invoke numbers and symbols. They are both written in formal ways (equations, code). They both have arguments or variables. They both have various kinds of operators (+, -, =,etc.) that articulate variables together, usually expressed in the form of symbols. 
+How do functions work? A wide variety of mathematical functions exist.  At the same time, functions exist as operational processes, as for instance, when a programmer write a function to sort records by date. This means that operate on data in the world, and introduce procedures into its many states of affairs. Both kinds of functions share some features. They both invoke numbers and symbols. They are both written in formal ways (equations, code). They both have arguments or variables. They both have various kinds of operators (+, -, =,etc.) that articulate variables , usually expressed in the form of symbols. 
 
 The question is how we can relate these two different kinds of functions to data?  Does a mathematical or scientific function have the same mode of existence as an operation that proceduralises a state of affairs? Do the matters of facts map onto states of affairs through functions? I would suggest that although the two kind of functions are entwined, they do quite different things, and that comprehending their differences is vital to thinking through contemporary forms of data. 
 
-According to Deleuze and Guattari in *What is Philosophy*, the function is the central inventive process in science. Functions are not demonstrated or deduced, but created (cf. Manuel Delanda on this). Their account of scientific functions offers one way of understanding how these two different kinds of functions relate. The key accomplishment of functions for them consists in a slowing down of chaos (or what we might call, following William James, ‘pure experience’). A function is  ‘a fantastic slowing down, and it is by slowing down that matter, as well as the scientific thought able to penetrate it with propositions, is actualized. A function is a Slow-motion’ {Deleuze, 1994,118}.  They see functions as particular way of constructing references within chaos or noise. Here chaos is understood as) formlessness that arises from speed, from the fact that forms appear and disappear rapidly. While it is hardly a commensense account of a world, we might think of it as the degree zero on knowing or thinking, the background noise or dark screen against which all form, differentiation, pattern or order eventuates. 
+According to Deleuze and Guattari in *What is Philosophy*, the function is the central inventive process in science. Functions are not demonstrated or deduced, but created (cf. Manuel Delanda on this). Their account of scientific functions offers one way of understanding how these two different kinds of functions relate. The key accomplishment of functions for them consists in a slowing down of chaos (or what we might call, following William James, ‘pure experience’). A function is  ‘a fantastic slowing down, and it is by slowing down that matter, as well as the scientific thought able to penetrate it with propositions, is actualized. A function is a Slow-motion’ [@deleuze_what_1994, 118].  They see functions as particular way of constructing references within chaos or noise. Here chaos is understood as) formlessness that arises from speed, from the fact that forms appear and disappear rapidly. While it is hardly a commensense account of a world, we might think of it as the degree zero on knowing or thinking, the background noise or dark screen against which all form, differentiation, pattern or order eventuates. 
 
 As Isabelle Stengers writes:
 

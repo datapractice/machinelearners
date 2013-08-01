@@ -2,10 +2,8 @@
 	"folders":
 	[
 		{
-			"path": "/home/mackenza/Documents/data_intensive/book"
-		},
-		{
-			"path": "/home/mackenza/Dropbox/epistle"
+			"follow_symlinks": true,
+			"path": "ch2-curves"
 		}
 	]
 }
