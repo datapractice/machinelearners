@@ -179,7 +179,15 @@
 			"file": "ch2-curves/ch2_curves_function.rmd",
 			"settings":
 			{
-				"buffer_size": 57210,
+				"buffer_size": 63549,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
+			"settings":
+			{
+				"buffer_size": 3975,
 				"line_ending": "Unix"
 			}
 		},
@@ -196,14 +204,6 @@
 			"settings":
 			{
 				"buffer_size": 3125,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
-			"settings":
-			{
-				"buffer_size": 3975,
 				"line_ending": "Unix"
 			}
 		},
@@ -228,7 +228,7 @@
 			"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
 			"settings":
 			{
-				"buffer_size": 1083,
+				"buffer_size": 1195,
 				"line_ending": "Unix"
 			}
 		},
@@ -352,7 +352,7 @@
 			"file": "references/data_forms_thought.bib",
 			"settings":
 			{
-				"buffer_size": 22424,
+				"buffer_size": 23008,
 				"line_ending": "Unix"
 			}
 		},
@@ -368,19 +368,19 @@
 	"build_system": "Packages/R Tools/R.sublime-build",
 	"command_palette":
 	{
-		"height": 285.0,
+		"height": 75.0,
 		"selected_items":
 		[
+			[
+				"set mark",
+				"Set Syntax: Markdown"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
 			],
 			[
 				"set m",
-				"Set Syntax: Markdown"
-			],
-			[
-				"set mark",
 				"Set Syntax: Markdown"
 			],
 			[
@@ -456,7 +456,7 @@
 				"Set Syntax: R"
 			]
 		],
-		"width": 575.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -476,8 +476,9 @@
 	},
 	"file_history":
 	[
-		"/home/mackenza/.config/sublime-text-3/Packages/User/gd.sublime-snippet",
 		"/home/mackenza/Documents/data_intensive/book/ch2-curves/ch2_curves_function.rmd",
+		"/home/mackenza/R/coursera/ml-ng/mlclass-ex3/ex3.m",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/gd.sublime-snippet",
 		"/tmp/savedrecs-1.txt",
 		"/home/mackenza/Documents/data_intensive/book/ch2-curves/test.md",
 		"/home/mackenza/Documents/data_intensive/book/.gitignore",
@@ -620,6 +621,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"lr",
+			"wasserman",
 			"logistic",
 			"beta",
 			"theta",
@@ -786,8 +789,8 @@
 						"selection":
 						[
 							[
-								70062,
-								70062
+								67124,
+								67124
 							]
 						],
 						"settings":
@@ -798,7 +801,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1300.0,
+						"translation.y": 13503.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -809,15 +812,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 57210,
+						"buffer_size": 63549,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18649,
-								18649
+								23490,
+								23490
 							]
 						],
 						"settings":
@@ -826,13 +829,41 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 6560.0,
+						"translation.y": 6557.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								716,
+								716
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
@@ -860,7 +891,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "/home/mackenza/Documents/notes/Stengers_d&G_2005.txt",
 					"semi_transient": false,
 					"settings":
@@ -883,34 +914,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 248.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3975,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								850,
-								850
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -978,15 +981,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1083,
+						"buffer_size": 1195,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								633,
-								633
+								421,
+								421
 							]
 						],
 						"settings":
@@ -1384,8 +1387,8 @@
 						"selection":
 						[
 							[
-								27780,
-								27780
+								34107,
+								34107
 							]
 						],
 						"settings":
@@ -1395,7 +1398,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13289.0,
+						"translation.y": 16109.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1406,15 +1409,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 22424,
+						"buffer_size": 23008,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2094,
-								2094
+								9767,
+								9767
 							]
 						],
 						"settings":
@@ -1424,7 +1427,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1452.0,
+						"translation.y": 6863.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1442,8 +1445,8 @@
 						"selection":
 						[
 							[
-								19346,
-								19346
+								36089,
+								36089
 							]
 						],
 						"settings":
@@ -1453,7 +1456,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 12439.0,
+						"translation.y": 20640.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1463,7 +1466,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 42.0
+		"height": 39.0
 	},
 	"input":
 	{
@@ -1508,8 +1511,12 @@
 		"selected_items":
 		[
 			[
+				"ref",
+				"~/Documents/data_intensive/book/references/refs.bib"
+			],
+			[
 				"refs",
-				"book/references/refs.bib"
+				"~/Documents/data_intensive/book/references/refs.bib"
 			],
 			[
 				"re",
