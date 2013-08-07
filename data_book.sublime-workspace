@@ -163,7 +163,7 @@
 			"file": "ch0-introduction/ch0_introduction.rmd",
 			"settings":
 			{
-				"buffer_size": 982,
+				"buffer_size": 1144,
 				"line_ending": "Unix"
 			}
 		},
@@ -171,7 +171,7 @@
 			"file": "ch1-learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 73550,
+				"buffer_size": 73554,
 				"line_ending": "Unix"
 			}
 		},
@@ -179,8 +179,34 @@
 			"file": "ch2-curves/ch2_curves_function.rmd",
 			"settings":
 			{
-				"buffer_size": 63549,
+				"buffer_size": 66974,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/R/citation-network-analysis/Citation Network Analysis.ipynb",
+			"settings":
+			{
+				"buffer_size": 99079,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
+			"settings":
+			{
+				"buffer_size": 2239,
+				"line_ending": "Unix",
+				"name": "Rabinow, P. 2003. Anthropos Today. Reflections on"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/bogost_alien_2012.md",
+			"settings":
+			{
+				"buffer_size": 154,
+				"line_ending": "Unix",
+				"name": "bogost"
 			}
 		},
 		{
@@ -228,7 +254,7 @@
 			"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
 			"settings":
 			{
-				"buffer_size": 1195,
+				"buffer_size": 1831,
 				"line_ending": "Unix"
 			}
 		},
@@ -291,15 +317,6 @@
 			}
 		},
 		{
-			"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
-			"settings":
-			{
-				"buffer_size": 2239,
-				"line_ending": "Unix",
-				"name": "Rabinow, P. 2003. Anthropos Today. Reflections on"
-			}
-		},
-		{
 			"file": "technique_demos.rmd",
 			"settings":
 			{
@@ -352,7 +369,7 @@
 			"file": "references/data_forms_thought.bib",
 			"settings":
 			{
-				"buffer_size": 23008,
+				"buffer_size": 23293,
 				"line_ending": "Unix"
 			}
 		},
@@ -621,6 +638,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"rabinow",
+			"rabin",
 			"lr",
 			"wasserman",
 			"logistic",
@@ -745,7 +764,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -754,15 +773,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 982,
+						"buffer_size": 1144,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								224,
-								224
+								1047,
+								1047
 							]
 						],
 						"settings":
@@ -782,15 +801,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 73550,
+						"buffer_size": 73554,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								67124,
-								67124
+								1277,
+								1277
 							]
 						],
 						"settings":
@@ -801,7 +820,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13503.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -812,15 +831,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 63549,
+						"buffer_size": 66974,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								23490,
-								23490
+								6053,
+								6053
 							]
 						],
 						"settings":
@@ -829,13 +848,99 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 6557.0,
+						"translation.y": 1221.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "/home/mackenza/R/citation-network-analysis/Citation Network Analysis.ipynb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 99079,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2239,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								512,
+								512
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "Rabinow, P. 2003. Anthropos Today. Reflections on",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 23.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/mackenza/Documents/notes/bogost_alien_2012.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8,
+								8
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "bogost",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
 					"semi_transient": false,
 					"settings":
@@ -863,7 +968,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
@@ -891,7 +996,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "/home/mackenza/Documents/notes/Stengers_d&G_2005.txt",
 					"semi_transient": false,
 					"settings":
@@ -919,7 +1024,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "ch3-dimensionality/ch3_dimensional_exuberance.md",
 					"semi_transient": false,
 					"settings":
@@ -947,7 +1052,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 10,
 					"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
 					"semi_transient": false,
 					"settings":
@@ -976,20 +1081,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 11,
 					"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1195,
+						"buffer_size": 1831,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								421,
-								421
+								1418,
+								1418
 							]
 						],
 						"settings":
@@ -1004,7 +1109,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 12,
 					"file": "/home/mackenza/Documents/notes/James_1996.md",
 					"semi_transient": false,
 					"settings":
@@ -1033,7 +1138,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 13,
 					"file": "/home/mackenza/Documents/notes/Negri-HardtCommonwealth-2009.md",
 					"semi_transient": false,
 					"settings":
@@ -1062,7 +1167,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 14,
 					"file": "ch8-conclusion/ch8_conclusion.rmd",
 					"semi_transient": false,
 					"settings":
@@ -1091,7 +1196,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 15,
 					"file": "/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
 					"semi_transient": false,
 					"settings":
@@ -1119,7 +1224,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 16,
 					"file": "proposal.rmd",
 					"semi_transient": false,
 					"settings":
@@ -1147,7 +1252,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 17,
 					"file": "/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
 					"semi_transient": false,
 					"settings":
@@ -1177,7 +1282,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 18,
 					"file": "ch2-curves/pandoc.sh",
 					"semi_transient": false,
 					"settings":
@@ -1205,36 +1310,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
-					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2239,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								512,
-								512
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"auto_name": "Rabinow, P. 2003. Anthropos Today. Reflections on",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
+					"buffer": 19,
 					"file": "technique_demos.rmd",
 					"semi_transient": false,
 					"settings":
@@ -1263,7 +1339,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 20,
 					"file": "/home/mackenza/Documents/notes/Whitehead_PR.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1291,7 +1367,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 21,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1318,7 +1394,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 22,
 					"file": "techniques.md",
 					"semi_transient": false,
 					"settings":
@@ -1347,7 +1423,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 23,
 					"file": "functions.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1375,7 +1451,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 24,
 					"file": "references/machine_learning.bib",
 					"semi_transient": false,
 					"settings":
@@ -1398,26 +1474,26 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 16109.0,
+						"translation.y": 6012.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 25,
 					"file": "references/data_forms_thought.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23008,
+						"buffer_size": 23293,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9767,
-								9767
+								2909,
+								2909
 							]
 						],
 						"settings":
@@ -1427,13 +1503,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6863.0,
+						"translation.y": 1665.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 26,
 					"file": "references/refs.bib",
 					"semi_transient": false,
 					"settings":
@@ -1445,8 +1521,8 @@
 						"selection":
 						[
 							[
-								36089,
-								36089
+								36441,
+								36441
 							]
 						],
 						"settings":
@@ -1456,7 +1532,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 20640.0,
+						"translation.y": 21537.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1532,7 +1608,7 @@
 		[
 			[
 				"",
-				"~/Documents/imaginaries_cesagen_2010/imaginaries.sublime-project"
+				"~/Documents/mirroring/mirroring.sublime-project"
 			]
 		],
 		"width": 380.0
