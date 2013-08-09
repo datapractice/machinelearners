@@ -14,18 +14,19 @@ import google_scholar_parser as gs
 import pandas as pd
 import networkx as nx
 import itertools
+import matplotlib.pyplot as plt
 
 # <markdowncell>
 
 # ## A generative model of the machine learning literature
 # 
-# Let's build a generative model of the machine learning literature. 
+# "Let's build a generative model of the machine learning literature" Andrew Ng, lecture on GDA and Naive Bayes
 
 # <markdowncell>
 
 # ## Fields of research in the literature
 # 
-# Obviously dominated by computer science, but how does it move ouf that?
+# Obviously dominated by computer science, but how does it move out of that?
 
 # <codecell>
 
@@ -42,30 +43,74 @@ field_counts = {e:all_fields.count(e) for e in fields_set}
 # <codecell>
 
 print('%s different fields'%len(fields_set))
-field_counts
+field_counts_s = sorted(field_counts.iteritems(), key=lambda(k,v):(-v,k))
+field_counts_s
 
 # <codecell>
 
 #the problem is that computer science clutters everything -- get rid of it?
 
-print df.field.value_counts().order(ascending=False)[0:20]
-
-# <codecell>
-
-topics_sans = topics.str.replace('(computer science; ?)|(engineering; ?)', '')
+topics_sans = df.fields.str.replace('(computer science; ?)|(engineering; ?)', '')
 topics_sans = topics_sans.map(lambda x: re.split('; ', str(x))[0])
 topics_sans.value_counts()
 
 
-print topics_sans.value_counts()[0:50]
-print(len(df.TI[(df.AB.str.contains(pat = 'supervised|unsupervise', case=False, na=False))]))
+#print topics_sans.value_counts()[0:50]
+#print(len(df.TI[(df.AB.str.contains(pat = 'supervised|unsupervise', case=False, na=False))]))
 #print(df.TI[(df.AB.str.contains(pat = 'supervised|unsupervise', case=False, na=False))])
-figure(figsize=(10,10))
+figure(figsize=(10,12))
 subplot(1,2,2)
 
 hist(df.PY, bins=100, alpha=0.6, label= 'Machine Learning Publications by Year')
 subplot(1,2,1)
-topics_sans.value_counts()[0:20].plot(kind='barh', alpha=0.5, grid=False)
+#this doesn't work -- TBA
+major_fields = {f:v for f,v in field_counts.iteritems() if v > 3 or f is not 'computer science'}
+print(len(field_counts), len(major_fields))
+heights = major_fields.values()
+ind= np.arange(len(heights))
+plt.barh(ind, heights)
+width =0.2
+plt.title('Machine Learning Publications by Discipline')
+xticks = plt.yticks(ind+width/2., major_fields.keys() )
+
+# <codecell>
+
+
+#bar(height=field_counts.values()[0:100])
+#bar(left=range(1, len(field_counts.keys())), height=field_counts.values(), label='Machine Learning Publications by Discipline')
+
+# <codecell>
+
+gr_f = nx.DiGraph()
+gr_f.add_edges_from([i for de in df.fields.dropna() for i in itertools.combinations(de,2)])
+
+# <codecell>
+
+
+g2f = gr_f.copy()
+d = nx.degree(g2f)
+remove = 14
+[g2f.remove_node(n) for n in g2f.nodes() if d[n] <= remove]
+g2f.remove_node('computer science')
+g2f.remove_node('engineering')
+g2f.size()
+
+# <codecell>
+
+
+# <codecell>
+
+figure(figsize=(10,10))
+nx.draw_spring(g2f, k=1)
+
+# <codecell>
+
+figure(figsize=(13,10))
+ nx.draw_spectral(g2f)
+
+# <codecell>
+
+nx.write_list(g2f,'fields.csv')
 
 # <markdowncell>
 
