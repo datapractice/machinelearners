@@ -11,6 +11,9 @@ import nltk
 import pickle
 import operator
 import google_scholar_parser as gs
+import pandas as pd
+import networkx as nx
+import itertools
 
 # <markdowncell>
 
@@ -30,9 +33,9 @@ df = ml.load_records('data/')
 df.shape
 
 #actually this is more about fields than topics
-df.field = df.SC.dropna().str.lower().str.split('; ')
+df['fields'] = df.SC.dropna().str.lower().str.split('; ')
 
-all_fields = sorted([e  for el in df.field for e in el])
+all_fields = sorted([e  for el in df.fields.dropna() for e in el])
 fields_set = set(all_fields)
 field_counts = {e:all_fields.count(e) for e in fields_set}
 
@@ -115,12 +118,13 @@ print({a['title']:a['num_citations'] for a in sq.articles})
 # <codecell>
 
 # topics seem to be in the DE field
-df.de = df.DE.dropna().str.lower().str.strip()
-df.de = df.de.str.replace('s;', ';')
-df.de = df.de.str.replace('s$', '')
-df.de = df.de.str.split('; ')
+df['topics'] = df.DE.dropna().str.lower().str.strip()
+df.topics = df.topics.str.replace('s;', ';')
+df.topics = df.topics.str.replace('s$', '')
+df.topics = df.topics.str.replace('svm', 'support vector machine')
+df.topics = df.topics.str.split('; ')
 
-de_all = [d for de in df.de for d in de if d is not nan]
+de_all = [d for de in df.topics.dropna() for d in de]
 # need to clean out plurals
 de_set = set(de_all)
 print "All topics has %s and unique topics number %s" % (len(de_all), len(de_set))
@@ -144,8 +148,8 @@ de_counts_sorted[0:50]
 # 
 # ## Idea A: use networks
 # 
-# 1. clean up fields so each publication has the most distinctive fields
-# 2. clean up topics so that each publication has the most distinctive topics
+# 1. clean up fields so each publication has the most distinctive fields - remove 'computer science'
+# 2. clean up topics so that each publication has the most distinctive topics -- remove 'machine learning'
 # 3. create bimodal network of fields & topics?
 # 
 # ## Idea B: use association/correlations
@@ -153,12 +157,78 @@ de_counts_sorted[0:50]
 # <codecell>
 
 # to create distinctive topics, drop machine learning
-df.de
+ftdf = df[['fields', 'topics']]
+ftdf.head()
 
+# <codecell>
+
+gr = nx.DiGraph()
+gr.add_nodes_from(de_set)
+gr.number_of_nodes()
+#[i for i in itertools.combinations(de, 2) for de in df.topics[:100]]
+gr.add_edges_from([i for de in df.topics.dropna()[0:200] for i in itertools.combinations(de,2)])
+
+# <codecell>
+
+gr.number_of_edges()
+nx.average_degree_connectivity(gr)
+#nx.draw_networkx(gr)
+
+# <codecell>
+
+gr.remove_node('machine learning')
+
+# <codecell>
+
+deg=nx.degree(gr)
+
+# <codecell>
+
+deg['support vector machine']
+deg_sorted = sorted(deg.iteritems(), key=lambda(k,v):(-v,k))
+deg.values()[:50]
+
+# <codecell>
+
+deg_sorted[0:10]
+
+# <codecell>
+
+h=hist(deg.values(), 100)
+loglog(h[1][1:], h[0])
+
+# <codecell>
+
+#remove 1-degree nodes
+
+g2 = gr.copy()
+d = nx.degree(g2)
+remove = 10
+[g2.remove_node(n) for n in g2.nodes() if d[n] <= remove]
+g2.size()
+
+# <codecell>
+
+figure(figsize=(10,10))
+
+nx.draw_networkx(g2, alpha=0.8)
+nx.
 
 # <markdowncell>
 
 # ## Retrieving further literature if needed from WoS
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
 
 # <codecell>
 
