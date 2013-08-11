@@ -8,7 +8,8 @@ import os
 import matplotlib
 import pickle
 import datetime
-
+import networkx as nx
+import numpy as np
 
 def load_records(dir):
 	"""Return dataframe of all records, with new column of cited references as list"""
@@ -33,4 +34,15 @@ def load_records(dir):
 
 	return df
 
-df = load_records('data/')
+
+
+def discipline_techniques_graph(df):
+	df['DE_l'] = df.DE.str.lower()
+	# df.SC_l = df.SC_l.str.replace('computer science', '')
+	# df.SC_l = df.SC_l.str.replace('engineering', '')
+	# df.DE_l = df.DE_l.str.replace('machine learning', '')
+	df['SC_l'] = df.SC.str.lower()
+	df.DE_l =df.DE_l.str.split('; ')
+	tg = nx.Graph()
+	[tg.add_edge(te, f) for t,f in zip(df.DE_l, df.SC_l) if t is not np.nan  for te in t]
+	return tg

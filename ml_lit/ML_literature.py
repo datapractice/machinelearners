@@ -5,6 +5,7 @@
 
 %load_ext autoreload
 %autoreload 2
+
 import ml_lit_anal as ml
 import re
 import nltk
@@ -15,23 +16,28 @@ import pandas as pd
 import networkx as nx
 import itertools
 import matplotlib.pyplot as plt
+import numpy as np
 
 # <markdowncell>
 
 # ## A generative model of the machine learning literature
 # 
 # "Let's build a generative model of the machine learning literature" Andrew Ng, lecture on GDA and Naive Bayes
+# 
+# The idea of this analysis is to show how machine learning relates to various scientific and technical fields. In its treatment of the literature, it draws both on citation analysis techniques developed  in various fields, as well as text mining, social netowrk analysis and indeed machine learning itself to explore this rather large literature. 
 
 # <markdowncell>
 
 # ## Fields of research in the literature
 # 
-# Obviously dominated by computer science, but how does it move out of that?
+# I downloaded from Thomson ISI Web of Science all the references returned by the query 'machine learning.' I also downloaded the cited references. 
+# 
+# Other possible queries such as 'data mining' return too many references to handle -- over 2 million, so I stuck with machine learning, which return aroudn 25,000 references.
 
 # <codecell>
 
 df = ml.load_records('data/')
-df.shape
+print('There are %s records in the dataset'%df.shape[0])
 
 #actually this is more about fields than topics
 df['fields'] = df.SC.dropna().str.lower().str.split('; ')
@@ -40,24 +46,26 @@ all_fields = sorted([e  for el in df.fields.dropna() for e in el])
 fields_set = set(all_fields)
 field_counts = {e:all_fields.count(e) for e in fields_set}
 
+# <markdowncell>
+
+# Many different fields of research or disciplines are included in the results, and they help make sense of the multi-disciplinary nature of machine learning techniques. 
+
 # <codecell>
 
-print('%s different fields'%len(fields_set))
+print('%s different fields appear in the machine learning literature'%len(fields_set))
 field_counts_s = sorted(field_counts.iteritems(), key=lambda(k,v):(-v,k))
-field_counts_s
+field_counts_s[0:30]
+
+# <markdowncell>
+
+# The literature does reach back into the 1950s, but the real growth is in the 1990s-2000s. From 2005 onwards, several thousand publications a year appear.
+# 
+# We can see also the distribution of fields. Computer science totally dominates the fields. That only goes to show perhaps that machine learning is a computer science-driven set of techniques. But other fields such as automation and control systems,  biochemistry/molecular biology, management science, robotics, telecommunications and imaging science are important components. This already shows something of the wide dissemination of machine learning techniques. 
 
 # <codecell>
 
 #the problem is that computer science clutters everything -- get rid of it?
 
-topics_sans = df.fields.str.replace('(computer science; ?)|(engineering; ?)', '')
-topics_sans = topics_sans.map(lambda x: re.split('; ', str(x))[0])
-topics_sans.value_counts()
-
-
-#print topics_sans.value_counts()[0:50]
-#print(len(df.TI[(df.AB.str.contains(pat = 'supervised|unsupervise', case=False, na=False))]))
-#print(df.TI[(df.AB.str.contains(pat = 'supervised|unsupervise', case=False, na=False))])
 figure(figsize=(10,12))
 subplot(1,2,2)
 
@@ -73,6 +81,10 @@ width =0.2
 plt.title('Machine Learning Publications by Discipline')
 xticks = plt.yticks(ind+width/2., major_fields.keys() )
 
+# <markdowncell>
+
+# On
+
 # <codecell>
 
 
@@ -83,6 +95,25 @@ xticks = plt.yticks(ind+width/2., major_fields.keys() )
 
 gr_f = nx.DiGraph()
 gr_f.add_edges_from([i for de in df.fields.dropna() for i in itertools.combinations(de,2)])
+
+# <codecell>
+
+evc = nx.centrality.eigenvector_centrality(gr_f)
+[ (k,v) for (k,v) in sorted(evc.iteritems(), key=lambda(k,v):(v,k), reverse=True) if v >0]
+
+# <codecell>
+
+gr_f.out_degree(['biochemistry & molecular biology'])
+
+# <codecell>
+
+gr_f.out_degree('automation & control systems')
+
+# <codecell>
+
+degf = [deg for deg in gr_f.degree_iter()]
+degf.sort(key = lambda x: x[1], reverse=True)
+degf
 
 # <codecell>
 
@@ -97,20 +128,17 @@ g2f.size()
 
 # <codecell>
 
-
-# <codecell>
-
 figure(figsize=(10,10))
-nx.draw_spring(g2f, k=1)
+nx.draw_spring(g2f, dim=3, k=1, float=0.2, alpha=0.4)
 
 # <codecell>
 
 figure(figsize=(13,10))
- nx.draw_spectral(g2f)
+nx.draw_spectral(g2f, alpha=0.5)
 
 # <codecell>
 
-nx.write_list(g2f,'fields.csv')
+nx.write_gexf(g2f,'fields.gexf')
 
 # <markdowncell>
 
@@ -203,15 +231,21 @@ de_counts_sorted[0:50]
 
 # to create distinctive topics, drop machine learning
 ftdf = df[['fields', 'topics']]
+print(ftdf.shape)
 ftdf.head()
 
 # <codecell>
 
-gr = nx.DiGraph()
+gr = nx.Graph()
 gr.add_nodes_from(de_set)
 gr.number_of_nodes()
 #[i for i in itertools.combinations(de, 2) for de in df.topics[:100]]
 gr.add_edges_from([i for de in df.topics.dropna()[0:200] for i in itertools.combinations(de,2)])
+
+# <codecell>
+
+gr2 = nx.Graph()
+[gr2.add_edge(f[0],t[0]) for f,t in zip(ftdf.fields, ftdf.topics)]
 
 # <codecell>
 
@@ -258,6 +292,33 @@ figure(figsize=(10,10))
 
 nx.draw_networkx(g2, alpha=0.8)
 nx.
+
+# <markdowncell>
+
+# # 2 mode networks: disciplines and techniques
+
+# <codecell>
+
+from networkx.algorithms import bipartite as bi
+
+# <codecell>
+
+tx = ml.discipline_techniques_graph(df)
+
+# <codecell>
+
+tx.size()
+disciplines = df.SC_l.unique()
+techniques = {det  for de in df.DE_l if de is not nan for det in de}
+print ('
+
+# <codecell>
+
+df.SC_l
+
+# <codecell>
+
+disc = bi.projected_graph(tx, disciplines)
 
 # <markdowncell>
 
