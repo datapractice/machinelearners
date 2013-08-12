@@ -1,0 +1,932 @@
+(dp0
+S'gene expression'
+p1
+S'n'
+p2
+sS'semantic'
+p3
+g2
+sS'human-computer interaction'
+p4
+g2
+sS'similarity'
+p5
+g2
+sS'text categorization'
+p6
+g2
+sS'cross-validation'
+p7
+S'y'
+p8
+sS'function approximation'
+p9
+g8
+sS'entropy'
+p10
+g2
+sS'statistical machine learning'
+p11
+g8
+sS'case-based reasoning'
+p12
+g8
+sS'semi-supervised learning'
+p13
+g8
+sS'supervised classification'
+p14
+g8
+sS'predictive model'
+p15
+g8
+sS'support vector machines (support vector machine)'
+p16
+g8
+sS'statistical analysi'
+p17
+g8
+sS'drug discovery'
+p18
+g2
+sS'ranking'
+p19
+g8
+sS'k-means clustering'
+p20
+g8
+sS'face recognition'
+p21
+g2
+sS'social network'
+p22
+g2
+sS'rule extraction'
+p23
+g8
+sS'systems biology'
+p24
+g2
+sS'text mining'
+p25
+g2
+sS'transfer learning'
+p26
+g8
+sS'computational intelligence'
+p27
+g2
+sS'object recognition'
+p28
+g2
+sS'adaboost'
+p29
+g8
+sS'collaborative filtering'
+p30
+g8
+sS'traffic classification'
+p31
+g2
+sS'variable selection'
+p32
+g8
+sS'induction'
+p33
+g2
+sS'manifold learning'
+p34
+g8
+sS'system identification'
+p35
+g2
+sS'planning'
+p36
+g2
+sS'question answering'
+p37
+g2
+sS'intelligent agent'
+p38
+g2
+sS'kernel'
+p39
+g8
+sS'unsupervised learning'
+p40
+g8
+sS'mobile robot'
+p41
+g2
+sS'meta-learning'
+p42
+g8
+sS'machine learning for signal processing'
+p43
+g2
+sS'concept learning'
+p44
+g8
+sS'design'
+p45
+g2
+sS'learning from example'
+p46
+g8
+sS'genomic'
+p47
+g2
+sS'linear discriminant analysi'
+p48
+g8
+sS'bagging'
+p49
+g8
+sS'support vector regression'
+p50
+g8
+sS'artificial immune system'
+p51
+g2
+sS'machine vision'
+p52
+g2
+sS'classification tree'
+p53
+g8
+sS'identification'
+p54
+g2
+sS'wavelet'
+p55
+g8
+sS'computer-aided diagnosi'
+p56
+g2
+sS'artificial neural network'
+p57
+g8
+sS'content-based image retrieval'
+p58
+g2
+sS'segmentation'
+p59
+g8
+sS'intrusion detection system'
+p60
+g2
+sS'fuzzy set'
+p61
+g8
+sS'document classification'
+p62
+g2
+sS'heuristic'
+p63
+g2
+sS'component'
+p64
+g2
+sS'roc curve'
+p65
+g8
+sS'performance evaluation'
+p66
+g2
+sS'association rule'
+p67
+g8
+sS'modeling'
+p68
+g2
+sS'k-nearest neighbor'
+p69
+g8
+sS'sensitivity analysi'
+p70
+g8
+sS'uncertainty'
+p71
+g8
+sS'web mining'
+p72
+g2
+sS'context'
+p73
+g2
+sS'ensemble method'
+p74
+g8
+sS'co-training'
+p75
+g8
+sS'biometric'
+p76
+g2
+sS'forecasting'
+p77
+g2
+sS'image segmentation'
+p78
+g2
+sS'cancer'
+p79
+g2
+sS'rule induction'
+p80
+g8
+sS'virtual screening'
+p81
+g2
+sS'reinforcement learning'
+p82
+g8
+sS'regression tree'
+p83
+g8
+sS'sampling'
+p84
+g8
+sS'learning'
+p85
+g8
+sS'data mining'
+p86
+g8
+sS'experimentation'
+p87
+g2
+sS'protein structure'
+p88
+g2
+sS'ensemble of classifier'
+p89
+g8
+sS'evolutionary algorithm'
+p90
+g8
+sS'statistical learning'
+p91
+g8
+sS'diversity'
+p92
+g2
+sS'attribute reduction'
+p93
+g2
+sS'drug design'
+p94
+g2
+sS'catalytic site prediction'
+p95
+g2
+sS'naturalistic data'
+p96
+g2
+sS'dimension reduction'
+p97
+g8
+sS'fuzzy logic'
+p98
+g8
+sS'mascot'
+p99
+g2
+sS'relevance vector machine'
+p100
+g8
+sS'bayesian network'
+p101
+g8
+sS'gaussian peak'
+p102
+g8
+sS'large margin classification'
+p103
+g8
+sS'activity recognition'
+p104
+g2
+sS'supervised machine learning'
+p105
+g8
+sS'machine learning'
+p106
+g8
+sS'pattern classification'
+p107
+g8
+sS'optimization'
+p108
+g8
+sS'rough set theory'
+p109
+g8
+sS'discriminant analysi'
+p110
+g8
+sS'hrm decentralization'
+p111
+g8
+sS'knowledge-based system'
+p112
+g2
+sS'control'
+p113
+g2
+sS'speech recognition'
+p114
+g2
+sS'granular computing'
+p115
+g2
+sS'intelligent system'
+p116
+g2
+sS'knowledge discovery in database'
+p117
+g2
+sS'data reduction'
+p118
+g8
+sS'agent'
+p119
+g2
+sS'relevance feedback'
+p120
+g2
+sS'semantic web'
+p121
+g2
+sS'object detection'
+p122
+g2
+sS'scheduling'
+p123
+g2
+sS'protein'
+p124
+g2
+sS'recurrent neural network'
+p125
+g8
+sS'pruning'
+p126
+g8
+sS'regularization'
+p127
+g8
+sS'class imbalance'
+p128
+g8
+sS'remote sensing'
+p129
+g2
+sS'neural network'
+p130
+g8
+sS'microarray'
+p131
+g2
+sS'computer vision'
+p132
+g2
+sS'principal component analysi'
+p133
+g8
+sS'knowledge acquisition'
+p134
+g2
+sS'software metric'
+p135
+g2
+sS'machine-learning'
+p136
+g8
+sS'gaussian proces'
+p137
+g8
+sS'survey'
+p138
+g2
+sS'ensemble'
+p139
+g8
+sS'genetic programming'
+p140
+g8
+sS'classifier ensemble'
+p141
+g8
+sS'conditional random field'
+p142
+g8
+sS'computational biology'
+p143
+g2
+sS'active learning'
+p144
+g8
+sS'support vector machine (support vector machine)'
+p145
+g8
+sS'fuzzy system'
+p146
+g8
+sS'hybrid system'
+p147
+g2
+sS'time serie'
+p148
+g8
+sS'naive bayes classifier'
+p149
+g8
+sS'prognosi'
+p150
+g2
+sS'hidden markov model'
+p151
+g8
+sS'robotic'
+p152
+g2
+sS'protein structure prediction'
+p153
+g2
+sS'fmri'
+p154
+g2
+sS'tracking'
+p155
+g2
+sS'mutual information'
+p156
+g8
+sS'database'
+p157
+g2
+sS'information theory'
+p158
+g8
+sS'biomarker'
+p159
+g2
+sS'bayesian classifier'
+p160
+g8
+sS'model'
+p161
+g2
+sS'information gain'
+p162
+g8
+sS'bioinformatic'
+p163
+g2
+sS'network security'
+p164
+g2
+sS'parameter estimation'
+p165
+g8
+sS'multiclass classification'
+p166
+g8
+sS'data clustering'
+p167
+g8
+sS'learning theory'
+p168
+g8
+sS'sensor network'
+p169
+g2
+sS'machine learning technique'
+p170
+g8
+sS'lasso'
+p171
+g8
+sS'visualization'
+p172
+g8
+sS'classification'
+p173
+g8
+sS'anomaly detection'
+p174
+g2
+sS'evolutionary computation'
+p175
+g8
+sS'missing data'
+p176
+g8
+sS'computational complexity'
+p177
+g8
+sS'pca'
+p178
+g8
+sS'ensemble learning'
+p179
+g8
+sS'multi-class classification'
+p180
+S''
+p181
+sS'signal processing'
+p182
+g2
+sS'missing value'
+p183
+g8
+sS'independent component analysi'
+p184
+g8
+sS'kernel function'
+p185
+g8
+sS'measurement'
+p186
+g2
+sS'machine learning method'
+p187
+g2
+sS'text classification'
+p188
+g2
+sS'kernel method'
+p189
+g8
+sS'learning to rank'
+p190
+g8
+sS'cognitive radio'
+p191
+g2
+sS'support vector machine'
+p192
+g8
+sS'expert system'
+p193
+g2
+sS'similarity measure'
+p194
+g8
+sS'data fusion'
+p195
+g8
+sS'graphical model'
+p196
+g8
+sS'sparsity'
+p197
+g8
+sS'qsar'
+p198
+g2
+sS'logistic regression'
+p199
+g8
+sS'eeg'
+p200
+g2
+sS'opinion mining'
+p201
+g2
+sS'classifier'
+p202
+g8
+sS'knowledge management'
+p203
+g2
+sS'linear programming'
+p204
+g8
+sS'decision support'
+p205
+g8
+sS'information extraction'
+p206
+g2
+sS'mass spectrometry'
+p207
+g2
+sS'statistic'
+p208
+g2
+sS'k-mean'
+p209
+g8
+sS'user modeling'
+p210
+g2
+sS'intrusion detection'
+p211
+g2
+sS'particle swarm optimization'
+p212
+g8
+sS'fuzzy clustering'
+p213
+g8
+sS'dimensionality reduction'
+p214
+g8
+sS'random forest'
+p215
+g8
+sS'evaluation'
+p216
+g2
+sS'sentiment analysi'
+p217
+g2
+sS'concept drift'
+p218
+g8
+sS'online learning'
+p219
+g8
+sS'robustnes'
+p220
+g2
+sS'fault diagnosi'
+p221
+g2
+sS'boosting'
+p222
+g8
+sS'mimo system'
+p223
+g8
+sS'ontology'
+p224
+g2
+sS'security'
+p225
+g2
+sS'vaccine'
+p226
+g8
+sS'classification algorithm'
+p227
+g8
+sS'pipeline'
+p228
+g8
+sS'learning algorithm'
+p229
+g8
+sS'simulation'
+p230
+g2
+sS'data analysi'
+p231
+g2
+sS'feature selection'
+p232
+g8
+sS'feature subset selection'
+p233
+g8
+sS'emotion'
+p234
+g2
+sS'discretization'
+p235
+g8
+sS'instance-based learning'
+p236
+g8
+sS'cost-sensitive learning'
+p237
+g8
+sS'support vector machines (support vector machines)'
+p238
+g8
+sS'ensemble classifier'
+p239
+g8
+sS'image processing'
+p240
+g2
+sS'decision making'
+p241
+g2
+sS'clustering'
+p242
+g8
+sS'categorization'
+p243
+g8
+sS'weka'
+p244
+g2
+sS'mixture model'
+p245
+g8
+sS'texture analysi'
+p246
+g2
+sS'medical diagnosi'
+p247
+g2
+sS'model selection'
+p248
+g2
+sS'methods: data analysi'
+p249
+g2
+sS'breast cancer'
+p250
+g2
+sS'image analysi'
+p251
+g2
+sS'artificial intelligence'
+p252
+g8
+sS'self-organizing map'
+p253
+g8
+sS'feature extraction'
+p254
+g8
+sS'multi-agent system'
+p255
+g8
+sS'gaussian processe'
+p256
+g8
+sS'machine learning algorithm'
+p257
+g8
+sS'inductive inference'
+p258
+g8
+sS'prediction'
+p259
+g8
+sS'knowledge representation'
+p260
+g2
+sS'computer security'
+p261
+g2
+sS'regression'
+p262
+g8
+sS'pattern recognition'
+p263
+g8
+sS'information retrieval'
+p264
+g2
+sS'inductive learning'
+p265
+g8
+sS'wireless sensor network'
+p266
+g2
+sS'protein-protein interaction'
+p267
+g2
+sS'schizophrenia'
+p268
+g2
+sS'learning classifier system'
+p269
+g8
+sS'knowledge discovery'
+p270
+g2
+sS'credit scoring'
+p271
+g2
+sS'reproducing kernel hilbert space'
+p272
+g8
+sS'data preprocessing'
+p273
+g8
+sS'decision support system'
+p274
+g2
+sS'radial basis function'
+p275
+g8
+sS'word sense disambiguation'
+p276
+g2
+sS'binary classification'
+p277
+g8
+sS'rough set'
+p278
+g8
+sS'decision tree'
+p279
+g8
+sS'ann'
+p280
+g2
+sS'personalization'
+p281
+g2
+sS'diagnosi'
+p282
+g2
+sS'generalization'
+p283
+g8
+sS'fault detection'
+p284
+g2
+sS'named entity recognition'
+p285
+g8
+sS'inductive machine learning'
+p286
+g8
+sS'image classification'
+p287
+g2
+sS'c4.5'
+p288
+g8
+sS'brain-computer interface'
+p289
+g2
+sS"alzheimer's disease"
+p290
+g2
+sS'nearest neighbor'
+p291
+g8
+sS'affective computing'
+p292
+g2
+sS'natural language processing'
+p293
+g2
+sS'performance'
+p294
+g2
+sS'accuracy'
+p295
+g2
+sS'image retrieval'
+p296
+g2
+sS'genetic algorithm'
+p297
+g8
+sS'neural net'
+p298
+g8
+sS'incremental learning'
+p299
+g8
+sS'information system'
+p300
+g2
+sS'proteomic'
+p301
+g2
+sS'cluster analysi'
+p302
+g8
+sS'computational learning theory'
+p303
+g8
+sS'algorithm'
+p304
+g2
+sS'face detection'
+p305
+g2
+sS'convex optimization'
+p306
+g8
+sS'linear regression'
+p307
+g8
+sS'recommender system'
+p308
+g2
+sS'inductive logic programming'
+p309
+g8
+sS'mri'
+p310
+g2
+sS'naive baye'
+p311
+g8
+sS'supervised learning'
+p312
+g8
+s.

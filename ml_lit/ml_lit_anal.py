@@ -10,6 +10,7 @@ import pickle
 import datetime
 import networkx as nx
 import numpy as np
+import operator
 
 def load_records(dir):
 	"""Return dataframe of all records, with new column of cited references as list"""
@@ -35,14 +36,54 @@ def load_records(dir):
 	return df
 
 
+def clean_topics(df):
+	"""Wos.DE field has a mixture of topics and techniques.
+	-------------------------------------
+	Returns a cleaned-up, de-pluralised list version of all the topics and techniques
+	"""
+
+	df['topics'] = df.DE.dropna().str.lower().str.strip().str.replace('\(\\w+ \)', '').str.replace('($  )|(  )', ' ')
+	# df.topics = df.topics.str.replace('s;', ';')
+	# df.topics = df.topics.str.replace('s$', '')
+	df.topics = df.topics.str.replace('svm', 'support vector machine')
+
+	df.topics = df.topics.str.split('; ')
+	return df
+
+
+def manual_topic_classifier(df, existing_topic_classes, topic_counts_sorted, start = 0, count=100, ):
+	
+	"""Returns a dictionary with topics classified as techniques
+	or not. Asks the user to classify them by hand, starting with the most frequent
+	Parameters
+	------------------
+	count: how many to classify
+	start: where in the list to start
+	"""
+
+	if existing_topic_classes is None:
+		existing_topic_classes = dict()
+	if topic_counts_sorted is None:
+		de_all = [d for de in df.topics.dropna() for d in de]
+		de_set = set(de_all)
+		de_counts = {de:de_all.count(de) for de in de_set}
+		topic_counts_sorted = sorted(de_counts.iteritems(), key = operator.itemgetter(1), reverse=True)
+	topic_classes = {t:raw_input('\n' + t+ ' is technique? ') for t,v in topic_counts_sorted[start:start+count] if not existing_topic_classes.has_key(t)}
+	existing_topic_classes.update(topic_classes)
+	return existing_topic_classes
+
 
 def discipline_techniques_graph(df):
-	df['DE_l'] = df.DE.str.lower()
-	# df.SC_l = df.SC_l.str.replace('computer science', '')
-	# df.SC_l = df.SC_l.str.replace('engineering', '')
-	# df.DE_l = df.DE_l.str.replace('machine learning', '')
+
+	""" Constructs a bipartite graph from techniques to discipline_techniques_graph.
+	It assumes that dataframe already has a cleaned up topics field.
+	Preferably it has already been cut down just to techniques
+	------------------------------
+	Returns graph
+	"""
+
 	df['SC_l'] = df.SC.str.lower()
-	df.DE_l =df.DE_l.str.split('; ')
-	tg = nx.Graph()
-	[tg.add_edge(te, f) for t,f in zip(df.DE_l, df.SC_l) if t is not np.nan  for te in t]
+
+	tg = nx.DiGraph()
+	[tg.add_edge(te, f) for t,f in zip(df.topics, df.SC_l) if t is not np.nan  for te in t]
 	return tg
