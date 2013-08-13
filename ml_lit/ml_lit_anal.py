@@ -37,6 +37,7 @@ def load_records(dir):
 
 
 def clean_topics(df):
+	
 	"""Wos.DE field has a mixture of topics and techniques.
 	-------------------------------------
 	Returns a cleaned-up, de-pluralised list version of all the topics and techniques
@@ -87,3 +88,23 @@ def discipline_techniques_graph(df):
 	tg = nx.DiGraph()
 	[tg.add_edge(te, f) for t,f in zip(df.topics, df.SC_l) if t is not np.nan  for te in t]
 	return tg
+
+def trim_degrees(g, degree=1):
+	g2 = g.copy()
+	d = nx.degree(g2)
+	[g2.remove_node(n) for n in g2.nodes() if d[n] <= degree]
+	return g2
+
+def sorted_map(map): return sorted(map.iteritems(), key=lambda (k,v): (-v,k))
+
+def trim_edges(g, weight=1):
+    g2 = nx.Graph()
+    [g2.add_edge(f,to, edata) for f, to, edata in g.edges(data=True) if edata['weight']>weight]
+    return g2
+
+def island_method(g, iterations=5):
+    weights = [edata['weight'] for f, to, edata in g.edges(data=True)]
+    mn = int(min(weights))
+    mx = int(max(weights))
+    step = int((mx-mn)/iterations)
+    return [[threshold, trim_edges(g, threshold)] for threshold in range(mn,mx,step)]

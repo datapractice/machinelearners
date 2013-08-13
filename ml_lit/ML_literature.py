@@ -4,7 +4,11 @@
 # <codecell>
 
 %load_ext autoreload
-%autoreload 2
+%autoreload 
+
+# <codecell>
+
+
 
 import ml_lit_anal as ml
 import re
@@ -25,6 +29,25 @@ import numpy as np
 # "Let's build a generative model of the machine learning literature" Andrew Ng, lecture on GDA and Naive Bayes
 # 
 # The idea of this analysis is to show how machine learning relates to various scientific and technical fields. In its treatment of the literature, it draws both on citation analysis techniques developed  in various fields, as well as text mining, social netowrk analysis and indeed machine learning itself to explore this rather large literature. 
+# 
+# Loading the literature and cleaning the topics
+
+# <codecell>
+
+df = ml.load_records('data/')
+print('There are %s records in the dataset'%df.shape[0])
+
+#clean topics
+df = ml.clean_topics(df)
+
+# <codecell>
+
+print('%s topic fields are null'%sum(df.topics.isnull()))
+print('%s abstract fields are null'%sum(df.AB.isnull()))
+
+# <markdowncell>
+
+# It should be possible to fill in some of the missing topic fields by using keywords from the abstracts. I'll attempt this a bit later. 
 
 # <markdowncell>
 
@@ -35,9 +58,6 @@ import numpy as np
 # Other possible queries such as 'data mining' return too many references to handle -- over 2 million, so I stuck with machine learning, which return aroudn 25,000 references.
 
 # <codecell>
-
-df = ml.load_records('data/')
-print('There are %s records in the dataset'%df.shape[0])
 
 #actually this is more about fields than topics
 df['fields'] = df.SC.dropna().str.lower().str.split('; ')
@@ -66,30 +86,30 @@ field_counts_s[0:30]
 
 #the problem is that computer science clutters everything -- get rid of it?
 
-figure(figsize=(10,12))
-subplot(1,2,2)
+figure = plt.figure(figsize=(10,12))
+sp1 = figure.add_subplot(1,2,2)
 
-hist(df.PY, bins=100, alpha=0.6, label= 'Machine Learning Publications by Year')
-subplot(1,2,1)
+sp1.hist(df.PY.dropna(), bins=80, alpha=0.6, label= 'Machine Learning Publications by Year')
+sp2 = figure.add_subplot(1,2,1)
 #this doesn't work -- TBA
 major_fields = {f:v for f,v in field_counts.iteritems() if v > 3 or f is not 'computer science'}
 print(len(field_counts), len(major_fields))
 heights = major_fields.values()
 ind= np.arange(len(heights))
-plt.barh(ind, heights)
+sp2.barh(ind, heights)
 width =0.2
 plt.title('Machine Learning Publications by Discipline')
 xticks = plt.yticks(ind+width/2., major_fields.keys() )
 
 # <markdowncell>
 
-# On
+# ### Some network exploration could be useful for the relation between the disciplines
+# 
+# What disciplines connect the others up?
 
 # <codecell>
 
-
-#bar(height=field_counts.values()[0:100])
-#bar(left=range(1, len(field_counts.keys())), height=field_counts.values(), label='Machine Learning Publications by Discipline')
+def sorted_map(map): return sorted(map.iteritems(), key=lambda (k,v): (-v,k))
 
 # <codecell>
 
@@ -98,47 +118,72 @@ gr_f.add_edges_from([i for de in df.fields.dropna() for i in itertools.combinati
 
 # <codecell>
 
-evc = nx.centrality.eigenvector_centrality(gr_f)
-[ (k,v) for (k,v) in sorted(evc.iteritems(), key=lambda(k,v):(v,k), reverse=True) if v >0]
+core = ml.trim_degrees(gr_f, 10)
+len(core)
 
 # <codecell>
 
-gr_f.out_degree(['biochemistry & molecular biology'])
-
-# <codecell>
-
-gr_f.out_degree('automation & control systems')
-
-# <codecell>
-
-degf = [deg for deg in gr_f.degree_iter()]
-degf.sort(key = lambda x: x[1], reverse=True)
-degf
+degree_c = nx.degree_centrality(core)
+degree_cs = sorted_map(degree_c)
+degree_cs
 
 # <codecell>
 
 
-g2f = gr_f.copy()
-d = nx.degree(g2f)
-remove = 14
-[g2f.remove_node(n) for n in g2f.nodes() if d[n] <= remove]
-g2f.remove_node('computer science')
-g2f.remove_node('engineering')
-g2f.size()
+closeness_c = nx.closeness_centrality(core)
+closeness_cs = sorted_map(closeness_c)
+closeness_cs
 
 # <codecell>
 
-figure(figsize=(10,10))
-nx.draw_spring(g2f, dim=3, k=1, float=0.2, alpha=0.4)
+between_c = nx.betweenness_centrality(core)
+between_cs = sorted_map(between_c)
+between_cs
 
 # <codecell>
 
-figure(figsize=(13,10))
-nx.draw_spectral(g2f, alpha=0.5)
+eigen_c = nx.eigenvector_centrality(core)
+eigen_cs = sorted_map(eigen_c)
+eigen_cs
 
 # <codecell>
 
-nx.write_gexf(g2f,'fields.gexf')
+pr = nx.pagerank(core)
+pr_s = sorted_map(pr)
+pr_s
+
+# <codecell>
+
+n1 = {x[0] for x in degree_cs[:10]}
+n2 = {x[0] for x in closeness_cs[:10]}
+n3 = {x[0] for x in between_cs[:10]}
+n4 = {x[0] for x in eigen_cs[:10]}
+n5 = {x[0] for x in pr_s[:10]}
+names = n1 | n2 | n3 | n4 | n5
+table =[[name, degree_c[name], closeness_c[name], between_c[name], eigen_c[name], pr[name]] for name in names]
+elite_group = pd.DataFrame(data = table, columns = ['field','degree', 'closeness', 'betweenness', 'eigenvector', 'pagerank'])
+elite_group = elite_group.set_index('field')
+elite_group
+
+# <codecell>
+
+fig = plt.figure(figsize = (10,10))
+#labels = elite_group['field']
+#sp1=fig.add_subplot(1,4,1)
+#sp1.plot(x=elite_group.field, y= elite_group.degree)
+elite_group[['degree', 'closeness', 'betweenness', 'eigenvector', 'pagerank']].plot(kind='barh',  figsize=(10,10))
+
+# <markdowncell>
+
+# Pagerank represents a flow of trust/influence
+
+# <codecell>
+
+elite_group[['betweenness', 'eigenvector']].plot(kind='barh')
+
+# <markdowncell>
+
+# Boundary spanners have low degree, high betweenness (bottlenecks or bridges) and high eigenvector centrality (actor connected to many actors who are connected). Here it looks mathematics and psychology could be playing something of these roles. Molecular biology and automation and control systems have spanning type positions too. 
 
 # <markdowncell>
 
@@ -152,20 +197,11 @@ df.af = df.af.str.split('; ')
 af_all = [d for de in df.af for d in de if d is not nan]
 af_set = set(af_all)
 print "There %s authors listed and unique authors number %s" % (len(af_all), len(af_set))
-
-# <codecell>
-
 af_counts = {de:af_all.count(de) for de in af_set}
-
-# <codecell>
-
 af_counts_sorted = sorted(af_counts.iteritems(), key = operator.itemgetter(1), reverse=True)
 af_counts_sorted[0:50]
 
 # these still need cleaning -- can see some duplicates
-
-# <codecell>
-
 #To check out some of these
 
 sq =gs.ScholarQuerier(author = 'Ross D King', count=50)
@@ -191,14 +227,10 @@ print({a['title']:a['num_citations'] for a in sq.articles})
 # <codecell>
 
 # topics seem to be in the DE field
-df['topics'] = df.DE.dropna().str.lower().str.strip()
-df.topics = df.topics.str.replace('s;', ';')
-df.topics = df.topics.str.replace('s$', '')
-df.topics = df.topics.str.replace('svm', 'support vector machine')
-df.topics = df.topics.str.split('; ')
+
 
 de_all = [d for de in df.topics.dropna() for d in de]
-# need to clean out plurals
+
 de_set = set(de_all)
 print "All topics has %s and unique topics number %s" % (len(de_all), len(de_set))
 
@@ -206,12 +238,207 @@ print "All topics has %s and unique topics number %s" % (len(de_all), len(de_set
 
 de_counts = {de:de_all.count(de) for de in de_set}
 
+# <markdowncell>
+
+# The problem is that the topics mix techniques and application: principal component analysis stands alongside face recognition. So we need to sort those out first.
+# I've only considered a manual way to do this. 
+
 # <codecell>
 
 # to see how topics are distributed
 
 de_counts_sorted = sorted(de_counts.iteritems(), key = operator.itemgetter(1), reverse=True)
 de_counts_sorted[0:50]
+
+# <markdowncell>
+
+# The most frequent ones are techniques, but there are also lots of applications here - text classification, computer vision, intrusion detection, etc. To sort out the techniques, I classified by the hand the top 1000
+
+# <codecell>
+
+techniques_domains = pickle.load(open('technique_classification.pyd', 'r'))
+
+# <codecell>
+
+tech_s = sorted([tech for tech, cl in techniques_domains.iteritems() if cl == 'y'])
+
+print(len(tech_s))
+tech_cleaned = [re.sub('\(.+\)', '',t) for t in tech_s]
+print(len(set(tech_cleaned)))
+tech_cleaned[:30]
+#tech_cleaned.count('decision tree')
+
+# <markdowncell>
+
+# # A network of techniques
+# 
+# The idea here is to see how techniques are connected to each other. There are roughly 500 techniques across 23000 references. Some of these references have multiple techniques
+
+# <codecell>
+
+# classify references by techniques
+tech_gr = nx.DiGraph()
+
+#construct technique edge list 
+
+# find techniques in a reference and add co-present techniques
+# as edges to graph
+
+tech_cleaned.append('nn classifier')
+for topics in df.topics.dropna():
+    techs = [t for t in topics if tech_cleaned.count(t) > 0]
+    edges = [c for c in itertools.combinations(techs,2)]
+    for subject_id, object_id in edges:
+        if tech_gr.has_edge(subject_id, object_id):
+            tech_gr[subject_id][object_id]['weight'] += 1
+        else:
+            tech_gr.add_edge(subject_id, object_id, weight=1)
+
+tech_gr.size()    
+
+# <codecell>
+
+tech_core = ml.trim_degrees(tech_gr,13 )
+tech_core= trim_edges(tech_core, 10)
+print tech_core.size()
+
+nx.draw_spring(tech_core, width = 0.2,alph=0.5, figsize=(10,10))
+
+# <codecell>
+
+tech_degree_c = nx.degree_centrality(tech_core)
+tech_degree_cs = sorted_map(tech_degree_c)
+tech_degree_cs[:10]
+
+# <codecell>
+
+tech_closeness_c = nx.closeness_centrality(tech_core)
+tech_closeness_cs = sorted_map(tech_closeness_c)
+tech_closeness_cs[:10]
+
+# <codecell>
+
+tech_between_c = nx.betweenness_centrality(tech_core)
+tech_between_cs = sorted_map(tech_between_c)
+tech_between_cs[:10]
+
+# <codecell>
+
+tech_eigen_c = nx.eigenvector_centrality(tech_core)
+tech_eigen_cs = sorted_map(tech_eigen_c)
+tech_eigen_cs[:10]
+
+# <codecell>
+
+tech_pr = nx.pagerank(tech_core)
+tech_pr_s = sorted_map(tech_pr)
+
+# <codecell>
+
+n1 = {x[0] for x in tech_degree_cs[:10]}
+n2 = {x[0] for x in tech_closeness_cs[:10]}
+n3 = {x[0] for x in tech_between_cs[:10]}
+n4 = {x[0] for x in tech_eigen_cs[:10]}
+n5 = {x[0] for x in tech_pr_s[:10]}
+names = n1 | n2 | n3 | n4 | n5
+table =[[name, tech_degree_c[name], tech_closeness_c[name], tech_between_c[name], tech_eigen_c[name], tech_pr[name]] for name in names]
+tech_group = pd.DataFrame(data = table, columns = ['technique','degree', 'closeness', 'betweenness', 'eigenvector', 'pagerank'])
+tech_group = tech_group.set_index('technique')
+tech_group
+
+# <codecell>
+
+tech_group[['degree', 'betweenness', 'closeness', 'eigenvector', 'pagerank']].plot(kind='barh',figsize=(10,10))
+
+# <markdowncell>
+
+# The highest degree centralities are machine learning, classification, support vector machine and data-mining. There is a bit of mixture here - machine learning or data mining are whole areas of technique, whereas support bector machine or neural network are particular techniques. If these were taken out, the network starts to look at bit different. Also some techniques are almost synonous -- feature selection and feature extraction are almost the same thing. If they were added together, their closeness centrality would be greater than many of the others. 
+# 
+# It is really striking how important support vector machines, as well as neural networks and decision trees. They figure heavily.
+# 
+# Classification is really important -- it is second to machine learning on most measures of centrality. 
+# 
+# In terms of boundary spanning, it seems that feature extraction, feature selection suddenly figure more in the eigenvector measure -- does that mean that they are linking different subgraphs more?
+# 
+# ### TODO: redo these measures of centrality with machine learning, data mining and artificial intelligence taken out. 
+
+# <markdowncell>
+
+# ## Cliques and clusters in the techniques
+# 
+
+# <codecell>
+
+print(len(tech_gr))
+len(nx.connected_component_subgraphs(tech_gr.to_undirected()))
+
+# <markdowncell>
+
+# As it looks from above, this is one hairball of a graph of techniques
+
+# <codecell>
+
+svm = nx.ego_graph(tech_gr.to_undirected(), 'support vector machine', radius=2)
+nx.average_clustering(svm)
+
+# <codecell>
+
+neural = nx.ego_graph(tech_gr.to_undirected(), 'neural network', radius=2)
+print(len(neural))
+nx.average_clustering(neural)
+
+# <markdowncell>
+
+# ### Trim the edges based on weights
+
+# <codecell>
+
+def trim_edges(g, weight=1):
+    g2 = nx.Graph()
+    [g2.add_edge(f,to, edata) for f, to, edata in g.edges(data=True) if edata['weight']>weight]
+    return g2
+
+def island_method(g, iterations=5):
+    weights = [edata['weight'] for f, to, edata in g.edges(data=True)]
+    mn = int(min(weights))
+    mx = int(max(weights))
+    step = int((mx-mn)/iterations)
+    return [[threshold, trim_edges(g, threshold)] for threshold in range(mn,mx,step)]
+
+# <codecell>
+
+islands = island_method(tech_gr)
+len(islands)
+for i in islands:
+    print i[0], len(i[1]), len(nx.connected_component_subgraphs(i[1]))
+
+# <codecell>
+
+nx.draw_spring(islands[1][1], alpha=0.7)
+
+# <markdowncell>
+
+# This is produced used the island method of splitting giant components in to smaller areas of stronger relationality. In this case, there are only two connected subgraphs, so it is not possible to raise the water level much. 
+# 
+# No real surprises here, but it is interesting that pattern recognition survives alongside classification and feature selection. As usual, the only 2 techniques are neural network and support vector machine. It would be interesting perhaps to see what happens if take the fields such as data mining and artificial intelligence out. 
+
+# <codecell>
+
+len(nx.connected_component_subgraphs(tech_gr.to_undirected()))
+
+# <codecell>
+
+tech_trimmed = trim_edges(tech_gr,1)
+len(tech_trimmed)
+gs=nx.connected_component_subgraphs(tech_trimmed)
+gs[0].size()
+tech_gr.size()
+sorted(tech_gr.edges(data=True))
+
+# <codecell>
+
+classi =nx.ego_graph(tech_trimmed, 'classification')
+classi.size()
 
 # <markdowncell>
 
@@ -236,20 +463,20 @@ ftdf.head()
 
 # <codecell>
 
-gr = nx.Graph()
-gr.add_nodes_from(de_set)
-gr.number_of_nodes()
+gr = nx.DiGraph()
+
 #[i for i in itertools.combinations(de, 2) for de in df.topics[:100]]
 gr.add_edges_from([i for de in df.topics.dropna()[0:200] for i in itertools.combinations(de,2)])
 
 # <codecell>
 
-gr2 = nx.Graph()
-[gr2.add_edge(f[0],t[0]) for f,t in zip(ftdf.fields, ftdf.topics)]
+gr2 = nx.DiGraph()
+[gr2.add_edge(f[0],t[0]) for f,t in zip(ftdf.fields, ftdf.topics) if f is not NaN and t is not NaN]
+gr2.size()
 
 # <codecell>
 
-gr.number_of_edges()
+print('topics network has %s edges and %s nodes'%(gr.number_of_edges(), gr.number_of_nodes()))
 nx.average_degree_connectivity(gr)
 #nx.draw_networkx(gr)
 
@@ -265,11 +492,7 @@ deg=nx.degree(gr)
 
 deg['support vector machine']
 deg_sorted = sorted(deg.iteritems(), key=lambda(k,v):(-v,k))
-deg.values()[:50]
-
-# <codecell>
-
-deg_sorted[0:10]
+deg_sorted[:50]
 
 # <codecell>
 
@@ -284,14 +507,15 @@ g2 = gr.copy()
 d = nx.degree(g2)
 remove = 10
 [g2.remove_node(n) for n in g2.nodes() if d[n] <= remove]
-g2.size()
+print g2.size()
+
+nsizes = [n*10 for n in d.values() if n >remove]
 
 # <codecell>
 
-figure(figsize=(10,10))
+f = plt.figure(figsize=(10,10))
 
-nx.draw_networkx(g2, alpha=0.8)
-nx.
+nx.draw_networkx(g2, alpha=0.6, node_sizes = nsizes)
 
 # <markdowncell>
 
@@ -309,8 +533,7 @@ tx = ml.discipline_techniques_graph(df)
 
 tx.size()
 disciplines = df.SC_l.unique()
-techniques = {det  for de in df.DE_l if de is not nan for det in de}
-print ('
+techniques = {det  for de in df.topics if de is not nan for det in de}
 
 # <codecell>
 
@@ -318,7 +541,15 @@ df.SC_l
 
 # <codecell>
 
-disc = bi.projected_graph(tx, disciplines)
+len(techniques)
+
+# <codecell>
+
+disc = bi.projected_graph(tx, g2.nodes())
+
+# <codecell>
+
+sorted(disc.degree().iteritems(), key= operator.itemgetter(1),reversed= True)
 
 # <markdowncell>
 
