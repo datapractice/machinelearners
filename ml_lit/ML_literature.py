@@ -264,8 +264,14 @@ tech_s = sorted([tech for tech, cl in techniques_domains.iteritems() if cl == 'y
 
 print(len(tech_s))
 tech_cleaned = [re.sub('\(.+\)', '',t) for t in tech_s]
-print(len(set(tech_cleaned)))
+
 tech_cleaned[:30]
+tech_cleaned.remove('artificial intelligence')
+tech_cleaned.remove('machine learning')
+tech_cleaned.remove('data mining')
+tech_cleaned.remove('pattern recognition')
+
+print(len(set(tech_cleaned)))
 #tech_cleaned.count('decision tree')
 
 # <markdowncell>
@@ -299,10 +305,10 @@ tech_gr.size()
 # <codecell>
 
 tech_core = ml.trim_degrees(tech_gr,13 )
-tech_core= trim_edges(tech_core, 10)
+tech_core= ml.trim_edges(tech_core, 10)
 print tech_core.size()
 
-nx.draw_spring(tech_core, width = 0.2,alph=0.5, figsize=(10,10))
+nx.draw_spring(tech_core, k=0.4,width = 0.2,alph=0.5, figsize=(10,10))
 
 # <codecell>
 
@@ -360,7 +366,7 @@ tech_group[['degree', 'betweenness', 'closeness', 'eigenvector', 'pagerank']].pl
 # 
 # In terms of boundary spanning, it seems that feature extraction, feature selection suddenly figure more in the eigenvector measure -- does that mean that they are linking different subgraphs more?
 # 
-# ### TODO: redo these measures of centrality with machine learning, data mining and artificial intelligence taken out. 
+#  
 
 # <markdowncell>
 
@@ -414,7 +420,12 @@ for i in islands:
 
 # <codecell>
 
-nx.draw_spring(islands[1][1], alpha=0.7)
+l = nx.fruchterman_reingold_layout(islands[1][1], k=0.4)
+nx.draw_spring(islands[1][1], layout = l, alpha=0.7)
+
+# <codecell>
+
+nx.draw_spring(islands[2][1], k=0.3,alpha=0.7)
 
 # <markdowncell>
 
@@ -437,8 +448,13 @@ sorted(tech_gr.edges(data=True))
 
 # <codecell>
 
-classi =nx.ego_graph(tech_trimmed, 'classification')
+classi =nx.ego_graph(tech_trimmed, 'logistic regression')
 classi.size()
+
+# <codecell>
+
+layout = nx.fruchterman_reingold_layout(classi, k=0.5, weight= 'weight')
+nx.draw(classi, layout, figsize(10,10))
 
 # <markdowncell>
 
@@ -515,7 +531,7 @@ nsizes = [n*10 for n in d.values() if n >remove]
 
 f = plt.figure(figsize=(10,10))
 
-nx.draw_networkx(g2, alpha=0.6, node_sizes = nsizes)
+nx.draw_spring(g2, alpha=0.6, k=0.6,node_sizes = nsizes)
 
 # <markdowncell>
 
@@ -569,7 +585,7 @@ sorted(disc.degree().iteritems(), key= operator.itemgetter(1),reversed= True)
 
 # <codecell>
 
-## generate searches that can be run back against WoS
+## generate searches that can be run back against WoS - it says it will take up to 5000 terms!
 
 '"'+'" or "'.join([de for de,val in de_counts_sorted if val > 90 and val < 200]) + '"'
 
