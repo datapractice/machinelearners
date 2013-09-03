@@ -122,7 +122,7 @@ def proximity_score(cow_df,key1, key2, de_counts, article_count):
 	c_ij = cow_df[key1][key2]
 	p_ij = c_ij/(de_counts[key1] * de_counts[key2]) * article_count
 	return p_ij
-
+2
 def equivalence_score(cow_df, key1, key2, de_counts):
 	""" Calculates  the equivalence score (mutual inclusion) of key1
 	given the presence of key2 (or vice versa)"""	
@@ -130,6 +130,29 @@ def equivalence_score(cow_df, key1, key2, de_counts):
 	c_ij = cow_df[key1][key2]
 	E_ij  = c_ij**2/(de_counts[key1] * de_counts[key2])
 	return E_ij
+
+def equivalence_matrix(cow_df, de_counts):
+	""" Constructs the equivalence matrix for all combinations of key words; 
+	This is following (Callon, 1991).
+
+	Parameters
+	---------------------------------------------------------------- 
+	cow_df: the matrix of co-word counts
+	de_counts: the list of keyword counts
+	"""
+
+	keys = cow_df.columns.tolist()
+	key_combinations = [(k1,k2) for k1 in cow_df.columns for k2 in cow_df.index if k1 != k2]
+	ecow = np.zeros(cow_df.shape)
+	for kc in key_combinations:
+		key1, key2 = kc
+		i1 = keys.index(key1)
+		i2 = keys.index(key2)
+		sc = equivalence_score(cow_df, key1, key2, de_counts)
+		ecow[i1,i2] = sc
+
+	eqcow_df = pd.DataFrame(ecow, columns=cow_df.columns, index = cow_df.index)
+	return eqcow_df
 
 def discipline_techniques_graph(df):
 
