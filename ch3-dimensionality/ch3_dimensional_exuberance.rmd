@@ -1,0 +1,30 @@
+# Dimensional exuberance
+
+## main arguments
+
+- is there any possibility of an affirmative relationship to machine learning?
+
+## to put in
+
+- curse of dimensionality -- discussion from LSE paper, and from Warwick paper
+- the local vs global structure discussion - Hastie 19-20 onwards
+- generative vs disciminative models
+
+## quotes to use
+
+Perhaps our knowledge is distorted unless we can comprehend its essential connection with happenings which involve spatial relationships of fifteen dimensions. W, MoT, 78
+
+Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195
+
+To repeat the precarious political pragmatic hope I presented, it is only if we become able, as philosophers, to put scientific achievements on the same plane of immanence together with other diverging conventions, each with its demanding definition of what matters, that we can stop poisoning this hope, that we can share, instead, the pragmatic concern for the itinerant process of creation of new ‘‘it works’’ as they mark the process of empowerment of new minorities, with new actively diverging ‘‘habits’’ that must be celebrated each time as something new entering the world and indeed as modifying it. Stengers, 2005, 162
+
+## main examples
+
+support vector machine -- the Russian connection; the text classification projects
+
+neural  network -- the McCulloch-Pitts connection -- heather what's her name on cat recognition; -- the autonomous vehicles; 
+
+## materials to draw on 
+-- Ng's lectures  -- go through notes on this
+-- Vapknik
+-- the trajectories of neural networks and support vector machines in the literature

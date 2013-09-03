@@ -75,6 +75,62 @@ def manual_topic_classifier(df, existing_topic_classes, topic_counts_sorted, sta
 	return existing_topic_classes
 
 
+def coword_matrix(df, keys):
+
+	""" Implementation of Callon style co-word analysis of  the 
+	Wos DE field -- the keywords field in the database
+	
+	Parameters
+	------------------------------------------------
+	df: the WoS literature DataFrame
+	keys: keywords to use
+	"""
+
+	topics = df.topics
+	
+
+
+	# create document term matrix of keywords
+	topics = topics.dropna()
+	cow = np.zeros((len(topics), len(keys)))
+
+	# hate doing these nested for loops but I couldn't get the list comprehensions working properly
+	for row in range(0,len(topics)):
+		top = topics.iget(row)
+		hits = list()
+		for t in top:
+			if keys.count(t) >0:
+				hits.append(keys.index(t))
+		cow[row, hits] = 1
+	#to create coword matrix
+	cow_m = np.dot(np.transpose(cow), cow)
+	cow_df = pd.DataFrame(cow_m, columns=keys, index=keys)
+	return cow_df
+
+def inclusion_score(cow_df, key1, key2, de_counts):
+	""" Calculates  the inclusion score (conditional probability?) of key1
+	given the presence of key2 (or vice versa)"""
+
+	c_ij = cow_df[key1][key2]
+	I_ij = c_ij/min(de_counts[key1], de_counts[key2])
+	return I_ij
+
+def proximity_score(cow_df,key1, key2, de_counts, article_count):
+	""" Calculates  the equivalence score (mutual inclusion) of key1
+	given the presence of key2 (or vice versa)"""
+
+	c_ij = cow_df[key1][key2]
+	p_ij = c_ij/(de_counts[key1] * de_counts[key2]) * article_count
+	return p_ij
+
+def equivalence_score(cow_df, key1, key2, de_counts):
+	""" Calculates  the equivalence score (mutual inclusion) of key1
+	given the presence of key2 (or vice versa)"""	
+
+	c_ij = cow_df[key1][key2]
+	E_ij  = c_ij**2/(de_counts[key1] * de_counts[key2])
+	return E_ij
+
 def discipline_techniques_graph(df):
 
 	""" Constructs a bipartite graph from techniques to discipline_techniques_graph.

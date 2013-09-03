@@ -8,8 +8,6 @@
 
 # <codecell>
 
-
-
 import ml_lit_anal as ml
 import re
 import nltk
@@ -30,7 +28,7 @@ import numpy as np
 # 
 # The idea of this analysis is to show how machine learning relates to various scientific and technical fields. In its treatment of the literature, it draws both on citation analysis techniques developed  in various fields, as well as text mining, social netowrk analysis and indeed machine learning itself to explore this rather large literature. 
 # 
-# Loading the literature and cleaning the topics
+# ### Loading the literature and cleaning the topics
 
 # <codecell>
 
@@ -44,6 +42,14 @@ df = ml.clean_topics(df)
 
 print('%s topic fields are null'%sum(df.topics.isnull()))
 print('%s abstract fields are null'%sum(df.AB.isnull()))
+
+# <markdowncell>
+
+# The publication years profile is typical:
+
+# <codecell>
+
+df.PY.hist(bins=len(df.PY.unique()))
 
 # <markdowncell>
 
