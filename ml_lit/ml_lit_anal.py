@@ -52,6 +52,15 @@ def clean_topics(df):
 	df.topics = df.topics.str.split('; ')
 	return df
 
+def keyword_counts(df):
+
+	""" Returns a dictionary with keyword counts"""
+	
+	de_all = [d for de in df.topics.dropna() for d in de]
+	de_set = set(de_all)
+	de_counts = {de:de_all.count(de) for de in de_set}
+	return de_counts
+
 
 def manual_topic_classifier(df, existing_topic_classes, topic_counts_sorted, start = 0, count=100, ):
 	

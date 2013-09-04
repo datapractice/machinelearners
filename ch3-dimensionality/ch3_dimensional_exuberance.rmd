@@ -3,16 +3,30 @@
 ## main arguments
 
 - is there any possibility of an affirmative relationship to machine learning?
+- critical argument: incredibly rigid approach in some ways to flux and change; what do we do with that rigidity?
 
 ## to put in
-
-- curse of dimensionality -- discussion from LSE paper, and from Warwick paper
+- recap on functions, gradient descent, optimization and regression
+- curse of dimensionality -- discussion from LSE paper, and from Warwick paper;
+- extrinsic vs intrinsic structure: link to Whitehead can also use the shapeofdata stuff;
 - the local vs global structure discussion - Hastie 19-20 onwards
 - generative vs disciminative models
 
+## to do 
+- implement a neural network by going through Ng lectures or Hinton
+- implement a svm - using Ng?
+
 ## quotes to use
 
+The process that I am currently engaged in and seeking to name  ... concerns the emergence of form as a process, includes in an essential manner claims to say or see something true. The process that concerns me is the one in which such "knowledge-things" are being assembled 85 Rabinow
+
+it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. Rabinow, 87
+
 Perhaps our knowledge is distorted unless we can comprehend its essential connection with happenings which involve spatial relationships of fifteen dimensions. W, MoT, 78
+
+notion of pattern involves the concept of different modes of togetherness MoT, 195-6
+
+new function estimation methods have been created where a high dimensionality of the unknown function does not always require a large number of observations in order to obtain a good estimate. The new methods control generalization using capacity factors that do not necessarily depend on the dimensionality of the space vii Vapnik
 
 Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195
 
@@ -28,3 +42,6 @@ neural  network -- the McCulloch-Pitts connection -- heather what's her name on 
 -- Ng's lectures  -- go through notes on this
 -- Vapknik
 -- the trajectories of neural networks and support vector machines in the literature
+
+```{r test, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
+```

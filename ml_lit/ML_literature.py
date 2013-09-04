@@ -4,7 +4,7 @@
 # <codecell>
 
 %load_ext autoreload
-%autoreload 
+%autoreload 2
 
 # <codecell>
 
@@ -576,18 +576,6 @@ sorted(disc.degree().iteritems(), key= operator.itemgetter(1),reversed= True)
 # <markdowncell>
 
 # ## Retrieving further literature if needed from WoS
-
-# <codecell>
-
-
-# <codecell>
-
-
-# <codecell>
-
-
-# <codecell>
-
 
 # <codecell>
 
