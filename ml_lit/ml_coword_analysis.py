@@ -210,8 +210,13 @@ nx.draw(pre_95_nx_trim,  alpha=0.5, node_size=50, with_labels=True, labels= labe
 
 # The presence of these particular algorithms -- neural networks, decision tree and id3 would be worth tracking more over time. These techniques might need to be treat in their own right. 
 
+# <markdowncell>
+
+# ## Digression: Decision tree analysis over time -- TBC
+
 # <codecell>
 
+##beginning of decision tree analysis
 [top for top in df.topics.dropna()[0:100] if top.count('decision tree')>0]
 
 # <codecell>
@@ -276,17 +281,37 @@ nx.draw_networkx_edges(G,pos,edgelist=elarge, width=2)
 # labels
 l = nx.draw_networkx_labels(G,pos,font_size=9,font_family='sans-serif')
 
-# <codecell>
-
-eqcow_df2 = ml.equivalence_matrix(cow_df2, keys_90_95)
-eq23 = eqcow_df2.unstack().copy()
-eq23.sort(ascending=False)
-eq23[:100:2]
-
 # <markdowncell>
 
 # TBC: look at the development of keywords over later years
 
+# <markdowncell>
+
+# ## 1995- 2000 keywords
+
 # <codecell>
 
+df_pre3 = df[(df.PY > 1995) & (df.PY <= 2000)]
+keys_pre_2000 = ml.keyword_counts(df_pre3)
+print('There are %s keywords in the 1995-2000 literature' % len(keys_pre_2000))
+
+# <codecell>
+
+cow_df3 = ml.coword_matrix(df_pre2,keys_pre_2000.keys())
+
+# <codecell>
+
+arry = cow_df3.as_matrix()
+np.fill_diagonal(arry, 0)
+pre_2000_nx = nx.from_numpy_matrix(arry)
+cols = cow_df3.columns.tolist()
+
+# <codecell>
+
+nx.draw(pre_2000_nx)
+
+# <codecell>
+
+pre_2000_nx_trim = ml.trim_degrees(pre_2000_nx, 1)
+len(pre_2000_nx_trim.nodes())
 
