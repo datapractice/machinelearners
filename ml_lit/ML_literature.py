@@ -53,7 +53,7 @@ df.PY.hist(bins=len(df.PY.unique()))
 
 # <markdowncell>
 
-# It should be possible to fill in some of the missing topic fields by using keywords from the abstracts. I'll attempt this a bit later. 
+# There are a lot of missing keywords (the WoS DE field). It should be possible to fill in some of the missing topic fields by using keywords from the abstracts. I'll attempt this a bit later. 
 
 # <markdowncell>
 

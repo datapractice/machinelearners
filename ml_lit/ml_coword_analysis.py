@@ -22,6 +22,10 @@ import numpy as np
 
 # <codecell>
 
+def sorted_map(map): return sorted(map.iteritems(), key=lambda (k,v): (-v,k))
+
+# <codecell>
+
 df = ml.load_records('data/')
 print('There are %s records in the dataset'%df.shape[0])
 
@@ -88,7 +92,7 @@ eqnx = nx.from_numpy_matrix(eqcow_df.as_matrix())
 # <codecell>
 
 eqnx.number_of_nodes()
-nx.draw_spring(eqnx)
+nx.draw_spring(eqnx, node_size=30)
 
 # <markdowncell>
 
@@ -100,24 +104,49 @@ nx.draw_spring(eqnx)
 # <codecell>
 
 df_pre = df[df.PY <=1990]
+
 print('There are %s papers by the end of 1990'%df_pre.shape[0])
-
-# <codecell>
-
-
-ml.keyword_counts(df_pre)
 
 # <markdowncell>
 
-# The problem is that most of the literature before 1990 have no keywords. They were not keyworded by anyone. 
+# There are very few abstracts in this collection, and as we will see, not too many keywords. So might need to use titles 
+
+# <codecell>
+
+df.TI.drop_duplicates()
+
+# <codecell>
+
+pre_90_keys = ml.keyword_counts(df_pre)
+pre_90_keys
+
+# <markdowncell>
+
+# The problem is that most of the literature before 1990 have no keywords. They were not keyworded by anyone. But for those that are:
 
 # <codecell>
 
 print('The number of pre-1990 references that have keyword: %s'%df_pre.topics.count())
+cow_df1 = ml.coword_matrix(df_pre, pre_90_keys.keys())
+cow_df1.head()
+pre_90_nx = nx.from_numpy_matrix(cow_df1.as_matrix())
+cols = cow_df1.columns.tolist()
+
+labels = {cols.index(l):l for l in cols}
+pos = nx.spring_layout(pre_90_nx)
+fig = matplotlib.pyplot.gcf()
+fig.set_size_inches(12.5,12.5)
+fig.set_label('Pre-1990 keywords and their relations')
+
+nx.draw(pre_90_nx, pos=pos, alpha=0.5, node_size=50, with_labels=True, labels=labels)
+#nx.draw_networkx_labels(pre_90_nx, pos=pos,labels = labels, font_size=9)
 
 # <markdowncell>
 
-# How do things go after 1990?
+# What is slightly interesting here are the two different networks around learning and machine learning. But this is all based on a handful of references, so there is little point going further with it. 
+# 
+# # How do things go after 1990? The 1990- 1995 analysis
+# 
 
 # <codecell>
 
@@ -131,7 +160,121 @@ cow_df2 = ml.coword_matrix(df_pre2,keys_90_95.keys())
 
 # <codecell>
 
-cow_df2.ix[1]
+arry = cow_df2.as_matrix()
+np.fill_diagonal(arry, 0)
+pre_95_nx = nx.from_numpy_matrix(arry)
+cols = cow_df2.columns.tolist()
+
+# <codecell>
+
+labels = {cols.index(l):l for l in cols}
+pos = nx.spring_layout(pre_95_nx)
+fig = matplotlib.pyplot.gcf()
+fig.set_size_inches(10.5,10.5)
+fig.set_label('Pre-1995 keywords and their relations')
+
+nx.draw(pre_95_nx, pos=pos, alpha=0.5, node_size=50, with_labels=False, labels=labels)
+
+# <markdowncell>
+
+# This is a much more complicated structure. This couple of dozen keywords have morphed into hundres and there is some degree of structure here. 
+
+# <codecell>
+
+degree_c = nx.degree_centrality(pre_95_nx)
+degree_cs = sorted_map(degree_c)
+degree_cs
+
+# <codecell>
+
+pre_95_nx_trim = ml.trim_degrees(pre_95_nx, 12)
+len(pre_95_nx_trim.nodes())
+
+# <codecell>
+
+labels_trimmed = {n:labels[n] for n in pre_95_nx_trim.nodes()}
+len(labels_trimmed)
+
+# <codecell>
+
+fig = matplotlib.pyplot.gcf()
+fig.set_size_inches(12.5,12.5)
+nx.draw(pre_95_nx_trim,  alpha=0.5, node_size=50, with_labels=True, labels= labels_trimmed)
+
+# <markdowncell>
+
+# Not entirely clear what is happening here, a couple of things stand out. There are all the database-mining, bridge design(!), knowledge-discovery, image-processing, fault diagnosis, information retrieval, as well as quite a lot on the epistemology of learning -- inductive inference, learning from examples, etc. Pattern recognition and decision support are quite important. 
+# In terms of particular techniques, neural networks, decision trees and interestingly id3 (need to check that one out).  As well as some that would seem odd now -- genetic algorithms, self-organization and fuzzy sets. 
+
+# <markdowncell>
+
+# The presence of these particular algorithms -- neural networks, decision tree and id3 would be worth tracking more over time. These techniques might need to be treat in their own right. 
+
+# <codecell>
+
+[top for top in df.topics.dropna()[0:100] if top.count('decision tree')>0]
+
+# <codecell>
+
+print(cow_df2.ix[1:4,1:4])
+c2 = cow_df2.unstack().copy()
+c2.describe()
+c2[c2>1].hist(bins=200)
+
+# <codecell>
+
+c2.index[1]
+G = nx.Graph()
+c2.index[0]
+[G.add_edge(st[0], st[1], weight =w)  for (st, w) in zip(c2.index, c2)]
+
+# <codecell>
+
+fig = matplotlib.pyplot.gcf()
+fig.set_size_inches(12.5,12.5)
+
+elarge=[(u,v) for (u,v,d) in G.edges(data=True) if d['weight'] >=2]
+esmall=[(u,v) for (u,v,d) in G.edges(data=True) if d['weight'] <=1]
+
+pos=nx.spring_layout(G) # positions for all nodes
+
+
+# nodes
+nx.draw_networkx_nodes(G,pos,node_size=70)
+
+# edges
+nx.draw_networkx_edges(G,pos,edgelist=elarge, width=6)
+#nx.draw_networkx_edges(G,pos,edgelist=esmall,width=6,alpha=0.5,edge_color='b',style='dashed')
+
+# labels
+l = nx.draw_networkx_labels(G,pos,font_size=9,font_family='sans-serif')
+
+# <codecell>
+
+#construct node list for all edges with weight greater than 1
+nodel =[[e[0], e[1]] for e in G.edges_iter(data=True) if e[2]['weight'] >2 ]
+nodes = list({v for i in nodel for v in i})
+
+# <codecell>
+
+fig = matplotlib.pyplot.gcf()
+fig.set_size_inches(12.5,12.5)
+
+elarge=[(u,v) for (u,v,d) in G.edges(data=True) if d['weight'] >=2]
+#esmall=[(u,v) for (u,v,d) in G.edges(data=True) if d['weight'] <=1]
+
+pos=nx.spring_layout(G) # positions for all nodes
+
+
+# nodes
+nx.draw_networkx_nodes(G,pos,node_size=70, nodelist=nodes)
+
+# edges
+nx.draw_networkx_edges(G,pos,edgelist=elarge, width=2)
+#nx.draw_networkx_edges(G,pos,edgelist=esmall,width=6,alpha=0.5,edge_color='b',style='dashed')
+
+# labels
+l = nx.draw_networkx_labels(G,pos,font_size=9,font_family='sans-serif')
 
 # <codecell>
 

@@ -48,6 +48,7 @@ def clean_topics(df):
 	# df.topics = df.topics.str.replace('s$', '')
 	df.topics = df.topics.str.replace('svm', 'support vector machine')
 	df.topics = df.topics.str.replace('artificial neural network', 'neural network')
+	df.topics = df.topics.str.replace('neural networks', 'neural network')
 
 	df.topics = df.topics.str.split('; ')
 	return df
