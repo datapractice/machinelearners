@@ -212,12 +212,23 @@ nx.draw(pre_95_nx_trim,  alpha=0.5, node_size=50, with_labels=True, labels= labe
 
 # <markdowncell>
 
-# ## Digression: Decision tree analysis over time -- TBC
+# ## Digression: Support Vector Machine over time
 
 # <codecell>
 
-##beginning of decision tree analysis
-[top for top in df.topics.dropna()[0:100] if top.count('decision tree')>0]
+##beginning of svm
+
+svm_df = ml.keyword_years(df, 'support vector machine')
+svm_df.PY.hist(bins=15)
+
+# <codecell>
+
+nn_df = ml.keyword_years(df, 'neural network')
+nn_df.PY.hist(bins=23)
+
+# <markdowncell>
+
+# # Can't remember what this section was meant to do ... 
 
 # <codecell>
 

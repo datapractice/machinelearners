@@ -4,11 +4,11 @@
 
 - is there any possibility of an affirmative relationship to machine learning?
 - critical argument: incredibly rigid approach in some ways to flux and change; what do we do with that rigidity?
+- extrinsic vs intrinsic structure: link to Whitehead can also use the shapeofdata stuff; -- key point -- how the vector space is reshaped; or not.
 
 ## to put in
-- recap on functions, gradient descent, optimization and regression
+- recap on functions, gradient descent, optimization and regression -- what do they do?
 - curse of dimensionality -- discussion from LSE paper, and from Warwick paper;
-- extrinsic vs intrinsic structure: link to Whitehead can also use the shapeofdata stuff;
 - the local vs global structure discussion - Hastie 19-20 onwards
 - generative vs disciminative models
 
