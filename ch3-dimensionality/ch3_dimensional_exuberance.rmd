@@ -1,22 +1,48 @@
-# Dimensional exuberance
+```{r echo=FALSE} 
+library(knitr)
+opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
+```
+
+# Dimensional exuberance and pattern recognition in movement
+
+## overview
+
+- recap of vector space, function and the sheer proliferation of algorithms
+- return to vector space as the guiding model -- both critical of this -- it linearises but is tricked out in various ways
+- pattern discovery -- pathetic or worthwhile?
 
 ## main arguments
 
-- is there any possibility of an affirmative relationship to machine learning?
-- critical argument: incredibly rigid approach in some ways to flux and change; what do we do with that rigidity?
-- extrinsic vs intrinsic structure: link to Whitehead can also use the shapeofdata stuff; -- key point -- how the vector space is reshaped; or not.
+- is there any possibility of an affirmative relationship to machine learning? Under what conditions? -- return to the ones I set out in ch1: Rabinow, Whitehead, Wilson, etc. Now want to ground those in some particular techniques that cut/include the world in different ways
+- so many techniques to choose from: can only choose something whose specificity itself configures the literature, the field of practice, the knowledge economy in its own ways. 
+	- choosing 3 techniques that include many other techniques in them somehow
+		- neural networks include many logistic regressions and perceptrons
+		- svms include many different dimensions -- basis functions + inner product (avoiding calculating too much)
+		- random forests include many decision trees
+	- see that including as countenancing alternatives -- and hence flashes of mentality into algorithms
+- That is, to take the SVM  or NN or the Decision Tree seriously is already to understand the world in a particular way; each of them are monadologically potent; they express a world. 
+- What we can do with this grip on the world? The idea of relaying it -- pursuing motion through experiments with forms of movement through scale and subjectivity
+	- implementation as experiment in forms of movement -- the inner product, 
+- How do they express/contain/grip the world?
+	- critical argument: incredibly rigid approach in some ways to flux and change; what do we do with that rigidity?
+	- extrinsic vs intrinsic structure: link to Whitehead can also use the shapeofdata stuff; -- key point -- how the vector space is reshaped; or not. Or the extraordinary efforts to get the vector space to accommodate differences
+	- classification as the key problem: linear separability vs non-linear separability; strict splits vs shades of difference
+	- making things linear in high dim: good or bad?  15 dim patterns 
+- 
 
 ## to put in
 - recap on functions, gradient descent, optimization and regression -- what do they do?
 - curse of dimensionality -- discussion from LSE paper, and from Warwick paper;
+- Warwick discussion on trees
 - the local vs global structure discussion - Hastie 19-20 onwards
 - generative vs disciminative models
+- situated all three algorithms by reference to adjacent work in humanities -- the trace/mark in deconstruction for handwriting recognition -- neural nets; the assemblage -- smooth space for svm; decision tree-random forest
 
 ## to do 
 - implement a neural network by going through Ng lectures or Hinton
 - implement a svm - using Ng?
 
-## quotes to use
+## quotes to use: theory
 
 The process that I am currently engaged in and seeking to name  ... concerns the emergence of form as a process, includes in an essential manner claims to say or see something true. The process that concerns me is the one in which such "knowledge-things" are being assembled 85 Rabinow
 
@@ -26,24 +52,70 @@ I advocate pursuing in our thought and writing something like the motion, throug
 
 Perhaps our knowledge is distorted unless we can comprehend its essential connection with happenings which involve spatial relationships of fifteen dimensions. W, MoT, 78
 
-notion of pattern involves the concept of different modes of togetherness MoT, 195-6
+The sharp-cut scientific classifications are essential for scientific method. But they are dangerous for philosophy. Such classification hides the truth that the different modes of natural existnece shade off into each other. W, MoT, 215
 
-new function estimation methods have been created where a high dimensionality of the unknown function does not always require a large number of observations in order to obtain a good estimate. The new methods control generalization using capacity factors that do not necessarily depend on the dimensionality of the space vii Vapnik
+
+notion of pattern involves the concept of different modes of togetherness MoT, 195-6
 
 Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195
 
+My unity -- which is Descartes' "I am" --is my process of shaping this welter of material into a consistent pattern of feelings.  W, MoT, 228
+
+new function estimation methods have been created where a high dimensionality of the unknown function does not always require a large number of observations in order to obtain a good estimate. The new methods control generalization using capacity factors that do not necessarily depend on the dimensionality of the space vii Vapnik
+
+The kernel trick is another commonly used technique to solve linearly inseparably problems. This issue is to define an appropriate kernel function based on the _inner product_ between the given data, as a nonlinear transformation of data from the input space to a feature space with higher (even infinite) dimension in order to make the problems linearly separable. The underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space. Wu, 42
+
+
 To repeat the precarious political pragmatic hope I presented, it is only if we become able, as philosophers, to put scientific achievements on the same plane of immanence together with other diverging conventions, each with its demanding definition of what matters, that we can stop poisoning this hope, that we can share, instead, the pragmatic concern for the itinerant process of creation of new ‘‘it works’’ as they mark the process of empowerment of new minorities, with new actively diverging ‘‘habits’’ that must be celebrated each time as something new entering the world and indeed as modifying it. Stengers, 2005, 162
 
-## main examples
+For forests
+
+Imagine you are walking through a forest of interarticulated branches. Some are covered with ice or snow, and the suns melts their touching tips to reveal space between. Some are so thickly brambled they seem solid; others are oddly angular in nature, like esplanaded trees.  Some of the trees are wild, some have been cultivated ... Helicopters flying overhead can quickly tell your many types of each, even each leaf, there are in the world, but they cannot yet give you a guidebook for bird-watching or forestry conservation. There is a lot of underbrush and a complex ecology of soil bacteria, flora and fauna.  ... Now imagine that the forest is a huge information space and each of the trees and bushes are classification systems.  ... Your job is to describe this forest. [@bowker_sorting_1999,31-32]
+
+
+## main examples/illustrations & materials to draw on 
 
 support vector machine -- the Russian connection; the text classification projects
 
-neural  network -- the McCulloch-Pitts connection -- heather what's her name on cat recognition; -- the autonomous vehicles; 
+neural  network -- the McCulloch-Pitts connection -- heather what's her name on cat recognition; -- the autonomous vehicles;  my camera and its face recognition; kittydar
 
-## materials to draw on 
+decision tree
+### finding patterns in iris: decision trees
+
+```{r iris_tree, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' } 
+
+    data(iris)
+
+
+    library(rpart)
+    rpart(Species ~ ., iris)
+    ir.rp =rpart(Species ~ ., iris)
+    ir.rp
+
+    par(mfrow = c(1,2), xpd=NA)
+    plot(ir.rp, main = 'tree recursive partitioning of iris')
+    text(ir.rp, cex=0.8, use.n=TRUE)
+    table(iris$Species) # is data.frame with 'Species' factor
+     iS <- iris$Species == "setosa"
+     iV <- iris$Species == "versicolor"
+     op <- par(bg = "bisque")
+     matplot(c(1, 8), c(0, 4.5), type =  "n", xlab = "Length", ylab = "Width",
+             main = "Petal and Sepal Dimensions in Iris Blossoms")
+     matpoints(iris[iS,c(1,3)], iris[iS,c(2,4)], pch = "sS", col = c(2,4))
+     matpoints(iris[iV,c(1,3)], iris[iV,c(2,4)], pch = "vV", col = c(2,4))
+     legend(1, 4, c("    Setosa Petals", "    Setosa Sepals",
+                    "Versicolor Petals", "Versicolor Sepals"),
+            pch = "sSvV", col = rep(c(2,4), 2))
+
+```
+"Of all the well-known learning methods, decision trees comes closest to meeting the requirements for serving as an off-the-shelf procedure for data-mining" [@hastie_elements_2009, 352]
+
+
+
 -- Ng's lectures  -- go through notes on this
 -- Vapknik
 -- the trajectories of neural networks and support vector machines in the literature
 
 ```{r test, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
+	r = runif(1000)
 ```

@@ -16,7 +16,8 @@ def load_records(data_dir):
 
     # I saved all the WoS full records for 'machine learning'
     files = os.listdir(data_dir)
-    wos_df  = pd.concat([pd.read_table(wos_df, sep='\t',index_col = False) for wos_df in [data_dir+f for f in files]])
+    wos_df  = pd.concat([pd.read_table(wos_df, sep='\t', index_col = False) 
+        for wos_df in [data_dir+f for f in files]])
     wos_df  =  wos_df.drop_duplicates()
 
     #fix index
@@ -24,7 +25,8 @@ def load_records(data_dir):
     wos_df.index = index
 
     #to get all cited refs
-    cited_refs = [set(re.split(pattern='; ', string=str(ref).lower().lstrip().rstrip())) for ref in wos_df.CR]
+    cited_refs = [set(re.split(pattern='; ', 
+        string=str(ref).lower().lstrip().rstrip())) for ref in wos_df.CR]
 
     # add as column to dataframe
     wos_df['cited_refs'] = cited_refs
@@ -45,9 +47,15 @@ def clean_topics(wos_df):
     wos_df['topics'] = wos_df.DE.dropna().str.lower().str.strip().str.replace('\(\\w+ \)', '').str.replace('($  )|(  )', ' ')
     # wos_df.topics = wos_df.topics.str.replace('s;', ';')
     # wos_df.topics = wos_df.topics.str.replace('s$', '')
-    wos_df.topics = wos_df.topics.str.replace('svm', 'support vector machine')
-    wos_df.topics = wos_df.topics.str.replace('artificial neural network', 'neural network')
-    wos_df.topics = wos_df.topics.str.replace('neural networks', 'neural network')
+    wos_df.topics  = wos_df.topics.str.replace('svm', 'support vector machine')
+    wos_df.topics  = wos_df.topics.str.replace('\(support vector machine\)', 
+        'support vector machine')
+    wos_df.topics  = wos_df.topics.str.replace('support vector machine(\w*)', 
+        'support vector machine')
+    wos_df.topics = wos_df.topics.str.replace('artificial neural network', 
+        'neural network')
+    wos_df.topics = wos_df.topics.str.replace('neural net\b', 
+        'neural network')
 
     wos_df.topics = wos_df.topics.str.split('; ')
     return wos_df
@@ -86,6 +94,15 @@ def manual_topic_classifier(wos_df, existing_topic_classes, topic_counts_sorted,
     return existing_topic_classes
 
 
+def coword_matrix_years(wos_df, start_year, end_year, keys):
+
+    """
+
+    """
+    wos_df_delim = wos_df[(wos_df.PY>= start_year) & (wos_df.PY <= end_year)]
+    coword_m = coword_matrix(wos_df_delim, keys)
+    return coword_m
+
 def coword_matrix(wos_df, keys):
 
     """ Implementation of Callon style co-word analysis of  the 
@@ -98,9 +115,6 @@ def coword_matrix(wos_df, keys):
     """
 
     topics = wos_df.topics
-    
-
-
     # create document term matrix of keywords
     topics = topics.dropna()
     cow = np.zeros((len(topics), len(keys)))
@@ -111,11 +125,12 @@ def coword_matrix(wos_df, keys):
     for row in range(0, len(topics)):
         top = topics.iget(row)
         hits = list()
-        for t in top:
-            if keys.count(t) >0:
-                hits.append(keys.index(t))
+        for topic in top:
+            if keys.count(topic) >0:
+                hits.append(keys.index(topic))
         cow[row, hits] = 1
-    #to create coword matrix
+    
+    #to create coword matrix, use matrix dot product
     cow_m = np.dot(np.transpose(cow), cow)
     cow_wos_df = pd.DataFrame(cow_m, columns=keys, index=keys)
     return cow_wos_df
@@ -194,8 +209,13 @@ def trim_degrees(graph, degree=1):
     [graph_trimmed.remove_node(n) for n in graph_trimmed.nodes() if degrees[n] <= degree]
     return graph_trimmed
 
-def sorted_map(map): 
-    map_sorted = sorted(map.iteritems(), key=lambda (k,v): (-v,k))
+def sorted_map(keyval): 
+
+    """ Takes a key-value dictionary and 
+    sorts it according to value counts
+    Returns a list of key-value tuples
+    """
+    map_sorted = sorted(keyval.iteritems(), key=lambda (k, v): (-v, k))
     return map_sorted
 
 def trim_edges(graph, weight=1):
@@ -218,7 +238,7 @@ def island_method(graph, iterations=5):
     mn = int(min(weights))
     mx = int(max(weights))
     step = int((mx-mn)/iterations)
-    return [[threshold, trim_edges(graph, threshold)] for threshold in range(mn,mx,step)]
+    return [[threshold, trim_edges(graph, threshold)] for threshold in range(mn, mx, step)]
 
 def keyword_years(wos_df, keyword):
 
@@ -233,5 +253,6 @@ def keyword_years(wos_df, keyword):
     """
     keyword = keyword + '(s)?'
     top_py_wos_df = wos_df[['topics', 'PY', 'DE']].dropna()
-    key_wos_df = top_py_wos_df[top_py_wos_df.DE.str.contains(keyword, case=False)]
+    key_wos_df = top_py_wos_df[top_py_wos_df.DE.str.contains(keyword, 
+        case=False)]
     return key_wos_df

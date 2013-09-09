@@ -1,0 +1,5 @@
+# Naive and informed chances
+
+## to put in
+
+- naive bayes, including the ipython notebook

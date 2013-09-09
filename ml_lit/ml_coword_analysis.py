@@ -157,9 +157,6 @@ print('There are %s keywords in the 1990-95 literature' % len(keys_90_95))
 # <codecell>
 
 cow_df2 = ml.coword_matrix(df_pre2,keys_90_95.keys())
-
-# <codecell>
-
 arry = cow_df2.as_matrix()
 np.fill_diagonal(arry, 0)
 pre_95_nx = nx.from_numpy_matrix(arry)
@@ -209,22 +206,6 @@ nx.draw(pre_95_nx_trim,  alpha=0.5, node_size=50, with_labels=True, labels= labe
 # <markdowncell>
 
 # The presence of these particular algorithms -- neural networks, decision tree and id3 would be worth tracking more over time. These techniques might need to be treat in their own right. 
-
-# <markdowncell>
-
-# ## Digression: Support Vector Machine over time
-
-# <codecell>
-
-##beginning of svm
-
-svm_df = ml.keyword_years(df, 'support vector machine')
-svm_df.PY.hist(bins=15)
-
-# <codecell>
-
-nn_df = ml.keyword_years(df, 'neural network')
-nn_df.PY.hist(bins=23)
 
 # <markdowncell>
 
@@ -325,4 +306,113 @@ nx.draw(pre_2000_nx)
 
 pre_2000_nx_trim = ml.trim_degrees(pre_2000_nx, 1)
 len(pre_2000_nx_trim.nodes())
+
+# <markdowncell>
+
+# ## Digression: Support Vector Machine & Neural Networks over time
+# 
+# I wanted to see how these two techniques have changed over time. 
+
+# <codecell>
+
+##beginning of svm
+
+nn_df = ml.keyword_years(df, 'neural network')
+nn_df.PY.hist(bins=23, alpha=0.5)
+svm_df = ml.keyword_years(df, 'support vector machine')
+svm_df.PY.hist(bins=15,alpha=0.7)
+dt_df = ml.keyword_years(df, 'decision tree')
+dt_df.PY.hist(bins=23)
+
+# <codecell>
+
+svm_df_full = df.ix[svm_df.index]
+print(svm_df_full.shape)
+svm_keys = ml.keyword_counts(svm_df_full)
+print('There are %d keywords associated with "support vector machine"' % len(svm_keys))
+
+# <codecell>
+
+svm_keys
+
+# <markdowncell>
+
+# This is pretty amazing -- only 14000 of the 23000 references have keywords, so if 1400 or so have svm as a keyword, then it is a heavily used technique. Also there are lots of keywords associated with svm. 
+
+# <markdowncell>
+
+# Compare with this with neural networks:
+
+# <codecell>
+
+nn_df_full = df.ix[nn_df.index]
+print(nn_df_full.shape)
+nn_keys = ml.keyword_counts(nn_df_full)
+print('There are %d keywords associated with "neural network"' % len(nn_keys))
+
+# <markdowncell>
+
+# I guess the picture is much the same. What about the 'decision tree?'
+
+# <codecell>
+
+dt_df_full = df.ix[dt_df.index]
+print(dt_df_full.shape)
+dt_keys = ml.keyword_counts(dt_df_full)
+print('There are %d keywords associated with "decision tree"' % len(dt_keys))
+
+# <markdowncell>
+
+# Ok, for decision tree, a much older technique, things look different. Still quite a few keywords, but the less than half for the other techniques. This is not to say that decision trees are not incredibly widely used. But they are not being relayed in the same way through the literature. 
+# 
+# To deal too many keywords, break into a couple of time periods.
+
+# <codecell>
+
+svm_keys_pre_2000 = ml.keyword_counts(svm_df_full[svm_df_full.PY<2001])
+svm_keys_pre_2000
+
+# <codecell>
+
+cow_svm = ml.coword_matrix(svm_df_full[svm_df_full.PY<2001],svm_keys_pre_2000.keys())
+arry = cow_svm.as_matrix()
+arry.shape
+
+svm_nx = nx.from_numpy_matrix(arry)
+cols = cow_svm.columns.tolist()
+
+# <codecell>
+
+cols
+
+# <codecell>
+
+fig = matplotlib.pyplot.gcf()
+fig.set_size_inches(8.5,8.5)
+labels = {cols.index(l):l for l in cols}
+nx.draw_spring(svm_nx, with_labels=True, labels = labels, font_size=10,font_family='sans-serif')
+
+# <markdowncell>
+
+# Between 2000- 2005, there is much growth. 
+
+# <codecell>
+
+svm_keys_2001_on = ml.keyword_counts(svm_df_full[(svm_df_full.PY >= 2001) & (svm_df_full.PY <2003)])
+cow_svm = ml.coword_matrix(svm_df_full[(svm_df_full.PY >= 2001) & (svm_df_full.PY <2003)],svm_keys_2001_on.keys())
+arry = cow_svm.as_matrix()
+arry.shape
+
+svm_nx = nx.from_numpy_matrix(arry)
+cols = cow_svm.columns.tolist()
+
+# <codecell>
+
+fig = matplotlib.pyplot.gcf()
+fig.set_size_inches(12.5,14.5)
+labels = {cols.index(l):l for l in cols}
+nx.draw_spring(svm_nx, with_labels=True, labels = labels, font_size=9,font_family='sans-serif')
+
+# <codecell>
+
 
