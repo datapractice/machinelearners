@@ -16,9 +16,9 @@ opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
 - is there any possibility of an affirmative relationship to machine learning? Under what conditions? -- return to the ones I set out in ch1: Rabinow, Whitehead, Wilson, etc. Now want to ground those in some particular techniques that cut/include the world in different ways
 - so many techniques to choose from: can only choose something whose specificity itself configures the literature, the field of practice, the knowledge economy in its own ways. 
 	- choosing 3 techniques that include many other techniques in them somehow
-		- neural networks include many logistic regressions and perceptrons
-		- svms include many different dimensions -- basis functions + inner product (avoiding calculating too much)
-		- random forests include many decision trees
+		- neural networks include many logistic regressions and perceptrons - 50s
+		- svms include many different dimensions -- basis functions + inner product (avoiding calculating too much); also Fisher's LDA - 30s
+		- random forests include many decision trees - 60-70s
 	- see that including as countenancing alternatives -- and hence flashes of mentality into algorithms
 - That is, to take the SVM  or NN or the Decision Tree seriously is already to understand the world in a particular way; each of them are monadologically potent; they express a world. 
 - What we can do with this grip on the world? The idea of relaying it -- pursuing motion through experiments with forms of movement through scale and subjectivity
@@ -34,6 +34,7 @@ opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
 - recap on functions, gradient descent, optimization and regression -- what do they do?
 - curse of dimensionality -- discussion from LSE paper, and from Warwick paper;
 - Warwick discussion on trees
+- Friedman's role in trees
 - the local vs global structure discussion - Hastie 19-20 onwards
 - generative vs disciminative models
 - situated all three algorithms by reference to adjacent work in humanities -- the trace/mark in deconstruction for handwriting recognition -- neural nets; the assemblage -- smooth space for svm; decision tree-random forest
@@ -68,7 +69,7 @@ The kernel trick is another commonly used technique to solve linearly inseparabl
 
 To repeat the precarious political pragmatic hope I presented, it is only if we become able, as philosophers, to put scientific achievements on the same plane of immanence together with other diverging conventions, each with its demanding definition of what matters, that we can stop poisoning this hope, that we can share, instead, the pragmatic concern for the itinerant process of creation of new ‘‘it works’’ as they mark the process of empowerment of new minorities, with new actively diverging ‘‘habits’’ that must be celebrated each time as something new entering the world and indeed as modifying it. Stengers, 2005, 162
 
-For forests
+For forests:
 
 Imagine you are walking through a forest of interarticulated branches. Some are covered with ice or snow, and the suns melts their touching tips to reveal space between. Some are so thickly brambled they seem solid; others are oddly angular in nature, like esplanaded trees.  Some of the trees are wild, some have been cultivated ... Helicopters flying overhead can quickly tell your many types of each, even each leaf, there are in the world, but they cannot yet give you a guidebook for bird-watching or forestry conservation. There is a lot of underbrush and a complex ecology of soil bacteria, flora and fauna.  ... Now imagine that the forest is a huge information space and each of the trees and bushes are classification systems.  ... Your job is to describe this forest. [@bowker_sorting_1999,31-32]
 
@@ -116,6 +117,17 @@ decision tree
 -- Vapknik
 -- the trajectories of neural networks and support vector machines in the literature
 
-```{r test, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
-	r = runif(1000)
+
+## Introduction
+
+Under what conditions would it be possible to have an affirmative relationship to machine learning? The problem in answering this question is that there are so many techniques to choose from, and each of these techniques includes and  cuts the world in different ways. The list of techniques and the domain of their application is, as we have seen, huge.
+
+```{r mlit1, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' , engine='python'} 
+import ml_lit_anal as ml
+ml.load_records('../ml_lit/data/')
 ```
+The machine learning literature itself has a huge, fluxing dimensionality. The academic papers themselves are daunting in their bulk and variety, before we even try to move into the much more crowded and heavily trafficked domains where machine learning is practiced.  This literature itself, viewed in machine learning terms, comprises a high-dimensional vector space, whose features and attributes unstably move around as the techniques find new applications, as computer scientists, engineers, statisticians and others work on reshaping them.  Viewed as a bundle of divergent, tangled trajectories in a high-dimensional social-material space, machine learning (or data-mining) can be described, sorted, and classified  in different ways. The question is: what form of movement, from trajectories through the forest of practices associated with machine learning would allow us to inhabit the space of machine learning? What kinds of scales and subject positions would we need to move through in order to do that?
+
+As I have emphasised previously, the form of movement through machine learning I'm experimenting with here is recursive or loopy. That is, rather than describing machine learning from the outside, rather than participating in it as an observer (participant observation, or even observant participation), I'm attempting to find ways of moving through machine learning in various ways. The anthropologist Paul Rabinow advocates 'pursuing in our thought and writing something like motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity' [@rabinow_anthropos_2003, 135-6]. This formulation resonates strongly for me. Learning machine learning is a form of movement through textbooks, scientific articles, online tutorials, Wikipedia pages, software documentation and many lines of `R` or `python` code. As Rabinow, it is easy to start moving through machine learning, but hard to control that movement. I have found myself careening through websites, software manuals, YouTube lectures on machine learning, news reports, APIs, code repositories and various code fragments. 
+
+
