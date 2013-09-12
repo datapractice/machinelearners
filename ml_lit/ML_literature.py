@@ -232,7 +232,7 @@ print({a['title']:a['num_citations'] for a in sq.articles})
 
 # <codecell>
 
-df[['TI', 'TC', 'PY']][df.TC>500].sort('TC', ascending=False)
+df[['AU', 'TI', 'TC', 'PY', 'ID', 'DE']][df.TC>500].sort('TC', ascending=False)
 
 # <codecell>
 
