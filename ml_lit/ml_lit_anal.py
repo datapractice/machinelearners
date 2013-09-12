@@ -17,7 +17,7 @@ def load_records(data_dir):
     # I saved all the WoS full records for 'machine learning'
     files = os.listdir(data_dir)
     wos_df  = pd.concat([pd.read_table(wos_df, sep='\t', index_col = False) 
-        for wos_df in [data_dir+f for f in files]])
+        for wos_df in [data_dir+f for f in files if f.count('.txt')>0]])
     wos_df  =  wos_df.drop_duplicates()
 
     #fix index

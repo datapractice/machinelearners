@@ -45,30 +45,30 @@ opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
 
 ## quotes to use: theory
 
-The process that I am currently engaged in and seeking to name  ... concerns the emergence of form as a process, includes in an essential manner claims to say or see something true. The process that concerns me is the one in which such "knowledge-things" are being assembled 85 Rabinow
-
-it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. Rabinow, 87
-
-I advocate pursuing in our thought and writing something like the motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity. Rabinow, 135-6.
-
-Perhaps our knowledge is distorted unless we can comprehend its essential connection with happenings which involve spatial relationships of fifteen dimensions. W, MoT, 78
-
-The sharp-cut scientific classifications are essential for scientific method. But they are dangerous for philosophy. Such classification hides the truth that the different modes of natural existnece shade off into each other. W, MoT, 215
-
-
-notion of pattern involves the concept of different modes of togetherness MoT, 195-6
-
-Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195
-
-My unity -- which is Descartes' "I am" --is my process of shaping this welter of material into a consistent pattern of feelings.  W, MoT, 228
-
-new function estimation methods have been created where a high dimensionality of the unknown function does not always require a large number of observations in order to obtain a good estimate. The new methods control generalization using capacity factors that do not necessarily depend on the dimensionality of the space vii Vapnik
-
-The kernel trick is another commonly used technique to solve linearly inseparably problems. This issue is to define an appropriate kernel function based on the _inner product_ between the given data, as a nonlinear transformation of data from the input space to a feature space with higher (even infinite) dimension in order to make the problems linearly separable. The underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space. Wu, 42
-
-
-To repeat the precarious political pragmatic hope I presented, it is only if we become able, as philosophers, to put scientific achievements on the same plane of immanence together with other diverging conventions, each with its demanding definition of what matters, that we can stop poisoning this hope, that we can share, instead, the pragmatic concern for the itinerant process of creation of new ‘‘it works’’ as they mark the process of empowerment of new minorities, with new actively diverging ‘‘habits’’ that must be celebrated each time as something new entering the world and indeed as modifying it. Stengers, 2005, 162
-
+> The process that I am currently engaged in and seeking to name  ... concerns the emergence of form as a process, includes in an essential manner claims to say or see something true. The process that concerns me is the one in which such "knowledge-things" are being assembled 85 Rabinow
+>
+>it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. Rabinow, 87
+>
+>USED: I advocate pursuing in our thought and writing something like the motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity. Rabinow, 135-6.
+>
+>Perhaps our knowledge is distorted unless we can comprehend its essential connection with happenings which involve spatial relationships of fifteen dimensions. W, MoT, 78
+>
+>The sharp-cut scientific classifications are essential for scientific method. But they are dangerous for philosophy. Such classification hides the truth that the different modes of natural existnece shade off into each other. W, MoT, 215
+>
+>
+>notion of pattern involves the concept of different modes of togetherness MoT, 195-6
+>
+>Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195
+>
+>My unity -- which is Descartes' "I am" --is my process of shaping this welter of material into a consistent pattern of feelings.  W, MoT, 228
+>
+>new function estimation methods have been created where a high dimensionality of the unknown function does not always require a large number of observations in order to obtain a good estimate. The new methods control generalization using capacity factors that do not necessarily depend on the dimensionality of the space vii Vapnik
+>
+>The kernel trick is another commonly used technique to solve linearly inseparably problems. This issue is to define an appropriate kernel function based on the _inner product_ between the given data, as a nonlinear transformation of data from the input space to a feature space with higher (even infinite) dimension in order to make the problems linearly separable. The underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space. Wu, 42
+>
+>
+>To repeat the precarious political pragmatic hope I presented, it is only if we become able, as philosophers, to put scientific achievements on the same plane of immanence together with other diverging conventions, each with its demanding definition of what matters, that we can stop poisoning this hope, that we can share, instead, the pragmatic concern for the itinerant process of creation of new ‘‘it works’’ as they mark the process of empowerment of new minorities, with new actively diverging ‘‘habits’’ that must be celebrated each time as something new entering the world and indeed as modifying it. Stengers, 2005, 162
+>
 
 ## main examples/illustrations & materials to draw on 
 
@@ -86,38 +86,54 @@ decision tree - random forest
 
 Under what conditions would it be possible to have an affirmative relationship to machine learning? The problem in answering this question is that there are so many techniques to choose from, and each of these techniques includes and  cuts the world in different ways. The list of techniques and the domain of their application is, as we have seen, huge.
 
-```{r mlit1, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' , engine='python'} 
-import ml_lit_anal as ml
-ml.load_records('../ml_lit/data/')
+```{r mlit1, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' } 
+
+    ml_dir = '../ml_lit/data/machine_learning_WOS'
+    files <- dir(ml_dir,full.names=TRUE, pattern='savedrecs.*')
+    recs <-lapply(files, read.csv, sep='\t', header=TRUE, as.is=TRUE, quote='', row.names=NULL)  
+    ml_df <-do.call( rbind, recs )
+    colnames(ml_df)[1:52] <- colnames(ml_df)[2:53]
+    colnames(ml_df)[1] <-'PT'
+    ml_df = ml_df[order(ml_df$TC, decreasing=TRUE),]
+    print(head(ml_df[,c('TI', 'TC')]))
+
 ```
-The machine learning literature itself has a huge, fluxing dimensionality. The academic papers themselves are daunting in their bulk and variety, before we even try to move into the much more crowded and heavily trafficked domains where machine learning is practiced.  This literature itself, viewed in machine learning terms, comprises a high-dimensional vector space, whose features and attributes unstably move around as the techniques find new applications, as computer scientists, engineers, statisticians and others work on reshaping them.  Viewed as a bundle of divergent, tangled trajectories in a high-dimensional social-material space, machine learning (or data-mining) can be described, sorted, and classified  in different ways. The question is: what form of movement, from trajectories through the forest of practices associated with machine learning would allow us to inhabit the space of machine learning? What kinds of scales and subject positions would we need to move through in order to do that?
+The machine learning literature itself has a huge, fluxing dimensionality, not easily captured by search terms. The academic papers themselves are daunting in their bulk and variety, before we even try to move into the much more crowded and heavily trafficked domains where machine learning is practiced.  This literature itself, viewed in machine learning terms, comprises a high-dimensional vector space, whose features and attributes unstably move around as the techniques find new applications, as computer scientists, engineers, statisticians and others work on reshaping them.  Viewed as a bundle of divergent, tangled trajectories in a high-dimensional social-material space, machine learning (or data-mining) can be described, sorted, and classified  in different ways. The question is: what form of movement, from trajectories through the forest of practices associated with machine learning would allow us to inhabit the space of machine learning? What kinds of scales and subject positions would we need to move through in order to do that?
 
-As I have emphasised previously, the form of movement through machine learning I'm experimenting with here is recursive or loopy. That is, rather than describing machine learning from the outside, rather than participating in it as an observer (participant observation, or even observant participation), I'm attempting to find ways of moving through machine learning in various ways. The anthropologist Paul Rabinow advocates 'pursuing in our thought and writing something like motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity' [@rabinow_anthropos_2003, 135-6]. This formulation resonates strongly for me. Learning machine learning is a form of movement through textbooks, scientific articles, online tutorials, Wikipedia pages, software documentation and many lines of `R` or `python` code. As Rabinow, it is easy to start moving through machine learning, but hard to control that movement. I have found myself careening through websites, software manuals, YouTube lectures on machine learning, short intensive courses on data mining, news reports, APIs, code repositories and various code fragments.  Much of this movement has been saccadic (TBC) and aleatory rather than purposive or Dao-like, and only in writing now, in attempting to connect code, literature, people and events, might this movement take shape.
+As I have emphasised previously, the form of movement through machine learning I'm experimenting with here is recursive or loopy. That is, rather than describing machine learning from the outside, or participating in it as an observer (participant observation, or even observant participation), I'm attempting to find ways of moving through machine learning by learning machine learning. And as the previous chapter discussed, here the term 'learning' is somewhat overloaded with multiple meanings. But the motivation is similar to what the anthropologist Paul Rabinow advocates: 'pursuing in our thought and writing something like motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity' [@rabinow_anthropos_2003, 135-6]. This formulation resonates strongly for me. Learning machine learning is a form of movement through textbooks, scientific articles, online tutorials, Wikipedia pages, software documentation and many lines of `R` or `python` code. As Rabinow mentions, it is easy to start moving through machine learning, but hard to control that movement. I have found myself careening through websites, software manuals, YouTube lectures on machine learning, short intensive courses on data mining, news reports, APIs, code repositories and various code fragments.  Much of this movement has been saccadic (TBC) and aleatory rather than purposive or Dao-like, and only in writing now, in attempting to connect code, literature, people and events, might this movement take shape.
 
-The descriptive challenge was nicely figured more than a decade ago by Geoffrey Bowker and Susan Leigh Star in their work on classification systems. They wrote then:
+The descriptive challenge entailed in this movement was nicely figured more than a decade ago by Geoffrey Bowker and Susan Leigh Star in their work on classification systems. They wrote then:
 
 > Imagine you are walking through a forest of interarticulated branches. Some are covered with ice or snow, and the suns melts their touching tips to reveal space between. Some are so thickly brambled they seem solid; others are oddly angular in nature, like esplanaded trees.  Some of the trees are wild, some have been cultivated ... Helicopters flying overhead can quickly tell your many types of each, even each leaf, there are in the world, but they cannot yet give you a guidebook for bird-watching or forestry conservation. There is a lot of underbrush and a complex ecology of soil bacteria, flora and fauna.  ... Now imagine that the forest is a huge information space and each of the trees and bushes are classification systems.  ... Your job is to describe this forest. [@bowker_sorting_1999,31-32]
  
-Bowker and Star refer here to a variety of standardised classification systems running across sciences, institutions, industries and geographies. The classification systems exemplified in machine learning are in some ways much less diverse than Bowker and Star's examples in that they do not directly index a plurality of practices. machine learning.  Much of machine learning concerns classification. Many of the best-known and most widely used contemporary techniques -- logistic regression, neural networks, decision trees, random forests, support vector machines and a variety of clustering techniques --- largely focus on classification problems. As it turns out, at the time Bowker and Star were writing about the interarticulated forest of classification systems, randomForests (TM) were being developed as a way of managing huge information spaces. Statisticians such as Leo Breiman at UCLA were assembling decision trees into forests that could classify [@breiman_random_2001]. Like two other key machine learning techniques of neural networks and support vector machines that were heavily developed in the late 1990s, random forests provided different ways of moving through the thicket of possible connections, associations, features and relations occasioned by digital data, especially as online data sets were becoming available.  Each of these techniques of random forests, neural networks and support vector machine, as I will discuss below, took an existing predictive or classificatory technique and internalised it in order to deal with the problems of a disorientating profusion of  possible classifications. With lesser and greater degrees of success, they brought together different scales of movement, and different ways of including the world. In a way, machine learning has been taking on the job that Bowker and Star proposed: 'describe this forest.'
+Bowker and Star refer here to a variety of standardised classification systems running across sciences, institutions, industries and geographies. The classification systems exemplified in machine learning are in some ways much less diverse than Bowker and Star's examples in that they do not directly index a plurality of practices. Indeed, machine learning in many cases seek to reduce the plurality of practices to a set of algorithmic processes that can be monitored and controlled directly.  Nevertheless, a clear resonance between the Bowker and Star's challenge and the problems of machine learning comes through: much, perhaps most,  machine learning practice concerns classification. Many of the best-known and most widely used contemporary techniques -- logistic regression, neural networks, decision trees, random forests, support vector machines and a variety of clustering techniques --- largely focus on classification problems. As it turns out, at the very time Bowker and Star were writing about the interarticulated forest of classification systems, randomForests (TM) were being developed as a way of managing huge information spaces. Statisticians such as Leo Breiman at UCLA were assembling decision trees into forests that could classify [@breiman_random_2001].  In the machine learning literature,  the random forest paper is the most highly cited reference [@breiman_random_2001]. According to Thomson Scientific Web of Science/ISI, this paper has been cited  `r ml_df$TC[1]` times. Like two other key machine learning techniques of neural networks and support vector machines that were heavily developed in the late 1990s, random forests provided different ways of moving through the thicket of possible connections, associations, features and relations occasioned by digital data, especially as online data sets were becoming available.  Each of these techniques of random forests, neural networks and support vector machine, as I will discuss below, took an existing predictive or classificatory technique and internalised it in order to deal with the problems of a disorientating profusion of  possible classifications. With lesser and greater degrees of success, they brought together different scales of movement, and different ways of including the world. So in a way, machine learning has been taking on the job that Bowker and Star proposed: 'describe this forest.' But the forest we are moving in here is a forest of machine learning classifiers, largely as seen through the scientific literature.
 
-## Finding trees in irises
+## Growing trees in irises
 
-The basic problem of classification is not hard to grasp. We have already seen a few versions of it. In R.A. Fisher's _iris_ dataset, which reports on the measurements of petal and sepal lengths of _iris virginica, iris setosa_ and _iris versicolor_,  the usual framing of the classification problem is how to decide whether a given blossom is _virginica_, _setosa_ or _versicolor_.   While the _iris_ dataset is quite small, it provides a richly populated ecosystem of examples. These irises don't grow in forests (they are more often found in riverbanks and meadows), but they do offer a variety of illustrations of how machine learning classifiers are brought to bear on classification problems. Here the classification is taxonomic - the species of iris has various sub-genera, and sections within the sub-genera. _Setosa, _virginica_ and _versicolor_ all belong to the sub-genus _Limniris_. This taxonomic complication is quite irrelevant to most machine learning applications.
+> Mastering the details of tree growth and management is an excellent way to understand the activities of learning machine generally. [@malley_statistical_2011, 118]
 
-In machine learning textbooks and tutorials, iris would be used to demonstrate how cleanly a classifier can separate the different kinds of irises. For instance,   Hastie, Tibshirani and Friedman describe decision trees as an off-the-shelf classifier:  'Of all the well-known learning methods, decision trees comes closest to meeting the requirements for serving as an off-the-shelf procedure for data-mining' [@hastie_elements_2009, 352]. The standard decision tree package for `R` is `rpart`. `rpart` is a contraction of 'recursive partitioning' and this term generally describes how the decision tree algorithm works. 
+The basic practice of classification in machine learning is not hard to grasp. We have already seen a few versions of it. Logistic regression, the technique discussed in the previous chapter and pervasively used in biomedical sciences, is one form of classifier.  R.A. Fisher's _iris_ dataset, which reports on the measurements of petal and sepal lengths of _iris virginica, iris setosa_ and _iris versicolor_,  is often used to present classification techniques. The usual framing of the classification problem is how to decide whether a given iris blossom is _virginica_, _setosa_ or _versicolor_.   While the _iris_ dataset is quite small, it supports a richly populated ecosystem of examples scattered across the machine learning literature. These irises don't grow in forests (they are more often found in riverbanks and meadows), but they do offer a variety of illustrations of how machine learning classifiers are brought to bear on classification problems. Here the classification is taxonomic - the  iris genus has various sub-genera, and sections within the sub-genera. _Setosa, _virginica_ and _versicolor_ all belong to the sub-genus _Limniris_. This botanical complication is  largely ignored in  most machine learning applications. In machine learning textbooks and tutorials, iris would be used to demonstrate how cleanly a classifier can separate the different kinds of irises. For instance,  Hastie, Tibshirani and Friedman recommend decision trees as the best off-the-shelf classifier:  'Of all the well-known learning methods, decision trees comes closest to meeting the requirements for serving as an off-the-shelf procedure for data-mining' [@hastie_elements_2009, 352]. Building decision trees is a very common machine learning practice.
 
-malley_statistical_2011
+The standard decision tree package for `R` is `rpart`. `rpart` is a contraction of 'recursive partitioning' and this term generally describes how the decision tree algorithm works. 
+
 
 ```{r iris_tree, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' } 
 
+    #load iris dataset
     data(iris)
 
-
+    #load decision tree library
     library(rpart)
-    rpart(Species ~ ., iris)
-    ir.rp =rpart(Species ~ ., iris)
-    ir.rp
 
+    #construction decision tree to classify iris by species
+    ir.rp =rpart(Species ~ ., iris)
+```
+
+
+The code shown here loads the `iris` data (it is bundled with many data analysis tools), loads the `R` decision tree library, and builds a decision tree to classify the irises by species.  What has happened to the iris data in this decision tree? The `R` code is so brief that we can't tell much about how the data has been recursively partitioned. We know that the `iris` has `r nrow(iris)` rows, and that there are equal numbers of the three iris varieties. The results of the partitioning can be seen below in two plots. 
+
+```{r iris_tree_plot, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
+    #plot the tree
     par(mfrow = c(1,2), xpd=NA)
     plot(ir.rp, main = 'tree recursive partitioning of iris')
     text(ir.rp, cex=0.8, use.n=TRUE)
@@ -132,7 +148,29 @@ malley_statistical_2011
      legend(1, 4, c("    Setosa Petals", "    Setosa Sepals",
                     "Versicolor Petals", "Versicolor Sepals"),
             pch = "sSvV", col = rep(c(2,4), 2))
-
 ```
+The plot on the left shows the decision tree and the plot on the right shows just _setosa_ and _versicolor_  plotted by petal and sepal widths and lengths.  As the plot on the right shows, most of the measurements are well clustered. Only the _setosa_ petal lengths and widths seem to vary widely. All the other measurements are tightly bunched. This means that the decision tree shown on the left has little trouble classifying the irises. Decision trees are read from the top down, left to right. The top level of this tree can be read, for instance, as saying, if the length of petal is less 2.45, then the iris is _setosa_. As Hastie, Tibshirani and Friedman (working at the Stanford Linear Accelerator during the late 1970s, Friedman was  instrumental in rescuing  decision trees from oblivion they had entered in the late 1960s; see [@steinberg_cart_2009] for a brief history) put it, 'a key advantage of the recursive binary tree is its interpretability. The feature space partition is fully described a by single tree.  ... This representation is popular among medical scientists, perhaps because it mimics the way a doctor thinks.  The tree stratifies the population into strata of high and low outcome, on the basis of patient characteristics' [@hastie_elements_2009, 306-7].
+
+@steinberg_cart_2009
+
+The sharp-cut scientific classifications are essential for scientific method. But they are dangerous for philosophy. Such classification hides the truth that the different modes of natural existnece shade off into each other. W, MoT, 215
 
 
+notion of pattern involves the concept of different modes of togetherness MoT, 195-6
+
+Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195
+
+## Support vector machine
+
+On the topic of pattern recognition, the second most highly cited reference in the ten of thousands of articles and papers is a paper by Cortes and Vapnik [@cortes_support-vector_1995]. 
+
+```{r pattern_recognition1, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' } 
+    dir = '../ml_lit/data/pattern_recognition_WOS'
+    files <- dir(dir,full.names=TRUE, pattern='savedrecs.*')
+    recs <-lapply(files, read.csv, sep='\t', header=TRUE, as.is=TRUE, quote='', row.names=NULL)  
+    df <-do.call( rbind, recs )
+    colnames(df)[1:52] <- colnames(df)[2:53]
+    colnames(df)[1] <-'PT'
+    df = df[order(df$TC, decreasing=TRUE),]
+    print(head(df$TI))
+```

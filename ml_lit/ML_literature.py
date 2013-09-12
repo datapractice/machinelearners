@@ -32,7 +32,7 @@ import numpy as np
 
 # <codecell>
 
-df = ml.load_records('data/')
+df = ml.load_records('data/machine_learning_WOS/')
 print('There are %s records in the dataset'%df.shape[0])
 
 #clean topics
@@ -223,6 +223,20 @@ print({a['title']:a['num_citations'] for a in sq.articles})
 #    -  dzeroski works on induction
 #    -  zhou, zhi-hua at nanjing works on facial recognition
 #    - Ross King works on synthetic biology and proteins
+
+# <markdowncell>
+
+# ## Who has been cited most in the machine learning literature?
+# 
+# Within the machine learning references, we can look just at the times cited field provided by Web of Science.  It seems that Breiman's RandomForests paper is the most important, followed by a wireless paper, then two papers in ecology, a methods paper, then the newer technique of Gaussian processes, followed by a text categorisation paper, then molecular biology paper, then three more methods papers, followed by some face detection articles and cancer-related papers. 
+
+# <codecell>
+
+df[['TI', 'TC', 'PY']][df.TC>500].sort('TC', ascending=False)
+
+# <codecell>
+
+df.ix[df.TC == df.TC.max(), 51:]
 
 # <markdowncell>
 
