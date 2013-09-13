@@ -4,12 +4,60 @@
 		"selected_items":
 		[
 			[
-				"top",
-				"topic_counts_sorted"
+				"co",
+				"coword_m	statement"
 			],
 			[
-				"de_count",
-				"de_counts_sorted"
+				"cow",
+				"coword_matrix	function"
+			],
+			[
+				"start",
+				"start_year"
+			],
+			[
+				"t",
+				"topics"
+			],
+			[
+				"map",
+				"map_sorted	statement"
+			],
+			[
+				"keywo",
+				"keyword"
+			],
+			[
+				"c",
+				"cum	Cummulative"
+			],
+			[
+				"in",
+				"index	None"
+			],
+			[
+				"ar",
+				"article_count"
+			],
+			[
+				"ke",
+				"key1"
+			],
+			[
+				"key",
+				"key_count"
+			],
+			[
+				"dataframe",
+				"DataFrame"
+			],
+			[
+				"i",
+				"index	param"
+			],
+			[
+				"retur",
+				"Returns"
 			],
 			[
 				"Y_",
@@ -120,6 +168,10 @@
 				"goldman_towards_2013"
 			],
 			[
+				"top",
+				"top_machines"
+			],
+			[
 				"insu",
 				"instrument_name"
 			],
@@ -164,34 +216,61 @@
 	"buffers":
 	[
 		{
-			"file": "ch0-introduction/ch0_introduction.rmd",
+			"file": "ch0_introduction/ch0_introduction.rmd",
 			"settings":
 			{
-				"buffer_size": 1506,
+				"buffer_size": 1997,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "ch1-learning/ch1_praxis.rmd",
+			"file": "ch1_learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 73694,
+				"buffer_size": 73693,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "ch2-curves/ch2_curves_function.rmd",
+			"file": "ch2_curves/ch2_curves_function.rmd",
 			"settings":
 			{
-				"buffer_size": 74363,
+				"buffer_size": 74337,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "ch3-dimensionality/ch3_dimensional_exuberance.md",
+			"file": "ch3_dimensionality/ch3_dimensional_exuberance.rmd",
 			"settings":
 			{
-				"buffer_size": 734,
+				"buffer_size": 21041,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n\n\n# Dimensional exuberance and pattern recognition in movement\n\n## overview\n\n- recap of vector space, function and the sheer proliferation of algorithms\n- return to vector space as the guiding model -- both critical of this -- it linearises but is tricked out in various ways\n- pattern discovery -- pathetic or worthwhile?\n\n## main arguments\n\n- is there any possibility of an affirmative relationship to machine learning? Under what conditions? -- return to the ones I set out in ch1: Rabinow, Whitehead, Wilson, etc. Now want to ground those in some particular techniques that cut/include the world in different ways\n- so many techniques to choose from: can only choose something whose specificity itself configures the literature, the field of practice, the knowledge economy in its own ways. \n    - choosing 3 techniques that include many other techniques in them somehow\n        - random forests include many decision trees - 60-70s\n        - neural networks include many logistic regressions and perceptrons - 50s\n        - svms include many different dimensions -- basis functions + inner product (avoiding calculating too much); also Fisher's LDA - 30s\n- see that including as countenancing alternatives -- and hence flashes of mentality into algorithms\n- That is, to take the SVM  or NN or the Decision Tree seriously is already to understand the world in a particular way; each of them are monadologically potent; they express a world. \n- What we can do with this grip on the world? The idea of relaying it -- pursuing motion through experiments with forms of movement through scale and subjectivity\n	- implementation as experiment in forms of movement -- the inner product, \n- How do they express/contain/grip the world?\n	- critical argument: incredibly rigid approach in some ways to flux and change; what do we do with that rigidity?\n	- extrinsic vs intrinsic structure: link to Whitehead can also use the shapeofdata stuff; -- key point -- how the vector space is reshaped; or not. Or the extraordinary efforts to get the vector space to accommodate differences\n	- classification as the key problem: linear separability vs non-linear separability; strict splits vs shades of difference\n	- making things linear in high dim: good or bad?  15 dim patterns \n- \n\n## to put in\n- recap on functions, gradient descent, optimization and regression -- what do they do?\n- curse of dimensionality -- discussion from LSE paper, and from Warwick paper;\n- Warwick discussion on trees\n- Friedman's role in trees\n- the local vs global structure discussion - Hastie 19-20 onwards\n- generative vs disciminative models\n- situated all three algorithms by reference to adjacent work in humanities -- the trace/mark in deconstruction for handwriting recognition -- neural nets; the assemblage -- smooth space for svm; decision tree-random forest\n\n## to do \n- implement a neural network by going through Ng lectures or Hinton\n- implement a svm - using Ng?\n\n## quotes to use: theory\n\n> The process that I am currently engaged in and seeking to name  ... concerns the emergence of form as a process, includes in an essential manner claims to say or see something true. The process that concerns me is the one in which such \"knowledge-things\" are being assembled 85 Rabinow\n>\n>it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. Rabinow, 87\n>\n>USED: I advocate pursuing in our thought and writing something like the motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity. Rabinow, 135-6.\n>\n>Perhaps our knowledge is distorted unless we can comprehend its essential connection with happenings which involve spatial relationships of fifteen dimensions. W, MoT, 78\n>\n>The sharp-cut scientific classifications are essential for scientific method. But they are dangerous for philosophy. Such classification hides the truth that the different modes of natural existnece shade off into each other. W, MoT, 215\n>\n>\n>notion of pattern involves the concept of different modes of togetherness MoT, 195-6\n>\n>Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195\n>\n>My unity -- which is Descartes' \"I am\" --is my process of shaping this welter of material into a consistent pattern of feelings.  W, MoT, 228\n>\n>new function estimation methods have been created where a high dimensionality of the unknown function does not always require a large number of observations in order to obtain a good estimate. The new methods control generalization using capacity factors that do not necessarily depend on the dimensionality of the space vii Vapnik\n>\n>The kernel trick is another commonly used technique to solve linearly inseparably problems. This issue is to define an appropriate kernel function based on the _inner product_ between the given data, as a nonlinear transformation of data from the input space to a feature space with higher (even infinite) dimension in order to make the problems linearly separable. The underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space. Wu, 42\n>\n>\n>To repeat the precarious political pragmatic hope I presented, it is only if we become able, as philosophers, to put scientific achievements on the same plane of immanence together with other diverging conventions, each with its demanding definition of what matters, that we can stop poisoning this hope, that we can share, instead, the pragmatic concern for the itinerant process of creation of new ‘‘it works’’ as they mark the process of empowerment of new minorities, with new actively diverging ‘‘habits’’ that must be celebrated each time as something new entering the world and indeed as modifying it. Stengers, 2005, 162\n>\n\n## main examples/illustrations & materials to draw on \n\nsupport vector machine -- the Russian connection; the text classification projects\n\n-- Ng's lectures  -- go through notes on this\n-- Vapknik\n-- the trajectories of neural networks and support vector machines in the literature\n\nneural  network -- the McCulloch-Pitts connection -- heather what's her name on cat recognition; -- the autonomous vehicles;  my camera and its face recognition; kittydar\n\ndecision tree - random forest\n\n## Introduction\n\nUnder what conditions would it be possible to have an affirmative relationship to machine learning? The problem in answering this question is that there are so many techniques to choose from, and each of these techniques includes and  cuts the world in different ways. The list of techniques and the domain of their application is, as we have seen, huge.\n\n                                                                                   TI\n16646                                                                  Random forests\n17132                        Cognitive radio: Brain-empowered wireless communications\n21434 Novel methods improve prediction of species' distributions from occurrence data\n21587                    Maximum entropy modeling of species geographic distributions\n21373                                                 An introduction to ROC analysis\n17448                                         Gaussian Processes for Machine Learning\n        TC\n16646 4281\n17132 2757\n21434 1574\n21587 1531\n21373 1488\n17448 1320\n\nThe machine learning literature itself has a huge, fluxing dimensionality, not easily captured by search terms. The academic papers themselves are daunting in their bulk and variety, before we even try to move into the much more crowded and heavily trafficked domains where machine learning is practiced.  This literature itself, viewed in machine learning terms, comprises a high-dimensional vector space, whose features and attributes unstably move around as the techniques find new applications, as computer scientists, engineers, statisticians and others work on reshaping them.  Viewed as a bundle of divergent, tangled trajectories in a high-dimensional social-material space, machine learning (or data-mining) can be described, sorted, and classified  in different ways. The question is: what form of movement, from trajectories through the forest of practices associated with machine learning would allow us to inhabit the space of machine learning? What kinds of scales and subject positions would we need to move through in order to do that?\n\nAs I have emphasised previously, the form of movement through machine learning I'm experimenting with here is recursive or loopy. That is, rather than describing machine learning from the outside, or participating in it as an observer (participant observation, or even observant participation), I'm attempting to find ways of moving through machine learning by learning machine learning. And as the previous chapter discussed, here the term 'learning' is somewhat overloaded with multiple meanings. But the motivation is similar to what the anthropologist Paul Rabinow advocates: 'pursuing in our thought and writing something like motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity' [@rabinow_anthropos_2003, 135-6]. This formulation resonates strongly for me. Learning machine learning is a form of movement through textbooks, scientific articles, online tutorials, Wikipedia pages, software documentation and many lines of `R` or `python` code. As Rabinow mentions, it is easy to start moving through machine learning, but hard to control that movement. I have found myself careening through websites, software manuals, YouTube lectures on machine learning, short intensive courses on data mining, news reports, APIs, code repositories and various code fragments.  Much of this movement has been saccadic (TBC) and aleatory rather than purposive or Dao-like, and only in writing now, in attempting to connect code, literature, people and events, might this movement take shape.\n\nThe descriptive challenge entailed in this movement was nicely figured more than a decade ago by Geoffrey Bowker and Susan Leigh Star in their work on classification systems. They wrote then:\n\n> Imagine you are walking through a forest of interarticulated branches. Some are covered with ice or snow, and the suns melts their touching tips to reveal space between. Some are so thickly brambled they seem solid; others are oddly angular in nature, like esplanaded trees.  Some of the trees are wild, some have been cultivated ... Helicopters flying overhead can quickly tell your many types of each, even each leaf, there are in the world, but they cannot yet give you a guidebook for bird-watching or forestry conservation. There is a lot of underbrush and a complex ecology of soil bacteria, flora and fauna.  ... Now imagine that the forest is a huge information space and each of the trees and bushes are classification systems.  ... Your job is to describe this forest. [@bowker_sorting_1999,31-32]\n \nBowker and Star refer here to a variety of standardised classification systems running across sciences, institutions, industries and geographies. The classification systems exemplified in machine learning are in some ways much less diverse than Bowker and Star's examples in that they do not directly index a plurality of practices. Indeed, machine learning in many cases seek to reduce the plurality of practices to a set of algorithmic processes that can be monitored and controlled directly.  Nevertheless, a clear resonance between the Bowker and Star's challenge and the problems of machine learning comes through: much, perhaps most,  machine learning practice concerns classification. Many of the best-known and most widely used contemporary techniques -- logistic regression, neural networks, decision trees, random forests, support vector machines and a variety of clustering techniques --- largely focus on classification problems. As it turns out, at the very time Bowker and Star were writing about the interarticulated forest of classification systems, randomForests (TM) were being developed as a way of managing huge information spaces. Statisticians such as Leo Breiman at UCLA were assembling decision trees into forests that could classify [@breiman_random_2001].  In the machine learning literature,  the random forest paper is the most highly cited reference [@breiman_random_2001]. According to Thomson Scientific Web of Science/ISI, this paper has been cited  4281 times. Like two other key machine learning techniques of neural networks and support vector machines that were heavily developed in the late 1990s, random forests provided different ways of moving through the thicket of possible connections, associations, features and relations occasioned by digital data, especially as online data sets were becoming available.  Each of these techniques of random forests, neural networks and support vector machine, as I will discuss below, took an existing predictive or classificatory technique and internalised it in order to deal with the problems of a disorientating profusion of  possible classifications. With lesser and greater degrees of success, they brought together different scales of movement, and different ways of including the world. So in a way, machine learning has been taking on the job that Bowker and Star proposed: 'describe this forest.' But the forest we are moving in here is a forest of machine learning classifiers, largely as seen through the scientific literature.\n\n## Growing trees in irises\n\n> Mastering the details of tree growth and management is an excellent way to understand the activities of learning machine generally. [@malley_statistical_2011, 118]\n\nThe basic practice of classification in machine learning is not hard to grasp. We have already seen a few versions of it. Logistic regression, the technique discussed in the previous chapter and pervasively used in biomedical sciences, is one form of classifier.  R.A. Fisher's _iris_ dataset, which reports on the measurements of petal and sepal lengths of _iris virginica, iris setosa_ and _iris versicolor_,  is often used to present classification techniques. The usual framing of the classification problem is how to decide whether a given iris blossom is _virginica_, _setosa_ or _versicolor_.   While the _iris_ dataset is quite small, it supports a richly populated ecosystem of examples scattered across the machine learning literature. These irises don't grow in forests (they are more often found in riverbanks and meadows), but they do offer a variety of illustrations of how machine learning classifiers are brought to bear on classification problems. Here the classification is taxonomic - the  iris genus has various sub-genera, and sections within the sub-genera. _Setosa, _virginica_ and _versicolor_ all belong to the sub-genus _Limniris_. This botanical complication is  largely ignored in  most machine learning applications. In machine learning textbooks and tutorials, iris would be used to demonstrate how cleanly a classifier can separate the different kinds of irises. For instance,  Hastie, Tibshirani and Friedman recommend decision trees as the best off-the-shelf classifier:  'Of all the well-known learning methods, decision trees comes closest to meeting the requirements for serving as an off-the-shelf procedure for data-mining' [@hastie_elements_2009, 352]. Building decision trees is a very common machine learning practice.\n\nThe standard decision tree package for `R` is `rpart`. `rpart` is a contraction of 'recursive partitioning' and this term generally describes how the decision tree algorithm works. \n\n\n\n```r\n\n# load iris dataset\ndata(iris)\n\n# load decision tree library\nlibrary(rpart)\n\n# construction decision tree to classify iris by species\nir.rp = rpart(Species ~ ., iris)\n```\n\n\n\nThe code shown here loads the `iris` data (it is bundled with many data analysis tools), loads the `R` decision tree library, and builds a decision tree to classify the irises by species.  What has happened to the iris data in this decision tree? The `R` code is so brief that we can't tell much about how the data has been recursively partitioned. We know that the `iris` has 150 rows, and that there are equal numbers of the three iris varieties. The results of the partitioning can be seen below in two plots. \n\n\n```\n\n    setosa versicolor  virginica \n        50         50         50 \n```\n\n![plot of chunk iris_tree_plot](figure/iris_tree_plot.png) \n\nThe plot on the left shows the decision tree and the plot on the right shows just _setosa_ and _versicolor_  plotted by petal and sepal widths and lengths.  As the plot on the right shows, most of the measurements are well clustered. Only the _setosa_ petal lengths and widths seem to vary widely. All the other measurements are tightly bunched. This means that the decision tree shown on the left has little trouble classifying the irises. Decision trees are read from the top down, left to right. The top level of this tree can be read, for instance, as saying, if the length of petal is less 2.45, then the iris is _setosa_. As Hastie, Tibshirani and Friedman (working at the Stanford Linear Accelerator during the late 1970s, Friedman was  instrumental in rescuing  decision trees from oblivion they had entered in the late 1960s; see [@steinberg_cart_2009] for a brief history) put it, 'a key advantage of the recursive binary tree is its interpretability. The feature space partition is fully described a by single tree.  ... This representation is popular among medical scientists, perhaps because it mimics the way a doctor thinks.  The tree stratifies the population into strata of high and low outcome, on the basis of patient characteristics' [@hastie_elements_2009, 306-7].\n\n@steinberg_cart_2009\n\nThe sharp-cut scientific classifications are essential for scientific method. But they are dangerous for philosophy. Such classification hides the truth that the different modes of natural existnece shade off into each other. W, MoT, 215\n\n\nnotion of pattern involves the concept of different modes of togetherness MoT, 195-6\n\nThus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195\n\n## Support vector machine\n\nOn the topic of pattern recognition, the second most highly cited reference in the ten of thousands of articles and papers is a paper by Cortes and Vapnik [@cortes_support-vector_1995]. \n\n\n```r\ndir = \"../ml_lit/data/pattern_recognition_WOS\"\nfiles <- dir(dir, full.names = TRUE, pattern = \"savedrecs.*\")\nrecs <- lapply(files, read.csv, sep = \"\\t\", header = TRUE, as.is = TRUE, quote = \"\", \n    row.names = NULL)\ndf <- do.call(rbind, recs)\ncolnames(df)[1:52] <- colnames(df)[2:53]\ncolnames(df)[1] <- \"PT\"\ndf = df[order(df$TC, decreasing = TRUE), ]\nprint(head(df$TI))\n```\n\n[1] \"DICTIONARY OF PROTEIN SECONDARY STRUCTURE - PATTERN-RECOGNITION OF HYDROGEN-BONDED AND GEOMETRICAL FEATURES\"\n[2] \"SUPPORT-VECTOR NETWORKS\"                                                                                    \n[3] \"Identification of prokaryotic and eukaryotic signal peptides and prediction of their cleavage sites\"        \n[4] \"A tutorial on Support Vector Machines for pattern recognition\"                                              \n[5] \"Pathogen recognition and innate immunity\"                                                                   \n[6] \"PROTEIN-STRUCTURE COMPARISON BY ALIGNMENT OF DISTANCE MATRICES\"                                             \n\n",
+			"file": "ch3_dimensionality/ch3_dimensional_exuberance.md",
+			"file_size": 20709,
+			"file_write_time": 130234617815439842,
+			"settings":
+			{
+				"buffer_size": 20693,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/.config/sublime-text-3/Packages/User/Pandown.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 36,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ch4_subjects/ch4_learning_subjects.rmd",
+			"settings":
+			{
+				"buffer_size": 40264,
 				"line_ending": "Unix"
 			}
 		},
@@ -199,82 +278,40 @@
 			"file": "ml_lit/ml_lit_anal.py",
 			"settings":
 			{
-				"buffer_size": 6076,
+				"buffer_size": 8557,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
+			"file": "ml_lit/web_of_science.R",
 			"settings":
 			{
-				"buffer_size": 2303,
+				"buffer_size": 6776,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/Xue_SVM: Support Vector Machines_2009.md",
+			"settings":
+			{
+				"buffer_size": 879,
 				"line_ending": "Unix",
-				"name": "vapnik_nature of statistical learning theory 2000"
+				"name": "# SVM: Support Vector Machines, Xue in Xindong Wu,"
 			}
 		},
 		{
-			"file": "/home/mackenza/Documents/notes/James_1996.md",
+			"file": "/home/mackenza/R/web_of_science.R",
 			"settings":
 			{
-				"buffer_size": 8880,
-				"line_ending": "Unix",
-				"name": "{James, 1996 #838}"
-			}
-		},
-		{
-			"file": "/home/mackenza/Documents/notes/Negri-HardtCommonwealth-2009.md",
-			"settings":
-			{
-				"buffer_size": 438,
-				"line_ending": "Unix",
-				"name": "Negri Hardt Commonwealth 2009"
-			}
-		},
-		{
-			"file": "ch8-conclusion/ch8_conclusion.rmd",
-			"settings":
-			{
-				"buffer_size": 89,
+				"buffer_size": 6776,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
+			"file": "/home/mackenza/R/phrase_structures.R",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "proposal.rmd",
-			"settings":
-			{
-				"buffer_size": 38821,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
-			"settings":
-			{
-				"buffer_size": 3975,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "ch2-curves/pandoc.sh",
-			"settings":
-			{
-				"buffer_size": 150,
+				"buffer_size": 8007,
 				"line_ending": "Unix"
 			}
 		},
@@ -282,7 +319,49 @@
 			"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 			"settings":
 			{
-				"buffer_size": 858,
+				"buffer_size": 1552,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
+			"settings":
+			{
+				"buffer_size": 3068,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/Stengers_d&G_2005.txt",
+			"settings":
+			{
+				"buffer_size": 3125,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
+			"settings":
+			{
+				"buffer_size": 2305,
+				"line_ending": "Unix",
+				"name": "vapnik_nature of statistical learning theory 2000"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/bogost_alien_2012.md",
+			"settings":
+			{
+				"buffer_size": 944,
+				"line_ending": "Unix",
+				"name": "bogost"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
+			"settings":
+			{
+				"buffer_size": 5877,
 				"line_ending": "Unix"
 			}
 		},
@@ -290,58 +369,9 @@
 			"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 			"settings":
 			{
-				"buffer_size": 2239,
+				"buffer_size": 4283,
 				"line_ending": "Unix",
 				"name": "Rabinow, P. 2003. Anthropos Today. Reflections on"
-			}
-		},
-		{
-			"file": "technique_demos.rmd",
-			"settings":
-			{
-				"buffer_size": 4842,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/mackenza/Documents/notes/Whitehead_PR.mdown",
-			"settings":
-			{
-				"buffer_size": 614,
-				"line_ending": "Unix",
-				"name": "# Whitehead, Process and Reality"
-			}
-		},
-		{
-			"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
-			"settings":
-			{
-				"buffer_size": 5354,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "techniques.md",
-			"settings":
-			{
-				"buffer_size": 4134,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "functions.mdown",
-			"settings":
-			{
-				"buffer_size": 10729,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "references/machine_learning.bib",
-			"settings":
-			{
-				"buffer_size": 35188,
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -359,48 +389,100 @@
 				"buffer_size": 41626,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "references/machine_learning.bib",
+			"settings":
+			{
+				"buffer_size": 37121,
+				"line_ending": "Unix"
+			}
 		}
 	],
-	"build_system": "Packages/R Tools/R.sublime-build",
+	"build_system": "Packages/knitr/knitr-Markdown.sublime-build",
 	"command_palette":
 	{
-		"height": 75.0,
+		"height": 108.0,
 		"selected_items":
 		[
 			[
-				"pyth",
-				"Set Syntax: Python"
+				"pand",
+				"Pandoc: Render Markdown to temp PDF and View"
 			],
 			[
-				"in",
-				"Package Control: Install Package"
+				"pan",
+				"Pandoc: Render Markdown to temp PDF and View"
 			],
 			[
-				"pa",
-				"Package Control: Remove Package"
+				"mak",
+				"Pandoc: Render Markdown to temp PDF and View"
 			],
 			[
-				"ins",
-				"Package Control: Install Package"
+				"kni",
+				"knitr: Send Chunk to R"
 			],
 			[
-				"pac",
-				"Package Control: Upgrade/Overwrite All Packages"
-			],
-			[
-				"pack",
-				"Package Control: Remove Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
+				"",
+				"Side Bar: Reveal File"
 			],
 			[
 				"inst",
 				"Package Control: Install Package"
 			],
 			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"pa",
+				"Package Control: Add Repository"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pak",
+				"Package Control: Disable Package"
+			],
+			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"upg",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"R",
+				"R: Choose Application"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
 				"set mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"set m",
 				"Set Syntax: Markdown"
 			],
 			[
@@ -413,10 +495,6 @@
 			],
 			[
 				"set am",
-				"Set Syntax: Markdown"
-			],
-			[
-				"set m",
 				"Set Syntax: Markdown"
 			],
 			[
@@ -444,16 +522,16 @@
 				"Set Syntax: Python"
 			],
 			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
 				"set s",
 				"Set Syntax: R"
 			],
 			[
 				"p",
 				"Package Control: Install Package"
-			],
-			[
-				"",
-				"View: Toggle Side Bar"
 			],
 			[
 				"se",
@@ -468,11 +546,11 @@
 				"Set Syntax: R"
 			]
 		],
-		"width": 449.0
+		"width": 575.0
 	},
 	"console":
 	{
-		"height": 139.0,
+		"height": 290.0,
 		"history":
 		[
 		]
@@ -488,27 +566,84 @@
 	},
 	"file_history":
 	[
-		"/home/mackenza/Documents/data_intensive/book/ch2-curves/test.md",
-		"/home/mackenza/.config/sublime-text-3/Packages/User/gd.sublime-snippet",
-		"/media/0031-014A/digital contours_ software materiality_review.md",
-		"/home/mackenza/Documents/data_intensive/ngs_data_topography/ngs_paper/pmed_classifier.py",
-		"/home/mackenza/Documents/data_intensive/ngs_data_topography/ngs_paper/sra.py",
-		"/home/mackenza/.config/sublime-text-3/Packages/User/WordCount.sublime-settings",
-		"/home/mackenza/.config/sublime-text-3/Packages/WordCount/WordCount.sublime-settings",
 		"/home/mackenza/Documents/data_intensive/book/.gitignore",
-		"/home/mackenza/R/coursera/ml-ng/ex1/ex1.R",
+		"/home/mackenza/.cache/.fr-xI8lEo/knitr-Markdown.sublime-build",
+		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/pandoc-config.json",
+		"/home/mackenza/.config/sublime-text-3/Packages/Pandown/Pandown.sublime-settings",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/Pandown.sublime-settings",
+		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.md",
+		"/home/mackenza/Documents/data_intensive/book/test.rmd",
+		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/test.rmd",
+		"/home/mackenza/.cache/.fr-hmwA6d/knitr-Markdown.sublime-build",
+		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.pdf",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/R.sublime-snippet",
+		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd",
+		"/home/mackenza/Documents/data_intensive/book/ml_lit/data/pattern_recognition_WOS/savedrecs(86).txt",
+		"/home/mackenza/.cache/.fr-6rFbxj/pandoc-1.11.1/INSTALL",
+		"/home/mackenza/.cache/.fr-uxwHMH/pandoc-1.11.1/README",
+		"/home/mackenza/Documents/data_intensive/book/data_book.sublime-project",
+		"/home/mackenza/.cache/.fr-LeECTp/README.mdown",
+		"/home/mackenza/.cache/.fr-qK7GaY/Pandown Markdown.sublime-build",
+		"/home/mackenza/.cache/.fr-qK7GaY/pandoc-config.json",
+		"/home/mackenza/Desktop/runif.R",
+		"/home/mackenza/Documents/data_intensive/book/test.md",
+		"/home/mackenza/Documents/data_intensive/book/pytest.Rmd",
+		"/home/mackenza/Documents/data_intensive/book/ch1_learning/__init__.py",
+		"/home/mackenza/Documents/data_intensive/book/__init__.py",
+		"/home/mackenza/Documents/data_intensive/book/ch5_probability/# Naive and informed chances.rmd",
+		"/home/mackenza/Documents/data_intensive/book/pytest.md",
+		"/home/mackenza/Documents/data_intensive/lse_cambridge_markets_algorithms/markets_algorithms.Rmd",
+		"/home/mackenza/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/mackenza/.config/sublime-text-3/Packages/Enhanced-R/Enhanced-R.sublime-settings",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mackenza/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/mackenza/Documents/data_intensive/warwick_june2013/warwick_presentation.rmd",
+		"/home/mackenza/.config/sublime-text-3/Packages/Pylinter/Default (Linux).sublime-keymap",
+		"/home/mackenza/Documents/data_intensive/book/ch3-dimensionality/ch3_dimensional_exuberance.rmd",
+		"/home/mackenza/Documents/data_intensive/book/references/machine_learning.bib",
+		"/home/mackenza/Documents/data_intensive/book/ml_lit/ml_lit_anal.py",
+		"/home/mackenza/R/corpus_constructors.R",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/Enhanced-R.sublime-settings",
+		"/home/mackenza/.config/sublime-text-3/Packages/Enhanced-R/README.md",
+		"/home/mackenza/Documents/data_intensive/book/ml_lit/ML_literature.py",
+		"/home/mackenza/Documents/data_intensive/book/ml_lit/ml_coword_analysis.py",
+		"/home/mackenza/Documents/data_intensive/book/techniques.md",
+		"/home/mackenza/Documents/data_intensive/book/ch8-conclusion/ch8_conclusion.rmd",
+		"/home/mackenza/R/citation-network-analysis/Citation Network Analysis.ipynb",
+		"/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
+		"/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
+		"/home/mackenza/Documents/notes/Hastie_2008.md",
+		"/home/mackenza/Documents/notes/James_1996.md",
+		"/home/mackenza/Documents/notes/Negri-HardtCommonwealth-2009.md",
+		"/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
+		"/home/mackenza/Documents/data_intensive/book/proposal.rmd",
+		"/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
+		"/home/mackenza/Documents/data_intensive/book/ch2-curves/pandoc.sh",
+		"/home/mackenza/Documents/data_intensive/book/technique_demos.rmd",
+		"/home/mackenza/Documents/notes/Whitehead_PR.mdown",
+		"/home/mackenza/Documents/notes/Whitehead_science_mw.mdown",
+		"/home/mackenza/Documents/data_intensive/book/functions.mdown",
+		"/home/mackenza/Documents/data_intensive/book/ch2-curves/ml_lit_anal.py",
+		"/home/mackenza/Downloads/bar_stacked.py",
+		"/home/mackenza/Documents/data_intensive/book/ch2-curves/google_scholar_parser.py",
+		"/home/mackenza/Desktop/test.rmd",
 		"/home/mackenza/Documents/data_intensive/book/ch2-curves/ch2_curves_function.rmd",
+		"/home/mackenza/R/coursera/ml-ng/mlclass-ex3/ex3.m",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/gd.sublime-snippet",
+		"/tmp/savedrecs-1.txt",
+		"/home/mackenza/Documents/data_intensive/book/ch2-curves/test.md",
+		"/home/mackenza/R/coursera/ml-ng/ex1/ex1.R",
 		"/home/mackenza/Documents/notes/james_pluralistic_1996.odt",
 		"/home/mackenza/R/coursera/ml-ng/mlclass-ex2/ex2.R",
 		"/home/mackenza/R/coursera/ml-ng/ex1/computeCostMulti.m",
 		"/home/mackenza/Documents/data_intensive/transformation_soc_sci_oxford_2013/mackenzie_slides_oxford_feb_2013.Rmd",
-		"/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
-		"/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
 		"/home/mackenza/Documents/notes/Wilson,_Affect and Artificial Intelligence2009.md",
 		"/home/mackenza/Documents/data_intensive/book/animations/grad_desc.R",
 		"/home/mackenza/Documents/data_intensive/book/pandoc.sh",
 		"/home/mackenza/Documents/data_intensive/book/build.sh",
 		"/home/mackenza/Documents/data_intensive/book/references/Exported Items.bib",
+		"/media/0031-014A/digital contours_ software materiality_review.md",
 		"/home/mackenza/Documents/data_intensive/book/ch1/ch1_praxis.rmd",
 		"/tmp/data_forms/ch1-learning/ch1_praxis.rmd",
 		"/home/mackenza/Documents/data_intensive/book/ch1_praxis.md",
@@ -519,7 +654,6 @@
 		"/home/mackenza/R/coursera/ml-ng/ex1/computeCost.m",
 		"/home/mackenza/R/coursera/ml-ng/ex1/ex1.m",
 		"/home/mackenza/R/coursera/ml-ng/ex1/ex1data1.txt",
-		"/home/mackenza/Documents/notes/Whitehead_science_mw.mdown",
 		"/home/mackenza/bank.txt",
 		"/home/mackenza/.cache/.fr-k5nMam/ghProjectInfo2013-Feb.txt",
 		"/home/mackenza/Documents/data_intensive/book/knit_all.R",
@@ -534,7 +668,6 @@
 		"/home/mackenza/.cache/.fr-BlOcAR/2012-04-08-9.json",
 		"/home/mackenza/Documents/google_analytics_spet2012/google.sublime-workspace",
 		"/home/mackenza/Documents/notes/dewey_reconstruction_1957.odt",
-		"/home/mackenza/Documents/data_intensive/lse_cambridge_markets_algorithms/markets_algorithms.Rmd",
 		"/home/mackenza/Documents/data_intensive/book/Sources.md",
 		"/home/mackenza/Desktop/drawing-1.svg",
 		"/home/mackenza/Documents/data_intensive/book/markets_algorithms.Rmd",
@@ -560,70 +693,15 @@
 		"/home/mackenza/R/ngs/data/xml/study/DRP002001.xml",
 		"/home/mackenza/R/ngs/hiseq_storage.R",
 		"/home/mackenza/Documents/data_intensive/ngs_data_topography/ngs_paper/build.sh",
-		"/home/mackenza/R/ngs/ensemble_explore.R",
-		"/home/mackenza/R/ngs/ncbi_explore.R",
-		"/home/mackenza/R/ngs/gold_db.R",
-		"/home/mackenza/R/ngs/download_ebi_submission_info.py",
-		"/home/mackenza/Documents/data_intensive/ngs_data_topography/ngs_paper/knit.R",
-		"/home/mackenza/Documents/data_intensive/ngs_data_topography/ngs_paper/pandoc.sh",
-		"/home/mackenza/Desktop/knitr-book-master/09-cache.md",
-		"/home/mackenza/R/ngs/dbGap_analysis.R",
-		"/home/mackenza/R/ngs/centers.Rmd",
-		"/home/mackenza/R/ngs/data/birmingham_stats.html",
-		"/home/mackenza/Downloads/sequence.asn1",
-		"/home/mackenza/Dropbox/data-economy/ngs_paper/template.latex",
-		"/home/mackenza/Dropbox/data-economy/ngs_paper/latex.template",
-		"/home/mackenza/Dropbox/data-economy/ngs_paper/pandoc_format_paper.sh",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
-		"/home/mackenza/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/Markdown.sublime-settings",
-		"/home/mackenza/R/ngs/eagle_analysis.R",
-		"/home/mackenza/.config/sublime-text-2/Packages/SublimeREPL/SublimeREPL.sublime-settings",
-		"/home/mackenza/R/ngs/sra_run_analysis.Rmd",
-		"/home/mackenza/Dropbox/data-economy/ngs_paper/ngs_data_methods.md",
-		"/home/mackenza/Dropbox/data-economy/DSR/ebi_visit_1nov2012.txt",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/syntheticbiology.sublime-snippet",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/sbi.sublime-snippet",
-		"/var/tmp/kdecache-mackenza/krun/17104.0.projects",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
-		"/home/mackenza/.config/sublime-text-2/Packages/WordCount/WordCount.py",
-		"/home/mackenza/.config/sublime-text-2/Packages/SideBarEnhancements/Side Bar.sublime-settings",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/SmartMarkdown.sublime-settings",
-		"/home/mackenza/.config/sublime-text-2/Packages/IPython Integration/README.md",
-		"/home/mackenza/R/ngs/sra_run_analysis.md",
-		"/home/mackenza/Dropbox/data-economy/ngs_paper/ngs_data_methods.rmd",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/R.sublime-settings",
-		"/home/mackenza/.config/sublime-text-2/Packages/R Tools/R.sublime-build",
-		"/home/mackenza/Dropbox/data-economy/ngs_paper/ngs_data_methods.txt",
-		"/home/mackenza/Dropbox/data-economy/ngs_paper/paper/ngs_data_methods.txt",
-		"/home/mackenza/.config/sublime-text-2/Packages/SmartMarkdown/Default.sublime-keymap",
-		"/home/mackenza/Dropbox/ngs_paper/paper/ngs_data_methods.rmd",
-		"/home/mackenza/Dropbox/ngs_paper/paper/references/ngs.bib",
-		"/home/mackenza/Dropbox/ngs_paper/paper/ngs_data_paper.sublime-workspace",
-		"/home/mackenza/Dropbox/data-economy/paper/ngs_data_methods.md",
-		"/home/mackenza/Dropbox/data-economy/paper/references/ngs.bib",
-		"/home/mackenza/Dropbox/data-economy/paper/pandoc_format_paper.sh",
-		"/home/mackenza/Dropbox/ngs_paper/build/pandoc.sublime-build",
-		"/home/mackenza/.config/sublime-text-2/Packages/User/untitled.sublime-snippet",
-		"/home/mackenza/Dropbox/data-economy/paper/4S EASST talk.docx",
-		"/home/mackenza/Desktop/build.R",
-		"/home/mackenza/Desktop/test3.md",
-		"/home/mackenza/Desktop/test4.R",
-		"/home/mackenza/Desktop/test2.mdown",
-		"/home/mackenza/Desktop/test1.md",
-		"/home/mackenza/R/montecarlo/data/refs.bib",
-		"/home/mackenza/Desktop/test6.rmd",
-		"/home/mackenza/R/ngs/data/geo_schema.sql",
-		"/home/mackenza/Desktop/test.sublime-project"
+		"/home/mackenza/R/ngs/ensemble_explore.R"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 105.0,
 		"where_history":
 		[
 		]
@@ -633,8 +711,51 @@
 		"case_sensitive": true,
 		"find_history":
 		[
-			"de_counts_sorted",
-			"de_counts",
+			">\n>\n",
+			"}}\",\n",
+			"Friedman",
+			"dir",
+			"df",
+			"cortes_support",
+			"malley_statistical_2011",
+			"Hastie",
+			"breiman_random_2001",
+			"coword_matrix",
+			"enter",
+			"map",
+			"Top Ten",
+			"g2",
+			"g",
+			"tg",
+			"sc",
+			"] ",
+			"i2",
+			"i1",
+			"kc",
+			"kc ",
+			"E_ij",
+			"df",
+			"dir",
+			"landeker",
+			"landecker",
+			"de_set1",
+			"de_all1",
+			"science brings to light partial observers ",
+			"Whitehead",
+			"value",
+			"values",
+			"value",
+			"white",
+			"bogost_alien_2012",
+			"bogo",
+			"imdf",
+			"Rabinow",
+			"rabinow",
+			"rabin",
+			"lr",
+			"wasserman",
+			"logistic",
+			"beta",
 			"theta",
 			"KDD",
 			"conway_machine_2012",
@@ -717,26 +838,7 @@
 			"plot_basic_users",
 			"Wateron",
 			"Waterson",
-			"Latour",
-			"of",
-			"edwards",
-			"672",
-			"Coles",
-			"coles",
-			"##",
-			"metadata",
-			"Metadata",
-			"ADRIAN",
-			"Adrian",
-			"ADRIAN",
-			"Adrian",
-			"------------------------------------------------------------",
-			"Adrian",
-			"ADRIAN",
-			"Adrian",
-			"---------------------------------\n",
-			"---------------------------------",
-			"Discussion"
+			"Latour"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -744,6 +846,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"wos_df",
+			"df",
 			"—"
 		],
 		"reverse": false,
@@ -755,30 +859,60 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "ch0-introduction/ch0_introduction.rmd",
+					"file": "ch0_introduction/ch0_introduction.rmd",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1506,
+						"buffer_size": 1997,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1907,
+								1907
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 186.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ch1_learning/ch1_praxis.rmd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 73693,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -787,20 +921,78 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "ch1-learning/ch1_praxis.rmd",
+					"buffer": 2,
+					"file": "ch2_curves/ch2_curves_function.rmd",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 73694,
+						"buffer_size": 74337,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1978,
+								1978
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 35.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "ch3_dimensionality/ch3_dimensional_exuberance.rmd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15932,
+								15932
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4556.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "ch3_dimensionality/ch3_dimensional_exuberance.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20693,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1,
+								1
 							]
 						],
 						"settings":
@@ -811,118 +1003,32 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 76.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "ch2-curves/ch2_curves_function.rmd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 74363,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 9326.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "ch3-dimensionality/ch3_dimensional_exuberance.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 734,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "ml_lit/ml_lit_anal.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6076,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 265.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 5,
-					"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
+					"file": "/home/mackenza/.config/sublime-text-3/Packages/User/Pandown.sublime-settings",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2303,
+						"buffer_size": 36,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1536,
-								1536
+								32,
+								32
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"auto_name": "vapnik_nature of statistical learning theory 2000",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -932,55 +1038,55 @@
 				},
 				{
 					"buffer": 6,
-					"file": "/home/mackenza/Documents/notes/James_1996.md",
+					"file": "ch4_subjects/ch4_learning_subjects.rmd",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8880,
+						"buffer_size": 40264,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5573,
-								5573
+								980,
+								980
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"auto_name": "{James, 1996 #838}",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 850.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "/home/mackenza/Documents/notes/Negri-HardtCommonwealth-2009.md",
+					"file": "ml_lit/ml_lit_anal.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 438,
+						"buffer_size": 8557,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								438,
-								438
+								499,
+								499
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"auto_name": "Negri Hardt Commonwealth 2009",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -990,26 +1096,25 @@
 				},
 				{
 					"buffer": 8,
-					"file": "ch8-conclusion/ch8_conclusion.rmd",
+					"file": "ml_lit/web_of_science.R",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 89,
+						"buffer_size": 6776,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								89,
-								89
+								259,
+								259
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"auto_name": "",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/Enhanced-R/Support/Enhanced-R.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1019,25 +1124,30 @@
 				},
 				{
 					"buffer": 9,
-					"file": "/home/mackenza/R/coursera/ml-ng/ex1/computeCost.R",
+					"file": "/home/mackenza/Documents/notes/Xue_SVM: Support Vector Machines_2009.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 879,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								422,
+								422
+							],
+							[
+								878,
+								878
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/R/R.tmLanguage"
+							"auto_name": "# SVM: Support Vector Machines, Xue in Xindong Wu,",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1047,67 +1157,39 @@
 				},
 				{
 					"buffer": 10,
-					"file": "proposal.rmd",
+					"file": "/home/mackenza/R/web_of_science.R",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 38821,
+						"buffer_size": 6776,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								565,
+								565
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/Enhanced-R/Support/Enhanced-R.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 114.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 11,
-					"file": "/home/mackenza/Documents/notes/deleuze_guattari_what_is_1997.md",
+					"file": "/home/mackenza/R/phrase_structures.R",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3975,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2388,
-								2388
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 237.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/home/mackenza/R/coursera/ml-ng/ex1/gradientDescent.R",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
+						"buffer_size": 8007,
 						"regions":
 						{
 						},
@@ -1121,37 +1203,64 @@
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/R/R.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Enhanced-R/Support/Enhanced-R.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 907.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 13,
-					"file": "ch2-curves/pandoc.sh",
+					"buffer": 12,
+					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 150,
+						"buffer_size": 1552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								62,
-								62
+								1416,
+								1416
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3068,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								926,
+								926
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1161,25 +1270,25 @@
 				},
 				{
 					"buffer": 14,
-					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
+					"file": "/home/mackenza/Documents/notes/Stengers_d&G_2005.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 858,
+						"buffer_size": 3125,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								753,
-								753
+								1135,
+								1135
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1189,19 +1298,105 @@
 				},
 				{
 					"buffer": 15,
-					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
+					"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2239,
+						"buffer_size": 2305,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								512,
-								512
+								2006,
+								2006
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "vapnik_nature of statistical learning theory 2000",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 186.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/home/mackenza/Documents/notes/bogost_alien_2012.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8,
+								8
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "bogost",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5877,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4338,
+								4338
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1380.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1217,139 +1412,56 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
-					"file": "technique_demos.rmd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4842,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4189,
-								4189
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "/home/mackenza/Documents/notes/Whitehead_PR.mdown",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 614,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								34,
-								34
-							]
-						],
-						"settings":
-						{
-							"auto_name": "# Whitehead, Process and Reality",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5354,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 19,
-					"file": "techniques.md",
+					"file": "references/data_forms_thought.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4134,
+						"buffer_size": 23988,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								9375,
+								9375
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6429.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 20,
-					"file": "functions.mdown",
+					"file": "references/refs.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10729,
+						"buffer_size": 41626,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								29180,
+								29180
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1363,15 +1475,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 35188,
+						"buffer_size": 37121,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27780,
-								27780
+								35767,
+								35767
 							]
 						],
 						"settings":
@@ -1381,65 +1493,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13289.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "references/data_forms_thought.bib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 23988,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1452.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "references/refs.bib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 41626,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								19346,
-								19346
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 12439.0,
+						"translation.y": 16894.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1449,7 +1503,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 41.0
+		"height": 62.0
 	},
 	"input":
 	{
@@ -1480,12 +1534,12 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 142.0
+		"height": 613.0
 	},
 	"project": "data_book.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1494,8 +1548,28 @@
 		"selected_items":
 		[
 			[
+				"h",
+				"~/Documents/notes/Hastie_2008.md"
+			],
+			[
+				"data",
+				"references/data_forms_thought.bib"
+			],
+			[
+				"ref",
+				"references/refs.bib"
+			],
+			[
+				"da",
+				"~/Documents/data_intensive/book/references/data_forms_thought.bib"
+			],
+			[
+				"dat",
+				"~/Documents/data_intensive/book/references/data_forms_thought.bib"
+			],
+			[
 				"refs",
-				"book/references/refs.bib"
+				"~/Documents/data_intensive/book/references/refs.bib"
 			],
 			[
 				"re",
@@ -1511,24 +1585,52 @@
 		[
 			[
 				"",
-				"~/R/coursera/linal/linal.sublime-project"
+				"~/R/metacommunities/metacommunities.sublime-project"
 			]
 		],
 		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"bra",
+				"breiman_random_2001"
+			],
+			[
+				"cort",
+				"cortes_support-vector_1995"
+			],
+			[
+				"stei",
+				"steinberg_cart:_2009"
+			],
+			[
+				"mall",
+				"malley_statistical_2011"
+			],
+			[
+				"bre",
+				"breiman_random_2001"
+			],
+			[
+				"brei",
+				"breiman_random_2001"
+			],
+			[
+				"rab",
+				"rabinow_anthropos_2003"
+			]
 		],
-		"width": 0.0
+		"width": 647.0
 	},
 	"settings":
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 338.0,
