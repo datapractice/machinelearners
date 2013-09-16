@@ -56,6 +56,7 @@ def clean_topics(wos_df):
         'neural network')
     wos_df.topics = wos_df.topics.str.replace('neural net\b', 
         'neural network')
+    wos_df.topics = wos_df.topics.str.replace('decision tree(.*)', 'decision tree')
 
     wos_df.topics = wos_df.topics.str.split('; ')
     return wos_df

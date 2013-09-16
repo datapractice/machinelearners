@@ -26,7 +26,7 @@ def sorted_map(map): return sorted(map.iteritems(), key=lambda (k,v): (-v,k))
 
 # <codecell>
 
-df = ml.load_records('data/')
+df = ml.load_records('data/machine_learning_WOS/')
 print('There are %s records in the dataset'%df.shape[0])
 
 #clean topics
@@ -412,7 +412,4 @@ fig = matplotlib.pyplot.gcf()
 fig.set_size_inches(12.5,14.5)
 labels = {cols.index(l):l for l in cols}
 nx.draw_spring(svm_nx, with_labels=True, labels = labels, font_size=9,font_family='sans-serif')
-
-# <codecell>
-
 

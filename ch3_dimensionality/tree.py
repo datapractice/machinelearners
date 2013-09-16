@@ -66,4 +66,4 @@ for pairidx, pair in enumerate([[0, 1], [0, 2], [0, 3],
 
 pl.suptitle("Decision surface of a decision tree using paired features")
 pl.legend()
-pl.show()
+pl.savefig()
