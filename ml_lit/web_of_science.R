@@ -18,7 +18,7 @@ combine_wos_records <- function(dir){
   colnames(df)[1:52] <- colnames(df)[2:53]
   colnames(df)[1] <-'PT'
   return(df)
-#   df[1,1:10]
+
 }
 
 ##############################
