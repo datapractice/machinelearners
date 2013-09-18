@@ -14,6 +14,7 @@
 - trying to find experiments and experiences
 -  the ml literature -- how the terms takes shape -- use ipython notebooks for that. machine learning as very loose assemblage; how it coalesces; etc. 
 -  I can't cover all the algorithms, techniques, settings
+-  FICO, DunneRaby -- huge amounts happening in these commercial spaces that I haven't investigate. Could be done through patent literature .... 
 
 ## quotes to use
 it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. 87 Rabinow
