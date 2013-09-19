@@ -45,7 +45,7 @@ print('%s abstract fields are null'%sum(df.AB.isnull()))
 
 # <markdowncell>
 
-# The publication years profile is typical:
+# The publication years profile is typical in some ways but shows enormous growth from the late 1980s onwards. Was this around the time that artificial intelligence started to seem unpopular?
 
 # <codecell>
 

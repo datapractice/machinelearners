@@ -25,14 +25,15 @@ def load_records(data_dir):
     wos_df.index = index
 
     #to get all cited refs
-    cited_refs = [set(re.split(pattern='; ', 
-        string=str(ref).lower().lstrip().rstrip())) for ref in wos_df.CR]
-
-    # add as column to dataframe
-    wos_df['cited_refs'] = cited_refs
+    if wos_df.columns.tolist().count('CR') > 0:
+        cited_refs = [set(re.split(pattern='; ', 
+            string=str(ref).lower().lstrip().rstrip())) for ref in wos_df.CR]
+        # add as column to dataframe
+        wos_df['cited_refs'] = cited_refs
 
     # normalise authors
-    wos_df.au = [str(au).lower().lstrip().rstrip() for au in wos_df.AF]
+    if wos_df.columns.tolist().count('AF') > 0:
+        wos_df.au = [str(au).lower().lstrip().rstrip() for au in wos_df.AF]
 
     return wos_df
 
