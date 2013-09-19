@@ -26,7 +26,7 @@ def load_records(data_dir):
 
     #to get all cited refs
     if wos_df.columns.tolist().count('CR') > 0:
-        cited_refs = [set(re.split(pattern='; ', 
+        cited_refs = [list(re.split(pattern='; ', 
             string=str(ref).lower().lstrip().rstrip())) for ref in wos_df.CR]
         # add as column to dataframe
         wos_df['cited_refs'] = cited_refs
@@ -258,3 +258,24 @@ def keyword_years(wos_df, keyword):
     key_wos_df = top_py_wos_df[top_py_wos_df.DE.str.contains(keyword, 
         case=False)]
     return key_wos_df
+
+
+def find_citation(wos_df, ref):
+    
+    """ Returns all the records that cite the reference
+
+    Parameters
+    -------------------------
+    wos_df: WoS references
+    ref: the cited reference expected in 'author year' format
+    """
+    
+    ref = ref.lower()
+    ref_parts = ref.split(' ')
+    ref_auth  = ref_parts[0]
+    ref_year  = ref_parts[1]
+    ref_other = ''
+    if len(ref_parts)  > 2:
+        ref_other = ref_parts[2]
+    citing_refs = [ut for (refs,ut) in zip(wos_df['cited_refs'], wos_df.index.tolist()) for r in refs if  (ref_auth in r) & (ref_year in r) & (ref_other in r) ]
+    return wos_df.ix[citing_refs]
