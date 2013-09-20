@@ -15,6 +15,7 @@
 -  the ml literature -- how the terms takes shape -- use ipython notebooks for that. machine learning as very loose assemblage; how it coalesces; etc. 
 -  I can't cover all the algorithms, techniques, settings
 -  FICO, DunneRaby -- huge amounts happening in these commercial spaces that I haven't investigate. Could be done through patent literature .... 
+-  the development of machine learning out of AI -- shift from rule-based experts (cd Suchman; Collins  on this); visible in early textbooks (Tom Mitchell); decisive role of pattern recognition approaches focused on images (Bishop 1996 on this)
 
 ## quotes to use
 it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. 87 Rabinow
