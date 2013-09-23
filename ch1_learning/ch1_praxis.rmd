@@ -21,11 +21,13 @@
     - Add in Animation and Automation – The Liveliness and Labours of Bodies and Machines Body & Society March 2012 18: 1-46, 
     - machine learning textbooks -- hastie, williams, manning, see document archive
     - the github version of the book
+    -
 
 ## Todo
 
 Bogost on carpentering, and the problems of writing -- I have a take on that ... 
 Landecker & Kelty on the literature as informant; 
+Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
 
 ## Introduction -- the data-driven mode
 

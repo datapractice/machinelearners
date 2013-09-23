@@ -33,7 +33,6 @@
 
 The problematization of classifications, practices, things is an event.  Rabinow
 
-
 science brings to light partial observers  in relation to functions within systems of reference.D& G, WiP, 129
 
 
@@ -52,6 +51,10 @@ I propose as a materialist motto: we never get a relevant answer if our practice
 Celebrating the exceptional character of the experimental achievemnt very effectively limits the claims made in the name of science. Stengers, wondering, 376
 
 Taking seriously the singularity of experimental practices aslo leads us to understand the strong possibility of their destruction by the coming knowledge economy. The points is not that the scientific enterprise would lose a neutrality it never had.  … What is at risk is rather the very social fabric of scientific reliability, that is, the constitutive relation between an epxerimental achievmenet and the gathering of what can be called 'competent colleagues' Stengers, wondering, 377
+
+## To do
+
+- Add Valiant 1984 on learnable
 
 ## Introduction
 

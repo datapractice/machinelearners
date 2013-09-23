@@ -98,7 +98,7 @@ dec_tree_df.PY.hist(bins=dec_tree_df.PY.max()-dec_tree_df.PY.min())
 
 # <markdowncell>
 
-# OK, this gives a different picture. Now the decision trees are much more numerous, and they span 1965 onwards. They were not developing only in the machine learning literature. They were going elsewhere.
+# OK, this gives a different picture. Now the decision trees are much more numerous, and they span 1965 onwards. They were not developing only in the machine learning literature. They were going elsewhere. Nothing much was happening in them during 1960-1970s. But in the years after 1985, things really become much more active. 
 
 # <codecell>
 
@@ -127,11 +127,38 @@ plt.title('Citation of Cover-Hart, 1967')
 
 # <markdowncell>
 
-# Both Morgan-Sonquist and Cover-Hart show a huge increase in the last decade or so. It would be interesting to see how they intersect.
+# Both Morgan-Sonquist and Cover-Hart show a huge increase in the last decade or so, although on different scales. It would be interesting to see how they intersect.
 
 # <markdowncell>
 
-# I'd like to see what was happening with the topics and applications of decision trees between 1990-2012. Maybe this is already too late, given that the work on decision trees had been done much earlier. But it is a starting point.
+# ## Decision trees 1985-2000
+# 
+# I'd like to see what was happening with the topics and applications of decision trees between 1980s-2012. Maybe this is already too late, given that the work on decision trees had been done much earlier. But it is a starting point.
+
+# <codecell>
+
+dec_tree_df[['TI','PY', 'AF', 'TC']][(dec_tree_df.PY<2000) & (dec_tree_df.PY>=1986)].head(10)
+
+# <markdowncell>
+
+# Also, it might be worth looking at the intersection between machine learning decision trees and decision trees in general. How much do they overlap?
+
+# <codecell>
+
+# using WoS ids to do this: df.UT
+ml_dt = set(df.UT.unique())
+dt_dt = set(dec_tree_df.UT.unique())
+print("""there are %d references to decision tree articles in the machine learning literature;
+even though there are at least %d articles in the machine learning set on decision trees"""
+      %(len(dt_dt.intersection(ml_dt)), dt.shape[0]))
+
+# <markdowncell>
+
+# This difference -- 309 vs 513 -- could be because the decision tree dataset is not complete. In any case, it supports the conclusion that much of the decision tree has not been labelled as 'machine learning.'
+
+# <markdowncell>
+
+# # Analysis of techniques in the decision tree literature
 
 # <codecell>
 
@@ -150,5 +177,12 @@ dt_df
 
 # <codecell>
 
-dt_df.head(5)
+dt_df[['TI', 'PY']].head()
+
+# <codecell>
+
+dt_df.TI.last()
+
+# <codecell>
+
 
