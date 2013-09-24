@@ -17,6 +17,7 @@ import google_scholar_parser as gs
 import pandas as pd
 import networkx as nx
 import itertools
+matplotlib.use('WXAgg')
 import matplotlib.pyplot as plt
 import numpy as np
 import random
@@ -153,8 +154,23 @@ nx.draw(pre_90_nx, pos=pos, alpha=0.5, node_size=50, with_labels=True, labels=la
 
 df_pre2 = df[(df.PY <= 1995) & (df.PY >1990)]
 keys_90_95 = ml.keyword_counts(df_pre2)
+fig = plt.gcf()
 print('There are %s keywords in the 1990-95 literature' % len(keys_90_95))
-ml.draw_network_by_years(df, 1990,1995, True, 12)
+net = ml.draw_network_by_years(df, 1990,1995, True, 12)
+
+# <codecell>
+
+coword_net = net
+pos = nx.spring_layout(coword_net)
+labels = nx.get_node_attributes(coword_net, 'keyword')
+nx.draw(coword_net, pos=pos, alpha=0.5, 
+        node_size=50, 
+        with_labels=True, labels=labels)
+
+# <codecell>
+
+nx.draw(coword_net, pos=pos, alpha=0.5, 
+        with_labels=True, labels=labels)
 
 # <markdowncell>
 

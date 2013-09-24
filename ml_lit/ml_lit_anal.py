@@ -8,6 +8,7 @@ import os
 import networkx as nx
 import numpy as np
 import operator
+import math
 import matplotlib.pyplot as plt    
 
 def load_records(data_dir):
@@ -318,6 +319,7 @@ def draw_network_by_years(df, start_year, end_year, draw, trim):
         print('drawing the network .... ')
         nx.draw(coword_net, pos=pos, alpha=0.5, 
             node_size=nx.get_node_attributes(coword_net, 'between_central'), with_labels=True, labels=labels)
+        fig.show()
     return coword_net
 
 def trim_draw_network(coword_net, trim):
@@ -334,11 +336,13 @@ def trim_draw_network(coword_net, trim):
     coword networkx object
     """
     coword_net = trim_degrees(coword_net, trim)
-    labels = nx.get_node_attributes(coword_net, 'label')
+    labels = nx.get_node_attributes(coword_net, 'keyword')
     pos = nx.spring_layout(coword_net)
     fig = plt.gcf()
     fig.set_size_inches(12.5,12.5)
     print('drawing the network .... ')
     nx.draw(coword_net, pos=pos, alpha=0.5, 
-        node_size=100* nx.get_node_attributes(coword_net, 'between_central'), with_labels=True, labels=labels)
+        node_size={n:math.log1p(5000*bc) for n,bc in nx.get_node_attributes(coword_net, 'between_central').iteritems()}, 
+        with_labels=True, labels=labels)
+    fig.show()
     return coword_net
