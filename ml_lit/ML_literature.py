@@ -333,7 +333,7 @@ nx.draw_spring(tech_core, k=0.4,width = 0.2,alph=0.5, figsize=(10,10))
 # <codecell>
 
 tech_degree_c = nx.degree_centrality(tech_core)
-tech_degree_cs = sorted_map(tech_degree_c)
+tech_degree_cs = ml.sorted_map(tech_degree_c)
 tech_degree_cs[:10]
 
 # <codecell>

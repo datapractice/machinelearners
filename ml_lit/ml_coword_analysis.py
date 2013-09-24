@@ -19,6 +19,7 @@ import networkx as nx
 import itertools
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 
 # <codecell>
 
@@ -58,7 +59,7 @@ cow_df = ml.coword_matrix(df,keys)
 
 # <markdowncell>
 
-# For co-word analysis, calculate a matrix of equivalence scores and look for largest values. I'm drawing on Callon M, Courtial JP and Laville F (1991) Co-word analysis as a tool for describing the network of interactions between basic and technological research: The case of polymer chemsitry. Scientometrics, 22(1), 155–205 for this. 
+# For co-word analysis, calculate a matrix of equivalence scores and look for largest values. I'm drawing on Callon M, Courtial JP and Laville F (1991) Co-word analysis as a tool for describing the network of interactions between basic and technological research: The case of polymer chemsitry. _Scientometrics_, 22(1), 155–205 for this. 
 # 
 # They write:
 # 
@@ -134,7 +135,7 @@ cols = cow_df1.columns.tolist()
 
 labels = {cols.index(l):l for l in cols}
 pos = nx.spring_layout(pre_90_nx)
-fig = matplotlib.pyplot.gcf()
+fig = plt.gcf()
 fig.set_size_inches(12.5,12.5)
 fig.set_label('Pre-1990 keywords and their relations')
 
@@ -153,24 +154,7 @@ nx.draw(pre_90_nx, pos=pos, alpha=0.5, node_size=50, with_labels=True, labels=la
 df_pre2 = df[(df.PY <= 1995) & (df.PY >1990)]
 keys_90_95 = ml.keyword_counts(df_pre2)
 print('There are %s keywords in the 1990-95 literature' % len(keys_90_95))
-
-# <codecell>
-
-cow_df2 = ml.coword_matrix(df_pre2,keys_90_95.keys())
-arry = cow_df2.as_matrix()
-np.fill_diagonal(arry, 0)
-pre_95_nx = nx.from_numpy_matrix(arry)
-cols = cow_df2.columns.tolist()
-
-# <codecell>
-
-labels = {cols.index(l):l for l in cols}
-pos = nx.spring_layout(pre_95_nx)
-fig = matplotlib.pyplot.gcf()
-fig.set_size_inches(10.5,10.5)
-fig.set_label('Pre-1995 keywords and their relations')
-
-nx.draw(pre_95_nx, pos=pos, alpha=0.5, node_size=50, with_labels=False, labels=labels)
+ml.draw_network_by_years(df, 1990,1995, True, 12)
 
 # <markdowncell>
 
@@ -195,8 +179,8 @@ len(labels_trimmed)
 # <codecell>
 
 fig = matplotlib.pyplot.gcf()
-fig.set_size_inches(12.5,12.5)
-nx.draw(pre_95_nx_trim,  alpha=0.5, node_size=50, with_labels=True, labels= labels_trimmed)
+fig.set_size_inches(14.5,14.5)
+nx.draw_graphviz(pre_95_nx_trim,  alpha=0.5, node_size=50, with_labels=True, labels= labels_trimmed)
 
 # <markdowncell>
 
@@ -206,6 +190,75 @@ nx.draw(pre_95_nx_trim,  alpha=0.5, node_size=50, with_labels=True, labels= labe
 # <markdowncell>
 
 # The presence of these particular algorithms -- neural networks, decision tree and id3 would be worth tracking more over time. These techniques might need to be treat in their own right. 
+
+# <markdowncell>
+
+# ## From 1995-2000: the emergence of SVM?
+
+# <codecell>
+
+ml_2000 = ml.draw_network_by_years(df,1995, 2000, False, 0)
+ml_2000.number_of_nodes()
+
+# <codecell>
+
+ml.trim_draw_network(ml_2000, 30)
+
+# <markdowncell>
+
+# ## 2000-2005
+
+# <codecell>
+
+ml_net_2002 = ml.draw_network_by_years(df, 2000, 2002, False, 0)
+
+# <codecell>
+
+ml_net_2004 = ml.draw_network_by_years(df, 2002, 2004, False, 0)
+
+# <codecell>
+
+df_sample = df.ix[random.sample(df.index, 5000)]
+
+# <codecell>
+
+ml_net_2008 = ml.draw_network_by_years(df_sample, 2006, 2008, False, 0)
+
+# <codecell>
+
+len(ml_net_2008.nodes())
+
+# <codecell>
+
+ml_net_2008.nodes()[1]
+
+# <codecell>
+
+ml_net_2008_tr = ml.trim_draw_network(ml_net_2008, 30)
+
+# <codecell>
+
+ml_net_2010 = ml.draw_network_by_years(df, 2008, 2010, False, 0)
+
+# <codecell>
+
+ml_net_2012 = ml.draw_network_by_years(df, 2010, 2012, False, 0)
+
+# <codecell>
+
+ml_net_2006 = ml.draw_network_by_years(df, 2004, 2006, False, 0)
+
+# <codecell>
+
+ml_net_2002_tr = ml.trim_draw_network(ml_net_2002, 20)
+
+# <codecell>
+
+ml_net_2004_tr = ml.trim_draw_network(ml_net_2004, 30)
+
+# <codecell>
+
+ml_net_2006_tr = ml.trim_draw_network(ml_net_2006, 50)
 
 # <markdowncell>
 

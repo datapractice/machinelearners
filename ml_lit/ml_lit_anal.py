@@ -8,7 +8,7 @@ import os
 import networkx as nx
 import numpy as np
 import operator
-    
+import matplotlib.pyplot as plt    
 
 def load_records(data_dir):
     """Return dataframe of all records, 
@@ -53,9 +53,7 @@ def clean_topics(wos_df):
         'support vector machine')
     wos_df.topics  = wos_df.topics.str.replace('support vector machine(\w*)', 
         'support vector machine')
-    wos_df.topics = wos_df.topics.str.replace('artificial neural network', 
-        'neural network')
-    wos_df.topics = wos_df.topics.str.replace('neural net\b', 
+    wos_df.topics = wos_df.topics.str.replace('(artificial neural network)|(neural networks)|(neural net\b)', 
         'neural network')
     wos_df.topics = wos_df.topics.str.replace('decision tree(.*)', 'decision tree')
 
@@ -279,3 +277,68 @@ def find_citation(wos_df, ref):
         ref_other = ref_parts[2]
     citing_refs = [ut for (refs,ut) in zip(wos_df['cited_refs'], wos_df.index.tolist()) for r in refs if  (ref_auth in r) & (ref_year in r) & (ref_other in r) ]
     return wos_df.ix[citing_refs]
+
+def draw_network_by_years(df, start_year, end_year, draw, trim):
+
+    """ Constructs and draws the co-word networks for the years
+    Parameters
+    -----------------------------------------
+    df: WoS references
+    start_year:
+    end_year:
+    draw: boolean for drawing or not
+    trim: degree of nodes to include in the graph
+
+    Returns
+    ----------------------------------
+    coword networkx object
+    """
+
+    df_sub = df[(df.PY> start_year) & (df.PY <= end_year)]
+    keys = keyword_counts(df_sub)
+    
+    print('Calculating co-word matrix')
+    coword_df = coword_matrix(df_sub,keys.keys())
+    
+    coword_array = coword_df.as_matrix()
+    np.fill_diagonal(coword_array, 0)
+    coword_net  = nx.from_numpy_matrix(coword_array)
+    col_names = coword_df.columns.tolist()
+    labels = {col_names.index(l):l for l in col_names}
+    nx.set_node_attributes(coword_net, 'keyword', labels)
+    nx.set_node_attributes(coword_net, 'between_central', nx.betweenness_centrality(coword_net))
+    if trim > 0:
+        coword_net = trim_degrees(coword_net, trim)
+        labels = {n:labels[n] for n in coword_net.nodes()}
+    if draw:
+        pos = nx.spring_layout(coword_net)
+        fig = plt.gcf()
+        fig.set_size_inches(12.5,12.5)
+        fig.set_label('Pre-%s keywords and their relations'%end_year)
+        print('drawing the network .... ')
+        nx.draw(coword_net, pos=pos, alpha=0.5, 
+            node_size=nx.get_node_attributes(coword_net, 'between_central'), with_labels=True, labels=labels)
+    return coword_net
+
+def trim_draw_network(coword_net, trim):
+
+    """ Trims and draws the co-word networks for the years
+    
+    Parameters
+    -----------------------------------------
+    coword_net: networkx coword Graph
+    trim: degree of nodes to include in the graph
+
+    Returns
+    ----------------------------------
+    coword networkx object
+    """
+    coword_net = trim_degrees(coword_net, trim)
+    labels = nx.get_node_attributes(coword_net, 'label')
+    pos = nx.spring_layout(coword_net)
+    fig = plt.gcf()
+    fig.set_size_inches(12.5,12.5)
+    print('drawing the network .... ')
+    nx.draw(coword_net, pos=pos, alpha=0.5, 
+        node_size=100* nx.get_node_attributes(coword_net, 'between_central'), with_labels=True, labels=labels)
+    return coword_net
