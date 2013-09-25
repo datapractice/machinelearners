@@ -19,6 +19,7 @@ import networkx as nx
 import itertools
 import matplotlib.pyplot as plt
 import numpy as np
+import collections
 
 # <markdowncell>
 
@@ -207,6 +208,8 @@ af_counts = {de:af_all.count(de) for de in af_set}
 af_counts_sorted = sorted(af_counts.iteritems(), key = operator.itemgetter(1), reverse=True)
 af_counts_sorted[0:50]
 
+# <codecell>
+
 # these still need cleaning -- can see some duplicates
 #To check out some of these
 
@@ -237,6 +240,20 @@ df[['AU', 'TI', 'TC', 'PY', 'ID', 'DE']][df.TC>500].sort('TC', ascending=False)
 # <codecell>
 
 df.ix[df.TC == df.TC.max(), 51:]
+
+# <markdowncell>
+
+# But this doesn't say who has been cited most  in the literature. There are around 350,000 unique references cited in these papers, amongst 650,000 total citations. 
+
+# <codecell>
+
+all_refs = [ref for refs in df.cited_refs for ref in refs]
+ref_collection = collections.Counter(all_refs)
+ref_collection.most_common(n=20)
+
+# <codecell>
+
+ref_collection.has_key('hastie t, 2008, elements stat learni')
 
 # <markdowncell>
 
