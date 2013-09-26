@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"bet",
+				"between_central"
+			],
+			[
+				"cow",
+				"coword_net	statement"
+			],
+			[
+				"graph",
+				"Graph"
+			],
+			[
+				"netwo",
+				"networkx"
+			],
+			[
+				"tita",
+				"titanic_rp"
+			],
+			[
 				"iris",
 				"iris_tree"
 			],
@@ -26,10 +46,6 @@
 			[
 				"co",
 				"coword_m	statement"
-			],
-			[
-				"cow",
-				"coword_matrix	function"
 			],
 			[
 				"start",
@@ -200,10 +216,6 @@
 				"fields_to_use"
 			],
 			[
-				"graph",
-				"graph_sra_term"
-			],
-			[
 				"sra_",
 				"sra_xml"
 			],
@@ -247,7 +259,7 @@
 			"file": "ch1_learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 73736,
+				"buffer_size": 74038,
 				"line_ending": "Unix"
 			}
 		},
@@ -255,7 +267,7 @@
 			"file": "ch2_curves/ch2_curves_function.rmd",
 			"settings":
 			{
-				"buffer_size": 74337,
+				"buffer_size": 74379,
 				"line_ending": "Unix"
 			}
 		},
@@ -263,32 +275,7 @@
 			"file": "ch3_dimensionality/ch3_dimensional_exuberance.rmd",
 			"settings":
 			{
-				"buffer_size": 42080,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "ch3_dimensionality/ch3_dimensional_exuberance.md",
-			"settings":
-			{
-				"buffer_size": 40435,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/mackenza/Documents/notes/Breiman_Friedman.md",
-			"settings":
-			{
-				"buffer_size": 2002,
-				"line_ending": "Unix",
-				"name": "Breiman & Friedman"
-			}
-		},
-		{
-			"file": "ch3_dimensionality/tree.py",
-			"settings":
-			{
-				"buffer_size": 1772,
+				"buffer_size": 51366,
 				"line_ending": "Unix"
 			}
 		},
@@ -301,10 +288,43 @@
 			}
 		},
 		{
+			"file": "ch5_probability/ch5_naive_informed.rmd",
+			"settings":
+			{
+				"buffer_size": 224,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/Breiman_Friedman.md",
+			"settings":
+			{
+				"buffer_size": 2716,
+				"line_ending": "Unix",
+				"name": "Breiman & Friedman"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/mitchell_machine_learning_2007.mdown",
+			"settings":
+			{
+				"buffer_size": 243,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ch3_dimensionality/tree.py",
+			"settings":
+			{
+				"buffer_size": 1772,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "ml_lit/ml_lit_anal.py",
 			"settings":
 			{
-				"buffer_size": 9385,
+				"buffer_size": 12038,
 				"line_ending": "Unix"
 			}
 		},
@@ -345,7 +365,7 @@
 			"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 			"settings":
 			{
-				"buffer_size": 2200,
+				"buffer_size": 2605,
 				"line_ending": "Unix"
 			}
 		},
@@ -353,7 +373,7 @@
 			"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
 			"settings":
 			{
-				"buffer_size": 3619,
+				"buffer_size": 3973,
 				"line_ending": "Unix"
 			}
 		},
@@ -420,7 +440,7 @@
 			"file": "references/machine_learning.bib",
 			"settings":
 			{
-				"buffer_size": 40591,
+				"buffer_size": 41598,
 				"line_ending": "Unix"
 			}
 		}
@@ -432,23 +452,27 @@
 		"selected_items":
 		[
 			[
+				"set",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pan",
+				"Pandoc: Render Markdown to temp PDF and View"
+			],
+			[
 				"pand",
 				"Pandoc: Render Markdown to temp PDF and View"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
 			],
 			[
 				"and",
 				"Pandoc: Render Markdown to temp PDF and View"
 			],
 			[
-				"set",
-				"Set Syntax: Markdown"
-			],
-			[
 				"pdf",
-				"Pandoc: Render Markdown to temp PDF and View"
-			],
-			[
-				"pan",
 				"Pandoc: Render Markdown to temp PDF and View"
 			],
 			[
@@ -544,10 +568,6 @@
 				"Set Syntax: LaTeX"
 			],
 			[
-				"mark",
-				"Set Syntax: Markdown"
-			],
-			[
 				"set pyth",
 				"Set Syntax: Python"
 			],
@@ -584,13 +604,17 @@
 				"Set Syntax: R"
 			]
 		],
-		"width": 575.0
+		"width": 449.0
 	},
 	"console":
 	{
 		"height": 290.0,
 		"history":
 		[
+			"sys.path.append('/home/mackenza/Documents/data_intensive/book/ml_lit')",
+			"sys.path",
+			"sys.path.append('ml_lit')",
+			"import sys",
 			"import ml_lit_anal",
 			"sys.path.append('/home/mackenza/Documents/data_intensive/book/ml_lit')",
 			"import ml_lit_anal",
@@ -640,6 +664,12 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd",
+		"/home/mackenza/Documents/data_intensive/book/data_book.sublime-project",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/elements.sublime-snippet",
+		"/home/mackenza/gdrive/Socialising Big Data/Collaboratory1_DNA_Data/todo_list.txt",
+		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.md",
+		"/home/mackenza/Documents/notes/mitchell_machine_learning_2007.mdown",
 		"/usr/local/lib/python2.7/dist-packages/pandas-0.12.0-py2.7-linux-x86_64.egg/pandas/core/series.py",
 		"/home/mackenza/.config/sublime-text-3/Packages/Jedi - Python autocompletion/Default.sublime-keymap",
 		"/home/mackenza/Documents/data_intensive/book/ml_lit/ML_literature.py",
@@ -649,7 +679,6 @@
 		"/home/mackenza/.config/sublime-text-3/Packages/User/myknitr.sublime-build",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/mackenza/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.md",
 		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/tree.md",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/kcf.sublime-snippet",
 		"/home/mackenza/C:\\nppdf32Log\\debuglog.txt",
@@ -671,11 +700,9 @@
 		"/home/mackenza/.cache/.fr-hmwA6d/knitr-Markdown.sublime-build",
 		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.pdf",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/R.sublime-snippet",
-		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd",
 		"/home/mackenza/Documents/data_intensive/book/ml_lit/data/pattern_recognition_WOS/savedrecs(86).txt",
 		"/home/mackenza/.cache/.fr-6rFbxj/pandoc-1.11.1/INSTALL",
 		"/home/mackenza/.cache/.fr-uxwHMH/pandoc-1.11.1/README",
-		"/home/mackenza/Documents/data_intensive/book/data_book.sublime-project",
 		"/home/mackenza/.cache/.fr-LeECTp/README.mdown",
 		"/home/mackenza/.cache/.fr-qK7GaY/Pandown Markdown.sublime-build",
 		"/home/mackenza/.cache/.fr-qK7GaY/pandoc-config.json",
@@ -764,20 +791,18 @@
 		"/home/mackenza/R/igem/igem.sublime-workspace",
 		"/home/mackenza/Documents/data_intensive/book/proposal2.mdown",
 		"/var/tmp/kdecache-mackenza/krun/8479.0.nbt.2495.html",
-		"/home/mackenza/Documents/data_intensive/ngs_data_topography/ngs_paper/test.md",
-		"/home/mackenza/Documents/data_intensive/ngs_data_topography/ngs_paper/test.rmd",
-		"/home/mackenza/R/tips.R",
-		"/home/mackenza/R/ngs/data/xml/study/SRP002001.xml"
+		"/home/mackenza/Documents/data_intensive/ngs_data_topography/ngs_paper/test.md"
 	],
 	"find":
 	{
-		"height": 33.0
+		"height": 31.0
 	},
 	"find_in_files":
 	{
 		"height": 105.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -785,6 +810,19 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"feature",
+			"artificial",
+			"nomenclature",
+			"quinlan_induction_1986",
+			"domingos_few_2012",
+			"classification",
+			"bogost_alien_2012",
+			"matplotlib.pyplo",
+			"matplotlib",
+			"ml.",
+			"iris_tree",
+			"breiman_cart_1983",
+			"CART",
 			"ir.rp",
 			"rp",
 			"    if wos_df.columns.tolist().count('CR') > 0:\n",
@@ -899,20 +937,7 @@
 			"ena",
 			"Cochrane",
 			"center_name",
-			"/>\n",
-			"center_name",
-			"submission",
-			"subsets",
-			"# ",
-			"sum",
-			"stud_acc",
-			"samples",
-			".df",
-			"study_summary",
-			"--",
-			"study_names",
-			"1000",
-			"microbiome"
+			"/>\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -920,6 +945,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"breiman_cart_1984",
 			"_iris_",
 			"wos_df",
 			"df",
@@ -934,7 +960,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -971,26 +997,26 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 73736,
+						"buffer_size": 74038,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								839,
-								839
+								1762,
+								1762
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 253.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1001,15 +1027,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 74337,
+						"buffer_size": 74379,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1978,
-								1978
+								19366,
+								19366
 							]
 						],
 						"settings":
@@ -1018,7 +1044,7 @@
 							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 35.0,
+						"translation.y": 5460.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1029,15 +1055,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 42080,
+						"buffer_size": 51366,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								34857,
-								34857
+								12988,
+								12988
 							]
 						],
 						"settings":
@@ -1048,63 +1074,60 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 11643.0,
+						"translation.y": 4487.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "ch3_dimensionality/ch3_dimensional_exuberance.md",
+					"file": "ch4_subjects/ch4_learning_subjects.rmd",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 40435,
+						"buffer_size": 40264,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5716,
-								5716
+								980,
+								980
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1250.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/home/mackenza/Documents/notes/Breiman_Friedman.md",
+					"file": "ch5_probability/ch5_naive_informed.rmd",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2002,
+						"buffer_size": 224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1198,
-								1198
+								224,
+								224
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"auto_name": "Breiman & Friedman",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1114,6 +1137,63 @@
 				},
 				{
 					"buffer": 6,
+					"file": "/home/mackenza/Documents/notes/Breiman_Friedman.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2716,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								837,
+								837
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "Breiman & Friedman",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 232.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/mackenza/Documents/notes/mitchell_machine_learning_2007.mdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "ch3_dimensionality/tree.py",
 					"semi_transient": false,
 					"settings":
@@ -1143,48 +1223,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "ch4_subjects/ch4_learning_subjects.rmd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 40264,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								980,
-								980
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "ml_lit/ml_lit_anal.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9385,
+						"buffer_size": 12038,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9356,
-								9356
+								4640,
+								4640
 							]
 						],
 						"settings":
@@ -1195,13 +1247,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5775.0,
+						"translation.y": 2622.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "ml_lit/web_of_science.R",
 					"semi_transient": false,
 					"settings":
@@ -1229,7 +1281,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "/home/mackenza/Documents/notes/Xue_SVM: Support Vector Machines_2009.md",
 					"semi_transient": false,
 					"settings":
@@ -1262,7 +1314,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "/home/mackenza/R/web_of_science.R",
 					"semi_transient": false,
 					"settings":
@@ -1290,7 +1342,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "/home/mackenza/R/phrase_structures.R",
 					"semi_transient": false,
 					"settings":
@@ -1319,20 +1371,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2200,
+						"buffer_size": 2605,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2200,
-								2200
+								2171,
+								2171
 							]
 						],
 						"settings":
@@ -1341,41 +1393,41 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 117.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3619,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1844,
-								1844
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 48.0,
+						"translation.y": 186.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 15,
+					"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3973,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2034,
+								2034
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 393.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
 					"file": "/home/mackenza/Documents/notes/Stengers_d&G_2005.txt",
 					"semi_transient": false,
 					"settings":
@@ -1403,7 +1455,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
 					"semi_transient": false,
 					"settings":
@@ -1432,7 +1484,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"file": "/home/mackenza/Documents/notes/bogost_alien_2012.md",
 					"semi_transient": false,
 					"settings":
@@ -1461,7 +1513,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1489,7 +1541,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 					"semi_transient": false,
 					"settings":
@@ -1518,7 +1570,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "references/data_forms_thought.bib",
 					"semi_transient": false,
 					"settings":
@@ -1530,8 +1582,8 @@
 						"selection":
 						[
 							[
-								1590,
-								1590
+								22791,
+								22791
 							]
 						],
 						"settings":
@@ -1541,13 +1593,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 794.0,
+						"translation.y": 14180.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 22,
 					"file": "references/refs.bib",
 					"semi_transient": false,
 					"settings":
@@ -1576,20 +1628,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "references/machine_learning.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 40591,
+						"buffer_size": 41598,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								36390,
-								36390
+								40626,
+								40626
 							]
 						],
 						"settings":
@@ -1599,7 +1651,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 17443.0,
+						"translation.y": 19723.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1609,7 +1661,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 41.0
+		"height": 39.0
 	},
 	"input":
 	{
@@ -1645,7 +1697,7 @@
 	"project": "data_book.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1699,23 +1751,35 @@
 		[
 			[
 				"",
-				"~/R/metacommunities/metacommunities.sublime-project"
+				"~/Documents/reviews/current_reviews.sublime-project"
 			]
 		],
 		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 392.0,
+		"height": 243.0,
 		"selected_items":
 		[
 			[
-				"mor",
-				"morgan_problems_1963"
+				"qui",
+				"quinlan_induction_1986"
+			],
+			[
+				"domin",
+				"domingos_few_2012"
+			],
+			[
+				"bog",
+				"bogost_alien_2012"
 			],
 			[
 				"bre",
-				"breiman_cart:_1983"
+				"breiman_cart:_1984"
+			],
+			[
+				"mor",
+				"morgan_problems_1963"
 			],
 			[
 				"doyl",

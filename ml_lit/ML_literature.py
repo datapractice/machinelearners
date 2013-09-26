@@ -38,6 +38,7 @@ print('There are %s records in the dataset'%df.shape[0])
 
 #clean topics
 df = ml.clean_topics(df)
+df = ml.clean_fields(df)
 
 # <codecell>
 
@@ -67,7 +68,6 @@ df.PY.hist(bins=len(df.PY.unique()))
 # <codecell>
 
 #actually this is more about fields than topics
-df['fields'] = df.SC.dropna().str.lower().str.split('; ')
 
 all_fields = sorted([e  for el in df.fields.dropna() for e in el])
 fields_set = set(all_fields)
@@ -120,13 +120,22 @@ def sorted_map(map): return sorted(map.iteritems(), key=lambda (k,v): (-v,k))
 
 # <codecell>
 
-gr_f = nx.DiGraph()
+df = ml.clean_fields(df)
+gr_f = nx.Graph()
 gr_f.add_edges_from([i for de in df.fields.dropna() for i in itertools.combinations(de,2)])
 
 # <codecell>
 
-core = ml.trim_degrees(gr_f, 10)
+core = ml.trim_degrees(gr_f, 16)
+#core = ml.trim_edges(core, 3)
 len(core)
+fig = plt.gcf()
+fig.set_size_inches(12,12)
+nx.draw_graphviz(core, width=0.5,
+                 font_size=9,
+                 alpha = 0.8,
+                 node_size = [s*100 for s in nx.degree(core).values()],
+                 node_color = [s for s in nx.degree(core).values()])
 
 # <codecell>
 
@@ -150,13 +159,13 @@ between_cs
 # <codecell>
 
 eigen_c = nx.eigenvector_centrality(core)
-eigen_cs = sorted_map(eigen_c)
+eigen_cs = ml.sorted_map(eigen_c)
 eigen_cs
 
 # <codecell>
 
 pr = nx.pagerank(core)
-pr_s = sorted_map(pr)
+pr_s = ml.sorted_map(pr)
 pr_s
 
 # <codecell>
@@ -186,7 +195,7 @@ elite_group[['degree', 'closeness', 'betweenness', 'eigenvector', 'pagerank']].p
 
 # <codecell>
 
-elite_group[['betweenness', 'eigenvector']].plot(kind='barh')
+elite_group[['degree','betweenness', 'eigenvector']].plot(kind='barh')
 
 # <markdowncell>
 
@@ -253,7 +262,11 @@ ref_collection.most_common(n=20)
 
 # <codecell>
 
-ref_collection.has_key('hastie t, 2008, elements stat learni')
+
+sq =gs.ScholarQuerier(author = 'Ross J Quinlan', count=50)
+sq.query('')
+print(ml.sorted_map({a['title']:a['num_citations'] for a in sq.articles}))
+{a['title']:a['url'] for a in sq.articles}
 
 # <markdowncell>
 
@@ -516,14 +529,14 @@ ftdf.head()
 
 # <codecell>
 
-gr = nx.DiGraph()
+gr = nx.Graph()
 
 #[i for i in itertools.combinations(de, 2) for de in df.topics[:100]]
 gr.add_edges_from([i for de in df.topics.dropna()[0:200] for i in itertools.combinations(de,2)])
 
 # <codecell>
 
-gr2 = nx.DiGraph()
+gr2 = nx.Graph()
 [gr2.add_edge(f[0],t[0]) for f,t in zip(ftdf.fields, ftdf.topics) if f is not NaN and t is not NaN]
 gr2.size()
 
@@ -568,7 +581,7 @@ nsizes = [n*10 for n in d.values() if n >remove]
 
 f = plt.figure(figsize=(10,10))
 
-nx.draw_spring(g2, alpha=0.6, k=0.6,node_sizes = nsizes)
+nx.draw_graphviz(g2, alpha=0.6, k=0.6,node_sizes = nsizes)
 
 # <markdowncell>
 
@@ -602,7 +615,7 @@ disc = bi.projected_graph(tx, g2.nodes())
 
 # <codecell>
 
-sorted(disc.degree().iteritems(), key= operator.itemgetter(1),reversed= True)
+sorted(disc.degree().iteritems(), key= operator.itemgetter(1))
 
 # <markdowncell>
 
@@ -638,5 +651,5 @@ mlt.tokens[0:20]
 
 # <codecell>
 
-df.NR.value_counts()
+df.NR.hist(bins=200)
 

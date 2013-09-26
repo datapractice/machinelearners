@@ -8,6 +8,7 @@ import os
 import networkx as nx
 import numpy as np
 import operator
+import collections
 import math
 import matplotlib.pyplot as plt    
 
@@ -38,6 +39,13 @@ def load_records(data_dir):
 
     return wos_df
 
+def clean_fields(wos_df):
+
+    """ Returns dataframe with a new field 'field' that lists
+    the fields for each reference"""
+
+    wos_df['fields'] = wos_df.SC.dropna().str.lower().str.split('; ')
+    return wos_df
 
 def clean_topics(wos_df):
     
@@ -69,6 +77,15 @@ def keyword_counts(wos_df):
     de_set = set(de_all)
     de_counts = {de:de_all.count(de) for de in de_set}
     return de_counts
+
+def citation_counts(wos_df):
+
+    """Returns a dictionary with citations in the cited references counted"""
+
+    all_refs = [ref for refs in wos_df.cited_refs for ref in refs]
+    ref_collection = collections.Counter(all_refs)
+    
+    return ref_collection
 
 
 def manual_topic_classifier(wos_df, existing_topic_classes, topic_counts_sorted, start = 0, count=100, ):
@@ -135,6 +152,41 @@ def coword_matrix(wos_df, keys):
     cow_m = np.dot(np.transpose(cow), cow)
     cow_wos_df = pd.DataFrame(cow_m, columns=keys, index=keys)
     return cow_wos_df
+
+def cofield_matrix(wos_df, fields):
+
+    """ Implementation of Callon style co-word analysis of  the 
+    Wos DE field -- the keywords field in the database
+    
+    Parameters
+    ------------------------------------------------
+    wos_df: the WoS literature DataFrame
+    fields: fields to use
+    """
+
+    fields_all = wos_df.fields
+    # create document term matrix of keywords
+    fields_all = fields_all.dropna()
+    cofield = np.zeros((len(fields_all), len(fields)))
+
+    # hate doing these nested for loops but 
+    #I couldn't get the list comprehensions working properly
+    
+    for row in range(0, len(fields_all)):
+        top = fields_all.iget(row)
+        hits = list()
+        for topic in top:
+            if fields.count(topic) >0:
+                hits.append(fields.index(topic))
+        cofield[row, hits] = 1
+    
+    #to create cofieldord matrix, use matrix dot product
+    print('finished matrix ... ')
+    cofield_m = np.dot(np.transpose(cofield), cofield)
+    np.fill_diagonal(cofield_m, 0)
+    cofield_wos_df = pd.DataFrame(cofield_m, columns=fields, index=fields)
+    return cofield_wos_df
+
 
 def inclusion_score(cow_wos_df, key1, key2, de_counts):
     """ Calculates  the inclusion score (conditional probability?) of key1
