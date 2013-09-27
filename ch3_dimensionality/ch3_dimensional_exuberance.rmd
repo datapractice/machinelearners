@@ -364,19 +364,30 @@ If we refer back to the formal definition of a classifier in _Classification and
 
 Breiman has added something that was not present in any of the previous definitions of decision trees, whether they were produced by `CART`, `ID3` or `C4.5` (Quinlan's popular techniques of constructing trees): 'independently identically distributed random vectors.' This has a strongly statistical tone, and brings  a series of developments in several decades of research into statistical inference to bear on the problem of classification. Again attention to small details in mathematical typography can illuminate these shifts: the presence of the curly bracks $\{\}$ points to the existence of a _set_ or collection; the capitalised Greek letter $\Theta$ in statistical texts normal attests to something that has a multiple and often somewhat probabilistic mode of existence (in a later chapter I discuss probability and statistical distributions in much more detail). 
 
-How does this injection of statistical technique change machine learning? From the earlier decision tree techniques of the 1960s  -- the Automatic Interaction Detector and the Concept Learning System - automated repetition of tree construction had been central. In the early 1980s work, this automation was refined and reshaped by a certain amount of formalism -- the introduction of functions such as the Gini diversity index and measures of information entropy [TBA - ref] -- 
-TBC -- more on the random selection of features  -- [TBC -- hwat Breiman actually drew on]
+How does this injection of statistical techniques based on 'independent identically distributed random vectors' change machine learning? From the earlier decision tree techniques of the 1960s  -- the Automatic Interaction Detector and the Concept Learning System - automated repetition of tree construction had been central. In the early 1980s work, this automation was refined and reshaped by a certain amount of formalism -- the introduction of functions such as the Gini diversity index and measures of information entropy ('cross-entropy' [@hastie_elements_2009, 309]). Some measures arrived via statistics, and others via information theory and computer science. Random forests and similar methods developed in the 1990s added a second level of formalisation working to reduce the _variance_ or the 'spread' of the predictions produced by decision trees. Practically, techniques based on practices of either _bagging_ or _boosting_ all bring a further level of recursivity to machine learning techniques. The random forest algorithm constructs a large number of shallow decision trees by randomly sampling a subset of variables as the basis of a tree and then building the tree. As Breiman writes: 'The forests studied here consist of using randomly selected inputs or combinations of inputs at each node to grow each tree' [@breiman_random_2001, 10].  These trees 
 
 ```{r titanic, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA } 
-
-    titanic = read.csv('data/titanic_train.csv')
+    library(randomForest)
+    titanic_train = read.csv('data/titanic_train.csv')
+    titanic_test = read.csv('data/titanic_test.csv')
     head(titanic)
-    titanic_rp = rpart(Survived~Sex+Age+SibSp+Parch+Fare+Embarked, titanic)    
+    titanic_rp = rpart(Survived~Sex+Age+SibSp+Parch+Pclass + Fare+Embarked, titanic_train)    
     summary(titanic_rp)
     plot(titanic_rp)
     text(titanic_rp, cex=0.8, use.n=TRUE)
 
+    #now the random forest
+    #remove missing values
+    titanic_train_r = na.omit(titanic_train)
+    titanic_rf=randomForest(Survived~Sex+Age+SibSp+Pclass + Parch+Fare+Embarked, titanic_train_r, proximity=TRUE)
+    print(titanic_rf)
+    print(round(importance(titanic_rf), 2))
+    MDSplot(fac=titanic_train_r$Survived, titanic_rf)
+
 ```
+This process is illustrated by the output of the `R` library `randomForest` at work on the `titanic` data, a dataset whose provenance and character I will discuss in greater detail in the next chapter. In this example, both a decision tree and a random forest classify the passengers of the titanic according to whether they survived or not.  The dataset is not very large as it only includes `r dim(titanic_train)[1]` passengers.  The decision tree chooses to split according to `r titanic_rp$variable.importance`. In the decision tree, `sex` and `fare` are followed by `pclass`, the passenger class.  The random forest model suggests that sex, followed by amount of fare paid, then age, then passenger class are the most important predictors of survival versus non-survivors from the Titanic: `r titanic_rf$importance`. How is it that the importance of variables can shift as we move from tree to forest? 
+
+The summary of the titanic random forest refers to 500 decision trees, and it also reports that it chose two of the six variables in the dataset in constructing each tree. How can these reduced decision trees produce better predictions, such that random forests have become one of the most popular machine learning models?  The so-called 'proximity plot' for the random forest grown on the `titanic` data suggests something of what happens here. As Hastie et. al. comment, 'he ideas is that even though the data may be high-dimensional, involved mixed variables, etc., the promixity plot gives an indication of which observations are effectively close together in the eyes of the random forest classifier' [@hastie_elements_2009, 595].
 
 notion of pattern involves the concept of different modes of togetherness MoT, 195-6
 

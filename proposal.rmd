@@ -1,5 +1,10 @@
 # Book Proposal
 
+## TODO
+
+- rewrite the chapter outline
+- highlight the scientific/technical literature as key working material
+
 ## Into the data: modes of machine thought
 
 Adrian Mackenzie
