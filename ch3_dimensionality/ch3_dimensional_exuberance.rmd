@@ -370,7 +370,7 @@ How does this injection of statistical techniques based on 'independent identica
     library(randomForest)
     titanic_train = read.csv('data/titanic_train.csv')
     titanic_test = read.csv('data/titanic_test.csv')
-    head(titanic)
+    head(titanic_train)
     titanic_rp = rpart(Survived~Sex+Age+SibSp+Parch+Pclass + Fare+Embarked, titanic_train)    
     summary(titanic_rp)
     plot(titanic_rp)
@@ -379,20 +379,20 @@ How does this injection of statistical techniques based on 'independent identica
     #now the random forest
     #remove missing values
     titanic_train_r = na.omit(titanic_train)
+    titanic_train_r$Survived = factor(titanic_train_r$Survived)
     titanic_rf=randomForest(Survived~Sex+Age+SibSp+Pclass + Parch+Fare+Embarked, titanic_train_r, proximity=TRUE)
     print(titanic_rf)
     print(round(importance(titanic_rf), 2))
-    MDSplot(fac=titanic_train_r$Survived, titanic_rf)
+    MDSplot(fac=titanic_train_r$Survived, titanic_rf, palette = c('red', 'green'))
 
 ```
 This process is illustrated by the output of the `R` library `randomForest` at work on the `titanic` data, a dataset whose provenance and character I will discuss in greater detail in the next chapter. In this example, both a decision tree and a random forest classify the passengers of the titanic according to whether they survived or not.  The dataset is not very large as it only includes `r dim(titanic_train)[1]` passengers.  The decision tree chooses to split according to `r titanic_rp$variable.importance`. In the decision tree, `sex` and `fare` are followed by `pclass`, the passenger class.  The random forest model suggests that sex, followed by amount of fare paid, then age, then passenger class are the most important predictors of survival versus non-survivors from the Titanic: `r titanic_rf$importance`. How is it that the importance of variables can shift as we move from tree to forest? 
 
-The summary of the titanic random forest refers to 500 decision trees, and it also reports that it chose two of the six variables in the dataset in constructing each tree. How can these reduced decision trees produce better predictions, such that random forests have become one of the most popular machine learning models?  The so-called 'proximity plot' for the random forest grown on the `titanic` data suggests something of what happens here. As Hastie et. al. comment, 'he ideas is that even though the data may be high-dimensional, involved mixed variables, etc., the promixity plot gives an indication of which observations are effectively close together in the eyes of the random forest classifier' [@hastie_elements_2009, 595].
+The summary of the titanic random forest refers to 500 decision trees, and it also reports that it chose two of the six variables in the dataset in constructing each tree. How can these reduced decision trees produce better predictions, such that random forests have become one of the most popular machine learning models?  The so-called 'proximity plot' for the random forest grown on the `titanic` data suggests something of what happens here. As Hastie et. al. comment, 'the idea is that even though the data may be high-dimensional, involved mixed variables, etc., the promixity plot gives an indication of which observations are effectively close together in the eyes of the random forest classifier' [@hastie_elements_2009, 595]. With this plot, it seems that patterns do start to emerge from the data that might be helpful in understanding what happened in a situation. 
 
 notion of pattern involves the concept of different modes of togetherness MoT, 195-6
 
 Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195
-
 ## Neural net
 
 ```{r nnet, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
@@ -413,3 +413,11 @@ On the topic of pattern recognition, the second most highly cited reference in t
     df = df[order(df$TC, decreasing=TRUE),]
     print(head(df$TI))
 ```
+
+## Conclusion
+
+An enormous elephant remains in the room here. The various techniques we have just been discussing -- decision trees, random forests, linear discriminant analysis and support vector machines -- have changed over time. As we've seen, in many cases newer techniques can be seen as recursive applications of machine learning techniques to themselves. The random forest is a higher level formalization of the many decision trees. The decision tree itself algorithmically formalizes earlier hierarchical classification techniques. Similarly, the support vector machine takes the idea of the separating hyperplane and flips the data into a many dimensional space in order to find the linear discriminant or separating plane there.  But across all these conversions, transformations, formalizations and automations, even buoyed up injections of probabilistic reasoning and randomness, one assumption remains almost completely intact: that the process that generated the data itself does not change.  In slightly more philosophical terms, the exuberant multiplication of dimensions in the data opens up huge internal vistas, canyons and paths through the data, but cannot countenance becoming in data.  At the same time, and perhaps machine learning is not  at all unusual in this, its own becoming is largely a puzzling encumbrance to it. Could machine learning learning to make sense of itself as anything other than an increasingly powerful mobilisation of techniques? 
+
+There is some grounds on which we might think about this differently. Often machine learning techniques have multiple incarnations and tangled genealogies. Decision trees demsonstrate this kind of phylogeny. The statistical trajectory of their development moves in a different way to the artificial intelligence/computer science version. Even if they end up appearing almost interchangeable in the contemporary data mining literature, the classification trees developed by Friedman/Breiman/Olshen and TBC have a different mode of existence to the ID3/C4.5 decision trees developed by computer scientists such as Quinlan.  Similarly, the kind of probabilistic scaffolding that random forests adds to decision trees is quite distinct from the incorporation by Vapnik of infinite dimensional spaces via the mathematics of kernel functions.  By virtue of these different paths of development, and in the light of the very different modes of moving through data they entail, machine learning techniques themselves incorporate the world in specific ways.  
+
+But how do these sometimes subtle differences in incorporation matter given a massive and often seemingly crushing assimilation of data in the server farms of network media and large enterprises, or in commercial and government surveillance programs? There are massive disparities in scale here. The analytic or predictive power of the US National Security Agency  or Google Search or certain financial trading systems heavily blankets the terrain. These apparatuses are not, I would suggest, easily steered by any persons since the appetite of machine learning for diverse data seems to immediately override existing limits or constraints. But even just understanding the  form of movements through the data we in classification trees, random forests and in support vector machines might help position us differently in relation to these voracious systems. It is hard to know exactly what they are doing, but I'm fairly strongly persuaded that they do not different anything radically different from what we can see in the machine learning literature I have been discussing. The technical expertise of engineers, statisticians and computer scientists are Google, Facebook, Walmart or the NSA has developed in and amongst the same forest of classification systems we encounter in that literature. The popularity of the support vector machine in the last decade is general. The proliferation of decision trees in the 1980s and then random forests in the 2000s is likewise general. These are techniques whose power to generalize generalizes them.  Understanding this power to generalize in terms of its specific material operations is tremendously important TBC. 
