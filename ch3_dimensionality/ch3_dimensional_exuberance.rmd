@@ -393,6 +393,7 @@ The summary of the titanic random forest refers to 500 decision trees, and it al
 notion of pattern involves the concept of different modes of togetherness MoT, 195-6
 
 Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195
+`
 ## Neural net
 
 ```{r nnet, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
@@ -400,6 +401,9 @@ library(nnet)
 ```
 
 ## Support vector machine
+
+TBA -- this section has to deal with the idealism of the plane vs the curviness of the kernel
+It also has to bring in ANW on the pattern  ....
 
 On the topic of pattern recognition, the second most highly cited reference in the ten of thousands of articles and papers is a paper by Cortes and Vapnik [@cortes_support-vector_1995]. 
 
