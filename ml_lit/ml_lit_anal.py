@@ -401,3 +401,43 @@ def trim_draw_network(coword_net, trim):
         with_labels=True, labels=labels)
     fig.show()
     return coword_net
+
+
+    def coword_network(mesh_df, start, end,common_topics): 
+        """
+        constructs a coword network for the years supplied; nodes have an attribute 'topic'
+        
+        Parameters
+        ----------------
+        mesh_df: a dataframe with at least the topics and years columns
+        start: start year
+        end: end year
+        common_topics: the list of the topics to use (not too big, otherwise coword matrix will be huge
+        """
+        cow_df = ml.coword_matrix_years(mesh_df, start, end,common_topics)
+        cow_nx = nx.from_numpy_matrix(cow_df.as_matrix())
+        col_names = cow_df.columns.tolist()
+        labels = {col_names.index(l):l for l in col_names}
+
+        nx.set_node_attributes(cow_nx, 'topic', labels)
+        return cow_nx
+
+    def plot_co_x(cox, start, end, size = (20,20)):
+        
+        """ Plotting function for keyword graphs
+        
+        Parameters
+        --------------------
+        cox: the coword networkx graph; assumes that nodes have attribute 'topic'
+        start: start year
+        end: end year
+        """
+
+        plt.figure(figsize=size)
+        plt.title('Most central nodes in ngs MESH terms %s - %s'%(start,end), fontsize=18)
+        nx.draw_graphviz(cox, with_labels=True, 
+                     alpha = 0.8, width=0.1,
+                     labels = nx.get_node_attributes(cox, 'topic'),
+                     fontsize=9,
+                     node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
+                     node_color = [s for s in nx.degree(cox).values()])

@@ -146,7 +146,7 @@ print(ref_collection.most_common(n=20))
 ```
 The machine learning literature bristles with references to papers in statistics, computer science, artificial intelligence and a swathe of related scientific fields. A very crude citation analysis of the literature suggests that  the top 20 most cited publications in the field have focused on decision trees (Quinlan, Breiman), on support vector machines (Vapnik, Christiani, Cortes, Chang),  machine learning pedagogy (Mitchell, an early textbook written by a computer scientist; Witten, a textbook and software package on data mining; Duda, a textbook on pattern recognition) and somewhat lower, neural networks (Bishop). Across these variations, it is possible to discern some forms of movement, or put simply, movements in machine learning. Briefly and perhaps too crudely summarised, they might be termed a _statistical_ movement, an _imitative_ movement, and an _infinitist_ movement. 
 
-
+[ADD HERE: stuff from python notebook about topics and how they are organised ... including graph?]
 
 The descriptive challenge entailed in tracking these movements was  figured more than a decade ago by Geoffrey Bowker and Susan Leigh Star in their work on classification systems. They wrote then:
 

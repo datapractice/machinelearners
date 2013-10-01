@@ -93,7 +93,7 @@ field_counts_s[0:30]
 
 #the problem is that computer science clutters everything -- get rid of it?
 
-figure = plt.figure(figsize=(10,12))
+figure = plt.figure(figsize=(16,12))
 sp1 = figure.add_subplot(1,2,2)
 
 sp1.hist(df.PY.dropna(), bins=80, alpha=0.6, label= 'Machine Learning Publications by Year')
@@ -129,12 +129,13 @@ gr_f.add_edges_from([i for de in df.fields.dropna() for i in itertools.combinati
 core = ml.trim_degrees(gr_f, 16)
 #core = ml.trim_edges(core, 3)
 len(core)
-fig = plt.gcf()
-fig.set_size_inches(12,12)
-nx.draw_graphviz(core, width=0.5,
+
+plt.figure(figsize=(18,12))
+plt.title('Fields and their relations in machine learning literature', fontsize=18)
+nx.draw_graphviz(core, width=0.4,
                  font_size=9,
-                 alpha = 0.8,
-                 node_size = [s*100 for s in nx.degree(core).values()],
+                 alpha = 0.7,
+                 node_size = [s*5000 for s in nx.degree_centrality(core).values()],
                  node_color = [s for s in nx.degree(core).values()])
 
 # <codecell>
@@ -234,7 +235,7 @@ print({a['title']:a['num_citations'] for a in sq.articles})
 #    -  Klaus Mueller works on medical decisions
 #    -  dzeroski works on induction
 #    -  zhou, zhi-hua at nanjing works on facial recognition
-#    - Ross King works on synthetic biology and proteins
+#    - Ross King works on synthetic biology and proteins, and in particular, the automation of science using AI
 
 # <markdowncell>
 
@@ -248,7 +249,7 @@ df[['AU', 'TI', 'TC', 'PY', 'ID', 'DE']][df.TC>500].sort('TC', ascending=False)
 
 # <codecell>
 
-df.ix[df.TC == df.TC.max(), 51:]
+df.ix[df.TC.idxmax(), 51:]
 
 # <markdowncell>
 
@@ -321,14 +322,26 @@ tech_cleaned.remove('machine learning')
 tech_cleaned.remove('data mining')
 tech_cleaned.remove('pattern recognition')
 
-print(len(set(tech_cleaned)))
+print('Number of different techniques in the literature: %d'%len(set(tech_cleaned)))
+tech_cleaned[0:30]
 #tech_cleaned.count('decision tree')
+
+# <markdowncell>
+
+# ### Domains
+# 
+# If techniques are removed, we are left with domains
+
+# <codecell>
+
+domains = sorted([tech for tech, cl in techniques_domains.iteritems() if cl == 'n'])
+domains[:40]
 
 # <markdowncell>
 
 # # A network of techniques
 # 
-# The idea here is to see how techniques are connected to each other. There are roughly 500 techniques across 23000 references. Some of these references have multiple techniques
+# The idea here is to see how techniques are connected to each other. There are roughly 500 techniques across 23000 references. Some of these references have multiple techniques. Not all techniques are techniques. Some name problems. So as well as removing domains, we need to remove problems. 
 
 # <codecell>
 
@@ -652,4 +665,36 @@ mlt.tokens[0:20]
 # <codecell>
 
 df.NR.hist(bins=200)
+
+# <markdowncell>
+
+# # Keywords of interest
+
+# <codecell>
+
+plt.figure(figsize=(14,6))
+
+key1 = 'generalization'
+k1 = ml.keyword_years(df, key1)
+plt.subplot(141)
+plt.hist(k1.PY, bins=20)
+plt.title(key1)
+
+key2 = 'error'
+k2 = ml.keyword_years(df, key2)
+plt.subplot(142)
+plt.hist(k2.PY, bins=20)
+plt.title(key2)
+
+key3 = 'bootstrap'
+k3 = ml.keyword_years(df, key3)
+plt.subplot(143)
+plt.hist(k3.PY, bins=20)
+plt.title(key3)
+
+key4 = 'bagging'
+k4 = ml.keyword_years(df, key4)
+plt.subplot(144)
+plt.hist(k4.PY, bins=20)
+plt.title(key4)
 
