@@ -123,13 +123,12 @@ def coword_matrix_years(wos_df, start_year, end_year, keys):
 
 def coword_matrix(wos_df, keys):
 
-    """ Implementation of Callon style co-word analysis of  the 
-    Wos DE field -- the keywords field in the database
+    """ Implementation of Callon style co-word analysis of  the keywords field
     
     Parameters
     ------------------------------------------------
-    wos_df: the WoS literature DataFrame
-    keys: keywords to use
+    wos_df: the  literature DataFrame -- doesn't need to be WoS
+    keys: list of all unique keywords  in the literature
     """
 
     topics = wos_df.topics
@@ -146,6 +145,7 @@ def coword_matrix(wos_df, keys):
         for topic in top:
             if keys.count(topic) >0:
                 hits.append(keys.index(topic))
+        # sets all the topics found for this reference to 1
         cow[row, hits] = 1
     
     #to create coword matrix, use matrix dot product
@@ -274,11 +274,14 @@ def sorted_map(keyval):
 def trim_edges(graph, weight=1):
 
     """ Trims all edges with degree less than the parameter.
-    Returns the trimmed graph 
+    Parameters
+    -----------------------------
+    graph: this graph will have edges taken from it
+    weight: remove edges with weight less than this
     """
-    graph_trimmed = nx.Graph()
-    [graph_trimmed.add_edge(f,to, edata) for f, to, edata in graph.edges(data=True) if edata['weight']>weight]
-    return graph_trimmed
+
+    [graph.remove_edge(f,to) for f, to, edata in graph.edges(data=True) if edata['weight']<weight]
+    return graph
 
 def island_method(graph, iterations=5):
     """ 
