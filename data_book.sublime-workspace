@@ -299,7 +299,7 @@
 			"file": "ch3_dimensionality/ch3_dimensional_exuberance.rmd",
 			"settings":
 			{
-				"buffer_size": 62647,
+				"buffer_size": 65427,
 				"line_ending": "Unix"
 			}
 		},
@@ -320,10 +320,7 @@
 			}
 		},
 		{
-			"contents": "# Naive and informed chances\n\n## to put in\n\n- naive bayes, including the ipython notebook\n- n friedman paper -- highly cited on virtues of naive bayes\n- tom mitchell on why Bayes is a good way to think about machine learning\n- Rassmussen & Williams on Gaussian processes",
 			"file": "ch5_probability/ch5_naive_informed.rmd",
-			"file_size": 224,
-			"file_write_time": 130245733965421423,
 			"settings":
 			{
 				"buffer_size": 270,
@@ -334,7 +331,7 @@
 			"file": "/home/mackenza/Documents/notes/wasserman_all_of_stat2003.mdown",
 			"settings":
 			{
-				"buffer_size": 738,
+				"buffer_size": 964,
 				"line_ending": "Unix"
 			}
 		},
@@ -342,7 +339,7 @@
 			"file": "/home/mackenza/Documents/notes/Breiman_2001_andom Forests.md",
 			"settings":
 			{
-				"buffer_size": 453,
+				"buffer_size": 1962,
 				"line_ending": "Unix",
 				"name": "Breiman 2001, Random Forests"
 			}
@@ -351,7 +348,7 @@
 			"file": "/home/mackenza/Documents/notes/Breiman_Friedman.md",
 			"settings":
 			{
-				"buffer_size": 2716,
+				"buffer_size": 2722,
 				"line_ending": "Unix",
 				"name": "Breiman & Friedman"
 			}
@@ -384,7 +381,7 @@
 			"file": "ml_lit/ml_lit_anal.py",
 			"settings":
 			{
-				"buffer_size": 13373,
+				"buffer_size": 14668,
 				"line_ending": "Unix"
 			}
 		},
@@ -671,6 +668,16 @@
 		"height": 290.0,
 		"history":
 		[
+			"os.listdir('.')",
+			"os.dir('.')",
+			"sys.path",
+			"sys.path()",
+			"import sys",
+			"os.dir()",
+			"os.chdir('ch3_dimensionality')",
+			"import os",
+			"setwd('ch3_dimensionality')",
+			"pwd()",
 			"sys.path.append('/home/mackenza/Documents/data_intensive/book/ml_lit')",
 			"sys.path",
 			"sys.path.append('ml_lit')",
@@ -724,6 +731,7 @@
 	},
 	"file_history":
 	[
+		"/tmp/.fr-DNz46C/Order details.txt",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/svm.sublime-snippet",
 		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.md",
 		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/test.rmd",
@@ -850,8 +858,7 @@
 		"/home/mackenza/Documents/notes/dewey_reconstruction_1957.odt",
 		"/home/mackenza/Documents/data_intensive/book/Sources.md",
 		"/home/mackenza/Desktop/drawing-1.svg",
-		"/home/mackenza/Documents/data_intensive/book/markets_algorithms.Rmd",
-		"/home/mackenza/R/igem/igem.sublime-workspace"
+		"/home/mackenza/Documents/data_intensive/book/markets_algorithms.Rmd"
 	],
 	"find":
 	{
@@ -862,6 +869,7 @@
 		"height": 105.0,
 		"where_history":
 		[
+			"/home/mackenza/Documents/data_intensive/book/ml_lit",
 			""
 		]
 	},
@@ -870,6 +878,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"trim_edges",
+			"wasserman_all_2003",
 			"bellman_adaptive_1961",
 			"function",
 			"classifier",
@@ -995,9 +1005,7 @@
 			"img/",
 			"SRA",
 			"')\n",
-			"ERA",
-			"\n",
-			"DRA"
+			"ERA"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1020,7 +1028,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 14,
 			"sheets":
 			[
 				{
@@ -1143,15 +1151,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 62647,
+						"buffer_size": 65427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								57429,
-								57429
+								13716,
+								13716
 							]
 						],
 						"settings":
@@ -1162,7 +1170,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 15288.0,
+						"translation.y": 4016.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1257,15 +1265,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 738,
+						"buffer_size": 964,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								739,
+								739
 							]
 						],
 						"settings":
@@ -1285,15 +1293,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 453,
+						"buffer_size": 1962,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								395,
-								395
+								1690,
+								1690
 							]
 						],
 						"settings":
@@ -1314,15 +1322,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2716,
+						"buffer_size": 2722,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2424,
-								2424
+								26,
+								26
 							]
 						],
 						"settings":
@@ -1332,7 +1340,7 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 301.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1429,15 +1437,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13373,
+						"buffer_size": 14668,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6140,
-								6140
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1448,7 +1456,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3675.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1679,7 +1687,7 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 186.0,
+						"translation.y": 110.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1783,8 +1791,8 @@
 						"selection":
 						[
 							[
-								22791,
-								22791
+								10052,
+								10052
 							]
 						],
 						"settings":
@@ -1794,7 +1802,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 14180.0,
+						"translation.y": 6407.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1852,7 +1860,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 18249.0,
+						"translation.y": 2289.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1907,12 +1915,20 @@
 		"selected_items":
 		[
 			[
-				"svg",
-				"ch3_dimensionality/figure/tree_graph.svg"
+				"",
+				"ml_lit/ml_lit_anal.py"
 			],
 			[
-				"",
-				"~/Documents/notes/Malley_Statistical Learning_2011.md"
+				"ml",
+				"ml_lit/ml_lit_anal.py"
+			],
+			[
+				"vap",
+				"~/Documents/notes/vapnik_nature of statistical learning theory 2000.md"
+			],
+			[
+				"svg",
+				"ch3_dimensionality/figure/tree_graph.svg"
 			],
 			[
 				"h",
@@ -1952,16 +1968,20 @@
 		[
 			[
 				"",
-				"~/Documents/data_intensive/ngs_data_topography/ngs_paper/ngs.sublime-project"
+				"~/Music/pymusic.sublime-project"
 			]
 		],
 		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 54.0,
+		"height": 201.0,
 		"selected_items":
 		[
+			[
+				"wass",
+				"wasserman_all_2003"
+			],
 			[
 				"bellman",
 				"bellman_adaptive_1961"

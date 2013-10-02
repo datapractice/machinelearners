@@ -44,6 +44,7 @@ df = ml.clean_fields(df)
 
 print('%s topic fields are null'%sum(df.topics.isnull()))
 print('%s abstract fields are null'%sum(df.AB.isnull()))
+print('%s keywords Plus fields are null'%sum(df.ID.isnull()))
 
 # <markdowncell>
 

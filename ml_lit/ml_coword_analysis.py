@@ -8,7 +8,7 @@
 
 # <codecell>
 
-import ml_lit_anal as ml
+
 import re
 import nltk
 import pickle
@@ -17,10 +17,11 @@ import google_scholar_parser as gs
 import pandas as pd
 import networkx as nx
 import itertools
-matplotlib.use('WXAgg')
 import matplotlib.pyplot as plt
 import numpy as np
 import random
+import collections
+import ml_lit_anal as ml
 
 # <codecell>
 
@@ -41,17 +42,20 @@ df = ml.clean_topics(df)
 
 # <codecell>
 
-#choose the set of keywords to use
 de_all = [d for de in df.topics.dropna() for d in de]
 de_set = set(de_all)
-de_counts = {de:de_all.count(de) for de in de_set}
-	#de_counts_sorted = sorted(de_counts.iteritems(), key = operator.itemgetter(1), reverse=True)
+de_counts = collections.Counter(de_all)
 
 # <codecell>
 
 	# choose top 500 keywords
-keys = [t[0] for t in de_counts.items() if t[1] > 10]
+keys = de_counts.most_common(500)
 print('there are %s keywords' % len(keys))
+
+# <codecell>
+
+keys = [k[0] for k in keys]
+keys[:10]
 
 # <codecell>
 
@@ -94,7 +98,10 @@ eqnx = nx.from_numpy_matrix(eqcow_df.as_matrix())
 # <codecell>
 
 eqnx.number_of_nodes()
-nx.draw_spring(eqnx, node_size=30)
+
+# <codecell>
+
+nx.draw_graphviz(eqnx, node_size=30)
 
 # <markdowncell>
 
@@ -115,7 +122,7 @@ print('There are %s papers by the end of 1990'%df_pre.shape[0])
 
 # <codecell>
 
-df.TI.drop_duplicates()
+df.TI.drop_duplicates().head()
 
 # <codecell>
 
@@ -140,7 +147,7 @@ fig = plt.gcf()
 fig.set_size_inches(12.5,12.5)
 fig.set_label('Pre-1990 keywords and their relations')
 
-nx.draw(pre_90_nx, pos=pos, alpha=0.5, node_size=50, with_labels=True, labels=labels)
+nx.draw_graphviz(pre_90_nx, alpha=0.5, node_size=50, with_labels=True, labels=labels)
 #nx.draw_networkx_labels(pre_90_nx, pos=pos,labels = labels, font_size=9)
 
 # <markdowncell>
@@ -154,22 +161,27 @@ nx.draw(pre_90_nx, pos=pos, alpha=0.5, node_size=50, with_labels=True, labels=la
 
 df_pre2 = df[(df.PY <= 1995) & (df.PY >1990)]
 keys_90_95 = ml.keyword_counts(df_pre2)
-fig = plt.gcf()
 print('There are %s keywords in the 1990-95 literature' % len(keys_90_95))
 net = ml.draw_network_by_years(df, 1990,1995, True, 12)
+end_year = 1995
+pos = nx.spring_layout(net)
+plt.figure(figsize=(12.5,12.5))
+plt.title('Pre-%s keywords and their relations'%end_year)
+print('drawing the network .... ')
+nx.draw(net, pos=pos, alpha=0.5, 
+            node_size=nx.get_node_attributes(net, 'between_central'), with_labels=True, 
+            labels=nx.get_node_attributes(net, 'keyword'))
+plt.show()
 
 # <codecell>
 
+plt.figure(figsize=(14,14))
+plt.title('Pre-%s keywords and their relations'%end_year)
 coword_net = net
 pos = nx.spring_layout(coword_net)
 labels = nx.get_node_attributes(coword_net, 'keyword')
-nx.draw(coword_net, pos=pos, alpha=0.5, 
-        node_size=50, 
-        with_labels=True, labels=labels)
-
-# <codecell>
-
-nx.draw(coword_net, pos=pos, alpha=0.5, 
+nx.draw_graphviz(coword_net,  alpha=0.5, 
+        node_size=[1000*d for d in nx.eigenvector_centrality(net).values()], 
         with_labels=True, labels=labels)
 
 # <markdowncell>

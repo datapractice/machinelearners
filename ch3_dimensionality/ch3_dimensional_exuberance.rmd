@@ -125,8 +125,36 @@ Under what conditions would it be possible to have an affirmative relationship t
 
 The machine learning literature itself has a sprawling, fluxing dimensionality, not easily captured by search terms or disciplines. The academic papers themselves are daunting in their bulk and variety, before we even try to move into the much more crowded and heavily trafficked domains where machine learning is practiced.  This literature itself, viewed in machine learning terms, comprises a high-dimensional vector space, whose features and attributes unstably move around as the techniques find new applications, as computer scientists, engineers, statisticians and others work on reshaping them, sometimes concertedly, sometimes independently and at odds with each other.  Viewed as a bundle of divergent, tangled trajectories in a high-dimensional social-material space, machine learning (or data-mining) can be described, sorted, and classified  in different ways. The immediate question is: what form of movement, from trajectories through the forest of practices associated with machine learning would allow us to inhabit the space of machine learning? What kinds of scales and subject positions would we need to move through in order to do that? A less immediate but no less important question is: in the name of what or whom would we affirm machine learning? This question is not going to be answered easily.
 
-As I have emphasised previously, the form of movement through machine learning I'm experimenting with here is recursive or loopy. That is, rather than describing machine learning from the outside, or participating in it as an observer (participant observation, or even observant participation), I'm attempting to find ways of moving through machine learning by learning machine learning.  And as the previous chapter discussed, here the term 'learning' is overloaded with multiple meanings and practices. But the motivation is similar to what the anthropologist Paul Rabinow advocates: 'pursuing in our thought and writing something like motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity' [@rabinow_anthropos_2003, 135-6]. Learning machine learning is a form of movement through textbooks, scientific articles, databases of scientific literature and sample datasets, online tutorials, Wikipedia pages, software documentation, read and writing many lines of `R` or `python` code. As Rabinow mentions, it is easy to start moving through machine learning, but hard to control that movement. I have found myself careening through websites, software manuals, YouTube lectures on machine learning, short intensive courses on data mining, news reports, APIs, code repositories and various code fragments.  Much of this movement has been saccadic (TBC) and aleatory rather than purposive or Dao-like, and only in writing now, in attempting to connect code, literature, people and events, might this movement take shape.
+As I have emphasised previously, the form of movement through machine learning I'm experimenting with here is recursive or loopy. That is, rather than describing machine learning from the outside, or participating in it as an observer (participant observation, or even observant participation), I'm attempting to find ways of moving through machine learning by learning machine learning.  And as the previous chapter discussed, here the term 'learning' is overloaded with multiple meanings and practices. But the motivation is similar to what the anthropologist Paul Rabinow advocates: 'pursuing in our thought and writing something like motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity' [@rabinow_anthropos_2003, 135-6]. Learning machine learning is a form of movement through textbooks, scientific articles, databases of scientific literature and sample datasets, online tutorials, Wikipedia pages, software documentation, read and writing many lines of `R` or `python` code. As Rabinow mentions, it is easy to start moving through machine learning, but hard to control that movement. I have found myself careening through websites, software manuals, YouTube lectures on machine learning, short intensive courses on data mining, news reports, APIs, code repositories and various code fragments.  Much of this movement has been saccadic (TBC) and aleatory rather than purposive or Dao-like, and only in writing now, in attempting to connect code, literature, people and events, might this movement take shape. In the course of moving backwards and forwards between research articles, textbooks, datasets and code, it is sometimes to possible to find amidst the many contingencies and specificities, some general forms of movement. 
 
+## Movement in data
+
+Let us return to basic problem of the data space. Imagine we have a dataset, with many variables and with many components.  Although we may know where the data came from, and what it refers to, we don't have any firm ideas about the patterns or structures in it.  We can view the dataset to a certain extent by plotting it. 
+
+```{r data_set, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, engine='python' } 
+
+import random
+import matplotlib.pyplot as plt
+import numpy as np
+size = 1000
+x = [random.uniform(0,10) for i in range(0,size)]
+y = x+ np.random.normal(np.mean(x), 5.0, size)
+z = [random.randint(20,80) for i in range(0,size)]
+
+markers = ['o', '8']
+shapes_index = np.random.randint(0,2, size)
+class1 = [random.randint(1,2) for i in range(0,size)]
+class2 = [random.randint(1,4) for i in range(0,size)]
+class3 = [markers[i] for i in shapes_index]
+plt.figure(figsize=(10,10))
+plt.scatter(x,y,s=z, c = class1)
+plt.savefig('figure/synthetic_data.png', dpi=400)
+print("![Data shapes](figure/synthetic_data.png)")
+```
+
+This plot of 1000 somewhat random points has no obvious structure, but there are functions generating the points. The dataset here has only four dimensions (`x`, `y`, colour and size).   Every point belongs to a class. That is, it can be classified.  
+
+TBC -- the problem of classification and dimensionality ... 
 ## The movement of citation
 
 ```{r ml_top_cites, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA , engine='python'} 
@@ -139,12 +167,12 @@ import collections
 
 df = ml.load_records('../ml_lit/data/machine_learning_WOS/')
 df = ml.clean_topics(df)
-print('There are %s records in the dataset'%df.shape[0])
+print('There are %s records in the dataset'%df.shape[0])t
 all_refs = [ref for refs in df.cited_refs for ref in refs]
 ref_collection = collections.Counter(all_refs)
 print(ref_collection.most_common(n=20))
 ```
-The machine learning literature bristles with references to papers in statistics, computer science, artificial intelligence and a swathe of related scientific fields. A very crude citation analysis of the literature suggests that  the top 20 most cited publications in the field have focused on decision trees (Quinlan, Breiman), on support vector machines (Vapnik, Christiani, Cortes, Chang),  machine learning pedagogy (Mitchell, an early textbook written by a computer scientist; Witten, a textbook and software package on data mining; Duda, a textbook on pattern recognition) and somewhat lower, neural networks (Bishop). Across these variations, it is possible to discern some forms of movement, or put simply, movements in machine learning. Briefly and perhaps too crudely summarised, they might be termed a _statistical_ movement, an _imitative_ movement, and an _infinitist_ movement. 
+The machine learning literature is enormously but helpful in deciding which direction to move. It bristles with references to papers in statistics, computer science, mathematics, artificial intelligence and a swathe of related scientific fields. In the background stand substantial bodies of knowledge and practice coming from the social sciences, insurance and actuarial practice, and marketing research. A very rought citation analysis of the research literature indicates that  the top 20 most cited publications in the field have focused on decision trees (Quinlan, Breiman), on support vector machines (Vapnik, Christiani, Cortes, Chang),  machine learning pedagogy (Mitchell, an early textbook written by a computer scientist; Witten, a textbook and software package on data mining using Java; Duda, a textbook on pattern recognition), a tutorial on an error control techique (ROC - Receiver Operating Characteristics, first developed by the US military during WWII) and somewhat lower, the popular machine learning technique of neural networks (Bishop). Across these variations, it is possible to discern some forms of movement, or put simply, movements in machine learning. Briefly and perhaps too crudely summarised, they might be termed a _statistical_ movement, an _imitative_ movement, and an _infinitist_ movement. 
 
 [ADD HERE: stuff from python notebook about topics and how they are organised ... including graph?]
 
@@ -156,7 +184,7 @@ Bowker and Star refer here to a variety of standardised classification systems r
 
 As it turns out, at the very time Bowker and Star were writing about the interarticulated forest of classification systems, the technique of RandomForests (TM) was being developed as a way of navigating huge information spaces. Statisticians such as Leo Breiman at UCLA were assembling decision trees (a technique I discuss below) into forests that could classify [@breiman_random_2001].  In the machine learning literature,  the random forest paper is the most highly cited reference [@breiman_random_2001]. According to Thomson Scientific Web of Science/ISI, this paper has been cited  `r ml_df$TC[1]` times. Like two other key machine learning techniques -- neural networks in the 1980s; support vector machines in the late 1990s --  random forests provided different ways of moving through the thicket of possible connections, associations, features and relations occasioned by digital data, especially as online data sets were becoming available.  This is not to say the machine learning techniques are absolutely unprecedented. On the contrary, each of these techniques of random forests, neural networks and support vector machine, as I will discuss below, took an existing predictive or classificatory technique or mechanism and re-configured it in order to deal with the problems of a disorientating profusion of  possible classifications. With lesser and greater degrees of success, they brought together different scales of movement, and different ways of including the world. 
 
-So in a way, machine learning has been taking on the job that Bowker and Star envisaged: 'imagine you are walking in a forest -- describe this forest.' But the forest we are moving in here is a forest of machine learning classifiers, mainly taking root in the  scientific-technical literature and associated software implementations.  The basic intuitions underlying  machine learning classification are not hard to grasp. We have already seen a few versions of it. Logistic regression, the technique discussed in the previous chapter and pervasively used in biomedical sciences, is a mainstay of classification techniques.  The techniques of decision trees, random forests, neural networks and support vector machines I will discuss here display many commonalities in their treatment of data.  They all  attempt to find ways of moving through data, and dealing with problems of deciding what groups, classes or sets things belong to, without having to know too much about  the world that data indexes. At the same time, or strictly speaking, slightly afterwards, these techniques themselves move through the world. Their movement is never purely abstract, as if they only inhabited a mathematical forest, although it possesses a certain texture or specificity. As with all functions, indelible residues of indexicality entangle machine learning technique with matters of fact. I like the way the biostatisticians  James Malley, Karen Malley and Sinisa Pajevic describe machine learning: 'if the data has any signal at all then most machines will detect it' but 'we freely admit that many machines tudies in this text are somewhat mysterious, though powerful engines' [@malley_statistical_2011, 257]. As we will see, the ways in which machine learning methods move through data detecting signals are intensively theorised yet at the same time not well understood. 
+So in a way, machine learning has been taking on the job that Bowker and Star envisaged: 'imagine you are walking in a forest -- describe this forest.' But the forest we are moving in here is a forest of machine learning classifiers, mainly taking root in the  scientific-technical literature and associated software implementations.  The basic intuitions underlying  machine learning classification are not hard to grasp. We have already seen a few versions of it. Logistic regression, the technique discussed in the previous chapter and pervasively used in biomedical sciences, is a mainstay of classification techniques.  The techniques of decision trees, random forests, neural networks and support vector machines I will discuss here display many commonalities in their treatment of data.  They all  attempt to find ways of moving through data, and dealing with problems of deciding what groups, classes or sets things belong to, without having to know too much about  the world that data indexes. At the same time, or strictly speaking, slightly afterwards, these techniques themselves move through the world. Their movement is never purely abstract, as if they only inhabited a mathematical forest, although it possesses a certain texture or specificity. As with all functions, indelible residues of indexicality entangle machine learning technique with matters of fact. I like the way the biostatisticians  James Malley, Karen Malley and Sinisa Pajevic describe machine learning: 'if the data has any signal at all then most machines will detect it' but 'we freely admit that many machines studied in this text are somewhat mysterious, though powerful engines' [@malley_statistical_2011, 257]. As we will see, the ways in which machine learning methods move through data detecting signals are intensively theorised yet at the same time not well understood. 
 
 
 ## Growing trees in irises
@@ -399,13 +427,11 @@ Breiman attributes the strength of random forests to classify without overfittin
 
 In comparison to the decision trees, with their propensity to partition differences _ad absurdem_, random forests do not overfit because they  combine two different forms of movement. On the one hand, the sheer number of trees multiplies the chances that a good proportion of the trees will find a relevant pattern in the data. On the other hand, the de-coupling or lack of correlation between the trees helps ensure that the trees will provide independent views on the classification. Together these two features of the ensemble of decision allow random forests to 'generalize'  or, put more technically, to minimize the 'generalization error.'
 
-> Our results indicate that better (lower generalization error) random forests have lower correlation between classifiers and higher strength. The randomness used in tree construction has to aim for low correlation $\overline\rho$̄ while maintaining reasonable strength [@breiman_random_2001, 20].
+> Our results indicate that better (lower generalization error) random forests have lower correlation between classifiers and higher strength. The randomness used in tree construction has to aim for low correlation $\overline{\rho}$ while maintaining reasonable strength [@breiman_random_2001, 20].
 
-As in much machine learning, better means lower error rates. But here, the key point is that the components of the machine themselves appear to become statistical processes. That is, their construction is guided by the Law of Large Numbers (that is, 'the _law of large numbers_ says that the sample average $\overlineX_n = n^-1\sum_{i=1}^nX_i$ converges in probability to the expectation $\mu = \mathbb{E}X_i$. This means that $X_n$ is close to $\mu$ with high probability ' [@wasserman_all_2003, 72]). 
-The injection of randomness, as Breiman terms it (10), only relates to certain aspects of the data and the components. It randomly selects small groups of features to use, and it randomly selects a subset of the training data. 
-notion of pattern involves the concept of different modes of togetherness MoT, 195-6
+As in much machine learning, better means lower error rates. But here, the key point is that the components of the machine themselves appear to become statistical processes. That is, their construction is guided by the Law of Large Numbers (that is, 'the _law of large numbers_ says that the sample average $\overline{X}_n = n^-1\sum_{i=1}^nX_i$ converges in probability to the expectation $\mu = \mathbb{E}X_i$. This means that $X_n$ is close to $\mu$ with high probability ' [@wasserman_all_2003, 72]).  The injection of randomness, as Breiman terms it (10), only relates to certain aspects of the data and the components. It randomly selects small groups of features to use, and it randomly selects a subset of the training data. 
 
-Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns W, MoT, 195
+
 `
 ## Neural net
 
@@ -413,12 +439,9 @@ Thus beyond all questions of quantity, there lie questions of pattern, which are
 library(nnet)
 ```
 
-## Support vector machine
+## Support vector machine and infinite dimensionality
 
-TBA -- this section has to deal with the idealism of the plane vs the curviness of the kernel
-It also has to bring in ANW on the pattern  ....
-
-On the topic of pattern recognition, the second most highly cited reference in the ten of thousands of articles and papers is a paper by Cortes and Vapnik [@cortes_support-vector_1995]. 
+The second most highly cited reference in the ten of thousands of articles and papers is a paper by Cortes and Vapnik [@cortes_support-vector_1995]. 
 
 ```{r pattern_recognition1, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' } 
     dir = '../ml_lit/data/pattern_recognition_WOS'
@@ -430,6 +453,15 @@ On the topic of pattern recognition, the second most highly cited reference in t
     df = df[order(df$TC, decreasing=TRUE),]
     print(head(df$TI))
 ```
+If the shift from decision trees to random forests illustrate an increasingly statistical movement in machine learning, propelled by controlled injections of randomness,  the technique I turn to now, the support vector machine, demonstrates a different way of coping with the problems of generalization.  It is difficult to overstate the importance of support vector machine. While the name is somewhat forbiddingly technical compared to more easily understood terms such as 'decision tree' or 'neural network,' the underlying intuition of the technique is much older, and can be found in the models developed by the British statistician R. A. Fisher.  The route by which these long-standing intuitions were reconstructed during the 1990s in the form of the support vector machine is of interest, because it brings to light an important form of movement in  contemporary data. This movement we might call infinitist.
+
+The vector space model of data encourages a certain form of classification -- the search for the best line, the line of best fit, or the most discriminating line, the line that best divides things from each other. Linear regression is not called 'linear' for no reason. Clearly there is a massive idealisation of classification and prediction here. The Platonic form of the line, the plane, and sometimes the sphere, function as ideal forms to which all actual processes, events and practices can only approximate. This idealism of the perfect plane, however, is something that almost the entire gamut of machine learning techniques are aware of. In many ways, the last two decades of research in machine learning, whether it has been primarily statistical, mathematical, or computational, directly countenances and addresses in different ways.  A primary strategy has been to increase the dimensionality of the predictive model in order to find hidden, latent or otherwise invisible forms of linearity that underpin the apparent non-ideality of the data.  The support vector machine, as we will, powerfully exemplifies this expansive form of generalisation. 
+
+
+
+TBA -- this section has to deal with the idealism of the plane vs the curviness of the kernel
+It also has to bring in ANW on the pattern  ....
+
 
 ## Conclusion
 

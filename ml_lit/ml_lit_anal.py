@@ -366,15 +366,7 @@ def draw_network_by_years(df, start_year, end_year, draw, trim):
     if trim > 0:
         coword_net = trim_degrees(coword_net, trim)
         labels = {n:labels[n] for n in coword_net.nodes()}
-    if draw:
-        pos = nx.spring_layout(coword_net)
-        fig = plt.gcf()
-        fig.set_size_inches(12.5,12.5)
-        fig.set_label('Pre-%s keywords and their relations'%end_year)
-        print('drawing the network .... ')
-        nx.draw(coword_net, pos=pos, alpha=0.5, 
-            node_size=nx.get_node_attributes(coword_net, 'between_central'), with_labels=True, labels=labels)
-        fig.show()
+   
     return coword_net
 
 def trim_draw_network(coword_net, trim):
@@ -425,7 +417,7 @@ def trim_draw_network(coword_net, trim):
     def plot_co_x(cox, start, end, size = (20,20)):
         
         """ Plotting function for keyword graphs
-        
+
         Parameters
         --------------------
         cox: the coword networkx graph; assumes that nodes have attribute 'topic'

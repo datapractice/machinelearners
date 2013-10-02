@@ -53,7 +53,7 @@ techniques_domains = pickle.load(open('technique_classification.pyd', 'r'))
 dt = ml.keyword_years(df, 'decision tree')
 print('decision tree: %d'%dt.shape[0])
 ## get the records that keyword CART
-cart = ml.keyword_years(df, 'cart|classification and regression tree')
+cart = ml.keyword_years(df, 'cart|classification and regression tree|classification tree')
 print('CART: %d'%cart.shape[0])
 # get the records that keyword C4.5
 c45 = ml.keyword_years(df, 'C4.5')
@@ -75,12 +75,17 @@ indexes.intersection(cart.index)
 
 # <codecell>
 
-fig=plt.figure(figsize=(10,10))
+fig=plt.figure(figsize=(10,4))
+plt.subplot(121)
 plt.hist(dt.PY, bins=20, alpha=0.4)
 plt.hist(cart.PY, bins=20)
+plt.hist(c45.PY, bins=20)
 plt.title('Decision tree papers in machine learning literature')
+plt.legend(['Decision tree', 'CART', 'C4.5'])
+plt.subplot(122)
+plt.hist(df.PY, bins=20, alpha=0.2)
+plt.title('Machine learning overall')
 plt.show()
-df.PY.hist(bins=len(df.PY.unique()))
 
 # <markdowncell>
 
@@ -94,7 +99,9 @@ dec_tree_df = ml.load_records('data/decision_tree_WOS/')
 
 # <codecell>
 
-dec_tree_df.PY.hist(bins=dec_tree_df.PY.max()-dec_tree_df.PY.min())
+plt.figure(figsize=(12,4))
+plt.title('Decision tree literature')
+x = plt.hist(dec_tree_df.PY, bins=dec_tree_df.PY.max()-dec_tree_df.PY.min())
 
 # <markdowncell>
 
@@ -116,18 +123,22 @@ dec_tree_df[['TI','PY', 'AF', 'TC']][(dec_tree_df.PY<1986) & (dec_tree_df.PY>=19
 # <codecell>
 
 morgan_df = ml.load_records('data/morgan_sonquist_WOS/')
+plt.figure(figsize=(12,4))
+plt.subplot(121)
 plt.hist(morgan_df.PY, bins=morgan_df.PY.max()-morgan_df.PY.min())
 plt.title('Citations of Morgan and Sonquist 1963')
-
-# <codecell>
-
 cover_df = ml.load_records('data/cover_hart_WOS/')
+plt.subplot(122)
 plt.hist(cover_df.PY, bins=cover_df.PY.max()-cover_df.PY.min())
-plt.title('Citation of Cover-Hart, 1967')
+plt.title('Citations of Cover-Hart, 1967')
 
 # <markdowncell>
 
 # Both Morgan-Sonquist and Cover-Hart show a huge increase in the last decade or so, although on different scales. It would be interesting to see how they intersect.
+
+# <codecell>
+
+set(cover_df.UT).intersection(set(morgan_df.UT))
 
 # <markdowncell>
 
@@ -185,4 +196,32 @@ dt_df.TI.last()
 
 # <codecell>
 
+
+# <markdowncell>
+
+# ## Random forest
+# 
+# How do they get taken up?
+
+# <codecell>
+
+rf_df = ml.keyword_years(df, 'random forest|randomForest')
+rf_df.head()
+
+# <codecell>
+
+plt.figure(figsize=(12,3))
+plt.hist(rf_df.PY, bins=11)
+plt.title('Random forests in machine learning')
+
+# <codecell>
+
+rf_df_full = df.ix[rf_df.index]
+
+# <codecell>
+
+
+# <codecell>
+
+ml.coword_matrix(rf_df_full)
 
