@@ -129,7 +129,7 @@ plt.hist(morgan_df.PY, bins=morgan_df.PY.max()-morgan_df.PY.min())
 plt.title('Citations of Morgan and Sonquist 1963')
 cover_df = ml.load_records('data/cover_hart_WOS/')
 plt.subplot(122)
-plt.hist(cover_df.PY, bins=cover_df.PY.max()-cover_df.PY.min())
+plt.hist(cover_df.PY, color = 'g', bins=cover_df.PY.max()-cover_df.PY.min())
 plt.title('Citations of Cover-Hart, 1967')
 
 # <markdowncell>
@@ -205,7 +205,7 @@ dt_df.TI.last()
 
 # <codecell>
 
-rf_df = ml.keyword_years(df, 'random forest|randomForest')
+rf_df = ml.keyword_years(df, 'random forest.?|randomForest.?')
 rf_df.head()
 
 # <codecell>
@@ -224,4 +224,94 @@ rf_df_full = df.ix[rf_df.index]
 # <codecell>
 
 ml.coword_matrix(rf_df_full)
+
+# <markdowncell>
+
+# # Support vector machine
+# 
+# Trying to see how this literature takes shape
+
+# <codecell>
+
+svm_df1 = ml.keyword_years(df, 'support vector machine.?|svm|support vector network.?')
+svm_df2 = ml.keyword_years(df, 'svm')
+svm_df3= ml.keyword_years(df, 'support vector network')
+svm_df = pd.concat([svm_df1, svm_df2, svm_df3])
+svm_df.shape
+
+# <markdowncell>
+
+# SVMs contribute a substantial portion of the growth in SVM during the last decade. They dwarf random forests. 
+
+# <codecell>
+
+plt.figure(figsize=(12,5))
+plt.subplot(121)
+plt.title('Support vector machine publications')
+x,y,z = plt.hist(svm_df.PY, color='g',bins  = svm_df.PY.max() - svm_df.PY.min(), alpha=0.65, hold='on')
+x,y,z = hist(rf_df.PY, color='r')
+plt.plot(y[:-1],x, linewidth=2)
+
+plt.subplot(122)
+bins = 2013-1998
+plt.hist(svm_df.PY,color='g', bins = bins, hold='on', label='SVM', range=(1998,2013))
+plt.hist(df.PY, alpha=0.5, color='y', label='all', bins = bins,  range=(1998,2013))
+plt.xlim(1998, 2013)
+plt.legend()
+plt.title('SVM against all machine learning publications')
+
+# <markdowncell>
+
+# Cortes is meant to be one of the most highly cited papers in the literature. Some sign of that. 
+
+# <codecell>
+
+cortes_cit = ml.find_citation(df, 'Cortes 1995')
+cortes_cit.shape
+
+# <codecell>
+
+cortes = gs.ScholarQuerier(author = 'Corinna Cortes', count=50)
+res = cortes.query('')
+
+# <codecell>
+
+type(cortes) ## not working
+
+# <codecell>
+
+cortes_df = ml.find_author(df, '(Cortes)|(Vapnik)')
+cortes_df.shape
+
+# <codecell>
+
+cortes_topics = ml.keyword_counts(cortes_df).keys()
+
+# <codecell>
+
+cortes_topics
+
+# <codecell>
+
+cortes_nx = ml.coword_network(cortes_df, 1995, 2012, cortes_topics)
+
+# <codecell>
+
+plt.figure(figsize=(12,10))
+plt.title('Corinna Cortes topics')
+nx.draw_graphviz(cortes_nx, with_labels=True, 
+                 alpha = 0.7,
+                 node_color = 'y',
+                 width=0.3,
+                 font_size=11,
+                 labels = nx.get_node_attributes(cortes_nx, 'topic'))
+
+# <markdowncell>
+
+# But I don't see Cortes and Vapnik, 1995 here. That is the important paper, published in the journal _Machine Learning_. What happened to it?
+
+# <codecell>
+
+svm_keys = ml.keyword_counts(svm_df)
+svm_nx = ml.coword_network(svm_df, 1995, 2013, svm_keys.keys())
 

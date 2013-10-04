@@ -10,6 +10,7 @@ import numpy as np
 import operator
 import collections
 import math
+import itertools
 import matplotlib.pyplot as plt    
 
 def load_records(data_dir):
@@ -115,9 +116,17 @@ def manual_topic_classifier(wos_df, existing_topic_classes, topic_counts_sorted,
 def coword_matrix_years(wos_df, start_year, end_year, keys):
 
     """
+    Return the coword matrix for a year range for the given set of keys
+
+    Parameters
+    ---------------------------------
+    wos_df: references dataframe
+    start_year: include references starting from this year
+    end_year: references up to but including this year
+    keys: list of keys to include in the matrix
 
     """
-    wos_df_delim = wos_df[(wos_df.PY>= start_year) & (wos_df.PY <= end_year)]
+    wos_df_delim = wos_df[(wos_df.PY>= start_year) & (wos_df.PY <end_year)]
     coword_m = coword_matrix(wos_df_delim, keys)
     return coword_m
 
@@ -127,25 +136,26 @@ def coword_matrix(wos_df, keys):
     
     Parameters
     ------------------------------------------------
-    wos_df: the  literature DataFrame -- doesn't need to be WoS
-    keys: list of all unique keywords  in the literature
+    wos_df: the  literature DataFrame -- doesn't need to be WoS, as long as it has the right fields
+    keys: list of keys to count
     """
 
     topics = wos_df.topics
     # create document term matrix of keywords
     topics = topics.dropna()
-    cow = np.zeros((len(topics), len(keys)))
+    doc_count = len(topics)
+    cow = np.zeros((doc_count, len(keys)))
 
-    # hate doing these nested for loops but 
+    # nested loops but 
     #I couldn't get the list comprehensions working properly
     
-    for row in range(0, len(topics)):
+    for row in range(0, doc_count):
         top = topics.iget(row)
         hits = list()
         for topic in top:
             if keys.count(topic) >0:
                 hits.append(keys.index(topic))
-        # sets all the topics found for this reference to 1
+        # set all the topics found for this reference to 1
         cow[row, hits] = 1
     
     #to create coword matrix, use matrix dot product
@@ -188,38 +198,67 @@ def cofield_matrix(wos_df, fields):
     return cofield_wos_df
 
 
-def inclusion_score(cow_wos_df, key1, key2, de_counts):
+def inclusion_score(cow_wos_df, key1, key2, key_counts):
     """ Calculates  the inclusion score (conditional probability?) of key1
     given the presence of key2 (or vice versa)"""
 
     c_ij = cow_wos_df[key1][key2]
-    I_ij = c_ij/min(de_counts[key1],  de_counts[key2])
+    I_ij = c_ij/min(key_counts[key1],  key_counts[key2])
     return I_ij
 
-def proximity_score(cow_wos_df, key1, key2, de_counts, article_count):
-    """ Calculates  the equivalence score (mutual inclusion) of key1
-    given the presence of key2 (or vice versa)"""
+def proximity_score(cow_wos_df, key1, key2, key_counts, article_count):
+    """ Calculates  the proximity score  of key1
+    given the presence of key2 (or vice versa); 
+    The mediator and peripheral keywords pulled
+out by Pg represent minor but potentially growing areas."""
 
     c_ij = cow_wos_df[key1][key2]
-    p_ij = c_ij/(de_counts[key1] * de_counts[key2]) * article_count
+    p_ij = c_ij/(key_counts[key1] * key_counts[key2]) * article_count
     return p_ij
 
-def equivalence_score(cow_wos_df, key1, key2, de_counts):
+def equivalence_score(cow_wos_df, key1, key2, key_counts):
     """ Calculates  the equivalence score (mutual inclusion) of key1
-    given the presence of key2 (or vice versa)"""   
+    given the presence of key2 (or vice versa); Eghas a value between 0 and 1. Similar to ( l ) E
+    measures the probability of word i appearing 
+    simultaneously in a document set indexed by word j
+    and, inversely, the probability of word j ifword i appears, given the respec-
+    tive collection frequencies of the two words."""   
 
     c_ij = cow_wos_df[key1][key2]
-    Equiv_ij  = c_ij**2/(de_counts[key1] * de_counts[key2])
+    Equiv_ij  = c_ij**2/(key_counts[key1] * key_counts[key2])
     return Equiv_ij
 
-def equivalence_matrix(cow_wos_df, de_counts):
+def fast_equivalence_matrix(cow_m):
+    """ Constructs the equivalence matrix for all combinations of key words; 
+    This is following (Callon, 1991).
+
+    Parameters
+    ---------------------------------------------------------------- 
+    cow_m: the matrix of co-word counts
+"""
+
+    ecow = cow_m**2
+    colsums = np.sum(cow_m,1)
+    for i in range(0,cow_m.shape[0]):
+        for j in range(0, cow_m.shape[1]):
+            ecow[i,j] = ecow[i,j]/(colsums[i]*colsums[j])
+   
+    # replace NaN with zero -- this happens because all topics are used in topic list, 
+    # but particular years may not have that topic
+    isnan = np.isnan(ecow)
+    ecow[isnan] = 0
+
+    return ecow       
+
+
+def equivalence_matrix(cow_wos_df, key_counts):
     """ Constructs the equivalence matrix for all combinations of key words; 
     This is following (Callon, 1991).
 
     Parameters
     ---------------------------------------------------------------- 
     cow_wos_df: the matrix of co-word counts
-    de_counts: the list of keyword counts
+    key_counts: the list of keyword counts
     """
 
     keys = cow_wos_df.columns.tolist()
@@ -228,10 +267,11 @@ def equivalence_matrix(cow_wos_df, de_counts):
     ecow = np.zeros(cow_wos_df.shape)
     for key1_key2 in key_combinations:
         key1, key2 = key1_key2
-        index1 = keys.index(key1)
-        index2 = keys.index(key2)
-        escore = equivalence_score(cow_wos_df, key1, key2, de_counts)
-        ecow[index1, index2] = escore
+        if (keys.count(key1) > 0)  & (keys.count(key2)> 0):
+            index1 = keys.index(key1)
+            index2 = keys.index(key2)
+            escore = equivalence_score(cow_wos_df, key1, key2, key_counts)
+            ecow[index1, index2] = escore
 
     eqcow_wos_df = pd.DataFrame(ecow, 
         columns=cow_wos_df.columns, index = cow_wos_df.index)
@@ -312,6 +352,20 @@ def keyword_years(wos_df, keyword):
     key_wos_df = top_py_wos_df[top_py_wos_df.DE.str.contains(keyword, 
         case=False)]
     return key_wos_df
+
+def find_author(wos_df, author):
+
+    """ Return WoS records that include that author somewhere
+    in the author field.
+
+    Parameters
+    -------------------------------
+   wos_df: WoS references
+   author:
+    """
+    au = wos_df.AU.dropna()
+    found= au[au.str.contains(author, case=False)==True].index
+    return wos_df.ix[found]
 
 
 def find_citation(wos_df, ref):
@@ -395,7 +449,7 @@ def trim_draw_network(coword_net, trim):
     return coword_net
 
 
-    def coword_network(mesh_df, start, end,common_topics): 
+def coword_network(mesh_df, start, end,common_topics): 
         """
         constructs a coword network for the years supplied; nodes have an attribute 'topic'
         
@@ -406,7 +460,7 @@ def trim_draw_network(coword_net, trim):
         end: end year
         common_topics: the list of the topics to use (not too big, otherwise coword matrix will be huge
         """
-        cow_df = ml.coword_matrix_years(mesh_df, start, end,common_topics)
+        cow_df = coword_matrix_years(mesh_df, start, end,common_topics)
         cow_nx = nx.from_numpy_matrix(cow_df.as_matrix())
         col_names = cow_df.columns.tolist()
         labels = {col_names.index(l):l for l in col_names}
@@ -414,7 +468,7 @@ def trim_draw_network(coword_net, trim):
         nx.set_node_attributes(cow_nx, 'topic', labels)
         return cow_nx
 
-    def plot_co_x(cox, start, end, size = (20,20)):
+def plot_co_x(cox, start, end, size = (20,20)):
         
         """ Plotting function for keyword graphs
 
@@ -433,3 +487,12 @@ def trim_draw_network(coword_net, trim):
                      fontsize=9,
                      node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
                      node_color = [s for s in nx.degree(cox).values()])
+
+def  pmc_year_column(pmc_df):
+
+    """ Adds a PY - publication year -- column to a EuroPMC dataframe. PMC doesn't return the publication
+    year explicitly in the core fields.
+    """
+    passyears = pmc_df.journalInfo.map(lambda x: x['yearOfPublication'])
+    pmc_df['PY'] = years
+    return pmc_df
