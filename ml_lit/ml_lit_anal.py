@@ -75,9 +75,8 @@ def keyword_counts(wos_df):
     """ Returns a dictionary with keyword counts"""
     
     de_all = [d for de in wos_df.topics.dropna() for d in de]
-    de_set = set(de_all)
-    de_counts = {de:de_all.count(de) for de in de_set}
-    return de_counts
+    key_counts = collections.Counter(de_all)
+    return key_counts
 
 def citation_counts(wos_df):
 
@@ -85,7 +84,6 @@ def citation_counts(wos_df):
 
     all_refs = [ref for refs in wos_df.cited_refs for ref in refs]
     ref_collection = collections.Counter(all_refs)
-    
     return ref_collection
 
 
@@ -204,6 +202,18 @@ def inclusion_score(cow_wos_df, key1, key2, key_counts):
 
     c_ij = cow_wos_df[key1][key2]
     I_ij = c_ij/min(key_counts[key1],  key_counts[key2])
+    return I_ij
+
+def inclusion_matrix(cow_m):
+    """ Calculates  the inclusion matrix for a coword matrix. 
+    Inclusion score is conditional probability of key1
+    given the presence of key2 (or vice versa)"""
+
+    keycounts = np.colsums(cow_m)
+    I_ij = np.copy(cow_m)
+    for i in range(0, cow_m.shape[0]):
+        for j in range(0, cow_m.shape[1]):
+            I_ij [i,j]= cow_m[i,j]/min(keycounts[i],  keycounts[j])
     return I_ij
 
 def proximity_score(cow_wos_df, key1, key2, key_counts, article_count):
@@ -449,7 +459,7 @@ def trim_draw_network(coword_net, trim):
     return coword_net
 
 
-def coword_network(mesh_df, start, end,common_topics): 
+def coword_network(mesh_df, start, end,topic_count=0): 
         """
         constructs a coword network for the years supplied; nodes have an attribute 'topic'
         
@@ -458,8 +468,15 @@ def coword_network(mesh_df, start, end,common_topics):
         mesh_df: a dataframe with at least the topics and years columns
         start: start year
         end: end year
-        common_topics: the list of the topics to use (not too big, otherwise coword matrix will be huge
+        topic_count: the number of the topics to use (not too big, otherwise coword matrix will be huge
         """
+        all_topics = [t for top in mesh_df.topics.dropna() for t in top]
+        topic_collection = collections.Counter(all_topics)
+        if topic_count > 0 and topic_count < len(topic_collection):
+            common_topics = [k[0] for k in topic_collection.most_common(topic_count)]
+        else:
+            common_topics = sorted(topic_collection.keys())
+
         cow_df = coword_matrix_years(mesh_df, start, end,common_topics)
         cow_nx = nx.from_numpy_matrix(cow_df.as_matrix())
         col_names = cow_df.columns.tolist()
@@ -480,7 +497,7 @@ def plot_co_x(cox, start, end, size = (20,20)):
         """
 
         plt.figure(figsize=size)
-        plt.title('Most central nodes in ngs MESH terms %s - %s'%(start,end), fontsize=18)
+        plt.title('Most central nodes  %s - %s'%(start,end), fontsize=18)
         nx.draw_graphviz(cox, with_labels=True, 
                      alpha = 0.8, width=0.1,
                      labels = nx.get_node_attributes(cox, 'topic'),

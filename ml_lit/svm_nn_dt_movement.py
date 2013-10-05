@@ -28,16 +28,16 @@ print('There are %s records in the dataset'%df.shape[0])
 #clean topics
 df = ml.clean_topics(df)
 
+# <codecell>
+
+# loads my handcurated list of techniques
+techniques_domains = pickle.load(open('technique_classification.pyd', 'r'))
+
 # <markdowncell>
 
 # # Analysis of decision tree, random forest, neural network and support vector machine 
 # 
 # The 'motivating intuition' here is that every major technique entails a manner of movement, handling and shaping of data _and_ this manner of movement affects how the technique itself travels or moves around. 
-
-# <codecell>
-
-# loads my handcurated list of techniques
-techniques_domains = pickle.load(open('technique_classification.pyd', 'r'))
 
 # <markdowncell>
 
@@ -58,6 +58,8 @@ print('CART: %d'%cart.shape[0])
 # get the records that keyword C4.5
 c45 = ml.keyword_years(df, 'C4.5')
 print('C4.5: %d'%c45.shape[0])
+rf = ml.keyword_years(df, 'random(.?)forest.?')
+print('Random forests: %d'%rf.shape[0])
 
 # <codecell>
 
@@ -77,11 +79,13 @@ indexes.intersection(cart.index)
 
 fig=plt.figure(figsize=(10,4))
 plt.subplot(121)
-plt.hist(dt.PY, bins=20, alpha=0.4)
-plt.hist(cart.PY, bins=20)
-plt.hist(c45.PY, bins=20)
+years = (1990, 2012)
+plt.hist(dt.PY, bins=20, alpha=0.2, range=years, label='decision tree')
+plt.hist(cart.PY, bins=20, range=years, label='cart')
+plt.hist(c45.PY, bins=20, range=years, label='C4.5')
+plt.hist(rf.PY, bins=20,alpha=0.6, range=years,label='random forest' )
 plt.title('Decision tree papers in machine learning literature')
-plt.legend(['Decision tree', 'CART', 'C4.5'])
+plt.legend()
 plt.subplot(122)
 plt.hist(df.PY, bins=20, alpha=0.2)
 plt.title('Machine learning overall')
@@ -186,17 +190,6 @@ dt_df = df.ix[dt_topics.index].groupby(df['PY'])
 dt_df
 
 
-# <codecell>
-
-dt_df[['TI', 'PY']].head()
-
-# <codecell>
-
-dt_df.TI.last()
-
-# <codecell>
-
-
 # <markdowncell>
 
 # ## Random forest
@@ -220,9 +213,6 @@ rf_df_full = df.ix[rf_df.index]
 
 # <codecell>
 
-
-# <codecell>
-
 ml.coword_matrix(rf_df_full)
 
 # <markdowncell>
@@ -233,10 +223,7 @@ ml.coword_matrix(rf_df_full)
 
 # <codecell>
 
-svm_df1 = ml.keyword_years(df, 'support vector machine.?|svm|support vector network.?')
-svm_df2 = ml.keyword_years(df, 'svm')
-svm_df3= ml.keyword_years(df, 'support vector network')
-svm_df = pd.concat([svm_df1, svm_df2, svm_df3])
+svm_df = ml.keyword_years(df, 'support vector|support vector machine.?|svm|support vector network.?')
 svm_df.shape
 
 # <markdowncell>
@@ -289,11 +276,22 @@ cortes_topics = ml.keyword_counts(cortes_df).keys()
 
 # <codecell>
 
-cortes_topics
+c1 = ml.coword_network(cortes_df, 1995, 2013, 200)
 
 # <codecell>
 
-cortes_nx = ml.coword_network(cortes_df, 1995, 2012, cortes_topics)
+plt.figure(figsize=(15,15))
+plt.title('Corinna Cortes topics')
+nx.draw_graphviz(c1, with_labels=True, 
+                 alpha = 0.7,
+                 node_color = 'y',
+                 width=0.3,
+                 font_size=11,
+                 labels = nx.get_node_attributes(c1, 'topic'))
+
+# <codecell>
+
+cortes_nx = ml.coword_network(cortes_df, 1995, 2012, 500)
 
 # <codecell>
 
@@ -310,8 +308,94 @@ nx.draw_graphviz(cortes_nx, with_labels=True,
 
 # But I don't see Cortes and Vapnik, 1995 here. That is the important paper, published in the journal _Machine Learning_. What happened to it?
 
+# <markdowncell>
+
+# ## Network analysis of SVM literature
+# 
+# 
+# There are around 4000 keywords in the literature. 
+
 # <codecell>
 
-svm_keys = ml.keyword_counts(svm_df)
-svm_nx = ml.coword_network(svm_df, 1995, 2013, svm_keys.keys())
+svm_df_lim = svm_df.ix[svm_df.PY <2006]
+svm_df_lim.shape
+
+# <markdowncell>
+
+# ## pre-2006
+
+# <codecell>
+
+
+svm_nx_2006 = ml.coword_network(svm_df, 1995, 2006)
+
+# <codecell>
+
+print(svm_nx_2006.number_of_nodes())
+
+# <codecell>
+
+topics = nx.get_node_attributes(svm_nx_2006, 'topic')
+eigen = nx.eigenvector_centrality(svm_nx_2006)
+[(i[0], svm_nx_2006.node[i[0]].values()) for i in ml.sorted_map(eigen)[:20]]
+
+# <codecell>
+
+k = [key for key, topic in topics.items() if topic == 'pattern recognition']
+print(k)
+class_nx = nx.ego_graph(svm_nx_2006, k[0])
+#class_nx = nx.ego_graph(svm_nx, 1449)
+ml.plot_co_x(class_nx, 1995, 2006)
+
+# <codecell>
+
+svm_nx_trim = ml.trim_degrees(svm_nx, 8)
+len(svm_nx_trim.nodes())
+
+# <codecell>
+
+svm_nx_trim = ml.trim_edges(svm_nx_trim,2)
+svm_nx_trim = ml.trim_degrees(svm_nx_trim, 2)
+
+# <codecell>
+
+
+ml.plot_co_x(svm_nx_trim, 1995, 2006, (20,20))
+
+# <codecell>
+
+ml.sorted_map(nx.betweenness_centrality(svm_nx))
+
+# <markdowncell>
+
+# ## SVM -- 2006 on
+
+# <codecell>
+
+svm_nx_2008 = ml.coword_network(svm_df, 2007, 2008)
+
+# <codecell>
+
+svm_nx_2008.number_of_nodes()
+
+# <codecell>
+
+topics = nx.get_node_attributes(svm_nx_2008, 'topic')
+eigen = nx.eigenvector_centrality(svm_nx_2008)
+[(i[0], svm_nx_2008.node[i[0]].values()) for i in ml.sorted_map(eigen)[:20]]
+
+# <codecell>
+
+class_nx = nx.ego_graph(svm_nx_2008, 918)
+#class_nx = nx.ego_graph(svm_nx, 1449)
+ml.plot_co_x(class_nx, 2006, 2008, (15,15))
+
+# <codecell>
+
+## try equivalence matrix
+svm_2006_cowe = ml.fast_equivalence_matrix(nx.to_numpy_matrix(svm_nx_2006))
+
+# <codecell>
+
+nx.
 
