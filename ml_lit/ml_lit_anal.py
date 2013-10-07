@@ -138,28 +138,56 @@ def coword_matrix(wos_df, keys):
     keys: list of keys to count
     """
 
+    # create reference-topic matrix
     topics = wos_df.topics
-    # create document term matrix of keywords
+    #drop references that have no topics
     topics = topics.dropna()
     doc_count = len(topics)
-    cow = np.zeros((doc_count, len(keys)))
+    dtm = np.zeros((doc_count, len(keys)))
 
-    # nested loops but 
+    #nested loops here but 
     #I couldn't get the list comprehensions working properly
     
     for row in range(0, doc_count):
         top = topics.iget(row)
-        hits = list()
         for topic in top:
             if keys.count(topic) >0:
-                hits.append(keys.index(topic))
-        # set all the topics found for this reference to 1
-        cow[row, hits] = 1
-    
+                # set all the topics found for this reference to 1
+                dtm[row, keys.index(topic)] = 1
+
     #to create coword matrix, use matrix dot product
-    cow_m = np.dot(np.transpose(cow), cow)
+    cow_m = np.dot(np.transpose(dtm), dtm)
     cow_wos_df = pd.DataFrame(cow_m, columns=keys, index=keys)
     return cow_wos_df
+
+def coword_network(mesh_df, start, end,topic_count=0): 
+        """
+        constructs a coword network for the years supplied; nodes have an attribute 'topic'
+        
+        Parameters
+        ----------------
+        mesh_df: a dataframe with at least the topics and years columns
+        start: start year
+        end: end year
+        topic_count: the number of the topics to use (not too big, otherwise coword matrix will be huge
+        """
+
+        # determine the number of topics to count
+        all_topics = [t for top in mesh_df.topics.dropna() for t in top]
+        topic_collection = collections.Counter(all_topics)
+        if topic_count > 0 and topic_count < len(topic_collection):
+            common_topics = [k[0] for k in topic_collection.most_common(topic_count)]
+        else:
+            common_topics = sorted(topic_collection.keys())
+
+        cow_df = coword_matrix_years(mesh_df, start, end, common_topics)
+        cow_nx = nx.from_numpy_matrix(cow_df.as_matrix())
+        col_names = cow_df.columns.tolist()
+        labels = {col_names.index(l):l for l in col_names}
+
+        nx.set_node_attributes(cow_nx, 'topic', labels)
+        return cow_nx
+
 
 def cofield_matrix(wos_df, fields):
 
@@ -182,11 +210,9 @@ def cofield_matrix(wos_df, fields):
     
     for row in range(0, len(fields_all)):
         top = fields_all.iget(row)
-        hits = list()
         for topic in top:
             if fields.count(topic) >0:
-                hits.append(fields.index(topic))
-        cofield[row, hits] = 1
+               cofield[row, fields.index(topic) = 1
     
     #to create cofieldord matrix, use matrix dot product
     print('finished matrix ... ')
@@ -209,22 +235,30 @@ def inclusion_matrix(cow_m):
     Inclusion score is conditional probability of key1
     given the presence of key2 (or vice versa)"""
 
-    keycounts = np.colsums(cow_m)
-    I_ij = np.copy(cow_m)
-    for i in range(0, cow_m.shape[0]):
-        for j in range(0, cow_m.shape[1]):
-            I_ij [i,j]= cow_m[i,j]/min(keycounts[i],  keycounts[j])
+    keycounts = np.sum(cow_m,1)
+
+    minimum_matrix = [min(p,q) for p,q in itertools.product(keycounts,repeat=2)]
+    minimum_matrix = np.array(minimum_matrix, dtype=np.float16).reshape(cow_m.shape)
+    I_ij = cow_m/minimum_matrix
     return I_ij
 
 def proximity_score(cow_wos_df, key1, key2, key_counts, article_count):
     """ Calculates  the proximity score  of key1
     given the presence of key2 (or vice versa); 
     The mediator and peripheral keywords pulled
-out by Pg represent minor but potentially growing areas."""
+    out by Pg represent minor but potentially growing areas."""
 
     c_ij = cow_wos_df[key1][key2]
     p_ij = c_ij/(key_counts[key1] * key_counts[key2]) * article_count
     return p_ij
+
+def proximity_matrix(cow_m):
+    """ Calculates  the proximity score  of key1
+    given the presence of key2 (or vice versa); 
+    The mediator and peripheral keywords pulled
+    out by Pg represent minor but potentially growing areas."""
+
+    return 'tba'
 
 def equivalence_score(cow_wos_df, key1, key2, key_counts):
     """ Calculates  the equivalence score (mutual inclusion) of key1
@@ -459,31 +493,6 @@ def trim_draw_network(coword_net, trim):
     return coword_net
 
 
-def coword_network(mesh_df, start, end,topic_count=0): 
-        """
-        constructs a coword network for the years supplied; nodes have an attribute 'topic'
-        
-        Parameters
-        ----------------
-        mesh_df: a dataframe with at least the topics and years columns
-        start: start year
-        end: end year
-        topic_count: the number of the topics to use (not too big, otherwise coword matrix will be huge
-        """
-        all_topics = [t for top in mesh_df.topics.dropna() for t in top]
-        topic_collection = collections.Counter(all_topics)
-        if topic_count > 0 and topic_count < len(topic_collection):
-            common_topics = [k[0] for k in topic_collection.most_common(topic_count)]
-        else:
-            common_topics = sorted(topic_collection.keys())
-
-        cow_df = coword_matrix_years(mesh_df, start, end,common_topics)
-        cow_nx = nx.from_numpy_matrix(cow_df.as_matrix())
-        col_names = cow_df.columns.tolist()
-        labels = {col_names.index(l):l for l in col_names}
-
-        nx.set_node_attributes(cow_nx, 'topic', labels)
-        return cow_nx
 
 def plot_co_x(cox, start, end, size = (20,20)):
         

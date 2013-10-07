@@ -127,7 +127,7 @@ dec_tree_df[['TI','PY', 'AF', 'TC']][(dec_tree_df.PY<1986) & (dec_tree_df.PY>=19
 # <codecell>
 
 morgan_df = ml.load_records('data/morgan_sonquist_WOS/')
-plt.figure(figsize=(12,4))
+figure = plt.figure(figsize=(12,4))
 plt.subplot(121)
 plt.hist(morgan_df.PY, bins=morgan_df.PY.max()-morgan_df.PY.min())
 plt.title('Citations of Morgan and Sonquist 1963')
@@ -135,6 +135,7 @@ cover_df = ml.load_records('data/cover_hart_WOS/')
 plt.subplot(122)
 plt.hist(cover_df.PY, color = 'g', bins=cover_df.PY.max()-cover_df.PY.min())
 plt.title('Citations of Cover-Hart, 1967')
+figure.remove
 
 # <markdowncell>
 
@@ -322,16 +323,16 @@ svm_df_lim.shape
 
 # <markdowncell>
 
-# ## pre-2006
+# ## SVM: pre-2006
 
 # <codecell>
 
-
-svm_nx_2006 = ml.coword_network(svm_df, 1995, 2006)
+#looking at 200 top topics
+svm_nx_2006 = ml.coword_network(svm_df, 1995, 2006, 1000)
 
 # <codecell>
 
-print(svm_nx_2006.number_of_nodes())
+svm_2006_cow = nx.to_numpy_matrix(svm_nx_2006)
 
 # <codecell>
 
@@ -368,7 +369,7 @@ ml.sorted_map(nx.betweenness_centrality(svm_nx))
 
 # <markdowncell>
 
-# ## SVM -- 2006 on
+# ## SVM: 2007-8
 
 # <codecell>
 
@@ -392,10 +393,55 @@ ml.plot_co_x(class_nx, 2006, 2008, (15,15))
 
 # <codecell>
 
-## try equivalence matrix
-svm_2006_cowe = ml.fast_equivalence_matrix(nx.to_numpy_matrix(svm_nx_2006))
+svm_2006_cow = nx.to_numpy_matrix(svm_nx_2006)
 
 # <codecell>
 
-nx.
+## try inclusion matrix
+svm_2006_cow_inc = ml.inclusion_matrix(svm_2006_cow)
+
+# <codecell>
+
+svm_2006_cow_inc[:50,1]
+
+# <codecell>
+
+svm_2006_cow_inc[np.isnan(svm_2006_cow_inc)]=0
+
+# <codecell>
+
+nx.draw_graphviz(svm_nx_2006, with_labels=True, 
+                     alpha = 0.8, width=0.1,
+                     labels = nx.get_node_attributes(svm_nx_2006, 'topic'),
+                     fontsize=9,
+                     node_size = [s*4500 for s in nx.eigenvector_centrality(svm_nx_2006).values()],
+                     node_color = [s for s in nx.degree(svm_nx_2006).values()])
+
+# <codecell>
+
+svm_nx_2006_trim = ml.trim_degrees(svm_nx_2006,2)
+
+# <codecell>
+
+plt.figure(figsize=(20,16))
+nx.draw_graphviz(svm_nx_2006_trim, with_labels=True, node_color = [s for s in nx.degree(svm_nx_2006_trim).values()],
+                                      labels = nx.get_node_attributes(svm_nx_2006_trim, 'topic'),
+
+                 )
+
+# <codecell>
+
+numpy.unravel_index(svm_2006_cow_inc.argmax(), svm_2006_cow_inc.shape)
+
+# <codecell>
+
+svm_2006_cow_inc[1,0]
+
+# <codecell>
+
+topics
+
+# <codecell>
+
+x,y,z = plt.hist(svm_2006_cow_inc.tolist(), bins=100)
 
