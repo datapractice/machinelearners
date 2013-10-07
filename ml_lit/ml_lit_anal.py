@@ -58,6 +58,7 @@ def clean_topics(wos_df):
     wos_df['topics'] = wos_df.DE.dropna().str.lower().str.strip().str.replace('\(\\w+ \)', '').str.replace('($  )|(  )', ' ')
     # wos_df.topics = wos_df.topics.str.replace('s;', ';')
     # wos_df.topics = wos_df.topics.str.replace('s$', '')
+    wos_df['topics'] = wos_df.topics.str.replace("(\w+ )\W+\(\w+\)", '\\1')
     wos_df.topics  = wos_df.topics.str.replace('svm', 'support vector machine')
     wos_df.topics  = wos_df.topics.str.replace('\(support vector machine\)', 
         'support vector machine')
@@ -212,7 +213,7 @@ def cofield_matrix(wos_df, fields):
         top = fields_all.iget(row)
         for topic in top:
             if fields.count(topic) >0:
-               cofield[row, fields.index(topic) = 1
+               cofield[row, fields.index(topic)] = 1
     
     #to create cofieldord matrix, use matrix dot product
     print('finished matrix ... ')

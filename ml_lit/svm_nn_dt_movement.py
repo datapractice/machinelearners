@@ -350,7 +350,7 @@ ml.plot_co_x(class_nx, 1995, 2006)
 
 # <codecell>
 
-svm_nx_trim = ml.trim_degrees(svm_nx, 8)
+svm_nx_trim = ml.trim_degrees(svm_nx_2006, 1)
 len(svm_nx_trim.nodes())
 
 # <codecell>
@@ -402,20 +402,7 @@ svm_2006_cow_inc = ml.inclusion_matrix(svm_2006_cow)
 
 # <codecell>
 
-svm_2006_cow_inc[:50,1]
-
-# <codecell>
-
 svm_2006_cow_inc[np.isnan(svm_2006_cow_inc)]=0
-
-# <codecell>
-
-nx.draw_graphviz(svm_nx_2006, with_labels=True, 
-                     alpha = 0.8, width=0.1,
-                     labels = nx.get_node_attributes(svm_nx_2006, 'topic'),
-                     fontsize=9,
-                     node_size = [s*4500 for s in nx.eigenvector_centrality(svm_nx_2006).values()],
-                     node_color = [s for s in nx.degree(svm_nx_2006).values()])
 
 # <codecell>
 
@@ -423,7 +410,7 @@ svm_nx_2006_trim = ml.trim_degrees(svm_nx_2006,2)
 
 # <codecell>
 
-plt.figure(figsize=(20,16))
+plt.figure(figsize=(16,16))
 nx.draw_graphviz(svm_nx_2006_trim, with_labels=True, node_color = [s for s in nx.degree(svm_nx_2006_trim).values()],
                                       labels = nx.get_node_attributes(svm_nx_2006_trim, 'topic'),
 
@@ -435,7 +422,24 @@ numpy.unravel_index(svm_2006_cow_inc.argmax(), svm_2006_cow_inc.shape)
 
 # <codecell>
 
-svm_2006_cow_inc[1,0]
+np.unravel_index(svm_2006_cow_inc.argmax(), svm_2006_cow_inc.shape)
+
+# <codecell>
+
+np.where(svm_2006_cow_inc > 0.5)
+
+# <codecell>
+
+most_inclusive_node = nx.ego_graph(svm_nx_2006,11,5)
+
+# <codecell>
+
+topics[74]
+
+# <codecell>
+
+plt.figure(figsize=(15,15))
+nx.draw_graphviz(most_inclusive_node, with_labels = True, labels = nx.get_node_attributes(most_inclusive_node, 'topic'))
 
 # <codecell>
 
@@ -443,5 +447,4 @@ topics
 
 # <codecell>
 
-x,y,z = plt.hist(svm_2006_cow_inc.tolist(), bins=100)
 
