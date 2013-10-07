@@ -23,10 +23,9 @@ import numpy as np
 # <codecell>
 
 df = ml.load_records('data/machine_learning_WOS/')
-print('There are %s records in the dataset'%df.shape[0])
-
-#clean topics
 df = ml.clean_topics(df)
+df = ml.clean_fields(df)
+df.shape
 
 # <codecell>
 
@@ -236,8 +235,9 @@ svm_df.shape
 plt.figure(figsize=(12,5))
 plt.subplot(121)
 plt.title('Support vector machine publications')
-x,y,z = plt.hist(svm_df.PY, color='g',bins  = svm_df.PY.max() - svm_df.PY.min(), alpha=0.65, hold='on')
-x,y,z = hist(rf_df.PY, color='r')
+x,y,z = plt.hist(svm_df.PY, color='g',bins  = svm_df.PY.max() - svm_df.PY.min(), 
+                 label= 'SVM', alpha=0.65, hold='on')
+x,y,z = hist(rf_df.PY, color='r', label='random forest')
 plt.plot(y[:-1],x, linewidth=2)
 
 plt.subplot(122)
@@ -327,8 +327,8 @@ svm_df_lim.shape
 
 # <codecell>
 
-#looking at 200 top topics
-svm_nx_2006 = ml.coword_network(svm_df, 1995, 2006, 1000)
+#looking at 2000 top topics
+svm_nx_2006 = ml.coword_network(svm_df, 1995, 2006, 2000)
 
 # <codecell>
 
@@ -336,32 +336,32 @@ svm_2006_cow = nx.to_numpy_matrix(svm_nx_2006)
 
 # <codecell>
 
-topics = nx.get_node_attributes(svm_nx_2006, 'topic')
-eigen = nx.eigenvector_centrality(svm_nx_2006)
+topics_2006 = nx.get_node_attributes(svm_nx_2006, 'topic')
+eigen_2006 = nx.eigenvector_centrality(svm_nx_2006)
 [(i[0], svm_nx_2006.node[i[0]].values()) for i in ml.sorted_map(eigen)[:20]]
 
 # <codecell>
 
-k = [key for key, topic in topics.items() if topic == 'pattern recognition']
+k = [key for key, topic in topics_2006.items() if topic == 'pattern recognition']
 print(k)
 class_nx = nx.ego_graph(svm_nx_2006, k[0])
 #class_nx = nx.ego_graph(svm_nx, 1449)
-ml.plot_co_x(class_nx, 1995, 2006)
+ml.plot_co_x(class_nx, 1995, 2006, (10,10))
 
 # <codecell>
 
-svm_nx_trim = ml.trim_degrees(svm_nx_2006, 1)
-len(svm_nx_trim.nodes())
+svm_nx_2006_trim = ml.trim_degrees(svm_nx_2006, 1)
+len(svm_nx_2006_trim.nodes())
 
 # <codecell>
 
-svm_nx_trim = ml.trim_edges(svm_nx_trim,2)
-svm_nx_trim = ml.trim_degrees(svm_nx_trim, 2)
+svm_nx_2006_trim = ml.trim_edges(svm_nx_2006_trim,2)
+svm_nx_2006_trim = ml.trim_degrees(svm_nx_2006_trim, 2)
 
 # <codecell>
 
 
-ml.plot_co_x(svm_nx_trim, 1995, 2006, (20,20))
+ml.plot_co_x(svm_nx_2006_trim, 1995, 2006, (18,18))
 
 # <codecell>
 
@@ -381,19 +381,19 @@ svm_nx_2008.number_of_nodes()
 
 # <codecell>
 
-topics = nx.get_node_attributes(svm_nx_2008, 'topic')
-eigen = nx.eigenvector_centrality(svm_nx_2008)
-[(i[0], svm_nx_2008.node[i[0]].values()) for i in ml.sorted_map(eigen)[:20]]
+topics_2008 = nx.get_node_attributes(svm_nx_2008, 'topic')
+eigen_2008 = nx.eigenvector_centrality(svm_nx_2008)
+[(i[0], svm_nx_2008.node[i[0]].values()) for i in ml.sorted_map(eigen_2008)[:20]]
 
 # <codecell>
 
-class_nx = nx.ego_graph(svm_nx_2008, 918)
+class_nx = nx.ego_graph(svm_nx_2008, 532)
 #class_nx = nx.ego_graph(svm_nx, 1449)
 ml.plot_co_x(class_nx, 2006, 2008, (15,15))
 
-# <codecell>
+# <markdowncell>
 
-svm_2006_cow = nx.to_numpy_matrix(svm_nx_2006)
+# # Experiments with inclusion, proximity and equivalence scores
 
 # <codecell>
 
@@ -406,19 +406,32 @@ svm_2006_cow_inc[np.isnan(svm_2006_cow_inc)]=0
 
 # <codecell>
 
+inc_edges = ml.inclusion_matrix_to_edge_weights(svm_2006_cow_inc)
+nx.set_edge_attributes(svm_nx_2006, 'inclusion', inc_edges)
+
+# <codecell>
+
+inc_edges_sorted = ml.sorted_map(inc_edges)
+
+# <codecell>
+
+{(topics_2006[x[0]], topics_2006[x[1]]):v for x,v in inc_edges_sorted[10:
+                                                                      20]}
+
+# <codecell>
+
 svm_nx_2006_trim = ml.trim_degrees(svm_nx_2006,2)
+svm_nx_2006_trim.number_of_nodes()
 
 # <codecell>
 
 plt.figure(figsize=(16,16))
-nx.draw_graphviz(svm_nx_2006_trim, with_labels=True, node_color = [s for s in nx.degree(svm_nx_2006_trim).values()],
-                                      labels = nx.get_node_attributes(svm_nx_2006_trim, 'topic'),
-
+nx.draw_graphviz(svm_nx_2006_trim, with_labels=True, 
+                node_color = [s for s in nx.degree(svm_nx_2006_trim).values()],
+                labels = nx.get_node_attributes(svm_nx_2006_trim, 'topic'),
+                alpha=0.6,
+                width=0.2
                  )
-
-# <codecell>
-
-numpy.unravel_index(svm_2006_cow_inc.argmax(), svm_2006_cow_inc.shape)
 
 # <codecell>
 
@@ -434,7 +447,7 @@ most_inclusive_node = nx.ego_graph(svm_nx_2006,11,5)
 
 # <codecell>
 
-topics[74]
+topics[845]
 
 # <codecell>
 

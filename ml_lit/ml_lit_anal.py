@@ -55,19 +55,16 @@ def clean_topics(wos_df):
     Returns a cleaned-up, de-pluralised list version of all the topics and techniques
     """
 
-    wos_df['topics'] = wos_df.DE.dropna().str.lower().str.strip().str.replace('\(\\w+ \)', '').str.replace('($  )|(  )', ' ')
-    # wos_df.topics = wos_df.topics.str.replace('s;', ';')
-    # wos_df.topics = wos_df.topics.str.replace('s$', '')
-    wos_df['topics'] = wos_df.topics.str.replace("(\w+ )\W+\(\w+\)", '\\1')
+    wos_df['topics'] = wos_df.DE.dropna().str.lower().str.strip().str.replace('\(\w+ \)', '').str.replace('($  )|(  )', ' ')
+    # wos_df['topics'] = wos_df.topics.str.replace("[\(\](\w+ ?)+[\)\]]\W*",  '')
     wos_df.topics  = wos_df.topics.str.replace('svm', 'support vector machine')
-    wos_df.topics  = wos_df.topics.str.replace('\(support vector machine\)', 
-        'support vector machine')
     wos_df.topics  = wos_df.topics.str.replace('support vector machine(\w*)', 
         'support vector machine')
     wos_df.topics = wos_df.topics.str.replace('(artificial neural network)|(neural networks)|(neural net\b)', 
         'neural network')
-    wos_df.topics = wos_df.topics.str.replace('decision tree(.*)', 'decision tree')
-
+    # wos_df.topics = wos_df.topics.str.replace('decision tree(.*)', 'decision tree')
+    # Web of science topics often have  a bracket expansion
+    wos_df['topics'] = wos_df.topics.str.replace("(\w+)\W*[\[\(].+[\)\]]\W*", '\\1')
     wos_df.topics = wos_df.topics.str.split('; ')
     return wos_df
 
@@ -242,6 +239,12 @@ def inclusion_matrix(cow_m):
     minimum_matrix = np.array(minimum_matrix, dtype=np.float16).reshape(cow_m.shape)
     I_ij = cow_m/minimum_matrix
     return I_ij
+
+def inclusion_matrix_to_edge_weights(I_ij):
+    """ Reshapes an inclusion matrix to 
+    the tuple-value dictionary needed by networkx
+    """
+    return {(x,y):I_ij[x,y]   for x in range(0,I_ij.shape[0]) for y in range(0, I_ij.shape[1]) if I_ij[x,y] > 0}
 
 def proximity_score(cow_wos_df, key1, key2, key_counts, article_count):
     """ Calculates  the proximity score  of key1
