@@ -299,7 +299,7 @@
 			"file": "ch3_dimensionality/ch3_dimensional_exuberance.rmd",
 			"settings":
 			{
-				"buffer_size": 80013,
+				"buffer_size": 84483,
 				"line_ending": "Unix"
 			}
 		},
@@ -400,7 +400,7 @@
 			"file": "ml_lit/ml_lit_anal.py",
 			"settings":
 			{
-				"buffer_size": 18072,
+				"buffer_size": 18157,
 				"line_ending": "Unix"
 			}
 		},
@@ -462,10 +462,7 @@
 			}
 		},
 		{
-			"contents": "# vapnik_nature of statistical learning theory 2000\n\nnew function estimation methods have been created where a high dimensionality of the unknown function does not always require a large number of observations in order to obtain a good estimate. The new methods control generalization using capacity factors that do not necessarily depend on the dimensionality of the space vii\n\nIn contrast to classical methods of statistics where in order to control performance one decreases the dimensionality of a feature space, the SVM dramatically increases dimensionality and relies on the so-called large margine factor.  vii\n\n\nIn this book we consider the learning problem as a problem of finding a desired dependence using a _limited_ number of observations. 17\n\nWe describe the general model of learning from examples through three components:\n(i) A generator (G) of random vectors $x E R^n$, drawn independently from a fixed by unknown probability distribution function $F(x)$\n(ii) A supervisor (S) who returns an output value $y$ to every input vector $x$, according to a conditional distribution function $F(y|x)$, also fixed by unknown\n(iii) A learning machine (LM) capable of implementing a set of functions $f(x, \\alpha), \\alpha E \\Lambda$\nThe problem of learning is that of choosing from the given set of functions  $f(x, \\alpha), \\alpha E \\Lambda$, the one that best approximates the supervisor's response. 17\n\nIn order to choose the best available approximation to the supervisor's response, one measures the _loss_ or discrepancy, $L(x, f(x, \\alpha))$ between the response $y$ of the supervisor to a given input $x$ and the response  $f(x,a)$ provided by the learning machine. 18\n\nThe problem is to use the sample to find the function from the set of admissable functions that minimizes the probability of error. 31\n\nIn the framework of the classical paradigm all models of function estimation are based on the maximum likelihood function. It forms an inductive engine in the classical paradigm.  24\n\nlearning is a problem of _function estimation_ on the basis of empirical data 291\n\nMostly, however, we face another situation.  ... In other words, we face the problem of estimating the _values of the unknown function at given points._ 291\n\nThe matter is that in solving the function estimation problem in both computational statistics (say pattern recognition, regression, density estimation) and in computation mathematics(...), the first step is describing (parameterizing) a set of functions in which one is looking for a solution 297\n\n",
 			"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
-			"file_size": 2305,
-			"file_write_time": 130251814755392839,
 			"settings":
 			{
 				"buffer_size": 2546,
@@ -757,6 +754,7 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/Documents/data_intensive/ubiquity_encounters/Mackenzie_abstract.mdown",
 		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.md",
 		"/tmp/.fr-DNz46C/Order details.txt",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/svm.sublime-snippet",
@@ -883,8 +881,7 @@
 		"/home/mackenza/Documents/google_analytics_spet2012/google.sublime-workspace",
 		"/home/mackenza/Documents/notes/dewey_reconstruction_1957.odt",
 		"/home/mackenza/Documents/data_intensive/book/Sources.md",
-		"/home/mackenza/Desktop/drawing-1.svg",
-		"/home/mackenza/Documents/data_intensive/book/markets_algorithms.Rmd"
+		"/home/mackenza/Desktop/drawing-1.svg"
 	],
 	"find":
 	{
@@ -1167,7 +1164,7 @@
 							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 5440.0,
+						"translation.y": 715.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1178,15 +1175,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 80013,
+						"buffer_size": 84483,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3231,
-								3231
+								79855,
+								79855
 							]
 						],
 						"settings":
@@ -1197,7 +1194,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 937.0,
+						"translation.y": 26762.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -3267,15 +3264,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18072,
+						"buffer_size": 18157,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2146,
+								2146
 							]
 						],
 						"settings":
@@ -3286,7 +3283,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7976.0,
+						"translation.y": 1153.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -3806,7 +3803,7 @@
 		[
 			[
 				"",
-				"~/Documents/reviews/current_reviews.sublime-project"
+				"~/Documents/data_intensive/ngs_data_topography/ngs_paper/ngs.sublime-project"
 			]
 		],
 		"width": 380.0

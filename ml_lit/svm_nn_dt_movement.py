@@ -218,7 +218,11 @@ plt.title('Random forests in machine learning')
 
 # <codecell>
 
-term_year_network(rf_df, 'random forest', 2007, 2008)
+ml.term_year_network(rf_df, 'random forest', 2007, 2008)
+
+# <codecell>
+
+ml.term_year_network(rf_df, 'random forest', 2011, 2012, (18, 20))
 
 # <markdowncell>
 
@@ -335,14 +339,14 @@ def term_year_network(svm_df, topic, start, end, size = (18,18)):
     topics = nx.get_node_attributes(svm_nx, 'topic')
     eigen = nx.eigenvector_centrality(svm_nx)
     #[(i[0], svm_nx_2004.node[i[0]].values()) for i in ml.sorted_map(eigen_2004)[:20]]
-    class_nx = nx.ego_graph(svm_nx, key_for_topic(topic, topics), undirected=True, radius=20)
+    class_nx = nx.ego_graph(svm_nx, nxkey_for_topic(topic, topics), undirected=True, radius=20)
 
     ml.plot_co_x(class_nx, start, end, size)
     return class_nx
 
 # <codecell>
 
-def key_for_topic(topic, topics):
+def nxkey_for_topic(topic, topics):
     return [k[0] for k in topics.items() if k[1] == topic][0]
 
 # <markdowncell>

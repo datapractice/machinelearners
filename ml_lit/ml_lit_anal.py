@@ -63,6 +63,7 @@ def clean_topics(wos_df):
     wos_df.topics = wos_df.topics.str.replace('(artificial neural network)|(neural networks)|(neural net\b)', 
         'neural network')
     wos_df.topics = wos_df.topics.str.replace('decision tree(.*)', 'decision tree')
+    wos_df.topics = wos_df.topics.str.replace('random forest(\w+)', 'random forest')
     # Web of science topics often have  a bracket expansion
     wos_df['topics'] = wos_df.topics.str.replace("(\w+)\W*[\[\(].+[\)\]]\W*", '\\1 ')
     wos_df.topics = wos_df.topics.str.split('; ')
@@ -500,7 +501,7 @@ def trim_draw_network(coword_net, trim):
 
 
 
-def plot_co_x(cox, start, end, size = (20,20)):
+def plot_co_x(cox, start, end, size = (20,20), title = ''):
         
         """ Plotting function for keyword graphs
 
@@ -512,13 +513,44 @@ def plot_co_x(cox, start, end, size = (20,20)):
         """
 
         plt.figure(figsize=size)
-        plt.title('Most central nodes  %s - %s'%(start,end), fontsize=18)
+        plt.title(title +' %s - %s'%(start,end), fontsize=18)
         nx.draw_graphviz(cox, with_labels=True, 
                      alpha = 0.8, width=0.1,
                      labels = nx.get_node_attributes(cox, 'topic'),
                      fontsize=9,
                      node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
                      node_color = [s for s in nx.degree(cox).values()])
+
+def term_year_network(df, topic, start, end, size = (18,18)):
+
+    """ Constructs, plots and returns a network for the given term during the given years
+
+    Parameters
+    --------------------------------------
+    df: references dataframe with a 'topics' field
+    topic: the keyword
+    start: start year
+    end: end year -- not included
+    size: size in inches of the plot
+    """
+    svm_nx = coword_network(df, start, end)
+
+    svm_cow = nx.to_numpy_matrix(svm_nx)
+    topics = nx.get_node_attributes(svm_nx, 'topic')
+    eigen = nx.eigenvector_centrality(svm_nx)
+    class_nx = nx.ego_graph(svm_nx, nxkey_for_topic(topic, topics), undirected=True, radius=20)
+
+    plot_co_x(class_nx, start, end, size)
+    return class_nx
+
+def nxkey_for_topic(topic, topics):
+
+    """ helper function to look up the node number
+    for a given topic in the list of topics as ordered
+    in a networkx graph
+    """
+
+    return [k[0] for k in topics.items() if k[1] == topic][0]
 
 def  pmc_year_column(pmc_df):
 
