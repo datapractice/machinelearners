@@ -299,7 +299,7 @@
 			"file": "ch3_dimensionality/ch3_dimensional_exuberance.rmd",
 			"settings":
 			{
-				"buffer_size": 79612,
+				"buffer_size": 80013,
 				"line_ending": "Unix"
 			}
 		},
@@ -400,7 +400,7 @@
 			"file": "ml_lit/ml_lit_anal.py",
 			"settings":
 			{
-				"buffer_size": 17799,
+				"buffer_size": 18072,
 				"line_ending": "Unix"
 			}
 		},
@@ -1178,15 +1178,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 79612,
+						"buffer_size": 80013,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								75164,
-								75164
+								3231,
+								3231
 							]
 						],
 						"settings":
@@ -1197,7 +1197,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 21287.0,
+						"translation.y": 937.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -3267,7 +3267,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17799,
+						"buffer_size": 18072,
 						"regions":
 						{
 						},
@@ -3929,7 +3929,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 338.0,
 	"status_bar_visible": true,
 	"template_settings":

@@ -62,9 +62,9 @@ def clean_topics(wos_df):
         'support vector machine')
     wos_df.topics = wos_df.topics.str.replace('(artificial neural network)|(neural networks)|(neural net\b)', 
         'neural network')
-    # wos_df.topics = wos_df.topics.str.replace('decision tree(.*)', 'decision tree')
+    wos_df.topics = wos_df.topics.str.replace('decision tree(.*)', 'decision tree')
     # Web of science topics often have  a bracket expansion
-    wos_df['topics'] = wos_df.topics.str.replace("(\w+)\W*[\[\(].+[\)\]]\W*", '\\1')
+    wos_df['topics'] = wos_df.topics.str.replace("(\w+)\W*[\[\(].+[\)\]]\W*", '\\1 ')
     wos_df.topics = wos_df.topics.str.split('; ')
     return wos_df
 
@@ -233,9 +233,11 @@ def inclusion_matrix(cow_m):
     Inclusion score is conditional probability of key1
     given the presence of key2 (or vice versa)"""
 
-    keycounts = np.sum(cow_m,1)
-
+    keycounts = cow_m.diagonal().tolist()[0]
+    # print(len(keycounts))
+    # print(cow_m.shape)
     minimum_matrix = [min(p,q) for p,q in itertools.product(keycounts,repeat=2)]
+    print(len(minimum_matrix))
     minimum_matrix = np.array(minimum_matrix, dtype=np.float16).reshape(cow_m.shape)
     I_ij = cow_m/minimum_matrix
     return I_ij
@@ -286,7 +288,7 @@ def fast_equivalence_matrix(cow_m):
 """
 
     ecow = cow_m**2
-    colsums = np.sum(cow_m,1)
+    colsums = cow_m.diagonal()
     for i in range(0,cow_m.shape[0]):
         for j in range(0, cow_m.shape[1]):
             ecow[i,j] = ecow[i,j]/(colsums[i]*colsums[j])

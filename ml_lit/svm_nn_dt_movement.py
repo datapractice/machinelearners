@@ -99,6 +99,7 @@ plt.show()
 # <codecell>
 
 dec_tree_df = ml.load_records('data/decision_tree_WOS/')
+dec_tree_df = ml.clean_topics(dec_tree_df)
 
 # <codecell>
 
@@ -190,6 +191,14 @@ dt_df = df.ix[dt_topics.index].groupby(df['PY'])
 dt_df
 
 
+# <codecell>
+
+term_year_network(dt, 'decision tree', 1980, 2000, (18,18))
+
+# <codecell>
+
+term_year_network(dt, 'decision tree', 2000, 2004)
+
 # <markdowncell>
 
 # ## Random forest
@@ -209,11 +218,7 @@ plt.title('Random forests in machine learning')
 
 # <codecell>
 
-rf_df_full = df.ix[rf_df.index]
-
-# <codecell>
-
-ml.coword_matrix(rf_df_full)
+term_year_network(rf_df, 'random forest', 2007, 2008)
 
 # <markdowncell>
 
@@ -321,16 +326,98 @@ nx.draw_graphviz(cortes_nx, with_labels=True,
 svm_df_lim = svm_df.ix[svm_df.PY <2006]
 svm_df_lim.shape
 
+# <codecell>
+
+def term_year_network(svm_df, topic, start, end, size = (18,18)):
+    svm_nx = ml.coword_network(svm_df, start, end)
+
+    svm_cow = nx.to_numpy_matrix(svm_nx)
+    topics = nx.get_node_attributes(svm_nx, 'topic')
+    eigen = nx.eigenvector_centrality(svm_nx)
+    #[(i[0], svm_nx_2004.node[i[0]].values()) for i in ml.sorted_map(eigen_2004)[:20]]
+    class_nx = nx.ego_graph(svm_nx, key_for_topic(topic, topics), undirected=True, radius=20)
+
+    ml.plot_co_x(class_nx, start, end, size)
+    return class_nx
+
+# <codecell>
+
+def key_for_topic(topic, topics):
+    return [k[0] for k in topics.items() if k[1] == topic][0]
+
 # <markdowncell>
 
-# ## SVM: pre-2006
+# ## SVM: pre-2000
 
 # <codecell>
 
-#looking at 2000 top topics
-svm_nx_2006 = ml.coword_network(svm_df, 1995, 2006, 2000)
+svm_nx_2000 = ml.coword_network(svm_df, 1995, 2000)
+svm_2000_cow = nx.to_numpy_matrix(svm_nx_2000)
 
 # <codecell>
+
+topics_2000 = nx.get_node_attributes(svm_nx_2000, 'topic')
+eigen_2000 = nx.eigenvector_centrality(svm_nx_2000)
+[(i[0], svm_nx_2000.node[i[0]].values()) for i in ml.sorted_map(eigen_2000)[:20]]
+
+# <codecell>
+
+key_for_topic('support vector machine', topics_2000)
+
+# <codecell>
+
+# plot ego graph for svm
+term_year_network(svm_df, 'support vector machine', 1995, 2000, (5,5))
+
+# <markdowncell>
+
+# ## SVM: year by year
+
+# <markdowncell>
+
+# ## SVM: 2000-2
+
+# <codecell>
+
+
+svm_nx_2002 = term_year_network(svm_df, 'support vector machine', 2000, 2001, (10,10))
+
+# <codecell>
+
+svm_nx_2002 = term_year_network(svm_df, 'support vector machine', 2001, 2002)
+
+# <codecell>
+
+term_year_network(svm_df, 2001, 2002, (12,12))
+
+# <codecell>
+
+svm_year_plot(svm_df, 2002,2003)
+
+# <codecell>
+
+svm_year_plot(svm_df, 2003, 2004)
+
+# <codecell>
+
+svm_nx_2013 = term_year_network(svm_df, 'support vector machine', 2012, 2013)
+
+# <codecell>
+
+term_year_network(svm_df, 'support vector machine', 2004, 2005)
+
+# <codecell>
+
+svm_year_plot(svm_df, 2005,2006)
+
+# <markdowncell>
+
+# ## SVM: 2004-6
+
+# <codecell>
+
+#looking at 2000 top topics for the moment
+svm_nx_2006 = ml.coword_network(svm_df, 2004, 2006, 2000)
 
 svm_2006_cow = nx.to_numpy_matrix(svm_nx_2006)
 
@@ -338,15 +425,13 @@ svm_2006_cow = nx.to_numpy_matrix(svm_nx_2006)
 
 topics_2006 = nx.get_node_attributes(svm_nx_2006, 'topic')
 eigen_2006 = nx.eigenvector_centrality(svm_nx_2006)
-[(i[0], svm_nx_2006.node[i[0]].values()) for i in ml.sorted_map(eigen)[:20]]
+[(i[0], svm_nx_2006.node[i[0]].values()) for i in ml.sorted_map(eigen_2006)[:20]]
 
 # <codecell>
 
-k = [key for key, topic in topics_2006.items() if topic == 'pattern recognition']
-print(k)
-class_nx = nx.ego_graph(svm_nx_2006, k[0])
-#class_nx = nx.ego_graph(svm_nx, 1449)
-ml.plot_co_x(class_nx, 1995, 2006, (10,10))
+# ego network for svm
+class_nx = nx.ego_graph(svm_nx_2006, n=0, center=True)
+ml.plot_co_x(class_nx, 2004, 2006, (20,20))
 
 # <codecell>
 
@@ -402,7 +487,12 @@ svm_2006_cow_inc = ml.inclusion_matrix(svm_2006_cow)
 
 # <codecell>
 
-svm_2006_cow_inc[np.isnan(svm_2006_cow_inc)]=0
+#svm_2006_cow_inc[np.isnan(svm_2006_cow_inc)]=0
+
+# <codecell>
+
+#set diagonal to zero 
+np.fill_diagonal(svm_2006_cow_inc,0)
 
 # <codecell>
 
@@ -415,23 +505,39 @@ inc_edges_sorted = ml.sorted_map(inc_edges)
 
 # <codecell>
 
-{(topics_2006[x[0]], topics_2006[x[1]]):v for x,v in inc_edges_sorted[10:
-                                                                      20]}
+{(topics_2006[x[0]], topics_2006[x[1]]):v for x,v in inc_edges_sorted[:30]}
 
 # <codecell>
 
-svm_nx_2006_trim = ml.trim_degrees(svm_nx_2006,2)
-svm_nx_2006_trim.number_of_nodes()
+# draw graph of most inclusive nodes
+
+elarge=[(u,v) for (u,v,d) in svm_nx_2006.edges(data=True) if d['inclusion'] ==1]
 
 # <codecell>
 
-plt.figure(figsize=(16,16))
-nx.draw_graphviz(svm_nx_2006_trim, with_labels=True, 
-                node_color = [s for s in nx.degree(svm_nx_2006_trim).values()],
-                labels = nx.get_node_attributes(svm_nx_2006_trim, 'topic'),
-                alpha=0.6,
-                width=0.2
-                 )
+svm_2006_nx_inc = nx.Graph(elarge)
+
+# <codecell>
+
+svm_2006_nx_inc.number_of_edges()
+
+# <codecell>
+
+svm_2006_nx_inc.number_of_nodes()
+
+# <codecell>
+
+labels_inc = {n: topics_2006[n] for n in svm_2006_nx_inc.nodes()}
+
+# <codecell>
+
+plt.figure(figsize=(15,15))
+nx.draw_graphviz(svm_2006_nx_inc, 
+                 with_labels = True,
+                 labels = labels_inc,
+                 node_size = [s for s in nx.betweenness_centrality(svm_2006_nx_inc)],
+                 width=0.3,
+                 alpha=0.4)
 
 # <codecell>
 
@@ -439,7 +545,7 @@ np.unravel_index(svm_2006_cow_inc.argmax(), svm_2006_cow_inc.shape)
 
 # <codecell>
 
-np.where(svm_2006_cow_inc > 0.5)
+np.where(svm_2006_cow_inc == 1.0)[0].shape
 
 # <codecell>
 
@@ -453,10 +559,6 @@ topics[845]
 
 plt.figure(figsize=(15,15))
 nx.draw_graphviz(most_inclusive_node, with_labels = True, labels = nx.get_node_attributes(most_inclusive_node, 'topic'))
-
-# <codecell>
-
-topics
 
 # <codecell>
 
