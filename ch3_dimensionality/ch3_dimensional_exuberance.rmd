@@ -493,10 +493,94 @@ Note that this 'very high-dimension feature space' is explicitly made to support
 
 Despite the in-principle commitment to any form of function, machine learning like statistics retains strong preferences for forms that can either be visualised on a plane (using the visual grammar of lines, dots, axes, labels, colours, shapes, etc), or can be computed in form of matrix or vectorised calculationsIn many ways (see chapter two on this point). Many of the techniques that grapple with complicated datasets seek to reduce their dimensionality so that lines, planes and regular curves can be applied to them: multi-dimensional scaling (MDS),  factor analysis, principal component analysis (PCA), self-organising maps (SOM) are just a few examples of this (the MDS plot of the _Titanic_ data as modelled by a random forest above is an example of this dimensional reduction).  The last three decades of research in machine learning, whether it has been primarily statistical, mathematical, or computational, mainly countenances  and addresses problems of relationality through _dimensional reduction_.  
 
-But certain techniques, such as support vector machines, buck this trend. They have  increased the dimensionality of the predictive  model in order to find hidden, latent or otherwise invisible forms of linearity that underpin the apparent non-ideality of the data.   As Vapnik writes in the preface to the second edition of _The Nature of Statistical Learning Theory_ [@vapnik_nature_1999, vii], 'in contrast to classical methods of statistics where in order to control performance one decreases the dimensionality of a feature space, the SVM dramatically increases dimensionality and relies on the so-called large margin factor' (vii). Perhaps the extraordinary proliferation of support vector machines can be analysed in these terms. Up to and including 2000, the technique is largely discussed in generic terms of machine learning, classification and data-mining. But each year after that, a stunning variety of new concerns are associated with the support vector machine.  In 2001 alone, the application of support vector machine grows explosively. 
+But certain techniques, such as support vector machines, buck this trend. They have  increased the dimensionality of the predictive  model in order to construct higher-order forms of linearity inside the ostensibly non-linear messiness of the data.   As Vapnik writes in the preface to the second edition of _The Nature of Statistical Learning Theory_ [@vapnik_nature_1999, vii], 'in contrast to classical methods of statistics where in order to control performance one decreases the dimensionality of a feature space, the SVM dramatically increases dimensionality and relies on the so-called large margin factor' (vii). Nearly all expositions of the support vector machine including [@cortes_support-vector_1995] begin with an illustration of a 'separable problem' and the 'maximum margin separating hyperplane.'
+
+```{r separating_hyperplane, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, engine='python' } 
+
+import numpy as np
+import pylab as pl
+from sklearn import svm
+
+# we create 40 separable points
+np.random.seed(0)
+X = np.r_[np.random.randn(20, 2) - [2, 2], np.random.randn(20, 2) + [2, 2]]
+Y = [0] * 20 + [1] * 20
+
+# fit the model
+clf = svm.SVC(kernel='linear')
+clf.fit(X, Y)
+
+# get the separating hyperplane
+w = clf.coef_[0]
+a = -w[0] / w[1]
+xx = np.linspace(-5, 5)
+yy = a * xx - (clf.intercept_[0]) / w[1]
+
+# plot the parallels to the separating hyperplane that pass through the
+# support vectors
+b = clf.support_vectors_[0]
+yy_down = a * xx + (b[1] - a * b[0])
+b = clf.support_vectors_[-1]
+yy_up = a * xx + (b[1] - a * b[0])
+
+# plot the line, the points, and the nearest vectors to the plane
+pl.plot(xx, yy, 'k-')
+pl.plot(xx, yy_down, 'k--')
+pl.plot(xx, yy_up, 'k--')
+
+pl.scatter(clf.support_vectors_[:, 0], clf.support_vectors_[:, 1],
+           s=80, facecolors='none')
+pl.scatter(X[:, 0], X[:, 1], c=Y, cmap=pl.cm.Paired)
+
+pl.axis('tight')
+pl.savefig('/figure/separating_hyperplane.png', dpi=400)
+print('![Separating hyperplane](figure/separating_hyperplane.png)')
+
+```
+
+Perhaps the extraordinary proliferation of support vector machines can be analysed in these terms. Up to and including 2000, the technique is largely discussed in generic terms of machine learning, classification and data-mining. But each year after that, a stunning variety of new concerns are associated with the support vector machine.  In 2001 alone, the application of support vector machine grows explosively. 
 
 ```{r svm_growth, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, engine='python'} 
-#the two topic networks
+import ml_lit_anal as ml
+import re
+import nltk
+import pickle
+import operator
+import google_scholar_parser as gs
+import pandas as pd
+import networkx as nx
+import itertools
+import matplotlib.pyplot as plt
+import numpy as np
+
+df = ml.load_records('../ml_lit/data/machine_learning_WOS/')
+df = ml.clean_topics(df)
+
+svm_df = ml.keyword_years(df, 'support vector|support vector machine.?|svm|support vector network.?')
+svm_nx_2001= ml.term_year_network(df = svm_df, topic = 'support vector machine', start=2000, end = 2001, plot=False)
+svm_nx_2002= ml.term_year_network(df = svm_df, topic = 'support vector machine', start=2001, end = 2002, plot=False)
+
+plt.figure(figsize=(20,20))
+
+plt.subplot(121)
+plt.title('')
+nx.draw_graphviz(svm_nx_2001, with_labels=True, 
+                     alpha = 0.8, width=0.1,
+                     labels = nx.get_node_attributes(svm_nx_2001, 'topic'),
+                     fontsize=9,
+                     node_size = [s*4500 for s in nx.eigenvector_centrality(svm_nx_2001).values()],
+                     node_color = [s for s in nx.degree(svm_nx_2001).values()])
+
+plt.subplot(122)
+nx.draw_graphviz(svm_nx_2002, with_labels=True, 
+                     alpha = 0.8, width=0.1,
+                     labels = nx.get_node_attributes(svm_nx_2002, 'topic'),
+                     fontsize=9,
+                     node_size = [s*4500 for s in nx.eigenvector_centrality(svm_nx_2002).values()],
+                     node_color = [s for s in nx.degree(svm_nx_2002).values()])
+
+plt.savefig('figure/svm_2000_2001.png', dpi=400)
+print('![Growth of svm topics 2000-2001](figure/svm_2000_2001.png)')
 ```
 The graphs shown above contrast support vector machines in the machine learning literature at 2000 and 2001. In the topic network on the left, the generic topics associated with support vector machines appear. By contrast, the topic network for 2001-2 has grown rapidly to include classification problems concerned with images, fraud detection, river flow, protein structure and user-profiling. The growth in topics of application quickly becomes difficult to graph as topics associate contagiously across the physical, life, health and business sciences. In publications appearing 2001-2002, the blood brain barrier, breast cancer, prostate cancer, and drug activity have become prominent. By 2012, topics have span stock markets, optometry, mammography and cumene synthesis.  Decision trees show similar patterns of proliferation, but their growth spans decades not a few years. It seems that this exuberant application of support vector machines must have been addressing some kind of shared problematization. Here I  want to suggest that the technique itself provides a lead. It opens a path of least resistance for movement amidst data. In particular, an increase in 'the dimensionality of the feature space'  is attractive because it suggests that more complicated datasets could be modelled and classified with trying to find ways of first distilling the dataset down to its most important features. 
 
@@ -504,9 +588,67 @@ The graphs shown above contrast support vector machines in the machine learning 
 
 A simple illustration of how the support vector machine works with data appears in Cortes and Vapnik's initial publication [@cortes_support-vector_1995]. They demonstrate how the support vector machine classifies handwritten digits drawn from a dataset supplied by the US Postal Service. Like _iris_ , the US Postal Service digits and a larger version from the US National Institute of Standard (NIST) are  standard machine learning dataset, frequently used to measure the performance of different learning algorithms. In contrast to _iris, the US Postal Service Database is high dimensional. Each digit in the dataset is stored as 16x16 pixel element. Image classification typically treats each pixel as a feature  or variable in the input space. So each digit as represented by a 16x16 pixels amounts to a 256 dimensional input space. _Iris_ by comparison has five dimensions. Unsurprisingly, there are also many more digits in the US Postal Service Database than in flowers in _iris_:10,000. The NIST dataset has around 70,000. Aside from this dimensional growth, the handwritten digits aptly convey the non-linearity of the classification problem. On the one hand, human can recognise handwritten digits fairly easily and with few errors. This is despite the many variations in handwriting that skew, morph and distort the ideal graphic forms of numbers. Differences in writing were not only an impetus for deconstructionist theory in the 1980-90s. They were also actively being modelled in machine learning. 
 
-In their experiments with digit recognition, Cortes and Vapnik contrast the error rates of decision trees (CART and C4.5), neural networks and the support vector machine working at various level of dimensionality. I am not going to track through the workings of the support vector machine. They are mathematically complicated compared to decision trees or random forests. But Cortes and Vapnik highlight the growth in dimensionality introduced by the technique of the support vector in ways that I find evocative. They describe how the technique exponentially increases the dimensionality of the feature space and how the error rate on difficult to classify handwritten digits drops correspondingly. When the feature space has 256 dimensions (the given dimensions of the 16x16 pixel digits), the error rate is around 12%. As the dimensionality grows to 33,000, then a million, a billon, a trillion and so forth, the error rate dorps to just over 4%, which is close to the errors made by 'human performance' (2.5%) [@cortes_support-vector_1995, 288].  
+In their experiments with digit recognition, Cortes and Vapnik contrast the error rates of decision trees (CART and C4.5), neural networks and the support vector machine working at various level of dimensionality. I am not going to track through the workings of the support vector machine. They are mathematically complicated compared to decision trees or random forests. But Cortes and Vapnik highlight the growth in dimensionality introduced by the technique of the support vector in ways that I find evocative. They describe how the technique exponentially increases the dimensionality of the feature space and how the error rate on difficult to classify handwritten digits drops correspondingly. When the feature space has 256 dimensions (the given dimensions of the 16x16 pixel digits), the error rate is around 12%. As the dimensionality grows to 33,000, then a million, a billon, a trillion and so forth (up to $1 x 10^16$ dimensions), the error rate dorps to just over 4%, which is close to the errors made by 'human performance' (2.5%) [@cortes_support-vector_1995, 288].  
 
-How does one increase the dimensionality so drastically? TBC
+How does the support vector machine increase the dimensionality so drastically without either runnning into a computational deadlock or worse, massively overfitting the data, resulting in poor generalization?  The technique of 'mapping the input vectors into some high dimensional feature space $Z$' [@cortes_support-vector_1995, 274] has long standing roots in the field of pattern recognition.  Remember that the problem is how to deal with patterns of data that cannot be separated by a line or plane. As mentioned above, the idea is construct a new vector space based on a transformation of the  data, and then in that higher dimensional space, finding a (hyper)plane that best separates different classes of data (the optimal hyperplane). The synthetic dataset shown at the beginning of this chapter illustrates the visual problem. It is hard to see on the plot of that data where a line could be drawn that separates different coloured data points from each other. If they were transformed into a higher dimensional space, would a line be easier to draw? In principle it should be. This is a long-standing item of faith in pattern recognition ('the underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space' [@wu_top_2008, 42]). But even if the 
+
+```{r svm-demo, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, engine='python' } 
+    import numpy as np
+    import pylab as pl
+    from sklearn import svm, datasets
+
+    #import some data to play with
+    iris = datasets.load_iris()
+    X = iris.data[:, :2]  # we only take the first two features. We could
+                          # avoid this ugly slicing by using a two-dim dataset
+    Y = iris.target
+
+    h = .02  # step size in the mesh
+
+    #we create an instance of SVM and fit out data. We do not scale our
+    #data since we want to plot the support vectors
+    C = 1.0  # SVM regularization parameter
+    svc = svm.SVC(kernel='linear', C=C).fit(X, Y)
+    rbf_svc = svm.SVC(kernel='rbf', gamma=0.7, C=C).fit(X, Y)
+    poly_svc = svm.SVC(kernel='poly', degree=3, C=C).fit(X, Y)
+    lin_svc = svm.LinearSVC(C=C).fit(X, Y)
+
+    #create a mesh to plot in
+    x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
+                         np.arange(y_min, y_max, h))
+
+    #title for the plots
+    titles = ['SVC with linear kernel',
+              'SVC with RBF kernel',
+              'SVC with polynomial (degree 3) kernel',
+              'LinearSVC (linear kernel)']
+
+
+    for i, clf in enumerate((svc, rbf_svc, poly_svc, lin_svc)):
+        # Plot the decision boundary. For that, we will assign a color to each
+        # point in the mesh [x_min, m_max]x[y_min, y_max].
+        pl.subplot(2, 2, i + 1)
+        Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
+
+        # Put the result into a color plot
+        Z = Z.reshape(xx.shape)
+        pl.contourf(xx, yy, Z, cmap=pl.cm.Paired)
+        pl.axis('off')
+
+        # Plot also the training points
+        pl.scatter(X[:, 0], X[:, 1], c=Y, cmap=pl.cm.Paired)
+
+        pl.title(titles[i])
+
+    pl.show()
+```
+
+
+>  The kernel trick is another commonly used technique to solve linearly inseparably problems. This issue is to define an appropriate kernel function based on the _inner product_ between the given data, as a nonlinear transformation of data from the input space to a feature space with higher (even infinite) dimension in order to make the problems linearly separable. The underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space. {@wu_top_2008, 42]
+
+
 [TBC -- how it works, but why does it matter? Need to do something more than give a textbook description here -- what are we doing when we describe techniques like this? ]
 
 How could  one increase the dimensionality of the feature space without massively complicating the model?
@@ -518,6 +660,6 @@ It also has to bring in ANW on the pattern  ....
 
 An enormous elephant remains in the room here. The various techniques we have just been discussing -- decision trees, random forests, linear discriminant analysis and support vector machines -- have changed over time. As we've seen, in many cases newer techniques can be seen as recursive applications of machine learning techniques to themselves. The random forest is a higher level formalization of the many decision trees. The decision tree itself algorithmically formalizes earlier hierarchical classification techniques. Similarly, the support vector machine takes the idea of the separating hyperplane and flips the data into a many dimensional space in order to find the linear discriminant function or separating plane there.  But across all these conversions, transformations, formalizations and automations, even buoyed up injections of probabilistic reasoning and randomness, one assumption remains almost completely intact: that the process that generated the data itself does not change.  In slightly more philosophical terms, the exuberant multiplication of dimensions in the data opens up huge internal vistas, canyons and paths through the data, but cannot countenance becoming in data.  At the same time, and perhaps machine learning is not  at all unusual in this, its own becoming is largely a puzzling encumbrance to it. Could machine learning learning to make sense of itself as anything other than an increasingly powerful mobilisation of techniques? 
 
-There is some grounds on which we might think about this differently. Often machine learning techniques have multiple incarnations and tangled genealogies. Decision trees demsonstrate this kind of phylogeny. The statistical trajectory of their development moves in a different way to the artificial intelligence/computer science version. Even if they end up appearing almost interchangeable in the contemporary data mining literature, the classification trees developed by Friedman/Breiman/Olshen and TBC have a different mode of existence to the ID3/C4.5 decision trees developed by computer scientists such as Quinlan.  Similarly, the kind of probabilistic scaffolding that random forests adds to decision trees is quite distinct from the incorporation by Vapnik of infinite dimensional spaces via the mathematics of kernel functions.  By virtue of these different paths of development, and in the light of the very different modes of moving through data they entail, machine learning techniques themselves incorporate the world in specific ways.  
+There is some grounds on which we might think about this differently. Often machine learning techniques have multiple incarnations and tangled genealogies. Decision trees demonstrate this kind of phylogeny. The statistical trajectory of their development moves in a different way to the artificial intelligence/computer science version. Even if they end up appearing almost interchangeable in the contemporary data mining literature, the classification trees developed by Friedman/Breiman/Olshen and TBC have a different mode of existence to the ID3/C4.5 decision trees developed by computer scientists such as Quinlan.  Similarly, the kind of probabilistic scaffolding that random forests adds to decision trees is quite distinct from the incorporation by Vapnik of infinite dimensional spaces via the mathematics of kernel functions.  By virtue of these different paths of development, and in the light of the very different modes of moving through data they entail, machine learning techniques themselves incorporate the world in specific ways.  
 
 But how do these sometimes subtle differences in incorporation matter given a massive and often seemingly crushing assimilation of data in the server farms of network media and large enterprises, or in commercial and government surveillance programs? There are massive disparities in scale here. The analytic or predictive power of the US National Security Agency  or Google Search or certain financial trading systems heavily blankets the terrain. These apparatuses are not, I would suggest, easily steered by any persons since the appetite of machine learning for diverse data seems to immediately override existing limits or constraints. But even just understanding the  form of movements through the data we in classification trees, random forests and in support vector machines might help position us differently in relation to these voracious systems. It is hard to know exactly what they are doing, but I'm fairly strongly persuaded that they do not different anything radically different from what we can see in the machine learning literature I have been discussing. The technical expertise of engineers, statisticians and computer scientists are Google, Facebook, Walmart or the NSA has developed in and amongst the same forest of classification systems we encounter in that literature. The popularity of the support vector machine in the last decade is general. The proliferation of decision trees in the 1980s and then random forests in the 2000s is likewise general. These are techniques whose power to generalize generalizes them.  Understanding this power to generalize in terms of its specific material operations is tremendously important TBC. 

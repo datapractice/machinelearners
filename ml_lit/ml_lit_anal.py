@@ -394,10 +394,15 @@ def keyword_years(wos_df, keyword):
     
     Parameters
     -------------------------------
-    wos_df: WoS references
+    wos_df: WoS or PMC references
     keyword: the one sought
 
     """
+
+    #check if this is a PMC dataframe, and if so, construct the DE column
+    if 'DE' not in wos_df.columns:
+        wos_df['DE']  = [';'.join(top).lower() for top in wos_df.topics]
+
     keyword = keyword + '(s)?'
     top_py_wos_df = wos_df[['topics', 'PY', 'DE']].dropna()
     key_wos_df = top_py_wos_df[top_py_wos_df.DE.str.contains(keyword, 
@@ -521,7 +526,7 @@ def plot_co_x(cox, start, end, size = (20,20), title = ''):
                      node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
                      node_color = [s for s in nx.degree(cox).values()])
 
-def term_year_network(df, topic, start, end, size = (18,18)):
+def term_year_network(df, topic, start, end, size = (18,18), plot=True):
 
     """ Constructs, plots and returns a network for the given term during the given years
 
@@ -537,11 +542,11 @@ def term_year_network(df, topic, start, end, size = (18,18)):
 
     svm_cow = nx.to_numpy_matrix(svm_nx)
     topics = nx.get_node_attributes(svm_nx, 'topic')
-    eigen = nx.eigenvector_centrality(svm_nx)
-    class_nx = nx.ego_graph(svm_nx, nxkey_for_topic(topic, topics), undirected=True, radius=20)
+    topic_nx = nx.ego_graph(svm_nx, nxkey_for_topic(topic, topics), undirected=True, radius=20)
 
-    plot_co_x(class_nx, start, end, size)
-    return class_nx
+    if plot:
+        plot_co_x(topic_nx, start, end, size)
+    return topic_nx
 
 def nxkey_for_topic(topic, topics):
 
@@ -557,6 +562,13 @@ def  pmc_year_column(pmc_df):
     """ Adds a PY - publication year -- column to a EuroPMC dataframe. PMC doesn't return the publication
     year explicitly in the core fields.
     """
-    passyears = pmc_df.journalInfo.map(lambda x: x['yearOfPublication'])
+    years = pmc_df.journalInfo.map(lambda x: x['yearOfPublication'])
     pmc_df['PY'] = years
+    return pmc_df
+
+
+def pmc_topics_column(pmc_df):
+    """ Adds a topics column to a EuroPMC dataframe based on the MESH headings.
+    """
+    pmc_df['topics'] = pmc_df.meshHeadingList.map(lambda x: [y['descriptorName'] for y in x['meshHeading']])
     return pmc_df
