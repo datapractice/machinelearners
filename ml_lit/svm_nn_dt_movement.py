@@ -193,11 +193,11 @@ dt_df
 
 # <codecell>
 
-term_year_network(dt, 'decision tree', 1980, 2000, (18,18))
+ml.term_year_network(dt, 'decision tree', 1980, 2000, (18,18), plot=True)
 
 # <codecell>
 
-term_year_network(dt, 'decision tree', 2000, 2004)
+dt_nx_2004 = ml.term_year_network(dt, 'decision tree', 2000, 2004, (19,10))
 
 # <markdowncell>
 

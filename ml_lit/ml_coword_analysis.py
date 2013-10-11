@@ -8,7 +8,6 @@
 
 # <codecell>
 
-
 import re
 import nltk
 import pickle
@@ -43,24 +42,49 @@ df = ml.clean_topics(df)
 # <codecell>
 
 de_all = [d for de in df.topics.dropna() for d in de]
-de_set = set(de_all)
 de_counts = collections.Counter(de_all)
 
 # <codecell>
 
 	# choose top 500 keywords
-keys = de_counts.most_common(500)
+keys = de_counts.most_common(2000)
 print('there are %s keywords' % len(keys))
 
 # <codecell>
 
 keys = [k[0] for k in keys]
 keys[:10]
+ml_cow_nx = ml.coword_network(df,1980, 2013,1000)
 
 # <codecell>
 
-# construct the coword matrix by counting how often keywords appear with each other
-cow_df = ml.coword_matrix(df,keys)
+ml_degree = nx.degree(ml_cow_nx)
+x,y,z = plt.hist(ml_degree.values(), bins=100)
+plt.title('Degree centrality for the top topics, all years')
+
+# <codecell>
+
+ml.sorted_map({key:close for key,close in ml_degree.items() if close >100})
+
+# <codecell>
+
+ml_closeness = nx.closeness_centrality(ml_cow_nx)
+x,y,z = plt.hist(ml_closeness.values(), bins=100)
+plt.title('Closeness central for the top topics, all years')
+
+# <codecell>
+
+ml.sorted_map({key:close for key,close in ml_closeness.items() if close >0.6})
+
+# <codecell>
+
+ml_betweenness = nx.betweenness_centrality(ml_cow_nx)
+plt.hist(ml_betweenness.values(), bins=100)
+plt.title('Machine learning betweenness centrality')
+
+# <codecell>
+
+ml.sorted_map(ml_betweenness)[:20]
 
 # <markdowncell>
 
@@ -78,10 +102,11 @@ cow_df = ml.coword_matrix(df,keys)
 
 # <codecell>
 
-eqcow_df = ml.equivalence_matrix(cow_df, de_counts)
-eq2 = eqcow_df.unstack().copy()
-eq2.sort(ascending=False)
-eq2[:100:2]
+cow_e = ml.fast_equivalence_matrix(cow_df.as_matrix())
+
+# <codecell>
+
+cow_e[10, :10]
 
 # <codecell>
 

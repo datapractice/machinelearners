@@ -69,6 +69,18 @@ def clean_topics(wos_df):
     wos_df.topics = wos_df.topics.str.split('; ')
     return wos_df
 
+def impute_topics(df):
+
+    """Many wos records have no topics -- especially for older papers.
+    Construct possible topics by matching title words to the overall list of topics.
+    Returns
+    --------------------------
+    df: with all topics fields having some value
+    """
+
+    de_all = [d for de in df.topics.dropna() for d in de]
+    de_counts = collections.Counter(de_all)
+
 def keyword_counts(wos_df):
 
     """ Returns a dictionary with keyword counts"""
@@ -86,12 +98,14 @@ def citation_counts(wos_df):
     return ref_collection
 
 
-def manual_topic_classifier(wos_df, existing_topic_classes, topic_counts_sorted, start = 0, count=100, ):
+def manual_topic_classifier(wos_df, existing_topic_classes = None, topic_counts_sorted = None, start = 0, count=100 ):
     
     """Returns a dictionary with topics classified as techniques
     or not. Asks the user to classify them by hand, starting with the most frequent
+
     Parameters
     ------------------
+    existing_topic_classes: topics that have already done
     count: how many to classify
     start: where in the list to start
     """
@@ -99,12 +113,13 @@ def manual_topic_classifier(wos_df, existing_topic_classes, topic_counts_sorted,
     if existing_topic_classes is None:
         existing_topic_classes = dict()
     if topic_counts_sorted is None:
+        topic_counts_sorted = keyword_counts(wos_df)
         de_all = [d for de in wos_df.topics.dropna() for d in de]
         de_set = set(de_all)
         de_counts = {de:de_all.count(de) for de in de_set}
         topic_counts_sorted = sorted(de_counts.iteritems(), 
             key = operator.itemgetter(1), reverse=True)
-    topic_classes = {t:raw_input('\n' + t+ ' is technique? ')  for t, v in 
+    topic_classes = {t:raw_input('\n' + t+ ' is technique(t)/material(m)/field(f)/organism(o)/application(a)/biological process(b)? ')  for t, v in 
         topic_counts_sorted[start:start+count] if not existing_topic_classes.has_key(t)}
     existing_topic_classes.update(topic_classes)
     return existing_topic_classes
@@ -142,7 +157,10 @@ def coword_matrix(wos_df, keys):
     #drop references that have no topics
     topics = topics.dropna()
     doc_count = len(topics)
+    dropped_count  = wos_df.shape[0] - doc_count
     dtm = np.zeros((doc_count, len(keys)))
+    print('Dropped %s document of the total %s because they had no topic field'
+        %(dropped_count, wos_df.shape[0]))
 
     #nested loops here but 
     #I couldn't get the list comprehensions working properly
@@ -156,12 +174,17 @@ def coword_matrix(wos_df, keys):
 
     #to create coword matrix, use matrix dot product
     cow_m = np.dot(np.transpose(dtm), dtm)
+    #the diagonal should be zero!
+    np.fill_diagonal(cow_m, 0)
     cow_wos_df = pd.DataFrame(cow_m, columns=keys, index=keys)
     return cow_wos_df
 
 def coword_network(mesh_df, start, end,topic_count=0): 
         """
-        constructs a coword network for the years supplied; nodes have an attribute 'topic'
+        constructs a coword network for the years supplied; 
+        nodes will be labelled by topic, have a 'weight' of co-occurrence,
+        a 'start_year' attribute, 
+        and an 'end_year' attribute which is the end year of the search
         
         Parameters
         ----------------
@@ -183,8 +206,11 @@ def coword_network(mesh_df, start, end,topic_count=0):
         cow_nx = nx.from_numpy_matrix(cow_df.as_matrix())
         col_names = cow_df.columns.tolist()
         labels = {col_names.index(l):l for l in col_names}
-
-        nx.set_node_attributes(cow_nx, 'topic', labels)
+        start_year = {i:end for i in range(0, len(col_names))}
+        end_year = {i:start for i in range(0, len(col_names))}
+        nx.set_node_attributes(cow_nx, 'start_year', start_year)
+        nx.set_node_attributes(cow_nx, 'end_year', end_year)
+        nx.relabel_nodes(cow_nx, labels, copy=False)
         return cow_nx
 
 
@@ -506,7 +532,7 @@ def trim_draw_network(coword_net, trim):
 
 
 
-def plot_co_x(cox, start, end, size = (20,20), title = ''):
+def plot_co_x(cox, start, end, size = (20,20), title = '', weighted=False, weight_threshold=10):
         
         """ Plotting function for keyword graphs
 
@@ -519,14 +545,31 @@ def plot_co_x(cox, start, end, size = (20,20), title = ''):
 
         plt.figure(figsize=size)
         plt.title(title +' %s - %s'%(start,end), fontsize=18)
-        nx.draw_graphviz(cox, with_labels=True, 
-                     alpha = 0.8, width=0.1,
-                     labels = nx.get_node_attributes(cox, 'topic'),
-                     fontsize=9,
-                     node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
-                     node_color = [s for s in nx.degree(cox).values()])
+        if weighted:
+            elarge=[(u,v) for (u,v,d) in cox.edges(data=True) if d['weight'] >weight_threshold]
+            esmall=[(u,v) for (u,v,d) in cox.edges(data=True) if d['weight'] <=weight_threshold]
+            pos=nx.graphviz_layout(cox) # positions for all nodes
+            nx.draw_networkx_nodes(cox,pos,
+                node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
+                node_color = [s for s in nx.degree(cox).values()])
+            # edges
+            nx.draw_networkx_edges(cox,pos,edgelist=elarge,
+                                width=0.8, alpha=0.5, edge_color='g') #, edge_cmap=plt.cm.Blues
+            nx.draw_networkx_edges(cox,pos,edgelist=esmall,
+                                width=0.1,alpha=0.5,edge_color='b',style='dashed')
+            # labels
+            nx.draw_networkx_labels(cox,pos,font_size=10,font_family='sans-serif')
+            plt.axis('off')
+        else:
+            nx.draw_graphviz(cox, with_labels=True, 
+                         alpha = 0.8, width=0.1,
+                         # labels = nx.get_node_attributes(cox, 'topic'),
+                         fontsize=9,
+                         node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
+                         node_color = [s for s in nx.degree(cox).values()])
 
-def term_year_network(df, topic, start, end, size = (18,18), plot=True):
+
+def term_year_network(df, topic, start, end, size = (18,18), plot=True, weight_threshold=8):
 
     """ Constructs, plots and returns a network for the given term during the given years
 
@@ -542,10 +585,10 @@ def term_year_network(df, topic, start, end, size = (18,18), plot=True):
 
     svm_cow = nx.to_numpy_matrix(svm_nx)
     topics = nx.get_node_attributes(svm_nx, 'topic')
-    topic_nx = nx.ego_graph(svm_nx, nxkey_for_topic(topic, topics), undirected=True, radius=20)
+    topic_nx = nx.ego_graph(svm_nx, topic, undirected=True, radius=20)
 
     if plot:
-        plot_co_x(topic_nx, start, end, size)
+        plot_co_x(topic_nx, start, end, size, title = topic, weighted=True, weight_threshold= weight_threshold)
     return topic_nx
 
 def nxkey_for_topic(topic, topics):
@@ -571,4 +614,6 @@ def pmc_topics_column(pmc_df):
     """ Adds a topics column to a EuroPMC dataframe based on the MESH headings.
     """
     pmc_df['topics'] = pmc_df.meshHeadingList.map(lambda x: [y['descriptorName'] for y in x['meshHeading']])
+    if 'DE' not in pmc_df.columns:
+        pmc_df['DE']  = [';'.join(top).lower() for top in pmc_df.topics]
     return pmc_df
