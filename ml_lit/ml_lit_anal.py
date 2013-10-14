@@ -12,6 +12,13 @@ import collections
 import math
 import itertools
 import matplotlib.pyplot as plt    
+import requests
+import urllib  
+from suds.client import *
+from optparse import OptionParser
+from suds import WebFault
+from lxml import etree
+
 
 def load_records(data_dir):
     """Return dataframe of all records, 
@@ -369,7 +376,7 @@ def discipline_techniques_graph(wos_df):
     [techn_graph.add_edge(te, f) for t,f in zip(wos_df.topics, wos_df.SC_l) if t is not np.nan  for te in t]
     return techn_graph
 
-def trim_degrees(graph, degree=1):
+
 
     """ Trims all nodes with degree less than the parameter.
     Returns the trimmed graph 
@@ -377,6 +384,7 @@ def trim_degrees(graph, degree=1):
     graph_trimmed = graph.copy()
     degrees = nx.degree(graph_trimmed)
     [graph_trimmed.remove_node(n) for n in graph_trimmed.nodes() if degrees[n] <= degree]
+    print('Trimmed graph has %s nodes'%graph_trimmed.number_of_nodes())
     return graph_trimmed
 
 def sorted_map(keyval): 
@@ -398,6 +406,7 @@ def trim_edges(graph, weight=1):
     """
 
     [graph.remove_edge(f,to) for f, to, edata in graph.edges(data=True) if edata['weight']<weight]
+
     return graph
 
 def island_method(graph, iterations=5):
@@ -551,12 +560,13 @@ def plot_co_x(cox, start, end, size = (20,20), title = '', weighted=False, weigh
             pos=nx.graphviz_layout(cox) # positions for all nodes
             nx.draw_networkx_nodes(cox,pos,
                 node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
-                node_color = [s for s in nx.degree(cox).values()])
+                node_color = [s for s in nx.degree(cox).values()],
+                alpha=0.7)
             # edges
             nx.draw_networkx_edges(cox,pos,edgelist=elarge,
-                                width=0.8, alpha=0.5, edge_color='g') #, edge_cmap=plt.cm.Blues
+                                width=3, alpha=0.5, edge_color='red') #, edge_cmap=plt.cm.Blues
             nx.draw_networkx_edges(cox,pos,edgelist=esmall,
-                                width=0.1,alpha=0.5,edge_color='b',style='dashed')
+                                width=0.1,alpha=0.3,edge_color='blue',style='dotted')
             # labels
             nx.draw_networkx_labels(cox,pos,font_size=10,font_family='sans-serif')
             plt.axis('off')
@@ -585,7 +595,7 @@ def term_year_network(df, topic, start, end, size = (18,18), plot=True, weight_t
 
     svm_cow = nx.to_numpy_matrix(svm_nx)
     topics = nx.get_node_attributes(svm_nx, 'topic')
-    topic_nx = nx.ego_graph(svm_nx, topic, undirected=True, radius=20)
+    topic_nx = nx.ego_graph(svm_nx, topic, undirected=True, radius=10)
 
     if plot:
         plot_co_x(topic_nx, start, end, size, title = topic, weighted=True, weight_threshold= weight_threshold)
@@ -617,3 +627,158 @@ def pmc_topics_column(pmc_df):
     if 'DE' not in pmc_df.columns:
         pmc_df['DE']  = [';'.join(top).lower() for top in pmc_df.topics]
     return pmc_df
+
+def getPMC_ReferencesQuery(query, full=True, limit=0, random = False):
+
+    """  Run query against europepmc  and return results in a dataframe.
+
+    Parameters
+    -------------------------------------------------------
+    query: search query (with no more than about 25 terms)
+    full:  get all the available metadata, including abstract and MESH terms
+    limit: total number of references; O means all of them
+    random: if True, sample pages from the overall hitcount
+    """
+
+    query_init ='http://www.ebi.ac.uk/europepmc/webservices/rest/search/query='+query
+    if full:
+        query_suffix = '&resulttype=core&format=json'
+    else:
+        query_suffix = '&format=json'
+    query_init = query_init + query_suffix
+
+    print('query:' + query_init)
+
+    req = requests.request('GET', query_init)
+    hitCount = req.json()['hitCount']
+
+    # PMC will only return 100,000 results so need to adjust for that. 
+    if hitCount > 100000:
+        hitCount = 100000
+
+    page_count = hitCount/25
+
+    if random and limit > 0:
+        page_list= np.random.randint(1, page_count, limit/25)
+    else:
+        page_list= range(1, page_count)
+
+    print(page_list)
+    print('Fetching  %s  of %s references'%(min([hitCount, limit]), hitCount))
+    # EuroPMC returns 25 items/page
+    refs=[]
+    for page in page_list:
+        print(page)
+        page_query = query_init+'&page='+str(page)
+        req = requests.request('GET', 
+            page_query)
+        res = req.json()
+        [refs.append(r) for r in res['resultList']['result']]
+        print('fetched page %s so now have %s refs'%(page, len(refs)))
+
+        if limit !=0 and len(refs) > limit: break
+
+    df=pd.DataFrame.from_dict(refs)
+    return df
+
+
+    ## to get references --- only seem to come in XML
+
+
+"""
+<id>18784104</id><source>MED</source><citationType>JOURNAL ARTICLE</citationType><title>Recent advances in head and neck cancer.</title><authorString>Haddad RI, Shin DM.</authorString><journalAbbreviation>N. Engl. J. Med.</journalAbbreviation><issue>11</issue><pubYear>2008</pubYear><volume>359</volume><ISSN>0028-4793</ISSN><ESSN>1533-4406</ESSN><pageInfo>1143-1154</pageInfo><citedOrder>1</citedOrder><match>Y</match>
+"""
+
+def getPMC_References(df_all):
+
+    """ Return a pandas Panel with all the cited references available from europepmc.
+    The panel is 3 D object whose axes are
+    1. The ids of the references
+    2. The  references cited by each id
+    3. The metadata for the cited references
+
+    Parameters
+    -----------------------------------
+    df_all: DataFrame whose 'id' column will be used to get references
+    """
+
+    ids =df_all.id[df_all.hasReferences=='Y']
+    columns = ['id', 'source', 'citationType', 'title', 'authors', 'journal', 'issue', 'year', 'vol', 'issn', 'essn', 'pages', 'citedOrder', 'match']
+    id_refs = dict()
+    for id_ex in ids:
+        refs=[]
+        ref_query = 'http://www.ebi.ac.uk/europepmc/webservices/rest/MED/'+id_ex + '/references'
+        root = etree.parse(ref_query)   
+        root = etree.parse(ref_query)
+        [refs.append([i.text for i in r.getchildren()[0:11]])  for r in root.xpath('//referenceList/reference')]
+        #check how many pages
+        hit_count = int(root.find('hitCount').text)
+        page_count = hit_count/25
+
+        #to get the extra references
+        remainder = hit_count%25
+        if remainder > 0: 
+            page_count = page_count + 1
+
+        print(' fetch %s references'%hit_count)
+
+        for page in range(2, page_count):
+            ref_query = 'http://www.ebi.ac.uk/europepmc/webservices/rest/MED/'+id_ex + '/references&page='+str(page)
+            print(ref_query)
+            root = etree.parse(ref_query)
+            [refs.append([i.text for i in r.getchildren()[0:11]])  for r in root.xpath('//referenceList/reference')]
+            print('fetched page %s so now have %s refs'%(page, len(refs)))
+        
+        if len(refs) >0 :
+            id_refs[int(id_ex)] = pd.DataFrame(refs, columns = columns[0:11])
+
+    ref_panel = pd.Panel(id_refs)
+    return ref_panel
+
+def clean_pmc_refs(df_full):
+        """
+        De-dups, re-indexes, and chooses references that have journal
+        and mesh info
+        """
+        df_full = df_full.drop_duplicates(cols = ['id', 'title'])
+        df_full.reset_index(inplace=True)
+        df_full = df_full.dropna(subset=['meshHeadingList'])
+        df_full = df_full.dropna(subset=['journalInfo'])
+        print("There are %s references with %s fields in the reference list"%df_full.shape)
+        return df_full
+
+def term_yr_hist(mesh_df, term, years):
+    """
+    Helper for the plotting function above 
+
+    Returns
+    -----------------------------
+    vals, bins: the counts and bins for the term over years
+
+    """
+    term_yr  = keyword_years(mesh_df, term)
+    year_count  = years[1]-years[0]
+    vals, bins = np.histogram(term_yr.PY, bins = year_count, range=years)
+    return (vals, bins[1:])
+
+def keyword_plot(df, terms, years, title='', size=(14,8)):
+
+    """
+    Draws line plots of publication counts for all the terms 
+    over the year range
+
+    Parameters
+    ---------------------------------------
+    df: publication dataframe with PY and topics
+    terms: list of the terms to plot 
+    years: range of years
+    """
+    plt.figure(figsize=size)
+    start, end = years
+    for t in terms:
+        v,b = term_yr_hist(df, t, years)
+        plt.plot(b,v, label=t, linewidth=4)
+    plt.legend()
+    plt.title('Key terms in the %s literature: %s-%s'%(title, start, end), fontsize=15)
+    plt.legend(loc = 'upper left')
+    plt.box(on=False)
