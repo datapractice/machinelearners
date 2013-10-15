@@ -409,6 +409,19 @@ def trim_edges(graph, weight=1):
 
     return graph
 
+def  trim_nodes(graph, degree = 1):
+
+    """ Trims all nodes with degree less than the parameter.
+    Parameters
+    -----------------------------
+    graph: this graph will have edges taken from it
+    degree: remove nodes with degree less than this
+    """
+
+    [graph.remove_node(n) for n in graph.nodes( ) if nx.degree(graph, n) <= degree]
+
+    return graph
+
 def island_method(graph, iterations=5):
     """ 
     This comes the SNA book -- a way to show only those bits of the network
@@ -627,6 +640,30 @@ def pmc_topics_column(pmc_df):
     if 'DE' not in pmc_df.columns:
         pmc_df['DE']  = [';'.join(top).lower() for top in pmc_df.topics]
     return pmc_df
+
+def PMC_QueryHitCount(term, years = (1990, 2012)):
+
+    """  Run query against europepmc  and return hitcounts for each year in a dictionary.
+
+    Parameters
+    -------------------------------------------------------
+    term: search query term
+    years: range of years (tuple)
+    """
+
+    hc = {}
+
+    query_init ='http://www.ebi.ac.uk/europepmc/webservices/rest/search/query='
+    query_suffix = '&format=json'
+
+    for yr in range(years[0], years[1]):
+        query_b = term +"  PUB_YEAR:"+str(yr)
+        query_full = query_init + query_b + query_suffix
+        req = requests.request('GET', query_full)
+        hitCount = req.json()['hitCount']
+        hc[yr] = hitCount
+    return hc
+
 
 def getPMC_ReferencesQuery(query, full=True, limit=0, random = False):
 
