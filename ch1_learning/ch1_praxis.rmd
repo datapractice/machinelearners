@@ -29,6 +29,7 @@ Bogost on carpentering, and the problems of writing -- I have a take on that ...
 Landecker & Kelty on the literature as informant; 
 Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
 Domingos on feature engineering and why it is important
+The reports on R's commercial usage: http://www.r-bloggers.com/r-usage-skyrocketing-rexer-poll/  in 2013
 
 ## Introduction -- the data-driven mode
 

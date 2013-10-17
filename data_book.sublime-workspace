@@ -303,7 +303,7 @@
 			"file": "ch1_learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 74038,
+				"buffer_size": 74143,
 				"line_ending": "Unix"
 			}
 		},
@@ -336,7 +336,7 @@
 			"file": "ml_lit/ml_lit_anal.py",
 			"settings":
 			{
-				"buffer_size": 22024,
+				"buffer_size": 29141,
 				"line_ending": "Unix"
 			}
 		},
@@ -526,7 +526,7 @@
 			"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 			"settings":
 			{
-				"buffer_size": 5877,
+				"buffer_size": 6214,
 				"line_ending": "Unix"
 			}
 		},
@@ -1099,7 +1099,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -1164,15 +1164,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 74038,
+						"buffer_size": 74143,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1762,
-								1762
+								1867,
+								1867
 							]
 						],
 						"settings":
@@ -1183,7 +1183,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 253.0,
+						"translation.y": 5.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1229,8 +1229,8 @@
 						"selection":
 						[
 							[
-								91022,
-								91022
+								90973,
+								90973
 							]
 						],
 						"settings":
@@ -1241,7 +1241,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 32587.0,
+						"translation.y": 25557.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1281,15 +1281,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 22024,
+						"buffer_size": 29141,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								19979,
-								19979
+								24987,
+								24987
 							]
 						],
 						"settings":
@@ -1297,10 +1297,11 @@
 							"WordCountShouldRun": true,
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13412.0,
+						"translation.y": 16123.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1325,7 +1326,9 @@
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
+							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage",
+							"tab_size": 7,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 412.0,
@@ -1938,15 +1941,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5877,
+						"buffer_size": 6214,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4338,
-								4338
+								0,
+								0
 							]
 						],
 						"settings":

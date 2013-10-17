@@ -406,7 +406,8 @@ def trim_edges(graph, weight=1):
     """
 
     [graph.remove_edge(f,to) for f, to, edata in graph.edges(data=True) if edata['weight']<weight]
-
+    print ("%s edges in graph" %graph.number_of_edges())
+    print ("%s nodes in graph" %graph.number_of_nodes())
     return graph
 
 def  trim_nodes(graph, degree = 1):
@@ -417,10 +418,12 @@ def  trim_nodes(graph, degree = 1):
     graph: this graph will have edges taken from it
     degree: remove nodes with degree less than this
     """
+    graph1 = graph.copy()
+    [graph1.remove_node(n) for n in graph1.nodes( ) if nx.degree(graph1, n) <= degree]
+    print ("%s nodes in graph" %graph1.number_of_nodes())
+    print ("%s edges in graph" %graph1.number_of_edges())
 
-    [graph.remove_node(n) for n in graph.nodes( ) if nx.degree(graph, n) <= degree]
-
-    return graph
+    return graph1
 
 def island_method(graph, iterations=5):
     """ 
@@ -572,24 +575,23 @@ def plot_co_x(cox, start, end, size = (20,20), title = '', weighted=False, weigh
             esmall=[(u,v) for (u,v,d) in cox.edges(data=True) if d['weight'] <=weight_threshold]
             pos=nx.graphviz_layout(cox) # positions for all nodes
             nx.draw_networkx_nodes(cox,pos,
-                node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
-                node_color = [s for s in nx.degree(cox).values()],
+                node_color= [s*4500 for s in nx.eigenvector_centrality(cox).values()],
+                node_size = [s*6+20  for s in nx.degree(cox).values()],
                 alpha=0.7)
             # edges
             nx.draw_networkx_edges(cox,pos,edgelist=elarge,
-                                width=3, alpha=0.5, edge_color='red') #, edge_cmap=plt.cm.Blues
+                                width=1, alpha=0.5, edge_color='black') #, edge_cmap=plt.cm.Blues
             nx.draw_networkx_edges(cox,pos,edgelist=esmall,
-                                width=0.1,alpha=0.3,edge_color='blue',style='dotted')
+                                width=0.3,alpha=0.5,edge_color='yellow',style='dotted')
             # labels
             nx.draw_networkx_labels(cox,pos,font_size=10,font_family='sans-serif')
             plt.axis('off')
         else:
             nx.draw_graphviz(cox, with_labels=True, 
                          alpha = 0.8, width=0.1,
-                         # labels = nx.get_node_attributes(cox, 'topic'),
                          fontsize=9,
-                         node_size = [s*4500 for s in nx.eigenvector_centrality(cox).values()],
-                         node_color = [s for s in nx.degree(cox).values()])
+                         node_color = [s*4 for s in nx.eigenvector_centrality(cox).values()],
+                         node_size = [s*6+20 for s in nx.degree(cox).values()])
 
 
 def term_year_network(df, topic, start, end, size = (18,18), plot=True, weight_threshold=8):
@@ -636,7 +638,7 @@ def  pmc_year_column(pmc_df):
 def pmc_topics_column(pmc_df):
     """ Adds a topics column to a EuroPMC dataframe based on the MESH headings.
     """
-    pmc_df['topics'] = pmc_df.meshHeadingList.map(lambda x: [y['descriptorName'] for y in x['meshHeading']])
+    pmc_df['topics'] = pmc_df.meshHeadingList.dropna().map(lambda x: [y['descriptorName'] for y in x['meshHeading']])
     if 'DE' not in pmc_df.columns:
         pmc_df['DE']  = [';'.join(top).lower() for top in pmc_df.topics]
     return pmc_df
@@ -684,7 +686,7 @@ def getPMC_ReferencesQuery(query, full=True, limit=0, random = False):
         query_suffix = '&format=json'
     query_init = query_init + query_suffix
 
-    print('query:' + query_init)
+    # print('query:' + query_init)
 
     req = requests.request('GET', query_init)
     hitCount = req.json()['hitCount']
@@ -700,18 +702,18 @@ def getPMC_ReferencesQuery(query, full=True, limit=0, random = False):
     else:
         page_list= range(1, page_count)
 
-    print(page_list)
-    print('Fetching  %s  of %s references'%(min([hitCount, limit]), hitCount))
+    # print(page_list)
+    # print('Fetching  %s  of %s references'%(min([hitCount, limit]), hitCount))
     # EuroPMC returns 25 items/page
     refs=[]
     for page in page_list:
-        print(page)
+        # print(page)
         page_query = query_init+'&page='+str(page)
         req = requests.request('GET', 
             page_query)
         res = req.json()
         [refs.append(r) for r in res['resultList']['result']]
-        print('fetched page %s so now have %s refs'%(page, len(refs)))
+        # print('fetched page %s so now have %s refs'%(page, len(refs)))
 
         if limit !=0 and len(refs) > limit: break
 
@@ -781,6 +783,7 @@ def clean_pmc_refs(df_full):
         df_full.reset_index(inplace=True)
         df_full = df_full.dropna(subset=['meshHeadingList'])
         df_full = df_full.dropna(subset=['journalInfo'])
+        df_full = df_full.set_index('pmid')
         print("There are %s references with %s fields in the reference list"%df_full.shape)
         return df_full
 
