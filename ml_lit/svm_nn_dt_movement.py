@@ -19,6 +19,7 @@ import networkx as nx
 import itertools
 import matplotlib.pyplot as plt
 import numpy as np
+import graph_tool.all as gt
 
 # <codecell>
 
@@ -198,6 +199,10 @@ ml.term_year_network(dt, 'decision tree', 1980, 2000, (18,18), plot=True)
 # <codecell>
 
 dt_nx_2004 = ml.term_year_network(dt, 'decision tree', 2000, 2004, (19,10))
+
+# <codecell>
+
+dt_all_g = ml.coword_network_fast(dt, 1990, 2000)
 
 # <markdowncell>
 

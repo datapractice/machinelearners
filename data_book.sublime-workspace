@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"co-",
+				"co-occurrence"
+			],
+			[
+				"ed",
+				"edge_properties	statement"
+			],
+			[
+				"ver",
+				"vertex_properties	statement"
+			],
+			[
+				"new_",
+				"new_edge_property	function"
+			],
+			[
+				"topic",
+				"topic_count	param"
+			],
+			[
 				"svm",
 				"svm_non_linear2"
 			],
@@ -70,10 +90,6 @@
 			[
 				"ref_",
 				"ref_other	statement"
-			],
-			[
-				"topic",
-				"topics"
 			],
 			[
 				"s",
@@ -336,7 +352,7 @@
 			"file": "ml_lit/ml_lit_anal.py",
 			"settings":
 			{
-				"buffer_size": 29141,
+				"buffer_size": 31383,
 				"line_ending": "Unix"
 			}
 		},
@@ -949,6 +965,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"coword_matrix_years",
+			"nx",
 			"Perhaps our knowledge",
 			"burges_tutorial_1998",
 			"support",
@@ -1074,8 +1092,6 @@
 			"carl",
 			"lury_introduction_2012",
 			"conn",
-			"Law",
-			"SRA",
 			"Law"
 		],
 		"highlight": true,
@@ -1281,15 +1297,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 29141,
+						"buffer_size": 31383,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24987,
-								24987
+								9945,
+								9945
 							]
 						],
 						"settings":
@@ -1301,7 +1317,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 16123.0,
+						"translation.y": 6162.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -2194,7 +2210,7 @@
 		[
 			[
 				"",
-				"~/Documents/data_intensive/ngs_data_topography/ngs_paper/ngs.sublime-project"
+				"~/Documents/data_intensive/number_supply/number_supply.sublime-project"
 			]
 		],
 		"width": 380.0

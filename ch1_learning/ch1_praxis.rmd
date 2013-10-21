@@ -26,9 +26,10 @@
 ## Todo
 
 Bogost on carpentering, and the problems of writing -- I have a take on that ... 'source code itself often offers inroads in alien phenomenology -- particular when carpentered to reveal the internal experience of withdrawn units 105'
-Landecker & Kelty on the literature as informant; 
+Landecker & Kelty on the literature as informant;  -- very important to do more on this
 Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
-Domingos on feature engineering and why it is important
+On the aridness of the textbooks and literature and what to do about that. 
+Domingos on feature engineering and why it is important -- article in ACM
 The reports on R's commercial usage: http://www.r-bloggers.com/r-usage-skyrocketing-rexer-poll/  in 2013
 
 ## Introduction -- the data-driven mode

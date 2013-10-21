@@ -16,10 +16,12 @@ import operator
 import google_scholar_parser as gs
 import pandas as pd
 import networkx as nx
+import graph_tool.all as gt
 import itertools
 import matplotlib.pyplot as plt
 import numpy as np
 import collections
+import IPython.display
 
 # <markdowncell>
 
@@ -45,6 +47,7 @@ df = ml.clean_fields(df)
 print('%s topic fields are null'%sum(df.topics.isnull()))
 print('%s abstract fields are null'%sum(df.AB.isnull()))
 print('%s keywords Plus fields are null'%sum(df.ID.isnull()))
+print('%s author fields are null'%sum(df.AF.isnull()))
 
 # <markdowncell>
 
@@ -52,7 +55,11 @@ print('%s keywords Plus fields are null'%sum(df.ID.isnull()))
 
 # <codecell>
 
+plt.figure(figsize=(8,4))
+plt.title('Machine learning publications (Web of Science)')
+
 df.PY.hist(bins=len(df.PY.unique()))
+plt.box(on=False)
 
 # <markdowncell>
 
@@ -117,17 +124,13 @@ xticks = plt.yticks(ind+width/2., major_fields.keys() )
 
 # <codecell>
 
-def sorted_map(map): return sorted(map.iteritems(), key=lambda (k,v): (-v,k))
-
-# <codecell>
-
 df = ml.clean_fields(df)
 gr_f = nx.Graph()
 gr_f.add_edges_from([i for de in df.fields.dropna() for i in itertools.combinations(de,2)])
 
 # <codecell>
 
-core = ml.trim_degrees(gr_f, 16)
+core = ml.trim_nodes(gr_f, 8)
 #core = ml.trim_edges(core, 3)
 len(core)
 
@@ -142,33 +145,31 @@ nx.draw_graphviz(core, width=0.4,
 # <codecell>
 
 degree_c = nx.degree_centrality(core)
-degree_cs = sorted_map(degree_c)
+degree_cs = ml.sorted_map(degree_c)
 degree_cs
 
 # <codecell>
 
 
 closeness_c = nx.closeness_centrality(core)
-closeness_cs = sorted_map(closeness_c)
+closeness_cs = ml.sorted_map(closeness_c)
 closeness_cs
 
 # <codecell>
 
 between_c = nx.betweenness_centrality(core)
-between_cs = sorted_map(between_c)
+between_cs = ml.sorted_map(between_c)
 between_cs
 
 # <codecell>
 
 eigen_c = nx.eigenvector_centrality(core)
 eigen_cs = ml.sorted_map(eigen_c)
-eigen_cs
 
 # <codecell>
 
 pr = nx.pagerank(core)
 pr_s = ml.sorted_map(pr)
-pr_s
 
 # <codecell>
 
@@ -185,19 +186,11 @@ elite_group
 
 # <codecell>
 
-fig = plt.figure(figsize = (10,10))
-#labels = elite_group['field']
-#sp1=fig.add_subplot(1,4,1)
-#sp1.plot(x=elite_group.field, y= elite_group.degree)
-elite_group[['degree', 'closeness', 'betweenness', 'eigenvector', 'pagerank']].plot(kind='barh',  figsize=(10,10))
 
-# <markdowncell>
 
-# Pagerank represents a flow of trust/influence
+p = elite_group[['degree', 'closeness', 'betweenness', 'eigenvector', 'pagerank']].plot(kind='barh')
 
-# <codecell>
-
-elite_group[['degree','betweenness', 'eigenvector']].plot(kind='barh')
+p = plt.title('Centrality measures for fields in machine learning literature')
 
 # <markdowncell>
 
@@ -217,7 +210,7 @@ af_set = set(af_all)
 print "There %s authors listed and unique authors number %s" % (len(af_all), len(af_set))
 af_counts = {de:af_all.count(de) for de in af_set}
 af_counts_sorted = sorted(af_counts.iteritems(), key = operator.itemgetter(1), reverse=True)
-af_counts_sorted[0:50]
+af_counts_sorted[0:20]
 
 # <codecell>
 
@@ -269,6 +262,30 @@ sq =gs.ScholarQuerier(author = 'Ross J Quinlan', count=50)
 sq.query('')
 print(ml.sorted_map({a['title']:a['num_citations'] for a in sq.articles}))
 {a['title']:a['url'] for a in sq.articles}
+
+# <markdowncell>
+
+# ## Co-authorship networks in ML
+# 
+# How tightly networked are the publications in terms of co-writing? This might need to be done over time. 
+
+# <codecell>
+
+au_g = ml.wos_author_graph(df)
+
+# <codecell>
+
+pos, sel = gt.graph_draw(au_g)
+
+# <codecell>
+
+v_comm = gt.community_structure(au_g, 1000, 5)
+gt.graph_draw(au_g, pos=pos, vertex_color = v_comm,output = '../figure/ml_author_net_2000.png')
+
+# <codecell>
+
+i =IPython.display.Image('../figure/ml_author_net_2000.png')
+print('This is the author community network prior up to 2000')
 
 # <markdowncell>
 

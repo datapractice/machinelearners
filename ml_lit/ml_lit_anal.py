@@ -18,7 +18,7 @@ from suds.client import *
 from optparse import OptionParser
 from suds import WebFault
 from lxml import etree
-
+import graph_tool.all as gt
 
 def load_records(data_dir):
     """Return dataframe of all records, 
@@ -220,6 +220,53 @@ def coword_network(mesh_df, start, end,topic_count=0):
         nx.relabel_nodes(cow_nx, labels, copy=False)
         return cow_nx
 
+def coword_network_fast(mesh_df, start, end,topic_count=0): 
+        """
+        constructs a coword network for the years and topic count
+        Uses graph-tool
+        
+        Parameters
+        ----------------
+        mesh_df: a dataframe with at least the topics and years columns
+        start: start year
+        end: end year
+        topic_count: the number of the topics to use (not too big, otherwise coword matrix will be huge
+        """
+
+        # determine the number of topics to count
+        all_topics = [t for top in mesh_df.topics.dropna() for t in top]
+        topic_collection = collections.Counter(all_topics)
+        if topic_count > 0 and topic_count < len(topic_collection):
+            common_topics = [k[0] for k in topic_collection.most_common(topic_count)]
+        else:
+            #use all the topics
+            common_topics = sorted(topic_collection.keys())
+            topic_count = len(common_topics)
+
+        cow_df = coword_matrix_years(mesh_df, start, end, common_topics)
+        cow_m = cow_df.as_matrix()
+        # construct graph
+        g = gt.Graph(directed=False)
+        vs  = g.add_vertex(topic_count)
+        v_topic = g.new_vertex_property('string')
+        e_occ  = g.new_edge_property('int')
+        g.vertex_properties['topic'] = v_topic
+
+        # add topics to vertices
+        for i in range(0, topic_count):
+            v = g.vertex(i)
+            v_topic[v] = common_topics[i]
+
+        # add edges
+        for source in range(0, topic_count):
+            for target in range(0, topic_count):
+                if cow_m[source,target] > 0:
+                    e = g.add_edge(g.vertex(source), g.vertex(target))
+                    e_occ[e] = cow_m[source, target]
+
+        g.edge_properties['co-occurrence']  = e_occ
+        return g
+
 
 def cofield_matrix(wos_df, fields):
 
@@ -229,7 +276,7 @@ def cofield_matrix(wos_df, fields):
     Parameters
     ------------------------------------------------
     wos_df: the WoS literature DataFrame
-    fields: fields to use
+    fields: list of fields to use
     """
 
     fields_all = wos_df.fields
@@ -246,7 +293,7 @@ def cofield_matrix(wos_df, fields):
             if fields.count(topic) >0:
                cofield[row, fields.index(topic)] = 1
     
-    #to create cofieldord matrix, use matrix dot product
+    #to create cofield matrix, use matrix dot product
     print('finished matrix ... ')
     cofield_m = np.dot(np.transpose(cofield), cofield)
     np.fill_diagonal(cofield_m, 0)
@@ -643,6 +690,31 @@ def pmc_topics_column(pmc_df):
         pmc_df['DE']  = [';'.join(top).lower() for top in pmc_df.topics]
     return pmc_df
 
+def pmc_mesh_qualifier(pmc_df):
+    """MESH terms often have a qualifier that might help locating methods or fields. 
+    At the moment, this only gets the first one  -- that's not enough, but is ok for illustration
+    Returns
+    --------------------
+    dictionary of pmid: mesh qualifier
+    """
+    mesh = pmc_df.meshHeadingList
+    qualifiers = {k:d['meshQualifierList']['meshQualifier'][0]['qualifierName'] 
+            if d.has_key('meshQualifierList') else 'none' 
+            for k,p in mesh.iterkv() for d in p['meshHeading']}
+    return qualifiers
+
+
+def pmc_clean_construct(pmc_df):
+    """ Takes a PMC data frame, cleans out none-PMC type references,
+    adds a topic column (using MESH terms), and a PY (publication year) column
+    """
+
+    pmc_df = clean_pmc_refs(pmc_df)
+    pmc_df = pmc_topics_column(pmc_df)
+    pmc_df = pmc_year_column(pmc_df)
+    return pmc_df
+
+
 def PMC_QueryHitCount(term, years = (1990, 2012)):
 
     """  Run query against europepmc  and return hitcounts for each year in a dictionary.
@@ -822,3 +894,79 @@ def keyword_plot(df, terms, years, title='', size=(14,8)):
     plt.title('Key terms in the %s literature: %s-%s'%(title, start, end), fontsize=15)
     plt.legend(loc = 'upper left')
     plt.box(on=False)
+
+
+
+def pmc_author_graph(pmcdf):
+    """ Takes the authorString from PMC and returns a coauthorship
+    graph as graph_tool graph"""
+    
+    authors = pmcdf.authorString.str.encode('utf-8')
+    author_set = {a for au in authors.str.split(', ') for a in au}
+    aul = list(author_set)
+
+    aug  = gt.Graph(directed=False)
+    # add authors as nodes
+    aug.add_vertex(len(aul))
+    v_au = aug.new_vertex_property('string')
+    for i in range(0, len(aul)):
+        v = aug.vertex(i)
+        v_au[v] = aul[i]
+
+    aug.vertex_properties['au'] = v_au
+
+    ## add coauthors as edges, as well as a count of how often they coauthor
+    e_co = aug.new_edge_property('int')
+    au_edges = [(a,b) for al in authors.str.split(', ') for a, b in itertools.combinations(al, 2) ]
+
+    el = []
+
+    for coau in au_edges:
+        # print(coau)
+        s = aul.index(coau[0])
+        t = aul.index(coau[1])
+        e = aug.add_edge(aug.vertex(s), aug.vertex(t))
+        el.append(e)
+    
+    print('Author graph has %s authors and %s co-author connects'%(aug.num_vertices(), aug.num_edges()))
+    return aug
+
+
+def wos_author_graph(wosdf):
+    """ Takes the authorString from PMC and returns a coauthorship
+    graph as graph_tool graph"""
+    
+    authors = wosdf.AU.dropna().str.encode('utf-8').str.lower()
+    author_set = {a for au in authors.str.split(', ') for a in au}
+    aul = list(author_set)
+
+    print('Adding nodes for authors ... ')
+    aug  = gt.Graph(directed=False)
+    # add authors as nodes
+    aug.add_vertex(len(aul))
+    v_au = aug.new_vertex_property('string')
+    for i in range(0, len(aul)):
+        v = aug.vertex(i)
+        v_au[v] = aul[i]
+
+    aug.vertex_properties['au'] = v_au
+
+    ## add coauthors as edges, as well as a count of how often they coauthor
+    e_co = aug.new_edge_property('int')
+    au_edges = [(a,b) for al in authors.str.split(', ') for a, b in itertools.combinations(al, 2) ]
+
+    el = []
+    print('Adding edges for co-authors... ')
+    for coau in au_edges:
+        # print(coau)
+        s = aul.index(coau[0])
+        t = aul.index(coau[1])
+        e = aug.add_edge(aug.vertex(s), aug.vertex(t))
+        el.append(e)
+    
+    print('Author graph has %s authors and %s co-author connects'%(aug.num_vertices(), aug.num_edges()))
+    return aug
+
+
+
+
