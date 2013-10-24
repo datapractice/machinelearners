@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"num",
+				"num_vertices	function"
+			],
+			[
+				"nu",
+				"number_of_nodes"
+			],
+			[
+				"auht",
+				"author_set	statement"
+			],
+			[
+				"add",
+				"add_vertex	function"
+			],
+			[
+				"mesh",
+				"meshHeadingList"
+			],
+			[
+				"pmc",
+				"pmc_df"
+			],
+			[
+				"clean",
+				"clean_pmc_refs	function"
+			],
+			[
 				"co-",
 				"co-occurrence"
 			],
@@ -319,7 +347,7 @@
 			"file": "ch1_learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 74143,
+				"buffer_size": 74274,
 				"line_ending": "Unix"
 			}
 		},
@@ -335,7 +363,7 @@
 			"file": "ch3_dimensionality/ch3_dimensional_exuberance.rmd",
 			"settings":
 			{
-				"buffer_size": 96961,
+				"buffer_size": 100234,
 				"line_ending": "Unix"
 			}
 		},
@@ -352,7 +380,15 @@
 			"file": "ml_lit/ml_lit_anal.py",
 			"settings":
 			{
-				"buffer_size": 31383,
+				"buffer_size": 34231,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/data_intensive/ngs_data_topography/pubmed_articles.py",
+			"settings":
+			{
+				"buffer_size": 48537,
 				"line_ending": "Unix"
 			}
 		},
@@ -817,6 +853,7 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/Documents/data_intensive/ngs_data_topography/community-history2",
 		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/image_test.md",
 		"/home/mackenza/Documents/data_intensive/ubiquity_encounters/Mackenzie_abstract.mdown",
 		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.md",
@@ -943,8 +980,7 @@
 		"/home/mackenza/Documents/data_intensive/book/references/refs.bib",
 		"/home/mackenza/.cache/.fr-BlOcAR/2012-04-08-9.json",
 		"/home/mackenza/Documents/google_analytics_spet2012/google.sublime-workspace",
-		"/home/mackenza/Documents/notes/dewey_reconstruction_1957.odt",
-		"/home/mackenza/Documents/data_intensive/book/Sources.md"
+		"/home/mackenza/Documents/notes/dewey_reconstruction_1957.odt"
 	],
 	"find":
 	{
@@ -965,6 +1001,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"mc",
+			"pmc",
+			"aul",
+			"itertools",
 			"coword_matrix_years",
 			"nx",
 			"Perhaps our knowledge",
@@ -1088,11 +1128,7 @@
 			"biagioli_situated_1999",
 			"munster",
 			"latour_drawing_1990",
-			"carlsson_topology_2009",
-			"carl",
-			"lury_introduction_2012",
-			"conn",
-			"Law"
+			"carlsson_topology_2009"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1115,7 +1151,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -1180,15 +1216,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 74143,
+						"buffer_size": 74274,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1867,
-								1867
+								1819,
+								1819
 							]
 						],
 						"settings":
@@ -1199,7 +1235,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5.0,
+						"translation.y": 262.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1238,15 +1274,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 96961,
+						"buffer_size": 100234,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								90973,
-								90973
+								100234,
+								100234
 							]
 						],
 						"settings":
@@ -1257,7 +1293,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 25557.0,
+						"translation.y": 34837.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1297,15 +1333,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31383,
+						"buffer_size": 34231,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9945,
-								9945
+								32848,
+								32848
 							]
 						],
 						"settings":
@@ -1317,13 +1353,43 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6162.0,
+						"translation.y": 22962.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
+					"file": "/home/mackenza/Documents/data_intensive/ngs_data_topography/pubmed_articles.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 48537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20492,
+								20579
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 11390.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "ch3_dimensionality/image_test.Rmd",
 					"semi_transient": false,
 					"settings":
@@ -1353,7 +1419,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "ch3_dimensionality/image_test.md",
 					"semi_transient": false,
 					"settings":
@@ -1381,7 +1447,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "ch3_dimensionality/ch3_dimensional_exuberance.md",
 					"semi_transient": false,
 					"settings":
@@ -1411,7 +1477,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "/home/mackenza/Documents/notes/Fisher_LDA_1936.md",
 					"semi_transient": false,
 					"settings":
@@ -1440,7 +1506,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "ch7_topologies/ch7_genomic_topologies.rmd",
 					"semi_transient": false,
 					"settings":
@@ -1468,7 +1534,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "ch4_subjects/ch4_learning_subjects.rmd",
 					"semi_transient": false,
 					"settings":
@@ -1496,7 +1562,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "ch5_probability/ch5_naive_informed.rmd",
 					"semi_transient": false,
 					"settings":
@@ -1524,7 +1590,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "/home/mackenza/Documents/notes/wasserman_all_of_stat2003.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1552,7 +1618,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "/home/mackenza/Documents/notes/Breiman_2001_andom Forests.md",
 					"semi_transient": false,
 					"settings":
@@ -1581,7 +1647,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "/home/mackenza/Documents/notes/Breiman_Friedman.md",
 					"semi_transient": false,
 					"settings":
@@ -1610,7 +1676,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"file": "/home/mackenza/Documents/notes/mitchell_machine_learning_2007.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1638,7 +1704,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "proposal.md",
 					"semi_transient": false,
 					"settings":
@@ -1666,7 +1732,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "ch3_dimensionality/tree.py",
 					"semi_transient": false,
 					"settings":
@@ -1696,7 +1762,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "ml_lit/web_of_science.R",
 					"semi_transient": false,
 					"settings":
@@ -1724,7 +1790,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 22,
 					"file": "/home/mackenza/Documents/notes/Xue_SVM: Support Vector Machines_2009.md",
 					"semi_transient": false,
 					"settings":
@@ -1753,7 +1819,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "/home/mackenza/R/web_of_science.R",
 					"semi_transient": false,
 					"settings":
@@ -1781,7 +1847,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 24,
 					"file": "/home/mackenza/R/phrase_structures.R",
 					"semi_transient": false,
 					"settings":
@@ -1810,7 +1876,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 25,
 					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
@@ -1838,7 +1904,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 26,
 					"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
 					"semi_transient": false,
 					"settings":
@@ -1866,7 +1932,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 27,
 					"file": "/home/mackenza/Documents/notes/Stengers_d&G_2005.txt",
 					"semi_transient": false,
 					"settings":
@@ -1894,7 +1960,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 28,
 					"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
 					"semi_transient": false,
 					"settings":
@@ -1923,7 +1989,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "/home/mackenza/Documents/notes/bogost_alien_2012.md",
 					"semi_transient": false,
 					"settings":
@@ -1952,7 +2018,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1980,7 +2046,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 					"semi_transient": false,
 					"settings":
@@ -1992,8 +2058,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								511,
+								511
 							]
 						],
 						"settings":
@@ -2009,7 +2075,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "references/data_forms_thought.bib",
 					"semi_transient": false,
 					"settings":
@@ -2038,7 +2104,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "references/refs.bib",
 					"semi_transient": false,
 					"settings":
@@ -2061,13 +2127,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1401.0,
+						"translation.y": 426.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "references/machine_learning.bib",
 					"semi_transient": false,
 					"settings":
@@ -2144,6 +2210,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"rab",
+				"~/Documents/notes/rabinow_anthropos_2003.md"
+			],
 			[
 				"va",
 				"~/Documents/notes/vapnik_nature of statistical learning theory 2000.md"

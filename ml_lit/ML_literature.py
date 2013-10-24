@@ -100,18 +100,18 @@ field_counts_s[0:30]
 # <codecell>
 
 #the problem is that computer science clutters everything -- get rid of it?
-
 figure = plt.figure(figsize=(16,12))
-sp1 = figure.add_subplot(1,2,2)
+plt.subplot(122)
 
-sp1.hist(df.PY.dropna(), bins=80, alpha=0.6, label= 'Machine Learning Publications by Year')
-sp2 = figure.add_subplot(1,2,1)
+plt.hist(df.PY.dropna(), bins=80, alpha=0.6)
+plt.title('Machine Learning Publications by Year')
+plt.subplot(1,2,1)
 #this doesn't work -- TBA
 major_fields = {f:v for f,v in field_counts.iteritems() if v > 3 or f is not 'computer science'}
 print(len(field_counts), len(major_fields))
 heights = major_fields.values()
 ind= np.arange(len(heights))
-sp2.barh(ind, heights)
+plt.barh(ind, heights)
 width =0.2
 plt.title('Machine Learning Publications by Discipline')
 xticks = plt.yticks(ind+width/2., major_fields.keys() )
@@ -127,6 +127,86 @@ xticks = plt.yticks(ind+width/2., major_fields.keys() )
 df = ml.clean_fields(df)
 gr_f = nx.Graph()
 gr_f.add_edges_from([i for de in df.fields.dropna() for i in itertools.combinations(de,2)])
+
+# <codecell>
+
+f_g = gt.Graph(directed = False)
+f_g.add_vertex(n=len(fields_set))
+v_f = f_g.new_vertex_property('string')
+field_list = list(fields_set)
+# add fields as node properties
+for v_i in range(0, f_g.num_vertices()):
+    v_f[f_g.vertex(v_i)] = field_list[v_i]
+f_g.vertex_properties['field'] = v_f
+
+# add cofields as edges
+#edges = [f_g.add_edge(field_list.index(s), field_list.index(t)) 
+ #                     for de in df.fields.dropna() for s,t in itertools.combinations(de,2)]
+
+e_w = f_g.new_edge_property('int')
+
+for de in df.fields.dropna():
+    for s,t in itertools.combinations(de,2):
+        s_i = field_list.index(s)
+        t_i = field_list.index(t)
+        if f_g.edge(s_i,t_i) is not None:
+            e = f_g.edge(s_i, t_i)
+            e_w[e] +=1
+        else:
+            e = f_g.add_edge(s_i, t_i)
+            e_w[e] = 0
+f_g.edge_properties['cofield'] = e_w
+
+# <codecell>
+
+print f_g.num_edges()
+f_g.num_vertices()
+
+# <codecell>
+
+v_comm = gt.community_structure(f_g, 1000, 5)
+#v_comm = gt.betweenness(f_g)
+
+# <codecell>
+
+u = gt.GraphView(f_g, vfilt=gt.label_largest_component(f_g))
+deg = u.degree_property_map('total', weight = f_g.edge_properties['cofield'])
+deg.fa = 2*(sqrt(deg.fa)*0.5  + 0.4)
+edg = f_g.edge_properties['cofield']
+edg.fa = (sqrt(edg.fa)*0.6+1)
+ebet = gt.betweenness(f_g)[1]
+
+# <codecell>
+
+pos, int = gt.interactive_window(u, pos=gt.radial_tree_layout(f_g, f_g.vertex(1)),
+                         vertex_size = deg, 
+                         vertex_fill_color = v_comm, 
+                         vertex_text = f_g.vertex_properties['field'],
+                         vertex_text_position = 0.2,
+                         vertex_font_size = 9,
+                         vertex_font_family = 'sans serif',
+                         edge_pen_width = edg,
+                         edge_color=ebet,
+                         output_size = (800,1200)
+                         )
+
+# <codecell>
+
+gt.graph_draw(f_g, pos=pos, 
+              vertex_size = deg, 
+                        vertex_fill_color = v_comm, 
+                        vertex_text = f_g.vertex_properties['field'],
+                        vertex_text_position = 0.2,
+                        vertex_font_size = 9,
+                        vertex_font_family = 'sans serif',
+                        edge_pen_width = edg,
+                        output_size = (800,1200),
+              output = 'ml_fields.png')
+
+# <codecell>
+
+i = IPython.display.Image(filename='ml_fields.png')
+i
 
 # <codecell>
 
@@ -547,7 +627,7 @@ nx.draw(classi, layout, figsize(10,10))
 # 
 # 1. clean up fields so each publication has the most distinctive fields - remove 'computer science'
 # 2. clean up topics so that each publication has the most distinctive topics -- remove 'machine learning'
-# 3. create bimodal network of fields & topics?
+# 3. create bipartite network of fields & topics?
 # 
 # ## Idea B: use association/correlations
 

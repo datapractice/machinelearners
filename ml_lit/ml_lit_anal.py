@@ -19,6 +19,7 @@ from optparse import OptionParser
 from suds import WebFault
 from lxml import etree
 import graph_tool.all as gt
+import sqlite3
 
 def load_records(data_dir):
     """Return dataframe of all records, 
@@ -78,7 +79,7 @@ def clean_topics(wos_df):
 
 def impute_topics(df):
 
-    """Many wos records have no topics -- especially for older papers.
+    """ TBA: Many wos records have no topics -- especially for older papers.
     Construct possible topics by matching title words to the overall list of topics.
     Returns
     --------------------------
@@ -130,6 +131,10 @@ def manual_topic_classifier(wos_df, existing_topic_classes = None, topic_counts_
         topic_counts_sorted[start:start+count] if not existing_topic_classes.has_key(t)}
     existing_topic_classes.update(topic_classes)
     return existing_topic_classes
+
+"""
+Coword analysis functions
+"""
 
 
 def coword_matrix_years(wos_df, start_year, end_year, keys):
@@ -223,7 +228,7 @@ def coword_network(mesh_df, start, end,topic_count=0):
 def coword_network_fast(mesh_df, start, end,topic_count=0): 
         """
         constructs a coword network for the years and topic count
-        Uses graph-tool
+        Uses graph-tool, a much faster graph library for Python
         
         Parameters
         ----------------
@@ -271,7 +276,9 @@ def coword_network_fast(mesh_df, start, end,topic_count=0):
 def cofield_matrix(wos_df, fields):
 
     """ Implementation of Callon style co-word analysis of  the 
-    Wos DE field -- the keywords field in the database
+    Wos DE field -- the keywords field in the database.
+    Returns a DataFrame of the field cooccurrence with fields 
+    as column names
     
     Parameters
     ------------------------------------------------
@@ -279,6 +286,7 @@ def cofield_matrix(wos_df, fields):
     fields: list of fields to use
     """
 
+    # assumes that WoS fields have already been cleaned and split into list of fields per publication
     fields_all = wos_df.fields
     # create document term matrix of keywords
     fields_all = fields_all.dropna()
@@ -419,20 +427,9 @@ def discipline_techniques_graph(wos_df):
     """
 
     wos_df['SC_l'] = wos_df.SC.str.lower()
-    techn_graph = nx.DiGraph()
+    techn_graph = nx.Graph()
     [techn_graph.add_edge(te, f) for t,f in zip(wos_df.topics, wos_df.SC_l) if t is not np.nan  for te in t]
     return techn_graph
-
-
-
-    """ Trims all nodes with degree less than the parameter.
-    Returns the trimmed graph 
-    """
-    graph_trimmed = graph.copy()
-    degrees = nx.degree(graph_trimmed)
-    [graph_trimmed.remove_node(n) for n in graph_trimmed.nodes() if degrees[n] <= degree]
-    print('Trimmed graph has %s nodes'%graph_trimmed.number_of_nodes())
-    return graph_trimmed
 
 def sorted_map(keyval): 
 
@@ -507,6 +504,27 @@ def keyword_years(wos_df, keyword):
         case=False)]
     return key_wos_df
 
+def field_years_wos(wos_df, field):
+
+    """ For Web of Science records only,
+    Returns a DataFrame with publication years and 
+    records containing the field
+    
+    Parameters
+    -------------------------------
+    wos_df: WoS or PMC references
+    field: the one sought
+
+    """
+
+
+    field = field + '(s)?'
+    top_py_wos_df = wos_df[['fields', 'PY', '']].dropna()
+    field_wos_df = top_py_wos_df[top_py_wos_df.SC.str.contains(field, 
+        case=False)]
+    return field_wos_df
+
+
 def find_author(wos_df, author):
 
     """ Return WoS records that include that author somewhere
@@ -542,7 +560,7 @@ def find_citation(wos_df, ref):
     citing_refs = [ut for (refs,ut) in zip(wos_df['cited_refs'], wos_df.index.tolist()) for r in refs if  (ref_auth in r) & (ref_year in r) & (ref_other in r) ]
     return wos_df.ix[citing_refs]
 
-def draw_network_by_years(df, start_year, end_year, draw, trim):
+def draw_network_by_years(df, start_year, end_year, trim):
 
     """ Constructs and draws the co-word networks for the years
     Parameters
@@ -550,7 +568,6 @@ def draw_network_by_years(df, start_year, end_year, draw, trim):
     df: WoS references
     start_year:
     end_year:
-    draw: boolean for drawing or not
     trim: degree of nodes to include in the graph
 
     Returns
@@ -590,7 +607,7 @@ def trim_draw_network(coword_net, trim):
     ----------------------------------
     coword networkx object
     """
-    coword_net = trim_degrees(coword_net, trim)
+    coword_net = trim_nodes(coword_net, trim)
     labels = nx.get_node_attributes(coword_net, 'keyword')
     pos = nx.spring_layout(coword_net)
     fig = plt.gcf()
@@ -671,6 +688,13 @@ def nxkey_for_topic(topic, topics):
     """
 
     return [k[0] for k in topics.items() if k[1] == topic][0]
+
+
+"""
+Functions below here all help clean up or process
+PubmedCentral records so that they look
+the same way as Web of Science records
+"""
 
 def  pmc_year_column(pmc_df):
 
@@ -966,6 +990,66 @@ def wos_author_graph(wosdf):
     
     print('Author graph has %s authors and %s co-author connects'%(aug.num_vertices(), aug.num_edges()))
     return aug
+
+
+def sra_machine_experiment():
+    """
+    Queries SRAdb for all machine names and experiments
+    and builds  a bipartite network using them.
+
+    Returns a graph_tool Graph with the following properties:
+    machine: boolean
+    experiment: boolean
+    label: instrument name or experiment accession
+
+    """
+    conn = sqlite3.connect('ngs_paper/data/SRAmetadb.sqlite')
+    machines_exp = pd.io.sql.read_frame("""select run.run_accession,run.experiment_accession,  
+                    run.instrument_name, experiment.platform, experiment.instrument_model, run.run_date,total_data_blocks from run, 
+                    experiment where run.experiment_accession == experiment.experiment_accession""", conn)
+    m_e = machines_exp[['instrument_name', 'experiment_accession']].dropna()
+    m_e.reset_index(inplace=True)
+    
+    instruments = m_e.instrument_name.str.encode('utf-8').unique().tolist()
+    experiments = m_e.experiment_accession.unique().tolist()
+    instruments_experiments = instruments + experiments
+    
+    g = gt.Graph()
+    node_count = len(instruments) + len(experiments)
+    vs = g.add_vertex(node_count)
+    
+    v_machine = g.new_vertex_property('boolean')
+    v_experiment = g.new_vertex_property('boolean')
+    v_label = g.new_vertex_property('string')
+
+    #add instruments
+    for i in range(0, len(instruments)):
+        v = vs.next()
+        v_machine[v] = True
+        v_experiment[v] = False
+        v_label[v] = instruments[i]
+
+    # add experiments
+    for i in range(0, len(experiments)):
+        v = vs.next()
+        v_machine[v] = False
+        v_experiment[v] = True
+        v_label[v] = experiments[i]
+
+    g.vertex_properties['machine'] = v_machine
+    g.vertex_properties['experiment'] = v_experiment
+    g.vertex_properties['label'] = v_label
+    
+    # link machines and experiments
+
+    for  i in range(0, m_e.shape[0]):
+        s_i = instruments_experiments.index(m_e.ix[i, 'instrument_name'])
+        t_i = instruments_experiments.index(m_e.ix[i, 'experiment_accession'])
+        g.add_edge(g.vertex(s_i), g.vertex(t_i))
+        if i%10000 == 0:
+            print('added %s edges'%i)
+
+    return g
 
 
 
