@@ -13,10 +13,6 @@ import math
 import itertools
 import matplotlib.pyplot as plt    
 import requests
-import urllib  
-from suds.client import *
-from optparse import OptionParser
-from suds import WebFault
 from lxml import etree
 import graph_tool.all as gt
 import sqlite3
@@ -88,6 +84,7 @@ def impute_topics(df):
 
     de_all = [d for de in df.topics.dropna() for d in de]
     de_counts = collections.Counter(de_all)
+    return de_counts
 
 def keyword_counts(wos_df):
 
@@ -251,8 +248,9 @@ def coword_network_fast(mesh_df, start, end,topic_count=0):
         cow_df = coword_matrix_years(mesh_df, start, end, common_topics)
         cow_m = cow_df.as_matrix()
         # construct graph
+        
         g = gt.Graph(directed=False)
-        vs  = g.add_vertex(topic_count)
+        g.add_vertex(topic_count)
         v_topic = g.new_vertex_property('string')
         e_occ  = g.new_edge_property('int')
         g.vertex_properties['topic'] = v_topic
@@ -589,7 +587,7 @@ def draw_network_by_years(df, start_year, end_year, trim):
     nx.set_node_attributes(coword_net, 'keyword', labels)
     nx.set_node_attributes(coword_net, 'between_central', nx.betweenness_centrality(coword_net))
     if trim > 0:
-        coword_net = trim_degrees(coword_net, trim)
+        coword_net = trim_nodes(coword_net, trim)
         labels = {n:labels[n] for n in coword_net.nodes()}
    
     return coword_net
@@ -672,8 +670,6 @@ def term_year_network(df, topic, start, end, size = (18,18), plot=True, weight_t
     """
     svm_nx = coword_network(df, start, end)
 
-    svm_cow = nx.to_numpy_matrix(svm_nx)
-    topics = nx.get_node_attributes(svm_nx, 'topic')
     topic_nx = nx.ego_graph(svm_nx, topic, undirected=True, radius=10)
 
     if plot:
@@ -940,7 +936,6 @@ def pmc_author_graph(pmcdf):
     aug.vertex_properties['au'] = v_au
 
     ## add coauthors as edges, as well as a count of how often they coauthor
-    e_co = aug.new_edge_property('int')
     au_edges = [(a,b) for al in authors.str.split(', ') for a, b in itertools.combinations(al, 2) ]
 
     el = []
@@ -968,7 +963,7 @@ def wos_author_graph(wosdf):
     aug  = gt.Graph(directed=False)
     # add authors as nodes
     aug.add_vertex(len(aul))
-    v_au = aug.new_vertex_property('string')
+    v_au_imputed = aug.new_vertex_property('string')
     for i in range(0, len(aul)):
         v = aug.vertex(i)
         v_au[v] = aul[i]
@@ -981,76 +976,174 @@ def wos_author_graph(wosdf):
 
     el = []
     print('Adding edges for co-authors... ')
-    for coau in au_edges:
+    for  coau in au_edges:
         # print(coau)
         s = aul.index(coau[0])
         t = aul.index(coau[1])
-        e = aug.add_edge(aug.vertex(s), aug.vertex(t))
+        e = aug.add_edge(aug.vertex(s_samples), aug.vertex(t))
         el.append(e)
     
     print('Author graph has %s authors and %s co-author connects'%(aug.num_vertices(), aug.num_edges()))
     return aug
 
 
-def sra_machine_experiment():
+def sra_machine_experiment(node_limit = 200000L):
     """
     Queries SRAdb for all machine names and experiments
     and builds  a bipartite network using them.
 
+    Parameters
+    -------------------------------------
+    node_limit: the maximum number of nodes to include
+
     Returns a graph_tool Graph with the following properties:
     machine: boolean
     experiment: boolean
+    sample:boolean
+    study: boolean
+    center: boolean
+    entity: type of entities are 1-machine, 2-experiment, 3-sample, 4-study
     label: instrument name or experiment accession
 
     """
     conn = sqlite3.connect('ngs_paper/data/SRAmetadb.sqlite')
-    machines_exp = pd.io.sql.read_frame("""select run.run_accession,run.experiment_accession,  
-                    run.instrument_name, experiment.platform, experiment.instrument_model, run.run_date,total_data_blocks from run, 
-                    experiment where run.experiment_accession == experiment.experiment_accession""", conn)
-    m_e = machines_exp[['instrument_name', 'experiment_accession']].dropna()
+    machines_exp = pd.io.sql.read_frame(
+                """select run.run_accession,run.experiment_accession,  
+                    run.instrument_name, 
+                    experiment.platform, experiment.instrument_model, 
+                    experiment.sample_accession,
+                    experiment.center_name,
+                    experiment.study_accession,
+                    run.run_date,total_data_blocks 
+                    from run, experiment 
+                    where run.experiment_accession == experiment.experiment_accession
+                    limit
+                    """ + str(node_limit) +';', conn)
+    # so many instrument names are, that I'm going to impute putative machines
+    # based on the center names; this could be augmented by the machines counts from 
+    # Loman's map; I'm assuming they are missing completely at random
+    machines_exp['instrument_name_imputed'] =   machines_exp.instrument_name.map(str) +   '_'  + machines_exp.instrument_model +  '_' + machines_exp.center_name
+    machines_exp['instrument_name_imputed'] = machines_exp.instrument_name_imputed.str.encode('utf-8')
+    machines_exp['center_name'] = machines_exp.center_name.str.encode('utf-8')
+
+    m_e = machines_exp[['instrument_name_imputed', 
+        'experiment_accession', 'sample_accession', 'study_accession', 'center_name']].dropna()
     m_e.reset_index(inplace=True)
     
-    instruments = m_e.instrument_name.str.encode('utf-8').unique().tolist()
+    instruments = m_e.instrument_name_imputed.unique().tolist()
     experiments = m_e.experiment_accession.unique().tolist()
-    instruments_experiments = instruments + experiments
-    
+    samples = m_e.sample_accession.unique().tolist()
+    studies = m_e.study_accession.unique().tolist()
+    centers = m_e.center_name.unique().tolist()
+    instruments_experiments_samples = instruments + experiments + samples + studies + centers
+    node_count = long(len(instruments) + len(experiments) + len(samples) + len(studies) + len(centers))
+
+    if node_count >  node_limit:
+        print('arrange nodes limits better!')
+
+    # print('Graph will have %s nodes including %s instruments, %s samples, %s studies, %centres and %s experiments'%
+        # (node_count, len(instruments), len(samples), len(studies), len(centers), len(experiments)))
+   
+    #constructing this dictionary for fast lookup of node numbers
+    instr_exp_dic = dict(zip(instruments_experiments_samples, range(0, node_count)))
     g = gt.Graph()
-    node_count = len(instruments) + len(experiments)
     vs = g.add_vertex(node_count)
     
     v_machine = g.new_vertex_property('boolean')
     v_experiment = g.new_vertex_property('boolean')
+    v_sample = g.new_vertex_property('boolean')
+    v_study = g.new_vertex_property('boolean')
+    v_center = g.new_vertex_property('boolean')
     v_label = g.new_vertex_property('string')
+    v_entity = g.new_vertex_property('int')
 
     #add instruments
     for i in range(0, len(instruments)):
         v = vs.next()
         v_machine[v] = True
         v_experiment[v] = False
+        v_sample[v] = False
+        v_study[v] = False
+        v_center[v] = False
         v_label[v] = instruments[i]
-
+        v_entity[v] = 1
+    print('Added %s instruments'%(len(instruments)))
+    
     # add experiments
     for i in range(0, len(experiments)):
         v = vs.next()
         v_machine[v] = False
         v_experiment[v] = True
+        v_sample[v] = False
+        v_study[v] = False
+        v_center[v] = False
         v_label[v] = experiments[i]
+        v_entity[v] = 2
+    print('Added %s experiments'%(len(experiments)))
+
+    # add samples
+    for i in range(0, len(samples)):
+        v = vs.next()
+        v_machine[v] = False
+        v_experiment[v] = False
+        v_sample[v] = True
+        v_study[v] = False
+        v_center[v] = False
+        v_label[v] = samples[i]
+        v_entity[v] = 3
+    print('Added %s samples'%(len(samples)))
+
+    # add studies
+    for i in range(0, len(studies)):
+        v = vs.next()
+        v_machine[v] = False
+        v_experiment[v] = False
+        v_sample[v] = False
+        v_study[v] = True
+        v_center[v] = False
+        v_label[v] = studies[i]
+        v_entity[v] = 4
+    print('Added %s studies'%(len(studies)))
+
+    # add centers
+    for i in range(0, len(centers)):
+        v = vs.next()
+        v_machine[v] = False
+        v_experiment[v] = False
+        v_sample[v] = False
+        v_study[v] = False
+        v_center[v] = True
+        v_label[v] = centers[i]
+        v_entity[v] = 5
+    print('Added %s centers'%(len(centers)))
 
     g.vertex_properties['machine'] = v_machine
     g.vertex_properties['experiment'] = v_experiment
+    g.vertex_properties['sample'] = v_sample
+    g.vertex_properties['study'] = v_study
+    g.vertex_properties['center'] = v_center
     g.vertex_properties['label'] = v_label
+    g.vertex_properties['entity'] = v_entity
     
-    # link machines and experiments
+    # link machines, samples and experiments with machine as the source
+    # sample and experiment as the target ... Not sure why I chose that ... 
 
     for  i in range(0, m_e.shape[0]):
-        s_i = instruments_experiments.index(m_e.ix[i, 'instrument_name'])
-        t_i = instruments_experiments.index(m_e.ix[i, 'experiment_accession'])
+        s_i = instr_exp_dic[m_e.ix[i, 'instrument_name_imputed']]
+        t_i = instr_exp_dic[m_e.ix[i, 'experiment_accession']]
+        t_2 = instr_exp_dic[m_e.ix[i, 'sample_accession']]
+        t_3  = instr_exp_dic[m_e.ix[i, 'study_accession']]
+        t_4 = instr_exp_dic[m_e.ix[i, 'center_name']]
         g.add_edge(g.vertex(s_i), g.vertex(t_i))
+        g.add_edge(g.vertex(s_i), g.vertex(t_2))
+        g.add_edge(g.vertex(s_i), g.vertex(t_2))
+        g.add_edge(g.vertex(s_i), g.vertex(t_3))
+        g.add_edge(g.vertex(s_i), g.vertex(t_4))
+
         if i%10000 == 0:
-            print('added %s edges'%i)
+            print('added %s edges'%g.num_edges())
 
     return g
-
 
 
 
