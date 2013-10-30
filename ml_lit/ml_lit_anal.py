@@ -11,21 +11,23 @@ import operator
 import collections
 import math
 import itertools
-import matplotlib.pyplot as plt    
+import matplotlib.pyplot as plt
 import requests
 from lxml import etree
 import graph_tool.all as gt
 import sqlite3
 
+
 def load_records(data_dir):
-    """Return dataframe of all records, 
+    """Return dataframe of all records,
     with new column of cited references as list"""
 
     # I saved all the WoS full records for 'machine learning'
     files = os.listdir(data_dir)
-    wos_df  = pd.concat([pd.read_table(wos_df, sep='\t', index_col = False) 
-        for wos_df in [data_dir+f for f in files if f.count('.txt')>0]])
-    wos_df  =  wos_df.drop_duplicates()
+    wos_df = pd.concat([pd.read_table(wos_df, sep='\t', index_col=False)
+                        for wos_df in [data_dir+f for f in files
+                        if f.count('.txt') > 0]])
+    wos_df = wos_df.drop_duplicates()
 
     #fix index
     index = range(0, wos_df.shape[0])
@@ -33,8 +35,9 @@ def load_records(data_dir):
 
     #to get all cited refs
     if wos_df.columns.tolist().count('CR') > 0:
-        cited_refs = [list(re.split(pattern='; ', 
-            string=str(ref).lower().lstrip().rstrip())) for ref in wos_df.CR]
+        cited_refs = [list(re.split(pattern='; ',
+                                    string=str(ref).lower().lstrip().rstrip()))
+                                    for ref in wos_df.CR]
         # add as column to dataframe
         wos_df['cited_refs'] = cited_refs
 
@@ -44,6 +47,7 @@ def load_records(data_dir):
 
     return wos_df
 
+
 def clean_fields(wos_df):
 
     """ Returns dataframe with a new field 'field' that lists
@@ -52,8 +56,8 @@ def clean_fields(wos_df):
     wos_df['fields'] = wos_df.SC.dropna().str.lower().str.split('; ')
     return wos_df
 
+
 def clean_topics(wos_df):
-    
     """Wos.DE field has a mixture of topics and techniques.
     -------------------------------------
     Returns a cleaned-up, de-pluralised list version of all the topics and techniques
@@ -61,11 +65,11 @@ def clean_topics(wos_df):
 
     wos_df['topics'] = wos_df.DE.dropna().str.lower().str.strip().str.replace('\(\w+ \)', '').str.replace('($  )|(  )', ' ')
     # wos_df['topics'] = wos_df.topics.str.replace("[\(\](\w+ ?)+[\)\]]\W*",  '')
-    wos_df.topics  = wos_df.topics.str.replace('svm', 'support vector machine')
-    wos_df.topics  = wos_df.topics.str.replace('support vector machine(\w*)', 
-        'support vector machine')
-    wos_df.topics = wos_df.topics.str.replace('(artificial neural network)|(neural networks)|(neural net\b)', 
-        'neural network')
+    wos_df.topics = wos_df.topics.str.replace('svm', 'support vector machine')
+    wos_df.topics = wos_df.topics.str.replace('support vector machine(\w*)',
+                                            'support vector machine')
+    wos_df.topics = wos_df.topics.str.replace('(artificial neural network)|(neural networks)|(neural net\b)',
+                                            'neural network')
     wos_df.topics = wos_df.topics.str.replace('decision tree(.*)', 'decision tree')
     wos_df.topics = wos_df.topics.str.replace('random forest(\w+)', 'random forest')
     # Web of science topics often have  a bracket expansion
@@ -73,10 +77,11 @@ def clean_topics(wos_df):
     wos_df.topics = wos_df.topics.str.split('; ')
     return wos_df
 
-def impute_topics(df):
 
+def impute_topics(df):
     """ TBA: Many wos records have no topics -- especially for older papers.
-    Construct possible topics by matching title words to the overall list of topics.
+    Construct possible topics by matching title
+    words to the overall list of topics.
     Returns
     --------------------------
     df: with all topics fields having some value
@@ -86,27 +91,26 @@ def impute_topics(df):
     de_counts = collections.Counter(de_all)
     return de_counts
 
-def keyword_counts(wos_df):
 
+def keyword_counts(wos_df):
     """ Returns a dictionary with keyword counts"""
-    
     de_all = [d for de in wos_df.topics.dropna() for d in de]
     key_counts = collections.Counter(de_all)
     return key_counts
 
+
 def citation_counts(wos_df):
-
     """Returns a dictionary with citations in the cited references counted"""
-
     all_refs = [ref for refs in wos_df.cited_refs for ref in refs]
     ref_collection = collections.Counter(all_refs)
     return ref_collection
 
 
-def manual_topic_classifier(wos_df, existing_topic_classes = None, topic_counts_sorted = None, start = 0, count=100 ):
-    
+def manual_topic_classifier(wos_df, existing_topic_classes=None, 
+                            topic_counts_sorted=None, start = 0, count=100):
     """Returns a dictionary with topics classified as techniques
-    or not. Asks the user to classify them by hand, starting with the most frequent
+    or not. Asks the user to classify them by hand,
+    starting with the most frequent.
 
     Parameters
     ------------------
@@ -121,11 +125,11 @@ def manual_topic_classifier(wos_df, existing_topic_classes = None, topic_counts_
         topic_counts_sorted = keyword_counts(wos_df)
         de_all = [d for de in wos_df.topics.dropna() for d in de]
         de_set = set(de_all)
-        de_counts = {de:de_all.count(de) for de in de_set}
-        topic_counts_sorted = sorted(de_counts.iteritems(), 
-            key = operator.itemgetter(1), reverse=True)
+        de_counts = {de: de_all.count(de) for de in de_set}
+        topic_counts_sorted = sorted(de_counts.iteritems(),
+                                                    key=operator.itemgetter(1), reverse=True)
     topic_classes = {t:raw_input('\n' + t+ ' is technique(t)/material(m)/field(f)/organism(o)/application(a)/biological process(b)? ')  for t, v in 
-        topic_counts_sorted[start:start+count] if not existing_topic_classes.has_key(t)}
+        topic_counts_sorted[start:start+count] if t not  in existing_topic_classes.keys()}
     existing_topic_classes.update(topic_classes)
     return existing_topic_classes
 
@@ -135,7 +139,6 @@ Coword analysis functions
 
 
 def coword_matrix_years(wos_df, start_year, end_year, keys):
-
     """
     Return the coword matrix for a year range for the given set of keys
 
@@ -147,9 +150,10 @@ def coword_matrix_years(wos_df, start_year, end_year, keys):
     keys: list of keys to include in the matrix
 
     """
-    wos_df_delim = wos_df[(wos_df.PY>= start_year) & (wos_df.PY <end_year)]
+    wos_df_delim = wos_df[(wos_df.PY>= start_year) & (wos_df.PY<end_year)]
     coword_m = coword_matrix(wos_df_delim, keys)
     return coword_m
+
 
 def coword_matrix(wos_df, keys):
 
@@ -166,18 +170,18 @@ def coword_matrix(wos_df, keys):
     #drop references that have no topics
     topics = topics.dropna()
     doc_count = len(topics)
-    dropped_count  = wos_df.shape[0] - doc_count
+    dropped_count  =  wos_df.shape[0] - doc_count
     dtm = np.zeros((doc_count, len(keys)))
     print('Dropped %s document of the total %s because they had no topic field'
-        %(dropped_count, wos_df.shape[0]))
+                        %(dropped_count, wos_df.shape[0]))
 
-    #nested loops here but 
+    #nested loops here but
     #I couldn't get the list comprehensions working properly
     
     for row in range(0, doc_count):
         top = topics.iget(row)
         for topic in top:
-            if keys.count(topic) >0:
+            if keys.count(topic) > 0:
                 # set all the topics found for this reference to 1
                 dtm[row, keys.index(topic)] = 1
 
@@ -188,11 +192,12 @@ def coword_matrix(wos_df, keys):
     cow_wos_df = pd.DataFrame(cow_m, columns=keys, index=keys)
     return cow_wos_df
 
+
 def coword_network(mesh_df, start, end,topic_count=0): 
         """
-        constructs a coword network for the years supplied; 
+        constructs a coword network for the years supplied;
         nodes will be labelled by topic, have a 'weight' of co-occurrence,
-        a 'start_year' attribute, 
+        a 'start_year' attribute,
         and an 'end_year' attribute which is the end year of the search
         
         Parameters
@@ -200,7 +205,8 @@ def coword_network(mesh_df, start, end,topic_count=0):
         mesh_df: a dataframe with at least the topics and years columns
         start: start year
         end: end year
-        topic_count: the number of the topics to use (not too big, otherwise coword matrix will be huge
+        topic_count: the number of the topics to use
+        (not too big, otherwise coword matrix will be huge
         """
 
         # determine the number of topics to count
@@ -214,13 +220,14 @@ def coword_network(mesh_df, start, end,topic_count=0):
         cow_df = coword_matrix_years(mesh_df, start, end, common_topics)
         cow_nx = nx.from_numpy_matrix(cow_df.as_matrix())
         col_names = cow_df.columns.tolist()
-        labels = {col_names.index(l):l for l in col_names}
-        start_year = {i:end for i in range(0, len(col_names))}
-        end_year = {i:start for i in range(0, len(col_names))}
+        labels = {col_names.index(l): l for l in col_names}
+        start_year = {i: end for i in range(0, len(col_names))}
+        end_year = {i: start for i in range(0, len(col_names))}
         nx.set_node_attributes(cow_nx, 'start_year', start_year)
         nx.set_node_attributes(cow_nx, 'end_year', end_year)
         nx.relabel_nodes(cow_nx, labels, copy=False)
         return cow_nx
+
 
 def coword_network_fast(mesh_df, start, end,topic_count=0): 
         """
@@ -252,7 +259,6 @@ def coword_network_fast(mesh_df, start, end,topic_count=0):
         g = gt.Graph(directed=False)
         g.add_vertex(topic_count)
         v_topic = g.new_vertex_property('string')
-        e_occ  = g.new_edge_property('int')
         g.vertex_properties['topic'] = v_topic
 
         # add topics to vertices
@@ -263,16 +269,15 @@ def coword_network_fast(mesh_df, start, end,topic_count=0):
         # add edges
         for source in range(0, topic_count):
             for target in range(0, topic_count):
-                if cow_m[source,target] > 0:
+                if cow_m[source, target] > 0:
                     e = g.add_edge(g.vertex(source), g.vertex(target))
                     e_occ[e] = cow_m[source, target]
 
-        g.edge_properties['co-occurrence']  = e_occ
+        g.edge_properties['co-occurrence'] =  e_occ
         return g
 
 
 def cofield_matrix(wos_df, fields):
-
     """ Implementation of Callon style co-word analysis of  the 
     Wos DE field -- the keywords field in the database.
     Returns a DataFrame of the field cooccurrence with fields 
@@ -284,7 +289,8 @@ def cofield_matrix(wos_df, fields):
     fields: list of fields to use
     """
 
-    # assumes that WoS fields have already been cleaned and split into list of fields per publication
+    # assumes that WoS fields have already been cleaned and split into
+    # list of fields per publication
     fields_all = wos_df.fields
     # create document term matrix of keywords
     fields_all = fields_all.dropna()
@@ -296,8 +302,8 @@ def cofield_matrix(wos_df, fields):
     for row in range(0, len(fields_all)):
         top = fields_all.iget(row)
         for topic in top:
-            if fields.count(topic) >0:
-               cofield[row, fields.index(topic)] = 1
+            if fields.count(topic) > 0:
+                cofield[row, fields.index(topic)] = 1
     
     #to create cofield matrix, use matrix dot product
     print('finished matrix ... ')
@@ -315,6 +321,7 @@ def inclusion_score(cow_wos_df, key1, key2, key_counts):
     I_ij = c_ij/min(key_counts[key1],  key_counts[key2])
     return I_ij
 
+
 def inclusion_matrix(cow_m):
     """ Calculates  the inclusion matrix for a coword matrix. 
     Inclusion score is conditional probability of key1
@@ -323,17 +330,19 @@ def inclusion_matrix(cow_m):
     keycounts = cow_m.diagonal().tolist()[0]
     # print(len(keycounts))
     # print(cow_m.shape)
-    minimum_matrix = [min(p,q) for p,q in itertools.product(keycounts,repeat=2)]
+    minimum_matrix = [min(p,q) for p,q in itertools.product(keycounts, repeat=2)]
     print(len(minimum_matrix))
     minimum_matrix = np.array(minimum_matrix, dtype=np.float16).reshape(cow_m.shape)
     I_ij = cow_m/minimum_matrix
     return I_ij
+
 
 def inclusion_matrix_to_edge_weights(I_ij):
     """ Reshapes an inclusion matrix to 
     the tuple-value dictionary needed by networkx
     """
     return {(x,y):I_ij[x,y]   for x in range(0,I_ij.shape[0]) for y in range(0, I_ij.shape[1]) if I_ij[x,y] > 0}
+
 
 def proximity_score(cow_wos_df, key1, key2, key_counts, article_count):
     """ Calculates  the proximity score  of key1
@@ -345,6 +354,7 @@ def proximity_score(cow_wos_df, key1, key2, key_counts, article_count):
     p_ij = c_ij/(key_counts[key1] * key_counts[key2]) * article_count
     return p_ij
 
+
 def proximity_matrix(cow_m):
     """ Calculates  the proximity score  of key1
     given the presence of key2 (or vice versa); 
@@ -352,6 +362,7 @@ def proximity_matrix(cow_m):
     out by Pg represent minor but potentially growing areas."""
 
     return 'tba'
+
 
 def equivalence_score(cow_wos_df, key1, key2, key_counts):
     """ Calculates  the equivalence score (mutual inclusion) of key1
@@ -365,22 +376,23 @@ def equivalence_score(cow_wos_df, key1, key2, key_counts):
     Equiv_ij  = c_ij**2/(key_counts[key1] * key_counts[key2])
     return Equiv_ij
 
+
 def fast_equivalence_matrix(cow_m):
     """ Constructs the equivalence matrix for all combinations of key words; 
     This is following (Callon, 1991).
-
     Parameters
-    ---------------------------------------------------------------- 
+    ------------------------------------------------ 
     cow_m: the matrix of co-word counts
 """
 
     ecow = cow_m**2
     colsums = cow_m.diagonal()
-    for i in range(0,cow_m.shape[0]):
+    for i in range(0, cow_m.shape[0]):
         for j in range(0, cow_m.shape[1]):
-            ecow[i,j] = ecow[i,j]/(colsums[i]*colsums[j])
+            ecow[i,j] = ecow[i, j]/(colsums[i]*colsums[j])
    
-    # replace NaN with zero -- this happens because all topics are used in topic list, 
+    # replace NaN with zero -- this happens
+    # because all topics are used in topic list,
     # but particular years may not have that topic
     isnan = np.isnan(ecow)
     ecow[isnan] = 0
@@ -393,7 +405,7 @@ def equivalence_matrix(cow_wos_df, key_counts):
     This is following (Callon, 1991).
 
     Parameters
-    ---------------------------------------------------------------- 
+    --------------------------------------------------- 
     cow_wos_df: the matrix of co-word counts
     key_counts: the list of keyword counts
     """
@@ -404,15 +416,16 @@ def equivalence_matrix(cow_wos_df, key_counts):
     ecow = np.zeros(cow_wos_df.shape)
     for key1_key2 in key_combinations:
         key1, key2 = key1_key2
-        if (keys.count(key1) > 0)  & (keys.count(key2)> 0):
+        if (keys.count(key1) > 0) & (keys.count(key2) > 0):
             index1 = keys.index(key1)
             index2 = keys.index(key2)
             escore = equivalence_score(cow_wos_df, key1, key2, key_counts)
             ecow[index1, index2] = escore
 
     eqcow_wos_df = pd.DataFrame(ecow, 
-        columns=cow_wos_df.columns, index = cow_wos_df.index)
+                columns=cow_wos_df.columns, index = cow_wos_df.index)
     return eqcow_wos_df
+
 
 def discipline_techniques_graph(wos_df):
 
@@ -429,6 +442,7 @@ def discipline_techniques_graph(wos_df):
     [techn_graph.add_edge(te, f) for t,f in zip(wos_df.topics, wos_df.SC_l) if t is not np.nan  for te in t]
     return techn_graph
 
+
 def sorted_map(keyval): 
 
     """ Takes a key-value dictionary and 
@@ -437,6 +451,7 @@ def sorted_map(keyval):
     """
     map_sorted = sorted(keyval.iteritems(), key=lambda (k, v): (-v, k))
     return map_sorted
+
 
 def trim_edges(graph, weight=1):
 
@@ -451,6 +466,7 @@ def trim_edges(graph, weight=1):
     print ("%s edges in graph" %graph.number_of_edges())
     print ("%s nodes in graph" %graph.number_of_nodes())
     return graph
+
 
 def  trim_nodes(graph, degree = 1):
 
@@ -467,6 +483,7 @@ def  trim_nodes(graph, degree = 1):
 
     return graph1
 
+
 def island_method(graph, iterations=5):
     """ 
     This comes the SNA book -- a way to show only those bits of the network
@@ -479,6 +496,7 @@ def island_method(graph, iterations=5):
     mx = int(max(weights))
     step = int((mx-mn)/iterations)
     return [[threshold, trim_edges(graph, threshold)] for threshold in range(mn, mx, step)]
+
 
 def keyword_years(wos_df, keyword):
 
@@ -502,6 +520,7 @@ def keyword_years(wos_df, keyword):
         case=False)]
     return key_wos_df
 
+
 def field_years_wos(wos_df, field):
 
     """ For Web of Science records only,
@@ -514,7 +533,6 @@ def field_years_wos(wos_df, field):
     field: the one sought
 
     """
-
 
     field = field + '(s)?'
     top_py_wos_df = wos_df[['fields', 'PY', '']].dropna()
@@ -550,7 +568,7 @@ def find_citation(wos_df, ref):
     
     ref = ref.lower()
     ref_parts = ref.split(' ')
-    ref_auth  = ref_parts[0]
+    ref_auth = ref_parts[0]
     ref_year  = ref_parts[1]
     ref_other = ''
     if len(ref_parts)  > 2:
@@ -558,7 +576,8 @@ def find_citation(wos_df, ref):
     citing_refs = [ut for (refs,ut) in zip(wos_df['cited_refs'], wos_df.index.tolist()) for r in refs if  (ref_auth in r) & (ref_year in r) & (ref_other in r) ]
     return wos_df.ix[citing_refs]
 
-def draw_network_by_years(df, start_year, end_year, trim):
+
+ draw_network_by_years(df, start_year, end_year, trim):
 
     """ Constructs and draws the co-word networks for the years
     Parameters
@@ -591,6 +610,7 @@ def draw_network_by_years(df, start_year, end_year, trim):
         labels = {n:labels[n] for n in coword_net.nodes()}
    
     return coword_net
+
 
 def trim_draw_network(coword_net, trim):
 
@@ -656,6 +676,7 @@ def plot_co_x(cox, start, end, size = (20,20), title = '', weighted=False, weigh
                          node_size = [s*6+20 for s in nx.degree(cox).values()])
 
 
+
 def term_year_network(df, topic, start, end, size = (18,18), plot=True, weight_threshold=8):
 
     """ Constructs, plots and returns a network for the given term during the given years
@@ -676,6 +697,7 @@ def term_year_network(df, topic, start, end, size = (18,18), plot=True, weight_t
         plot_co_x(topic_nx, start, end, size, title = topic, weighted=True, weight_threshold= weight_threshold)
     return topic_nx
 
+
 def nxkey_for_topic(topic, topics):
 
     """ helper function to look up the node number
@@ -691,6 +713,7 @@ Functions below here all help clean up or process
 PubmedCentral records so that they look
 the same way as Web of Science records
 """
+
 
 def  pmc_year_column(pmc_df):
 
@@ -709,6 +732,7 @@ def pmc_topics_column(pmc_df):
     if 'DE' not in pmc_df.columns:
         pmc_df['DE']  = [';'.join(top).lower() for top in pmc_df.topics]
     return pmc_df
+
 
 def pmc_mesh_qualifier(pmc_df):
     """MESH terms often have a qualifier that might help locating methods or fields. 
@@ -820,6 +844,7 @@ def getPMC_ReferencesQuery(query, full=True, limit=0, random = False):
 <id>18784104</id><source>MED</source><citationType>JOURNAL ARTICLE</citationType><title>Recent advances in head and neck cancer.</title><authorString>Haddad RI, Shin DM.</authorString><journalAbbreviation>N. Engl. J. Med.</journalAbbreviation><issue>11</issue><pubYear>2008</pubYear><volume>359</volume><ISSN>0028-4793</ISSN><ESSN>1533-4406</ESSN><pageInfo>1143-1154</pageInfo><citedOrder>1</citedOrder><match>Y</match>
 """
 
+
 def getPMC_References(df_all):
 
     """ Return a pandas Panel with all the cited references available from europepmc.
@@ -879,6 +904,7 @@ def clean_pmc_refs(df_full):
         print("There are %s references with %s fields in the reference list"%df_full.shape)
         return df_full
 
+
 def term_yr_hist(mesh_df, term, years):
     """
     Helper for the plotting function above 
@@ -892,6 +918,7 @@ def term_yr_hist(mesh_df, term, years):
     year_count  = years[1]-years[0]
     vals, bins = np.histogram(term_yr.PY, bins = year_count, range=years)
     return (vals, bins[1:])
+
 
 def keyword_plot(df, terms, years, title='', size=(14,8)):
 
@@ -914,7 +941,6 @@ def keyword_plot(df, terms, years, title='', size=(14,8)):
     plt.title('Key terms in the %s literature: %s-%s'%(title, start, end), fontsize=15)
     plt.legend(loc = 'upper left')
     plt.box(on=False)
-
 
 
 def pmc_author_graph(pmcdf):
@@ -947,7 +973,8 @@ def pmc_author_graph(pmcdf):
         e = aug.add_edge(aug.vertex(s), aug.vertex(t))
         el.append(e)
     
-    print('Author graph has %s authors and %s co-author connects'%(aug.num_vertices(), aug.num_edges()))
+    print('Author graph has %s authors and %s co-author connects'
+        %(aug.num_vertices(), aug.num_edges()))
     return aug
 
 
@@ -963,7 +990,7 @@ def wos_author_graph(wosdf):
     aug  = gt.Graph(directed=False)
     # add authors as nodes
     aug.add_vertex(len(aul))
-    v_au_imputed = aug.new_vertex_property('string')
+    v_au = aug.new_vertex_property('string')
     for i in range(0, len(aul)):
         v = aug.vertex(i)
         v_au[v] = aul[i]
@@ -971,7 +998,6 @@ def wos_author_graph(wosdf):
     aug.vertex_properties['au'] = v_au
 
     ## add coauthors as edges, as well as a count of how often they coauthor
-    e_co = aug.new_edge_property('int')
     au_edges = [(a,b) for al in authors.str.split(', ') for a, b in itertools.combinations(al, 2) ]
 
     el = []
@@ -980,7 +1006,7 @@ def wos_author_graph(wosdf):
         # print(coau)
         s = aul.index(coau[0])
         t = aul.index(coau[1])
-        e = aug.add_edge(aug.vertex(s_samples), aug.vertex(t))
+        e = aug.add_edge(aug.vertex(s), aug.vertex(t))
         el.append(e)
     
     print('Author graph has %s authors and %s co-author connects'%(aug.num_vertices(), aug.num_edges()))
