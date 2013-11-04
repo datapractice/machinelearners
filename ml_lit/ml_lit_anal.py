@@ -1,7 +1,6 @@
 # %load_ext autoreload
 # %autoreload 2
 
-
 import pandas as pd
 import re
 import os
@@ -22,7 +21,7 @@ def load_records(data_dir):
     """Return dataframe of all records,
     with new column of cited references as list"""
 
-    # I saved all the WoS full records for 'machine learning'
+    # I saved all the WoS full records for the search term in this directory
     files = os.listdir(data_dir)
     wos_df = pd.concat([pd.read_table(wos_df, sep='\t', index_col=False)
                         for wos_df in [data_dir+f for f in files
@@ -577,7 +576,7 @@ def find_citation(wos_df, ref):
     return wos_df.ix[citing_refs]
 
 
- draw_network_by_years(df, start_year, end_year, trim):
+def draw_network_by_years(df, start_year, end_year, trim):
 
     """ Constructs and draws the co-word networks for the years
     Parameters
@@ -837,17 +836,18 @@ def getPMC_ReferencesQuery(query, full=True, limit=0, random = False):
     return df
 
 
-    ## to get references --- only seem to come in XML
-
 
 """
+References --- only seem to come in XML
+
 <id>18784104</id><source>MED</source><citationType>JOURNAL ARTICLE</citationType><title>Recent advances in head and neck cancer.</title><authorString>Haddad RI, Shin DM.</authorString><journalAbbreviation>N. Engl. J. Med.</journalAbbreviation><issue>11</issue><pubYear>2008</pubYear><volume>359</volume><ISSN>0028-4793</ISSN><ESSN>1533-4406</ESSN><pageInfo>1143-1154</pageInfo><citedOrder>1</citedOrder><match>Y</match>
 """
 
 
 def getPMC_References(df_all):
 
-    """ Return a pandas Panel with all the cited references available from europepmc.
+    """ Return a pandas Panel with all the cited references available from europepmc
+    for a list of pmids.
     The panel is 3 D object whose axes are
     1. The ids of the references
     2. The  references cited by each id
@@ -862,34 +862,36 @@ def getPMC_References(df_all):
     columns = ['id', 'source', 'citationType', 'title', 'authors', 'journal', 'issue', 'year', 'vol', 'issn', 'essn', 'pages', 'citedOrder', 'match']
     id_refs = dict()
     for id_ex in ids:
-        refs=[]
+        refs =  []
         ref_query = 'http://www.ebi.ac.uk/europepmc/webservices/rest/MED/'+id_ex + '/references'
-        root = etree.parse(ref_query)   
         root = etree.parse(ref_query)
-        [refs.append([i.text for i in r.getchildren()[0:11]])  for r in root.xpath('//referenceList/reference')]
+        root = etree.parse(ref_query)
+        [refs.append([i.text for i in r.getchildren()[0:11]]) for r in root.xpath('//referenceList/reference')]
         #check how many pages
         hit_count = int(root.find('hitCount').text)
         page_count = hit_count/25
 
         #to get the extra references
-        remainder = hit_count%25
-        if remainder > 0: 
+        remainder = hit_count % 25
+        if remainder > 0:
             page_count = page_count + 1
 
         print(' fetch %s references'%hit_count)
 
         for page in range(2, page_count):
-            ref_query = 'http://www.ebi.ac.uk/europepmc/webservices/rest/MED/'+id_ex + '/references&page='+str(page)
+            ref_query = 'http://www.ebi.ac.uk/europepmc/webservices/rest/MED/'
+                                    + id_ex + '/references&page='+ str(page)
             print(ref_query)
             root = etree.parse(ref_query)
-            [refs.append([i.text for i in r.getchildren()[0:11]])  for r in root.xpath('//referenceList/reference')]
+            [refs.append([i.text for i in r.getchildren()[0:11]]) for r in root.xpath('//referenceList/reference')]
             print('fetched page %s so now have %s refs'%(page, len(refs)))
         
-        if len(refs) >0 :
-            id_refs[int(id_ex)] = pd.DataFrame(refs, columns = columns[0:11])
+        if len(refs) > 0:
+            id_refs[int(id_ex)] = pd.DataFrame(refs, columns=columns[0:11])
 
     ref_panel = pd.Panel(id_refs)
     return ref_panel
+
 
 def clean_pmc_refs(df_full):
         """
@@ -907,39 +909,39 @@ def clean_pmc_refs(df_full):
 
 def term_yr_hist(mesh_df, term, years):
     """
-    Helper for the plotting function above 
+    Helper for the plotting function above
 
     Returns
     -----------------------------
     vals, bins: the counts and bins for the term over years
 
     """
-    term_yr  = keyword_years(mesh_df, term)
-    year_count  = years[1]-years[0]
-    vals, bins = np.histogram(term_yr.PY, bins = year_count, range=years)
+    term_yr = keyword_years(mesh_df, term)
+    year_count = years[1]-years[0]
+    vals, bins = np.histogram(term_yr.PY, bins=year_count, range=years)
     return (vals, bins[1:])
 
 
-def keyword_plot(df, terms, years, title='', size=(14,8)):
+def keyword_plot(df, terms, years, title='', size=(14, 8)):
 
     """
-    Draws line plots of publication counts for all the terms 
+    Draws line plots of publication counts for all the terms
     over the year range
 
     Parameters
     ---------------------------------------
     df: publication dataframe with PY and topics
-    terms: list of the terms to plot 
+    terms: list of the terms to plot
     years: range of years
     """
     plt.figure(figsize=size)
     start, end = years
     for t in terms:
-        v,b = term_yr_hist(df, t, years)
-        plt.plot(b,v, label=t, linewidth=4)
+        v, b = term_yr_hist(df, t, years)
+        plt.plot(b, v, label=t, linewidth=4)
     plt.legend()
     plt.title('Key terms in the %s literature: %s-%s'%(title, start, end), fontsize=15)
-    plt.legend(loc = 'upper left')
+    plt.legend(loc='upper left')
     plt.box(on=False)
 
 
@@ -951,7 +953,7 @@ def pmc_author_graph(pmcdf):
     author_set = {a for au in authors.str.split(', ') for a in au}
     aul = list(author_set)
 
-    aug  = gt.Graph(directed=False)
+    aug = gt.Graph(directed=False)
     # add authors as nodes
     aug.add_vertex(len(aul))
     v_au = aug.new_vertex_property('string')
@@ -974,7 +976,7 @@ def pmc_author_graph(pmcdf):
         el.append(e)
     
     print('Author graph has %s authors and %s co-author connects'
-        %(aug.num_vertices(), aug.num_edges()))
+        % (aug.num_vertices(), aug.num_edges()))
     return aug
 
 
@@ -987,7 +989,7 @@ def wos_author_graph(wosdf):
     aul = list(author_set)
 
     print('Adding nodes for authors ... ')
-    aug  = gt.Graph(directed=False)
+    aug = gt.Graph(directed=False)
     # add authors as nodes
     aug.add_vertex(len(aul))
     v_au = aug.new_vertex_property('string')
@@ -998,7 +1000,7 @@ def wos_author_graph(wosdf):
     aug.vertex_properties['au'] = v_au
 
     ## add coauthors as edges, as well as a count of how often they coauthor
-    au_edges = [(a,b) for al in authors.str.split(', ') for a, b in itertools.combinations(al, 2) ]
+    au_edges = [(a, b) for al in authors.str.split(', ') for a, b in itertools.combinations(al, 2) ]
 
     el = []
     print('Adding edges for co-authors... ')
@@ -1009,7 +1011,8 @@ def wos_author_graph(wosdf):
         e = aug.add_edge(aug.vertex(s), aug.vertex(t))
         el.append(e)
     
-    print('Author graph has %s authors and %s co-author connects'%(aug.num_vertices(), aug.num_edges()))
+    print('Author graph has %s authors and %s co-author connects' 
+        % (aug.num_vertices(), aug.num_edges()))
     return aug
 
 
@@ -1064,7 +1067,7 @@ def sra_machine_experiment(node_limit = 200000L):
     instruments_experiments_samples = instruments + experiments + samples + studies + centers
     node_count = long(len(instruments) + len(experiments) + len(samples) + len(studies) + len(centers))
 
-    if node_count >  node_limit:
+    if node_count  >  node_limit:
         print('arrange nodes limits better!')
 
     # print('Graph will have %s nodes including %s instruments, %s samples, %s studies, %centres and %s experiments'%
@@ -1093,7 +1096,7 @@ def sra_machine_experiment(node_limit = 200000L):
         v_center[v] = False
         v_label[v] = instruments[i]
         v_entity[v] = 1
-    print('Added %s instruments'%(len(instruments)))
+    print('Added %s instruments' % (len(instruments)))
     
     # add experiments
     for i in range(0, len(experiments)):
@@ -1105,7 +1108,7 @@ def sra_machine_experiment(node_limit = 200000L):
         v_center[v] = False
         v_label[v] = experiments[i]
         v_entity[v] = 2
-    print('Added %s experiments'%(len(experiments)))
+    print('Added %s experiments' % (len(experiments)))
 
     # add samples
     for i in range(0, len(samples)):
@@ -1117,7 +1120,7 @@ def sra_machine_experiment(node_limit = 200000L):
         v_center[v] = False
         v_label[v] = samples[i]
         v_entity[v] = 3
-    print('Added %s samples'%(len(samples)))
+    print('Added %s samples' % (len(samples)))
 
     # add studies
     for i in range(0, len(studies)):
@@ -1129,7 +1132,7 @@ def sra_machine_experiment(node_limit = 200000L):
         v_center[v] = False
         v_label[v] = studies[i]
         v_entity[v] = 4
-    print('Added %s studies'%(len(studies)))
+    print('Added %s studies' % (len(studies)))
 
     # add centers
     for i in range(0, len(centers)):
@@ -1141,7 +1144,7 @@ def sra_machine_experiment(node_limit = 200000L):
         v_center[v] = True
         v_label[v] = centers[i]
         v_entity[v] = 5
-    print('Added %s centers'%(len(centers)))
+    print('Added %s centers' % (len(centers)))
 
     g.vertex_properties['machine'] = v_machine
     g.vertex_properties['experiment'] = v_experiment
@@ -1152,13 +1155,13 @@ def sra_machine_experiment(node_limit = 200000L):
     g.vertex_properties['entity'] = v_entity
     
     # link machines, samples and experiments with machine as the source
-    # sample and experiment as the target ... Not sure why I chose that ... 
+    # sample and experiment as the target ... Not sure why I chose that ...
 
-    for  i in range(0, m_e.shape[0]):
+    for i in range(0, m_e.shape[0]):
         s_i = instr_exp_dic[m_e.ix[i, 'instrument_name_imputed']]
         t_i = instr_exp_dic[m_e.ix[i, 'experiment_accession']]
         t_2 = instr_exp_dic[m_e.ix[i, 'sample_accession']]
-        t_3  = instr_exp_dic[m_e.ix[i, 'study_accession']]
+        t_3 = instr_exp_dic[m_e.ix[i, 'study_accession']]
         t_4 = instr_exp_dic[m_e.ix[i, 'center_name']]
         g.add_edge(g.vertex(s_i), g.vertex(t_i))
         g.add_edge(g.vertex(s_i), g.vertex(t_2))
@@ -1166,10 +1169,7 @@ def sra_machine_experiment(node_limit = 200000L):
         g.add_edge(g.vertex(s_i), g.vertex(t_3))
         g.add_edge(g.vertex(s_i), g.vertex(t_4))
 
-        if i%10000 == 0:
-            print('added %s edges'%g.num_edges())
+        if i % 10000 == 0:
+            print('added %s edges' % g.num_edges())
 
     return g
-
-
-

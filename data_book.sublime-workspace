@@ -354,7 +354,7 @@
 			"file": "ch0_introduction/ch0_introduction.rmd",
 			"settings":
 			{
-				"buffer_size": 2481,
+				"buffer_size": 2600,
 				"line_ending": "Unix"
 			}
 		},
@@ -395,7 +395,7 @@
 			"file": "ml_lit/ml_lit_anal.py",
 			"settings":
 			{
-				"buffer_size": 36782,
+				"buffer_size": 40827,
 				"line_ending": "Unix"
 			}
 		},
@@ -860,6 +860,7 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/Documents/google_analytics_spet2012/budget_expenses/account_code.eml",
 		"/home/mackenza/Documents/data_intensive/ngs_data_topography/pubmed_articles.py",
 		"/home/mackenza/Documents/data_intensive/ngs_data_topography/community-history2",
 		"/home/mackenza/Documents/data_intensive/book/ch3_dimensionality/image_test.md",
@@ -986,8 +987,7 @@
 		"/home/mackenza/Desktop/jss725-tikzDictionary",
 		"/home/mackenza/Documents/data_intensive/book/template.latex",
 		"/home/mackenza/Documents/data_intensive/book/references/refs.bib",
-		"/home/mackenza/.cache/.fr-BlOcAR/2012-04-08-9.json",
-		"/home/mackenza/Documents/google_analytics_spet2012/google.sublime-workspace"
+		"/home/mackenza/.cache/.fr-BlOcAR/2012-04-08-9.json"
 	],
 	"find":
 	{
@@ -1158,7 +1158,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1184,7 +1184,7 @@
 							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 7312.0,
+						"translation.y": 287.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1195,15 +1195,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2481,
+						"buffer_size": 2600,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1026,
-								1026
+								1061,
+								1061
 							]
 						],
 						"settings":
@@ -1212,7 +1212,7 @@
 							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 37.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1340,15 +1340,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36782,
+						"buffer_size": 40827,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								405,
-								405
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2257,7 +2257,7 @@
 		[
 			[
 				"",
-				"~/Documents/data_intensive/ngs_data_topography/ngs_paper/ngs.sublime-project"
+				"~/Music/pymusic.sublime-project"
 			]
 		],
 		"width": 380.0

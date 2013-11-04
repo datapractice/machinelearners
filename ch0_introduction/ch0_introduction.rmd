@@ -9,6 +9,7 @@
 - bring in materials from warwick talk
 - recursiveness of this text
 - the role of industry -- machine learning as industrial
+- the difference between ML and IR, data-mining, - use IR book, use mining massive datasets; use db books to show this
 - make the distinction between supervised and unsupervised
 - the form of writing; finding oneself experimenting with code and data
 - trying to find experiments and experiences
