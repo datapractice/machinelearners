@@ -4,9 +4,14 @@
 ## todo
 
 - include the algorithms as subjects
+- cruel optimisation and maximising expectation - EM algorithm
 - the really important issue of the politics of algorithms: competition, optimisation, knowledge economy
-- the Adzuna dataset
-- interview the Adzuna winner
+- the Adzuna dataset: nicely recursive example
+- interview the Adzuna winner 
+- the McKinsey report and its citation; the google guy
+- the role of competition -- how it is inherent in the models (loss function), how it structures the practice (getting an edge -- see Cathy O'Neill on this; as well as Kaggle CEO talks; on the rate of profit); 
+- think how the EM algorithm could be a figure for competitiveness?
+- not sure much the productivity of labour but its predictivity, and the need for excess labour power;
 
 ###	Adzuna job descriptions -- Kaggle competition data - 2013
 
