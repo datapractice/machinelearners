@@ -16,7 +16,8 @@
 -  the ml literature -- how the terms takes shape -- use ipython notebooks for that. machine learning as very loose assemblage; how it coalesces; etc. 
 -  I can't cover all the algorithms, techniques, settings
 -  FICO, DunneRaby -- huge amounts happening in these commercial spaces that I haven't investigate. Could be done through patent literature .... 
--  the development of machine learning out of AI -- shift from rule-based experts (cd Suchman; Collins  on this); visible in early textbooks (Tom Mitchell); decisive role of pattern recognition approaches focused on images (Bishop 1996 on this)
+-  the development of machine learning out of AI -- shift from rule-based experts (cd Suchman; Collins  on this); visible in early textbooks (Tom Mitchell); decisive role of pattern recognition approaches focused on images (Bishop 1996 on this); Donald Michie for even earlier
+-  the identificatino of ML and data-mining and predictive analytics
 -  provenance of _iris_ dataset - -Fisher (1936) and Gaspe Peninsula, W.E. Anderson
 
 ## quotes to use
@@ -35,3 +36,11 @@ Quotes from Lanier
 
 # examples to use
 - [@le_building_2011] -- paper on the cat videos 
+
+## Quotes from technical sources
+
+_Definition_: A computer program is said to **learn** from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, improves with experience $E$ 2.  Mitchell, 1997
+
+
+In the past fifteen years, the growth in algorithmic modeling applications and methodology has been rapid. It has occurred largely outside statistics in a new community—often called machine learning—that is mostly young computer scientists (Section 7). The advances, particularly over the last five years, have been startling. [[@breiman_statistical_2001, 200]
+

@@ -30,6 +30,24 @@ Landecker & Kelty on the literature as informant;  -- very important to do more 
 Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
 On the aridness of the textbooks and literature and what to do about that. 
 Domingos on feature engineering and why it is important -- article in ACM
+
+> Machine learning is not magic; it cannot get something from nothing. What it
+does is get more from less. Programming, like all engineering, is a lot of
+work: we have to build everything from scratch. Learning is more like
+farming, which lets nature do most of the work. Farmers combine seeds with
+nutrients to grow crops. Learners combine knowledge with data to grow
+programs. [@domingos_few_2012, 81]
+
+> Also, machine learning is not a one- shot process of building a dataset and
+running a learner, but rather an itera- tive process of running the learner,
+analyzing the results, modifying the data and/or the learner, and repeat- ing.
+Learning is often the quickest part of this, but that is because we have
+already mastered it pretty well! Feature engineering is more diffi- cult
+because it is domain-specific, while learners can be largely general purpose.
+However, there is no sharp frontier between the two, and this is another
+reason the most useful learn- ers are those that facilitate incorpo- rating
+knowledge. 84
+
 The reports on R's commercial usage: http://www.r-bloggers.com/r-usage-skyrocketing-rexer-poll/  in 2013
 
 ## Introduction -- the data-driven mode

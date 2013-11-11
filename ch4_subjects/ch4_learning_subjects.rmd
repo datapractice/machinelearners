@@ -12,9 +12,13 @@
 - the role of competition -- how it is inherent in the models (loss function), how it structures the practice (getting an edge -- see Cathy O'Neill on this; as well as Kaggle CEO talks; on the rate of profit); 
 - think how the EM algorithm could be a figure for competitiveness?
 - not sure much the productivity of labour but its predictivity, and the need for excess labour power;
+- arvidsson on reputation
 
-###	Adzuna job descriptions -- Kaggle competition data - 2013
+## Examples
 
+### Adzuna job descriptions -- Kaggle competition data - 2013
+
+Nice thing about this example is that it is about work!
 - Adzuna data is largely textual, but also geographical locations, and numerical values.
 
 ```{r echo=FALSE} 
@@ -26,9 +30,40 @@
 	#print(xtab, floating.environment='sidewaystable')
 
 ```
+### http://docs.prediction.io/current/
+
+>PredictionIO is an open source Machine Learning Server. It empowers programmers and data engineers to build smart applications. With PredictionIO, you can add the following features to your apps instantly:
+
+    predict user behaviors
+    offer personalized video, news, deals, ads and job openings
+    help users to discover interesting events, documents, apps and restaurants
+    provide impressive match-making services
+    and more....
+
+PredictionIO is built on top of solid open source technology. We support Hadoop, Mahout, Cascading and Scalding natively.
+
+- predictionio -- for how it tries to get people to use it -- see also chapter of datamining book on this with analysis of recommendation engine; Simon Chan + blog examples of what to predict/recommend
+
+Olivier Grisel -- won Adzuna contest(?); works on scikit-learn
+
+### linked-in
+Pete Skomoroch LinkedIn talk   on http://datawrangling.com/skills-reputation-search-lucene: 401k world -- open source - 'connect the worlds professionals'; a flywheel of data and value
+	 'data amplifies desire' -- the LinkedIn motto - a flywheel of data and value -- let's say you work at google; it's the web of all the other information that will help us; trying to do for economics of skills what Facebook does for socialgraph or wikipedia does for topics; "we're doing it for this economic graph"
+
 ## Quotes to use
 
 Cruel optimism is the condition of maintaining an attachment to a problematic object in advance of its loss. ... One makes affective bargains about the costliness of one’s attachments, usually unconscious ones, most of which keep one in proximity to the scene of desire/attrition (Lauren Berlant, _Cruel Optimism_, 2007, 21) 
+
+
+Lazzarato on Tarde
+C’est dans les métamorphoses et les variations de l’action de subjectivation et non les métamorphoese et les variations of valuer qu’il faut chercher la dynamique immanente du capitalisme 142
+> Look for metamorphoses and variations in the action of subjectification rather than of value that need to examine in order to find out about capitalism. 142, Lazzarato
+
+Labour as intermediate between routine and invention 255
+
+> Important passage on distinction between living and dead labour, and how Tarde reconfigures it.  -  as living machine.  - there are automatisms in human and virtualities in the machine 265-6
+
+
 
 ## Abstract
 

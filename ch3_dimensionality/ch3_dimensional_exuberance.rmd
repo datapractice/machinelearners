@@ -86,7 +86,18 @@ Dimensional exuberance and pattern recognition in movement
 >
 >The kernel trick is another commonly used technique to solve linearly inseparably problems. This issue is to define an appropriate kernel function based on the _inner product_ between the given data, as a nonlinear transformation of data from the input space to a feature space with higher (even infinite) dimension in order to make the problems linearly separable. The underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space. Wu, 42
 >
->
+
+>In two-class data, separability by a hyperplane does not often occur. However,
+let us increase the dimensionality by adding as additional predictor variables
+all quadratic monomials in the original predictor variables; that is, all
+terms of the form xm1 xm2 . A hyperplane in the original variables plus
+quadratic monomials in the original variables is a more complex creature. The
+possibility of separa- tion is greater. If no separation occurs, add cubic
+monomials as input features. If there are originally 30 predictor variables,
+then there are about 40,000 features if monomials up to the fourth degree are
+added. [@breiman_statistical_2001, 209]
+
+
 >To repeat the precarious political pragmatic hope I presented, it is only if we become able, as philosophers, to put scientific achievements on the same plane of immanence together with other diverging conventions, each with its demanding definition of what matters, that we can stop poisoning this hope, that we can share, instead, the pragmatic concern for the itinerant process of creation of new ‘‘it works’’ as they mark the process of empowerment of new minorities, with new actively diverging ‘‘habits’’ that must be celebrated each time as something new entering the world and indeed as modifying it. Stengers, 2005, 162
 >
 

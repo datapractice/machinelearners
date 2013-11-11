@@ -417,7 +417,7 @@
 			"file": "ch4_subjects/ch4_learning_subjects.rmd",
 			"settings":
 			{
-				"buffer_size": 40663,
+				"buffer_size": 40791,
 				"line_ending": "Unix"
 			}
 		},
@@ -1392,15 +1392,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 40663,
+						"buffer_size": 40791,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								666,
-								666
+								2569,
+								2569
 							]
 						],
 						"settings":
@@ -1409,7 +1409,7 @@
 							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 587.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
