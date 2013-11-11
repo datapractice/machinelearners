@@ -50,6 +50,10 @@ Olivier Grisel -- won Adzuna contest(?); works on scikit-learn
 Pete Skomoroch LinkedIn talk   on http://datawrangling.com/skills-reputation-search-lucene: 401k world -- open source - 'connect the worlds professionals'; a flywheel of data and value
 	 'data amplifies desire' -- the LinkedIn motto - a flywheel of data and value -- let's say you work at google; it's the web of all the other information that will help us; trying to do for economics of skills what Facebook does for socialgraph or wikipedia does for topics; "we're doing it for this economic graph"
 
+### hilary mason talking about her own images on google
+
+http://www.lucenerevolution.org/2013/Keynote-Search-is-not-a-solved-problem
+
 ## Quotes to use
 
 Cruel optimism is the condition of maintaining an attachment to a problematic object in advance of its loss. ... One makes affective bargains about the costliness of one’s attachments, usually unconscious ones, most of which keep one in proximity to the scene of desire/attrition (Lauren Berlant, _Cruel Optimism_, 2007, 21) 
