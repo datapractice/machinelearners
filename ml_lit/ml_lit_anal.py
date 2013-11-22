@@ -879,8 +879,7 @@ def getPMC_References(df_all):
         print(' fetch %s references'%hit_count)
 
         for page in range(2, page_count):
-            ref_query = 'http://www.ebi.ac.uk/europepmc/webservices/rest/MED/'
-                                    + id_ex + '/references&page='+ str(page)
+            ref_query = 'http://www.ebi.ac.uk/europepmc/webservices/rest/MED/'  + id_ex + '/references&page='+ str(page)
             print(ref_query)
             root = etree.parse(ref_query)
             [refs.append([i.text for i in r.getchildren()[0:11]]) for r in root.xpath('//referenceList/reference')]
