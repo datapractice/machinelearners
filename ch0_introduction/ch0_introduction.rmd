@@ -10,7 +10,8 @@
 - recursiveness of this text
 - the role of industry -- machine learning as industrial
 - the difference between ML and IR, data-mining, - use IR book, use mining massive datasets; use db books to show this
-- make the distinction between supervised and unsupervised
+- make the distinction between supervised and unsupervised, classifiers and predictions
+- the literature on digital sociology; methods
 - the form of writing; finding oneself experimenting with code and data
 - trying to find experiments and experiences
 -  the ml literature -- how the terms takes shape -- use ipython notebooks for that. machine learning as very loose assemblage; how it coalesces; etc. 
@@ -33,6 +34,8 @@ the challenge, which I deem a materialist challenge, is that whatever the mess a
 
 
 Quotes from Lanier
+
+
 
 # examples to use
 - [@le_building_2011] -- paper on the cat videos 
