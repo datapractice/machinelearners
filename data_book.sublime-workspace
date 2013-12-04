@@ -343,7 +343,7 @@
 			"file": "proposal.rmd",
 			"settings":
 			{
-				"buffer_size": 39118,
+				"buffer_size": 43409,
 				"line_ending": "Unix"
 			}
 		},
@@ -351,7 +351,7 @@
 			"file": "ch0_introduction/ch0_introduction.rmd",
 			"settings":
 			{
-				"buffer_size": 3327,
+				"buffer_size": 3405,
 				"line_ending": "Unix"
 			}
 		},
@@ -359,7 +359,7 @@
 			"file": "ch1_learning/ch1_praxis.rmd",
 			"settings":
 			{
-				"buffer_size": 75302,
+				"buffer_size": 75623,
 				"line_ending": "Unix"
 			}
 		},
@@ -396,18 +396,26 @@
 			}
 		},
 		{
-			"file": "ml_lit/ml_lit_anal.py",
-			"settings":
-			{
-				"buffer_size": 40840,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "ch7_topologies/ch7_genomic_topologies.rmd",
 			"settings":
 			{
 				"buffer_size": 101,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ml_lit/ml_lit_anal.py",
+			"settings":
+			{
+				"buffer_size": 40805,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ch4_subjects/references/refs.bib",
+			"settings":
+			{
+				"buffer_size": 30365,
 				"line_ending": "Unix"
 			}
 		},
@@ -583,7 +591,7 @@
 			"file": "references/data_forms_thought.bib",
 			"settings":
 			{
-				"buffer_size": 23988,
+				"buffer_size": 29938,
 				"line_ending": "Unix"
 			}
 		},
@@ -607,9 +615,33 @@
 	"build_system": "Packages/knitr/knitr-Markdown.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 117.0,
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"set kn",
+				"Set Syntax: knitr (Markdown)"
+			],
+			[
+				"set k",
+				"Set Syntax: knitr (Markdown)"
+			],
+			[
+				"set mar",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"set mark",
+				"Set Syntax: Markdown"
+			],
 			[
 				"set m",
 				"Set Syntax: Markdown"
@@ -621,10 +653,6 @@
 			[
 				"pan",
 				"Pandoc: Render Markdown to temp PDF and View"
-			],
-			[
-				"set k",
-				"Set Syntax: knitr (Markdown)"
 			],
 			[
 				"pac",
@@ -719,16 +747,8 @@
 				":w - Save"
 			],
 			[
-				"set mark",
-				"Set Syntax: Markdown"
-			],
-			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"set mar",
-				"Set Syntax: Markdown"
 			],
 			[
 				"set am",
@@ -771,7 +791,7 @@
 				"Set Syntax: R"
 			]
 		],
-		"width": 449.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -972,7 +992,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -989,6 +1009,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"mol_body_2003",
 			"domingos_few_2012",
 			"breiman_statistical_2001",
 			"v_name",
@@ -1115,8 +1136,7 @@
 			"savag",
 			"jss",
 			"logo",
-			"month",
-			"biagioli_situated_1999"
+			"month"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1148,15 +1168,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 39118,
+						"buffer_size": 43409,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								132,
-								132
+								27630,
+								27630
 							]
 						],
 						"settings":
@@ -1165,7 +1185,7 @@
 							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 130.0,
+						"translation.y": 6884.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1176,15 +1196,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3327,
+						"buffer_size": 3405,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1162,
-								1162
+								419,
+								419
 							]
 						],
 						"settings":
@@ -1204,26 +1224,26 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 75302,
+						"buffer_size": 75623,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2920,
-								2920
+								44318,
+								44318
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"syntax": "Packages/knitr/knitr-Markdown.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 637.0,
+						"translation.y": 8936.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1344,37 +1364,6 @@
 				},
 				{
 					"buffer": 7,
-					"file": "ml_lit/ml_lit_anal.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 40840,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40304,
-								40304
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 29013.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
 					"file": "ch7_topologies/ch7_genomic_topologies.rmd",
 					"semi_transient": false,
 					"settings":
@@ -1402,7 +1391,67 @@
 					"type": "text"
 				},
 				{
+					"buffer": 8,
+					"file": "ml_lit/ml_lit_anal.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 40805,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1455.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
 					"buffer": 9,
+					"file": "ch4_subjects/references/refs.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12423,
+								12423
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5877.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "/home/mackenza/Documents/notes/wasserman_all_of_stat2003.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1430,7 +1479,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "/home/mackenza/Documents/notes/burges, svm tutoria_1998l.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1459,7 +1508,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "/home/mackenza/Documents/notes/Breiman_2001_andom Forests.md",
 					"semi_transient": false,
 					"settings":
@@ -1488,7 +1537,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "/home/mackenza/Documents/notes/Fisher_LDA_1936.md",
 					"semi_transient": false,
 					"settings":
@@ -1517,7 +1566,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "/home/mackenza/Documents/notes/Dominos_ML_2012.md",
 					"semi_transient": false,
 					"settings":
@@ -1546,7 +1595,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "/home/mackenza/Documents/notes/breiman_2_cultures_2000.md",
 					"semi_transient": false,
 					"settings":
@@ -1574,7 +1623,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "/home/mackenza/Documents/notes/Breiman_Friedman.md",
 					"semi_transient": false,
 					"settings":
@@ -1603,7 +1652,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "/home/mackenza/Documents/notes/mitchell_machine_learning_1997.md",
 					"semi_transient": false,
 					"settings":
@@ -1631,7 +1680,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"file": "proposal.md",
 					"semi_transient": false,
 					"settings":
@@ -1659,7 +1708,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "ch3_dimensionality/tree.py",
 					"semi_transient": false,
 					"settings":
@@ -1689,7 +1738,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "ml_lit/web_of_science.R",
 					"semi_transient": false,
 					"settings":
@@ -1717,7 +1766,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "/home/mackenza/R/web_of_science.R",
 					"semi_transient": false,
 					"settings":
@@ -1745,7 +1794,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 22,
 					"file": "/home/mackenza/R/phrase_structures.R",
 					"semi_transient": false,
 					"settings":
@@ -1774,7 +1823,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
@@ -1802,7 +1851,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 24,
 					"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
 					"semi_transient": false,
 					"settings":
@@ -1830,7 +1879,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 25,
 					"file": "/home/mackenza/Documents/notes/Stengers_d&G_2005.txt",
 					"semi_transient": false,
 					"settings":
@@ -1858,7 +1907,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 26,
 					"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
 					"semi_transient": false,
 					"settings":
@@ -1887,7 +1936,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 27,
 					"file": "/home/mackenza/Documents/notes/bogost_alien_2012.md",
 					"semi_transient": false,
 					"settings":
@@ -1916,7 +1965,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 28,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 					"semi_transient": false,
 					"settings":
@@ -1944,7 +1993,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 					"semi_transient": false,
 					"settings":
@@ -1973,20 +2022,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "references/data_forms_thought.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23988,
+						"buffer_size": 29938,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13354,
-								13354
+								29212,
+								29212
 							]
 						],
 						"settings":
@@ -1996,13 +2045,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 9443.0,
+						"translation.y": 17321.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "references/refs.bib",
 					"semi_transient": false,
 					"settings":
@@ -2014,8 +2063,8 @@
 						"selection":
 						[
 							[
-								34195,
-								34195
+								39667,
+								39667
 							]
 						],
 						"settings":
@@ -2025,13 +2074,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 426.0,
+						"translation.y": 18373.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "references/machine_learning.bib",
 					"semi_transient": false,
 					"settings":
@@ -2064,7 +2113,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 41.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -2100,7 +2149,7 @@
 	"project": "data_book.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -2185,9 +2234,53 @@
 	},
 	"select_symbol":
 	{
-		"height": 243.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"mol",
+				"mol_body_2003"
+			],
+			[
+				"wil",
+				"wilson_affect_2010"
+			],
+			[
+				"boll",
+				"bollas_evocative_2009"
+			],
+			[
+				"kelt",
+				"kelty_ten_2009"
+			],
+			[
+				"up",
+				"uprichard_being_2012"
+			],
+			[
+				"mar",
+				"marres_redistribution_2012"
+			],
+			[
+				"coleman",
+				"coleman_code_2009"
+			],
+			[
+				"kelty",
+				"kelty_two_2008"
+			],
+			[
+				"beer",
+				"beer_popular_2013"
+			],
+			[
+				"ra",
+				"rabinow_anthropos_2003"
+			],
+			[
+				"schutt",
+				"schutt_doing_2013"
+			],
 			[
 				"domin",
 				"domingos_few_2012"
