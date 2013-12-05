@@ -18,9 +18,9 @@ Bailrigg, LA14YD, UK
 
 >The key question isn't 'How much will be automated?' It's how we'll conceive of whatever _can't_ be automated at a given time. [@Lanier_Who Owns the Future_, 2012, 77]
 
-This book sets out to construct some ways of critically thinking about data that neither blithely affirm beliefs in the power of data, nor reject beliefs in data as pure hype. It seeks to do this  on terrain that lies close to the centres of contemporary data practices: *machine learning.* Machine learning is widely used in industry, science, business, media and government to program computers to find patterns, associations, and correlations, to classify events and make predictions on a large scale. The Microsoft Kinect motion-sensing system is a common example. It uses a machine learning technique called 'decision trees' to identify and classify gestures. Almost any search engines results are shaped by machine learning algorithms as are the flows of data in many social media services.  Machine learning, as a set of techniques for classifying and predicting, is widely heralded in the form of data mining, predictive analytics or knowledge discovery as a vital component of contemporary innovation and economic growth. Machine learning is heavily used in search engines, social network media, high-frequency trading, in increasingly data-intensive scientific practices in astrophysics, genomics, ecology or material science, in manifold devices and control systems, and of course, by government intelligence and security agencies in massive data surveillance programs. 
+This book sets out to construct some ways of critically thinking about data that neither blithely affirm beliefs in the power of data, nor reject beliefs in data as pure hype. It focuses on practices and techniques at the heart of  contemporary media, sciences, government, commerce and industry: *machine learning.* Machine learning is widely used in industry, science, commerce, media and government to program computers to find patterns, associations, and correlations, to classify events and make predictions on a large scale. The Microsoft Kinect motion-sensing system is a common example. It uses a machine learning technique called 'decision trees' to identify and classify gestures. Almost any search engines results are shaped by machine learning algorithms,   as are the detection of abnormal tissue growths in medical scans.  Machine learning, as a set of techniques for classifying and predicting, is widely heralded in the form of data mining, predictive analytics or knowledge discovery as a vital component of contemporary innovation and economic growth. Machine learning is heavily used in search engines, social network media, high-frequency trading, in increasingly data-intensive scientific practices in astrophysics, genomics, ecology or material science, in manifold devices and control systems, and of course, by government intelligence and security agencies in massive data surveillance programs. 
 
-Examining  key machine learning techniques and practices drawn from social network media, finance markets, image processing, robotics, and contemporary sciences such as genomics and epidemiology, _In the data_ does not exhaustively describe who does machine learning, where and how. It seeks rather to identify how and why such techniques have moved or circulated so widely. At the same, *In the Data* is an experiment in writing for humanities and social science audiences that combines code, data and diagram, text, and number with the goal of imagining doing machine learning differently. There is something quite algorithmically important in machine learning that may well have already changed both the objects and methods of humanities and social sciences. In both analysing and re-purposing techniques found at the intersection of contemporary sciences and network media, *In the Data* attempts to both make potent data practices more visible, and to facilitate greater  overlaps and entanglements between various science and political, economic and cultural processes associated with data. 
+This is intense technological interest and investment in these techniques, and they have developed rapidly in the last two decades. Yet they have hardly been discussed in humanities and social science literature. Examining  key machine learning techniques and practices drawn from social network media, finance markets, image processing, robotics, and contemporary sciences such as genomics and epidemiology, _In the data_ does not exhaustively describe who does machine learning, where and how. It seeks rather to identify how and why such techniques have moved or circulated so widely. At the same, *In the Data* is an experiment in writing for humanities and social science audiences that combines code, data and diagram, text, and number with the goal of imagining doing machine learning differently. There is something quite algorithmically important in machine learning that may well have already changed both the objects and methods of humanities and social sciences. In both analysing and re-purposing techniques found at the intersection of contemporary sciences and network media, *In the Data* attempts to both make potent data practices more visible, and to facilitate greater  overlaps and entanglements between various science and political, economic and cultural processes associated with data. 
 
 ### Key concerns for the book are:
 
@@ -80,10 +80,10 @@ Many of the chapter exist in draft form, or as conference papers. Writing an int
 - revise chapter 2: 1 month
 - revise whole manuscript: 3 months
 
-### Format of the book
+## Format of the book
 
 The book has a standard chapter format. It will include several dozen code-generated figures, diagrams or plots, as well as a number of tables. The Python and R code, and datasets used to generate these components of the text will be available through the public code repository github.com. The Markdown text of the book will be also part of this code repository. Electronic versions of the book will display colour versions of the plots, and be hyperlinked to both the code-data components on github, and to various relevant URLs. The predicted wordcount is 85,000 - 90,000 words. It will include approximately 20 diagrams or graphics.
-
+	
 ## Chapter outline
 
 ### 0. Introduction: into the data
@@ -99,6 +99,7 @@ These examples will also stage some of  wider questions in the book  about the p
 Finally, the introduction will sketch the themes of 'in the data' and  'modes of machine thought,' drawing on a range of work drawn from pragmatist philosophers such as C.S. Peirce (abduction and diagrams), William James on experience [@james_essays_1996],  John Dewey on 'reconstruction' [@dewey_reconstruction_1957], Alfred N. Whitehead on 'abstraction' [@whitehead_modes_1958] and from recent social and cultural theory  such as Isabelle Stengers on experiment [@stengers_experimenting_2008]; Gilles Deleuze & Felix Guattari on scientific functions, and [@deleuze_what_1994]; Celia Lury on topology [@lury_introduction_2012]). In order to contextualise forms of data thought, the introduction will also sketch some points of departure drawn from software studies work on algorithms and databases, science studies work on calculation, statistics, number, device, image and diagram,  as well as accounts of subjectivity, experience [@berlant, 2007] or [@murphie, 2010] and materiality cross-cutting all of the above. This spectrum of work from across disciplines provide  scaffolding and departure points for much of the book. 
 
 	
+
 ### 1.  Associating with data: a praxiography of machine learning
 
 #### Key examples: house prices, irises, Pfizer's 'discovery' of Viagra; R programming language as the 'Magna Carta' of analytic rights; Python scikit-learn & pandas; the Titanic survivors;
@@ -112,6 +113,10 @@ With these questions about thinking, techniques, subjectivity and literature on 
 Woven throughout this discussion of a praxiography of data, [TBC] Via a discussion of the development of R, the chapter analyses the  transverse, cross-disciplinary implementation of machine learning techniques in recent decades. It describes some of the transformations in software, network and scientific cultures that underpin the recent growth in data techniques and methods. These range across transformations in statistical science associated with greater computational capacity; the mutations in network,  database and digital device architectures and infrastructures that yield much greater abundance of data in various forms; and the intermeshing of knowledge economies with the media, communication, transaction, transport and logistics systems. It will trace how the lateral associations and multivalencies of data have developed through key software artefacts such as the widely used R programming language, and in generic programming languages such as Python. Coming from  the author's own history of working with machine learning or online accounts of machine learning,  well as the ecology of thousands of software packages  associated with the statistical programming language `R.`
 
 
+### Part I: Forms and formations of data
+
+The three chapters of Part explore underlying the major underlying spatial, ordering and counting practices of the many different techniques comprising machine-learning, pattern recognition and data-mining.  It seeks to show how these practices diverge and multiply across a range of settings, and how they coalesce around a set of generic intuitions of difference that are both powerfully general yet highly constrained. 
+
 ### 2. From straight lines to curved surfaces
 
 #### Key examples: housing price prediction; cancer prognosis; digit recognition; credit scoring
@@ -120,13 +125,6 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
 -- recursion, movement, evocative objects, partial observers, visualisation, etc; functions and states of things; linear regression
 
 Graphs and plots stand at the centre of vision in contemporary data and knowledge economies, whether in the time series plots of financial markets, the scatter plots of scientific publications or the network graphs of social media. The topography of curves, lines, points and network diagrams present views of data, and they are indispensable to many of the classification, decision and prediction techniques of machine learning. Such visual forms, with all their associate aesthetics (code, line, typography, animation) are themselves convey expectations and predictions about the changes in the data practice, especially in the form of the curves showing growth of data.  
-
-```{r gradient_descent, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA,fig.show='animate'} 
-source('animations/grad_desc.R')
-grad_desc()
-#library(animation)
-saveLatex(grad.desc())
-```
 
 This chapter examines the proliferation of data-supported curves and lines in terms of *functions*, the underlying generating mechanisms of curves. Machine learning is conceptually framed as a form of function-finding. Drawing on statistical machine learning texts [@hastie_elements_2009], and more philosophical accounts of functions (e.g. [@deleuze_what_1994; @whitehead_modes_1958]), the chapter  introduces the key instances of the function in machine learning, shows how functions underpin the generation of curves, and how movement along lines, curves and across planes. While later chapters will range across a variety of mathematical functions and forms, this chapter will focus on two of the most widely used machine-learning technique, linear regression model and its classifier version, logistic regression model, and the _k_ nearest neighbour algorithm. It will discuss these important techniques from the perspective of the forms of relationality, referenciality and indexicality associated with them. 
 
@@ -140,7 +138,23 @@ Connecting aesthetic and mathematical data practices, this chapter suggests that
 
 For the last decade, the best-performing 'off-the-shelf' machine learning algorithm has been a technique known broadly as 'support vector machines' (SVM; see [@vapnik_nature_1999]). The chapter examines the architecture of this widely used algorithm both against the background of a spectrum of other statistical machine learning techniques, and more importantly, in terms of the *forms of movement* it brings to data practice. The key focus in this discussion is the dimensionality of data, and how dimensionality is managed in machine learning.  While curves and functions, as discussed the previous chapter, engender senses of change and movement, the advent of increasingly extended and particularly 'wide' datasets (many variables) implies models that embrace high-dimensional abstract spaces. Since the 1950s, scientists  have been aware of the 'curse of dimensionality' [@bellman_adaptive_1961], which arises when the dimensions of the data increase. Algorithms such as SVM, and implicitly other highly successful ML algorithms such as neural networks, manage this dimensionality very differently to the regression models that have been the mainstay of statistical modelling for a century. Rather than trying to reduce the dimensionality of the model to a line, plane or hyperplane that best fits the datasets, SVM expands the dimensionality  of the model massively, sometimes infinitely.
 
-### 4. Cruel optimisation and algorithmic competition
+### 4. Belief and desires in data
+
+#### Key examples:  Microsoft TrueSkill; Obama election data team
+#### Key techniques: Monte Carlo simulations and MCMC; Bayesian networks; 
+
+
+ - probability and Bayesian inference - belief and desire in data  - belief chance, Bayes, internal proliferation of numbers; event-belief oscillation
+
+The topic in this chapter is the role of randomness and chance in machine learning. While statistical techniques and practices have been discussed in previous chapters, this chapter foregrounds the changes in the so-called 'Bayesian revolution' in statistical practice that took shape in the early 1990s, and in particular, the key algorithmic technique used in Bayesian statistics, Markov Chain Monte Carlo simulation (MCMC). The computationally intensive techniques of Bayesian analysis treat all numbers as potentially random variables; that is, as best described by probability distributions. The ensuing popularity of Bayesian inference is a striking example of transverse momentum of methods across fields, and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and epidemiology. 
+
+The chapter traces two important implications of this technique. First, because it is so computationally intensive, MCMC and Bayesian inference, although statistically powerful, are difficult to apply to many dimensional datasets. So Bayesian computation iconically figures the limits of contemporary data practices, with their ambitions to incorporate all available data into calculation. Second, in certain ways this technique challenges us to re-evaluate how we think about numbers. By following some of the ways numbers circulate through MCMC algorithms, we can discern to a semiotic-material faultline running through contemporary number formations. Numbers semiotically and materially embrace both events and degrees of belief. If numbers are crucial in the data economy, then instabilities in their mode of existence will affect much of what happens to data. While much of the machine learning taking place in commercial and operational settings is decidedly non-Bayesian, the popularity of MCMC and Bayesian approaches in contemporary sciences suggests a tension in what counts as number.
+
+
+### Part II: Realising the value of data
+
+The three chapters of Part II explore what happens as the major intuitions of machine-learning entwine with processes of contemporary work and subject-formation, with large-scale event and with existing forms of knowledge (such as life sciences). This part of the book 
+### 5. Cruel optimisation and algorithmic competition
 
 #### Key examples: spam filter; Kaggle facebook retention; Kaggle R recommendation engine; TopCoder; Sage Bionetworks
 #### Key techniques: ensembles, RandomForests
@@ -150,17 +164,6 @@ For the last decade, the best-performing 'off-the-shelf' machine learning algori
 The chapter focuses on the forms of subjectivity associated with contemporary data practice, situated within  plural data and knowledge economies. Software developers, hackers, statisticians, 'data scientists,' as well as social scientists, are changed by forms of data thought.  The case study in this chapter is data prediction contests run by the [Kaggle.com](kaggle.com) as well as academic-based competitions. In these competitions, competitors from diverse technical and geographic backgrounds compete to construct predictive models for specific datasets -- the Netflix recommendation competition; the Facebook 'find a friend' competition; or the Titanic survivor problem -- using whatever machine learning techniques they can bring to bear. These competitions, conducted on web-based platforms, are useful ways to track contemporary data practices. Combined with some examples of presentations by academic researchers (for instance, Stanford University's Andrew Ng whose YouTube lectures haved attracted 100,000s of views), industry conferences (for instance, at the annual Predictive Analytics World events), this chapter will track the kinds of technical and affective investment associated with popular data modelling techniques such as Random Forest. It is possible, I will suggest, to read a technique as a partial subjectification, in that it affects how they experience and materially engage with data. In order to apprehend the character and texture of these subjectifications, the chapter links university research, commercial and non-commercial adoption, and flows of technical expertise. Again, this chapter has some auto-ethnographic vignettes, as the author has participated in some of these competitions. 
 
     
-### 5. Belief and desires in data
-
-#### Key examples:  Microsoft TrueSkill; Obama election data team
-#### Key techniques: Monte Carlo simulations and MCMC; Bayesian networks; 
-
-
- - probability and Bayesian inference - belief and desire in data  - belief chance, Bayes, internal proliferation of numbers; event-belief oscillation
-
-The topic in this chapter is the so-called 'Bayesian revolution' in statistical practice that took shape in the early 1990s, and in particular, the key algorithmic technique used in Bayesian statistics, Markov Chain Monte Carlo simulation (MCMC). The computationally intensive techniques of Bayesian analysis treat all numbers as potentially random variables; that is, as best described by probability distributions. The ensuing popularity of Bayesian inference is a striking example of transverse momentum of methods across fields, and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and epidemiology. 
-
-The chapter traces two important implications of this technique. First, because it is so computationally intensive, MCMC and Bayesian inference, although statistically powerful, are difficult to apply to many dimensional datasets. So Bayesian computation iconically figures the limits of contemporary data practices, with their ambitions to incorporate all available data into calculation. Second, in certain ways this technique challenges us to re-evaluate how we think about numbers. By following some of the ways numbers circulate through MCMC algorithms, we can discern to a semiotic-material faultline running through contemporary number formations. Numbers semiotically and materially embrace both events and degrees of belief. If numbers are crucial in the data economy, then instabilities in their mode of existence will affect much of what happens to data. While much of the machine learning taking place in commercial and operational settings is decidedly non-Bayesian, the popularity of MCMC and Bayesian approaches in contemporary sciences suggests a tension in what counts as number.
 
 ### 6. Contagious number flows
 
@@ -191,6 +194,5 @@ The conclusion draws together the main threads running through the previous chap
 
 
 ## References
-
-
     
+		

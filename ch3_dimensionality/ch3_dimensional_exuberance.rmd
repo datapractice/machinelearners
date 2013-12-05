@@ -1,10 +1,13 @@
+#  Finding patterns in machine learning
+
+Movements in machine learning: patterns of generalization
+Dimensional exuberance and pattern recognition in movement
+
 ```{r echo=FALSE} 
 library(knitr)
 opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
 ```
 
-#  Movements in machine learning: patterns of generalization
-Dimensional exuberance and pattern recognition in movement
 
 ## overview
 
@@ -331,7 +334,7 @@ import pylab as pl
 
 from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier
-
+    
 # Parameters
 n_classes = 3
 plot_colors = "bry"

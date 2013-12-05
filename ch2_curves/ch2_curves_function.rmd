@@ -1,4 +1,5 @@
-# Finding functions: lines and curves
+# How to look at data 
+Finding functions: lines and curves
 
 ## techniques
 - logistic regression - on what?

@@ -1,8 +1,0 @@
-# Naive and informed chances
-
-## to put in
-
-- naive bayes, including the ipython notebook
-- n friedman paper -- highly cited on virtues of naive bayes
-- tom mitchell on why Bayes is a good way to think about machine learning
-- Rassmussen & Williams on Gaussian processes

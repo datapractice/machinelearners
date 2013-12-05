@@ -1,6 +1,0 @@
-# Genomic topologies 
-
-## to do 
-
-- use the ml-lit analysis to point to the rise of bioinformatics
-- 
