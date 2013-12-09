@@ -1,4 +1,5 @@
-# Number supplies and feature engineering: 
+#  Are there enough numbers in the world?
+Number supplies and feature engineering 
 # Reconstructing the flow of numbers in data
 
 The elements of data are often said to be numbers. But those numbers are not the same. This is something that machine learning cannot itself register. That is, the algorithms and techniques cannot deal with the way in which numbers are multiple, and and exist in different ways. We cannot learn about the differences between data without reconstructing those differences in the data. There are different ways to go about doing this. This chapter contrasts two fundamentally different approaches to number. One of them, typical of machine learning, assumes that everything is in the data, as long as machine learning techniques are careful enough in their movement through it. The other, more typical of certain sciences such as epidemiology or ecology, tends to see the relation between different kinds of data as a problem to be explored in its own right, rather than handed over to the algorithms. The chapter discusses what it might mean for machine learning to do something more like this. 

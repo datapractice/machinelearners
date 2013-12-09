@@ -1,4 +1,5 @@
-# Optimising and competing: the lives of machine learners
+# Optimising machine learners
+Optimising and competing: the lives of machine learners
 'Wonderful people': programmers in the regime of anticipation
 
 ## todo
