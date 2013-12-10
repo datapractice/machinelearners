@@ -9,6 +9,15 @@ opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
 ```
 
 
+## from proposal
+
+#### Key examples: hunch.com; 
+#### Key techniques: decision trees, neural networks,  support vector machines
+:  regularisation - dimensional reduction, dimensional explosion -- infinite dimensional spaces; recommender engine - svd as well; ebay; hunch.com
+
+For the last decade, the best-performing 'off-the-shelf' machine learning algorithm has been a technique known broadly as 'support vector machines' (SVM; see [@vapnik_nature_1999]). The chapter examines the architecture of this widely used algorithm both against the background of a spectrum of other statistical machine learning techniques, and more importantly, in terms of the *forms of movement* it brings to data practice. The key focus in this discussion is the dimensionality of data, and how dimensionality is managed in machine learning.  While curves and functions, as discussed the previous chapter, engender senses of change and movement, the advent of increasingly extended and particularly 'wide' datasets (many variables) implies models that embrace high-dimensional abstract spaces. Since the 1950s, scientists  have been aware of the 'curse of dimensionality' [@bellman_adaptive_1961], which arises when the dimensions of the data increase. Algorithms such as SVM, and implicitly other highly successful ML algorithms such as neural networks, manage this dimensionality very differently to the regression models that have been the mainstay of statistical modelling for a century. Rather than trying to reduce the dimensionality of the model to a line, plane or hyperplane that best fits the datasets, SVM expands the dimensionality  of the model massively, sometimes infinitely.
+
+
 ## overview
 
 ### recap and intro

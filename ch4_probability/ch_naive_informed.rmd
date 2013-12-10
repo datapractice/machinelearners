@@ -12,6 +12,17 @@ how probability undercuts other more sophisticated takes on the world
 - Rassmussen & Williams on Gaussian processes
 - likelihood function Flach, 27
 
+## from proposal
+
+#### Key examples:  Microsoft TrueSkill; Obama election data team
+#### Key techniques: Monte Carlo simulations and MCMC; Bayesian networks; 
+
+
+ - probability and Bayesian inference - belief and desire in data  - belief chance, Bayes, internal proliferation of numbers; event-belief oscillation
+
+The topic in this chapter is the role of randomness and chance in machine learning. While statistical techniques and practices have been discussed in previous chapters, this chapter foregrounds the changes in the so-called 'Bayesian revolution' in statistical practice that took shape in the early 1990s, and in particular, the key algorithmic technique used in Bayesian statistics, Markov Chain Monte Carlo simulation (MCMC). The computationally intensive techniques of Bayesian analysis treat all numbers as potentially random variables; that is, as best described by probability distributions. The ensuing popularity of Bayesian inference is a striking example of transverse momentum of methods across fields, and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and epidemiology. 
+
+The chapter traces two important implications of this technique. First, because it is so computationally intensive, MCMC and Bayesian inference, although statistically powerful, are difficult to apply to many dimensional datasets. So Bayesian computation iconically figures the limits of contemporary data practices, with their ambitions to incorporate all available data into calculation. Second, in certain ways this technique challenges us to re-evaluate how we think about numbers. By following some of the ways numbers circulate through MCMC algorithms, we can discern to a semiotic-material faultline running through contemporary number formations. Numbers semiotically and materially embrace both events and degrees of belief. If numbers are crucial in the data economy, then instabilities in their mode of existence will affect much of what happens to data. While much of the machine learning taking place in commercial and operational settings is decidedly non-Bayesian, the popularity of MCMC and Bayesian approaches in contemporary sciences suggests a tension in what counts as number.
 
 
 ## Abstract

@@ -2,6 +2,17 @@
 Optimising and competing: the lives of machine learners
 'Wonderful people': programmers in the regime of anticipation
 
+## from the proposal
+
+#### Key examples: spam filter; Kaggle facebook retention; Kaggle R recommendation engine; TopCoder; Sage Bionetworks
+#### Key techniques: ensembles, RandomForests
+
+ - selfhood in Kaggle and Google compute - random forest; aggression, competition, and optimisation in the algorithmic
+
+The chapter focuses on the forms of subjectivity associated with contemporary data practice, situated within plural data and knowledge economies. Software developers, hackers, statisticians, 'data scientists,' as well as social scientists, are changed by forms of data thought. The case study in this chapter is data prediction contests run by the [Kaggle.com](kaggle.com) as well as academic-based competitions. In these competitions, competitors from diverse technical and geographic backgrounds compete to construct predictive models for specific datasets -- the Netflix recommendation competition; the Facebook 'find a friend' competition; or the Titanic survivor problem -- using whatever machine learning techniques they can bring to bear. These competitions, conducted on web-based platforms, are useful ways to track contemporary data practices. Combined with some examples of presentations by academic researchers (for instance, Stanford University's Andrew Ng whose YouTube lectures haved attracted 100,000s of views), industry conferences (for instance, at the annual Predictive Analytics World events), this chapter will track the kinds of technical and affective investment associated with popular data modelling techniques such as Random Forest. It is possible, I will suggest, to read a technique as a partial subjectification, in that it affects how they experience and materially engage with data. In order to apprehend the character and texture of these subjectifications, the chapter links university research, commercial and non-commercial adoption, and flows of technical expertise. Again, this chapter has some auto-ethnographic vignettes, as the author has participated in some of these competitions.
+
+
+
 ## todo
 
 - include the algorithms as subjects

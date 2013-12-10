@@ -2,6 +2,18 @@
 Number supplies and feature engineering 
 # Reconstructing the flow of numbers in data
 
+## from the proposal
+
+
+#### Key examples: A/H1N1, Google Flu;
+#### Key techniques: transmission models, nested models
+
+  - functions & supply chains; APIs; multiplication & convolution; states and functions of the lived;
+
+A predominant narrative around data in many contemporary settings urges that more data makes all problems solveable. This narrative is usefully accompanied by an 'abundance of data' ('big data', 'data deluge', etc) narrative, in which the advent of data corresponds to a groundswell change in how we make sense of and intervene in events. Versions of these narratives surface in genomics, business analytics, and infrastructure management (e.g. in smart energy grids), as well as crisis-events such as financial collapses or epidemics. Via a case study of different data flows during the 2009 A/H1N1 'swine flu' epidemic, this chapter develops an alternative narrative of data flow in terms of number supply chain logistics. The chapter reconstructs a real-time epidemiological model that combines clinical reports, laboratory test data, web surveys, urban population mixing patterns in order to disentangle biological and social forms of contagion and infection during the 2009 epidemic in London. In reconstructing this model, a model that is typical in complicated engagement with numbers of diverse origins, the chapter will suggest that the largely  homogeneous data flows envisaged and embraced in many forms of data practice largely ignore the problem of the interactions between different agents. It specifically contrasts  the much publicised Google Flu Trends approach to 'flu prediction, which is based on search query volumes, with epidemiological models based on multiple forms of surveillance data. The chapter argues  that data practices during crises or times of great uncertainty, entail hybrid integrations of existing data practice and new forms of data.
+
+
+
 The elements of data are often said to be numbers. But those numbers are not the same. This is something that machine learning cannot itself register. That is, the algorithms and techniques cannot deal with the way in which numbers are multiple, and and exist in different ways. We cannot learn about the differences between data without reconstructing those differences in the data. There are different ways to go about doing this. This chapter contrasts two fundamentally different approaches to number. One of them, typical of machine learning, assumes that everything is in the data, as long as machine learning techniques are careful enough in their movement through it. The other, more typical of certain sciences such as epidemiology or ecology, tends to see the relation between different kinds of data as a problem to be explored in its own right, rather than handed over to the algorithms. The chapter discusses what it might mean for machine learning to do something more like this. 
 
 

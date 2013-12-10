@@ -1,5 +1,20 @@
-# How to look at data 
+# Looking at data 
 Finding functions: lines and curves
+
+## from proposal
+
+#### Key examples: housing price prediction; cancer prognosis; digit recognition; credit scoring
+#### Key techniques: logistic regression; _k_-nearest neighbours, neural networks
+
+-- recursion, movement, evocative objects, partial observers, visualisation, etc; functions and states of things; linear regression
+
+Graphs and plots stand at the centre of vision in contemporary data and knowledge economies, whether in the time series plots of financial markets, the scatter plots of scientific publications or the network graphs of social media. The topography of curves, lines, points and network diagrams present views of data, and they are indispensable to many of the classification, decision and prediction techniques of machine learning. Such visual forms, with all their associate aesthetics (code, line, typography, animation) are themselves convey expectations and predictions about the changes in the data practice, especially in the form of the curves showing growth of data.  
+
+This chapter examines the proliferation of data-supported curves and lines in terms of *functions*, the underlying generating mechanisms of curves. Machine learning is conceptually framed as a form of function-finding. Drawing on statistical machine learning texts [@hastie_elements_2009], and more philosophical accounts of functions (e.g. [@deleuze_what_1994; @whitehead_modes_1958]), the chapter  introduces the key instances of the function in machine learning, shows how functions underpin the generation of curves, and how movement along lines, curves and across planes. While later chapters will range across a variety of mathematical functions and forms, this chapter will focus on two of the most widely used machine-learning technique, linear regression model and its classifier version, logistic regression model, and the _k_ nearest neighbour algorithm. It will discuss these important techniques from the perspective of the forms of relationality, referenciality and indexicality associated with them. 
+
+Connecting aesthetic and mathematical data practices, this chapter suggests that finding the functions that generate lines and surfaces in data is a powerful form of imitation that tends to remake the world in certain ways. This re-making may be inimical to social life, or not. The chapter also suggests that the production of curves through software packages and libraries and through various visualization techniques is worth investigating as a signifying social practice in its own right. The architecture and practices associated with graphics and plotting libraries offer a way to trace some of the processes of imitation and invention associated with forms of data thought. 
+
+
 
 ## techniques
 - logistic regression - on what?
