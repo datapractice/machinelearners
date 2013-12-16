@@ -149,7 +149,7 @@ Under what conditions would it be possible to have an affirmative relationship t
 
 The machine learning literature itself has a sprawling, fluxing dimensionality, not easily captured by search terms or disciplines. The academic papers themselves are daunting in their bulk and variety, before we even try to move into the much more crowded and heavily trafficked domains where machine learning is practiced.  This literature itself, viewed in machine learning terms, comprises a high-dimensional vector space, whose features and attributes unstably move around as the techniques find new applications, as computer scientists, engineers, statisticians and others work on reshaping them, sometimes concertedly, sometimes independently and at odds with each other.  Viewed as a bundle of divergent, tangled trajectories in a high-dimensional social-material space, machine learning (or data-mining) can be described, sorted, and classified  in different ways. The immediate question is: what form of movement, from trajectories through the forest of practices associated with machine learning would allow us to inhabit the space of machine learning? What kinds of scales and subject positions would we need to move through in order to do that? A less immediate but no less important question is: in the name of what or whom would we affirm machine learning? This question is not going to be answered easily, but it also involves many choices about where to move and how fast to move. 
 
-As I have emphasised previously, the form of movement through machine learning I'm experimenting with here is recursive or loopy. That is, rather than describing machine learning from the outside, or participating in it as an observer (participant observation, or even observant participation), I explore some possibilities of moving through machine learning by learning machine learning.  And as  discussed earlier2, here the term 'learning' is overloaded with multiple meanings and practices. But the motivation is similar to what the anthropologist Paul Rabinow advocates: 'pursuing in our thought and writing something like motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity' [@rabinow_anthropos_2003, 135-6]. Most of my learning of machine learning took place through textbooks and how-to materials, scientific articles, databases of scientific literature and sample datasets, online tutorials, Wikipedia pages, software documentation, read and writing many lines of `R` or `python` code. As Rabinow suggest, it is easy to start moving through machine learning, but hard to control that movement. I have found myself careening through websites, software manuals, YouTube lectures on machine learning, short intensive courses on data mining, news reports, APIs, code repositories and various code fragments.  Much of this movement has been saccadic  and aleatory rather than purposive or Dao-like, and only in writing now, in attempting to connect code, literature, people and events, I attempt to steer this movement a little more purposively. In the course of moving backwards and forwards between research articles, textbooks, datasets and code, it is sometimes to possible to find amidst the many contingencies and specificities, some general forms of movement. 
+As I have emphasised previously, the form of movement through machine learning I'm experimenting with here is recursive or loopy. That is, rather than describing machine learning from the outside, or participating in it as an observer (participant observation, or even observant participation), I explore some possibilities of moving through machine learning by learning machine learning.  And as  discussed earlier2, here the term 'learning' is overloaded with multiple meanings and practices. But the motivation is similar to what the anthropologist Paul Rabinow advocates: 'pursuing in our thought and writing something like motion, through different scales and different subject positions. ... Such movement is easy to initiate and hard to master. Yet I firmly believe that in the actual conjuncture of things, it is a paramount challenge for philosophy and the human sciences to experiment with forms that will be, if not fully adequate to, at least cognizant of, the need for such movement through scale and subjectivity' [@rabinow_anthropos_2003, 135-6]. Most of my learning of machine learning took place through textbooks and how-to materials, scientific articles, databases of scientific literature and sample datasets, online tutorials, Wikipedia pages, software documentation, read and writing many lines of `R` or `python` code. As Rabinow suggests, it is easy to start moving through machine learning, but hard to control that movement. I have found myself careening through websites, software manuals, YouTube lectures on machine learning, short intensive courses on data mining, news reports, APIs, code repositories and various code fragments.  Much of this movement has been saccadic  and aleatory rather than purposive or Dao-like, and only in writing now, in attempting to connect code, literature, people and events, I attempt to steer this movement a little more purposively. In the course of moving backwards and forwards between research articles, textbooks, datasets and code, it is sometimes to possible to find amidst the many contingencies and specificities, some general forms of movement. 
 
 ## Movement and stasis in data
 
@@ -162,7 +162,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
 
-#first some random data
+        #first some random data
 
 size = 1000
 x = np.random.uniform(0,10, size)
@@ -180,7 +180,7 @@ plt.scatter(x[class1==1],y[class1==1],s=0.5*z[class1==1], marker='*',
 plt.title('Synthetic data')
 plt.legend()
 
-#titanic data
+        #titanic data
 import pandas as pd
 titanic = pd.DataFrame.from_csv('data/titanic_train.csv')
 p2 = plt.subplot(122)
@@ -344,12 +344,12 @@ import pylab as pl
 from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier
     
-# Parameters
+        # Parameters
 n_classes = 3
 plot_colors = "bry"
 plot_step = 0.02
 
-# Load data
+        # Load data
 iris = load_iris()
 
 for pairidx, pair in enumerate([[0, 1], [0, 2], [0, 3],
@@ -519,29 +519,29 @@ import numpy as np
 import pylab as pl
 from sklearn import svm
 
-# we create 40 separable points
+        # we create 40 separable points
 np.random.seed(0)
 X = np.r_[np.random.randn(20, 2) - [2, 2], np.random.randn(20, 2) + [2, 2]]
 Y = [0] * 20 + [1] * 20
 
-# fit the model
+            # fit the model
 clf = svm.SVC(kernel='linear')
 clf.fit(X, Y)
 
-# get the separating hyperplane
+            # get the separating hyperplane
 w = clf.coef_[0]
 a = -w[0] / w[1]
 xx = np.linspace(-5, 5)
 yy = a * xx - (clf.intercept_[0]) / w[1]
 
-# plot the parallels to the separating hyperplane that pass through the
-# support vectors
+            # plot the parallels to the separating hyperplane that pass through the
+            # support vectors
 b = clf.support_vectors_[0]
 yy_down = a * xx + (b[1] - a * b[0])
 b = clf.support_vectors_[-1]
 yy_up = a * xx + (b[1] - a * b[0])
 
-# plot the line, the points, and the nearest vectors to the plane
+        # plot the line, the points, and the nearest vectors to the plane
 pl.plot(xx, yy, 'k-')
 pl.plot(xx, yy_down, 'k--')
 pl.plot(xx, yy_up, 'k--')
@@ -691,11 +691,11 @@ np.random.seed(0)
 X = np.random.randn(300, 2)
 Y = np.logical_xor(X[:, 0] > 0, X[:, 1] > 0)
 
-# fit the model
+        # fit the model
 clf = svm.NuSVC()
 clf.fit(X, Y)
 
-# plot the decision function for each datapoint on the grid
+                    #plot the decision function for each datapoint on the grid
 Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
 
