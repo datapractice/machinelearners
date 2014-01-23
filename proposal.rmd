@@ -1,11 +1,5 @@
 # Book Proposal
 
-## TODO
-
-- rewrite the chapter outline
-- highlight the scientific/technical literature as key working material
-- add data science
-- add other literature on data -- Beer, Burrows, Savage, 
 
 ## Into the data: learning from machine learning
 
