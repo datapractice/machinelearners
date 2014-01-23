@@ -1,4 +1,6 @@
-# Looking at data 
+# Machines finding functions
+
+Looking at data 
 Finding functions: lines and curves
 
 ## from proposal
