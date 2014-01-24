@@ -1,4 +1,6 @@
-# What does data do for things?
+#  What does the scale of data do for things?
+
+What does data do for things?
 
 What flat data does to pluri-dimensional things
  Genomic topologies 
