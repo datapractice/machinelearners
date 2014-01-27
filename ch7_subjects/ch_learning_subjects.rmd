@@ -1,98 +1,5 @@
-# Optimising machine learners
-Optimising and competing: the lives of machine learners
-'Wonderful people': programmers in the regime of anticipation
-
-## from the proposal
-
-#### Key examples: spam filter; Kaggle facebook retention; Kaggle R recommendation engine; TopCoder; Sage Bionetworks
-#### Key techniques: ensembles, RandomForests
-
- - selfhood in Kaggle and Google compute - random forest; aggression, competition, and optimisation in the algorithmic
-
-The chapter focuses on the forms of subjectivity associated with contemporary data practice, situated within plural data and knowledge economies. Software developers, hackers, statisticians, 'data scientists,' as well as social scientists, are changed by forms of data thought. The case study in this chapter is data prediction contests run by the [Kaggle.com](kaggle.com) as well as academic-based competitions. In these competitions, competitors from diverse technical and geographic backgrounds compete to construct predictive models for specific datasets -- the Netflix recommendation competition; the Facebook 'find a friend' competition; or the Titanic survivor problem -- using whatever machine learning techniques they can bring to bear. These competitions, conducted on web-based platforms, are useful ways to track contemporary data practices. Combined with some examples of presentations by academic researchers (for instance, Stanford University's Andrew Ng whose YouTube lectures haved attracted 100,000s of views), industry conferences (for instance, at the annual Predictive Analytics World events), this chapter will track the kinds of technical and affective investment associated with popular data modelling techniques such as Random Forest. It is possible, I will suggest, to read a technique as a partial subjectification, in that it affects how they experience and materially engage with data. In order to apprehend the character and texture of these subjectifications, the chapter links university research, commercial and non-commercial adoption, and flows of technical expertise. Again, this chapter has some auto-ethnographic vignettes, as the author has participated in some of these competitions.
-
-
-
-## todo
-
-- include the algorithms as subjects
-- cruel optimisation and maximising expectation - EM algorithm
-- the really important issue of the politics of algorithms: competition, optimisation, knowledge economy
-- the Adzuna dataset: nicely recursive example
-- interview the Adzuna winner 
-- the McKinsey report and its citation; the google guy
-- the role of competition -- how it is inherent in the models (loss function), how it structures the practice (getting an edge -- see Cathy O'Neill on this; as well as Kaggle CEO talks; on the rate of profit); 
-- think how the EM algorithm could be a figure for competitiveness?
-- not sure much the productivity of labour but its predictivity, and the need for excess labour power;
-- arvidsson on reputation
-
-## Examples
-
-### Adzuna job descriptions -- Kaggle competition data - 2013
-
-Nice thing about this example is that it is about work!
-- Adzuna data is largely textual, but also geographical locations, and numerical values.
-
-```{r echo=FALSE} 
-	
-	adzuna <-read.csv('../kaggle/adzuna/data/Valid.csv')
-	xtab <- xtable(adzuna[1:5,-3])
-	print(xtab, rotate.colnames=TRUE,comment=FALSE)
-	
-	#print(xtab, floating.environment='sidewaystable')
-
-```
-### http://docs.prediction.io/current/
-
->PredictionIO is an open source Machine Learning Server. It empowers programmers and data engineers to build smart applications. With PredictionIO, you can add the following features to your apps instantly:
-
-    predict user behaviors
-    offer personalized video, news, deals, ads and job openings
-    help users to discover interesting events, documents, apps and restaurants
-    provide impressive match-making services
-    and more....
-
-PredictionIO is built on top of solid open source technology. We support Hadoop, Mahout, Cascading and Scalding natively.
-
-- predictionio -- for how it tries to get people to use it -- see also chapter of datamining book on this with analysis of recommendation engine; Simon Chan + blog examples of what to predict/recommend
-
-Olivier Grisel -- won Adzuna contest(?); works on scikit-learn
-
-### linked-in
-Pete Skomoroch LinkedIn talk   on http://datawrangling.com/skills-reputation-search-lucene: 401k world -- open source - 'connect the worlds professionals'; a flywheel of data and value
-	 'data amplifies desire' -- the LinkedIn motto - a flywheel of data and value -- let's say you work at google; it's the web of all the other information that will help us; trying to do for economics of skills what Facebook does for socialgraph or wikipedia does for topics; "we're doing it for this economic graph"
-
-### hilary mason talking about her own images on google
-
-http://www.lucenerevolution.org/2013/Keynote-Search-is-not-a-solved-problem
-
-## Quotes to use
-
-Cruel optimism is the condition of maintaining an attachment to a problematic object in advance of its loss. ... One makes affective bargains about the costliness of one’s attachments, usually unconscious ones, most of which keep one in proximity to the scene of desire/attrition (Lauren Berlant, _Cruel Optimism_, 2007, 21) 
-
-
-Lazzarato on Tarde
-C’est dans les métamorphoses et les variations de l’action de subjectivation et non les métamorphoese et les variations of valuer qu’il faut chercher la dynamique immanente du capitalisme 142
-> Look for metamorphoses and variations in the action of subjectification rather than of value that need to examine in order to find out about capitalism. 142, Lazzarato
-
-Labour as intermediate between routine and invention 255
-
-> Important passage on distinction between living and dead labour, and how Tarde reconfigures it.  -  as living machine.  - there are automatisms in human and virtualities in the machine 265-6
-
-
-
-## Abstract
-
-> It has been argued that we increasingly live in a regime of anticipation [@adams_anticipation_2009] in which likelihoods and probabilistic outcomes prevail. Many settings, ranging across finance, social media, biomedical science and military planning, rely on a semi-automated form of statistics - sometimes called 'machine learning' - to generate the predictions on which anticipation relies. Anticipation takes hold as these settings incorporate _predictivity_ focused on the attributes of populations and individuals. What kinds of subjects live in the regime of anticipation? Shifts in predictive practice directly index the re-shaping of subjectivity in anticipation. Exploring the use of machine learning in social media, this paper examines predictive practice of anticipation. It shows how software developers and programmers not only become agents of anticipation, but internalise  regimes of anticipation through technical practices. Shifts in programming practice hint at what it is like to be an agent of anticipation.
-
-
-## Keywords
-
-Anticipation, optimism, prediction, programming, machine learning
-
-
-## Introduction
-
+# Chapter 7
+#  Optimising machine learners
 
 In an article in _Subjectivity_, Vinciane Adams, Michelle Murphy and Adele Clarke urge consideration of the contemporary time in terms of 'regimes of anticipation' [@adams_anticipation_2009]. In a discussion that bears some affinities to Nigel Thrift's _Knowing Capitalism_ [@thrift_knowing_2005], they suggest we are witnessing and are subject to a wide-ranging shift from regimes of truth to regimes of anticipation:  'anticipation ... emerges at a moment of actuarial saturation, when one realizes that the sciences of the actual can be abandoned or ignored to be replaced by a knowledge that the truth about the future can be known by way of the speculative forecast, itself relying on proliferating modes of prediction' [@adams_anticipation_2009,247]. Their characterisation of anticipation is expansive and nuanced. It highlights how the feeling of what happens, and orientations to the future are affected by modes of speculation authorised by anticipation. While they describe the implications most directly in terms of biomedicine and technosciences, versions of what they describe can also be found in finance, security, marketing, media and entertainment. Anticipation is comprehensively fractalised through all these domains in ways that are interlinked, imitative and often entangled. Given their panoramic viewpoint, Adams et. al. offer much less detail how the anticipation regime is actually done in practice. Drawing on C.S Peirce, they say anticipation works through a form of _abduction_, which involves the process of 'reasoning temporally from data gathered about the past to simulations or probabilistic anticipations of the future that in turn demand action in the present' [@adams_anticipation_2009, 255]. Prediction is perhaps the most highly valued abductive operation. While not all anticipation is completely predictive (for instance, promises or hopes are anticipatory without being necessarily predictive), and not all abduction is predictive, simulations and predictions are key components of the regime of anticipation.
 
@@ -102,9 +9,9 @@ In several respects, the practices of programmers are instructive. First of all,
 
 It is well-known that software and code connects people, things, systems, places and events. For reasons I will not discuss in much detail, these trajectories are often convoluted and multiple. The sub-field of software studies [@mackenzie_cutting_2006; @fuller_software_2007; @berry_philosophy_2011; @chun_programmed_2011] as well as the field of science and technology studies have developed various ways of mapping and tracking these trajectories by observing coding practices as well as tracking tropes and figures of control and power through software. Related work by anthropologists highlights the social practices and norms associated with software development, particularly in free and open source software [@coleman_code_2009; @kelty_two_2008]. There is an increasing volume of critical work on software and code [@mackenzie_codes_2011]. In much of the extant work, analysis of algorithms, data structures and protocols have been antidotes to overly general talk about information society, network cultures or digital economy. In general, studies of software have argued that by including  technical objects and operations such as algorithms, data structures or protocols [@galloway_protocol_2004] in the analysis, we gain much stronger insight into  how software accrues agential force or cultural value. 
 
-This paper shares that starting point, although it adds one thing:  I focus here on how programmers as agents in the regime of anticipation also act on themselves. The paper draws on presentations by software developers at industry conferences such as 'Predictive Analytics World' for  programmers and software developers; it describes online programming competitions to write predictive systems, and it traces some links between programming practices and academic research in academic disciplines such as statistics and computer science. I read these events and practices against a wider background of media reports and gray literature on software and programming. Although I have not done ethnographic field research, I have participated in several machine learning competitions as a competitor, and in particular, made extensive use of a programming language called R that is popular in machine learning. 
+This chapter shares that starting point, although it adds one thing:  I focus here on how programmers as agents in the regime of anticipation also act on themselves in machine learning. The paper draws on presentations by software developers at industry conferences such as 'Predictive Analytics World' for  programmers and software developers; it describes online programming competitions to write predictive systems, and it traces some links between programming practices and academic research in academic disciplines such as statistics and computer science. I read these events and practices against a wider background of media reports and gray literature on software and programming. Although I have not done ethnographic field research, I have participated in several machine learning competitions as a competitor, and in particular, made extensive use of a programming language called R that is popular in machine learning. 
 
-There are possibly a range of subject positions available to agents of anticipation, from prominent software developers who enjoy mainstream media attention to individuals whose participation in on-line forums is the only evidence we have of their work on predictive software. Here are the words of Hilary Mason, Chief Scientist at bitly.com (a social media platform), at a conference called 'Bacon: Things Developers Love':
+There are possibly a range of subject positions available to agents of anticipation, from prominent software developers who enjoy mainstream media attention to individuals whose participation in on-line forums is the only evidence we have of their work on predictive software. Here are the words of Hilary Mason, Chief Scientist at bitly.com (a social media platform), at a London conference in 2012 called 'Bacon: Things Developers Love':
 
 >You have all of these things that are different – engineering, infrastructure, mathematics and computer science, curiosity and an understanding of human behaviour – that is something that usually falls under the social sciences. At the intersection of all these things are wonderful people. But we're starting to develop something new, and that is - not that all of these things have not been done for a very long time - but we are only just now building systems where people, individual people, have all of these tools in one package, in one mind. And there are lots of reasons this is happening now. But its a pretty exciting time to be in any of these things. (Hilary Mason, Chief Scientist, bitly.com) [@bacon_hilary_2012]
 
@@ -147,11 +54,11 @@ There are other examples of this recursive application of predictive practice to
 
 ## Conclusion
 
-[@adams_anticipation_2009] write: 'anticipation is rapidly reconfiguring technoscientific and biomedical practices as a totalizing orientation' (248). The subject-form of programming experiences both excitement and threat from machine learning. We see in the conferences, the presentations, and in the machine learning competitions the operation of exuberant attachments and burgeoning affirmations of machine learning as predictive practice. Machine learning appears there as an object of desire or 'a cluster of promises' [@berlant_nearly_2007,2]. The voices and people that I have drawn on this paper - Bo McGill, Itamar Rosenn, David Smith, OneOldDog, lib-GUNDAM, or Hilary Mason - are the more or less prominent proponents of this optimism. In her address to the London Dataweek Conference, Hilary Mason, sought to motivate the audience of developers, hackers and programmers by describing them as the 'wonderful people' who bring together mathematics, statistics, programming, curiosity and an understanding of human behaviour. 
+[@adams_anticipation_2009] write: 'anticipation is rapidly reconfiguring technoscientific and biomedical practices as a totalizing orientation' (248). The subject-form of programming experiences both excitement and threat from machine learning. We see in the conferences, the presentations, and in the machine learning competitions the operation of exuberant attachments and burgeoning affirmations of machine learning as predictive practice. Machine learning appears there as an object of desire or 'a cluster of promises' [@berlant_nearly_2007,2]. The voices and people that I have drawn on this chapter - Bo McGill, Itamar Rosenn, David Smith, OneOldDog, lib-GUNDAM, or Hilary Mason - are the more or less prominent proponents of this optimism. In her address to the London Dataweek Conference, Hilary Mason, sought to motivate the audience of developers, hackers and programmers by describing them as the 'wonderful people' who bring together mathematics, statistics, programming, curiosity and an understanding of human behaviour. 
 
 Highlighting the temporality of regimes of anticipation, [@adams_anticipation_2009] repurpose C.S Peirce's notion of abduction. For Peirce, abduction is making a hypothesis to account for data [@peirce_essential_1998, 102]. But for Adams, Murphie and Clarke, 'abduction thrives in the vibrations between the is and the ought, consummately modern yet augmented by anticipation in ways that undermine the certainties on which modernity thrives' [@adams_anticipation_2009, 255]. Here abductive reasoning is less about certainties, and more about optimising predictions. The question I have been pursuing, however, is what it means to implement or practice abduction in the name of anticipation. Machine learning, I have been suggesting, is a generically abductive practice in the sense that it remains agnostic in relation to field of application, and makes no claims about certainties, only about the potential of prediction, predictivity. As we have seen, abductive processes can be applied by programmers to themselves in a process of self-abduction.
 
-Exploration of technical practices helps understand processes of subjectivation in two senses. First, a new technical practice acts as a cluster of promises. Second, when we follow technical operations, such as the implementation of a predictive model or a classifier, we select features of technical practice to attend to, and we find ways of connecting them to other zones of contemporary life. The connections we make between these practices and lives are largely about showing how investments in conventional forms can readily adopt a semblance of newness or novelty, yet whose realization encounters frictions, obstacles, slippages and delays attest to a plurality of related differences. This paper has attempted to make some connections between promise and existing convention. In describing the encounter between promises of newness and conventions in machine learning, we address the question: what does it mean for people to live abductively? 
+Exploration of technical practices helps understand processes of subjectivation in two senses. First, a new technical practice acts as a cluster of promises. Second, when we follow technical operations, such as the implementation of a predictive model or a classifier, we select features of technical practice to attend to, and we find ways of connecting them to other zones of contemporary life. The connections we make between these practices and lives are largely about showing how investments in conventional forms can readily adopt a semblance of newness or novelty, yet whose realization encounters frictions, obstacles, slippages and delays attest to a plurality of related differences. This chapter has attempted to make some connections between promise and existing convention. In describing the encounter between promises of newness and conventions in machine learning, we address the question: what does it mean for people to live abductively? 
 
 While machine learning is reassuringly and glowingly presented as a solution to the contemporary problem of making sense of lives lived at the intersection of infrastructures, media, sciences and markets, it also suffers failures. Programming machine learning is hard. Mason describes work in this area as wearing: 'this is a field where we have hit a wall, diminished, developed again, hit another wall, diminished, developed again' [@bacon_hilary_2012]. The cost of attachment to predictive practice is a wearing rhythm that Hilary Mason describes as hitting a wall, and being diminished. It is  worthwhile, I suggest, thinking about what the internalisation of abduction means for subjectivity. What does the banality of competing for a job interview using machine learning to predict future friendships say about subject formation? Rather than simply a positional swap in which the knowing subject becomes the object of abductive knowing, lived abduction might intensify an impasse associated with the regime of anticipation.  Here it seems that programmers engage in self-abduction. The generic predictive capacity of machine learning can be turned in almost any direction, including on programmers themselves. This _might_ be a more general situation, not something specific to programmers working on contemporary data flows. The cultural theorist Lauren Berlant describes the 'space of time' of cruel optimism and its exuberant attachments as 'a white noise machine that provides assurance that what seems like threat ... is, after all, a rhythm people can enter into while they're dithering, tottering, bargaining, testing, or otherwise being worn out by the promises that they have attached to in this world' [@berlant_nearly_2007, 23]. Optimism about optimisation through machine learning may well help programmers get into that rhythm.
 
