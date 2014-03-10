@@ -22,6 +22,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import collections
 import IPython.display
+import seaborn
 
 # <markdowncell>
 
