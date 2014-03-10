@@ -3,11 +3,13 @@
 
 ## themes/story of chapter
 what low probability events mean; why they matter and how to find them
-how probability undercuts other more sophisticated takes on the world
+how probability undercuts other more sophisticated takes on the world -- Hacking's argument about Peirce
+
 ## to put in
 
-- naive bayes, including the ipython notebook; the Lewis article, the spam filter example
-- n friedman paper -- highly cited on virtues of naive bayes
+- naive bayes, including the ipython notebook; the Lewis article, the spam filter example -- from schutt, from segaran, from myles-white; from hastie, flach, from top10 algo, etc
+- discussions of Naive bayes in malley, flach, hastie, ripley
+- friedman paper -- highly cited on virtues of naive bayes
 - tom mitchell on why Bayes is a good way to think about machine learning
 - Rassmussen & Williams on Gaussian processes
 - likelihood function Flach, 27
