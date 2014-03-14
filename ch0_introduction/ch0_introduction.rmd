@@ -31,6 +31,7 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 -  the development of machine learning out of AI -- shift from rule-based experts (cd Suchman; Collins  on this); visible in early textbooks (Tom Mitchell); decisive role of pattern recognition approaches focused on images (Bishop 1996 on this); Donald Michie for even earlier
 -  the identificatino of ML and data-mining and predictive analytics
 -  provenance of _iris_ dataset - -Fisher (1936) and Gaspe Peninsula, W.E. Anderson
+- order of things -- big picture stuff on transdisciplinary episteme
 
 ## quotes to use
 it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. 87 Rabinow
