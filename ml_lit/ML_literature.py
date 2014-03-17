@@ -23,6 +23,7 @@ import numpy as np
 import collections
 import IPython.display
 import seaborn
+import ggplot
 
 # <markdowncell>
 
@@ -33,6 +34,12 @@ import seaborn
 # The idea of this analysis is to show how machine learning relates to various scientific and technical fields. In its treatment of the literature, it draws both on citation analysis techniques developed  in various fields, as well as text mining, social netowrk analysis and indeed machine learning itself to explore this rather large literature. 
 # 
 # ### Loading the literature and cleaning the topics
+# 
+# I downloaded from Thomson ISI Web of Science all the references returned by the query 'machine learning.' I also downloaded the cited references. 
+# 
+# Other possible queries such as 'data mining' return too many references to handle -- over 2 million, so I stuck with machine learning, which return aroudn 25,000 references.
+# 
+# 
 
 # <codecell>
 
@@ -70,9 +77,6 @@ plt.box(on=False)
 
 # ## Fields of research in the literature
 # 
-# I downloaded from Thomson ISI Web of Science all the references returned by the query 'machine learning.' I also downloaded the cited references. 
-# 
-# Other possible queries such as 'data mining' return too many references to handle -- over 2 million, so I stuck with machine learning, which return aroudn 25,000 references.
 
 # <codecell>
 

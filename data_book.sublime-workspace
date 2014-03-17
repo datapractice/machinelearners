@@ -343,7 +343,15 @@
 			"file": "ch0_introduction/ch0_introduction.rmd",
 			"settings":
 			{
-				"buffer_size": 6819,
+				"buffer_size": 6888,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "part_intros.md",
+			"settings":
+			{
+				"buffer_size": 3994,
 				"line_ending": "Unix"
 			}
 		},
@@ -352,14 +360,6 @@
 			"settings":
 			{
 				"buffer_size": 92008,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "ch1_learning/pandoc.sh",
-			"settings":
-			{
-				"buffer_size": 341,
 				"line_ending": "Unix"
 			}
 		},
@@ -554,7 +554,7 @@
 			"file": "/home/mackenza/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
 			"settings":
 			{
-				"buffer_size": 117,
+				"buffer_size": 66,
 				"line_ending": "Unix"
 			}
 		},
@@ -653,9 +653,17 @@
 	"build_system": "Packages/knitr/knitr-Markdown.sublime-build",
 	"command_palette":
 	{
-		"height": 312.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"set",
+				"Set Syntax: Markdown"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -731,10 +739,6 @@
 			[
 				"ins",
 				"Package Control: Install Package"
-			],
-			[
-				"set",
-				"Set Syntax: Markdown"
 			],
 			[
 				"set smar",
@@ -829,10 +833,6 @@
 				"Pandoc: Render Markdown to temp PDF and View"
 			],
 			[
-				"mark",
-				"Set Syntax: Markdown"
-			],
-			[
 				"and",
 				"Pandoc: Render Markdown to temp PDF and View"
 			],
@@ -917,7 +917,7 @@
 				"Set Syntax: R"
 			]
 		],
-		"width": 575.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -988,12 +988,13 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/Documents/data_intensive/book/data_book.sublime-project",
+		"/home/mackenza/Documents/data_intensive/book/ch1_learning/pandoc.sh",
 		"/home/mackenza/.config/sublime-text-3/Packages/MarkdownEditing/Bold and Italic Markers.tmPreferences",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/Bold and Italic Markers.tmPreferences",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/WordCount.sublime-settings",
 		"/home/mackenza/.config/sublime-text-3/Packages/SmartMarkdown/Default.sublime-keymap",
 		"/home/mackenza/Documents/signature.txt",
-		"/home/mackenza/Documents/data_intensive/book/ch1_learning/pandoc.sh",
 		"/home/mackenza/Documents/data_intensive/book/ch7_subjects/builddoc.sh",
 		"/home/mackenza/Documents/data_intensive/book/ch7_subjects/knitall.sh",
 		"/home/mackenza/Documents/data_intensive/book/ch7_subjects/pandoc.sh",
@@ -1024,7 +1025,6 @@
 		"/home/mackenza/Documents/data_intensive/book/knit_all.sh",
 		"/home/mackenza/Documents/data_intensive/book/functions.mdown",
 		"/home/mackenza/Documents/data_intensive/book/examples.md",
-		"/home/mackenza/Documents/data_intensive/book/data_book.sublime-project",
 		"/home/mackenza/Documents/data_intensive/book/build.sh",
 		"/home/mackenza/Documents/data_intensive/book/.gitignore",
 		"/home/mackenza/Documents/data_intensive/book/ch1_learning/test.rmd",
@@ -1119,7 +1119,7 @@
 	],
 	"find":
 	{
-		"height": 45.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -1292,7 +1292,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1301,30 +1301,60 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6819,
+						"buffer_size": 6888,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6227,
-								6227
+								1991,
+								1991
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/MarkdownEditing/Markdown (Standard).tmLanguage"
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1331.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "part_intros.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3808,
+								3808
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/MarkdownEditing/Markdown (Standard).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 593.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "ch1_learning/ch1_praxis.rmd",
 					"semi_transient": false,
 					"settings":
@@ -1336,8 +1366,8 @@
 						"selection":
 						[
 							[
-								2,
-								2
+								647,
+								647
 							]
 						],
 						"settings":
@@ -1352,38 +1382,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "ch1_learning/pandoc.sh",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 341,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								76,
-								76
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1412,7 +1414,7 @@
 						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1443,7 +1445,7 @@
 						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1471,7 +1473,7 @@
 						"translation.y": 2.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1493,13 +1495,14 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1527,7 +1530,7 @@
 						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1556,7 +1559,7 @@
 						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -2034,7 +2037,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 117,
+						"buffer_size": 66,
 						"regions":
 						{
 						},
@@ -2415,7 +2418,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 45.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -2455,7 +2458,7 @@
 	"project": "data_book.sublime-project",
 	"replace":
 	{
-		"height": 84.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -2573,7 +2576,7 @@
 		[
 			[
 				"",
-				"~/Documents/reviews/current_reviews.sublime-project"
+				"~/R/metacommunities/metacommunities.sublime-project"
 			]
 		],
 		"width": 380.0

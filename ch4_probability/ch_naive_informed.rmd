@@ -13,6 +13,8 @@ how probability undercuts other more sophisticated takes on the world -- Hacking
 - tom mitchell on why Bayes is a good way to think about machine learning
 - Rassmussen & Williams on Gaussian processes
 - likelihood function Flach, 27
+- references cited by Ripler -- Warner 1961, Tittington, 1981; cf Michie 1994 textbook
+- sequence of references -- Warner, Tittington, Michie, Ripley, Bishop, Mitchell, Witten (2001/2011),Hastie (2001/2009), Jordan (2004), Alpaydin (2010), Manning (2009),  Flach, top10-algo, Myles-White, Schutt, Hastie/R book (2013)
 
 ## from proposal
 
