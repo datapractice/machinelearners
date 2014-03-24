@@ -380,13 +380,10 @@
 			}
 		},
 		{
-			"contents": "# Believing in the strength of numbers\n\n\n## themes/story of chapter\nwhat low probability events mean; why they matter and how to find them\nhow probability undercuts other more sophisticated takes on the world -- Hacking's argument about Peirce\n\n## to put in\n\n- naive bayes, including the ipython notebook; the Lewis article, the spam filter example -- from schutt, from segaran, from myles-white; from hastie, flach, from top10 algo, etc\n- discussions of Naive bayes in malley, flach, hastie, ripley\n- friedman paper -- highly cited on virtues of naive bayes\n- tom mitchell on why Bayes is a good way to think about machine learning\n- Rassmussen & Williams on Gaussian processes\n- likelihood function Flach, 27\n\n## from proposal\n\n#### Key examples:  Microsoft TrueSkill; Obama election data team\n#### Key techniques: Monte Carlo simulations and MCMC; Bayesian networks; \n\n\n - probability and Bayesian inference - belief and desire in data  - belief chance, Bayes, internal proliferation of numbers; event-belief oscillation\n\nThe topic in this chapter is the role of randomness and chance in machine learning. While statistical techniques and practices have been discussed in previous chapters, this chapter foregrounds the changes in the so-called 'Bayesian revolution' in statistical practice that took shape in the early 1990s, and in particular, the key algorithmic technique used in Bayesian statistics, Markov Chain Monte Carlo simulation (MCMC). The computationally intensive techniques of Bayesian analysis treat all numbers as potentially random variables; that is, as best described by probability distributions. The ensuing popularity of Bayesian inference is a striking example of transverse momentum of methods across fields, and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and epidemiology. \n\nThe chapter traces two important implications of this technique. First, because it is so computationally intensive, MCMC and Bayesian inference, although statistically powerful, are difficult to apply to many dimensional datasets. So Bayesian computation iconically figures the limits of contemporary data practices, with their ambitions to incorporate all available data into calculation. Second, in certain ways this technique challenges us to re-evaluate how we think about numbers. By following some of the ways numbers circulate through MCMC algorithms, we can discern to a semiotic-material faultline running through contemporary number formations. Numbers semiotically and materially embrace both events and degrees of belief. If numbers are crucial in the data economy, then instabilities in their mode of existence will affect much of what happens to data. While much of the machine learning taking place in commercial and operational settings is decidedly non-Bayesian, the popularity of MCMC and Bayesian approaches in contemporary sciences suggests a tension in what counts as number.\n\n\n## Abstract\n\n>Since its Baroque invention [@hacking_emergence_1975], probability has been a double-sided coin. On one side, it concerns degrees of belief (the so-called 'subjective' view), and on the other side, frequencies, or how often things happen in the world (the so-called 'objective' view). In the last few centuries, one side of this coin has come up more often -- the frequency version of probability. Yet, as many historians of statistics, and statisticians themselves recognise, probability as degree of belief has never disappeared. It has only occurred less often, and been less often the object of belief. This ineluctable entwining of belief and events, of subjective-objective faces, in probability seems quintessentially Baroque in its interweaving and folding together of inside and outside. Drawing on contemporary statistical practice, and Gilles Deleuze's understanding of monads as 'simple, inverse, distributive numbers' [@deleuze_fold_1993], this paper examines the resurgence of the probability as degree of belief in the face of a world seemingly teeming with data. It argues that in the last few decades of statistical practice associated especially with 'Bayesian inference' and the techniques of Markov Chain Monte Carlo (MCMC) simulation, we see a re-configured and super-imposed concept of probability taking shape. As these practices pervade diverse scientific fields, commerce, government and industry, we might be seeing a different epistemic materialisation taking shape in which beliefs and events are less separate. On the contrary, through computation, subjective belief is exteriorised in simulated events, and a certain staging of events are reshaped as updateable beliefs. \n\n\n## Introduction\n\n> \"We ran the election 66,000 times every night,\" said a senior official, describing the computer simulations the campaign ran to figure out Obama's odds of winning each swing state. \"And every morning we got the spit-out — here are your chances of winning these states. And that is how we allocated resources.\" [@scherer_how_2012]\n\nIn the US Presidential elections of November 2012, the data analysis team supporting the re-election of Barack Obama were said to be running a statistical model of the election 66,000 times every night [@scherer_how_2012]. Their model, relying on polling data, records of past voting behaviour, and many other databases, was guiding tactical decisions about everything from where the presidential candidate would speak, where advertising money would be spent, to the telephone calls that targeted individual citizens (for donations or their vote).  Widely reported in television news and internationally in print media (_Time_, _New York Times_, _The Observer_), the outstanding feature of Obama's re-election seems to me to be the figure of 66,000 nightly model runs. Why so many thousand runs? This question was not addressed in the media reports, nor surprisingly, addressed in the online discussion on blogs and other online forums that followed. A glimmering of an answer appears in more extended accounts of the Obama data analytics efforts [@issenberg_definitive_2012] that describe how, in contrast to the much smaller and traditional market research-based targeting of demographic groups used by the Republican campaign for Mitt Romney, the Obama re-election campaign focused on knowing, analysing and predicting what *individuals* would do in the election. This is one amongst many recent illustrations of the post-demographic power attributed to data. In post-demographic understandings of data, individuals rather than populations or sub-populations, appear as such. How can individuals appear in models? The answer is to be found, I suggest, in a decisive shift in probability practices. Hardly ever discussed in media accounts of the growth of big data,  certain shifts in the role played by probability change the meaning and value of data as such, and hence, everything that depends on data. \n\nA Baroque perspective helps in describing these recent mutations in probability.  Summarising his own account of the emergence of probability, the philosopher and historian Ian Hacking writes:\n\n>I claimed in _The Emergence of Probability_ that our idea of probability is a  Janus-faced mid-seventheenth-century mutation in the Renaissance idea of signs. It came into being with a frequency aspect and a degree-of-belief aspect [@hacking_taming_1990, 96].\n\nIndeed, in the work from 1975, Hacking, writing largely prior to the shifts in probability practice I discuss, claims that there was no probability prior to 1660 [@hacking_emergence_1975]. Not only is probability a Baroque invention, the fundamental instability that permits recent mutations in probability practice  has a distinctively Baroque flavour in the way that it combines something happening in the world with something that pertains to subjects. There is nothing controversial in Hacking's claim that probability is Janus-faced. Historian of statistics and statisticians themselves regularly speak about probability in the same way. They commonly contrast the frequentist and degree-of-belief, the *aleatory* and the *epistemic*, views of probability. Although the history of statistics shows various distributions and permutations of emphasis on the subjective and objective versions of probability, statisticians are now relatively happily normalised around a divided view of probability. \n\nFor instance, a well-regarded textbook of statistics written by Larry Wasserman introduces the idea of probability as event-related number in this way:\n\n> We will assign a real number $Pr(A)$ to every event $A$, called the **probability** of A [@wasserman_all_2003,3]\n\nNote that this number is 'real', meaning that it can take infinitely many values between 0 and 1; secondly, the number concerns events, where events are understood as subsets of all the possible outcomes in a given 'sample space' ('the **sample space** $\\Omega$ is the set of possible outcomes of an experiment.  ... Subsets of $\\Omega$ are called **Events**' [@wasserman_all_2003,3]).   Wasserman goes on to say: \n\n> There are many interpretations of $Pr(A)$. The common interpretations are frequencies and degrees of belief. ... The difference in interpretation will not matter much until we deal with statistical inference. There the differing interpretations lead to two schools of inference: the frequentists and Bayesian schools [@wasserman_all_2003, 6]. \n\nThe difference will only matter, suggests Wasserman, in relation to the style of statistical inference. However, it may be that even before the different interpretations of probability come into play,  the practice of assigning numbers to events in $\\Omega$ secretly transforms numbers. \n\n## Markov Chain Monte Carlo: an algorithm for subjectifying probability objectively?\n\nContemporary probability has become entwined with a particular mode of computation that convolutes the difference between the epistmic and aleatory faces of probability. This convolution supports increasingly post-demographic treatments of population, in which for instance, individuals attract probability distributions, as in Obama's data-intensive re-election campaign. This paper will not in any way trace the complicated historical emergence of probability and its development in various statistical approaches to knowing, deciding, classifying, normalising, governing, breeding, predicting and modelling. Historians of statistics have documented this in great detail, and tracked how statistics is implicated in power-knowledge in various settings [@mackenzie_statistical_1978;@stigler_history_1986; @hacking_taming_1990; @daston_how_1994; @porter_trust_1996]. In examining a salient contemporary treatment of probability, my concern is the problem of invention of forms of thought able to critically affirm mutations in probability today. These mutations arise, I suggest, in many, perhaps all, contemporary settings where populations, events, numbers and calculation are to be found. In seeking to unfold ways of thinking probability for social theory from computational practice, risks of scientism or scientocentrism abound. On this score, a Baroque sense of what happens offers at least tentative pointers to a different way of describing what is happening as aleatory and the epistemic senses of probability find themselves recombined. \n\n```{r gibbs_normal_bivar, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, fig.cap = 'Gibbs sampling of bivariate normal distribution', dpi=400} \n\n	source('mcmc_examples.R')\n	gibbs_normal_bivariate()\n```\n\nThe contour plot in Figure 1 was generated by a  statistical simulation technique called MCMC -- Markov Chain Monte Carlo simulation -- that has greatly transformed much statistical practices since the early 1990s (see [@mcgrayne_theory_2011] for a popular account). This very simple simulation of the contours of two normally-distributed sets of numbers shows two main things. The contour lines trace  the different values of the means ($\\mu_1, \\mu_2$) of the variables. For the time being, we need know nothing about what such peaks refer to, apart from the fact they are something to do with probability, with assigning numbers to events. A set of connected points starting on the side of the one of the peaks and clustering on the peak shows how the MCMC algorithm explores the contours. Peaks -- zones that attract events or beliefs -- are sometimes difficult to find in complicated terrain. MCMC is a way of finding peaks.  \n\nInvented during the 1950s, the MCMC technique is important in contemporary statistics, and especially in Bayesian statistics. It plays significant roles in applications such as image, speech and audio processing, computer vision, computer graphics, molecular biology and genomics, robotics, decision theory and information retrieval [@andrieu_introduction_2003, 37-38], but above all, in general statistic modelling. MCMC is usually called an *algorithm*: a series of precise operations that transform or  reshape data. Moreover, MCMC has been called one of 'the ten most influential algorithms' in twentieth century science and engineering [@andrieu_introduction_2003, 5]. But MCMC is not really an algorithm, or at least, if it is, it is an algorithm subject to various algorithmic implementations (for instance, Metropolis-Hastings and Gibbs Sampler are two popular implementations).\n\nIn all of these settings, MCMC is a way of simulating a sample of points distributed on a complicated curve or surface (see Figure 1). The MCMC technique addresses the problem of how to sense or feel  very uneven or folded distributions of numbers. It is a way of calculating areas or volumes whose curves, convolutions and hidden recesses elude geometrical spaces and perspectival vision. Accounts of MCMC emphasise the 'high-dimensional' spaces in which the algorithm works: ‘there are several high-dimensional problems, such as computing the volume of a convex body in *d* dimensions, for which MCMC simulation is the only known general approach for providing a solution within a reasonable time’ [@andrieu_introduction_2003,5]. Indeed, we could say that MCMC increasingly facilitates the fabrication of high-dimensional, convoluted data spaces. Simulating a sample of points on folded surfaces, it becomes possible to calculate the area or volume enclosed by the surface. This area or volume typically equates to a probability. MCMC, put in terms of the minimal formal definition of probability is a way of assigning real numbers to events, but events occurring within complicated sample spaces. \n\nWhat MCMC has added to the world is subtle yet indicative. In a history of the technique, Christian Robert and George Casella, two leading statisticians specializing in  MCMC,  write that  ‘Markov chain Monte Carlo changed our emphasis from “closed form” solutions to algorithms, expanded our impact to solving “real” applied problems and to improving numerical algorithms using statistical ideas, and led us into a world where “exact” now means “simulated”’ [@robert_history_2008,18].  This shift from ‘closed form’ solution to algorithms and a world where ‘exact means simulated’ might be all too easily framed by a post-modern sensibility as another example of the primacy of the simulacra over the original. But here, a Baroque sensibility, awake to the at once objective and subjective senses of probability, might allow us to approach MCMC less precipitously and less in terms of a crisis of referentiality. \n\nIn making sense of the change described by Robert and Casella, scientific histories of the technique are useful.  The brief version of the history of MCMC might run as follows:  physicists working on nuclear weapons at Los Alamas in the 1940s [@metropolis_monte_1949]} first devised ways of working with high-dimensional spaces in statistical mechanical approaches to physical processes such as crystallisation and nuclear fission and fusion. Their approach to statistical mechanics was later generalised by statisticians [@hastings_monte_1970]}. It was   taken up by ecologists working on spatial interactions in plant communities during the 1970s [@besag_spatial_1974],  revamped by computer scientists working on blurred image reconstruction [@geman_stochastic_1984], and then subsequently seized on again by statisticians in the early 1990s [@gelfand_sampling-based_1990]. In the 1990s, it became clear that the algorithm could make Bayesian inference — a general style of statistical reasoning that differs substantially from mainstream statistics in its treatment of probability [@mcgrayne_theory_2011] — practically useable in many situations. A vast, still continuing, expansion of Bayesian statistics ensued, nearly all of which relied on MCMC in some form or other. (Thompson Reuters Web of Knowledge shows 6 publications on MCMC in 1990, but over 1000 *each year* for the last five years in areas ranging from agricultural economics to zoology, from wind-power capacity prediction to modelling the decline of lesser sand eels in the North Sea; similarly NCBI Pubmed lists close to 4000 MCMC-related publications since 1990 in biomedical and life sciences, ranging from classification of new-born babies EEGs to within-farm transmission of foot and mouth disease; searches on 'Bayesian' yield many more results).  In the social sciences too, political scientists regularly use MCMC in their work because their research terrain — elections, opinions, voting patterns — little resembles the image of events projected by mainstream statistics: independent, identically distributed (’iid’) events staged in experiments. When brought together with Bayesian inference, MCMC allows, as the political scientist Jeff Gill observes, all unknown quantities to be ‘treated probabilistically’ [@gill_introduction_2011,1]. We can begin to see why the Obama re-election team might have been running their model 66,000 times each night. In short, MCMC allows, at least in principle,  *every* number to be treated as a probability. This a key shift in the probability practice, and one that opens the way to post-demographic conceptions of individuation. \n\nA more general affirmation of probabilities is not unprecedented, at least philosophically. As Hacking reports, C.S Peirce, the American pragmatist philosopher who spent much of his life measuring things for the US Coastal Survey, was already arguing against *any* constant numbers, social or natural, in the late nineteenth century [@hacking_taming_1990, 200]. Only statistical stabilities mattered. A century later, the popularisation of MCMC perhaps surpasses what Peirce (and Hacking?) had in mind in saying there are only statistical stabilities. Peirce envisioned a universe filled with chance events ('chance pours in at every sense'), amidst which islands of pragmatic sense emerged standing on habit and consensus. By contrast, treating every number as a probability, as facilitated by MCMC, does not simply generalise probability by saying that the world is indeed aleatory, and that our beliefs are rolling stones on the bed of a fast-flowing stream. On the contrary, as I will seek to show, it allows a hyper-subjectified sense of probability to take shape precisely through its exteriorisation in folded flows of random numbers. A technique of computational simulation distributes numbers in the world, it assigns numbers of events, but largely in the service of modifying, limiting, quantifying uncertainties associated with belief. This folding together of subjective and objective, of epistemic and aleatory senses of probability can be thought as a neo-Baroque monadological mode of probability.\n\n## Distributions, individuals and random variables\n\nAgain, the Baroque sense of probability, especially as articulated by G.W. Leibniz, the 'first philosopher of probability' [@hacking_emergence_1975, 57], is helpful in keeping matters more open. Let us return to the typical problem of the individual voter as envisaged by the Obama re-election team. Leibniz’s famously impossible claim that each monad includes the whole world is, according to Gilles Deleuze, actually a claim about numbers in variation. Through numbers, understood in a somewhat unorthodox way, monads — the parts of the world —  can include the whole world. This is an especially slippery point in Deleuze’s analysis of Leibniz’s work, but one that has strong contemporary resonances. Deleuze says: ‘for Leibniz, the monad is clearly the most “simple” number, that is, the inverse, reciprocal, harmonic number’ [@deleuze_fold_1993, 129]. These kinds of philosophical formulations raise many questions, but the very possibility of individualising a number into the root, or the radix of the monad, seems to me quite important if we are interested in developing ways of engaging affirmatively with number, without granting it the pure ontological primacy of mathesis or exiling it to the badlands of alienated reason.  \n\nHaving a world — for the monad is a mode of having a world by including it — as a number entails a very different notion of *having* and a somewhat different notion of number. The symbolic expression of this inclusion is:\n\n>$\\frac{1}{\\infty}$\n\nThe numerator points to the single individual, the denominator, $\\infty$, suggests a world. The fraction or ratio of 1 to $\\infty$ tends towards a vanishingly small difference (zero), yet one whose division passes through all numbers (the whole world). In this process of convergence towards zero (rather than infinity), Deleuze writes that for in the Baroque, ‘the painting-window [of Renaissance perspective] is replaced by tabulation, the grid on which lines, numbers and changing characters are inscribed. … Leibniz’s monad would be just a such grid’ (27). This suggests a different notion of the subject, no longer the subject of the world-view who sees along straight lines that converge at an infinite distance (the subject as locus of reason, experience or intentionality), but as ‘the truth of a variation’ (20) played out in numbers and characters tabulated on gridded screens. Alongside the individual voters modelled by the Obama re-election team, we might think of border control officers viewing numerical, predictions of whether a particular passenger arriving on a flight is likely to present a security risk [@amoore_lines_2009], financial traders viewing changing prices for a currency or financial derivative on their screens [@knorr-cetina_traders_2002], a genomic researcher deciding whether the alignment scores between two different DNA sequences suggests a phylogenetic relationship, or a player in a large online multiplayer games such as World of Warcraft quickly checking the fatigue levels of their character before deciding what to do: these are all typical cases where numbers in variation populate the monadic grid. But there is also a shift in the understanding of number here. In relation to the monad as inverse number, Deleuze writes ‘the inverse number has special traits: it is infinite or infinitely small, but also, by opposition to the natural number, which is collective, it is individual and distributive’ (129). Here too, the suggestion that numbers possess traits such as being ‘individual and distributive’ rather than collective resonates with contemporary transformations in probability practice. Like the connected points trekking toward the peak in a MCMC computation, distributive numbers -- such as contemporary probabilities -- move along  supple lines  through experience, and across coarse distinctions between subject-object, nature-culture, self-other. \n\nFrom a Baroque perspective, the flat operational definition of probability as mapping events to real numbers seethes with convolutions.  Everywhere, numbers are increasingly in variation, and display increasingly distributional characteristics.  While some events have discrete outcomes (Obama was re-elected in 2012), many happenings are not. In Lancaster here in north-west England, the probability of rain on a given day would be say 70%, but days have very different amounts of rain.  Some days, it rains once briefly and lightly. Other days it rains frequently and heavily. A gamut of rain events can occur, and each would distribute different amounts of water on Lancaster. Given the amount of variation,  a much better way to face the weather is to say that Lancaster's rain is a *random variable*: ‘a random variable is a mapping that assigns a real number to each outcome’ [@wasserman_all_2003,19]. If events have probabilities, random variables have a range of outcomes that are mapped to numbers. Again, the deceptive simplicity of 'mapping' hides many variations. Mapping is a form of one-to-one correspondence, usually expressed as a mathematical function. A random variable links events to numbers through functions.  Again, all this remains rather formal. The practical reality of random variables is variation, variations that are  visually expressed by curves and by probability distributions. \n\n```{r  distributions, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Distributions'} \n\n	source('mcmc_examples.R')\n	generate_distributions()\n```\nProbability distributions are a common way of showing and  talking about random variables. The curves shown in Figure 2 could refer to almost anything (the chances of rain at different times of day in Lancaster, the seasonal variation in precipitation, etc.). These distributions appear in countless shapes and forms in scientific, government and popular literature of many different kinds. Statistical graphics have a rich history and semiology that I do not discuss here (see [@bertin_semiology_1983]). Perhaps the most famous function or mapping is the normal or Gaussian distribution:\n\n>$f(x;\\mu, \\sigma^2) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2}(\\frac{x-\\mu}{\\sigma})^2}$\n\nThis  function, whose mathematics were intensively worked over during the 18-19th centuries, has a power-laden biopolitical history closely tied with knowledges and governing of  national and other  populations. The key symbols here include $\\mu$, the mean and $\\sigma$, the variance. These two parameters together describe  the shape of the curve. Given $\\mu$ and $\\sigma$, it become possible to map different outcomes to probabilities. Given the normal distribution, it is possible, under certain circumstances, to effectively subjectify someone on the spot. For instance, if an educational psychologist indicates to someone that their intelligence lies towards the left-hand side of the normal curve peak in Figure 2 (and hence less than the population mean), they quickly render them somehow subject to the normal curve. But statistics uses dozens of different probability distributions to map continuous and discrete variations to real numbers. Other probability distributions abound — normal (Gaussian), uniform, Cauchy exponential, gamma, beta,  hypergeometric, binomial, Poisson, chi-squared, Boltzmann-Gibbs distributions, etc (see [@nist_2012] for a gallery of distributions) — because outcomes occur in widely differing patterns. The  queuing times at airport check-ins do not, for instance, easily fit a normal distribution. Queues are usually modelled using a Poisson distribution, which unfortunately for travellers, distributes waiting times very differently.  Similarly, it might be better to think of the probability of rain today in Lancaster in terms of a Poisson distribution that models that queue of clouds in the Atlantic just waiting to land on the northwest coast of England. Rather than addressing the question of if it will rain or not, a Poisson-based model might address the question of how soon.\n\nThe diverse range of probability distributions — and we will see below some reasons why we can expect them to proliferate in certain settings — attests to the variety of ways in which events might be mapped to real numbers. Despite  the sometime forbidding mathematical equations, the term *distribution* emphasises a quite material or tangible way of thinking about how probabilities vary. The curves in both Figure 1 and Figure 2 are examples of the most common mathematical descriptions in any data analysis setting: they are  *probability density* functions (pdf). (There are also  *probability mass* functions for variables that have discrete values; for instance: 1,2,3,4,5). Pdfs such as the Gaussian function shown above are usually graphed as a curve that indicates how likely a random variable is to take on a particular value. In many cases, statistical practice seeks to estimate distribution functions such as pdfs (or their close relatives, cdfs — *cumulative distribution functions*) for the given data. Statisticians speak of 'fitting a density' to data, emphasising their assumption that events can be incorporated in the forms of probability distributions. The underlying probability distribution is in principle ‘unobservable’ as such, but a probability density function is  assumed to give rise to all the variations in data gathered through experiments and observations. The task is to estimate the shape of that curve, and its defining parameters (means, variance, etc.). Given that curve, areas under the pdf equate to the likely range of value of a variable. While the total 'probability mass' under the probability density function curve always must be equal to one (since the combined probability of all possible outcomes = 1), finding the area under particular parts of the curve is a key issue. Finding the area under probability density curves becomes the way in which many epistemic processes envisage lived states of affairs as random variables or as numbers in variation.\n\n## Multiplying curves\n\nIn the Bayesian statistics popular since the 1990s, any number, including the defining parameters of other distributions such as the mean, can be treated as a random variable. In principle, any number becomes probabilistic, that is, expressible as a probability distribution. Indeed, the 'Bayesian revolution' in statistics pivots on multiplying probabilities in both senses of the term: proliferation and combining in a  product. Bayes Theorem, known since the 18th century, is usually presented in the first few pages of any probability textbook, as a way of relating probabilities to each other by multiplying them together:\n\n>$Pr(A|B) = \\frac{Pr(B|A) Pr(A)}{Pr(B)}$\n\nwhere  $Pr(A)$ and $Pr(B)$ are two probabilities, and $Pr(A\\vert{B})$ is the probability of $A$ given $B$, and $Pr(B\\vert{A})$,  conversely, is the probability of $B$ given $A$. Again, bearing in mind the different notions of probability discussed above (subjective - objective; degree of belief vs. frequency of outcome), this formula can be read in different ways. Bayes Theorem expresses the relation between probabilities through multiplication. If the $A$ and $B$ are random variables, then the curves and lines of their respective probability densities are being multiplied to produce higher-dimensional surfaces, as we saw in the very simple illustration of Figure 1 where $A$ and $B$ were random variables described by a Gaussian function.  The *joint probability distribution* that results from the multiplication of individual probability densities still has the same total mass (1), but now distributed in a different volume. As the number of random variables grows, the surfaces open onto higher dimensions, and cannot be graphed easily. \n\nKnowledge of how to mathematically manipulate the functions  associated with particular probability distributions has accreted over several centuries. They all share a common purpose: to express the distribution of outcomes associated  with certain events. Bringing together random variables in models,  even in the basic form of the Bayes Rule where $B$ is conditioned by $A$, means  multiplying probability density functions. The total mass of the the probability always remains the same (i.e. 1), but the question is where it is distributed. As  the simulated joint probability density of Figure 1 shows, certain zones of a joint probability are much more elevated than others, and these peaks suggest more likely events in the range of possible outcomes.\n\nThe mathematical difficulties posed as different random variables or probability cross-hatch each other relates to that other great Baroque mathematical invention, calculus. If calculus made possible so many different calculations of rates of change, calculations that profoundly affected senses of space, time, and increasingly growth, variation and change more generally (hence, Deleuze’s work both on Leibniz and in his philosophical conceptualisation of difference more generally is deeply imbricated with differential calculus [@deleuze_fold_1993]), it also ran into many obstacles in relations to calculations of probability. Calculating the area under a curve in order to estimate variables is a problem of integration. That is, the area under a curve is given  by the *integral* of the probability density function. If the probability distribution cannot be normalized, then the area under the curve is much harder to estimate. The ornate and at times bewildering apparatus of statistical tests and procedures found in statistics (t-test, the Wald test, Pearson's $\\chi^2$ test for multinomial data, analysis of variance, etc), as well as the antagonisms between different schools of statistics (Bayesian vs frequentist), largely obscures the continuous trajectory that transforms the problem  of probability  into a problem of measuring areas under curves, or volumes under surfaces. Sometimes estimates of probability are understood as a measure of our belief about what happens (as in Bayesian analysis) and sometimes it is understood as a measure of the frequency with which events occur in the world (as in frequentist statistics). Although there is now a very extensive technical and philosophical literature on the differences between Bayesian and frequentist statistics, more or less the same computations can be in the service of either standpoint. So this is not the main point I want to pursue here. \n\nFrom the perspective of a Baroque sensibility, mathematical functions for working with different shapes, areas, densities and masses of probability distributions have been combined to support estimations, inferences and predictions of change and growth in many processes. Through the generating role played by probability distributions in almost any field of science, government, industry, technology and increasingly media and commerce we could name, probability mixes through almost all forms of relationality. In calculations of insurance risk, in algorithms for error correction, in psychological testing, in climate models or biodiversity surveys, just to name a few, probability distributions ground all inference. Although certain distributions, such as the normal, Poisson or binomial, etc., have dominated in these developments, this was largely because it has been easier to calculate estimates of their main parameters (mean, variance, etc) than those pertaining to less familiar distributions. In terms of shape, area and hence probability density, the normal distribution is one of the most tractable curves to work with. Even with the various data transformations and normalizations developed over several centuries, other probability distributions have been harder to work with. (They lack the 'closed form' solutions that Robert and Casella refer to.) This occasions many disputes in the history of statistics over ‘curve-fitting’ to normal or other mathematically tractable distributions as arbitrary and unjustified [@hacking_taming_1990, 164]. In whatever way these disputes have been resolved (see [@mackenzie_statistical_1978] for an early 20th century example), the practical problem of calculating the area under all or some part of the curve has skewed what we believe about many different things (about sub-atomic particles, climate change, likelihood of glaucoma, the chances of rain today, Obama's chance of re-election, etc.) towards some forms of probabilitity distribution more than others. The normal probability density function tends to be the norm.\n\n## Good approximations to probabilities\n\nThe proliferation of normal curves and surfaces brings us back to MCMC, the technique that inaugurates 'a world where “exact” now means “simulated”' [@robert_history_2008,18]. MCMC is, as mentioned above, a technique for simulating samples from high-dimensional or complicated concave volumes. In other words, it is a way of exploring the contoured and folded surfaces generated when flows of data or random variables come together in one joint probability distribution. These surfaces, generated by the combinations of mathematical functions or probability distributions are not easy to see or explore,  except in the exceptional cases where calculus can deliver a deductive analytical ‘closed form’ solution to the problems of integration (finding the area) and differentiation (finding the distribution function for one variable). By contrast, MCMC effectively simulates some important parts of the surface, and in simulating convoluted volumes, loosens the analytical ties that bind probability to certain well-characterised analytical regular forms such as the normal curve. \n\nIn this simulation of folded and multiplied probability distributions, the lines between objective and subjective, or aleatory and epistemic probability, begin to shift. There is perhaps something increasingly monadological about MCMC, as we can see if we revisit the history of the technique with less an eye on the events leading up to the [Bayesian] revolution, and more with an eye on what is being folded in, and what  is unfolding as the technique develops. The starting point here, and it is found in almost every textbook on MCMC-related methods is the computer as random number generator. Rather than Peirce's 'chance pouring in at every sense,' it might be better to speak of chance pouring out of MCMC on every event. \n\n```{r generate_distributions, echo=FALSE, warning=FALSE, fig.cap='Simulated distributions'} \n	source('mcmc_examples.R')\n	generate_beta_distribution()\n```\nFigure 3 shows two plots. The one on the left plots 10,000 computer generated random numbers between 0 and 1, and as expected, or hoped, they are more less uniformly distributed between 0 and 1. This is simulation of the simplest probability distribution of all, the *uniform* probability distribution in which all events are equally likely. The plot on the right derives from the same random numbers, but shows a different probability distribution in which events mapped to numbers close to 0 are much more likely than events close to 1. What has happened here? The reshaping of the flow of numbers depends on a very simple multiplication of the simulated uniform distribution by itself:  \n\n> A real function of a random variable is another random variable. Random variables with a wide variety of distributions can be obtained by transforming a standard uniform random variable $U \\approx UNIF(0, 1)$ \n. Let $U \\approx UNIF(0, 1)$.\n> ... We seek the distribution of $X = U^2$ [@suess_introduction_2010, 32].\n\nIt happens that multiplying a uniform distribution by itself ($U^2$) produces an instance of another important distribution, the *Beta* distribution, shown on the right of Figure 3. Now it would be possible to produce that curve of a beta distribution analytically, by plotting points generated by the *Beta* probability density function:\n\n>$f(x; \\alpha, \\beta)= constant \\bullet x^{\\alpha-1}(1-x)^\\beta-1$\n\nwhere $\\alpha=0.5$ and $\\beta=1$. But in the case of the plots shown on the right of Figure 3, the shape has been generated from a flow of random variables, So, from a flow of random numbers, generated by the computer (using an *pseudo-random* number generator algorithm), more random variables result, but with different shapes or probability densities.  As Robert and Casella write, 'the point is that a supply of random variables can be used to generate different distributions' [@robert_introducing_2010,p.44]. Indeed, this is the principle of all Monte Carlo simulations, methods that 'rely on the possibility of producing (with a computer) a supposedly endless flow of random variables for well-known or new distributions' [@robert_introducing_2010, 42]. The example  shown here is really elementary in terms of the distribution and dimensionality of the random variables involve, but it illustrates a general practice underpinning the MCMC technique: the reshaping of the 'supposedly endless flow of random variables' to produce known or new distributions.  \n\nThis practice is already monadological in the sense that it seems to bring probability inside the computer. Monte Carlo simulations render computers as substitutes for events in the world, and they render that world more manipulable by knowing subjects. It is hardly surprising that scientists working at the epicentre of the ‘closed world’ [@edwards_closed_1996] of post-WWII nuclear weapons research should develop a technique that allows the world to move in this way. In 1953, Metropolis, the Rosenbluths and and the Tellers were calculating ‘the properties of any substance which may be considered as composing of interacting individual molecules’ [@metropolis_equation_1953, 1087]  (for instance, the flux of neutrons in a hydrogen bomb detonation). In their short, but still widely cited paper (over 20,000 citations according to Google Scholar; over 14,000 according to Thomson Reuters Web of Knowledge), they describe how they used computer simulation to deal with the number of possible interactions in a substance, and to thereby come up with a statistical description of the properties of the substance. Their model system consists of a square containing only a few hundred particles. These particles are at various distances from each other and exert forces (electric, magnetic, etc.) on each other dependent on the distance. In order to estimate the probability that the substance will be in any particular state (fissioning, vibrating, crystallising, cooling down,  etc.), they needed to integrate over the many dimensional space comprising all the distance and forces between the particles. (This space is a typical multivariate joint distribution.) As they write, ‘it is evidently impossible to carry out a several hundred dimensional integral by the usual numerical methods, so we resort to the Monte Carlo method’ (1088), a method that Nicholas Metropolis and Stanislaw Ulam had already descibed in an earlier paper [@metropolis_monte_1949]. Here the problem is that the turbulent randomness of events in a square containing a few hundred particles thwarts calculations of the physical properties of the substance. They substitute for that non-integrable turbulent randomness a controlled flow of random variables generated by a computer. While still somewhat random (i.e. pseudo-random), these Monte Carlo variables taken together approximate to the integral of the many dimensional space. In monadological terms, Monte Carlo simulation attenuates the distance between the aleatory and epistemic poles of probability. While the computer is regarded as aleatory in its capacity to generate seemingly random numbers, it is strongly epistemic in its power to marshall these numbers into shapes that cannot be analysed using the 'usual numerical methods' (for instance, of integral calculus). \n\nMetropolis and co-authors immediately go on to say, however, that they cannot just sample a random set of points. The range of events is not equally accessible to simulation. The joint probability distribution of the system is quite uneven (that is, highly folded). Randomly sampled points are likely to lie in low probability regions (valleys and plains), whereas they are interested in the high probability peaks.  Instead they propose a move which becomes the modus operandi of subsequent MCMC work (and hence justifies the high citation count): ‘we place the N particles in any configuration … then we move each of particles in succession’ (1088). Here is the beginning of the ‘random walk’ or 'Markov chain' technique that distinguishes MCMC from Monte Carlo simulation more generally. As well as generating a sample of random variables, they submit each variable to a test. Physically, the image here is that they displace each particle by a small random amount. Having moved the particle/variable, they  calculate the resulting slight change in the overall system state, and then decide whether that particular move puts the system in a more or less probable state. If that state is more likely, the move is allowed; otherwise the particle goes back to  where it was. Having carried out this process of small moves for all the particles, they can calculate the overall system state or property.  The process of randomly displacing the particles by a small amount, and always moving to the more probable states, effectively explores the bumpy topography of the joint probability density. In many minute moves, the simulation begins to migrate all the randomly generated values points towards the peaks that represent interestingly high probabilities.\n\n```{r metrohast_normal, echo=FALSE, fig.cap='Bivariate normal distribution generated using MCMC'} \n	generate_normal_bivariate_metro_hastings()\n```\n\nIn Figure 4, a toy example, the MCMC technique has been used to generate a simulate a bivariate normal probability distribution. (The example comes from [@suess_introduction_2010, 177-178].) We have already seen a bivariate normal distribution (see Figure 1), but now the distribution has been produced by drawing on  the uniformly distributed flow of random variables produced as an MCMC algorithm (actually in this case, the Metropolis-Hastings implementation of MCMC) runs, rather than by generating values using the mathematical function for the probability density. On the left hand side, we see the path by taken a single random variable as it moves closer to the central peak of the distribution, the zone of highest probability.  On the right hand side, we can see the cloud of variables clustered around the central peak of the bivariate normal distribution after the MCMC technique has run 40,000 times. The Metropolis-Hastings implementation and the perhaps more popular Gibbs sampler implementation of the MCMC technique share this idea of waiting to see where flows of random variables end up and hoping that distribution of these values will approximate a 'a desired long-run distribution' [@suess_introduction_2010, 150]. \n\n## How are events and beliefs combined in MCMC? Probability in  Markov Chains\n\n'Consider the Markov chain defined by $X^{t+1} = \\sigma X^{t} + \\epsilon(t)$ where $\\epsilon(t) ~ \\mathcal{U}=(0,1)$', write Robert & Casella [@robert_introducing_2010, p.169]. This Markov chain knows nothing of the normal distribution, yet simulates it by piling up large numbers of random numbers. \n\n```{r markov_chain, echo=FALSE, cache=TRUE, fig.cap='Markov-chain generated normal distribution', dpi=400}\n	source('mcmc_examples.R')\n	generate_markov()\n```\n\nIt is likely that this is something that  the Obama data analytics team were doing each night. For present purposes, however, the point is that these supplementary moves - the slight perturbations and adjustments that permit a kind of exploration of the topography of the probability density surface -- remain monadological in the sense that they express a world within a computational setting. This is not to say that the world is clearly and distinctly expressed in a closed monad. The simulated world is not immediately accessible or transparent. It has to be explored through the invention of techniques that render its variations and differences somehow sensible. \n\nMorever, even though MCMC suggests that events might be simulated in order to estimate their probabilities, it practically acts as a way of modifying existing beliefs through data. We already glimpsed this in Bayes Theorem: it multiplies random variables  With apologies for the slightly forbidding typography, the probability:\n\n>$f(\\mathbf{x}\\vert\\theta) = L(\\theta) = \\prod_{i}f(x_i\\vert\\theta)$\n\nis a likelihood function, a function that describes how likely some data (from measurements, observations, experiments, transactions, etc)  is, given a particular value of $\\theta$: 'it provides the chances of each value of $\\theta$ having led to that observed value of $x$' [@gamerman_markov_2006, 43]. $\\theta$ is a parameter of some kind that describes the shape of a probability distribution (such as mean and variance for normal distributions, $\\alpha$, $\\beta$ for beta distributions, etc.). The typography of this expression is important. The value $\\mathbf{x}$ is bold font because it stands for a random variable, a variable that is observed to take a  range of values (continuous or discrete). The large symbol $\\prod_i$ stands for the product or multiplication of the probabilities of all the different observed values of $x$ (not bold),  *given* a particular value of $\\theta$. All of this highlights a reversal that stands centre-stage in the contemporary usages of MCMC: the data is evaluated in the light of prior *belief* about the values of the key parameters of the probability distributions. Folding together data and belief through MCMC does not exactly blur what Hacking terms the 'fundamental distinction' [@hacking_taming_1990, 98] between the two faces of probability, the aleatory and the epistemic,  but it certainly entwines them differently.  The epistemic pours out into the aleatory, and the aleatory flows back into the epistemic.  This increased convolution  of the two faces of probability in MCMC comes about only via the many detours of the Markov-chained random variables creeping across the multi-dimensional topography of the joint probability distributions. \n\nWhen in 1990, ‘Sampling-Based Approaches to Calculating Marginal Densities’ the article that set off the 'Bayesian revolution' [@robert_introducing_2010, 9], appeared in _Journal of the American Statistical Association_ [@gelfand_sampling-based_1990], the  statisticians Alan Gelfand and Adrian Smith refer to this altered topology. They state that the problem they are addressing is how ‘to obtain numerical estimates of nonanalytically available marginal densities of some or all [the collection of random variables] simply by means of simulated samples from available conditional distributions, and without recourse to sophisticated numerical analytic methods’ [@gelfand_sampling-based_1990, 398]. Their formulation emphasises the mixture of using some things that are accessible to explore things that are not directly accessible. \n\nThey take up the Gibbs sampler algorithm as developed by [@geman_stochastic_1984] for image-processing, investigate some of its formal properties (convergence), and then set out a number of mainstream statistical problems that could be done differently using MCMC and the Gibbs sampler in particular.They show how  MCMC facilitates Bayesian statistical inference  through six illustrative mainstream examples: multinomial models, hierarchical models, multivariate normal sampling, variance components, and the k-group normal means model. The details of these examples need not detain, but each of the illustrations in the paper shows how previously difficult problems of Bayesian inference can be carried out by sampling simulations. As they state in another paper from the same year, ‘the potential of the methodology is enormous, rendering straightforward the analysis of a number of problems hitherto regarded as intractable’ [@gelfand_illustration_1990, 984]. A rapid convergence on MCMC follows from the 1990s onwards. Gibbs samplers appear in desktop computer software such as the widely used WinBUGS ('Windows Bayes Using Gibbs Sampler') written by statisticians at Cambridge University in the early 1990s [@lunn_winbugs-bayesian_2000], and MCMC quickly moves into the different disciplines and applications found today.\n\n\n## Conclusion\n\nAlthough widely used, the algorithms, statistical techniques and practices I have been describing are not easily visible or known. Against the common tendency to see MCMC as the reassertion of a neglected interpretation of probability (the degrees of belief version) in the face of its hegemonic treatment in terms of frequencies, I have suggested describing them from a Baroque perspective allows us to hold different interpretations at the same time, without contradiction. Rather than seeing the aleatory and epistemic, world and subject antagonistically in probability, we see  their convoluted embrace in techniques such as MCMC. This embrace can be  seen as a hyper-subjective exteriority, or a hyper-objective interiority depending on one's starting point on the twisted loop running between event and belief. For our purposes, however, neither the objectivist (frequentists) or subjective (Bayesian) interpretations of probability work well. The Bayesian interpretation has the virtue of treating all variables, parameters and numbers as probability distributions. All parameters and parameters in a Bayesian framework can become random variables subject to degrees of belief or credibility.  As a distributive treatment of number, in Bayesian inference, ‘the truth of a variation appears to a subject’ [@deleuze_fold_1993, 20]. While Bayesian statistics seem to me to lie closer to a Baroque treatment of data, understanding probability as ‘subjective’ tends to gloss over the ways in which MCMC supports inference by generating  vast quantities of numbers in the world (the 66,000 nightly runs of Obama's election model). Bayesian statistics still needs numbers from the world. It draws on constant supplies of numbers that vary without an obvious pattern or predictability. This is not a problem with the technique itself, a technique whose capacity to generate numbers in the world has been fabulously productive. But it does suggest that we need to think differently about how numbers happen today. \n\nMy treatment of probability has been more oriented by a Baroque sensibility attuned to the curves, folds, convolutions, mixtures and textures that appear when probabilities multiply. Many of Gilles Deleuze’s formulations of the Baroque converge on curves. He suggests, for instance, that the world ‘is the infinite curve that touches at an infinity of points an infinity of curves, the curve with a unique variable, the convergent series of all series’ [@deleuze_fold_1993, 24]. This description of the world as curve, or the curve of the world, resonates strongly in the scene I have been describing, both in the general account of random variables and multiplying probabilities and in MCMC as a technique that crafts distributive numbers by playing on the convergence of series of numbers. In Deleuze’s account of the fold, curves act as causes: 'the presence of a curved element acts as a cause' [@deleuze_fold_1993, 17]. This claim begins to make more sense as we see curves proliferate, and as we see how finding, generating, exploring and shaping curves become more common practices in so many settings (asthma studies, multiplayer game coordination, epidemiological modelling, spam filtering,etc.). The particles, maps, images and populations comprising our world figure in a Baroque sensibility as curves. When Deleuze writes, following Leibniz, ‘the world is the infinite curve that touches at an infinity of points,’ he could be describing how curves generated by distributive numbers populate our worlds with shapes, textures, images, sounds and movements derived from convergent series of numbers.\n\nWhere are we in the folded volumes of data that result? In tracing some of the operative functions that generate curved surfaces in the high-dimensional spaces of contemporary data, we have some chance of finding what in our sensation of change, movement, texture or image is attributable to distributive numbers. MCMC creates convergences between numbers coming from the world, numbers coming from belief or subjects, and numbers that lie somewhere between the world and knowing subject. It would be possible to trace other data-related techniques along the same lines. For instance, the rise of bootstrap sampling as a way of estimating statistical errors [@efron_bootstrap_1979], or the emergence of the Expectation Maximisation (EM) algorithm [@dempster_maximum_1977] would be other perhaps less rich examples of how simulation supports distributive numbers. The example of MCMC offers something that lies closer to the power of curves and the monad as individual number. \n\nDeleuze describes what how monads include the world in many different ways in the fold. In nearly all of them, the monad is differentiating and integrating: ‘each monad includes the world as infinite series of infinitely small units, but establishes differential relations and integrations only upon a limited portion of the series, such that the monads themselves enter in an infinite series of inverse numbers’ [@deleuze_fold_1993, 130]. The curves that MCMC integrates include a limited portion of the world. Curves express the world (and indeed the state of the world is often expressed as a series of curves: commodity prices, population growth/decline, economic growth, etc.), and curves are in the world: ‘the world is what the soul expresses,’ as Deleuze points out,  just 'because those curves are in the world' [@deleuze_fold_1993, 26]. Underlying much of what I have been describing about distributive numbers, random variables, probability distributions, and the MCMC techniques of sampling from joint probability distributions, there has been some excitation, some tentative desire, to say that it would be good, from the perspective of the Baroque sensibility, not to diminish or flatten these curves, but to find how we are included in them. By this I don’t mean everyone should be using MCMC in order to update their beliefs on various matters. We are all already affected by MCMC in various ways (as for instance, when one of the several hundred million XBox-Live players finds themselves pitted against a new opponent online, the match has been arranged by an MCMC-based player-matching system that is constantly updating its profile of player abilities using game data; or a voter in the US receives a telephone call from a Democrat campaign volunteer; etc).  To the extent that we are monadic, to the extent that we become are 'the most simple numbers',  individual and distributive inverse numbers,\n\n> $\\frac{1}{\\infty}$ \n\nthat can only be integrated in simulated surfaces and volumes, then the problem becomes how to integrate and differentiate well. What in those operative functions that grid our world can be reused politically and philosophically? \n\n\n\n## References\n\n\n \n\n```{r bivar_norm, echo=FALSE, warning=FALSE, message=FALSE, fig.cap='Folded surfaces'} \n\n	source('mcmc_examples.R')\n	generate_bivar_norm()\n	generate_folded_surface()\n```",
 			"file": "ch4_probability/ch_naive_informed.rmd",
-			"file_size": 59374,
-			"file_write_time": 130389584627510720,
 			"settings":
 			{
-				"buffer_size": 59182,
+				"buffer_size": 59595,
 				"line_ending": "Unix"
 			}
 		},
@@ -431,10 +428,7 @@
 			}
 		},
 		{
-			"contents": "# Book Proposal\n\n## Into the data: learning from machine learning\n\nAdrian Mackenzie\nSociology, Lancaster University\nBailrigg, LA14YD, UK\n\n## Overview\n\n>The key question isn't 'How much will be automated?' It's how we'll conceive of whatever _can't_ be automated at a given time [@lanier_who_2013, 77].\n\nThis book sets out to construct some ways of critically engaging with data that neither blithely affirm beliefs in the power of data, nor reject beliefs in data as pure hype, nor quails in the face of an incomprehensibly hypercomplex technological revolution. It focuses empirically on certain power-laden practices and techniques at the heart of  contemporary media, sciences, government, commerce and industry: *machine learning.* Machine learning is widely used in industry, science, commerce, media and government to program computers to find patterns, associations, and correlations, to classify events and make predictions on a large scale. The Microsoft Kinect motion-sensing device  is a mundane example. It uses a machine learning technique called 'decision trees' to identify and classify gestures and body movements, and these gestures, poses and movements become ways of playing a game. Similar predictive and classificatory mechanisms appear in many gadgets (for instance, the face recognition feature in many digital cameras). Almost any search engines' results are shaped by machine learning algorithms,  as are many of the recommendations and suggestions generated by social media platforms. Standard scientific applications include detection of abnormal tissue growths in medical scans or the classification of biological function in whole genome sequencing projects.  Machine learning, as a set of techniques for classifying and predicting, is widely heralded in the form of data mining, predictive analytics or knowledge discovery as a vital component of contemporary innovation and economic growth. Machine learning is heavily used in search engines, social network media, high-frequency trading, in increasingly data-intensive scientific practices in astrophysics, genomics, ecology or material science, in manifold devices and control systems, and of course, by government intelligence and security agencies in massive data surveillance programs. \n\nThere is intense technical interest and investment in these techniques, and they have developed rapidly in the last two decades. While many commentators acknowledge the importance of algorithms, machine learning techniques have hardly been discussed in humanities and social science literature, even in digital humanities, which heavily relies on them (for instance, in the growing use of 'topic models'). Examining  key machine learning techniques and practices drawn from social network media, finance markets, image processing, robotics, and contemporary sciences such as genomics and epidemiology, _Into the data_ does not exhaustively describe who does machine learning, where and how. It asks how and why such techniques have moved or circulated so widely, and how their wide circulation might be understood. It suggests that the growth of machine learning does signal changes in modes of knowing and actin, and these changes might imply altered modes of thought for the humanities and social sciences. Seeking to make sense of these changes, *In the Data* is a self-reflexive experiment in writing for humanities and social science audiences that combines code, data and diagram, text, and number with the goal of materially imagining doing machine learning differently. In both analysing and re-telling techniques found at the intersection of contemporary sciences, business, government,  network and digital media, the book attempts to both make potent data practices more visible, and to facilitate greater  overlaps and entanglements between various science and political, economic and cultural processes associated with data. \n\n### Key aims for the book are:\n\n- The modes of existence of data  (in the forms of 'big data,' 'open data,' the rise of 'data analytics' and 'data science') should be analysed critically by situating them in relation to specific settings, techniques and practices. These settings, techniques and practices have complex genealogies, criss-crossing sciences, industries, military, commercial and governmental domains. While critical accounts and indeed skepticism about the value of data are appearing,   the provenance and distribution of data practices such as learning algorithms, predictive modelling and classification needs much more critical de-ciphering and empirical attention. This book focuses on the role of machine learning (or data-mining, as it is called in some domains) because the dynamic and varied life of these techniques themselves have received least attention of all. So much depends on and is decided by the models, algorithms and techniques of machine learning, yet they are hardly ever discussed in their own right.\n\n- Humanities and social science responses to data techniques should be methodologically and conceptually inventive, and include appropriation and re-purposing of the techniques and practices. This is major undertaking for the book. It seeks to a broad-ranging way of thinking about data, and what is 'in data' that both soberly appraises beliefs about data, and offers ways of evaluating what is at stake in data as it is processed, explored, organised, filtered and classified by machine learning techniques. The question here is: what can humanities and critical social sciences learn from machine learning?\n	\n### Approaches used in the book\n\nA broad ethico-political concern underpins *In the Data*. Much contemporary data practice is closely allied to the predictive ambitions of business, the military and states, as well as sciences and media. The recent upswing in data talk continues and intensifies the technoscientific 'Regime of Computation' [@hayles_my_2005]. It is no accident that autonomous mililtary vehicles, large-scale analysis of sentiment social media for commercial or security purposes, or face recognition for national border control are iconic examples of machine learning in action.  A key question for critical humanities and social science researchers, as well as activists, non-government groups and civil society actors of many kinds, is how to make sense of such data practices. They are hard to render visible since they take place largely on platforms that are not publicly accessible. Rendering such practices visible, learning to track their workings, and inventing different ways of working with them: these concerns lie at the core of the analytical and experimental writing practices of *In the Data.* \n\nBroadly speaking, the writing seeks to respond to the long-standing call for what in a widely cited passage Donna Haraway more than a decade ago termed 'diffraction': 'What we need is to make a difference in material-semiotic apparatuses, to diffract the rays of technoscience so that we get more promising interference patterns on the recording films of our lives and bodies' [@haraway_modest_witnesssecond_millennium_1997, 17]. There are a growing number of  attempts to adapt and reinvent data practices such as machine learning for less overtly biopolitically laded, security-minded or explicitly commercially-motivated purposes (the growth in university 'data science' courses might be one example [@schutt_doing_2013]; see the 'OccupyData' group in New York, N.Y. for one such example [@occupydata_occupy_2013];  many citizen science projects have something of this flavours to them too). Some of these will be discussed in the course of the book. But the core issue is whether there are forms of thought implicit to machine learning in all its variety that potentially support different ways of thinking about agency, value, power, experience and subjectivity today.\n\nIn order to bring data, code, images and text together diffractively, the book draws on some  'executable paper' formats developed in recent scientific publishing. It mingles code written in  [R](http://cran.r-project.org/), an important statistical modelling, data manipulation and visualization programming language, with code written in `Python` and `Javascript`, two of the most popular general programming languages in use today. Some of the empirical materials in the book have been garnered, ordered, analysed and displayed using `R`, `Python` and `Javascript`. More importantly, since all machine learning techniques are implemented in code, working with code is an important way of navigating and exploring the architecture of these techniques. Code allows movement, visualization and demonstration of machine learning in practice.   Code excerpts form part of the text, and will be the object of commentary and analysis, alongside diagrams and graphs generated by the code. All of the code will be available at a public code repository (github.com). \n\nThe motivation for the executable format of this book is partly ethnographic and partly experimental. While somewhat agnostic about the ideal of reproducible or executable research, the possibility of combining code, text and image offers scope for different ways of writing and thinking as self-reflexive social researchers. A long line of ethnographers have learned to do what they  are observing (as in 'observant participation' [@wacquant_body_2004]). This has include working in factories, going to prison, spending time in isolated, far-flung or ostensibly boring places,   learning techniques ranging from weaving and cooking to playing the piano or programming robots. Ethnographic presence in a particular setting is normally documented through text, photographs, diagrams and occasionally film or audio recordings, and aims to make sense of this setting in ways that both resonate with the people who live there and with people who don't. The forms of observant participation in this book include attending machine learning and other data-related courses (online and in class rooms), competing in online machine learning competitions, reconstructing and implementing algorithms,  building predictive models and  visualization as a way to present machine learning. These forms of participation are documented by treating coding  as both an object of analysis and as part of the ethnographic writing process. Hence  forms of data practice analysed in the book  become, to varying extents, a mode of writing the book.  Several versions of this recursivity will appear in the chapters.  \n\nThe experimental character of this writing entails both practical and theoretical challenges. Practically, the book works with a range of code constructs, some key mathematical formulae as well as data tables and data graphics. They are not typically found in humanities and qualitative social science writing, although they are extremely common in many scientific fields. The presence of code, formulae and graphics in *In the Data* is not meant to instruct readers in machine learning algorithms or statistical inference. Accompanied by forms of explication and commentary, they are intended to allow  readers to pay close attention to the forms of thought or contemporary equipment [@rabinow_anthropos_2003] at work in the manifold data practices of sciences or business analytics, and to begin to borrow, appropriate and re-purpose some of the patterns of thought for different purposes. The theoretical ambition here is to treat coding-writing  as a way of constructing concepts, metaphors and ways of speaking about contemporary entanglements of subjectivity and computation.  \n\n\n## The architecture of the book \n\nThe book is organised around two different axes:\n\n1. On one axis, the 'technique axis,' the chapters of the book catalogue, document and analyse  some of the most  widely used machine learning techniques of working with data [@hastie_elements_2009]. As mentioned above, the diverse techniques analysed on this axis -- linear  and logistic regression models, decision trees, clustering algorithms, neural networks,  support vector machines and Markov Chain Monte Carlo simulation   -- are used across scientific, industrial, biomedical, commercial and military settings. Their extraordinary success in populating these domains cannot be explained in terms of IT or digitisation in general. Using case studies, pedagogical and instructional materials, scientific papers, software libraries and sample datasets, the chapters explore how these techniques, and their implementation as 'learning algorithms,' rely on widely shared assumptions about the problems of knowing, acting, responding to or predicting how things happen. To the extent that a situation can be reshaped to conform to these assumptions, these techniques gain traction.  The primary empirical materials come from the vast scientific and engineering research literature generated over the last 50 years or so. Around 100,000 references to papers and books, many of them only slightly different and perhaps little read, bear the traces of widening, overlapping circulation of actions, narratives, and problems  associated with techniques and practices  of modelling and classifying data.\n\n2. The other axis of the book is 'recursive reconstruction.' Along this axis, chapters of the book engage with the messiness, complications, and frictions of working with datasets, with predictive models and forms of visualization ranging from standard plots of curves to  network graphics. The diagrams, functions and code constructs arrayed along this axis are sometimes drawn from various scientific or commercial settings, but always with an eye on how working with data impinges on some aspect of experience, sociality or feeling, and how these feelings for data might lead to new forms of responsiveness and respons-ability.  It develops the proposal that specific situated entanglements of subjectivity and data practice might lie, and to open up different ways of thinking about contemporary experience as it is increasingly pervaded and subtly (or not subtly) modulated by data-driven processes. The reconstruction of data practices draws on the pragmatist philosopher John Dewey's notion of philosophy as an empirical reconstruction of experience [@dewey_reconstruction_1957; @dewey_essays_2004]. The kinds of experience reconstructed range from encounters with senses of agency, proximity, and otherness, but also with practices of work, sensations of familiarity, strangeness, as well as feelings such as  recognition, inclusion or indifference. These reconstructive moves will be linked to broader debates around politics, ethics, publics, democracy, power, equality and differences. \n\n## Existing academic literature and framing of the book\n\nThe existing literature relevant to this monograph come from a variety of disciplines. The critical work on data is largely found in science and technology studies (STS), and some parts of information science. Software studies and anthropological accounts of software cultures are highly relevant in reading machine learning algorithms and data visualization software. A broader theoretical background here includes recent reappraisals of pragmatism (particularly William James, C.S Peirce), feminist and other work on materialities, as well as strands of largely European contemporary philosophy relating to experience, space-time, science, calculation and events. A final reference point comes from recent attempts in social sciences and humanities to reinvent methods of research. \n\nIn STS, work on calculation [@callon_qualculation_2005], data practice [@edwards_science_2011],  databases [@bowker_memory_2005] and digital data more generally [@latour_whole_2012] have extensively discussed how science assembles numbers, observations, instruments, readings and databases. This work forms an important part of the background of this book since machine learning has heavy mathematical underpinnings and institutional dynamics. The STS work  has broadly re-theorised many different aspects of data, ranging across collection, measurement, calculation, archiving, labelling and visualising. Much of this work is based on ethnographic case studies of laboratories, technical devices, standards and controversies. It has notably developed ways of analysing its objects relationally (as in actor-network approaches), and with an eye on entanglements and hybridisation of human and non-human entities. While _In the Data_ is not by any means a standard laboratory ethnography, it does rely on practices of participant observation and  analytical approaches found in STS. \n\nThe history of statistics, number and mathematics also frame important aspects of _In the Data_. Works such as Theodore Porter's _Trust in Numbers_ [@porter_trust_1996], Lorraine Daston's work on probability [@daston_classical_1988],  or Alain Desrosiere's _The Politics of Large Numbers_ [@desrosieres_politics_1998] amongst others not only provide background for many of the statistical techniques used in machine learning, they suggest that numerical data and numbers have had an eventful course of development from the 18th to the 20th century. While much of this historical work leaves just around the time when machine learning approaches are emerging (1960-1970s), it provides an extremely useful way to contextualise key traits in the contemporary data practice, ranging from genres of visualization to underlying concepts of probability, chance or error.\n\nThe nascent field of software studies has begun to develop ways of analyzing software and code, ranging from source code files to large assemblages. Coupled with media studies and media archaeology-type approaches, software studies has developed geneaologies, critical framings and methods of reading many different aspects of software. Work in this field ranges from quite high-level analyses such as Wendy Chun's _Programmed Visions_ [@chun_programmed_2011] or Lev Manovich's _Cultural Software_ [@manovich_cultural_2011], or Alex Galloway and Eugene Thacker's work [@galloway_exploit_2007] through to studies of specific code objects (as for instance in many of the entries in the _Software Studies: A Lexicon_ volume [@fuller_software_2007]) or analysis of code as speech [@cox_speaking_2012]. Other work should be included here (along with related work on 'platform studies'), but for present purposes, the key influence of software studies consists in its treatment of software, computer code, algorithms and protocols as first-ranking objects of social and cultural analysis. Some literature on data flow and data visualization has started to appear, but machine learning doesn't figure in it [@beer_popular_2013]. A broader background of work on software cultures [@kelty_two_2008; @coleman_code_2009], with their important re-thinking of publics, property and value, is also relevant, but differs greatly in its emphasis on software production and social movements.\n\nA broader range of theoretical approaches informs this book. These include on events, materiality, experience, and capitalism from scholars that include Brian Massumi on radical empiricism [@massumi_too-blue_2000], Nigel Thrift on time-space signatures of calculation [@thrift_knowing_2005], Celia Lury on topological conceptions of culture [@lury_introduction_2012], Manuel Delanda on simulation in philosophy and social science [@delanda_intensive_2002; @delanda_philosophy_2011], Anna Munster on conjunctive experience in networks [@munster_aesthesia_2013], or Luciana Parisi on the contagiousness of computation [@parisi_contagious_2013]. Many of these authors share an interest in re-thinking notions of experience, body, event, time-space and materiality in the context of ongoing transformations of media and technology. Many of them draw on philosophers such as William James or A.N. Whitehead to question taken-for-granted concepts of nature, life or agency. Again, this loose coalescence of work cannot be adequately summarised or even limned here, but it indicates something of the theoretical registers on which _In the Data_ will work. \n\nThe final framing body of work is even less coherent, but nevertheless important: it largely comprises threads of research and debate about methods today in social sciences and humanities. This literature tends to treat the growth of digital data as both posing a problem and an opportunity for research in social sciences and humanities. The problem, as framed by sociologists such as Andrew Abbott [@abbott_time_2001] or Mike Savage [@savage_contemporary_2009],is that existing quantitative methods in social science cannot match the efficacy of quantitative methods in the natural or applied sciences, nor those used in business and marketing (e.g. as in analysis of transaction data). Some social scientists advocate the development of 'computational sociology' [@king_ensuring_2011]. A version of the same crisis can be found in digital humanities, and has prompted developments such as 'cultural analytics' [@manovich_cultural_2009]. Commonly, these responses advocate a pattern-based approach to working with social or cultural data, and in this respect, they mirror some of the commitments in machine learning to finding the function that generates the data. Whilst very sympathetic to and in some ways aligned with these debates, _In the Data_ also aims to offer something other than  a set of 'better' data methods.  It is more closely aligned with work that seeks to re-think social science methods in the light of new flows of data [@marres_redistribution_2012] and its temporalities [@uprichard_being_2012].\n\n## Readership and market\n\nThe readership for the book is quite diverse, since data practices and indeed machine learning itself are of  interest to a growing audiences. One set of readers for  the book come from disciplines such as sociology, anthropology, media and cultural studies, and social geography who are grappling with the promise of data both as an object of analysis and in terms of a transformation of their own ways of researching. Another set of readers for the book come from the burgeoning 'data science' courses being offered in North American, UK, SE-Asian/Pacific, and European universities. While these courses are largely focused on techniques of organising, visualising and modelling data, many of them are also open to thinking about the transformations in knowledge and value associated with contemporary data practice. The book is written very much with these kind of readers in mind. It will minimize reference to  social theory in order to maintain more accessible to these readers. While I am keen to keep the social and cultural theory side of the book in the margins,  the book will introduce some technical terminology, and indeed some mathematical formulations. But this technical material will be analysed rather than assumed as background.\n\n\n## Timetable\n\nAll of the chapters exist in draft form, or as conference papers. Writing an introduction, conclusion, and revising the drafts will take roughly 12 months.\n\n- draft conclusion: 1 month\n- draft introduction: 1 month\n- draft chapter 4: 2 months\n- revise chapter 3,4,5,6,7,8 drafts: 3 months\n- revise chapter 4: 1 month\n- revise whole manuscript: 3 months\n\n## Format of the book\n\nThe book has a standard chapter format. It will include several dozen code-generated figures, diagrams or plots, as well as a number of tables. The Python and R code, and datasets used to generate these components of the text will be available through the public code repository github.com. The Markdown text of the book will be also part of this code repository. Electronic versions of the book will display colour versions of the plots, and be hyperlinked to both the code-data components on github, and to various relevant URLs. The predicted wordcount is 85,000 - 90,000 words. It will include approximately 20 diagrams or graphics.\n	\n## Chapter outline\n\n### introduction: Into the Data\n\nThe introduction will begin with several relatively familiar  examples of machine learning drawn from a variety of fields over the last decade or so -- handwriting recognition, face recognition, autonomous robots [@thrun_stanley_2006], credit card checks, and cancer prognosis. It will highlight these examples as symptoms of the wide-ranging and often long-standing investments  in knowledge, control, prediction and decision-making associated with data flows.  At the same time, it will suggest how these tracking some of the transformations might elicit changes in how humanities and social science researchers understand their own work. \n\nThese examples  will also provide a preliminary overview of the techniques of machine learning discussed in the book -- supervised and unsupervised learning, the differences between classification, regression, and clustering and important notions such as learning and prediction. They will also highlight  contrasts between disciplines such as computer science and statistics that develop machine learning techniques, as well as illustrate the overlaps  between data-mining, pattern recognition, knowledge discovery, artificial intelligence, information retrieval, signal processing, machine learning etc. Practically, these examples will also implicitly present some of the methods used in the subsequent chapters, including the role of databases, data structures, code constructs, diagrams, and algorithms  in typical scientific and industry practices of modelling.\n\nThese examples will also stage some of  wider questions in the book  about the promise of data. These include the oft-mentioned 'end of theory' prediction (Chris Anderson, _Wired_ magazine, 2008), and the many claims and controversies about data analytics, machine learning and the 'power of big data' in physical, life and social sciences, in business, government and industry.  Claims  about  power of data, and responses to these claims  -- ranging from downright skepticism to enthusiastic embrace --  will be discussed here with an eye on what these debates about data  mean for research practices in the social sciences and humanities themselves in terms of their topics of research and how they do research.\n\nFinally, the introduction will sketch the themes of 'in the data' and  'modes of machine thought,' drawing on a range of work drawn from pragmatist philosophers such as C.S. Peirce (abduction and diagrams), William James on experience [@james_essays_1996],  John Dewey on 'reconstruction' [@dewey_reconstruction_1957], Alfred N. Whitehead on 'abstraction' [@whitehead_modes_1958] and from recent social and cultural theory  such as Isabelle Stengers on experiment [@stengers_experimenting_2008]; Gilles Deleuze & Felix Guattari on scientific functions, and [@deleuze_what_1994]; Celia Lury on topology [@lury_introduction_2012]). In order to contextualise forms of data thought, the introduction will also sketch some points of departure drawn from software studies work on algorithms and databases, science studies work on calculation, statistics, number, device, image and diagram,  as well as accounts of subjectivity, experience [@berlant_nearly_2007] or [@adams_anticipation_2009] and materiality cross-cutting all of the above. This spectrum of work from across disciplines provide  scaffolding and departure points for much of the book. \n\n\n### Part I: Data, Functions and Forms\n\nThe four chapters of Part I explore underlying the major underlying spatial, ordering and counting practices of the many different techniques comprising machine-learning, pattern recognition and data-mining.  It seeks to show how these practices diverge and multiply across a range of settings, and how they coalesce around a set of generic intuitions of difference that are both powerfully generative yet highly constrained. \n\n### 1. Writing about data\n\n#### Key techniques: linear models, perceptron\n\nThis chapter is primary a methodological discussion that addresses several different problems in working with machine learning. These problems range from quite philosophical issues through to quite practical ones. At the philosophical end, it poses some basic problems in responding to science and technology (for instance, the anthropologist Paul Rabinow's work on the concept of 'equipment' [@rabinow_anthropos_2003]; the philosopher A.N. Whitehead on the spatial dimensionality of thought [@whitehead_modes_1958]; the philosopher Anne-Marie Mols' notion of praxiography -- writing about practices [@mol_body_2003])  to discuss how we might think about working on highly technical or scientific areas such as machine learning in ways that allow consideration of their more general situation.  It also draws on some cultural and psychoanalytic accounts of architecture and objects [@bollas_evocative_2009; @wilson_affect_2010] to suggest how the researcher him or herself relate to objects of research.  Finally in this vein, the chapter poses the methodological problem of working with large bodies of scientific and technical literature, and illustrates this by describing the growth of machine learning techniques in science and engineering research since the early 1960s, focusing on the growth of key techniques and algorithms [@kelty_ten_2009]. Oriented by these questions about thinking, techniques, subjectivity and literature, the chapter then presents a series of vignettes that display some of the ways in which research and writing critical accounts of data cultures and data economies can make use of the tools, techniques, instruments and services of 'data science' to generate textual, diagrammatic and modelised accounts of contemporary culture.  A standard teaching example -- house-price prediction -- links these vignettes, but the real focus here is on two foundational issues: how machine learning treats data as a dimensional material that it seeks to reshape or recase  in different dimensions ('models'); how implementing machine learning techniques shifts our relation to them.  The chapter describes some of the transformations in software, network and scientific cultures that underpin the recent growth in data techniques and methods. These range across transformations in statistical science associated with greater computational capacity; the mutations in network,  database and digital device architectures and infrastructures that yield much greater abundance of data in various forms; and the intermeshing of knowledge economies with the media, communication, transaction, transport and logistics systems. It will trace how the lateral associations and multivalencies of data have developed through key software artefacts such as the widely used R programming language, and in generic programming languages such as Python. Reflecting on   the author's own history of working with machine learning or online accounts of machine learning,  well as the ecology of thousands of software packages  associated with the statistical programming language `R,` the aim here explore some of the material transformations that might open machine learning to wider engagement.\n\n\n### 2. Machines finding functions\n\n#### Key techniques: logistic function, cost function, gradient descent\n\nThe _learning_ in machine learning is often conceived as a form of function-finding. Developing ways to read functions, and to highlight the ways they configure differences, similarities, proximities, distances, boundaries and changes, is key to both understanding how machine learning works, and also to imagining ways in which the abundance of  functions can be understood. This chapter examines the proliferation of predictive models, classifiers, clustering and other analytic devices in terms of *functions*.  Drawing on statistical machine learning texts [@hastie_elements_2009], and more philosophical accounts of functions (e.g. [@deleuze_what_1994; @whitehead_modes_1958]), the chapter  introduces several key instances of the function in machine learning, shows how functions underpin the generation of curves, and how movement along lines, curves and across planes. While later chapters will range across a wider variety of mathematical functions and forms, this chapter will focus on basic components of many machine learning techniques: a function that maps  a state of affairs onto a general abstract form (usually somewhat Euclidean - lines, planes, regular curves), a function that measures errors or disparities, and a function that optimises the mapping between a specific abstract form and the state of affairs embodied in data.  It will exemplify these components through simple examples such as the logistic function, the least-squared error cost function, and the gradient descent algorithm. Finding functions, the chapter will suggest, is the central way in which machine learning connects experience to abstraction. Standing back from mathematical-algorithmic techniques, this chapter suggests that finding the functions that inscribe lines and surfaces in data is a powerful form of imitation that tends to remake the world in certain ways. This re-making may be inimical to social life, but it is possible to observe it, and finding ways to observe it might foster different responses to it.\n\n### 3. Finding many patterns in data\n\n#### Key techniques: decision trees, support vector machines & random forests\n\nThis chapter compares three of the most popular machine learning classification techniques: decision trees, random forests and support vector machines.  For the last decade, one of the best-performing 'off-the-shelf' machine learning algorithm has been a technique known broadly as 'support vector machines' (SVM; see [@vapnik_nature_1999]). Versions of the decision tree have since the early 1970s been heavily used across science, business, media and medicine to classify and predict differences. Finally, random forests massively multiply decision trees to overcome problems associated with much greater scale and diversity of data. The chapter examines the spatial operations of these widely used algorithms both against the background of a spectrum of other statistical machine learning techniques, and more importantly, in terms of the *forms of movement* they bring to data practice. The key issue here is how machine learning moves through data, and how it copes with the expanding  dimensionality of data.  These models are less Euclidean or geometrical in their movement. Since the 1950s, scientists  have been aware of the 'curse of dimensionality' [@bellman_adaptive_1961], which arises when the dimensions of the data increase. Algorithms such as decision trees, SVM, and random forests introduce different ways of navigating data dimensionality. While lines, curves and planes, as discussed the previous chapter, inscribe boundaries and geometrical order in data, the advent of increasingly extended and particularly 'wide' datasets (many variables) engenders models that embrace high-dimensional spaces in which patterns are much more unstable and somewhat virtual. \n\n### 4. Believing in the strength of numbers \n\n#### Key techniques: Naive Bayes, Markov Chain Monte Carlo simulations, Bayesian networks; \n\nThe topic in this chapter is the role of randomness, chance and number in machine learning. Machine learning techniques are suffused with probabilistic modes of thought. This chapter foregrounds probability and  the changes in probability associated with both statistical pattern recognition models such as the Naive Bayes classifier (often used to filter spam email) and the so-called 'Bayesian revolution' in statistical practice that took shape in the early 1990s in particular in the form of Markov Chain Monte Carlo simulation (MCMC). The computationally intensive techniques of Bayesian analysis treat all numbers as potentially random variables; that is, as best described by probability distributions whose interactions need to be carefully explored.  By contrast, the probabilistic machine learning models exemplified by Naive Bayes  treat numbers as if they have little relation to each other.  The chapter traces two important implications of this contrast between ways of working with probability. The popularity of MCMC is a striking example of a technique moving  across fields, and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and online gaming. Second, although they both treat potentially all important numbers as a matter of probability calculus, the contrast between  computationally intensive, MCMC and probabilistic models such as Naive Bayes suggest very different beliefs in the power of computation.  A broader question here will be framed by reference to notions of expectation and belief: what mode of belief in probability better sensitises us to what machine learning or pattern recognition models do in given situations?\n\n### Part II: Problems with Data\n\nThe three chapters of Part II explore what happens as the major intuitions of machine-learning encounter things, events and people. The chapter deal with transformation in scale,  diversity and work. \n\n### 5. What does machine learning do to data?\n\n#### Key techniques: decision trees, random forests, self-organising maps\n\nProblems of scale have framed many aspects of machine learning. The increasingly large scale of data motivates automated forms of analysis. The problems of discerning small differences motivates attempts to gather data on a larger scale. Genomics is a provocative form of data thought in several respects. It relentlessly treats one type of quite flat or mono-dimensional data -- nucleic acid sequences or 'base sequences'-- as the key to potentially subtle or complicated biological processes in all their plasticity and mutability. While it is not at all clear that this treatment will be effective, it has animated efforts to find shape or pattern in sequence data that stand as a limit case for data-driven research more generally.  At the same time, genomics is a scientific discipline almost overwhelmed by the  effectiveness of its own instruments in generating data.  Sequencing in contemporary genomics (that is, post-Human Genome Project and after the advent of so-called 'high-throughput' or 'next generation sequencers'; this is roughly 2007 onwards)  is perhaps the most concerted effort to count things every undertaken in the life sciences.  The rate of production of sequence data from next generation sequencers exceeds Moore's Law, the standard 18-24 month doubling time for the number of transistors in an integrated circuits. This sequence data needs to be stored and analysed in rhythms that differ from  many other settings where the growth of data can be managed through more memory and computer processing speed. Third, genomic researchers have been extraordinarily adaptive in positioning their work on the borders of cutting edge infrastructure development, machine learning and data-mining, and the life sciences. Genomics (and bioinformatics) loom large in the machine learning literature itself since the mid-1990s. The flatness of sequence data has been heavily leveraged by this positioning. The biological objects of genomics - genomes -- have been progressively transformed and re-shaped in ways that might be instructive for data more generally. This chapter explores how machine learning has imbued genomes with an increasingly topological character (and particularly, the growth of 'topological data analysis' [@carlsson_topology_2009; @singh_topological_2007] as well as the topological turn in culture [@lury_introduction_2012]), and practically, with the rich ecology of programmatically accessible bioinformatics tools and archives that on the one hand permits sequence data to move relatively freely (especially in comparison to much commercial or even social media data), but on the one hand poses question as to who wants or needs the data. \n\n\n### 6. Are there enough numbers in world?\n\n#### Key techniques: transmission models, nested models\n\nA predominant narrative around data in many contemporary settings urges that more data makes all problems solveable. This narrative is usually accompanied by an 'abundance of data' ('big data', 'data deluge', etc) narrative, in which the advent of data corresponds to a groundswell change in how we make sense of and intervene in events. Versions of these narratives surface in genomics, business analytics, and infrastructure management (e.g. in smart energy grids), as well as crisis-events such as financial collapses or epidemics. Via a case study of different data flows during the 2009 A/H1N1 'swine flu' epidemic, this chapter develops an alternative narrative of data flow in terms of number supply chain logistics. The chapter reconstructs a real-time epidemiological model that combines clinical reports, laboratory test data, web surveys, urban population mixing patterns in order to disentangle biological and social forms of contagion and infection during the 2009 epidemic in London. In reconstructing this model, a model that is typical in complicated engagement with numbers of diverse origins, the chapter will suggest that the largely  homogeneous data flows envisaged and embraced in many forms of data practice largely ignore the problem of the interactions between different agents. It specifically contrasts  the much publicised Google Flu Trends approach to 'flu prediction, which is based on search query volumes, with epidemiological models based on multiple forms of surveillance data. The chapter argues  that data practices during crises or times of great uncertainty, entail hybrid integrations of existing data practice and new forms of data. This reconstruction challenges us to re-evaluate how we think about numbers. By following some of the ways numbers circulate through the epidemiological models, we can discern to a semiotic-material faultline running through contemporary number formations. Numbers semiotically and materially embrace both events and degrees of belief. If numbers are crucial in the data economy, then instabilities in their mode of existence will affect much of what happens to data. While much of the machine learning taking place in commercial and operational settings is decidedly non-Bayesian, the popularity of MCMC and Bayesian approaches in contemporary sciences suggests a tension in what counts as number.\n\n### 7. Optimising machine learners\n\n#### Key techniques: ensembles, RandomForests\n\nThe chapter focuses on the forms of work and experience associated with contemporary data practice, situated within plural data and knowledge economies. Software developers, hackers, statisticians, 'data scientists,' as well as social scientists, are changed by forms of data thought. The case study in this chapter is data prediction contests run by the [Kaggle.com](kaggle.com) as well as academic-based competitions. In these competitions, competitors from diverse technical and geographic backgrounds compete to construct predictive models for specific datasets -- the Netflix recommendation competition; the Facebook 'find a friend' competition; or the Titanic survivor problem -- using whatever machine learning techniques they can bring to bear. These competitions, conducted on web-based platforms, are useful ways to track contemporary data practices. Combined with some examples of presentations by academic researchers (for instance, Stanford University's Andrew Ng whose YouTube lectures haved attracted 100,000s of views), industry conferences (for instance, at the annual Predictive Analytics World events), this chapter will track the kinds of technical and affective investment associated with popular data modelling techniques such as Random Forest. It is possible, I will suggest, to read a technique as a partial subjectification, in that it affects how they experience and materially engage with data. In order to apprehend the character and texture of these subjectifications, the chapter links university research, commercial and non-commercial adoption, and flows of technical expertise. Again, this chapter has some auto-ethnographic vignettes, as the author has participated in some of these competitions.\n\n\n### Conclusion: Out of the Data\n\nThe conclusion draws together the main threads running through the previous chapter, and sets out a series of questions and provocations for thinking with data. The conclusion will stand back from fine-grained empirical approach to data and data practice adopted in the preceding chapters in order to think more about we -- social scientists, humanities scholars -- might invent or create in the midst of data. While this book has a critical angle to it (so many claims about and beliefs in data plainly deserve critique for their conservative and naive approach to things), it is principally concerned with conceptual invention through doing things with data. The work of learning about machine learning, and learning about it in a way that is deeply embodied or practically embodied, brings with it altered ways of thinking about, questioning and integrating what is happening to data more generally. It highlights the key argument that has run through the book about the plural dimensionality of data as it is aggregated, tabulated, summarised and modelled in contemporary data and signal processes, and as well as the extraordinary mobility or kinetic energy of generic machine learning methods. In discussing the shifting dimensionality of data, and the kinetics of methods, the conclusion will attempt to sketch out how some promising ways of thinking with data might proceed. \n\n\n## References\n    		\n",
 			"file": "proposal.rmd",
-			"file_size": 45725,
-			"file_write_time": 130352932816878376,
 			"settings":
 			{
 				"buffer_size": 45725,
@@ -514,8 +508,17 @@
 			"file": "/home/mackenza/Documents/notes/mitchell_machine_learning_1997.md",
 			"settings":
 			{
-				"buffer_size": 655,
+				"buffer_size": 2998,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mackenza/Documents/notes/ripley_pattern_recognition_1996.md",
+			"settings":
+			{
+				"buffer_size": 508,
+				"line_ending": "Unix",
+				"name": "ripley_pattern_recognition_1996"
 			}
 		},
 		{
@@ -551,19 +554,20 @@
 			}
 		},
 		{
-			"file": "/home/mackenza/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+			"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
 			"settings":
 			{
-				"buffer_size": 66,
+				"buffer_size": 6444,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/mackenza/Documents/notes/Hastie_2008.md",
+			"file": "/home/mackenza/Documents/notes/alpaydin_machine_learning_2010.md",
 			"settings":
 			{
-				"buffer_size": 5217,
-				"line_ending": "Unix"
+				"buffer_size": 682,
+				"line_ending": "Unix",
+				"name": "alpaydin_machine_learning_2010"
 			}
 		},
 		{
@@ -988,7 +992,18 @@
 	},
 	"file_history":
 	[
+		"/home/mackenza/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/mackenza/Documents/data_intensive/book/knit_all.sh",
 		"/home/mackenza/Documents/data_intensive/book/data_book.sublime-project",
+		"/home/mackenza/Documents/data_intensive/book/figure/gradient_descent15.png",
+		"/home/mackenza/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mackenza/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/mackenza/Documents/data_intensive/book/animations/js/unif_plot.js",
+		"/home/mackenza/Documents/data_intensive/book/ch1_learning/mackenzie_believing_in_desiring_june 2010.odt",
+		"/home/mackenza/Documents/data_intensive/book/ml_lit/ml_lit_anal.py",
+		"/home/mackenza/Documents/data_intensive/book/cache/iris_tree_plot_e100d10fcd1e5bd81e6a3d9277581438.RData",
+		"/home/mackenza/Documents/data_intensive/book/ch1_learning/cache/house_price_predict_145cc8057b1277fbbe2f770402498933.RData",
+		"/home/mackenza/Documents/data_intensive/book/ch0_introduction/references/Exported Items.bib",
 		"/home/mackenza/Documents/data_intensive/book/ch1_learning/pandoc.sh",
 		"/home/mackenza/.config/sublime-text-3/Packages/MarkdownEditing/Bold and Italic Markers.tmPreferences",
 		"/home/mackenza/.config/sublime-text-3/Packages/User/Bold and Italic Markers.tmPreferences",
@@ -1022,13 +1037,11 @@
 		"/home/mackenza/Documents/data_intensive/book/naivebayes.py",
 		"/home/mackenza/Documents/data_intensive/book/naivebayes.ipynb",
 		"/home/mackenza/Documents/data_intensive/book/markets_algorithms.Rmd",
-		"/home/mackenza/Documents/data_intensive/book/knit_all.sh",
 		"/home/mackenza/Documents/data_intensive/book/functions.mdown",
 		"/home/mackenza/Documents/data_intensive/book/examples.md",
 		"/home/mackenza/Documents/data_intensive/book/build.sh",
 		"/home/mackenza/Documents/data_intensive/book/.gitignore",
 		"/home/mackenza/Documents/data_intensive/book/ch1_learning/test.rmd",
-		"/home/mackenza/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/mackenza/Documents/data_intensive/book/animations/css/scianimator.dark.css",
 		"/home/mackenza/Documents/data_intensive/book/animations/css/scianimator.light.css",
 		"/home/mackenza/Documents/data_intensive/book/animations/css/shCore.css",
@@ -1041,12 +1054,10 @@
 		"/home/mackenza/Documents/commons/boyle_notes.md",
 		"/home/mackenza/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/mackenza/Documents/data_intensive/book/data_book.sublime-workspace",
-		"/home/mackenza/Documents/data_intensive/book/ml_lit/ml_lit_anal.py",
 		"/home/mackenza/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd",
 		"/home/mackenza/Documents/data_intensive/book/ch5_subjects/ch_learning_subjects.rmd",
 		"/home/mackenza/Documents/data_intensive/book/ch7_topologies/ch_genomic_topologies.rmd",
 		"/home/mackenza/Documents/data_intensive/book/proposal.rmd",
-		"/home/mackenza/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/mackenza/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd",
 		"/media/mackenza/0031-014A/Documents/data_intensive/number_supply/h1n1_paper_rev1_oct2013.rmd",
 		"/media/mackenza/0031-014A/Documents/data_intensive/subjectivity_article/mackenzie_subjectivity_jan2013.rmd",
@@ -1108,14 +1119,7 @@
 		"/home/mackenza/.cache/.fr-qK7GaY/pandoc-config.json",
 		"/home/mackenza/Desktop/runif.R",
 		"/home/mackenza/Documents/data_intensive/book/test.md",
-		"/home/mackenza/Documents/data_intensive/book/pytest.Rmd",
-		"/home/mackenza/Documents/data_intensive/book/ch1_learning/__init__.py",
-		"/home/mackenza/Documents/data_intensive/book/__init__.py",
-		"/home/mackenza/Documents/data_intensive/book/ch5_probability/# Naive and informed chances.rmd",
-		"/home/mackenza/Documents/data_intensive/book/pytest.md",
-		"/home/mackenza/Documents/data_intensive/lse_cambridge_markets_algorithms/markets_algorithms.Rmd",
-		"/home/mackenza/.config/sublime-text-3/Packages/Enhanced-R/Enhanced-R.sublime-settings",
-		"/home/mackenza/Documents/data_intensive/warwick_june2013/warwick_presentation.rmd"
+		"/home/mackenza/Documents/data_intensive/book/pytest.Rmd"
 	],
 	"find":
 	{
@@ -1292,7 +1296,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 27,
 			"sheets":
 			[
 				{
@@ -1321,7 +1325,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1350,7 +1354,7 @@
 						"translation.y": 593.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1368,6 +1372,10 @@
 							[
 								647,
 								647
+							],
+							[
+								1492,
+								1492
 							]
 						],
 						"settings":
@@ -1385,7 +1393,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1414,7 +1422,7 @@
 						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1430,8 +1438,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								3,
+								3
 							]
 						],
 						"settings":
@@ -1442,10 +1450,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1454,26 +1462,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 59182,
+						"buffer_size": 59595,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								678,
-								678
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/MarkdownEditing/Markdown (Standard).tmLanguage"
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1499,10 +1508,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 424.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1530,7 +1539,7 @@
 						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1559,7 +1568,7 @@
 						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1587,7 +1596,7 @@
 						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -1615,7 +1624,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
@@ -1637,13 +1646,14 @@
 						],
 						"settings":
 						{
+							"WordCountShouldRun": true,
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 10550.0,
+						"translation.y": 6653.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -1672,7 +1682,7 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
@@ -1702,7 +1712,7 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -1732,7 +1742,7 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
@@ -1762,7 +1772,7 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
@@ -1792,7 +1802,7 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
@@ -1821,7 +1831,7 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
@@ -1851,7 +1861,7 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
@@ -1877,10 +1887,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2429.0,
+						"translation.y": 2994.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -1889,15 +1899,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 655,
+						"buffer_size": 2998,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								274,
-								274
+								1333,
+								1333
 							]
 						],
 						"settings":
@@ -1909,11 +1919,41 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 21,
+					"file": "/home/mackenza/Documents/notes/ripley_pattern_recognition_1996.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 508,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "ripley_pattern_recognition_1996",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
 					"file": "ch3_dimensionality/tree.py",
 					"semi_transient": false,
 					"settings":
@@ -1940,11 +1980,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "ml_lit/web_of_science.R",
 					"semi_transient": false,
 					"settings":
@@ -1966,14 +2006,14 @@
 							"syntax": "Packages/R/R.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1182.0,
+						"translation.y": 1602.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 24,
 					"file": "/home/mackenza/R/phrase_structures.R",
 					"semi_transient": false,
 					"settings":
@@ -1999,11 +2039,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 34,
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 25,
 					"file": "/home/mackenza/Documents/notes/Malley_Statistical Learning_2011.md",
 					"semi_transient": false,
 					"settings":
@@ -2028,36 +2068,7 @@
 						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 32,
-					"type": "text"
-				},
-				{
-					"buffer": 25,
-					"file": "/home/mackenza/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 66,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 33,
+					"stack_index": 35,
 					"type": "text"
 				},
 				{
@@ -2066,15 +2077,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5217,
+						"buffer_size": 6444,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2617,
-								2617
+								6444,
+								6444
 							]
 						],
 						"settings":
@@ -2083,14 +2094,44 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1023.0,
+						"translation.y": 1593.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 34,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 27,
+					"file": "/home/mackenza/Documents/notes/alpaydin_machine_learning_2010.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 682,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								682,
+								682
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"auto_name": "alpaydin_machine_learning_2010",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
 					"file": "/home/mackenza/Documents/notes/Stengers_d&G_2005.txt",
 					"semi_transient": false,
 					"settings":
@@ -2115,11 +2156,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 35,
+					"stack_index": 36,
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "/home/mackenza/Documents/notes/vapnik_nature of statistical learning theory 2000.md",
 					"semi_transient": false,
 					"settings":
@@ -2142,14 +2183,14 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1000.0,
+						"translation.y": 1260.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 36,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "/home/mackenza/Documents/notes/bogost_alien_2012.md",
 					"semi_transient": false,
 					"settings":
@@ -2175,11 +2216,11 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 37,
+					"stack_index": 38,
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "/home/mackenza/Documents/notes/WhiteheadModes.mdown",
 					"semi_transient": false,
 					"settings":
@@ -2201,14 +2242,14 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2175.0,
+						"translation.y": 2685.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "/home/mackenza/Documents/notes/rabinow_anthropos_2003.md",
 					"semi_transient": false,
 					"settings":
@@ -2234,11 +2275,11 @@
 						"translation.y": 1300.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "references/data_forms_thought.bib",
 					"semi_transient": false,
 					"settings":
@@ -2261,14 +2302,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1163.0,
+						"translation.y": 1458.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "references/refs.bib",
 					"semi_transient": false,
 					"settings":
@@ -2291,14 +2332,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1465.0,
+						"translation.y": 1675.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 35,
 					"file": "references/machine_learning.bib",
 					"semi_transient": false,
 					"settings":
@@ -2321,14 +2362,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7214.0,
+						"translation.y": 9434.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 36,
 					"file": "/home/mackenza/Documents/notes/flach_machine_learning_2012.md",
 					"semi_transient": false,
 					"settings":
@@ -2353,7 +2394,7 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -2378,14 +2419,14 @@
 							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1233.0,
+						"translation.y": 194.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 37,
 					"file": "references/R.bib",
 					"semi_transient": false,
 					"settings":
@@ -2407,10 +2448,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2545.0,
+						"translation.y": 283.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 15,
 					"type": "text"
 				}
 			]
@@ -2467,6 +2508,14 @@
 		"selected_items":
 		[
 			[
+				"",
+				"~/Documents/notes/alpaydin_machine_learning_2010.md"
+			],
+			[
+				"mitch",
+				"~/Documents/notes/mitchell_machine_learning_1997.md"
+			],
+			[
 				"writ",
 				"writing and movement -- recursive tools: for writi"
 			],
@@ -2477,10 +2526,6 @@
 			[
 				"pand",
 				"ch1_learning/pandoc.sh"
-			],
-			[
-				"",
-				"pandoc.sh"
 			],
 			[
 				"ra",
@@ -2576,7 +2621,7 @@
 		[
 			[
 				"",
-				"~/R/metacommunities/metacommunities.sublime-project"
+				"~/Documents/data_intensive/book/notes_references.sublime-workspace"
 			]
 		],
 		"width": 380.0
@@ -2863,7 +2908,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 338.0,
 	"status_bar_visible": true,
 	"template_settings":

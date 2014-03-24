@@ -15,7 +15,7 @@ how probability undercuts other more sophisticated takes on the world -- Hacking
 - likelihood function Flach, 27
 - references cited by Ripler -- Warner 1961, Tittington, 1981; cf Michie 1994 textbook
 - sequence of references: 
-	- Warner 1961, Tittington 1981, Michie, Ripley (DONE), Bishop (DONE), Mitchell (DONE), Domingos 1997, Lewis 1998 Witten (2001/2011),Hastie (2001/2009), Jordan (2004), Alpaydin (2010)(DONE), Manning (2009)(DONE),  Flach, top10-algo, Myles-White(DONE), Schutt (DONE), Hastie/R book (2013)
+	- Warner 1961, Maron, 1961,  Tittington 1981, Michie, Ripley (DONE), Bishop (DONE), Mitchell (DONE), Domingos 1997, Lewis 1998 Witten (2001/2011),Hastie (2001/2009), Jordan (2004), Alpaydin (2010)(DONE), Manning (2009)(DONE),  Flach, top10-algo, Myles-White(DONE), Schutt (DONE), Hastie/R book (2013)
 
 ## from proposal
 
