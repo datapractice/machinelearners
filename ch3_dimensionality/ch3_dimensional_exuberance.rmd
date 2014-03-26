@@ -75,6 +75,8 @@ For the last decade, the best-performing 'off-the-shelf' machine learning algori
 ### to do 
 - implement a neural network by going through Ng lectures or Hinton
 - implement a svm - using Ng?
+- add in some material from Flach's review of SVM
+- add in references and examples from Shaw+Christiani textbook
 
 ### quotes to use: theory
 
