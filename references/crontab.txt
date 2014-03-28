@@ -1,0 +1,4 @@
+*/5 * * * * wget http://localhost:23119/better-bibtex/collection?/0/5BFPRVNK.biblatex -O ~/Documents/data_intensive/book/references/data_forms_thought.bib
+
+*/5 * * * * wget http://localhost:23119/better-bibtex/collection?/0/UPCNSJVH.biblatex -O ~/Documents/data_intensive/book/references/machine_learning.bib
+*/5 * * * * wget http://localhost:23119/better-bibtex/collection?/0/G8S9G9TG.biblatex -O ~/Documents/data_intensive/book/references/R.bib
