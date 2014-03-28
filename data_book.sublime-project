@@ -3,7 +3,11 @@
 	[
 		{
 			"follow_symlinks": true,
-			"path": "/home/mackenza/Documents/data_intensive/book"
+			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/mackenza/Documents/notes"
 		}
 	]
 }
