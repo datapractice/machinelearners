@@ -3,11 +3,15 @@
 	[
 		{
 			"follow_symlinks": true,
-			"path": "."
+			"path": "/home/mackenza/Documents/notes"
 		},
 		{
 			"follow_symlinks": true,
-			"path": "/home/mackenza/Documents/notes"
+			"path": "/home/mackenza/Documents/ref_bibs"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "."
 		}
 	]
 }
