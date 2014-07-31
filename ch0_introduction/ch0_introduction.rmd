@@ -18,6 +18,7 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 
 ## to do
 - bring in materials from warwick talk
+- say why I am focusing on machine learning and not data more generally -- databases, infrastructures, visualization, etc. - i.e. it is essential but opaque; it is the most slow-moving and tectonic aspect of what is happening with data; it has high levels of abstraction and generates many different potentials; it is a challenge for any re-thinking of what social sciences and critical humanities will do with data.
 - recursiveness of this text
 - the role of industry -- machine learning as industrial
 - the difference between ML and IR, data-mining, - use IR book, use mining massive datasets; use db books to show this
@@ -32,6 +33,8 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 -  the identificatino of ML and data-mining and predictive analytics
 -  provenance of _iris_ dataset - -Fisher (1936) and Gaspe Peninsula, W.E. Anderson
 - order of things -- big picture stuff on transdisciplinary episteme
+- section on the digital humanities debate -- use Liu, and articles from _Differences_ 2014 to do this; + Hall; key points here in notes on Galloway's article. Contrast this with the attempts to conceptualise new forms of number and value in Latour, in Tarde, in STS, in Deleuze, etc. 
+- Arendt on statistics and praxis (nothing can happen the more predictive we become) vs Virno on the introjection of communicative praxis into poiesis and production vs ... 
 
 ## quotes to use
 it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. 87 Rabinow
