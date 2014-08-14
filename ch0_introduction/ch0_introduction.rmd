@@ -33,8 +33,8 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 -  the identificatino of ML and data-mining and predictive analytics
 -  provenance of _iris_ dataset - -Fisher (1936) and Gaspe Peninsula, W.E. Anderson
 - order of things -- big picture stuff on transdisciplinary episteme
-- section on the digital humanities debate -- use Liu, and articles from _Differences_ 2014 to do this; + Hall; key points here in notes on Galloway's article. Contrast this with the attempts to conceptualise new forms of number and value in Latour, in Tarde, in STS, in Deleuze, etc. 
-- Arendt on statistics and praxis (nothing can happen the more predictive we become) vs Virno on the introjection of communicative praxis into poiesis and production vs ... 
+- section on the digital humanities debate -- use Liu, and articles from _Differences_ 2014 to do this; + Hall; key points here in notes on Galloway's article. Contrast this with the attempts to conceptualise new forms of number and value in Latour, in Tarde, in STS, in Deleuze, etc.  -- I have PDFs of all these
+- Arendt on statistics and praxis (nothing can happen the more predictive we become) vs Virno on the introjection of communicative praxis into poiesis and production vs ... SEE Notes files on both of these
 
 ## quotes to use
 it follows that if one's object is an anthropological account of a problematization, then one's informants will differ from each other. The challenge lies in finding an experiential and experimental site that would provide a contemporary instance. 87 Rabinow
@@ -54,11 +54,22 @@ Quotes from Lanier
 
 # examples to use
 - [@le_building_2011] -- paper on the cat videos 
+- the facebook paper
+- the breast cancer paper
+
 
 ## Quotes from technical sources
 
-_Definition_: A computer program is said to **learn** from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, improves with experience $E$ 2.  Mitchell, 1997
+_Definition_: A computer program is said to **learn** from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, improves with experience $E$ 2.  [@Mitchell_1997, 2]
 
+In the past fifteen years, the growth in algorithmic modeling applications and methodology has been rapid. It has occurred largely outside statistics in a new community—often called machine learning—that is mostly young computer scientists (Section 7). The advances, particularly over the last five years, have been startling. [@breiman_statistical_2001, 200]
 
-In the past fifteen years, the growth in algorithmic modeling applications and methodology has been rapid. It has occurred largely outside statistics in a new community—often called machine learning—that is mostly young computer scientists (Section 7). The advances, particularly over the last five years, have been startling. [[@breiman_statistical_2001, 200]
+## Introduction
+>_Definition_: A computer program is said to **learn** from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, improves with experience $E$ 2.  [@Mitchell_1997, 2]
+>When an object – a geometrical space, for example – is scientifically constructed by functions, its philosophical concept, which is by no means given in the function, must still be discovered [@Deleuze_1994, 117].
 
+This book concerns a set of scientific objects
+
+In what ways do what computers do with data today change how we think about what we do? This slightly loopy question invites many possible responses. But I'm principally interested here in an increasingly widespread form of computation known variously as machine learning, pattern recognition, knowledge discovery, data mining or predictive analytics. Each of these terms comes from slightly different quarters, and they overlap with each other at many points. In general, however, all of them attest to the growth of a set of techniques concerned with working with data. These techniques are almost the sole focus of this book. The techniques assembled under the name machine learning are hardly new. Some of them date back more than a century, and the bulk of them are decades old. The breadth and scale of their application in recent years is somewhat astonishing. In the last few years, they have quickly become staple techniques in science, business, government, entertainment and media. 
+The names of these techniques can be found in many textbooks, instructional courses, website tutorials and descriptions: linear regression, logistic regression, neural networks, linear discriminant analysis, support vector machines, k-means clustering, decision trees, random forests, principal component analysis, or naive Bayes classifier. These names refer to predictive models and to computational algorithms of various ilk. They are shadowed by a wider panoply of modelling and data preparation techniques -- normalization, regularization, cross-validation, feature engineering, feature selection -- that augment their use in practice. The techniques, algorithms and models have arisen in the course of a century of work in mathematics, statistics, computer science as well as various scientific fields ranging from anthropology to zoology. Powerful mathematical abstractions such as linear algebra, vector space, differential calculus and probability theory run through them. But these formidable abstractions encounter today a novel situation in their direct applications to domains that lie far afield of the laboratory or engineering settings in which they first took shape. A cultural saturation of algorithms and a politically loaded awareness of their operation is taking shape in some quarters. What this book seeks to do is to offer some way of moving between the abstract and formal character of the algorithms themselves and their mundane and farflung concrete implementations and applications.
+The problem of moving between the algorithms and their culturally saturated feedback loops matters because of the powerful grip these techniques have on contemporary data practice. While many of the intuitions underlying these techniques are relatively simple (for instance, the idea of drawing a line through a group of points as a way of describing the main tendency in a dataset), there are many differences in how these techniques work. 
