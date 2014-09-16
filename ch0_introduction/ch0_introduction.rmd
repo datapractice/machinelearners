@@ -47,6 +47,7 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 - section on the digital humanities debate -- use Liu, and articles from _Differences_ 2014 to do this; + Hall; key points here in notes on Galloway's article. Contrast this with the attempts to conceptualise new forms of number and value in Latour, in Tarde, in STS, in Deleuze, etc.  -- I have PDFs of all these
 - Arendt on statistics and praxis (nothing can happen the more predictive we become) vs Virno on the introjection of communicative praxis into poiesis and production vs ... SEE Notes files on both of these
 - really important to see that these abstractions move through the data, pulling features and relations from aggregates in order to create probabilistic or decisionistic classifications and projects. The experience of personalization that has become so mundane is largely predictive and a product of an abstraction, and not the reflection of any individual tracking as such. 
+- add Totaro, Gillespie and Neyland, and Italian people: on algorithms
 
 ## quotes to use
 
