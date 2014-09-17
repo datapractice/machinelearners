@@ -1,9 +1,13 @@
 # Believing in the strength of numbers
 
 
-## themes/story of chapter
-what low probability events mean; why they matter and how to find them
-how probability undercuts other more sophisticated takes on the world -- Hacking's argument about Peirce
+## overview
+
+- the interplay between personalization and probabilistic classification
+- the way machine learning techniques are wrapped/undergirded by statistical thinking
+- how statistical thinking re-thinks the algorithmic
+- what low probability events mean; why they matter and how to find them
+- how probability undercuts other more sophisticated takes on the world -- Hacking's argument about Peirce
 
 ## to put in
 
@@ -18,6 +22,12 @@ how probability undercuts other more sophisticated takes on the world -- Hacking
 	- Warner 1961, Maron, 1961,  Tittington 1981, Michie, Ripley (DONE), Bishop (DONE), Mitchell (DONE), Domingos 1997, Lewis 1998 Witten (2001/2011),Hastie (2001/2009), Jordan (2004), Alpaydin (2010)(DONE), Manning (2009)(DONE),  Flach, top10-algo, Myles-White(DONE), Schutt (DONE), Hastie/R book (2013)
 
 ## from proposal
+
+## quotes to use
+
+stuff from parisi
+stuff from amoore
+stuff from 
 
 #### Key examples:  Microsoft TrueSkill; Obama election data team
 #### Key techniques: Monte Carlo simulations and MCMC; Bayesian networks; 
