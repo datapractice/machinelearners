@@ -1,5 +1,7 @@
 # The probabilistic event: machine learning into programming 
 
+## alternative titles 
+
 Believing in the strength of numbers
 
 
@@ -50,7 +52,7 @@ stuff from parisi
 
 stuff from amoore
 
-stuff from Hastie
+stuff from Hastie on Naive Bayes
 >It is especially appropriate when the dimension p of the feature space is high, making density estimation unattractive. The naive Bayes model assumes that given a class $G = j$, the features $X_k$ are independent 211
 
 >While this assumption is generally not true, it does simplify the estimation

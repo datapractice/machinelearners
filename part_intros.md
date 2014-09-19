@@ -20,12 +20,3 @@ toscano
 
 
 
-# Part 2: Modes of ordering
-
-- large brain
-- deep reconstruction
-- distribution - liveness and learning
-
-## References
-
-- Howard, Norvig, Ayasda person
