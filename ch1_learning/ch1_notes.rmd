@@ -43,6 +43,6 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
 - Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
 - done? On the aridness of the textbooks and literature and what to do about that. 
 - done - Domingos on feature engineering and why it is important -- article in ACM
-  add the recent books like ML in Python, Thoughtful ML, etc
-  
-
+-  add the recent books like ML in Python, Thoughtful ML, etc
+- add Parisi quote about software cultures: '
+>The epochal challenge of programming cultures is to venture into the infinity of incomputable probabilities (infinite discrete unities that are bigger than the totality of the whole sequence of algorithmic instructions) that lies beyond both the digital ground and interactive empiricism. 77
