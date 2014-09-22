@@ -1,0 +1,11 @@
+ch0_introduction/ch0_introduction.rmd
+ch1_learning/ch1_praxis.rmd
+part1.rmd
+ch2_curves/ch2_curves_function.rmd
+ch3_dimensionality/ch3_dimensional_exuberance.rmd
+ch4_probability/ch_naive_informed.rmd
+part2.rmd
+ch5_topologies/ch_genomic_topologies.rmd
+ch6_reconstruction/ch_reconstruction_number.rmd
+ch7_subjects/ch_learning_subjects.rmd
+ch8_conclusion/ch8_conclusion.rmd

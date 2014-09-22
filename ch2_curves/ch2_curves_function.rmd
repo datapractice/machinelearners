@@ -1,12 +1,14 @@
 # Machines finding functions
 
+## alternate titles
+
 Looking at data 
 Finding functions: lines and curves
 
 ## from proposal
 
-#### Key examples: housing price prediction; cancer prognosis; digit recognition; credit scoring
-#### Key techniques: logistic regression; _k_-nearest neighbours, neural networks
+## Key examples: housing price prediction; cancer prognosis; digit recognition; credit scoring
+## Key techniques: logistic regression; _k_-nearest neighbours, neural networks
 
 -- recursion, movement, evocative objects, partial observers, visualisation, etc; functions and states of things; linear regression
 

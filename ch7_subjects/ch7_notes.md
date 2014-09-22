@@ -25,6 +25,7 @@ The chapter focuses on the forms of subjectivity associated with contemporary da
 - think how the EM algorithm could be a figure for competitiveness?
 - not sure much the productivity of labour but its predictivity, and the need for excess labour power;
 - arvidsson on reputation
+- major issues about collaboration and how that figures around ml -- does ml offer any space for that? Where is it marked by that?
 
 ## Examples
 

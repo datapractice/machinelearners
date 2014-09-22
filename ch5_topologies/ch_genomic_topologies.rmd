@@ -1,4 +1,6 @@
-#  What does the scale of data do for things?
+# What does the scale of data do for things?
+
+## alternate titles
 
 What does data do for things?
 
@@ -9,8 +11,10 @@ Transforming
 
 ## from proposal
 
-#### Key examples: the ENCODE project; METABRIC; 
-#### Key techniques: decision trees, random forests, self-organising maps
+## overview
+
+
+## Key examples: the ENCODE project; METABRIC;  Key techniques: decision trees, random forests, self-organising maps
 
  - doubling times, the auratic power of the instrument, and metacommunity, the topological turn 
 
@@ -22,33 +26,16 @@ This chapter of the book concerns data-generating instruments and data archives 
 ## to do 
 
 - use the ml-lit analysis to point to the rise of bioinformatics
+- start to develop the ontological argument more strongly
+- talk about how important infrastructures and instruments are
 
+## quotes to use
 
+quotes from parisi
+quotes from lury
+quotes from biocapital literature
 
-
-
-
-# Machine Learning and Genomic Dimensionality: from Features to Landscapes
-
-Adrian Mackenzie
-
-Centre for Economic and Social Aspects of Genomics, 
-
-Lancaster University
-
-
-
-  
-
-
-
-
-
-
-
-
-
-## Introduction
+## Introduction: Machine Learning and Genomic Dimensionality: from Features to Landscapes
 
 The Google Compute Engine, a globally-distributed ensemble of computers,  was briefly turned over to exploration of cancer genomics during 2012, and publicly demonstrated during the annual Google I/O conference. Midway through the demonstration, in which a human genome is visualized as a ring in 'Circos' form  (see Stevens' chapter, this volume; [@Krzywinski18062009]), the speaker, Urs Hölzle, Senior Vice President of Infrastructure at Google 'then went even further and scaled the application to run on 600,000 cores across Google’s global data centers' [@google_inc_behind_2012]. The audience clapped. The world's '3rd largest supercomputer', as it was called by TechCrunch, a prominent technology blog,  'learns associations between genomic features' [@anthony_google_2012]. We are in the midst of many such demonstrations of 'scaling applications' of data in the pursuit of associations between 'features.' 
 

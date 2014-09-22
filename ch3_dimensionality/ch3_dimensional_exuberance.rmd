@@ -1,4 +1,4 @@
-#  Finding patterns in data
+# Finding patterns in data
 
 Movements in machine learning: patterns of generalization
 Dimensional exuberance and pattern recognition in movement
@@ -165,7 +165,6 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
 
-        #first some random data
 
 size = 1000
 x = np.random.uniform(0,10, size)
@@ -183,7 +182,6 @@ plt.scatter(x[class1==1],y[class1==1],s=0.5*z[class1==1], marker='*',
 plt.title('Synthetic data')
 plt.legend()
 
-        #titanic data
 import pandas as pd
 titanic = pd.DataFrame.from_csv('data/titanic_train.csv')
 p2 = plt.subplot(122)
@@ -285,14 +283,11 @@ To get a sense of what happened between the 1970s and 1980s process leading up t
 
 ```{r iris_tree, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' } 
 
-    #load iris dataset
     data(iris)
 
-    #load decision tree library
     library(rpart)
     head(iris)
 
-    #construct decision tree to classify iris by species
     iris_tree =rpart(Species ~ ., iris)
 ```
 
@@ -316,7 +311,6 @@ The results of the application of measures of node impurity can be seen below in
 
 ```{r iris_tree_plot, echo=FALSE,  fig.cap ='Decision tree on _iris_ dataset', cache=TRUE, message=FALSE, warning=FALSE, comment=NA, results='asis' } 
 
-    #plot the tree
     par(mfrow = c(1,2), xpd=NA)
     plot(iris_tree, main = 'tree recursive partitioning of iris')
     text(iris_tree, cex=0.8, use.n=TRUE)
@@ -347,36 +341,29 @@ import pylab as pl
 from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier
     
-        # Parameters
 n_classes = 3
 plot_colors = "bry"
 plot_step = 0.02
 
-        # Load data
 iris = load_iris()
 
 for pairidx, pair in enumerate([[0, 1], [0, 2], [0, 3],
                                 [1, 2], [1, 3], [2, 3]]):
-     # We only take the two corresponding features
     X = iris.data[:, pair]
     y = iris.target
 
-    # Shuffle
     idx = np.arange(X.shape[0])
     np.random.seed(13)
     np.random.shuffle(idx)
     X = X[idx]
     y = y[idx]
 
-    # Standardize
     mean = X.mean(axis=0)
     std = X.std(axis=0)
     X = (X - mean) / std
 
-    # Train
     clf = DecisionTreeClassifier().fit(X, y)
 
-    # Plot the decision boundary
     pl.subplot(2, 3, pairidx + 1)
 
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
@@ -392,7 +379,6 @@ for pairidx, pair in enumerate([[0, 1], [0, 2], [0, 3],
     pl.ylabel(iris.feature_names[pair[1]])
     pl.axis("tight")
 
-    # Plot the training points
     for i, color in zip(range(n_classes), plot_colors):
         idx = np.where(y == i)
         pl.scatter(X[idx, 0], X[idx, 1], c=color, label=iris.target_names[i],
@@ -409,7 +395,7 @@ In the example shown above, the different shadings of the rectangles indicate ar
 
 What happens in decision trees to differences and in particular those differences that we regard as important enough to develop classifications for? Whitehead suggests that 'sharp-cut scientific classifications are essential for scientific method. But they are dangerous for philosophy. Such classification hides the truth that the different modes of natural existence shade off into each other' [@whitehead_modes_1956, 215]. Decision trees actually take this truth to heart. In higher dimensional feature spaces, many different classifications are possible and a huge number of different trees could be constructed for any given dataset. Even for the _iris_ dataset,  different implementations of the algorithm generate different results because of the way they optimise the tree they select.  Given that the aim is to generate a rule that best separates categories or classes of subjects, events or things of interest, how can decision tree techniques deal with this potential proliferation of rules?  In some ways, it seems that the decision tree researchers were reading actor-network theory as they developed the recursive partitioning algorithms. On the one hand, they are almost agnostic about differences in the world. As the biostatisticians Malley, Malley and Pajevic write in their account, 'no distributional assumptions or other statistical premises are made in decision trees concerning the features or the subjects' [@malley_statistical_2011, 20]. 'Wait,' readers of actor network theory might say, 'that sounds like the ontological pluralism of actor network theory, or William James or A.N. Whitehead.' Indeed, decision trees (and as we'll see, random forests) are emphatically agnostic about what differences matter in principle.  But their almost inexhaustible capacity to accommodate differences can make them unstable. 
 
-### Cannot see the trees for the forest
+## Cannot see the trees for the forest
 
  ```{r dt_lit_2, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA } 
     
@@ -461,8 +447,6 @@ How does this injection of statistical techniques based on 'independent identica
     plot(titanic_rp)
     text(titanic_rp, cex=0.8, use.n=TRUE)
 
-    #now the random forest
-    #remove missing values
     titanic_train_r = na.omit(titanic_train)
     titanic_train_r$Survived = factor(titanic_train_r$Survived)
     titanic_rf=randomForest(Survived~Sex+Age+SibSp+Pclass + Parch+Fare+Embarked, titanic_train_r, proximity=TRUE)
@@ -523,29 +507,23 @@ import pylab as pl
 import seaborn
 from sklearn import svm
 
-        # we create 40 separable points
 np.random.seed(0)
 X = np.r_[np.random.randn(20, 2) - [2, 2], np.random.randn(20, 2) + [2, 2]]
 Y = [0] * 20 + [1] * 20
 
-            # fit the model
 clf = svm.SVC(kernel='linear')
 clf.fit(X, Y)
 
-            # get the separating hyperplane
 w = clf.coef_[0]
 a = -w[0] / w[1]
 xx = np.linspace(-5, 5)
 yy = a * xx - (clf.intercept_[0]) / w[1]
 
-            # plot the parallels to the separating hyperplane that pass through the
-            # support vectors
 b = clf.support_vectors_[0]
 yy_down = a * xx + (b[1] - a * b[0])
 b = clf.support_vectors_[-1]
 yy_up = a * xx + (b[1] - a * b[0])
 
-        # plot the line, the points, and the nearest vectors to the plane
 pl.plot(xx, yy, 'k-')
 pl.plot(xx, yy_down, 'k--')
 pl.plot(xx, yy_up, 'k--')
@@ -621,29 +599,23 @@ How does the support vector machine increase the dimensionality so drastically w
     import seaborn
     from sklearn import svm, datasets
 
-    #import some data to play with
-    iris = datasets.load_iris()
-    X = iris.data[:, :2]  # we only take the first two features. We could
-                          # avoid this ugly slicing by using a two-dim dataset
+    iris = datasets.load_iris()   # import some data to play with
+    X = iris.data[:, :2]  # we only take the first two features. We could  avoid this ugly slicing by using a two-dim dataset
     Y = iris.target
 
     h = .02  # step size in the mesh
 
-    #we create an instance of SVM and fit out data. We do not scale our
-    #data since we want to plot the support vectors
     C = 1.0  # SVM regularization parameter
     svc = svm.SVC(kernel='linear', C=C).fit(X, Y)
     rbf_svc = svm.SVC(kernel='rbf', gamma=0.7, C=C).fit(X, Y)
     poly_svc = svm.SVC(kernel='poly', degree=3, C=C).fit(X, Y)
     lin_svc = svm.LinearSVC(C=C).fit(X, Y)
 
-    #create a mesh to plot in
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
     y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
     xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
                          np.arange(y_min, y_max, h))
 
-    #title for the plots
     titles = ['SVC with linear kernel',
               'SVC with RBF kernel',
               'SVC with polynomial (degree 3) kernel',
@@ -651,17 +623,13 @@ How does the support vector machine increase the dimensionality so drastically w
 
 
     for i, clf in enumerate((svc, rbf_svc, poly_svc, lin_svc)):
-        # Plot the decision boundary. For that, we will assign a color to each
-        # point in the mesh [x_min, m_max]x[y_min, y_max].
         pl.subplot(2, 2, i + 1)
         Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
 
-        # Put the result into a color plot
         Z = Z.reshape(xx.shape)
         pl.contourf(xx, yy, Z, cmap=pl.cm.Paired)
         pl.axis('off')
 
-        # Plot also the training points
         pl.scatter(X[:, 0], X[:, 1], c=Y, cmap=pl.cm.Paired)
 
         pl.title(titles[i])
@@ -696,11 +664,10 @@ np.random.seed(0)
 X = np.random.randn(300, 2)
 Y = np.logical_xor(X[:, 0] > 0, X[:, 1] > 0)
 
-        # fit the model
 clf = svm.NuSVC()
 clf.fit(X, Y)
 
-                    #plot the decision function for each datapoint on the grid
+
 Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
 
@@ -743,3 +710,6 @@ At the beginning of this chapter, I proposed we should approach the forest of te
 But  do these differences in architecture or provenance matter given a massive and often seemingly crushing assimilation of data in the server farms of network media and large enterprises, or in commercial and government surveillance programs? There are massive disparities in scale here. The analytic or predictive power of the US National Security Agency, Google Search, Fico's credit-worthiness systems, or certain financial trading systems heavily blankets the terrain. These apparatuses are not, I would suggest, easily steered by any persons since the appetite of machine learning for diverse data seems to immediately override existing limits or constraints. But even just understanding the  form of movements through the data we in classification trees, random forests and in support vector machines might help position us differently in relation to these voracious systems. It is hard to know exactly what they are doing, but I'm fairly strongly persuaded that they do not do anything radically different from what we can see in the machine learning literature I have been discussing. The technical expertise of engineers, statisticians and computer scientists are Google, Facebook, Walmart or the NSA has developed in and amongst the same forest of classification systems we encounter in that literature. The popularity of the support vector machine in the last decade is general. The proliferation of decision trees in the 1980s and then random forests in the 2000s is likewise general. These are techniques whose power to generalize generalizes them.  
 
 Yet the various forms of movement I have delineated -- statistical, imitative and infinitist -- do not exhaust the potential forms of movement in data. In starting from a contrast between the two types of dataset -- a synthetic or articial dataset and a dataset lifted from the world (`iris,` `Titanic` or `NIST Handwritten Digits`) -- I assumed that data is given (as per the name 'data'). But I wonder increasingly whether data is given  in the sense of a finished act, or an event that has passed. It seems that everything we have discussed in relation to the techniques of the decision tree, the random forest, linear discriminant analysis or the support vector machine takes for granted that the model can exist in a time that comes after the data has been given. And that the patterns and dimensionality of data are more or less fixed for a given machine learner. But that is precisely what has turned out not to be the case. The generalization of machine learning in recent years  points in a different direction. The models themselves are undeniably if still somewhat impalpably living in our worlds in many different ways, ranging from the character recognition interface of touch screen through to the terrorist clique detection systems running on financial transactions.  What they encounter there is not and never has been of fixed dimensionality or  constant pattern. In this respect, the marvellous and for me often evocatively counter-intuitive developments in machine learning technique still fall short of what is in the data, the becomings, the gradients, the fluxes and local differences. Their movement is still not in the data enough. The question then is how to make sure that  models are not left to their own devices. How, as they become more and more part of how things happen, can they be  recomposed in the midst of things? In the next chapter, as I discuss machine learning competitions and the subjects/practictioners/technicians of optimisation, this ongoing recomposition will matter more.
+
+
+

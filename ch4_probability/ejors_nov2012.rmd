@@ -1,102 +1,26 @@
-# The probabilistic event: machine learning into programming 
-
-## alternative titles 
-
-Believing in the strength of numbers
 
 
-## overview
+# Distributive numbers and  neo-Baroque probability
 
-- multiplying probabilities
-    - why naive bayes is important -- multiplying probabilities, assuming they are independent of each other
-    - the way machine learning techniques are wrapped/undergirded by statistical thinking: Ng lectures on learning theory, empirical risk minimization, cross-validation and regularization   and especially _bias-variance tradeoff_, underfitting and overfitting-- lectures 9-10;
-    - how probability affects machine learning, support vector machine, or otherwise
-    - more data beats better algorithms -- why naive bayes, why association rules, etc; simple density estimation vs parametric model
--hidden probabilities
-    - why EM is important -- assume that there are hidden or latent random variables that can account for how things are mixed up. This is a major site to introduce unsupervised learning. Ng lectures 13-14-15;
-    - the role of tests in machine learning
-- synthetic probabilities
-    -why MCMC is important - assume that what we think changes the numbers that have to be calculated;
-    - the interplay between personalization and probabilistic classification: the ethical-political cost of this
-- Implications
-    - what low probability events mean; why they matter and how to find them- long tail distributions
-    - how statistical thinking re-thinks the algorithmic in terms of the probabilistic - Parisi on this
-    - how probabilistic programming matters
-- how probability undercuts other more sophisticated takes on the world -- Hacking's argument about Peirce
+Adrian Mackenzie,
 
-## to do
+Sociology, Lancaster University
 
-- principal component analysis and unsupervised learning from the early 20C -- Pearson; the time when probability is objective
-- naive bayes, including the ipython notebook; the Lewis article - 40 years, the spam filter example -- from schutt, from segaran, from myles-white; from hastie, flach, from top10 algo, etc
-- discussions of Naive bayes in malley, flach, hastie, ripley
-- friedman paper -- highly cited on virtues of naive bayes
-- tom mitchell on why Bayes is a good way to think about machine learning
-- Rassmussen & Williams on Gaussian processes
-- likelihood function Flach, 27
-- references cited by Ripler -- Warner 1961, Tittington, 1981; cf Michie 1994 textbook
-- sequence of references: 
-	- Warner 1961, Maron, 1961,  Tittington 1981, Michie, Ripley (DONE), Bishop (DONE), Mitchell (DONE), Domingos 1997, Lewis 1998 Witten (2001/2011),Hastie (2001/2009), Jordan (2004), Alpaydin (2010)(DONE), Manning (2009)(DONE),  Flach, top10-algo, Myles-White(DONE), Schutt (DONE), Hastie/R book (2013), Thoughtful Machine Learning (Kirk 2014)
+Bailrigg, LA14YL, UK
 
-## from proposal
+a.mackenzie@lancaster.ac.uk
+
+ph (44) 01524 594184
 
 
-The topic in this chapter is the role of randomness, chance and number in machine learning. Machine learning techniques are suffused with probabilistic modes of thought. This chapter foregrounds probability and  the changes in probability associated with both statistical pattern recognition models such as the Naive Bayes classifier (often used to filter spam email) and the so-called 'Bayesian revolution' in statistical practice that took shape in the early 1990s in particular in the form of Markov Chain Monte Carlo simulation (MCMC). The computationally intensive techniques of Bayesian analysis treat all numbers as potentially random variables; that is, as best described by probability distributions whose interactions need to be carefully explored.  By contrast, the probabilistic machine learning models exemplified by Naive Bayes  treat numbers as if they have little relation to each other.  The chapter traces two important implications of this contrast between ways of working with probability. The popularity of MCMC is a striking example of a technique moving  across fields, and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and online gaming. Second, although they both treat potentially all important numbers as a matter of probability calculus, the contrast between  computationally intensive, MCMC and probabilistic models such as Naive Bayes suggest very different beliefs in the power of computation.  A broader question here will be framed by reference to notions of expectation and belief: what mode of belief in probability better sensitises us to what machine learning or pattern recognition models do in given situations?
+## Abstract
 
 >Since its Baroque invention [@hacking_emergence_1975], probability has been a double-sided coin. On one side, it concerns degrees of belief (the so-called 'subjective' view), and on the other side, frequencies, or how often things happen in the world (the so-called 'objective' view). In the last few centuries, one side of this coin has come up more often -- the frequency version of probability. Yet, as many historians of statistics, and statisticians themselves recognise, probability as degree of belief has never disappeared. It has only occurred less often, and been less often the object of belief. This ineluctable entwining of belief and events, of subjective-objective faces, in probability seems quintessentially Baroque in its interweaving and folding together of inside and outside. Drawing on contemporary statistical practice, and Gilles Deleuze's understanding of monads as 'simple, inverse, distributive numbers' [@deleuze_fold_1993], this paper examines the resurgence of the probability as degree of belief in the face of a world seemingly teeming with data. It argues that in the last few decades of statistical practice associated especially with 'Bayesian inference' and the techniques of Markov Chain Monte Carlo (MCMC) simulation, we see a re-configured and super-imposed concept of probability taking shape. As these practices pervade diverse scientific fields, commerce, government and industry, we might be seeing a different epistemic materialisation taking shape in which beliefs and events are less separate. On the contrary, through computation, subjective belief is exteriorised in simulated events, and a certain staging of events are reshaped as updateable beliefs. 
 
-## quotes to use
 
-from hacking_1990
+\newpage
 
->By the 1930s, however, the world teemed with frequencies, and the 'objective' notion would come to seem more important than the 'subjective' one for the rest of the century -- simply because there were soo many more frequencies to be known. 97
-
->It is pointless to debate which of the two ideas is correct. We note only that one or the other may be more dominant at different times. 97
-
->To return to _chance_ and _probabilite_: the fundamental distinction between 'objective' and 'subjective' in probability -- so often put in terms of frequency _vs._ belief -- is between modelling and inference. 98
-
-stuff from parisi
-
-> Instead, I take Chaitin’s computational proof of Omega or infinite probabilities, which are at once computably enumerable and algorithmically random, to explain that the automation of data implies an irreversible encounter with incomputable probabilities.  This is to say that the automated operations of prehension, and the mechanical procedures of computers, have their own blind spots, anomalies, and alien logic of calculation, which far from being computational failures are instead to be taken as symptoms of algorithmic thought. This is the point at which the sequential order of algorithms gives way to the conceptual prehension of computational infinities, when algorithms process data beyond what has already been programmed.192
-
-stuff from amoore
-
-stuff from Hastie on Naive Bayes
->It is especially appropriate when the dimension p of the feature space is high, making density estimation unattractive. The naive Bayes model assumes that given a class $G = j$, the features $X_k$ are independent 211
-
->While this assumption is generally not true, it does simplify the estimation
-dramatically:
-
->• The individual class-conditional marginal densities $f_{jk}$ can each be estimated separately using one-dimensional kernel density estimates. This is in fact a generalization of the original naive Bayes procedures, which used univariate Gaussians to represent these marginals. • If a component $X_j$ of $X$ is discrete, then an appropriate histogram estimate can be used. This provides a seamless way of mixing variable types in a feature vector. 211
- 
->Despite these rather optimistic assumptions, naive Bayes classifiers often outperform far more sophisticated alternatives. The reasons are related to Figure 6.15: although the individual class density estimates may be biased, this bias might not hurt the posterior probabilities as much, especially near the decision regions. In fact, the problem may be able to withstand considerable bias for the savings in variance such a “naive” assumption earns. 211
-
-## Key examples:  Microsoft TrueSkill; Obama election data team
-- the viagra spam example
-Key techniques: Monte Carlo simulations and MCMC; Bayesian networks; 
-
-
- - probability and Bayesian inference - belief and desire in data  - belief chance, Bayes, internal proliferation of numbers; event-belief oscillation
-
-The topic in this chapter is the role of randomness and chance in machine learning. While statistical techniques and practices have been discussed in previous chapters, this chapter foregrounds the changes in the so-called 'Bayesian revolution' in statistical practice that took shape in the early 1990s, and in particular, the key algorithmic technique used in Bayesian statistics, Markov Chain Monte Carlo simulation (MCMC). The computationally intensive techniques of Bayesian analysis treat all numbers as potentially random variables; that is, as best described by probability distributions. The ensuing popularity of Bayesian inference is a striking example of transverse momentum of methods across fields, and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and epidemiology. 
-
-The chapter traces two important implications of this technique. First, because it is so computationally intensive, MCMC and Bayesian inference, although statistically powerful, are difficult to apply to many dimensional datasets. So Bayesian computation iconically figures the limits of contemporary data practices, with their ambitions to incorporate all available data into calculation. Second, in certain ways this technique challenges us to re-evaluate how we think about numbers. By following some of the ways numbers circulate through MCMC algorithms, we can discern to a semiotic-material faultline running through contemporary number formations. Numbers semiotically and materially embrace both events and degrees of belief. If numbers are crucial in the data economy, then instabilities in their mode of existence will affect much of what happens to data. While much of the machine learning taking place in commercial and operational settings is decidedly non-Bayesian, the popularity of MCMC and Bayesian approaches in contemporary sciences suggests a tension in what counts as number.
-
-
-## Naive Bayes 
-
-
-\begin {equation}
-\label {eq:naive_bayes}
-$$f_j(X) = \prod_{k=1}^{p}f_{jk}(X_k)$$
-\end {equation} [@Hastie_2009, 211]
-
-Some machine learning techniques are so simple that they can be implemented in a few lines of code. Their simplicity, however, belies their power. The function shown above \ref{eq:naive_bayes} is about the simplest one to be found in most machine textbooks. It expresses the Naive Bayes classifier, one of the most popular machine learning algorithms, even though it is more than 50 years old [@Hand_2001]. Hastie, Tibshirani and Friedman write:    
-
->It is especially appropriate when the dimension $p$ of the feature space is high, making density estimation unattractive. The naive Bayes model assumes that given a class $G = j$, the features $X_k$ are independent [@Hastie_2009, 211]. 
-
-In \ref{eq:naive_bayes}, $p$ stands for the number of different dimensions or variables in the data set, and that the outcomes can be classified in $j$ different classes. Note that in \ref{eq:naive_bayes}, the only operation carried out on the data is a multiplication. The $\prod$ operator multiplies probabilities in order to generate a classification. Compared to the complications of logistic regression, neural networks or support vector machines, \ref{eq:naive_bayes}  seems incredibly simple. How is it that a simple multiplication of probabilities can, as Hastie and co-authors write: 'often outperform far more sophisticated alternatives' [@Hastie_2009, 211]. Similar formulations can  be found in most of the machine learning books and instructional materials currently available. Along with linear regression, Naive Bayes might be _the_ standard introductory machine learning technique, where it is typically applied to the problem of filtering spam email [@Schutt_2013, 93-113; @Kirk_2014, 53; @Lantz_2013, 92-93; @Ng_2008b], and in particular dealing with the abundance of spam emails concerning Viagra (itself a byproduct of the failure of a statistical model). 
-
-## The chances of finding out what happened
+## Introduction
 
 > "We ran the election 66,000 times every night," said a senior official, describing the computer simulations the campaign ran to figure out Obama's odds of winning each swing state. "And every morning we got the spit-out — here are your chances of winning these states. And that is how we allocated resources." [@scherer_how_2012]
 
@@ -142,7 +66,7 @@ A more general affirmation of probabilities is not unprecedented, at least philo
 
 ## Distributions, individuals and random variables
 
-Again, the Baroque sense of probability, especially as articulated by G.W. Leibniz, the 'first philosopher of probability' [@hacking_emergence_1975, 57], is helpful in keeping matters more open. Let us return to the typical problem of the individual voter as envisaged by the Obama re-election team. Leibniz’s famously impossible claim that each monad includes the whole world is, according to Gilles Deleuze, actually a claim about numbers in variation. Through numbers, understood in a somewhat unorthodox way, monads — the parts of the world —  can include the whole world. This is an especially slippery point in Deleuze’s analysis of Leibniz’s work, but one that has strong contemporary resonances. Deleuze says: ‘for Leibniz, the monad is clearly the most “simple” number, that is, the inverse, reciprocal, harmonic number’ [@deleuze_fold_1993, 129]. These kinds of philosophical formulations raise many questions, but the very possibility of individualising a number into the root, or the radix of the monad, seems to me quite important if we are interested in developing ways of engaging affirmatively with number, without granting it the pure ontological primacy of mathesis or exiling it to the badlands of alienated reason.  
+Again, the Baroque sense of probability, especially as articulated by G.W. Leibniz, the 'first philosopher of probability' [@hacking_emergence_1975, 57], is helpful in keeping matters more open. Let us return to the typical problem of the individual voter as envisaged by the Obama re-election team. Leibniz’s famously impossible claim that each monad includes the whole world is, according to Gilles Deleuze, actually a claim about numbers in variation. Through numbers, understood in a somewhat unorthodox way, monads — the parts of the world —  can include the whole world. This is an especially slippery point in Deleuze’s analysis of Leibniz’s work, but one that has strong contemporary resonances. Deleuze says: ‘for Leibniz, the monad is clearly the most “simple” number, that is, the inverse, reciprocal, harmonic number’ [@deleuze_fold_1993, 129]. These kinds of philosophical formulations raise many questions , but the very possibility of individualising a number into the root, or the radix of the monad, seems to me quite important if we are interested in developing ways of engaging affirmatively with number, without granting it the pure ontological primacy of mathesis or exiling it to the badlands of alienated reason.  
 
 Having a world — for the monad is a mode of having a world by including it — as a number entails a very different notion of *having* and a somewhat different notion of number. The symbolic expression of this inclusion is:
 
