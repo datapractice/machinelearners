@@ -6,15 +6,23 @@ Believing in the strength of numbers
 
 
 ## overview
-- more data beats better algorithms -- why naive bayes, why association rules, etc; simple density estimation vs parametric model
-- the interplay between personalization and probabilistic classification: the ethical-political cost of this
-- the way machine learning techniques are wrapped/undergirded by statistical thinking
-- how statistical thinking re-thinks the algorithmic in terms of the probabilistic - Parisi on this
-- what low probability events mean; why they matter and how to find them- long tail distributions
+
+- multiplying probabilities
+    - why naive bayes is important -- multiplying probabilities, assuming they are independent of each other
+    - the way machine learning techniques are wrapped/undergirded by statistical thinking: Ng lectures on learning theory, empirical risk minimization, cross-validation and regularization   and especially _bias-variance tradeoff_, underfitting and overfitting-- lectures 9-10;
+    - how probability affects machine learning, support vector machine, or otherwise
+    - more data beats better algorithms -- why naive bayes, why association rules, etc; simple density estimation vs parametric model
+-hidden probabilities
+    - why EM is important -- assume that there are hidden or latent random variables that can account for how things are mixed up. This is a major site to introduce unsupervised learning. Ng lectures 13-14-15;
+    - the role of tests in machine learning
+- synthetic probabilities
+    -why MCMC is important - assume that what we think changes the numbers that have to be calculated;
+    - the interplay between personalization and probabilistic classification: the ethical-political cost of this
+- Implications
+    - what low probability events mean; why they matter and how to find them- long tail distributions
+    - how statistical thinking re-thinks the algorithmic in terms of the probabilistic - Parisi on this
+    - how probabilistic programming matters
 - how probability undercuts other more sophisticated takes on the world -- Hacking's argument about Peirce
-- how probability affects machine learning, support vector machine, or otherwise
-- how probabilistic programming matters
-- the role of tests in machine learning
 
 ## to do
 
@@ -63,6 +71,7 @@ dramatically:
 >Despite these rather optimistic assumptions, naive Bayes classifiers often outperform far more sophisticated alternatives. The reasons are related to Figure 6.15: although the individual class density estimates may be biased, this bias might not hurt the posterior probabilities as much, especially near the decision regions. In fact, the problem may be able to withstand considerable bias for the savings in variance such a “naive” assumption earns. 211
 
 ## Key examples:  Microsoft TrueSkill; Obama election data team
+- the viagra spam example
 Key techniques: Monte Carlo simulations and MCMC; Bayesian networks; 
 
 
@@ -73,8 +82,19 @@ The topic in this chapter is the role of randomness and chance in machine learni
 The chapter traces two important implications of this technique. First, because it is so computationally intensive, MCMC and Bayesian inference, although statistically powerful, are difficult to apply to many dimensional datasets. So Bayesian computation iconically figures the limits of contemporary data practices, with their ambitions to incorporate all available data into calculation. Second, in certain ways this technique challenges us to re-evaluate how we think about numbers. By following some of the ways numbers circulate through MCMC algorithms, we can discern to a semiotic-material faultline running through contemporary number formations. Numbers semiotically and materially embrace both events and degrees of belief. If numbers are crucial in the data economy, then instabilities in their mode of existence will affect much of what happens to data. While much of the machine learning taking place in commercial and operational settings is decidedly non-Bayesian, the popularity of MCMC and Bayesian approaches in contemporary sciences suggests a tension in what counts as number.
 
 
+## Naive Bayes 
 
 
+\begin {equation}
+\label {eq:naive_bayes}
+$$f_j(X) = \prod_{k=1}^{p}f_{jk}(X_k)$$
+\end {equation} [@Hastie_2009, 211]
+
+Some machine learning techniques are so simple that they can be implemented in a few lines of code. Their simplicity, however, belies their power. The function shown above \ref{eq:naive_bayes} is about the simplest one to be found in most machine textbooks. It expresses the Naive Bayes classifier, one of the most popular machine learning algorithms, even though it is more than 50 years old [@Hand_2001]. Hastie, Tibshirani and Friedman write:    
+
+>It is especially appropriate when the dimension $p$ of the feature space is high, making density estimation unattractive. The naive Bayes model assumes that given a class $G = j$, the features $X_k$ are independent [@Hastie_2009, 211]. 
+
+In \ref{eq:naive_bayes}, $p$ stands for the number of different dimensions or variables in the data set, and that the outcomes can be classified in $j$ different classes. Note that in \ref{eq:naive_bayes}, the only operation carried out on the data is a multiplication. The $\prod$ operator multiplies probabilities in order to generate a classification. Compared to the complications of logistic regression, neural networks or support vector machines, \ref{eq:naive_bayes}  seems incredibly simple. How is it that a simple multiplication of probabilities can, as Hastie and co-authors write: 'often outperform far more sophisticated alternatives' [@Hastie_2009, 211]. Similar formulations can  be found in most of the machine learning books and instructional materials currently available. Along with linear regression, Naive Bayes might be _the_ standard introductory machine learning technique, where it is typically applied to the problem of filtering spam email [@Schutt_2013, 93-113; @Kirk_2014, 53; @Lantz_2013, 92-93; @Ng_2008b], and in particular dealing with the abundance of spam emails concerning Viagra (itself a byproduct of the failure of a statistical model). 
 
 ## The chances of finding out what happened
 
