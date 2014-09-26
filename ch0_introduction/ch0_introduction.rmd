@@ -30,6 +30,10 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 
 ## to do
 - bring in materials from warwick talk
+- see potential as predictable, question the bifurcation between abstract and concrete;
+- how is difference being done differently
+- use presentations nodes from transforming data workshop
+- is it a matter of taking the machine perspectives; 
 - say why I am focusing on machine learning and not data more generally -- databases, infrastructures, visualization, etc. - i.e. it is essential but opaque; it is the most slow-moving and tectonic aspect of what is happening with data; it has high levels of abstraction and generates many different potentials; it is a challenge for any re-thinking of what social sciences and critical humanities will do with data.
 - the role of industry -- machine learning as industrial and maybe link this to the labour question
 - the difference between ML and IR, data-mining, - use IR book, use mining massive datasets; use db books to show this
@@ -38,7 +42,7 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 - the form of writing; finding oneself experimenting with code and data
 - trying to find experiments and experiences
 -  the ml literature -- how the terms takes shape -- use ipython notebooks for that. machine learning as very loose assemblage; how it coalesces; etc. 
--  I can't cover all the algorithms, techniques, settings
+-  I can't cover all the algorithms, techniques, settings, but this abundance, and description of it is part of the phenomena and the practice;
 -  FICO, DunneRaby -- huge amounts happening in these commercial spaces that I haven't investigate. Could be done through patent literature .... 
 -  the development of machine learning out of AI -- shift from rule-based experts (cd Suchman; Collins  on this); visible in early textbooks (Tom Mitchell); decisive role of pattern recognition approaches focused on images (Bishop 1996 on this); Donald Michie for even earlier
 -  the identificatino of ML and data-mining and predictive analytics
