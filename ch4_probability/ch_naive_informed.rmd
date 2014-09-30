@@ -88,27 +88,98 @@ The topic in this chapter is the role of randomness and probability in machine l
 >Using all the data makes it possible to spot connections and details that are otherwise cloaked in the vastness of the information. For instance, the detection of credit card fraud works by looking for anomalies, and the best way to find them is to crunch all the data rather than a sample [@Mayer, 2013,  27]
 
 
-In the several hundred pages that follow, the problem of how to 'crunch all the data' is never really discussed. While they mention the role of social network theory (30), 'sophisticated computational analysis' (55),  'predictive analytics' (58) and 'correlations' (7),  and they do say that 'the revolution' is 'about applying math to huge quantities of data in order to infer probabilities' (12), any further consideration of specific techniques of data crunching or the math is largely left aside. This is not to criticize a book that sets out to describe trends affecting business and government for a general readership, but without a sense of how statistical thinking animates almost all salient features of crunching the data and particularly the predictions, it becomes hard to see how the 'revolution' takes place. In other words, the shift from $N=n$ to $N=all$ does not occur without other transpositions and rearrangements that do not simply concern choices about how much data to use.
+In the several hundred pages that follow in _Big Data_, the problem of how to 'crunch all the data' is never really discussed. While they mention the role of social network theory (30), 'sophisticated computational analysis' (55),  'predictive analytics' (58) and 'correlations' (7),  and they do say that 'the revolution' is 'about applying math to huge quantities of data in order to infer probabilities' (12), any further consideration of specific techniques of data crunching or the math is largely left aside. This is not to criticize a book that sets out to describe trends affecting business and government for a general readership, but without a sense of how statistical thinking animates almost all salient features of crunching the data and particularly the predictions, it becomes hard to see how the 'revolution' takes place. In other words, the shift from $N=n$ to $N=all$ does not occur without other transpositions and rearrangements that do not simply concern choices about how much data to use.
 
 I approach these transpositions  mainly through a contrast between the extremely simple and easily implemented Naive Bayes classifier and the so-called 'Bayesian revolution' in statistical practice that took shape in the early 1990s, and in particular, the key algorithmic technique used in Bayesian statistics, Markov Chain Monte Carlo simulation (MCMC) as it is applied in a typical 'big data' technique of 'topic modelling' [@Blei_2011]. Across the gamut of differences between the very simple Naive Bayes approach and the sophisticated MCMC techniques at work in topic modelling, we can see a broad ranging shift in probability practice has been occurring. This shift is not captured by the shift from $N=n$ to  $N=all$.  The key argument here, following on from the discussions of vector space, the function of optimisation and the development of decisionistic mechanisms developed in the preceding chapters is that what is happening to data, the ways in which are being corralled and marshalled, and the kinds of pattern-finding, anticipation or pre-emption delivered by machine learning need to be considered alongside an introjection of probability. This is not the first such introjection, since probability, as we will see, has undergone convoluted transformations before (for instance between subjective and objective: see [@Hacking_1975; @Hacking_1990] for standard accounts of these changes). The multiple, overlapping and often cantilevered ways in which probability practice runs through machine learning, however, suggests that another transformation is in train. Accompanying this transformation, amplifying and ramifying it, certain techniques -- Naive Bayes, MCMC, but also so-called 'ensemble' methods that stage populations of models and specific techniques such Expectation Maximization or the bootstrap -- carry this transformation wide and deep. Via a combination of these techniques, many more things become probabilistic. Words, images, faces, places, feelings, prices, and all kinds of derivative numbers display an increasingly probabilistic mode of existence that may not completely replace or suppress other ways in which they inhabit the world, but certainly induce existential oscillations in them. 
 
-Put in slightly awkward technical terms, we might say that many more aspects of data, of prediction, of classification and pattern, exist more _probabilistically_. The computationally intensive MCMC techniques used in Bayesian analysis treat all numbers as potentially random variables. The Naive Bayes technique treats all outcomes as conditional probabilities, not too far removed from coin tosses in certain respects. The bootstrap techniques change the way that data relates as samples to populations, and presents datasets as populations that can be intensively re-sampled in order to effectively make the dataset a bigger portion of the population it was originally cut from. In contrast to the line drawing, curve fitting, maximising and minimising of the linear models, the decision trees, and the support vector machines, the probabilistic transformations wrought through machine learning start, I would suggest, to affect how we experience collectives, how we apprehend individuality, as well as more diffuse collective entities such as populations, and perhaps markets. In a world where probability and its associated practices of randomization are no longer confined to specific centres of calculation like laboratories or bureaus of statistics, chance, randomness and probability become part of the fabric.
+Put in slightly awkward technical terms, we might say that many more aspects of data, of prediction, of classification and pattern, exist more _probabilistically_. The computationally intensive MCMC techniques used in Bayesian analysis treat all numbers as potentially random variables. The Naive Bayes technique treats all outcomes as conditional probabilities, not too far removed from coin tosses in certain respects. The bootstrap techniques change the way that data relates as samples to populations, and presents datasets as populations that can be intensively re-sampled in order to effectively make the dataset a bigger portion of the population it was originally cut from. In contrast to the line drawing, curve fitting, maximising and minimising of the linear models, the decision trees, and the support vector machines, the probabilistic transformations wrought through machine learning start, I would suggest, to affect how we experience collectives, how we apprehend individuality, as well as more diffuse collective entities such as populations, and perhaps markets. In a world where probability and its associated practices of randomization are no longer confined to specific centres of calculation such as laboratories or bureaus of statistics, chance, randomness and probability become part of the fabric.
 
-In order to make something of the transformation discussable, some definitional discussion might be useful. Immediately below, I introduce some new operating terminology for this chapter (terms such as random variable, probability distribution and likelihood).  I'm suggesting that we countenace a scene in which multiple different probability practices stack on top of each other. Amidst these, random variables and their associated probability distributions particularly concern us. As we will see, the power of the transformation in probability associated with machine learning algorithms resides in their capacity to draw in many more relations, features and components of data in support of a probabilistic outcome. When things are best described as probability distributions, they take on a different form of temporal and multiplicative existence. A probabilistically generated airline seat price attracts different kinds of transactions than a fixed priced seat. Similarly, a probabilistically generated tumour classification implies different modes of responsiveness and care. Gaining some understanding of the concrete arrangements of forces in these probabilistic modes might allow us to account for the ways in which certain methods -- Bayesian inference is a striking example of transverse momentum of methods across fields  -- go on the move, or why certain problems -- automatic text classification, image recognition, etc -- suddenly hove into feasibility.
+Immediately below, I introduce some new operating terminology for this chapter (terms such as random variable, probability distribution and likelihood).  I'm suggesting that we countenace a scene in which multiple different probability practices stack on top of each other. Amidst these, random variables and their associated probability distributions particularly concern us. As we will see, the power of the transformation in probability associated with machine learning algorithms resides in their capacity to draw in many more relations, features and components of data in support of a probabilistic outcome. When things are best described as probability distributions, they take on a different form of temporal and multiplicative existence. A probabilistically generated airline seat price attracts different kinds of transactions than a fixed priced seat. Similarly, a probabilistically generated tumour classification implies different modes of responsiveness and care. Gaining some understanding of the concrete arrangements of forces in these probabilistic modes might allow us to account for the ways in which certain methods -- Bayesian inference is a striking example of transverse momentum of methods across fields  -- go on the move, or why certain problems -- automatic text classification, image recognition, etc -- suddenly hove into feasibility.
 
 [TODO: the definitional work; move stuff up from below to do this]
 
 The chapter traces two important implications of this technique. First, because it is so computationally intensive, MCMC and Bayesian inference, although statistically powerful, are difficult to apply to many dimensional datasets. So Bayesian computation iconically figures the limits of contemporary data practices, with their ambitions to incorporate all available data into calculation. Second, in certain ways this technique challenges us to re-evaluate how we think about numbers. By following some of the ways numbers circulate through MCMC algorithms, we can discern to a semiotic-material faultline running through contemporary number formations. Numbers semiotically and materially embrace both events and degrees of belief. If numbers are crucial in the data economy, then instabilities in their mode of existence will affect much of what happens to data. While much of the machine learning taking place in commercial and operational settings is decidedly non-Bayesian, the popularity of MCMC and Bayesian approaches in contemporary sciences suggests a tension in what counts as number.
 
 
-## Naive Bayes Bayes
+## Naive Bayes
 
 \begin {equation}
 \label {eq:naive_bayes}
 $$f_j(X) = \prod_{k=1}^{p}f_{jk}(X_k)$$
 \end {equation} [@Hastie_2009, 211s]
 
-Some machine learning techniques are so simple that they can be implemented in a few lines of code. Their simplicity, however, belies their power. The function shown above \ref{eq:naive_bayes} is about the simplest one to be found in most machine textbooks. It expresses the Naive Bayes classifier, one of the most popular machine learning algorithms, even though it is more than 50 years old [@Hand_2001]. Hastie, Tibshirani and Friedman write:    
+Some machine learning techniques are so simple that they can be implemented in a few lines of code. Their simplicity, however, belies their power. The function shown above \ref{eq:naive_bayes} is about the simplest one to be found in most machine textbooks. It expresses the Naive Bayes classifier, one of the most popular machine learning algorithms, even though it is more than 50 years old [@Hand_2001]. While \ref{eq:naive_bayes} does not set out all the steps in transforming some training data into a predictive model, the lines of code needed to do this are similarly brief. In _Doing Data Science_, Rachel Schutt and Cathy O'Neill furnish a bash script (that is, command line instructions) to download a well-known email dataset and build a Naive Bayes classifier for spam:
+
+``` {r enron_nb, engine='bash', echo=TRUE}
+
+    #!/bin/bash
+    # file: enron_naive_bayes.sh
+    # description: trains a simple one-word naive bayes spam
+    # filter using enron email data
+    # usage: ./enron_naive_bayes.sh <word>
+    # requirements:
+    #    wget
+    #
+    # author: jake hofman (gmail: jhofman)
+    # how to use the code
+    if [ $# -eq 1 ]
+    then
+        word=$1
+    else
+        echo "usage: enron_naive_bayes.sh <word>"
+        exit
+    fi
+
+     ### PART 1
+    if ! [ -e enron1.tar.gz ]
+    then
+        wget 'http://www.aueb.gr/users/ion/data/enron-spam/preprocessed/enron1.tar.gz'
+    fi
+
+    if ! [ -d enron1 ]
+    then
+        tar zxvf enron1.tar.gz
+    fi
+
+    cd enron1
+
+    ### PART 2
+    Nspam=`ls -l spam/*.txt | wc -l`
+    Nham=`ls -l ham/*.txt | wc -l`
+    Ntot=$Nspam+$Nham
+    echo $Nspam spam examples
+    echo $Nham ham examples
+
+    Nword_spam=`grep -il $word spam/*.txt | wc -l`
+    Nword_ham=`grep -il $word ham/*.txt | wc -l`
+    echo $Nword_spam "spam examples containing $word"
+    echo $Nword_ham "ham examples containing $word"
+
+    ### PART 3
+    Pspam=`echo "scale=4; $Nspam / ($Nspam+$Nham)" | bc`
+    Pham=`echo "scale=4; 1-$Pspam" | bc`
+    echo
+    echo "estimated P(spam) =" $Pspam
+    echo "estimated P(ham) =" $Pham
+    Pword_spam=`echo "scale=4; $Nword_spam / $Nspam" | bc`
+    Pword_ham=`echo "scale=4; $Nword_ham / $Nham" | bc`
+    echo "estimated P($word|spam) =" $Pword_spam
+    echo "estimated P($word|ham) =" $Pword_ham
+    Pspam_word=`echo "scale=4; $Pword_spam*$Pspam" | bc`
+
+    ### PART 4
+    Pham_word=`echo "scale=4; $Pword_ham*$Pham" | bc`
+    Pword=`echo "scale=4; $Pspam_word+$Pham_word" | bc`
+    Pspam_word=`echo "scale=4; $Pspam_word / $Pword" | bc`
+    echo
+    echo "P(spam|$word) =" $Pspam_word
+    cd ..
+
+``` [@Schutt_2013, 105-106]
+
+The `bash` script carries out four different transformations of the data in building the model using command line tools such as `wc` (word count), `bc` (basic calculator), `grep` (text search using pattern matching) and `echo` (display a line of text). These tools or utilities are readily available in almost any UNIX-based operating system (e.g. Linux, MacOS, etc).  The first part of the code downloads the sample dataset of Enron emails (and I will discuss spam emails and their role in machine learning below). Note that this dataset has already been divided into two classes - 'spam' and 'ham' -- and individual emails of each class have been placed in separate directories or folders as text files. The second part of the code ('Part 2') counts the number of emails in each category and prints them. [HERE == describe the rest of this process -- the important points: it is only counting and multiplying things -- there are no other operations; it streams complicated objects into a series of counts; breaks things into a set of random variables with different probabilities] 
+
+Hastie, Tibshirani and Friedman characterise the value of the technique in relation to its capacity to deal with high dimensional data (see Chapter 2 on this):    
 
 >It is especially appropriate when the dimension $p$ of the feature space is high, making density estimation unattractive. The naive Bayes model assumes that given a class $G = j$, the features $X_k$ are independent [@Hastie_2009, 211]. 
 
@@ -152,6 +223,8 @@ This fundamental thesis has remained somewhat fundamental in text classification
 In addition to the longevity of the technique, we might attend to the shape of the datasets. Maron's work focused on a collection of several hundred abstracts of papers published in the March and June 1959 issues of the _IRE Transactions on Electronic Computers_. As in contemporary supervised learning, these abstracts were divided into two groups, a training and a test set ('group 1' and 'group 2' in Maron's terminology [@Maron_1961, 407]), and the training set was classified according to 32 different categories that had already been in use by the Professional Group on Electronic Computers, the publishers of the _IRE Transactions_. Given these classifications, word counts for all distinct words in the abstracts were made, the most common terms ('the', 'is', 'of', 'machine', 'data', 'computer') and the most uncommon words removed, and the remaining set of around 1000 words were actually used for classification. This treatment of the abstracts as documents, then as lists of words, and then as frequencies of terms, and finally as a filtered list of most information rich terms continues in much text classification work today. Interestingly, they are rarely performed in relation to the spam classification demonstration (and I will discuss some possible reasons for this below). 
 
 Not just words, but elements of many different datasets -- images, instrument measurements, clocktimes or timestamps, and in short almost anything that can be counted -- could be handled in the same way by a Naive Bayes classifier. The key point is that the categories -- Maron's 32 categories drawn from _IRE Transactions_ or the two categories of 'spam' or 'ham' from the Enron dataset -- appear as 'response' or target variables, and the remainder of the dataset -- the words or other elements -- appear as 'predictors' or 'feature variables.' Everywhere, numbers are increasingly in variation, and display increasingly distributional characteristics.  
+
+## Random variables as parameters in models
 
 While some events have discrete outcomes (Obama was re-elected in 2012), many happenings are not. In Lancaster here in north-west England, the probability of rain on a given day would be say 70%, but days have very different amounts of rain.  Some days, it rains once briefly and lightly. Other days it rains frequently and heavily. A gamut of rain events can occur, and each would distribute different amounts of water on Lancaster. Given the amount of variation,  a much better way to face the weather is to say that Lancaster's rain is a *random variable*: ‘a random variable is a mapping that assigns a real number to each outcome’ [@wasserman_all_2003,19]. If events have probabilities, random variables have a range of outcomes that are mapped to numbers. Again, the deceptive simplicity of 'mapping' hides many variations. Mapping is a form of one-to-one correspondence, usually expressed as a mathematical function. A random variable links events to numbers through functions.  Again, all this remains rather formal. The practical reality of random variables is variation, variations that are  visually expressed by curves and by probability distributions. 
 
