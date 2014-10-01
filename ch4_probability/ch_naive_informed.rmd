@@ -110,7 +110,7 @@ $$f_j(X) = \prod_{k=1}^{p}f_{jk}(X_k)$$
 
 Some machine learning techniques are so simple that they can be implemented in a few lines of code. Their simplicity, however, belies their power. The function shown above \ref{eq:naive_bayes} is about the simplest one to be found in most machine textbooks. It expresses the Naive Bayes classifier, one of the most popular machine learning algorithms, even though it is more than 50 years old [@Hand_2001]. While \ref{eq:naive_bayes} does not set out all the steps in transforming some training data into a predictive model, the lines of code needed to do this are similarly brief. In _Doing Data Science_, Rachel Schutt and Cathy O'Neill furnish a bash script (that is, command line instructions) to download a well-known email dataset and build a Naive Bayes classifier for spam:
 
-``` {r enron_nb, engine='bash', echo=TRUE}
+    ```{r enron_nb, engine='bash', echo=TRUE}
 
     #!/bin/bash
     # file: enron_naive_bayes.sh
@@ -165,20 +165,63 @@ Some machine learning techniques are so simple that they can be implemented in a
     Pword_ham=`echo "scale=4; $Nword_ham / $Nham" | bc`
     echo "estimated P($word|spam) =" $Pword_spam
     echo "estimated P($word|ham) =" $Pword_ham
-    Pspam_word=`echo "scale=4; $Pword_spam*$Pspam" | bc`
 
     ### PART 4
+    Pspam_word=`echo "scale=4; $Pword_spam*$Pspam" | bc`
     Pham_word=`echo "scale=4; $Pword_ham*$Pham" | bc`
     Pword=`echo "scale=4; $Pspam_word+$Pham_word" | bc`
     Pspam_word=`echo "scale=4; $Pspam_word / $Pword" | bc`
     echo
     echo "P(spam|$word) =" $Pspam_word
     cd ..
+    ```
+[@Schutt_2013, 105-106]
 
-``` [@Schutt_2013, 105-106]
+The input to the script is a single such as 'finance' or 'deal'. The `bash` script carries out four different transformations of the data in building the model. It uses only command line tools such as `wc` (word count), `bc` (basic calculator), `grep` (text search using pattern matching) and `echo` (display a line of text). These tools or utilities are readily available in almost any UNIX-based operating system (e.g. Linux, MacOS, etc). The point of using only these utilities is to illustrate the simplicity of the algorithmic implementation of the model.  The first part of the code downloads the sample dataset of Enron emails (and I will discuss spam emails and their role in machine learning below). Note that this dataset has already been divided into two classes - 'spam' and 'ham' -- and emails of each class have been placed in separate directories or folders as individual text files.
 
-The `bash` script carries out four different transformations of the data in building the model using command line tools such as `wc` (word count), `bc` (basic calculator), `grep` (text search using pattern matching) and `echo` (display a line of text). These tools or utilities are readily available in almost any UNIX-based operating system (e.g. Linux, MacOS, etc).  The first part of the code downloads the sample dataset of Enron emails (and I will discuss spam emails and their role in machine learning below). Note that this dataset has already been divided into two classes - 'spam' and 'ham' -- and individual emails of each class have been placed in separate directories or folders as text files. The second part of the code ('Part 2') counts the number of emails in each category and prints them. [HERE == describe the rest of this process -- the important points: it is only counting and multiplying things -- there are no other operations; it streams complicated objects into a series of counts; breaks things into a set of random variables with different probabilities] 
+The text of a typical spam email in the Enron datasets looks like this:
+>
+Subject: it ' s cheating , but it works !
+can you guess how old she is ?
+the woman in this photograph looks like a happy teenager about to go
+to her high school prom , doesn ' t she ?
+she ' s an international , professional model whose photographs have appeared
+in hundreds of ads and articles whenever a client needs a photo of an
+attractive , teenage girl . but guess what ? this model is not a teenager !
+no , she is old enough to have a 7 - year - old daughter . . and . . . the model ' s
+real age is in her 30 ' s . all she will say about her age to her close friends
+is , " i ' m dangerously close to 40 . " she also says , " if
+it weren ' t for this amazing new cosmetic cream called ' deception , '
+i would lose hundreds of modeling assignments . . . because . . . there is no
+way i could pass myself off as a teenager . "
+learn more about this amazing new product . . .
+please refer all questions , opinions or additional feedback to :
+service dept
+9420 reseda blvd # 133
+northridge , ca 91324
 
+The text of a typical non-spam email like this:
+
+>
+Subject: industrials
+suggestions . . . . . .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by kenneth seaman / hou / ect on 01 / 04 / 2000
+12 : 47 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+pat clynes @ enron
+01 / 04 / 2000 12 : 46 pm
+to : kenneth seaman / hou / ect @ ect , robert e lloyd / hou / ect @ ect
+cc :
+subject : industrials
+ken and robert ,
+the industrials should be completely transitioned to robert as of january 1 ,
+2000 .
+please let me know if this is not complete and what else is left to
+transition .
+thanks , pat
+
+The second part of the code ('Part 2') counts the number of emails in each category and prints them, and the counts the number of times that the chosen word (e.g. 'finance' or 'deal') occurs in the spam and ham categories. Using these counts, the script (in what I am calling Part 3) estimates probabilities of any email being spam or ham, and then given that email is spam or ham, that the particular word occurs. To estimate a probability means, in this case, to divide the word count for the chosen word by the count of the number of spam emails, and ditto for the ham emails.  (For instance 'sexy' is more likely to occur in spam; 'gas' is more likely to appear in Enron's actual emails.)  In Part 4, the final transformatino of the data, these probabilities are used to calculate the probability of an email being spam given the presence of that word. Again, the mathematical operations here are no more complicated than adding, multiplying and dividing. The probability that the chosen word is a spam word is, for instance, the probability of occurrence of the word in a spam email multiplied by the overall probability that an email is spam. Finally, given that the overall probability of the chosen word occurring in the email dataset is the probability of it occurring in spam plus the probability of it occurring in ham, the overall probability that an email in the Enron data is spam given then presence of that word can be calculated. It is the probability that the chosen word is a spam word divide by the probability of that word in general. 
+
+The point of this slightly bamboozling description of what the script does is to show something of how \ref{eq:naive_bayes} can be translated into code. Hardly any machine learning models are so simple that they can be conveyed in 30 lines of code, including downloading the data and comments. The second feature of this script is that it shows that nothing that occurs in relation to probability is intrinsically mysterious, elusive or somehow transcendental. On the contrary, everything here is counting, adding, multiplying (that is, repeated adding) and dividing (that is, multiplying by parts or fractions). Everything is constrained by a certain limit on the results. Probabilities are always between `0` and `1`, or between 0% and 100%.  [HERE == describe the rest of this process -- the important points: it is only counting and multiplying things -- there are no other operations; it streams complicated objects into a series of counts; breaks things into a set of random variables with different probabilities] 
 Hastie, Tibshirani and Friedman characterise the value of the technique in relation to its capacity to deal with high dimensional data (see Chapter 2 on this):    
 
 >It is especially appropriate when the dimension $p$ of the feature space is high, making density estimation unattractive. The naive Bayes model assumes that given a class $G = j$, the features $X_k$ are independent [@Hastie_2009, 211]. 
@@ -230,8 +273,8 @@ While some events have discrete outcomes (Obama was re-elected in 2012), many ha
 
 ```{r  distributions, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Distributions'} 
 
-    source('mcmc_examples.R')
-    generate_distributions()
+    #//*source('mcmc_examples.R')*/
+    #/generate_distributions()*/
     ```
     Probability distributions are a common way of showing and  talking about random variables. The curves shown in Figure 2 could refer to almost anything (the chances of rain at different times of day in Lancaster, the seasonal variation in precipitation, etc.). These distributions appear in countless shapes and forms in scientific, government and popular literature of many different kinds. Statistical graphics have a rich history and semiology that I do not discuss here (see [@bertin_semiology_1983]). Perhaps the most famous function or mapping is the normal or Gaussian distribution:
 
@@ -247,10 +290,10 @@ While some events have discrete outcomes (Obama was re-elected in 2012), many ha
 
 Everywhere, numbers are increasingly in variation, and display increasingly distributional characteristics.  While some events have discrete outcomes (Obama was re-elected in 2012), many happenings are not. In Lancaster here in north-west England, the probability of rain on a given day would be say 70%, but days have very different amounts of rain.  Some days, it rains once briefly and lightly. Other days it rains frequently and heavily. A gamut of rain events can occur, and each would distribute different amounts of water on Lancaster. Given the amount of variation,  a much better way to face the weather is to say that Lancaster's rain is a *random variable*: ‘a random variable is a mapping that assigns a real number to each outcome’ [@wasserman_all_2003,19]. If events have probabilities, random variables have a range of outcomes that are mapped to numbers. Again, the deceptive simplicity of 'mapping' hides many variations. Mapping is a form of one-to-one correspondence, usually expressed as a mathematical function. A random variable links events to numbers through functions.  Again, all this remains rather formal. The practical reality of random variables is variation, variations that are  visually expressed by curves and by probability distributions. 
 
-```{r  distributions, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Distributions'} 
+```{r  distributions2, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Distributions'} 
 
-	source('mcmc_examples.R')
-	generate_distributions()
+	#*source('mcmc_examples.R')*/
+	#*generate_distributions()*/
 ```
 Probability distributions are a common way of showing and  talking about random variables. The curves shown in Figure 2 could refer to almost anything (the chances of rain at different times of day in Lancaster, the seasonal variation in precipitation, etc.). These distributions appear in countless shapes and forms in scientific, government and popular literature of many different kinds. Statistical graphics have a rich history and semiology that I do not discuss here (see [@bertin_semiology_1983]). Perhaps the most famous function or mapping is the normal or Gaussian distribution:
 
