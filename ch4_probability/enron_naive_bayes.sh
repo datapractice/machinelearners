@@ -49,6 +49,7 @@
     echo "estimated P(ham) =" $Pham
     Pword_spam=`echo "scale=4; $Nword_spam / $Nspam" | bc`
     Pword_ham=`echo "scale=4; $Nword_ham / $Nham" | bc`
+
     echo "estimated P($word|spam) =" $Pword_spam
     echo "estimated P($word|ham) =" $Pword_ham
     Pspam_word=`echo "scale=4; $Pword_spam*$Pspam" | bc`
