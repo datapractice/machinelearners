@@ -30,6 +30,7 @@ Believing in the strength of numbers
 
 ## to do
 
+- add Lash 2007 on generative stuff, and perhaps media ontology more generally
 - principal component analysis and unsupervised learning from the early 20C -- Pearson; the time when probability is objective
 - naive bayes, including the ipython notebook; the Lewis article - 40 years, the spam filter example -- from schutt, from segaran, from myles-white; from hastie, flach, from top10 algo, etc
 - discussions of Naive bayes in malley, flach, hastie, ripley
