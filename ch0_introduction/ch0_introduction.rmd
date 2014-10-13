@@ -33,6 +33,7 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 - make the point about machine learning being somewhat reducible to each other (with enough contortions), and that means it is not necessary to cover everything
 - the structure of the book in terms of media, science and government; the structure of the book in terms of life, labour and language
 - bring in materials from warwick talk
+- add stengers on abstraction from invention of modern science
 - see potential as predictable, question the bifurcation between abstract and concrete;
 - how is difference being done differently
 - use presentations nodes from transforming data workshop

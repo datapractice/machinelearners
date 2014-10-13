@@ -1,0 +1,6 @@
+library(stringr)
+library(plyr)
+library(tm)
+library(tm.plugin.mail)
+library(SnowballC)
+library(topicmodels)
