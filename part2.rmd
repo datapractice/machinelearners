@@ -5,6 +5,10 @@
 - deep reconstruction
 - distribution - liveness and learning
 
+The second part of _Into the Data_ heads in a different direction. The three following chapters explore some of the limits that machine learning encounters as it moves in different directions. As in the preceding parts of the book, the major reference points here remain media, government and science. But they are only reference points as the domains of media, government and science often intersect and indeed mix with each other in varying proportions. 
+
+The limits they encounter include infrastructures, forms of work and labour, and existing regulatory and scientific institutions and practices. The chapters of Part I largely assumed that data exists in some form that can be easily stored, circulated, and used without too much effort. That assumption is quite unrealistic, even though most instructional materials for machine learning imply the opposite. Those chapters also assumed that machine learning migrates and populates empty pplaces. The frontiersmanship of machine learning finds it difficult to acknowledge pre-existing inhabitants and their knowledge practices. Finally, a key question has not been posed very explicitly: who will do machine learning? The techniques, although they promise to obviate other forms of work, themselves require much technical labour. Despite claims to quasi-autonomous operation, they actually require much tuning, configuration, and consideration of the domain in which they operate in order to be effective. The chapters in this part of the book move away from the ontologies of machine learning to the pragmatic conjunctures in which machine learning and its associated practices operate. 
+
 ## References
 
 - Howard, Norvig, Ayasda person
