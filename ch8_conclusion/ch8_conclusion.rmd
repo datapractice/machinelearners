@@ -1,11 +1,23 @@
 # Conclusion: Out of the Data
 
-## key points
+## overview
 
  - how many things I couldn't include in the book
  - what it felt to write it -- working with all the code and various other problems
  - how it remained a kind of handicraft, not a social labour
 
+## todo
+- overview of the parts, and the chapters
+- the media-science-government
+- I use media as shorthand for media in general: they are things or infrastructures, which are also things, and things are media (Lash & Lury)
+
+
 ## text from proposal
 
 The conclusion draws together the main threads running through the previous chapter, and sets out a series of questions and provocations for thinking with data. Crucially, the conclusion will stand back from the much more hands-on approach to data and data practice adopted in the preceding chapters in order to think more about we -- social scientists, humanities scholars -- might invent or create in the midst of data. While this book has a critical angle to it (so many claims about and beliefs in data plainly deserve critique for their conservative and naive approach to things), it is principally concerned with conceptual invention through doing things with data. The work of learning about machine learning, and learning about it in a way that is deeply embodied or practically embodied, brings with it altered ways of thinking about, questioning and integrating what is happening to data more generally. It highlights the key argument that has run through the book about the plural dimensionality of data as it is aggregated, tabulated, summarised and modelled in contemporary data and signal processes, and as well as the extraordinary mobility or kinetic energy of generic machine learning methods. In discussing the shifting dimensionality of data, and the kinetics of methods, the conclusion will attempt to sketch out how some promising ways of thinking with data might proceed. 
+
+## What is 'into the data' about?
+
+## Is there any hope for machine learning?
+
+
