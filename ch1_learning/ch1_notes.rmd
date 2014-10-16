@@ -37,6 +37,7 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
     -
 
 ## Todo
+- Michie, Spiegelhalter 1994 book has report on the Statlog project -- it tried to bring all method together; good that it mixes stats and computer scientists; managed by Daimler-Benz; shows that the problem of diversity of techniques has been discussed before; look at how they tried to bring  the methods together;
 - the habit of recursive application of code to itself, or to something close by, without ever going too far -- I'll do that too -- use the algorithms to investigate the literature, to classify the examples, to see how things move; but I don't want to place too much weight on this recursion, as it is something that needs to be analsyed. See the recent Totaro article -- not recursion as an intrinsic formal property, but as a practice in certain domains that allows a form of movement.
 - comment on the typography of the maths -- the use of bold, italics, of German capitals, greek letters, upper and lower case, brackets, 
 
