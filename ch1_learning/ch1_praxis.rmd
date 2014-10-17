@@ -40,6 +40,7 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
     -
 
 ## Todo
+- scientific papers form a substrate here; but they are entangled with software, with databases, with institutions, and with a widening circle of actors
 - Michie, Spiegelhalter 1994 book has report on the Statlog project -- it tried to bring all method together; good that it mixes stats and computer scientists; managed by Daimler-Benz; shows that the problem of diversity of techniques has been discussed before; look at how they tried to bring  the methods together;
 - the habit of recursive application of code to itself, or to something close by, without ever going too far -- I'll do that too -- use the algorithms to investigate the literature, to classify the examples, to see how things move; but I don't want to place too much weight on this recursion, as it is something that needs to be analsyed. See the recent Totaro article -- not recursion as an intrinsic formal property, but as a practice in certain domains that allows a form of movement.
 - comment on the typography of the maths -- the use of bold, italics, of German capitals, greek letters, upper and lower case, brackets, 
@@ -76,27 +77,27 @@ While many of the machine learning techniques I discuss have much longer lineage
 
 ```{r perceptron, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup', engine='python' }
     
-    threshold = 0.5
-    learning_rate = 0.1
-    weights = [0, 0, 0]
-    training_set = [((1, 0, 0), 1), ((1, 0, 1), 1), ((1, 1, 0), 1), ((1, 1, 1), 0)]
+threshold = 0.5
+learning_rate = 0.1
+weights = [0, 0, 0]
+training_set = [((1, 0, 0), 1), ((1, 0, 1), 1), ((1, 1, 0), 1), ((1, 1, 1), 0)]
      
-    def dot_product(values):
-        return sum(value * weight for value, weight in zip(values, weights))
+def dot_product(values):
+    return sum(value * weight for value, weight in zip(values, weights))
      
-    while True:
-        print '-' * 60
-        error_count = 0
-        for input_vector, desired_output in training_set:
-            print weights
-            result = dot_product(input_vector) > threshold
-            error = desired_output - result
-            if error != 0:
-                error_count += 1
-                for index, value in enumerate(input_vector):
-                    weights[index] += learning_rate * error * value
-        if error_count == 0:
-            break
+while True:
+    print '-' * 60
+    error_count = 0
+    for input_vector, desired_output in training_set:
+        print weights
+        result = dot_product(input_vector) > threshold
+        error = desired_output - result
+        if error != 0:
+            error_count += 1
+            for index, value in enumerate(input_vector):
+                weights[index] += learning_rate * error * value
+    if error_count == 0:
+        break
 ```
 
 What does this code show or say? First of all, we should note the relative novelty of code vignettes in Wikipedia pages. In citing this code, I'm not resorting to a technical publication or scientific literature as such, just to that popular yet incredibly heavily used epistemic resource, the Wikipedia page. Second, while perceptrons and neural networks are the topic of a later chapter, the typical features of this code as the implementation of a machine learning algorithm are the presence of the 'learning rate', a 'training_set,' 'weights', an 'error count', a loop function that  multiplies values ('dot_product'). Some of the terms present in the code bear the marks of the theory of learning machines that we will discuss. But much of the code here is much more familiar, generic programming. It defines variables, sets up data structures (lists of numerical values), checks conditions, loops through statements or prints results. Executing this code (by copying and pasting it into a python terminal, for instance) produces several dozen lines of numbers that are initially different to each other, but that gradually converge on the same values (see printout). These numbers are the 'weights' of the nodes of the perceptron as it iteratively learns to recognise patterns in the input values. None of the workings of the perceptron need concern us at the moment. It is a typical machine learning algorithm, almost always included in ML textbooks and usually taught in introductory ML classes.  Perhaps more strikingly than its persistence as an algorithm over half a century, the implementation of the whole algorithm in twenty lines of code on a Wikipedia page suggests the mobility of these methods. What required the resources of a major research engineering laboratory in the 1950s can be re-implemented by a cut and paste operation between wikipedia pages and a terminal window on a laptop in 2013. This is now a familiar observation, and perhaps not very striking at all. But the very visibility of this code raises some question about  who today implements perceptrons or neural networks, and where they implement them. 
@@ -282,7 +283,7 @@ $X^T = (X_1 , X_2, . . . , X_p)$, we predict the output $Y$ via the model
 >$$\hat{Y} = \hat{\beta_0}  + \sum^p_(j=1) X_j \hat{\beta_j)}$$
 >The term $\hat{\beta_0}$ is the intercept, also known as the _bias_ in machine learning [@hastie_elements_2009, 11].
 
-Introducting the linear model, the authors of the textbook immediately resort to matrix notation. There is nothing particular mathematically elusive here, only a highly aggregated set of sums and multiplications. While such expressions are not easy to read with knowing what all the symbols mean, they offer a very direct opening to thinking about machine learning more generally.  This model is the 'simple but powerful linear model' (11) in which $Y$, the so-called 'response variable' is modelled by adding together  (the $\sum$ operator means adding them) a combination of the input variables or 'features' in  $X_j$ and a value of the intercept $\beta_0$.  Even if this does not make much sense without reading more, we can begin to see that the linear model, a mainstay of machine learning, concretely takes the form of vectors and matrices added and multiplied.  The subscripts $j=1$ refer to individual input variables.   Importantly, as Hastie and co-authors go on to say, 
+Introducing the linear model, the authors of the textbook immediately resort to matrix notation. There is nothing particular mathematically elusive here, only a highly aggregated set of sums and multiplications. While such expressions are not easy to read with knowing what all the symbols mean, they offer a very direct opening to thinking about machine learning more generally.  This model is the 'simple but powerful linear model' (11) in which $Y$, the so-called 'response variable' is modelled by adding together  (the $\sum$ operator means adding them) a combination of the input variables or 'features' in  $X_j$ and a value of the intercept $\beta_0$.  Even if this does not make much sense without reading more, we can begin to see that the linear model, a mainstay of machine learning, concretely takes the form of vectors and matrices added and multiplied.  The subscripts $j=1$ refer to individual input variables.   Importantly, as Hastie and co-authors go on to say, 
 
 > Often it is convenient to include the constant variable 1 in $X$, include $\hat{\beta_0)}$ in the vector of coefficients $\hat{\beta}$, and then write the linear model in the vector form as an inner product:
 $\hat{Y} = X^T \hat{\beta}$

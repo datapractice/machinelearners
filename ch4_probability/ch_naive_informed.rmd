@@ -29,6 +29,7 @@ Believing in the strength of numbers
 - how probability undercuts other more sophisticated takes on the world -- Hacking's argument about Peirce
 
 ## to do
+- run a topic model across all the articles that cite Blei 2003; also run it across all the articles that cite Dempster, Laird, etc
 - hand article describes many medical usages; seems they might have been important in shaping the technique; the other article on bayes at 50 highlights the text stuff; example of how same technique developed along different lines; and then comes together somehow
 - principal component analysis and unsupervised learning from the early 20C -- Pearson; the time when probability is objective
 - naive bayes, including the ipython notebook; the Lewis article - 40 years, the spam filter example -- from schutt, from segaran, from myles-white; from hastie, flach, from top10 algo, etc
@@ -382,16 +383,17 @@ Despite the profusion of symbols here, this expression is re-wrapped version of 
 
 [^12]: For an account of how Latent Semantic Indexing, and the transformation of documents into matrices itself mutates as it moves across disciplines, see [@Mackenzie_2013]
 
-## Sampling in parameter estimation
+## Parameter estimation as incomplete data
 
-[HERE] = the estimation of the parameters -- EM, MCMC, etc -- how is that sampling? Describe how all of this is a kind of involution of the empirical; so that the empirical is not simply what is felt in the world, but a feeling for the world of the machine;
 
-[TODO: run a topic model across all the articles that cite Blei 2003; also run it across all the articles that 
-[HERE] The practical reality of random variables is variation, variations that are  visually expressed by curves and by probability distributions. 
+Almost everything we have seen in relation to the more complicated generative models such as Latent Dirichlet Allocation suggests that having all the data does not do away with issues of sampling. Rather than obviating sampling, $N=all$, or having all the data (as in, for instance, having all the abstracts for published papers, or having the whole corpus of emails, or the whole collection of Twitter messages for a given period) leaves much still to be sampled. In Blei, Ng and Jordan's 2003 paper, the delineation of Latent Dirichlet Allocation as a model takes four pages but the description of how to estimate the parameters of the model fills more than a dozen pages (not including technical appendices). The model can only work if its parameters can be assigned, but these parameters cannot be computed directly. As they write: 'The key inferential problem that we need to solve in order to use LDA is that of computing the posterior distribution of the hidden variables given a document: ... Unfortunately, this distribution is intractable to compute in general' [@Blei_2003,1003]. What does it matter that these hidden variables are computationally intractable or that they are distributions? Only that the parameters themselves have become random variables with probability distributions. Remember that, as mentioned above, probability distributions only exist as ways of expressing some of the different ways that things can turn out. Now it turns out that the world is not the only place where things happen, and where events occurs as subsets and combinations. The model, that refuge or fortress of calculability, is populated by events or by forms of randomness that are difficult to order. Put more technically, a sample space, the set of possible outcomes, and its events (the subsets of $\Omega$, the sample space [@Wasserman_2003, 3]) has rent the tight fabric of the generative abstraction.
+
+Hence, as the bulk of the paper goes on to discuss, the real issue is to construct procedures that will allow the sample space of the model itself to be sampled. 
+A complicated set of technical developments appear in the aftermath. In this paper, Blei and co-authors use a variant of the highly-important expectation maximization procedure, an algorithm developed in the late 1970s  by Arthur Dempster, Nan Laird, and Donald Rubin working at Harvard University in the Educational Testing Service [@Dempster_1977]. A huge literature drawing on the EM algorithm ensued in the wake of the 1977 paper by Dempster, Laird and Rubin (over 39,000 citations according to Google Scholar, and 16,000 citations in the Thomson Scientific Web of Science, making one of most cited statistics papers ever) because EM allowed the estimation of model parameters to be conceived as a problem of incomplete observations or missing data. The remedy they proposed for estimating model parameters was to see those parameters themselves as forms of data gained through observation no longer of the world but of the behaviour of the model subjected to various experiments. As they write, 'we refer to $\mathbf{x}$  as the complete data even though in certain examples  $\mathbf{x}$ includes what are traditionally called parameters' [@Dempster_1977, 1]. The implication is that model parameters become like data, just data that cannot be observed directly. Subsequent versions of topic model soon introduced other parameter estimation techniques. Already in 2004, analyses of scientific literature using topics models appeared [@Griffiths_2004] that 'sampled from the target distribution using Markov chain Monte Carlo' [@Griffiths_2004, 5229] (a technique I discuss in the following chapter). All of these techniques, however, maintained a commitment to computational sampling of intractable model parameters. They drew on approaches developed by statisticians and approaches developed by physicists. 
+
 
 
  
-[TODO] -- add the stuff on what I'm going to do on MCMC in the chapter on swine flu. [HERE]  Say how these practices are dealing with words statistically. What does it matter than certain words are dropped because they are too frequent or too rare. How does the scaling up from hundreds of docs in Maron to millions of docs in Blei matter?
 
 ## Conclusion
 
