@@ -63,7 +63,9 @@ For the last decade, the best-performing 'off-the-shelf' machine learning algori
     -  **key point**: it is possible to fit all the data perfectly, but suffer the consequences of generalization; or it is possible to identify the problematic boundary cases and focus on those. This is what svms do. But does it avoid overfitting? If random forests correct decisiont trees through randomisation, what is the trick in svm? And how does it deal with infinite dimensionality? 
 - 
 
-### to put in
+## to do
+- add Quinlan 1986 on how experts can't really interpret the trees
+- maybe this is the main point with in this chapter -- dimensionality != comprehensibility; how these techniques produce confusion or perplexity in themselves, not because of anything about their usage
 - recap on functions, gradient descent, optimization and regression -- what do they do?
 - curse of dimensionality -- discussion from LSE paper, and from Warwick paper;
 - Warwick discussion on trees
@@ -71,8 +73,6 @@ For the last decade, the best-performing 'off-the-shelf' machine learning algori
 - the local vs global structure discussion - Hastie 19-20 onwards
 - generative vs disciminative models
 - situated all three algorithms by reference to adjacent work in humanities -- the trace/mark in deconstruction for handwriting recognition -- neural nets; the assemblage -- smooth space for svm; decision tree-random forest
-
-### to do 
 - implement a neural network by going through Ng lectures or Hinton
 - implement a svm - using Ng?
 - add in some material from Flach's review of SVM

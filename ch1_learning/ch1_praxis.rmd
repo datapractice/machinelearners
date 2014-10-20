@@ -1,5 +1,66 @@
 # Writing about data
 
+
+# ch1_notes.rmd
+
+How to write about data and models
+Making models of data
+Associating with data: a praxiography of machine learning
+
+## from proposal
+
+This chapter is primary a methodological discussion that addresses several different problems in working with machine learning. These problems range from quite philosophical issues through to quite practical ones. At the philosophical end, it draws on various pieces of recent and not-so-recent theoretical work (for instance, the anthropologist Paul Rabinow's work on the concept of 'equipment' [@rabinow_anthropos_2003]; the philosopher A.N. Whitehead on the spatial dimensionality of thought [@whitehead_modes_1958]; the philosopher Anne-Marie Mols' work praxiography -- writing about practices [@mol_body_2003])  to discuss how we might think about working on highly technical or scientific areas such as machine learning in ways that allow consideration of their more general situation.  It also draws on some cultural and psychoanalytic accounts of architecture and objects [@bollas_evocative_2009; @wilson_affect_2010] to suggest how the researcher him or herself relate to objects of research.  Finally in this vein, the chapter poses the methodological problem of working with large bodies of scientific and technical literature, and illustrates this by describing the growth of machine learning techniques in science and engineering research since the early 1960s, focusing on the growth of key techniques and algorithms [@kelty_ten_2009].
+
+With these questions about thinking, techniques, subjectivity and literature on the table, the chapter then presents a series of vignettes that display some of the ways in which research and writing critical accounts of data cultures and data economies can make use of the tools, techniques, instruments and services of 'data science' to generate textual, diagrammatic and modelised accounts of contemporary culture.  A standard teaching example -- house-price prediction -- links these vignettes, but the real focus here is on two foundational issues: how machine learning treats data as a dimensional material that it seeks to reshape or recase  in different dimensions ('models'); how implementing machine learning techniques shifts our relation to them.  
+
+Woven throughout this discussion of a praxiography of data, [TBC] Via a discussion of the development of `R`, the chapter analyses the  transverse, cross-disciplinary implementation of machine learning techniques in recent decades. It describes some of the transformations in software, network and scientific cultures that underpin the recent growth in data techniques and methods. These range across transformations in statistical science associated with greater computational capacity; the mutations in network,  database and digital device architectures and infrastructures that yield much greater abundance of data in various forms; and the intermeshing of knowledge economies with the media, communication, transaction, transport and logistics systems. It will trace how the lateral associations and multivalencies of data have developed through key software artefacts such as the widely used `R` programming language, and in generic programming languages such as Python. Coming from  the author's own history of working with machine learning or online accounts of machine learning,  well as the ecology of thousands of software packages  associated with the statistical programming language `R`.
+
+
+## Overview
+
+- reconstruction vs problematization -- Rabinow -- on equipment
+- data: its giveness, abstraction and actuality
+    - observant participation -- developing Wacquant; participating by observing
+    - writing recursively -- developing Kelty w.r.t subjects
+    - James on feeling of transition - and practicing radical empiricism - -see Massumi
+- Implementing machine learning
+    - the case of `R` -- the scientific
+    - the case of Python -- the business/industry
+    - the case of javascript -- popular culture
+- convergence and learning: for fitting a line; but then for choosing which features to use to learn
+- learning about learning --
+    - the Literature - landecker and kelty on treating literature as the informant; examples such as Cover-Hart, Breiman, etc
+- things to include:
+    - my `R` books, libraries, papers, competitions, blogs, talking, courses
+    - `knitr`/`ipython` notebooks - executable - some examples from python notebooks
+    - the notion of repl -- read-evaluate-print-loop
+    - Add in Animation and Automation – The Liveliness and Labours of Bodies and Machines Body & Society March 2012 18: 1-46, 
+    - machine learning textbooks -- hastie, williams, manning, see document archive
+    - the github version of the book
+    -
+
+## Todo
+- scientific papers form a substrate here; but they are entangled with software, with databases, with institutions, and with a widening circle of actors
+- Michie, Spiegelhalter 1994 book has report on the Statlog project -- it tried to bring all method together; good that it mixes stats and computer scientists; managed by Daimler-Benz; shows that the problem of diversity of techniques has been discussed before; look at how they tried to bring  the methods together;
+- the habit of recursive application of code to itself, or to something close by, without ever going too far -- I'll do that too -- use the algorithms to investigate the literature, to classify the examples, to see how things move; but I don't want to place too much weight on this recursion, as it is something that needs to be analsyed. See the recent Totaro article -- not recursion as an intrinsic formal property, but as a practice in certain domains that allows a form of movement.
+- comment on the typography of the maths -- the use of bold, italics, of German capitals, greek letters, upper and lower case, brackets, 
+
+- add Foucault on the appearance of deep order in life/language/labour -- this is a really important thread to draw through - in this case through the reconstruction of the _table_. 
+- add quotes from Foucault on the table of space of order, and ask how he thought about quantity, etc; and what is happening to tables today.
+- done Bogost on carpentering, and the problems of writing -- I have a take on that ... 'source code itself often offers inroads in alien phenomenology -- particular when carpentered to reveal the internal experience of withdrawn units 105'
+- Landecker & Kelty on the literature as informant;  -- very important to do more on this
+- Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
+- done? On the aridness of the textbooks and literature and what to do about that. 
+- done - Domingos on feature engineering and why it is important -- article in ACM
+-  add the recent books like ML in Python, Thoughtful ML, etc
+- add Parisi quote about software cultures: '
+>The epochal challenge of programming cultures is to venture into the infinity of incomputable probabilities (infinite discrete unities that are bigger than the totality of the whole sequence of algorithmic instructions) that lies beyond both the digital ground and interactive empiricism. 77
+
+- the entwining of the models and the data with this text -- it can't be shown in this text, in the same way that it can't be easily shown in the world.  
+- complain about all the vignettes and case studies in this area - Mayer-Schonberger, the podcasts, etcs
+
+## Introduction
+
 > Machine learning is not magic; it cannot get something from nothing. What it does is get more from less. Programming, like all engineering, is a lot of work: we have to build everything from scratch. Learning is more like farming, which lets nature do most of the work. Farmers combine seeds with nutrients to grow crops. Learners combine knowledge with data to grow programs. [@domingos_few_2012, 81] 
 
 Many different tendencies shape what is happening to data today, but two of them impinge directly on  our  practical sense of the potentials of data. On the one hand, ways of working with  data have shifted substantially over the last decade or so due to the growth in open source programming languages and networked platforms. Scientists, software developers and data analysts use programming languages such as `Python` and `R` rather than commercial software packages such as Matlab, SAS or SPSS to work with data. Scientific research, which has long relied on counting and calculation, increasingly organises and processes data more comprehensively because workflows, datasets, algorithms and databases can be quickly and flexibily assembled in code. (Scientific computing languages such as FORTRAN have long underpinned scientific research in various more mathematical fields.) On the other hand, several decades of research and application of statistical and machine learning algorithms in science, government, industry and commerce have gradually developed fairly powerful ways of automating the construction of models that classify and predict events and associations between things, people, processes, etc. Programming and software development has long handled data and algorithms, and conversely, machine learning has always relied on programming. But they are powerfully coalescing in data-driven research, business and controls systems in various ways as predictive models, targeted advertising, recommendation systems, . Can we locate anything in the proliferation of machine learning that is more than plying data into a tightly woven matrix of commercial-scientific-governmental knowing/surveillance? I don't answer that question directly here, but my basic answer is affirmative. I think we can and we should  explore some of the shifts in practices of working with data that can be observed around data. These practices are both the object of analysis, and in  certain cases, provide support for a shift in the way in which we might carry out research on changes in media, publics, sciences, commerce, mobilities and  health. 
@@ -16,27 +77,27 @@ While many of the machine learning techniques I discuss have much longer lineage
 
 ```{r perceptron, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup', engine='python' }
     
-    threshold = 0.5
-    learning_rate = 0.1
-    weights = [0, 0, 0]
-    training_set = [((1, 0, 0), 1), ((1, 0, 1), 1), ((1, 1, 0), 1), ((1, 1, 1), 0)]
+threshold = 0.5
+learning_rate = 0.1
+weights = [0, 0, 0]
+training_set = [((1, 0, 0), 1), ((1, 0, 1), 1), ((1, 1, 0), 1), ((1, 1, 1), 0)]
      
-    def dot_product(values):
-        return sum(value * weight for value, weight in zip(values, weights))
+def dot_product(values):
+    return sum(value * weight for value, weight in zip(values, weights))
      
-    while True:
-        print '-' * 60
-        error_count = 0
-        for input_vector, desired_output in training_set:
-            print weights
-            result = dot_product(input_vector) > threshold
-            error = desired_output - result
-            if error != 0:
-                error_count += 1
-                for index, value in enumerate(input_vector):
-                    weights[index] += learning_rate * error * value
-        if error_count == 0:
-            break
+while True:
+    print '-' * 60
+    error_count = 0
+    for input_vector, desired_output in training_set:
+        print weights
+        result = dot_product(input_vector) > threshold
+        error = desired_output - result
+        if error != 0:
+            error_count += 1
+            for index, value in enumerate(input_vector):
+                weights[index] += learning_rate * error * value
+    if error_count == 0:
+        break
 ```
 
 What does this code show or say? First of all, we should note the relative novelty of code vignettes in Wikipedia pages. In citing this code, I'm not resorting to a technical publication or scientific literature as such, just to that popular yet incredibly heavily used epistemic resource, the Wikipedia page. Second, while perceptrons and neural networks are the topic of a later chapter, the typical features of this code as the implementation of a machine learning algorithm are the presence of the 'learning rate', a 'training_set,' 'weights', an 'error count', a loop function that  multiplies values ('dot_product'). Some of the terms present in the code bear the marks of the theory of learning machines that we will discuss. But much of the code here is much more familiar, generic programming. It defines variables, sets up data structures (lists of numerical values), checks conditions, loops through statements or prints results. Executing this code (by copying and pasting it into a python terminal, for instance) produces several dozen lines of numbers that are initially different to each other, but that gradually converge on the same values (see printout). These numbers are the 'weights' of the nodes of the perceptron as it iteratively learns to recognise patterns in the input values. None of the workings of the perceptron need concern us at the moment. It is a typical machine learning algorithm, almost always included in ML textbooks and usually taught in introductory ML classes.  Perhaps more strikingly than its persistence as an algorithm over half a century, the implementation of the whole algorithm in twenty lines of code on a Wikipedia page suggests the mobility of these methods. What required the resources of a major research engineering laboratory in the 1950s can be re-implemented by a cut and paste operation between wikipedia pages and a terminal window on a laptop in 2013. This is now a familiar observation, and perhaps not very striking at all. But the very visibility of this code raises some question about  who today implements perceptrons or neural networks, and where they implement them. 
@@ -222,7 +283,7 @@ $X^T = (X_1 , X_2, . . . , X_p)$, we predict the output $Y$ via the model
 >$$\hat{Y} = \hat{\beta_0}  + \sum^p_(j=1) X_j \hat{\beta_j)}$$
 >The term $\hat{\beta_0}$ is the intercept, also known as the _bias_ in machine learning [@hastie_elements_2009, 11].
 
-Introducting the linear model, the authors of the textbook immediately resort to matrix notation. There is nothing particular mathematically elusive here, only a highly aggregated set of sums and multiplications. While such expressions are not easy to read with knowing what all the symbols mean, they offer a very direct opening to thinking about machine learning more generally.  This model is the 'simple but powerful linear model' (11) in which $Y$, the so-called 'response variable' is modelled by adding together  (the $\sum$ operator means adding them) a combination of the input variables or 'features' in  $X_j$ and a value of the intercept $\beta_0$.  Even if this does not make much sense without reading more, we can begin to see that the linear model, a mainstay of machine learning, concretely takes the form of vectors and matrices added and multiplied.  The subscripts $j=1$ refer to individual input variables.   Importantly, as Hastie and co-authors go on to say, 
+Introducing the linear model, the authors of the textbook immediately resort to matrix notation. There is nothing particular mathematically elusive here, only a highly aggregated set of sums and multiplications. While such expressions are not easy to read with knowing what all the symbols mean, they offer a very direct opening to thinking about machine learning more generally.  This model is the 'simple but powerful linear model' (11) in which $Y$, the so-called 'response variable' is modelled by adding together  (the $\sum$ operator means adding them) a combination of the input variables or 'features' in  $X_j$ and a value of the intercept $\beta_0$.  Even if this does not make much sense without reading more, we can begin to see that the linear model, a mainstay of machine learning, concretely takes the form of vectors and matrices added and multiplied.  The subscripts $j=1$ refer to individual input variables.   Importantly, as Hastie and co-authors go on to say, 
 
 > Often it is convenient to include the constant variable 1 in $X$, include $\hat{\beta_0)}$ in the vector of coefficients $\hat{\beta}$, and then write the linear model in the vector form as an inner product:
 $\hat{Y} = X^T \hat{\beta}$

@@ -18,6 +18,8 @@ The conclusion draws together the main threads running through the previous chap
 
 ## What is 'into the data' about?
 
+This book has sought to provide an account of several dozen techniques, algorithms and procedures that run deeply through contemporary sciences, government, media and business. Many tensions and forces run through these techniques since they are said to be crucial to knowledge, to value and to power. The account offered in the preceding pages has not sought to list or delineate the plurality of applications, setting, implementations and variations in machine learning operates. Typically, humanities and social science research does focus on specific cases, and sometimes a list of cases, and it usually offers these cases as examplars, as a kind of training set that can be used for the purpose of generalization. The neural networks, the support vector machines, the linear regressions, the random forests and Naive Bayes classifiers are multiplying and generalizing. The several hundred thousand scientific articles that run underneath my discussion embody the process of generalizing the techniques, and these articles are no doubt only a limited institutional sample of the effervescing foam that bears these techniques further into everyday infrastructures of media, energy, government, commerce and manufacture. (The great virtue of scientific publication, even in a time where science is so bound up with technoscientific  enterprises, remains in the visibility its publications afford.) The point here, however, is that such lists of applications and implementations would be both symptomatic and inadequate in accounting for the movement of these techniques, perhaps in the same way that a list of recommended products on Amazon.com's website both 
+
 When we think of data as a 
 
 # Is there any hope for machine learning?
@@ -50,5 +52,7 @@ In this passage, Whitehead's choice of 15 is arbitrary. I guess it just refers t
 > The sheer density of the collisions of classification schemes in our lives calls for a new kind of science, a new set of metaphors, linking traditional social science and computer and information science. We need a topography of things such as the distribution of ambiguity.  ...  It will also use the best of object-oriented programming and other areas of computer science to describe this territory. [@Bowker_1999, 31]
 
 
+
+## Is there any hope for machine learning?
 
 

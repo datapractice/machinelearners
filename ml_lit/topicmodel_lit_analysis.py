@@ -8,7 +8,7 @@ from gensim import corpora, models, similarities
 from itertools import chain
 from operator import itemgetter
 
-def construct_topicmodel(n_topics = 60, files='data/expect_max_WOS/', document_to_display = 1):
+def construct_topicmodel(n_topics = 60, files='data/expect_max_WOS/', iterate=50, document_to_display = 1):
     """
     Loads all the files in the folder as a dataframe, runs an LDA topic model
     on them using n_topics
@@ -17,13 +17,13 @@ def construct_topicmodel(n_topics = 60, files='data/expect_max_WOS/', document_t
     ab_title = tm.TI + ' ' + tm.AB
     documents = ab_title.dropna().tolist()
     stoplist = stopwords.words('english')
-    stoplist = stoplist + ['topic', 'model','models', 'topics', 'data']
+    stoplist = stoplist + ['topic', 'model','models', 'topics', 'data','lda', 'acm', 'comp', 'ieee', 'paper', 'sci', 'doi', 'latent', 'allocation', 'res', 'conference', 'data', 'int', 'can', 'topic','latent', 'dirichlet', 'topics', 'model', 'models']
     texts = [[word for word in document.lower().split() if word not in stoplist] for document in documents]
     dictionary = corpora.Dictionary(texts)
     corpus = [dictionary.doc2bow(text) for text in texts]
     tfidf = models.TfidfModel(corpus) 
     corpus_tfidf = tfidf[corpus]
-    lda = models.LdaMulticore(corpus_tfidf, id2word=dictionary, num_topics=n_topics, workers = 3)
+    lda = models.LdaMulticore(corpus_tfidf, id2word=dictionary, iterations=iterate, num_topics=n_topics, workers = 3)
     for i in range(0, n_topics):
          temp = lda.show_topic(i, 10)
          terms = []
@@ -56,3 +56,7 @@ def predict_document(res, document_to_display):
     documents = res['documents']
     texts = res['text']
     predict_document_topic(model, corpus, texts, documents, document_to_display)
+
+res = construct_topicmodel(60, 'data/topicmodel_WOS/', 90)
+predict_document(res, 833)
+model = res['model']
