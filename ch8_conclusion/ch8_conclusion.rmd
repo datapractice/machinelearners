@@ -18,6 +18,37 @@ The conclusion draws together the main threads running through the previous chap
 
 ## What is 'into the data' about?
 
-## Is there any hope for machine learning?
+When we think of data as a 
+
+# Is there any hope for machine learning?
+### What to do
+
+-  Three observations then about the significance of machine learning:
+	-  its ubiquity in science, business and government renders it a key contemporary control practice, that differs in powerful yet subtle ways from existing ways of knowing, predicting, anticipating or controlling
+	- its mobility as a cluster of methods has strongly performative effects -- parts of the world are heavily re-configured through it, whether in the banal forms of intelligence apparent in smart devices (text prediction, gesture recognition, voice recognition, etc), or in the financial torsions induced by algorithmic trading. 
+	- the mobility of its methods has no clear boundaries. The spread of machine learning into social sciences and humanities has started. Much of our research already implicitly depends on it (google search, etc). The question is how we move in relation to machine learning. It could be the cultural analytics route as propounded by Lev Manovich and others in the digital humanities; it could be the big data computational social science of US political scientists such as Gary King; or it could be more like the abundant hackathons that try to repurpose adn reinvest data with meaning or insights for the benefit of NGOs and charities. 
+		
+- Machine learning is a hard field to get into in some ways for social science and humanities researchers. There are lots of statistical, mathematical and infrastructural subleties to deal with. On the one hand, it is becoming enormously available and increasingly as Thrift would say, part of the contemporary time-space signature. Myriad mundane examples could be given. On the other hand, to get into it, to occupy the fluxing dimensionality of the data is  technically difficult, and conceptually challenging and sometimes boring. It takes very significant investments in time and attention (for instance, going through 27 hours of Youtube lectures with lots of equations written on blackboards is not trivial). 
+
+- But I am suggesting that getting into it analytically and practically by whatever might be worthwhile, at least for some people for several reasons:
+1. It offers  a way of accompanying the fluxing dimensionality of data. In _Modes of Thought_, Alfred North Whitehead writes:
+
+>Perhaps our knowledge is distorted unless we can comprehend its essential connection with happenings which involve spatial relationships of fifteen dimensions [@whitehead_modes_1958, 78]
+		
+
+In this passage, Whitehead's choice of 15 is arbitrary. I guess it just refers to a spatiality that it is hard for to imagine, even though we no doubt inhabit it from time. From the standpoint of machine learning, we often do move through high dimensional spaces. Many machine learning techniques seek to reduce the dimensionality of spatial relationships in data. These would include the many dimensional reduction strategies. But others seek to expand the dimensionality of data. And the feild as a whole tends to augment rather than diminish data dimensionality. Certain techniques artificially inject infinite dimensional spaces into the models in order to find hyperplanes that separate data. 
+	
+2. Like all sciences and technologies, machine learning must contain zones of slippage, inconsistency or friction where things can happen. While it might not be us as researchers who occupy or can identify those zones most easily, in making sense of machine learning all the way down, and pointing to the structures, processes or relations at play, we help free up the possibilities of gaming the models. And actually, who else is going to do it? That is, machine learning provides a way to contest the asymmetrical distributions of agency admidst re-dimensioned infrastructures.  
+
+3. To some extent, as researchers we are encountering a version of the quandary I posed at the outset: what happens if you have all the data? The question is how we are going to comprehend 15D happenings, especially when a good number of those dimensions are occluded from us.  A couple of scenarios occur to me here:
+
+- using machine learning to impute what kind of machine learning is going on in a given setting - these could involve either labelling what techniques are likely being used, or actively experimenting with ways of perturbing the model (as for instance, the many machine learning-based attempts to do search engine optimizination do). 'Gaming the model' means figuring out how it is likely to work, and then using that to perturb it. 
+- using machine learning techniques as a way of thinking about differences, movement, shape and change
+
+4. Bowker and Star suggested that we needed a kind of science to deal with classification systems: 
+
+> The sheer density of the collisions of classification schemes in our lives calls for a new kind of science, a new set of metaphors, linking traditional social science and computer and information science. We need a topography of things such as the distribution of ambiguity.  ...  It will also use the best of object-oriented programming and other areas of computer science to describe this territory. [@Bowker_1999, 31]
+
+
 
 
