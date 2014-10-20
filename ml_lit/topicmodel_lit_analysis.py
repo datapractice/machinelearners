@@ -4,11 +4,13 @@ import gensim
 from gensim import corpora
 import nltk
 from nltk.corpus import stopwords
+from nltk.stem import *
+from nltk.util import ngrams
 from gensim import corpora, models, similarities
 from itertools import chain
 from operator import itemgetter
 
-def construct_topicmodel(n_topics = 60, files='data/expect_max_WOS/', iterate=50, document_to_display = 1):
+def construct_topicmodel(n_topics = 60, files='data/expect_max_WOS/', workers = 3, iterate=50, document_to_display = 1):
     """
     Loads all the files in the folder as a dataframe, runs an LDA topic model
     on them using n_topics
@@ -18,12 +20,15 @@ def construct_topicmodel(n_topics = 60, files='data/expect_max_WOS/', iterate=50
     documents = ab_title.dropna().tolist()
     stoplist = stopwords.words('english')
     stoplist = stoplist + ['topic', 'model','models', 'topics', 'data','lda', 'acm', 'comp', 'ieee', 'paper', 'sci', 'doi', 'latent', 'allocation', 'res', 'conference', 'data', 'int', 'can', 'topic','latent', 'dirichlet', 'topics', 'model', 'models']
-    texts = [[word for word in document.lower().split() if word not in stoplist] for document in documents]
+    stemmer = PorterStemmer()
+    texts = [[stemmer.stem(word) for word in document.lower().split() if word not in stoplist] for document in documents]
+    texts = [ngrams(t, 2) for t in texts]
+    print ("loaded and stemmed %s document"%len(texts))
     dictionary = corpora.Dictionary(texts)
     corpus = [dictionary.doc2bow(text) for text in texts]
     tfidf = models.TfidfModel(corpus) 
     corpus_tfidf = tfidf[corpus]
-    lda = models.LdaMulticore(corpus_tfidf, id2word=dictionary, iterations=iterate, num_topics=n_topics, workers = 3)
+    lda = models.LdaMulticore(corpus_tfidf, id2word=dictionary, iterations=iterate, num_topics=n_topics, workers = workers)
     for i in range(0, n_topics):
          temp = lda.show_topic(i, 10)
          terms = []
@@ -57,6 +62,7 @@ def predict_document(res, document_to_display):
     texts = res['text']
     predict_document_topic(model, corpus, texts, documents, document_to_display)
 
-res = construct_topicmodel(60, 'data/topicmodel_WOS/', 90)
-predict_document(res, 833)
-model = res['model']
+def example():
+    res = construct_topicmodel(60, 'data/topicmodel_WOS/', 90)
+    predict_document(res, 833)
+    model = res['model']
