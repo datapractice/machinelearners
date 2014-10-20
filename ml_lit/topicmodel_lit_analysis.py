@@ -19,13 +19,14 @@ def construct_topicmodel(n_topics = 60, files='data/expect_max_WOS/', workers = 
     ab_title = tm.TI + ' ' + tm.AB
     documents = ab_title.dropna().tolist()
     stoplist = stopwords.words('english')
-    stoplist = stoplist + ['topic', 'model','models', 'topics', 'data','lda', 'acm', 'comp', 'ieee', 'paper', 'sci', 'doi', 'latent', 'allocation', 'res', 'conference', 'data', 'int', 'can', 'topic','latent', 'dirichlet', 'topics', 'model', 'models']
+    stoplist = stoplist + ['em', 'topic', 'model','models', 'topics', 'data','lda', 'acm', 'comp', 'ieee', 'paper', 'sci', 'doi', 'latent', 'allocation', 'res', 'conference', 'data', 'int', 'can', 'topic','latent', 'dirichlet', 'topics', 'model', 'models']
     stemmer = PorterStemmer()
     texts = [[stemmer.stem(word) for word in document.lower().split() if word not in stoplist] for document in documents]
-    texts = [ngrams(t, 2) for t in texts]
-    print ("loaded and stemmed %s document"%len(texts))
-    dictionary = corpora.Dictionary(texts)
-    corpus = [dictionary.doc2bow(text) for text in texts]
+    print ("loaded and stemmed %s documents"%len(texts))
+    texts_ngram = [ngrams(t, 2) for t in texts]
+    texts_ngram = [[''.join(t).replace(',', '').replace('.', '') for t in tex] for tex in texts_ngram]
+    dictionary = corpora.Dictionary(texts_ngram)
+    corpus = [dictionary.doc2bow(text) for text in texts_ngram]
     tfidf = models.TfidfModel(corpus) 
     corpus_tfidf = tfidf[corpus]
     lda = models.LdaMulticore(corpus_tfidf, id2word=dictionary, iterations=iterate, num_topics=n_topics, workers = workers)
