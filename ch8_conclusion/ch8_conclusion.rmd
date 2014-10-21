@@ -7,6 +7,7 @@
  - how it remained a kind of handicraft, not a social labour
 
 ## todo
+- what if this book was a model -- what kind of model would it be
 - overview of the parts, and the chapters
 - the media-science-government
 - I use media as shorthand for media in general: they are things or infrastructures, which are also things, and things are media (Lash & Lury)
@@ -24,8 +25,8 @@ When we think of data as a place (a _topos_) or as a corpus (a body), then  mach
 
 [HERE]
 
-# Is there any hope for machine learning?
-### What to do
+##  Is there any hope for machine learning?
+## What to do
 
 -  Three observations then about the significance of machine learning:
 	-  its ubiquity in science, business and government renders it a key contemporary control practice, that differs in powerful yet subtle ways from existing ways of knowing, predicting, anticipating or controlling
