@@ -1,7 +1,5 @@
 # Writing about data
-
-
-# ch1_notes.rmd
+## ch1_notes.rmd
 
 How to write about data and models
 Making models of data

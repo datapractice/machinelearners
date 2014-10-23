@@ -1,5 +1,4 @@
 #,b $N = all$: machine learning gets all the data
-
 ## alternative titles 
 
 - Believing in the strength of numbers
