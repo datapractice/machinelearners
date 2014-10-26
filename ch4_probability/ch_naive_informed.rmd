@@ -28,6 +28,7 @@
 - how probability undercuts other more sophisticated takes on the world -- Hacking's argument about Peirce
 
 ## to do
+- dirichlet distribution is a distribution over distributions -- useful metapoint
 - run a topic model across all the articles that cite Blei 2003; also run it across all the articles that cite Dempster, Laird, etc
 - hand article describes many medical usages; seems they might have been important in shaping the technique; the other article on bayes at 50 highlights the text stuff; example of how same technique developed along different lines; and then comes together somehow
 - principal component analysis and unsupervised learning from the early 20C -- Pearson; the time when probability is objective
