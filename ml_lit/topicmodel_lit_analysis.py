@@ -15,7 +15,24 @@ files='data/expect_max_WOS/'
 tm = ml.load_records(files)
 ab_title = tm.TI + ' ' + tm.AB
 documents = ab_title.dropna().tolist()
-sents = [pos_tag(word_tokenize(s)) for s in documents[:10]]
+abstracts = [pos_tag(word_tokenize(s)) for s in documents[:1000]]
+workers = 7
+n_topics = 20
+iterate=50
+texts_ngram =  [[w[0] for w in ab if w[1] in 'NN' or w[1] in 'JJ'] for ab in abstracts]
+corpus = [dictionary.doc2bow(text) for text in texts_ngram]
+tfidf = models.TfidfModel(corpus)
+corpus_tfidf = tfidf[corpus]
+lda = models.LdaMulticore(corpus_tfidf, id2word=dictionary, iterations=iterate, num_topics=n_topics, workers = workers)
+for i in range(0, n_topics):
+        temp = lda.show_topic(i, 10)
+        terms = []
+        for term in temp:
+            terms.append(term[1])
+        print "Top 10 terms for topic #" + str(i) + ": "+ ", ".join(terms)
+print
+
+
 
 def construct_topicmodel(n_topics = 60, files='data/expect_max_WOS/', workers = 3, iterate=50, document_to_display = 1):
     """
