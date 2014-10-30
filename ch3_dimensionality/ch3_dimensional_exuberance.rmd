@@ -1,14 +1,10 @@
 # Finding patterns in data
-
 Movements in machine learning: patterns of generalization
 Dimensional exuberance and pattern recognition in movement
-
 ```{r echo=FALSE} 
 library(knitr)
 opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
 ```
-
-
 ## from proposal
 
 #### Key examples: hunch.com; 

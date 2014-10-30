@@ -1,8 +1,7 @@
-#,b $N = all$: machine learning gets all the data
-
+#$N = all$: machine learning gets all the data
 ## alternative titles 
 
-Believing in the strength of numbers
+- Believing in the strength of numbers
 
 
 ## overview
@@ -29,6 +28,7 @@ Believing in the strength of numbers
 - how probability undercuts other more sophisticated takes on the world -- Hacking's argument about Peirce
 
 ## to do
+- dirichlet distribution is a distribution over distributions -- useful metapoint
 - run a topic model across all the articles that cite Blei 2003; also run it across all the articles that cite Dempster, Laird, etc
 - hand article describes many medical usages; seems they might have been important in shaping the technique; the other article on bayes at 50 highlights the text stuff; example of how same technique developed along different lines; and then comes together somehow
 - principal component analysis and unsupervised learning from the early 20C -- Pearson; the time when probability is objective
@@ -281,7 +281,7 @@ They point here to the role of 'conditional probability,' a kind of probability 
 
 For our purposes, Naive Bayes classifiers, as well some other more sophisticated statistical techniques  such as the expectation maximization (EM)  algorithm and the Monte Carlo Markov Chain technique that underpin the topic model text classifiers, attest to the deeply probabilistic character of machine learning. In contrast to the geometrical and topological concerns of dimensionality and features, or to the rule-based structures generated as decision trees, the probabilistic character of Naive Bayes entails a more unstable and perhaps in certain respects more supple relation to worlds. This suppleness comes at the cost of much greater uncertainty, and certainly it changes what we think of algorithmic processes if they start to become probabilistic in their operations. 
 
-The tranformations that machine learning bring to probability itself are not insignificant. As we will see, the growth of these techniques operationalises probabilities in new ways, or at least in ways that render more and more untenable the long-standing dichotomy between probability as objective randomness in the world and probability as measure of our own uncertain knowledge of the world. At core, both the objective and subjective treatments of probability find themselves reassembled in a new algo-probablistic assemblage. By virtue of its simplicity, the Naive Bayes classifier helps to show this. 
+The transformations that machine learning bring to probability itself are not insignificant. As we will see, the growth of these techniques operationalises probabilities in new ways, or at least in ways that render more and more untenable the long-standing dichotomy between probability as objective randomness in the world and probability as measure of our own uncertain knowledge of the world. At core, both the objective and subjective treatments of probability find themselves reassembled in a new algo-probablistic assemblage. By virtue of its simplicity, the Naive Bayes classifier helps to show this. 
 
 ## More data or better algorithms?
 
@@ -390,10 +390,6 @@ Almost everything we have seen in relation to the more complicated generative mo
 
 Hence, as the bulk of the paper goes on to discuss, the real issue is to construct procedures that will allow the sample space of the model itself to be sampled. 
 A complicated set of technical developments appear in the aftermath. In this paper, Blei and co-authors use a variant of the highly-important expectation maximization procedure, an algorithm developed in the late 1970s  by Arthur Dempster, Nan Laird, and Donald Rubin working at Harvard University in the Educational Testing Service [@Dempster_1977]. A huge literature drawing on the EM algorithm ensued in the wake of the 1977 paper by Dempster, Laird and Rubin (over 39,000 citations according to Google Scholar, and 16,000 citations in the Thomson Scientific Web of Science, making one of most cited statistics papers ever) because EM allowed the estimation of model parameters to be conceived as a problem of incomplete observations or missing data. The remedy they proposed for estimating model parameters was to see those parameters themselves as forms of data gained through observation no longer of the world but of the behaviour of the model subjected to various experiments. As they write, 'we refer to $\mathbf{x}$  as the complete data even though in certain examples  $\mathbf{x}$ includes what are traditionally called parameters' [@Dempster_1977, 1]. The implication is that model parameters become like data, just data that cannot be observed directly. Subsequent versions of topic model soon introduced other parameter estimation techniques. Already in 2004, analyses of scientific literature using topics models appeared [@Griffiths_2004] that 'sampled from the target distribution using Markov chain Monte Carlo' [@Griffiths_2004, 5229] (a technique I discuss in the following chapter). All of these techniques, however, maintained a commitment to computational sampling of intractable model parameters. They drew on approaches developed by statisticians and approaches developed by physicists. 
-
-
-
- 
 
 ## Conclusion
 

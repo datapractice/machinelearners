@@ -1,5 +1,5 @@
 # Part 1: Data forms of thought: vectors, functions and distribution
-
+## alternate title - diagrams and asignifying machine
 - Personify techniques of vectorization
 - People vectorize techniques
 - Techniques personify vectorization

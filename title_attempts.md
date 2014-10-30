@@ -1,8 +1,0 @@
-### Forms of data thought: entanglements of subjectivity and computation
-### Forms of data thought: learning from machines
-### Forms of data thought: what to do with machine learning?
-### Learning from data: 
-### Reconstruction in data: forms of machine thought
-### Recursions and reconstructions: 
-### What can you do with machine learning?
-### Envisaging data

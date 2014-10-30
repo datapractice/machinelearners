@@ -29,7 +29,8 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 - implications for this political
 
 ## to do
-- the restructuring fo the table -- to include the Foucault discussion of tables
+-the problem of focusing on the algorithm - does it reproduce the power hierarchy of computer science
+- the restructuring of the table -- to include the Foucault discussion of tables
 - make the point about machine learning being somewhat reducible to each other (with enough contortions), and that means it is not necessary to cover everything
 - the structure of the book in terms of media, science and government; the structure of the book in terms of life, labour and language
 - bring in materials from warwick talk
@@ -47,7 +48,7 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 - trying to find experiments and experiences
 -  the ml literature -- how the terms takes shape -- use ipython notebooks for that. machine learning as very loose assemblage; how it coalesces; etc. 
 -  I can't cover all the algorithms, techniques, settings, but this abundance, and description of it is part of the phenomena and the practice;
--  FICO, DunneRaby -- huge amounts happening in these commercial spaces that I haven't investigate. Could be done through patent literature .... 
+-  FICO, DunneRaby, Teradata -- huge amounts happening in these commercial spaces that I haven't investigate. Could be done through patent literature .... 
 -  the development of machine learning out of AI -- shift from rule-based experts (cd Suchman; Collins  on this); visible in early textbooks (Tom Mitchell); decisive role of pattern recognition approaches focused on images (Bishop 1996 on this); Donald Michie for even earlier
 -  the identificatino of ML and data-mining and predictive analytics
 -  provenance of _iris_ dataset - -Fisher (1936) and Gaspe Peninsula, W.E. Anderson
