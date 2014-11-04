@@ -4,7 +4,7 @@ ch0_introduction/ch_introduction.rmd
 ch1_learning/ch_praxis.rmd
 part1.rmd
 ch2_vector/ch_vector_space.rmd
-ch3_curves/ch_curves_function.rmd
+ch3_curves/ch_curves_functions.rmd
 ch4_dimensionality/ch_dimensional_exuberance.rmd
 ch5_probability/ch_naive_informed.rmd
 part2.rmd

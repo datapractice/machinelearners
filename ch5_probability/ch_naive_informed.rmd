@@ -6,7 +6,7 @@
 
 ## overview
 
-- what is happening to probability and why it matters?
+->> what is happening to probability and why it matters?
   - much talk about N=All, and the end of sampling, but is that right?
     - not from the perspective of machine learning -- it just shifts where the probability and randomness is being done
     - quotes from Mayer-Schonberger, etc to illustrate this
