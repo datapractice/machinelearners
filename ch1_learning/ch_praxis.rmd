@@ -16,7 +16,6 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
 
 ## Overview
 
-- reconstruction vs problematization -- Rabinow -- on equipment
 - data: its giveness, abstraction and actuality
     - observant participation -- developing Wacquant; participating by observing
     - writing recursively -- developing Kelty w.r.t subjects
@@ -26,8 +25,6 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
     - the case of Python -- the business/industry
     - the case of javascript -- popular culture
 - convergence and learning: for fitting a line; but then for choosing which features to use to learn
-- learning about learning --
-    - the Literature - landecker and kelty on treating literature as the informant; examples such as Cover-Hart, Breiman, etc
 - things to include:
     - my `R` books, libraries, papers, competitions, blogs, talking, courses
     - `knitr`/`ipython` notebooks - executable - some examples from python notebooks
@@ -39,14 +36,13 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
 
 ## Todo
 - scientific papers form a substrate here; but they are entangled with software, with databases, with institutions, and with a widening circle of actors
+- learning about learning --
+    - the Literature - landecker and kelty on treating literature as the informant; examples such as Cover-Hart, Breiman, etc
 - Michie, Spiegelhalter 1994 book has report on the Statlog project -- it tried to bring all method together; good that it mixes stats and computer scientists; managed by Daimler-Benz; shows that the problem of diversity of techniques has been discussed before; look at how they tried to bring  the methods together;
 - the habit of recursive application of code to itself, or to something close by, without ever going too far -- I'll do that too -- use the algorithms to investigate the literature, to classify the examples, to see how things move; but I don't want to place too much weight on this recursion, as it is something that needs to be analsyed. See the recent Totaro article -- not recursion as an intrinsic formal property, but as a practice in certain domains that allows a form of movement.
 - comment on the typography of the maths -- the use of bold, italics, of German capitals, greek letters, upper and lower case, brackets, 
 
-- add Foucault on the appearance of deep order in life/language/labour -- this is a really important thread to draw through - in this case through the reconstruction of the _table_. 
-- add quotes from Foucault on the table of space of order, and ask how he thought about quantity, etc; and what is happening to tables today.
 - done Bogost on carpentering, and the problems of writing -- I have a take on that ... 'source code itself often offers inroads in alien phenomenology -- particular when carpentered to reveal the internal experience of withdrawn units 105'
-- Landecker & Kelty on the literature as informant;  -- very important to do more on this
 - Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
 - done? On the aridness of the textbooks and literature and what to do about that. 
 - done - Domingos on feature engineering and why it is important -- article in ACM
@@ -60,15 +56,139 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
 
 > Machine learning is not magic; it cannot get something from nothing. What it does is get more from less. Programming, like all engineering, is a lot of work: we have to build everything from scratch. Learning is more like farming, which lets nature do most of the work. Farmers combine seeds with nutrients to grow crops. Learners combine knowledge with data to grow programs. [@Domingos_2012, 81] 
 
->For example, take the verb 'moving'; if we write 'it-moving' we are expressing a multiplicity in a diagrammatic way. It-moving indicates a complex abstract machine which can appear independent of any subjective tendency -- it could refer to an individual, an army, an insect, an object, a machine, an emotion, an idea. It allows for the all the possibilities of moving, so that the verb retains it machinic character. 139
+>Take the verb 'moving': if we write 'it-moving' we are expressing a multiplicity in a diagrammatic way. It-moving indicates a complex abstract machine which can appear independent of any subjective tendency -- it could refer to an individual, an army, an insect, an object, a machine, an emotion, an idea. It allows for the all the possibilities of moving, so that the verb retains it machinic character. 139
 
 Many different tendencies shape what is happening to data today, but two of them impinge directly on  our  practical sense of the potentials of data. On the one hand, ways of working with  data have shifted substantially over the last decade or so due to the growth in open source programming languages and networked platforms. Scientists, software developers and data analysts use programming languages such as `python` and `R` rather than commercial software packages such as Matlab, SAS or SPSS to work with data. Scientific research, which has long relied on counting and calculation, increasingly organises and processes data more comprehensively because workflows, datasets, algorithms and databases can be quickly and flexibly assembled in code. (Scientific computing languages such as FORTRAN have long underpinned scientific research in various more mathematical fields.) On the other hand, several decades of research and application of statistical and machine learning algorithms in science, government, industry and commerce have gradually developed fairly powerful ways of automating the construction of models that classify and predict events and associations between things, people, processes, etc. Very extensive networks of code swirl around data in its scientific, biomedical, financial, commercial and bureaucratic incarnations.  Programming and software development has long handled data and algorithms, and conversely, machine learning has always relied on programming. But they are powerfully coalescing in data-driven research, business and controls systems in various ways as predictive models, targeted advertising, recommendation systems, . Can we locate anything in the proliferation of machine learning that is more than plying data into a tightly woven matrix of commercial-scientific-governmental knowing/surveillance? I don't answer that question directly here, but my basic answer is affirmative. I think we can and we should  explore some of the shifts in practices of working with data that can be observed around data. These practices are both the object of analysis, and in  certain cases, provide support for a shift in the way in which we might carry out research on changes in media, publics, sciences, commerce, mobilities and  health. 
 
 ## Reading machine learning
 
-The way that I approach machine learning was initially influenced  by a single highly technical and compendious textbook, _Elements of Statistical Learning: Data Mining, Inference, and Prediction_ [@Hastie_2009], now in its third edition. Like the online machine learning courses and programming books I discuss below, _Elements of Statistical Learning_  combines statistical techniques with various algorithms to 'learn from data' [@Hastie_2009, 1]. The 763 pages of this often tersely written and quite mathematical book range across various kinds of data (spam email, Californian forest fires, blood pressure measurements, handwritten digit recognition), and various machine learning techniques, methods and algorithms (linear regression, k-nearest neighbours, neural networks, support vector machines, the Google Page Rank algorithm, etc). While these techniques come from many different places (and take too many forms for me to fully understand or explain here), in _Elements of Statistical Learning_ they are all framed by a notion of learning based on predictive models.
+The way that I approach machine learning was initially influenced  by a single highly cited and compendious textbook, _Elements of Statistical Learning: Data Mining, Inference, and Prediction_ [@Hastie_2009], currently in its second edition.[^12] Like the online machine learning courses and programming books I discuss below, _Elements of Statistical Learning_  combines statistical techniques with various algorithms to 'learn from data' [@Hastie_2009, 1]. The 768 pages of this often tersely written and quite mathematical book range across various kinds of data (spam email, Californian forest fires, blood pressure measurements, handwritten digit recognition), and various machine learning techniques, methods and algorithms (linear regression, k-nearest neighbours, neural networks, support vector machines, the Google Page Rank algorithm, etc). While these techniques come from many different places (and take too many forms for me to fully understand or explain here), in _Elements of Statistical Learning_ they are all framed by a notion of learning based on predictive models.
 
-The book is susceptible of different styles of reading. It is often cited by machine learning practitioners as an authoritative guide. This may be due to its encyclopedic character, but I think something more animates it. The predictive models in _Elements of Statistical Learning_ are  dominated by a single prediction technique, linear regression models or fitting a line to points. Jeff Hastie, Rob Tibshirani and Jerome Friedman, the authors, definitely advocate a statistical legacy and inheritance in machine learning:
+[^12]: The complete text of the book can be downloaded from the website [http://statweb.stanford.edu/~tibs/ElemStatLearn/](http://statweb.stanford.edu/~tibs/ElemStatLearn/). 
+
+The book is susceptible of different styles of reading. It is often cited by machine learning practitioners as an authoritative guide. This may be due to its encyclopedic character, but I think something more animates it. Google Scholar reports over 20,00 citations of the book http://scholar.google.com/scholar?hl=en&q=elements+of+statistical+machine+learning, October 2014), a huge citation count by any standards. (Michel Foucault's _The History of Sexuality: an Introduction_ receives about the same number of citations.) The citations that [@Hastie_2009] as well as its previous edition [@Hastie_2001] receive do not arrive principally from machine learning researchers. They come from a wide variety of fields.[^13] It is hard to find a field of contemporary science, engineering, health and indeed social science that has not cited it. 
+
+```{r hastie_pages, engine='python', echo=False}
+
+import pandas as pd
+import re
+import os
+import matplotlib.pyplot as plt
+
+
+def load_records(data_dir):
+    """Return dataframe of all records,
+    with new column of cited references as list"""
+
+    # I saved all the WoS full records for the search term in this directory
+    files = os.listdir(data_dir)
+    wos_df = pd.concat([pd.read_table(wos_df, sep='\t', index_col=False)
+                        for wos_df in [data_dir+f for f in files
+                        if f.count('.txt') > 0]])
+    wos_df = wos_df.drop_duplicates()
+
+    #fix index
+    index = range(0, wos_df.shape[0])
+    wos_df.index = index
+
+    #to get all cited refs
+    if wos_df.columns.tolist().count('CR') > 0:
+        cited_refs = [list(re.split(pattern='; ',
+                                    string=str(ref).lower().lstrip().rstrip()))
+                                    for ref in wos_df.CR]
+        # add as column to dataframe
+        wos_df['cited_refs'] = cited_refs
+
+    # normalise authors
+    if wos_df.columns.tolist().count('AF') > 0:
+        wos_df.au = [str(au).lower().lstrip().rstrip() for au in wos_df.AF]
+
+    return wos_df
+
+
+def clean_fields(wos_df):
+
+    """ Returns dataframe with a new field 'field' that lists
+    the fields for each reference"""
+
+    wos_df['fields'] = wos_df.SC.dropna().str.lower().str.split('; ')
+    return wos_df
+
+
+def clean_topics(wos_df):
+    """Wos.DE field has a mixture of topics and techniques.
+    -------------------------------------
+    Returns a cleaned-up, de-pluralised list version of all the topics and techniques
+    """
+
+    wos_df['topics'] = wos_df.DE.dropna().str.lower().str.strip().str.replace('\(\w+ \)', '').str.replace('($  )|(  )', ' ')
+    # wos_df['topics'] = wos_df.topics.str.replace("[\(\](\w+ ?)+[\)\]]\W*",  '')
+    wos_df.topics = wos_df.topics.str.replace('svm', 'support vector machine')
+    wos_df.topics = wos_df.topics.str.replace('support vector machine(\w*)',
+                                            'support vector machine')
+    wos_df.topics = wos_df.topics.str.replace('(artificial neural network)|(neural networks)|(neural net\b)',
+                                            'neural network')
+    wos_df.topics = wos_df.topics.str.replace('decision tree(.*)', 'decision tree')
+    wos_df.topics = wos_df.topics.str.replace('random forest(\w+)', 'random forest')
+    # Web of science topics often have  a bracket expansion
+    wos_df['topics'] = wos_df.topics.str.replace("(\w+)\W*[\[\(].+[\)\]]\W*", '\\1 ')
+    wos_df.topics = wos_df.topics.str.split('; ')
+    return wos_df
+
+def keyword_counts(wos_df):
+    """ Returns a dictionary with keyword counts"""
+    de_all = [d for de in wos_df.topics.dropna() for d in de]
+    key_counts = collections.Counter(de_all)
+    return key_counts
+
+
+    df = load_records('data/hastie_elem_WOS/')
+    print('There are %s records in the dataset' % df.shape[0])
+    df = clean_topics(df)
+    df = clean_fields(df)
+
+    print('%s topic fields are null' % sum(df.topics.isnull()))
+    print('%s abstract fields are null' % sum(df.AB.isnull()))
+    print('%s keywords Plus fields are null' % sum(df.ID.isnull()))
+    print('% s author fields are null' % sum(df.AF.isnull()))
+
+    all_fields = sorted([e for el in df.fields.dropna() for e in el])
+    fields_set = set(all_fields)
+    field_counts = {e: all_fields.count(e) for e in fields_set}
+
+    print('%s different fields appear in the literature citing Hastie (2001/2009)' % len(fields_set))
+    field_counts_s = sorted(field_counts.iteritems(), key=lambda(k, v):(-v, k))
+    field_counts_s[0:30]
+    major_fields = {f:v for f,v in field_counts.iteritems() if v > 3 or f is not 'computer science'}
+    print(len(field_counts), len(major_fields))
+    kw = keyword_counts(df)
+    kw.most_common()[:50]
+    #find the most commonly cited pages
+    hastie = df.CR.str.findall('Hastie.*?;')
+    hastie = hastie.map(lambda x:  x[0] if len(x) ==1 else '')
+    hastie_pages = hastie[hastie.str.contains('P')]
+    pages = hastie_pages.str.findall('\d{1,3};').map(lambda x: x[0] if len(x) ==1 else '').str.replace(';', '')
+    pages = pages[pages != '']
+    pages = pages.astype('int')
+    pages_counted = pages.value_counts()
+    pages_counted_sorted = pages_counted.sort_index()
+
+    pages_counted_sorted.to_csv('data/hastie_pages.csv')
+
+```
+```{r plot_hastie_pages, echo=False}
+library(ggplot2)
+hastie_pages = read.csv('data/hastie_pages.csv')
+colnames(hastie_pages) = c('page', 'reference_count')
+plt = ggplot(hastie_pages, aes(x =page, y = reference_count))
+plt + geom_bar(stat = 'identity')
+```
+
+Of the around 760 pages in [@Hastie_2009] and [@Hastie_2001], around `r dim(hastie_pages)[1]` pages are referenced. As the figure shown above indicates, certain portions of the book are much more heavily cited than others, and this distribution of page references in the literature that cites _Elements of Statistical Machine Learning_ is a rough guide to how the book has been read in different settings. In general, the thousands of citations of the book themselves comprise a map of readings of the book, and their relative concentrations and thinnings susuggest sites of investment in the techniques, approaches and machines that the book describes. For instance, the most commonly cited page in the book is page `r hastie_pages$page[which.max(hastie_pages$reference_count)]`. That page begins a section called 'Non-negative Matrix Factorization', a technique frequently used to process digital images to compress their visual complexity into a simpler set of visual signals [@Hastie_2009, 553]. It is particularly powerful because it can, as Hastie and co-authors write 'learns to represent faces with a set of basis images resembling parts of faces' [@Hastie_2009, 555].  
+
+[^13]: A Thomson Scientific 'Web of Science'(TM) search for references citiing [@Hastie_2009] yields around 9000 results. These  publications sprawl across well over 100 different fields of research.  While computer science, mathematics and statistics dominate, a very diverse set of references comes from disciplines from archaeology, through fisheries and forestry, genetics, robotics, telecommunications and and toxicology ripple out from this book since 2001. 
+
+The predictive models in _Elements of Statistical Learning_ are  dominated by a single prediction technique, linear regression models or fitting a line to points. Jeff Hastie, Rob Tibshirani and Jerome Friedman, the authors, definitely advocate a statistical legacy and inheritance in machine learning:
 
 >The linear model has been a mainstay of statistics for the past 30 years and remains one of our most important tools. Given a vector of inputs
 $X^T = (X_1 , X_2, . . . , X_p)$, we predict the output $Y$ via the model
