@@ -1,6 +1,8 @@
 # Vectorising data
 
 ##todo
+- reference history of tables -- e.g. downloaded chapter
+- discuss problem of tables -- how they diagrammaticaly generate high D spaces that we then wrestle with, mightly and again diagrammatically -- fallacy of misplaced concreteness?
 - add Foucault on the appearance of deep order in life/language/labour -- this is a really important thread to draw through - in this case through the reconstruction of the _table_. 
 - add quotes from Foucault on the table of space of order, and ask how he thought about quantity, etc; and what is happening to tables today.
 - quotes from Wark on the vector
