@@ -1,7 +1,10 @@
 # Vectorising data
 
 ##todo
-- reference history of tables -- e.g. downloaded chapter
+- pull apart some diagrams using inkscape -- use this to show what happens to the abstract spaces
+- mention how things that don't seem to be vector spaces are put into vector spaces (e.g. market basket analysis)
+- use the metaphor of the house architecture and real estate as a figure to help explain the diagramming
+- reference history of tables -- e.g. downloaded chapter -- need to get from samsung laptop
 - discuss problem of tables -- how they diagrammaticaly generate high D spaces that we then wrestle with, mightly and again diagrammatically -- fallacy of misplaced concreteness?
 - see history of statistics in terms of plurality of attempts to deal with the diagramming of the table
 - add Foucault on the appearance of deep order in life/language/labour -- this is a really important thread to draw through - in this case through the reconstruction of the _table_. 
