@@ -1,8 +1,10 @@
 # Vectorising data
 
 ##todo
+- Beniger article on history of stats graphics; Marchese on tables;
 - bring in `iris` discussion
-- the scikit learn diagram -- as an attempt to deal with the dimensionality of methods! key point -- not only data is volumetrically challenging, but so is the volume of methods
+- do library dependencies with datasets added; create map of datasets; add datasets from other sources; 
+- the scikit learn diagram -- as an attempt to deal with the dimensionality of methods! key point -- not only data is volumetrically challenging, but so is the volume of methods - isl describes them as 'vast' (see Preface);
 - pull apart some diagrams using inkscape -- use this to show what happens to the abstract spaces
 - mention how things that don't seem to be vector spaces are put into vector spaces (e.g. market basket analysis)
 - use the metaphor of the house architecture and real estate as a figure to help explain the diagramming
