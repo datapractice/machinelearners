@@ -5,6 +5,10 @@
 Looking at data 
 Finding functions: lines and curves
 
+## todo
+
+- wr.t. finding functions -- get a double play on 'function finding' going via the ISLR book's talk of 'vast tools';  
+
 ## from proposal
 
 ## Key examples: housing price prediction; cancer prognosis; digit recognition; credit scoring

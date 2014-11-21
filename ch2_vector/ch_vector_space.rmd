@@ -1,6 +1,8 @@
 # Vectorising data
 
 ##todo
+- go straight into the data -- talk about how hastie and others do this;
+- the thing about looking at patterns -- someone elses turkish carpet
 - Beniger article on history of stats graphics; Marchese on tables;
 - bring in `iris` discussion
 - do library dependencies with datasets added; create map of datasets; add datasets from other sources; 
