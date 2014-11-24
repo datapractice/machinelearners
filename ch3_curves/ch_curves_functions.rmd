@@ -8,6 +8,7 @@ Finding functions: lines and curves
 ## todo
 
 - wr.t. finding functions -- get a double play on 'function finding' going via the ISLR book's talk of 'vast tools';  
+- the scikit learn diagram -- as an attempt to deal with the dimensionality of methods! key point -- not only data is volumetrically challenging, but so is the volume of methods - isl describes them as 'vast' (see Preface);
 
 ## from proposal
 
