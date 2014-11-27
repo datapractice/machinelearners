@@ -52,7 +52,6 @@ This brief resumé of one of the main arguments in _The Order of Things_ might h
 [^22]: By and large, I am not discussing networking and database infrastructures here. In other work, I have attempted to account for the multiplication of tables in databases but also in mundane practices of ordering. See [@Mackenzie_2001; @Mackenzie_2012]. My analysis there pivots mainly on a set-driven account of data derived from the work of Alain Badiou. Although I've already been using some set terminology here -- as in 'dataset' -- I'm persisting with a more geometrical and algebraic account of datasets in order to better deal with some of the graphisms common in machine learning. 
 
 
-
 ## Epistopological transformations
 
 ```[r ElemStatLearn_data, echo=TRUE}
