@@ -205,6 +205,7 @@ $X^T = (X_1 , X_2, . . . , X_p)$, we predict the output $Y$ via the model
 >The term $\hat{\beta_0}$ is the intercept, also known as the _bias_ in machine learning [@Hastie_2009, 11].
 
 In the course of the book, linear regression is subjected to countless variations, iterations, expansions and modifications. Their own research spans several decades and a range of topics concerning linear regression models and their variations ('ridge regression'; 'least angle regression'; etc.). But this introduction of the 'mainstay of statistics,' the linear model, already introduces a harsh form -- the mathematical equation -- that is perhaps the most prominent feature in the text. Any reading of the book has to work out a way to traverse theose forms. 
+
 \begin {equation}
 \label {eq:linear_model}
 $$\hat{Y} = \hat{\beta_0}  + \sum^p_{j=1} X_j \hat{\beta_j}$$
