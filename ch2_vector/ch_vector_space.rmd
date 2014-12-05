@@ -220,7 +220,7 @@ summary(prostate_model)
 
 Instead, in following what happens to vectors, lists, matrices, arrays, dictionaries, sets, dataframes, or series or tuples in data, is to get a sense of how the predictive models, the supervised and unsupervised learners, the classifiers, the decision trees and the neural networks in machine learning, to name a few techniques, will be largely implemented as transformations that fold and refold matrices and vectors in the common vector space.  Amidst the many different operations and transformations associated with machine learning and in algorithmic treatments of data, perhaps the single most important practice is matrix multiplication.  It looms large in writing about machine learning, and in many articles and textbooks, matrix manipulations are taken for granted. 
 
-[HERE] - give the analytical solution to the prostate data. Then move onto the R version with the table of error measurements, 
+[HERE] - give the analytical solution to the prostate data. Then move onto the R version with the table of error measurements,
 
 For instance, the first full mathematical expression in _The Elements of Statistical Learning_ is shown below along with the surrounding text:
 
