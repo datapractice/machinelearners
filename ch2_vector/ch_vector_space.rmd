@@ -203,6 +203,7 @@ While the examples of vectorised computation that I have shown are relatively tr
 
 ```{r prostate_model, echo=TRUE}
 library(ElemStatLearn)
+library(xtable)
 data(prostate)
 columns_to_standardize = c(1,2,3,4,6,8,9)
 prostate_standard = as.matrix(prostate[, columns_to_standardize]) 
@@ -210,14 +211,18 @@ prostate_standard = as.data.frame(scale(prostate_standard))
 prostate_standard = cbind(prostate_standard, gleason=prostate$gleason, svi = prostate$svi, train = prostate$train)
 train = prostate$train ==TRUE
 prostate_model = lm(lpsa~., prostate_standard[train,-10])
-summary(prostate_model)
+tab1 = xtable(summary(prostate_model), caption = 'Fitting a linear model', label='tab:prostate_linear_regression')
+print(tab1)
 ```
+
+From the epistopological viewpoint, the most obvious result of fitting a linear model is the production not of a line on a diagram or in a graphic, but the generation of a new table of numbers (see Table \ref{tab:prostate_linear_regressionk}) called 'coefficients'. This table is not as extensive as the original data, the $\mathbf{X}$ and $Y$ vectors. Here the names of the variables in the dataset appear as rows in the new table, a table that describes something of how a line has been fitted by the linear model to the data. The columns of the table now bear abbreviated and much more statistical names such as `estimate` (the estimated values of $\hat{\beta}$, the key parameters in any linear model), `Std. Error`, `t value`, and the all important _p_ values written as `Pr(|t|)`.  The numerical values ranging along the rows mostly range from -1 to 1, but the final column includes values that are incredibly small: `1.47e-06` is a few millionths. Other statistics range around the outside the table: the `F-statistic`, the `R-squared` statistic, and the `Residual standard error`. I don't propose discussing these in any great detail here.[^101] No matter how we understand these statistics, they constitute a transformation of the `prostate` dataset. The numbers of the \ref{tab:prostate} become epistopic here, since they now eppear as a set of standard errors, estimates, t-statistics, and _p_ values, that together indicate how likely the estimated values of $\beta$ are, and therefore how well the diagonal line expresses the relations between different dimensions of the dataset in the common vector space.
 
 Instead, in following what happens to vectors, lists, matrices, arrays, dictionaries, sets, dataframes, or series or tuples in data, we might get a sense of how the predictive models, the supervised and unsupervised learners, the classifiers, the decision trees and the neural networks in machine learning, to name a few techniques, take shape as transformations that fold and refold matrices and vectors in the common vector space.  Amidst the many different operations and transformations associated with machine learning and in algorithmic treatments of data, perhaps the single most important practice is matrix multiplication. This, in other words, is a key component of the  epistopological practice of machine learning. 
 
-[HERE]  Then move onto the R version with the table of error measurements, 
-[HERE]  point out that maximum likelihood is normally used for this; describe the tables and plots that hastie then generate in order to examine how well the line fits, and how well the different predictors that shape the direction of this line 'explain' the levels of PSA; talk about the Z-scores, F-scores; reproduce the table
+[^101]: Some of these statistics will appear again in later chapters in situations where they play pivotal roles in the practice of machine learning. 
 
+[HERE]  point out that maximum likelihood is normally used for this; describe the tables and plots that hastie then generate in order to examine how well the line fits, and how well the different predictors that shape the direction of this line 'explain' the levels of PSA; talk about the Z-scores, F-scores; reproduce the table
+ 
 For instance, the first full mathematical expression in _The Elements of Statistical Learning_ is shown below along with the surrounding text:
 
 >The linear model has been a mainstay of statistics for the past 30 years and remains one of our most important tools. Given a vector of inputs
@@ -312,5 +317,7 @@ But why must figure and text, visibilities and statements relate to each other p
 >the positivities that I have tried to establish must not be understood as a set of determinations imposed from the outside on the thought of individuals, or inhabiting it from the inside, in advance as it were; they constitute rather the set of conditions in accordance with which a practice is exercised, in accordance with which that practices gives rise to partially or totally new statements, and in accordance with which it can be modified. These positivities are no so much limitations imposed on the initiative of subjects as the field in which that initiative is articulated [@Foucault_1972, 208-209].
 
 Here Foucault refers to the restricted freedom that discursive practices and formations open for us. It is difficult to now imagine being outside the data of science, media, government and business. The generalization of the epistopological transformations into data construct something like a set of conditions framing statements and for making things visible today. And yet Foucault is quite clear that amidst these 'positivities' of knowledge production, knowing the conditions, setting out the rules, and identifying the relations that support the density and complexity of practice is a pre-condition to any transformations in practice. 
+
+## References
 
 
