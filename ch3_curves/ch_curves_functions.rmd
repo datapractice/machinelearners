@@ -8,8 +8,12 @@ Finding functions: lines and curves
 
 ## todo
 
+- add the map of the tools from scikit learn
+- add the model complexity diagram, and annotate it a bit. Figure 7.1, [@Hastie_2009, 200]
+
 - wr.t. finding functions -- get a double play on 'function finding' going via the ISLR book's talk of 'vast tools';  
 - the scikit learn diagram -- as an attempt to deal with the dimensionality of methods! key point -- not only data is volumetrically challenging, but so is the volume of methods - isl describes them as 'vast' (see Preface);
+- Add Valiant 1984 on learnable
 
 ## from proposal
 
@@ -61,14 +65,11 @@ The problematization of classifications, practices, things is an event.  Rabinow
 
 science brings to light partial observers  in relation to functions within systems of reference.D& G, WiP, 129
 
-
-
 It is the reason why ... in our direct apprehension of the world around us we find that curious habit of claiming a two-fold unity with the observed data. We are in the world and the world is in us. W, MoT, 227
 
 '"value" is the world I use for the intrinsic reality of an event.  ... We have only to transfer to the very texture of realisation in itself that value which we recognise so readily in terms of human life' [@Whitehead_1970, 116].  
 
 The aboriginal data in terms of which pattern weaves itself are the shapes, of sense-objects, and of other eternal objects whose self-identity is not dependent on the flux of things SMW, 187-8
-
 
 the challenge, which I deem a materialist challenge, is that whatever the mess and perplexity that may result, we should resist the temptation to pick and choose among practices Stengers, wondering, 2011, 379
 
@@ -78,9 +79,6 @@ Celebrating the exceptional character of the experimental achievemnt very effect
 
 Taking seriously the singularity of experimental practices aslo leads us to understand the strong possibility of their destruction by the coming knowledge economy. The points is not that the scientific enterprise would lose a neutrality it never had.  … What is at risk is rather the very social fabric of scientific reliability, that is, the constitutive relation between an epxerimental achievmenet and the gathering of what can be called 'competent colleagues' Stengers, wondering, 377
 
-## To do
-
-- Add Valiant 1984 on learnable
 
 ## Introduction: the learnability of machine learning
 
