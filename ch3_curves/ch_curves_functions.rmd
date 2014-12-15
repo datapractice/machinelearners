@@ -80,7 +80,9 @@ Celebrating the exceptional character of the experimental achievemnt very effect
 Taking seriously the singularity of experimental practices aslo leads us to understand the strong possibility of their destruction by the coming knowledge economy. The points is not that the scientific enterprise would lose a neutrality it never had.  … What is at risk is rather the very social fabric of scientific reliability, that is, the constitutive relation between an epxerimental achievmenet and the gathering of what can be called 'competent colleagues' Stengers, wondering, 377
 
 
-## Introduction: the learnability of machine learning
+>A statement always represents a transmission of elements distributed in a common space. .. the formations and transformations of these spaces themselves pose topological problems  [@Deleuze_1988,3]
+
+## The learnability of machine learning
 
 'What I am attempting to do', writes Paul Rabinow,  'is to reflect on how it might be possible to transfigure elements of the equipment of modern method into a  form of modern meditation, and to bring the benefits and effects of that transformation to bear on enquiry' [@Rabinow_2003, 12]. This chapter also considers that possibility in a limited domain. The elements of the equipment of modern method here are the elements of  machine learning and contemporary data infrastructures, and the transformation that I'm exploring here are whether the techniques of machine learning can help us think about what is happening to data. The motivating intuition here is that what happens to and in data, and indeed, what we put into or invest in data offers guidance on  transformations in naming, grouping, counting, classifying and deciding in many domains.  In making somewhat different  things with data -- models, associations, maps, visualizations, databases, profiles, analyses, analytics --  new sensibilities and possibilities of experimentation appear. 
 
