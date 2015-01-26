@@ -14,6 +14,15 @@ Transforming
 ## overview
 
 
+## to do 
+
+- ibm watson as a good object of discussion (fits with google flu trend and Kaggle; but somewhere in between)
+- many machine learning techniques come out of biomedicine -- does that matter?
+- the Foucault argument on life, labour and language and my point about the return of the table; how to make sense of that inversion of hidden structure of life, etc. 
+- use the ml-lit analysis to point to the rise of bioinformatics
+- start to develop the ontological argument more strongly
+- talk about how important infrastructures and instruments are
+
 ## Key examples: the ENCODE project; METABRIC;  Key techniques: decision trees, random forests, self-organising maps
 
  - doubling times, the auratic power of the instrument, and metacommunity, the topological turn 
@@ -22,13 +31,6 @@ This chapter of the book concerns data-generating instruments and data archives 
 
 
 
-
-## to do 
-- many machine learning techniques come out of biomedicine -- does that matter?
-- the Foucault argument on life, labour and language and my point about the return of the table; how to make sense of that inversion of hidden structure of life, etc. 
-- use the ml-lit analysis to point to the rise of bioinformatics
-- start to develop the ontological argument more strongly
-- talk about how important infrastructures and instruments are
 
 ## quotes to use
 
