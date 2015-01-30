@@ -7,6 +7,8 @@ Finding functions: lines and curves
 
 ## todo
 
+- gradient descent is the key linkage here, not logreg as such;
+- careful of too many layers of abstraction-- how not to be too abstract about it. 
 - add the map of the tools from scikit learn
 - add the model complexity diagram, and annotate it a bit. Figure 7.1, [@Hastie_2009, 200]
 
