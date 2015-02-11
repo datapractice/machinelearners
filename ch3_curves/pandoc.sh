@@ -1,3 +1,1 @@
-#!/bin/sh
-
-pandoc --smart --normalize --latex-engine=xelatex   --bibliography=~/Documents/ref_bibs/data_forms_thought.bib ch2_curves_function.md -o ch2_curves_function.pdf
+pandoc --bibliography /home/mackenza/Documents/ref_bibs/ngs.bib --bibliography /home/mackenza/Documents/ref_bibs/R.bib --bibliography /home/mackenza/Documents/ref_bibs/machine_learning.bib --bibliography /home/mackenza/Documents/ref_bibs/mackenzie.bib --bibliography /home/mackenza/Documents/ref_bibs/data_forms_thought.bib --bibliography /home/mackenza/Documents/ref_bibs/at_this_moment.bib --bibliography /home/mackenza/Documents/ref_bibs/google_analytics.bib --latex-engine=xelatex -o ch_curves_functions.pdf ch_curves_functions.md --template ~/.pandoc/default.latex

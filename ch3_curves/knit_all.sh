@@ -1,4 +1,4 @@
 #!/usr/bin/Rscript
 
 library(knitr)
-knit('ch2_curves_function.rmd', output='ch2_curves_function.md')
+knit('ch_curves_functions.rmd', output='ch_curves_functions.md')
