@@ -140,13 +140,9 @@ This is not the way that machine learners  typically learn functions.  Much mach
 
 As we saw earlier, in his formulation of the 'learning problem', the learning theorist Vladimir Vapnik speaks of choosing a function that approximates to the data, yet  minimises the 'probability of error' [@Vapnik_1999, 31]. Unique 'closed form' solutions are quite unusual in machine learning. In machine learning, functions are normally learned through a process of approximation and optimisation that has little resemblance to the deductive problem-solving by finding solutions to  equations.  Even the apparently simplest data modelling procedure of fitting a line to a set of points is usually implemented as an optimisation process in machine learning settings. This is a point where machine learning differs machinically from conventional statistical techniques. The use of approximation, optimisation and heuristic learning approaches is much more prevalent for reasons that have to do with the situations in which machine learning is put work. 
 
-For instance, describing the  application of machine learning to biomedical and clinical research, James Malley, Karen Malley and Sinisa Pajevic  contrast it to more conventional statistical approaches:
 
-> working with statistical learning machines can push us to think about novel structures and functions in our data. This awareness is often counterintuitive, and familiar methods such as simple correlations, or slightly more evolved partial correlations, are often not sufficient to pin down these deeper connections. [@Malley_2011, 5-6]
+But how do we know whether a model is a good one, or that the function that a model proffers to us fits the functions in our data.  One problem with  closed-form or analytical solutions typical of mathematical problem-solving is precisely that their closed-form belies the algorithm processes needed to actually compute results. To continue with key example of the closed form solution for linear regression
 
-The novel structures and functions in 'our data' are  precisely the functions that machine learning technique seek to learn. As we will see, these structures and functions take various forms and shapes (lines, trees, curves, peaks, valleys, forests,  boundaries, neighbourhoods, etc.), and they can identify 'deeper connections' than the correlations we have saw in the house price or iris datasets.  
-
-But how do we know whether a model is a good one, or that the function that a model proffers to us fits the functions in our data. (If it is not already obvious, in the world of machine learning it is simply taken as read that functions are in the world; 'Nature' has been thoroughly mathematised here.) One problem with  closed-form or analytical solutions typical of mathematical problem-solving is precisely their closed-form. To continue with key example of the closed form solution for linear regression
 
 \begin {equation}
 \label {eq:linear_model}
@@ -287,3 +283,12 @@ There is deep disturbance in the practice of machine learning around the problem
 
 
 Curves lie at
+
+## Conclusion
+
+
+For instance, describing the  application of machine learning to biomedical and clinical research, James Malley, Karen Malley and Sinisa Pajevic  contrast it to more conventional statistical approaches:
+
+> working with statistical learning machines can push us to think about novel structures and functions in our data. This awareness is often counterintuitive, and familiar methods such as simple correlations, or slightly more evolved partial correlations, are often not sufficient to pin down these deeper connections. [@Malley_2011, 5-6]
+
+The novel structures and functions in 'our data' are  precisely the functions that machine learning technique seek to learn. As we will see, these structures and functions take various forms and shapes (lines, trees, curves, peaks, valleys, forests,  boundaries, neighbourhoods, etc.), and they can identify 'deeper connections' than the correlations we have saw in the house price or iris datasets.  
