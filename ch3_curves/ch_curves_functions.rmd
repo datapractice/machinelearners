@@ -255,6 +255,9 @@ Curves lie at
 
 [[want to get to the point where I can say the power of the machine learning to learn, and hence appetite for data, for infrastructural transformations, etc, can all be understood in terms of this form of movement that pulls lines around the curve -- a kind of constraint; this is an antidote to the mythologised power of algorithms]
 
+
+[also want to make the LS point that a kind of dance of agency occurs through the curve-fitting -- animating the curves, and then looking at those animations as 'learning'; generates potent dynamics -- this is what the partial observer stuff helps us think about; but also what the different senses of function do -- they are all needed to get this dance going ... And this is an old thing in the history of automata, devices and things more generally ... ]
+
 For instance, describing the  application of machine learning to biomedical and clinical research, James Malley, Karen Malley and Sinisa Pajevic  contrast it to more conventional statistical approaches:
 
 > working with statistical learning machines can push us to think about novel structures and functions in our data. This awareness is often counterintuitive, and familiar methods such as simple correlations, or slightly more evolved partial correlations, are often not sufficient to pin down these deeper connections. [@Malley_2011, 5-6]

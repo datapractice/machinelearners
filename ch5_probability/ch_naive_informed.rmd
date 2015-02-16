@@ -29,6 +29,7 @@
 
 ## to do
 
+- this is the primary chapter on the basic problem of reference and to a certain extent accountability
 - Peirce invents 'normal' in 1873, followed by Galton 1877
 - barad on probability and chance
 - hacking on what quetelet did with the normal distribution - he ontologized it.
