@@ -35,6 +35,8 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
     -
 
 ## Todo
+
+- add in McCloskey 2014 paper on the diagrammatic (in doc archive -- data_intensve)
 - add in notes from Exeter paper about diagonalization; and perhaps start with the diagonal diagram from hastie;
 - scientific papers form a substrate here; but they are entangled with software, with databases, with institutions, and with a widening circle of actors
 - learning about learning --
