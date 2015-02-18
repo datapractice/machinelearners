@@ -1,4 +1,5 @@
-# Into the data: diagramming machine learning
+# Unlearning machine learning
+## Into the data: diagramming machine learning
 ## Forms of data thought: entanglements of subjectivity and computation
 ## Forms of data thought: learning from machines
 ## Forms of data thought: what to do with machine learning?

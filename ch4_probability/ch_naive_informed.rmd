@@ -1,4 +1,4 @@
-# $N = all$: machine learning gets all the data
+# 4.  $N = all$: machine learning gets all the data
 
 ## alternative titles 
 
@@ -57,6 +57,9 @@ The topic in this chapter is the role of randomness, chance and number in machin
 >Since its Baroque invention [@Hacking_1975], probability has been a double-sided coin. On one side, it concerns degrees of belief (the so-called 'subjective' view), and on the other side, frequencies, or how often things happen in the world (the so-called 'objective' view). In the last few centuries, one side of this coin has come up more often -- the frequency version of probability. Yet, as many historians of statistics, and statisticians themselves recognise, probability as degree of belief has never disappeared. It has only occurred less often, and been less often the object of belief. This ineluctable entwining of belief and events, of subjective-objective faces, in probability seems quintessentially Baroque in its interweaving and folding together of inside and outside. Drawing on contemporary statistical practice, and Gilles Deleuze's understanding of monads as 'simple, inverse, distributive numbers' [@Deleuze_1993], this paper examines the resurgence of the probability as degree of belief in the face of a world seemingly teeming with data. It argues that in the last few decades of statistical practice associated especially with 'Bayesian inference' and the techniques of Markov Chain Monte Carlo (MCMC) simulation, we see a re-configured and super-imposed concept of probability taking shape. As these practices pervade diverse scientific fields, commerce, government and industry, we might be seeing a different epistemic materialisation taking shape in which beliefs and events are less separate. On the contrary, through computation, subjective belief is exteriorised in simulated events, and a certain staging of events are reshaped as updateable beliefs. 
 
 ## quotes to use
+
+>science is concentrated in an area of knowledge it does not absorb and in a formation which is in itself the object of knowledge and not of science. Knowledge (savoir) in general is not science or a even a particular corpus of knowledge 19 [@Deleuze_1988, 19] 
+
 
 from hacking_1990
 

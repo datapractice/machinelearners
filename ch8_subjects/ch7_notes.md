@@ -1,4 +1,4 @@
-# ch_7_notes
+# 8 ch_7_notes
 Optimising and competing: the lives of machine learners
 'Wonderful people': programmers in the regime of anticipation
 

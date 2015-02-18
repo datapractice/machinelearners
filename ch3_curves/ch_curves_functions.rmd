@@ -1,6 +1,10 @@
-# Chapter 3
+# 3. Machines finding functions
 
-# Machines finding functions
+## to do
+
+- comment on other optimisation algorithms -- EM; non-gradient-based; Newton-Raphson; etc
+- more on SAheart example
+- diagrams of the problem of classification
 
 The opening pages of machine learning textbooks often warn or enthuse about the profusion of techniques. 'The literature on machine learning is vast, as is the overlap with the relevant areas of statistics and engineering' writes David Barber in _Bayesian Reasoning and Machine Learning_[@Barber_2011,4]; 'statistical learning refers to a vast set of tools for understanding data' writes James and co-authors in an _Introduction to Statistical Learning with R_ [@James_2013,1]; or Matthew Kirk in _Thoughtful Machine Learning_ comments:
 

@@ -1,4 +1,4 @@
-# The vector space and its products
+# 2. The vector space and its products
 
 Vectorising data in a common space
 

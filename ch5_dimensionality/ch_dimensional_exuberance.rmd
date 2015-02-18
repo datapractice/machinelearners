@@ -1,4 +1,4 @@
-# Finding patterns in data
+# 5. Finding patterns in data
 
 Movements in machine learning: patterns of generalization
 Dimensional exuberance and pattern recognition in movement
@@ -395,7 +395,7 @@ What happens in decision trees to differences and in particular those difference
 
 ## Cannot see the trees for the forest
 
- ```{r dt_lit_2, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA } 
+```{r dt_lit_2, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA } 
     library(xtable)
     ml_dir = '../ml_lit/data/decision_tree_WOS'
     files <- dir(ml_dir,full.names=TRUE, pattern='savedrecs.*')

@@ -1,4 +1,4 @@
-# Diagramming machines for data
+# 1. Diagramming machines for data
 
 Writing about data
 How to write about data and models
@@ -36,6 +36,7 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
 
 ## Todo
 
+- the github argument -- how it is changing the way in which these systems are put together
 - add in McCloskey 2014 paper on the diagrammatic (in doc archive -- data_intensve)
 - add in notes from Exeter paper about diagonalization; and perhaps start with the diagonal diagram from hastie;
 - scientific papers form a substrate here; but they are entangled with software, with databases, with institutions, and with a widening circle of actors

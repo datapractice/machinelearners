@@ -1,4 +1,4 @@
-# Optimising machine learners
+# 8. Optimising machine learners
 
 ## to do
 - put in Perlich stuff about data leakage -- really important to focus on competition as a way of showing how people do things
