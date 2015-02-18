@@ -30,6 +30,9 @@
 ## to do
 
 - this is the primary chapter on the basic problem of reference and to a certain extent accountability
+- frame accountability via truth, reference, etc and hence via generalization, etc:
+>The generalization performance of a learning method relates to its predic- tion capability on independent test data. Assessment of this performance is extremely important in practice, since it guides the choice of learning method or model, and gives us a measure of the quality of the ultimately chosen model. 219
+
 - Peirce invents 'normal' in 1873, followed by Galton 1877
 - barad on probability and chance
 - hacking on what quetelet did with the normal distribution - he ontologized it.
