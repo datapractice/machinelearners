@@ -2,6 +2,7 @@
 
 ## to do
 
+- add secondary refs from zotero on steepest descent
 - comment on other optimisation algorithms -- EM; non-gradient-based; Newton-Raphson; etc
 - more on SAheart example
 - diagrams of the problem of classification
