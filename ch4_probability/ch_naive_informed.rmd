@@ -1,5 +1,14 @@
 # 4.  $N = all$: machine learning gets all the data
 
+## structure
+
+- hacking on how statistics became real -- tables of numbers; retrofitting of laws as regularities; the role of the social; constant crossover between medicine, state and science, 
+- the fact that machine learning books are full of stats, but the traditional stats of hypothesis testing, tests of significance, measures of uncertainty or variation although some of this appears.
+- statistical mechanisms in the service of something else -- follows on from argument about functions as partial observers and as things in the world (code) -- statistics becomes a device to order the progress of machines; and the laws that matter -- law of large of numbers; the normal distribution -- become techniques of controlling the proliferation of movements. 
+- not so much the deluge of tables giving rise to statistical laws, measurement preceding regularity, but ....
+
+## Introduction
+
 In the final pages of _The Taming of Chance_, the philosopher Ian Hacking describes the work of the geodesic philosopher C.S. Peirce in terms of a twin affirmation of chance. On the one hand, Peirce, following the work of the psychophysicist Gustav Fechner, makes the normal curve into an underlying reality.[^4.1] The 'personal equation,' the variation in measurements made by any observer, become 'a reality underneath the phenomena of consciousness' [@Hacking_1990, 205]. At the same time, and in order to show the underlying reality of the curve, 'Peirce deliberately used the properties of chance devices to introduce a new level of control into his experimentation. Control not by getting rid of chance fluctuations, but by adding some more' [@Hacking_1990, 205]. Peirce's belief in absolute chance, 'a universe of chance' as Hacking puts it, came in the way of a series of 'realization' of curves, in which first social, then biological and finally psychological variations were all understood as evidence of a generative function, the normal distribution or Gaussian function. In the century or so since, what happened to the thorough-going affirmation of statistical thought and probabilistic practice epitomised by Peirce? Hacking stresses that he does not understand Peirce as the precursor or the innovator of twentieth century statistical thought (Hacking's _Taming of Chance_ ends at 1900), but rather as 'the first philosopher completely to internalize the way chance had been tamed in the nineteenth century' (215). What would the equivalent philosopher-machine learner internalize today? What would such persons, working in science or media or government, hold firm in relation to chance, probability and statistics? 
 
 [^4.1]: The historian of statistics Stephen Stigler provides a lengthy account of Fechner's work [@Stigler_1986].  TBA -- in what chapter?
