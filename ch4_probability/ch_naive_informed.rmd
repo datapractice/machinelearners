@@ -22,7 +22,7 @@ At the end of the preface, they also cite, we might note in passing, Hacking's w
 The broadest claim associated with statistical machine learning might be the simple expression shown in:
 
 \begin {equation}
-\label {eq:linear_model}
+\label {eq:n_all}
 N = \forall X
 \end {equation}
 
@@ -85,11 +85,155 @@ f_j(X) = \prod_{k=1}^{p}f_{jk}(X_k)
 
 >[@Hastie_2009, 211]
 
-Some machine learning techniques are so simple that they can be implemented in a few lines of code. Their simplicity, however, belies their power. The function shown above in equation (\ref{eq:naive_bayes}) is about the simplest one to be found in most machine textbooks. While the Naive Bayes classifier is one of the most popular machine learning algorithms, it is more than 50 years old [@Hand_2001]. The key diagrammatic elements of the classifier as expressed in the equation are $\prod$, an operator that multiplies all the values (from $1$ to $p$) to generate a product. What product does the Naive Bayes classifier produce? The expression $f_j(X)$ refers is a probability density; that is, it describes the probability that a particular thing (a document, an image, an email message, a set of URLs, etc.) belongs to the class of things $j$. In constructing this estimate of the probability that a thing is an instance of class $j$, $p$ different features of the thing are taken into account. The subscripts $k=1$ on the $\prod$ operator, and $k$ on the data $X_k$ indicate that the Naive Bayes classifier makes use of a series of probabilities in calculating the overall probability that a given thing belongs to a class. The classifier produces a product $f_j(X)$ by calculating the _joint probability_ of all the probabilities of the features or predictor variables in $X$ for the class $j$. As  _Elements of Statistical Learning_ rather tersely puts it, 'each of the class densities are products of the marginal densities' [@Hastie_2009,108]. 
+Some machine learning techniques are so simple that they can be implemented in a few lines of code. Their simplicity, however, belies their power. The function shown above in equation (\ref{eq:naive_bayes}) is about the simplest one to be found in most machine textbooks. While the Naive Bayes classifier is one of the most popular machine learning algorithms, it is more than 50 years old [@Hand_2001]. The key diagrammatic elements of the classifier as expressed in the equation are $\prod$, an operator that multiplies all the values (from $1$ to $p$) to generate a product. What product does the Naive Bayes classifier produce? The expression $f_j(X)$ refers is a probability density; that is, it describes the probability that a particular thing (a document, an image, an email message, a set of URLs, etc.) belongs to the class of things $j$. In constructing this estimate of the probability that a thing is an instance of class $j$, $p$ different features of the thing are taken into account. The subscripts $k=1$ on the $\prod$ operator, and $k$ on the data $X_k$ indicate that the Naive Bayes classifier makes use of a series of probabilities in calculating the overall probability that a given thing belongs to a class. The classifier produces a product $f_j(X)$ by calculating the _joint probability_ of all the _conditional_ probabilities of the features or predictor variables in $X$ for the class $j$. As  _Elements of Statistical Learning_ rather tersely puts it, 'each of the class densities are products of the marginal densities' [@Hastie_2009,108]. We could note that  almost everything about the  Naive Bayes classifier concerns probability (including its name, with its reference to the Bayes Theorem, an important late eighteenth century concept), yet there is little obvious connection to statistics in its modern form of tests and hypotheses. The classifier has a simple probabilistic architecture based on the concepts of conditional probability and joint probability; it calculates a probability density function $f_j(X)$ for each class of things. Its architecture is simple, however, because it makes a drastically reductionist assumption that features are independent of each other (hence the name 'naive'), where 'independent' means that they do not affect each other, or that they have no relation to each other. We will see below that dramatic simplifications do not necessarily weaken the referential grasp of machine learners on the world, but in certain ways allow them to relate to it more directly.
 
-While the equation shown in (\ref{eq:naive_bayes}) does not set out all the steps in transforming some training data into a predictive model, the lines of code needed to do this are similarly brief. In _Doing Data Science_, Rachel Schutt and Cathy O'Neill furnish a bash script (that is, command line instructions) to download a well-known email dataset and build a Naive Bayes classifier for spam:
+While the equation shown in (\ref{eq:naive_bayes}) does not set out all the steps in transforming some training data into a predictive model, the lines of code needed to do this are relatively brief. In _Doing Data Science_, Rachel Schutt and Cathy O'Neill furnish a bash script (that is, command line instructions) to download a well-known email dataset and build a Naive Bayes classifier for spam. In many ways, this a canonical machine learner pedagogy, and for Naive Bayes, email spam detection is the standard example. Nevertheless, the completeness of the small script, reproduced below, in fetching the Enron email dataset, calculating the 'marginal densities' or conditional probabilities for each word given how often it is associated with either spam or non-spam email, and then outputting the probability that a particular is spam, is striking.[^4.7] In the space of these few dozen lines, some part of a world -- the Enron email dataset -- becomes a predictive engine for dealing with decisions in the world: is an email spam or not?
+
+A typical spam email in the Enron dataset looks like this:
+
+> Subject: it's cheating , but it works !
+can you guess how old she is ? the woman in this photograph looks like a happy teenager about to go to her high school prom , doesn' t she ? she' s an international , professional model whose photographs have appeared in hundreds of ads and articles whenever a client needs a photo of an attractive , teenage girl . but guess what ? this model is not a teenager ! no , she is old enough to have a 7 - year - old daughter . . and . . . the model' s real age is in her 30' s . all she will say about her age to her close friends is , " i'm dangerously close to 40 . " she also says , " if it weren't for this amazing new cosmetic cream called ' deception , ' i would lose hundreds of modeling assignments . . . because . . . there is no way i could pass myself off as a teenager . " learn more about this amazing new product . . . please refer all questions , opinions or additional feedback to :
+service dept
+9420 reseda blvd # 133
+northridge , ca 91324
+
+The text of a typical non-spam email like this:
+
+> Subject: industrials suggestions . . . . . .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by kenneth seaman / hou / ect on 01 / 04 / 2000
+12 : 47 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+pat clynes @ enron
+01 / 04 / 2000 12 : 46 pm
+to : kenneth seaman / hou / ect @ ect , robert e lloyd / hou / ect @ ect
+cc :
+subject : industrials
+ken and robert ,
+the industrials should be completely transitioned to robert as of january 1 , 2000 . please let me know if this is not complete and what else is left to transition .
+thanks , pat
+
+These are both recognisable things in the world for anyone who uses email. How do they become $X$ or even $f_j(X)$ in the Naive Bayes classifier? The code is instructive:
+
+[^4.7]: The input to the script is a single word such as 'finance' or 'deal'. The model is so simple that it only classifies a single word as spam. The `bash` script carries out four different transformations of the data in building the model. It uses only command line tools such as `wc` (word count), `bc` (basic calculator), `grep` (text search using pattern matching) and `echo` (display a line of text). These tools or utilities are readily available in almost any UNIX-based operating system (e.g. Linux, MacOS, etc). The point of using only these utilities is to illustrate the simplicity of the algorithmic implementation of the model.  The first part of the code downloads the sample dataset of Enron emails (and I will discuss spam emails and their role in machine learning below). Note that this dataset has already been divided into two classes - 'spam' and 'ham' -- and emails of each class have been placed in separate directories or folders as individual text files.
+
+```{r enron_nb_bash, engine='bash', echo=TRUE}
+    #!/bin/bash
+    # file: enron_naive_bayes.sh
+    # description: trains a simple one-word naive bayes spam
+    # filter using enron email data
+    # usage: ./enron_naive_bayes.sh <word>
+    # requirements:
+    #    wget
+    #
+    # author: jake hofman (gmail: jhofman)
+    # how to use the code
+    if [ $# -eq 1 ]
+    then
+        word=$1
+    else
+        echo "usage: enron_naive_bayes.sh <word>"
+        exit
+    fi
+
+     ### PART 1
+    if ! [ -e enron1.tar.gz ]
+    then
+        wget 'http://www.aueb.gr/users/ion/data/enron-spam/preprocessed/enron1.tar.gz'
+    fi
+
+    if ! [ -d enron1 ]
+    then
+        tar zxvf enron1.tar.gz
+    fi
+
+    cd enron1
+
+    ### PART 2
+    Nspam=`ls -l spam/*.txt | wc -l`
+    Nham=`ls -l ham/*.txt | wc -l`
+    Ntot=$Nspam+$Nham
+    echo $Nspam spam examples
+    echo $Nham ham examples
+
+    Nword_spam=`grep -il $word spam/*.txt | wc -l`
+    Nword_ham=`grep -il $word ham/*.txt | wc -l`
+    echo $Nword_spam "spam examples containing $word"
+    echo $Nword_ham "ham examples containing $word"
+
+    ### PART 3
+    Pspam=`echo "scale=4; $Nspam / ($Nspam+$Nham)" | bc`
+    Pham=`echo "scale=4; 1-$Pspam" | bc`
+    echo
+    echo "estimated P(spam) =" $Pspam
+    echo "estimated P(ham) =" $Pham
+    Pword_spam=`echo "scale=4; $Nword_spam / $Nspam" | bc`
+    Pword_ham=`echo "scale=4; $Nword_ham / $Nham" | bc`
+    echo "estimated P($word|spam) =" $Pword_spam
+    echo "estimated P($word|ham) =" $Pword_ham
+
+    ### PART 4
+    Pspam_word=`echo "scale=4; $Pword_spam*$Pspam" | bc`
+    Pham_word=`echo "scale=4; $Pword_ham*$Pham" | bc`
+    Pword=`echo "scale=4; $Pspam_word+$Pham_word" | bc`
+    Pspam_word=`echo "scale=4; $Pspam_word / $Pword" | bc`
+    echo
+    echo "P(spam|$word) =" $Pspam_word
+    cd ..
+```
+
+[@Schutt_2013, 105-106]
+
+```{r enron_nb_r, echo = FALSE}
+
+        f_ham = list.files('enron1/ham', full.names = TRUE)
+        f_spam = list.files('enron1/spam', full.names = TRUE)
+        ham_count = length(f_ham) 
+        spam_count = length(f_spam)
+
+        ham = sapply(f_ham, readLines, warn=FALSE)
+        spam = sapply(f_spam, readLines, warn=FALSE)
+        P_ham = ham_count/(ham_count + spam_count)
+        P_spam = spam_count/(ham_count + spam_count)
+        word = 'gas'
+
+        predict_spam <- function(word) {
+            ## count the occurrence of the word in each
+            Nword_in_ham = sum(grepl(word, ham))
+            Nword_in_spam = sum(grepl(word, spam))
+            #cat(Nword_in_ham, ' ham examples contain ', word,  '\n')
+            #cat(Nword_in_spam, ' spam examples contain ', word,  '\n')
+
+            #cat('estimated P(spam) = ', P_spam,  '\n')
+            #cat('estimated P(ham) = ', P_ham,  '\n')
+
+            Pword_spam = Nword_in_spam/spam_count
+            Pword_ham = Nword_in_ham/ham_count
+            #cat("P(spam|", word, ") = ", Pword_spam,  '\n')
+            #cat("P(ham|", word, ") = ", Pword_ham,  '\n')
+
+            Pham_word = Pword_ham * P_ham
+            Pspam_word = Pword_spam * P_spam
+            Pword = Pspam_word + Pham_word
+            Pspam_word = Pspam_word/Pword
+
+            #cat("P(spam|", word, ")=",  Pspam_word,  '\n')
+            return(Pspam_word)
+        }
+```
+
+After fetching the dataset from a website, the code counts the number of emails in each category and prints them, and the counts the number of times that the chosen word (e.g. 'finance' or 'deal') occurs in both the spam and non-spam or ham categories. Using these counts, the script  estimates probabilities of any email being spam or ham, and then given that email is spam or ham, that the particular word occurs. To estimate a probability means, in this case, to divide the word count for the chosen word by the count of the number of spam emails, and ditto for the ham emails.  In Part 4, the final transformation of the data, these probabilities are used to calculate the probability of an email being spam given the presence of that word. Again, the mathematical operations here are no more complicated than adding, multiplying and dividing. The probability that the chosen word is a spam word is, for instance, the probability of occurrence of the word in a spam email multiplied by the overall probability that an email is spam. Finally, given that the overall probability of the chosen word occurring in the email dataset is the probability of it occurring in spam plus the probability of it occurring in ham, the overall probability that an email in the Enron data is spam given the presence of that word can be calculated. It is the probability that the chosen word is a spam word divide by the probability of that word in general. 
+
+The point of this slightly bamboozling and mechanical description of what the script does is to show something of how the diagrammatic form of the function written as a joint probability in equation (\ref{eq:naive_bayes}) moves into the world. Hardly any machine learning models are so simple that they can be conveyed in 30 lines of code (including downloading the data and comments). The feature of this script is that it shows that nothing that occurs in relation to probability is intrinsically mysterious, elusive or indeed particularly abstract. On the contrary, everything here is counting, adding, multiplying (that is, repeated adding) and dividing (that is, multiplying by parts or fractions). Everything is constrained by a certain re-distribution of things such as emails or documents as, in this case, events in a population of words. Every word found in the Enron datasets becomes a probability density, and the classification of each email becomes a matter of estimating a probability density based on the joint probability of events occurring together.  Probabilities are always between `0` and `1`, or between 0% and 100%.  'Finance' has a  `r round(predict_spam('finance'),2)` chance of being spam, while 'sexy' has a chance of `r round(predict_spam('sexy'), 2)`, at least in the Enron emails.   The transformation of textual forms -- the emails -- into probabilistic distributions is practically straightforward. No doubt,  like most machine learning techniques applied to texts, it ignores many obvious structural features of emails as documents (for instance, word order, or co-occurrences of words).  
+
+## The probabilistic reality of the Naive Bayes classifier
+
+The contrast with modern statistical practice starts to appear in Naive Bayes and only intensifies in the ongoing development of machine learning classifiers (for instance, in topic models). On the one hand, like statistics more generally, Naive Bayes treats the world probabilistically. The world comprises populations, and populations generate events. Emails have a real probability of being spam, and this probability is acted on many times every day for email users. On the other hand, there is something quite artificial or contrived about these populations and their associated probability distributions.  They are intentionally artificial and limited; they do not correspond or refer directly to what we know, for instance, of how language works, but instead to a rather different set of concerns that remain statistical but somehow less directly invested in the reality of, for instance, the normal distribution as the defining property of the population.
 
 [HERE]
+
+The quantification entailed in statistics is a counting of events that have been named or labelled in some way. The perhaps more profound point is that this counting of atomic events can be combined in a seemingly limitless variety of combinations. In the emails, individual words are events, and therefore each email is a complicated composite event. Similarly, in machine learning on images, each pixel could be treated as an event, and the image as a whole becomes an immensely complicated aggregate colour and light event. As we will see, many other machine learning techniques try to deal with this combinatory character of composite events directly. 
+
+
+
 
 There is some new operating terminology in this chapter (terms such as random variable, probability distribution and likelihood).  While I attempt to be both mathematically and conceptually concise in my use of these terms, the terms themselves are somewhat troubled by the transformations I'm describing. The underpinnings of taken-for-granted and everyday statistical such as random variable or probability are not immune from change. Like all technical formalisms they took hold at a certain practical and historical conjuncture that will not and perhaps already does not hold entirely still. As the philosophy Ian Hacking suggests in his discussion of early 20th century changes in probability in _The Taming of Chance_,
 
