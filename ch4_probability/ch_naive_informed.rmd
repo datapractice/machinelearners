@@ -74,18 +74,20 @@ If functions such as equation (\ref{eq:gaussian_distribution}) have persisted fo
 
 The diverse curves of probability distributions — and we will see below some reasons why we can expect them to proliferate in certain settings — attests to the variety of ways in which events might be mapped to real numbers. Despite  the sometime forbidding mathematical equations, the term *distribution* emphasises a quite material or tangible way of thinking about how events or possible outcomes vary. The underlying probability distribution is in principle ‘unobservable’ as such, but a probability density function is the closest reality we have to whatever process generated  all the variations in data gathered through experiments and observations. From a probabilistic perspective, the taks of machine learning is to estimate the parameters (the mean $\mu$ and variance $\sigma$ in the case of Gaussian curve) that shape of the curve of the probability distribution. Given the shape of that curve, many inferences and predictions become possible. The probability distribution function is a crucial control surface for machine learning understood as a form of movement through data. 
 
-## Naive Bayes
+## Naive Bayes and the distribution of probabilities
 
-What does this mean in practice? The mathematical expression for one of the most ubiquitous of all machine learning classifiers is:
+What does this mean in practice? The mathematical expression for one of the most popular of all machine learning classifiers, the Naive Bayes classifier is:
 
 \begin {equation}
 \label {eq:naive_bayes}
 f_j(X) = \prod_{k=1}^{p}f_{jk}(X_k)
 \end {equation}
 
-[@Hastie_2009, 211]
+>[@Hastie_2009, 211]
 
-Some machine learning techniques are so simple that they can be implemented in a few lines of code. Their simplicity, however, belies their power. The function shown above \ref{eq:naive_bayes} is about the simplest one to be found in most machine textbooks. It expresses the Naive Bayes classifier, one of the most popular machine learning algorithms, even though it is more than 50 years old [@Hand_2001]. While \ref{eq:naive_bayes} does not set out all the steps in transforming some training data into a predictive model, the lines of code needed to do this are similarly brief. In _Doing Data Science_, Rachel Schutt and Cathy O'Neill furnish a bash script (that is, command line instructions) to download a well-known email dataset and build a Naive Bayes classifier for spam:
+Some machine learning techniques are so simple that they can be implemented in a few lines of code. Their simplicity, however, belies their power. The function shown above in equation (\ref{eq:naive_bayes}) is about the simplest one to be found in most machine textbooks. While the Naive Bayes classifier is one of the most popular machine learning algorithms, it is more than 50 years old [@Hand_2001]. The key diagrammatic elements of the classifier as expressed in the equation are $\prod$, an operator that multiplies all the values (from $1$ to $p$) to generate a product. What product does the Naive Bayes classifier produce? The expression $f_j(X)$ refers is a probability density; that is, it describes the probability that a particular thing (a document, an image, an email message, a set of URLs, etc.) belongs to the class of things $j$. In constructing this estimate of the probability that a thing is an instance of class $j$, $p$ different features of the thing are taken into account. The subscripts $k=1$ on the $\prod$ operator, and $k$ on the data $X_k$ indicate that the Naive Bayes classifier is 
+
+While the equation shown in (\ref{eq:naive_bayes}) does not set out all the steps in transforming some training data into a predictive model, the lines of code needed to do this are similarly brief. In _Doing Data Science_, Rachel Schutt and Cathy O'Neill furnish a bash script (that is, command line instructions) to download a well-known email dataset and build a Naive Bayes classifier for spam:
 
 [HERE]
 
