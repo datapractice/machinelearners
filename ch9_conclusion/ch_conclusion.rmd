@@ -8,6 +8,8 @@
  - numbers, infrastructures, mathematical, abstraction, 
 
 ## todo
+
+- return to 'into' and 'out' of the data: so many attempts to get things out of the data; little effort to puts things into the data;
 - what if this book was a model -- what kind of model would it be
 - overview of the parts, and the chapters
 - the media-science-government

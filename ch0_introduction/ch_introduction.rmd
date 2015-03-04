@@ -31,6 +31,7 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 
 ## to do
 
+- into the data: this is a question and a form of movement: what is put into the data, rather than what comes out of it; 
 - masculinity? write large -- hegemonic? fixity in face of much change; hard to see past this in the literature
 -the problem of focusing on the algorithm - does it reproduce the power hierarchy of computer science
 - the restructuring of the table -- to include the Foucault discussion of tables

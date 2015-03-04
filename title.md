@@ -1,4 +1,6 @@
-# Machine learners: an archaeology of prediction
+# Into the data: an archaeology of machine learning
+
+## Machine learners: an archaeology of prediction
 ## Unlearning machine learning
 ## Into the data: diagramming machine learning
 ## Forms of data thought: entanglements of subjectivity and computation

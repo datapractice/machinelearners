@@ -17,6 +17,7 @@ Transforming
 ## to do 
 
 - ibm watson as a good object of discussion (fits with google flu trend and Kaggle; but somewhere in between)
+-on how machine learners experience their objects; and remake their objects accordingly; genomics as a leading example of this; 
 - many machine learning techniques come out of biomedicine -- does that matter?
 - the Foucault argument on life, labour and language and my point about the return of the table; how to make sense of that inversion of hidden structure of life, etc. 
 - use the ml-lit analysis to point to the rise of bioinformatics
