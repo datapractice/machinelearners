@@ -2,10 +2,31 @@
 
 Movements in machine learning: patterns of generalization
 Dimensional exuberance and pattern recognition in movement
+
 ```{r echo=FALSE} 
 library(knitr)
 opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
 ```
+
+## to do
+- the archaeology brings us to 70-80-90-2000; decision tree, neural network, support vector machine; examples of what happened in late 20th century machines
+- support vector machine as the first machine learner that actually made 'machine' in the name
+- Hinton doing a google tech talk -- the men in the room; his description of what has changed;
+- the general point of this chapter: what is going into the data? 
+- add Quinlan 1986 on how experts can't really interpret the trees
+- maybe this is the main point with in this chapter -- dimensionality != comprehensibility; how these techniques produce confusion or perplexity in themselves, not because of anything about their usage
+- recap on functions, gradient descent, optimization and regression -- what do they do?
+- curse of dimensionality -- discussion from LSE paper, and from Warwick paper;
+- Warwick discussion on trees
+- Friedman's role in trees
+- the local vs global structure discussion - Hastie 19-20 onwards
+- generative vs disciminative models
+- situated all three algorithms by reference to adjacent work in humanities -- the trace/mark in deconstruction for handwriting recognition -- neural nets; the assemblage -- smooth space for svm; decision tree-random forest
+- implement a neural network by going through Ng lectures or Hinton
+- implement a svm - using Ng?
+- add in some material from Flach's review of SVM
+- add in references and examples from Shaw+Christiani textbook
+
 ## from proposal
 
 :  regularisation - dimensional reduction, dimensional explosion -- infinite dimensional spaces; recommender engine - svd as well; ebay; hunch.com
@@ -58,20 +79,6 @@ For the last decade, the best-performing 'off-the-shelf' machine learning algori
     -  **key point**: it is possible to fit all the data perfectly, but suffer the consequences of generalization; or it is possible to identify the problematic boundary cases and focus on those. This is what svms do. But does it avoid overfitting? If random forests correct decisiont trees through randomisation, what is the trick in svm? And how does it deal with infinite dimensionality? 
 - 
 
-## to do
-- add Quinlan 1986 on how experts can't really interpret the trees
-- maybe this is the main point with in this chapter -- dimensionality != comprehensibility; how these techniques produce confusion or perplexity in themselves, not because of anything about their usage
-- recap on functions, gradient descent, optimization and regression -- what do they do?
-- curse of dimensionality -- discussion from LSE paper, and from Warwick paper;
-- Warwick discussion on trees
-- Friedman's role in trees
-- the local vs global structure discussion - Hastie 19-20 onwards
-- generative vs disciminative models
-- situated all three algorithms by reference to adjacent work in humanities -- the trace/mark in deconstruction for handwriting recognition -- neural nets; the assemblage -- smooth space for svm; decision tree-random forest
-- implement a neural network by going through Ng lectures or Hinton
-- implement a svm - using Ng?
-- add in some material from Flach's review of SVM
-- add in references and examples from Shaw+Christiani textbook
 
 ### quotes to use: theory
 

@@ -5,3 +5,4 @@
 - talk about the github site, and how to run the book
 - the key datasets --- a set of 400k abstracts from all disciplines in the wos
 - 'machine learners' -- I use this term throughout to refer to human machine diagrams, not just devices, etc.
+- Sophien Strasse, Berlin, June 1994: the inception of a desire
