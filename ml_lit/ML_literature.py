@@ -5,6 +5,7 @@
 
 %load_ext autoreload
 %autoreload 2
+%matplotlib inline
 
 # <codecell>
 
@@ -24,6 +25,7 @@ import collections
 import IPython.display
 import seaborn
 import ggplot
+import math
 
 # <markdowncell>
 
@@ -174,12 +176,16 @@ v_comm = gt.community_structure(f_g, 1000, 5)
 
 # <codecell>
 
+import numpy
 u = gt.GraphView(f_g, vfilt=gt.label_largest_component(f_g))
 deg = u.degree_property_map('total', weight = f_g.edge_properties['cofield'])
-deg.fa = 2*(sqrt(deg.fa)*0.5  + 0.4)
+deg.fa = 2*(numpy.sqrt(deg.fa)*0.5  + 0.4)
 edg = f_g.edge_properties['cofield']
-edg.fa = (sqrt(edg.fa)*0.6+1)
+edg.fa = (numpy.sqrt(edg.fa)*0.6+1)
 ebet = gt.betweenness(f_g)[1]
+
+# <codecell>
+
 
 # <codecell>
 
@@ -194,6 +200,9 @@ pos, int = gt.interactive_window(u, pos=gt.radial_tree_layout(f_g, f_g.vertex(1)
                          edge_color=ebet,
                          output_size = (800,1200)
                          )
+
+# <codecell>
+
 
 # <codecell>
 
@@ -290,7 +299,7 @@ p = plt.title('Centrality measures for fields in machine learning literature')
 
 df.af = df.AF.dropna().str.lower().str.strip()
 df.af = df.af.str.split('; ')
-af_all = [d for de in df.af for d in de if d is not nan]
+af_all = [d for de in df.af for d in de if d is not np.nan]
 af_set = set(af_all)
 print "There %s authors listed and unique authors number %s" % (len(af_all), len(af_set))
 af_counts = {de:af_all.count(de) for de in af_set}

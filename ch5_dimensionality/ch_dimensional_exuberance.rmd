@@ -71,6 +71,6 @@ As usual, the implementation of machine learning techniques in `R`  offers one p
 
 ## Propagating or forwards and backwards in the network
 
-## Hyper-planing saves linear movement
+## Hyper-planing or dimensional growth saves linear movement
 
 
