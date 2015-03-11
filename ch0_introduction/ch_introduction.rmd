@@ -31,6 +31,7 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 
 ## to do
 
+- book could be seen as a history of a lineage of computational culture associated with knowledge, and with shifts in knowledge, rather than information, communication, control, etc. 
 - into the data: this is a question and a form of movement: what is put into the data, rather than what comes out of it; 
 - masculinity? write large -- hegemonic? fixity in face of much change; hard to see past this in the literature
 -the problem of focusing on the algorithm - does it reproduce the power hierarchy of computer science
