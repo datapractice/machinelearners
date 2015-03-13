@@ -552,7 +552,6 @@ import re
 import nltk
 import pickle
 import operator
-import google_scholar_parser as gs
 import pandas as pd
 import networkx as nx
 import itertools
