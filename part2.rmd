@@ -1,5 +1,7 @@
 
 # Part 2: Modes of ordering
+# Part 2: Regularities and dispersed diagrams
+
 
 - large brain
 - deep reconstruction
