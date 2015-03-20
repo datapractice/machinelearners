@@ -9,16 +9,13 @@ Dimensional exuberance and pattern recognition in movement
 library(knitr)
 opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
 ```
+
 ## todo
 
 - what happens in code here -- the inner product; the recursive, the backprop algorithm ... 
 - what happens to knowledge -- knowledge understood in Foucaultean sense as savoir;  the discursive practices that criss words and things
 - the dispersion of techniques in domains suggests something like an enunciative function; at the same time, the techniques themselves are statements addressing a common problem around separating that which overlaps or blurs; 
 - another form of dispersion -- the same techniques found in different fields under different names -- e.g. reinforcement rule learning
-
-## structure
-
-- decision tree, neural network and svm -- 1960 - 2000
 
 ## Introduction
 
@@ -223,32 +220,79 @@ The field of digitals becomes a site of differentiation not only of digits -- th
 But our focus is not just on the way that a set of images of handwritten could become the site of differentiation and comparison of techniques. The techniques of the support vector machine themselves delimit the statements that can be made in relation to the data. This occurs in two different ways. On the one hand, the support vector machine develops Fisher's linear discriminant analysis since it searches for a separating hyperplane in the data. While  linear discriminant analysis constructs that hyperplane by finding the most likely boundary between classes based on all the data, the support vector machine searches for a hyperplane resting only on those cases in the data that lie near the boundary. It exploits the intuition that the best hyperplane separating different classes will run near to the cases -- the _support vectors_ --  that are most difficult to classify. Again, in contra-distinction to the $N=\forall{X}$ proposition, here the machine learner discards much of the data. As Alpayadin writes, 'we do not care about correctly estimating the densities [probability distributions of variables] inside class regions; all we care about is the correct estimation of the _boundaries_ between the class regions' [@Alpaydin_2010, 210]. 
 
 ```{r svm_margins, echo=FALSE, cache=TRUE, messages=FALSE, warnings=FALSE, fig.cap = 'Soft margins and the hyperplane'}
-x = c(rnorm(50,5), rnorm(50,7))
-y = c(rnorm(50,5), rnorm(50,10))
-c = c(rep(TRUE, 50), rep(FALSE, 50))
-df = data.frame(x,y,c)
-plot(x,y)
-abline(12, -0.5, lty=2)
-abline(10, -0.5, lty=1)
-abline(8, -0.5, lty=2)
+library(e1071)
+x1 = c(rnorm(50,5), rnorm(50,7))
+x2 = c(rnorm(50,5), rnorm(50,8))
+c = as.factor(c(rep('A', 50), rep('B', 50)))
+df = data.frame(x1,x2,c)
+svm.model = svm(x = c(x1,x2), y = c, type='C')
+svs  = svm.model$index
+ps = ifelse(c=='A', 2,3)
+plot(x1,x2, pch=ps)
+points(x1[svs], x2[svs], pch=5, col='green')
+
+
+x1min = min(x1); x1max = max(x1);
+x2min = min(x2); x2max = max(x2);
+coef1 = sum(svm.model$coefs*x1[svm.model$index]);
+coef2 = sum(svm.model$coefs*x2[svm.model$index]);
+lines(c(x1min,x1max),  (svm.model$rho-coef1*c(x1min, x1max))/coef2)
+lines(c(x1min,x1max),  (svm.model$rho+1-coef1*c(x1min, x1max))/coef2, lty=2)
+lines(c(x1min,x1max),  (svm.model$rho-1-coef1*c(x1min, x1max))/coef2, lty=2)
+w <- t(svm.model$coefs) %*% svm.model$SV
+b <- -svm.model$rho
+p <- svm.model$SV
+abline(a=-b/w[1,2], b=-w[1,1]/w[1,2], col="black", lty=1)
+abline(a=(-b-1)/w[1,2], b=-w[1,1]/w[1,2], col="orange", lty=3)
+abline(a=(-b+1)/w[1,2], b=-w[1,1]/w[1,2], col="orange", lty=3)
+text(x=5, y=8,cex=0.6, labels='support vector')
+summary(svm1)
 ```
 
-Figure \ref{fig:svm_margins} can be found in many slight variations in the last two decades. In Figure \ref{fig:svm_margins}, the dotted lines represent a margin on either side of a hyperplane (the solid line).  The support vector machine finds the hyperplane for which that margin is greatest. Of all the slightly different planes that might run between the two classes shown in that figure, the maximum separating hyperplane will find the best separation even where the classes overlap. It explicitly entertains instances that lie on the wrong side of the separating hyperplane not as errors (as they would appear in most linear classifiers such as linear discriminant analysis and logistic regression), but as components of a 'soft margin' designed to accommodate inseparability and indistinctness. 
+Figure \ref{fig:svm_margins} can be found in many slight variations in the last two decades. In such figures, the two classes are normally shown by different point shapes, and the work of the classifier takes the shape of lines, the solid line marking the hyperplane and the dotted lines marking the margins that separate the two classes. In Figure \ref{fig:svm_margins}, the dotted lines represent a margin on either side of a hyperplane (the solid line).  The support vector machine finds the hyperplane for which that margin or perpendicular distance between the margins is greatest. Of all the slightly different planes that might run between the two classes shown in that figure, the maximum separating hyperplane will provides a way of identifying the best or optimal separation since it lies at the greatest distance from all the points of the different classes. The support vector classifier modifies the idea of the optimal separating hyperplane further by allowing classification of inseparable or overlapping classes.
 
-As well as cutting through accumulations of data to find only these vectors that support a maximal separating hyperplane, the support vector machine typically increases the dimensionality of the data in order to expand the range of shapes of decision surfaces. As Leo Breiman writes in his account of the development of the support vector machine, 
+While the geometrical intuition here is that some cases will be allowed to lie on the opposite side of the decision surface to where they should be, the distance they lie on the wrong side of the separating hyperplane will be as small as possible. How are the lines showing in Figure \ref{fig:svm_margin} calculated? Combining the optimal separating hyperplane and a limited number of permitted misclassications entails a complicated optimisation problem. As Hastie and co-authors, following Cortes and Vapnik's formulations,  formalize it, the problem can be stated as a minimization problem:
+
+\begin {equation}
+\label {eq:lagrange_primal}
+L_P = \frac{1}{2}\parallel\beta\parallel^2 + C\sum_{ i=1}^{N}\xi_i - \sum \alpha[y_{i}(x_i^T\beta + \beta_0) - (1-\xi_i)]- \sum_{i=1}^{N}\mu_i\xi_i
+\end {equation}
+[@Hastie_2009, 420]
+
+In equation \ref{eq:lagrange_primal}, the optimisation problem is to minimize $L_P$, the Lagrange primal function with respect to $\beta, \beta_0$ and $\xi$ [@Hastie_2009, 420]. In this complicated optimisation problem (one that is difficult to fully understand without quite a lot of mathematical background), the key elements are the now familiar $\beta$ parameters in the linear form of $x_i^T\beta + \beta_0$, which is the equation defining the hyperplane,  as well as the multiple occurrences of sums ($\sum$) of all the values $\xi_i$, which are the distance that each case is on the wrong side of the margin. Correctly classified cases will, therefore, have $\xi =0$. As always with these mathematical propositions, their diagrammatic relations, and the way in which they contain both regularities (the linear equation, the repeated summation of all values, the shaping parameters) and forms of variation (the presence of the misclassification measures $\xi_i$) should be the focus of our attention. What if  elements that lie on the wrong side of the hyperplane were allowed? If that were possible, the support vector machine could deal with in-separable or overlapping classes. As Hastie and co-authors put it in _Elements of Statistical Learning_, 'hence we are able to find the hyperplane that creates the biggest margin between the training points for class 1 and −1' [@Hastie_2009, 418]. It explicitly entertains instances that lie on the wrong side of the separating hyperplane not as errors (as they would appear in most linear classifiers such as linear discriminant analysis and logistic regression), but as components of a 'soft margin' designed to accommodate inseparability and indistinctness. 
+
+Equations such as equation \ref{eq:lagrange_primal} connect the diagrammatic intuition of a separating hyperplane with a set of movements controlled by parameters such as $C$, which effectively controls the size of the margin, and $\alpha$, which effectively bounds the proportion by which a predicted instance can be on the wrong side of the margins that define the hyperplane. In other words, as we have seen previously in  optimisation, the learning done by the machine consists in finding a way of moving according to these constraints, but the shape of these movements has already been inscribed by the functions from which the diagram has been built. This is not to say that new forms of movement cannot arise. The support vector machine actually suggests the opposite. The very formalization of the optimal separating hyperplane in the form of Lagrange multipliers of equation \ref{lagrange_primal} lays immediately open the possibility of variations and substitutions that may generate new dimensions or modes of movement in data. The third powerful variation characteristic of the support vector machine can be understood as just such a diagrammatic substitution. Consider the expression show below:
+
+\begin {equation}
+\label {eq:kernel_model}
+L D = i=1 α i − 1 2 N N α i α i y i y i h(x i ), h(x i ) .
+\end {equation}
+[@Hastie_2009, 423]
+
+In equation \ref{eq:kernel_model}, a re-mapping of the common vector space occurs. All of the data is re-mapped using some function $h(X)$ into a new higher dimensional space. What would be the value of a more complicated space? As Leo Breiman writes in his account of the development of the support vector machine: 
 
 >In two-class data, separability by a hyperplane does not often occur. However, let us increase the dimensionality by adding as additional predictor variables all quadratic monomials in the original predictor variables; that is, all terms of the form xm1 xm2 . A hyperplane in the original variables plus quadratic monomials in the original variables is a more complex creature. The possibility of separation is greater. If no separation occurs, add cubic monomials as input features. If there are originally 30 predictor variables, then there are about 40,000 features if monomials up to the fourth degree are added. [@Breiman_2001a, 209]
 
-This dimensional exuberance vastly expands the number of possible decision surfaces or hyperplanes that might be instituted in the vector space. The support vector machine, however, corrals and manages this massive and sometimes infinite expansion by only allowing this expansion to occur along particular lines marked out by _kernel functions_. [HERE] 
+The dimensional exuberance represented by the shift from 30 to 40,000 variables vastly expands the number of possible decision surfaces or hyperplanes that might be instituted in the vector space. The support vector machine, however, corrals and manages this massive and sometimes infinite expansion at the same time by only allowing this expansion to occur along particular lines marked out by _kernel functions_. While the support vector machine maintains a commitment to the separating hyperplane, a linear form, albeit with soft margins, it re-constitutes that plane in newly created vector spaces constrained by certain key structural features that render them computationally tractable. On the one hand, a promise of infinite expansion and associated freedom from the rigidity of lines, and on the other hand, a mode of expansion can only countenance a limited range of movements given by the kernel functions. 
 
-_kernelises_ the common vector space. Cortes and Vapnik describe this as a threefold achievement:
+Hastie and co-authors put it this way:
+
+>We can represent the optimization problem  and its solution in a special way that only involves the input features via inner products. We do this directly for the transformed feature vectors $h(x_i)$. We then see that for particular choices of $h$, these inner products can be computed very cheaply [@Hastie_2009, 423]
+
+The terminology here takes us back the common vector space (see Chapter 2) that machine learning inhabits. The 'inner product' or 'the convolution of the dot-product' described by Cortes and Vapnik come from this space, in which the distances or alignments between whatever can be rendered as a vector can be calculated en masse. In _Top 10 Algorithms for Data Mining_ [@Wu_2008], a widely cited computer science account of data mining, the operation is described in this way:
+
+> The kernel trick is another commonly used technique to solve linearly inseparably problems. This issue is to define an appropriate kernel function based on the _inner product_ between the given data, as a nonlinear transformation of data from the input space to a feature space with higher (even infinite) dimension in order to make the problems linearly separable. The underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space [@Wu_2008, 42].
+ 
+
+The 'kernel trick' that overcomes inseparability remaps an already transformed vector space -- the inner product of all the vectors in the data -- into a higher dimensional space defined by functions such as $f(x) = x_i^2 + x_i^3$. The trick is no simple technical trick, since as Cortes and Vapnik point out it relies on substantial mathematical developments in the 1960s. 'The idea of constructing support-vector networks comes from considering general forms of the dot-product in a Hilbert space (Anderson & Bahadur, 1966)', write Cortes and Vapnik [@Cortes_1995, 283]. It is a trick, however, in the sense that it is 'can be computed very cheaply' as Hastie et. al. put it.[^5.81]
+
+[^5.81]: This cheapness appeared already in the cat machine learner  discussed in the introduction. Heather McArthur's cat image classifier implemented a support vector machine in Javasript that runs in a browser. Cats are classified cheaply there. [TBA - what is the name of the classifier?]
+
+What does the transformed feature space combined with the computational short cut of the inner product do in practice? In describing what happens to the generalization error -- the errors made when a model classifies hitherto unseen data -- Cortes and Vapnik highlight the growth in dimensionality introduced by the technique of the support vector. They describe how the technique exponentially increases the dimensionality of the feature space and how the error rate on difficult to classify handwritten digits drops correspondingly. When the feature space has 256 dimensions (the given dimensions of the 16x16 pixel digits), the error rate is around 12%. As the dimensionality grows to 33,000, then a million, a billon, a trillion and so forth (up to $1 x 10^16$ dimensions), the error rate drops to just over 4%, which is close to the errors made by 'human performance' (2.5%) [@Cortes_1995, 288].
+
+Cortes and Vapnik describe the support vector machine as a threefold achievement:
 
 > The support-vector network combines 3 ideas: the solution technique from optimal hyperplanes (that allows for an expansion of the solution vector on support vectors), the idea of convolution of the dot-product (that extends the solution surfaces from linear to non-linear), and the notion of soft margins (to allow for errors on the training set) [@Cortes_1995, 290]
-
-How does the support vector machine increase the dimensionality so drastically without either runnning into a computational deadlock or worse, massively overfitting the data, resulting in poor generalization?  The technique of 'mapping the input vectors into some high dimensional feature space $Z$' [@Cortes_1995, 274] has long standing roots in the field of pattern recognition.  Remember that the problem is how to deal with patterns of data that cannot be separated by a line or plane. The epistopological transformation constructs a new vector space based on a transformation of the  data, and then in that higher dimensional space, finding a (hyper)plane that best separates different classes of data (the optimal hyperplane). The synthetic dataset shown at the beginning of this chapter illustrates the visual problem. It is hard to see on the plot of that data where a line could be drawn that separates different coloured data points from each other. If they were transformed into a higher dimensional space, would a line be easier to draw? In principle it should be. This is a long-standing item of faith in pattern recognition ('the underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space' [@Wu_2008, 42]). 
-
-
- They are mathematically complicated compared to decision trees or random forests. But Cortes and Vapnik highlight the growth in dimensionality introduced by the technique of the support vector in ways that I find evocative. They describe how the technique exponentially increases the dimensionality of the feature space and how the error rate on difficult to classify handwritten digits drops correspondingly. When the feature space has 256 dimensions (the given dimensions of the 16x16 pixel digits), the error rate is around 12%. As the dimensionality grows to 33,000, then a million, a billon, a trillion and so forth (up to $1 x 10^16$ dimensions), the error rate drops to just over 4%, which is close to the errors made by 'human performance' (2.5%) [@Cortes_1995, 288].
 
 
 ```{r svm-demo, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, engine='python' } 
@@ -299,17 +343,7 @@ pl.savefig('figure/contour.pdf')
   \label{fig:svm_iris}
 \end{figure}
 
-A part of me thinks that this justification for the support vector machine has to be right. It points to the importance of locality in pattern. Patterns inherently distribute differences. The form of movement engineered into various machine learning techniques grapple with the distribution of differences. But they do it in different ways. Sometimes that take for granted the possibility of separation in a pattern, as if the pattern itself was intrinsically divisible or cleavable along certain lines or contours. At other times, intrinsic inseparability is taken into account as part of the learning.  The power of support vector machine to do this is limited, but instructive. It can deal with various forms of inseparability and non-linearity by taking the difficult-to-classify boundary cases as the basis of the model. The so-called 'support vectors' lie on the decision hyperplane or surface, and effectively define its orientation and shape in the vector space of the data.  
-
-## An illustration of a 'separable problem' and the 'maximum margin separating hyperplane.'
-
->The kernel trick is another commonly used technique to solve linearly inseparably problems. This issue is to define an appropriate kernel function based on the _inner product_ between the given data, as a nonlinear transformation of data from the input space to a feature space with higher (even infinite) dimension in order to make the problems linearly separable. The underlying justification can be found in _Cover's theorem_ on the separability of patterns; that is, a complex pattern classification problem case in a high-dimensional space is _more likely_ to be linearly separable than in a low dimensional space [@Wu_2008, 42].
-
-
-
->We can represent the optimization problem (12.9) and its solution in a special way that only involves the input features via inner products. We do this directly for the transformed feature vectors h(x i ). We then see that for particular choices of h, these inner products can be computed very cheaply [@Hastie_2009, 423]
-
-## Propagating or forwards and backwards in the network
+It points to the importance of locality in pattern. Patterns inherently distribute differences. The form of movement engineered into various machine learning techniques grapple with the distribution of differences. But they do it in different ways. Sometimes that take for granted the possibility of separation in a pattern, as if the pattern itself was intrinsically divisible or cleavable along certain lines or contours. At other times, intrinsic inseparability is taken into account as part of the learning.  The power of support vector machine to do this is limited, but instructive. It can deal with various forms of inseparability by taking the difficult-to-classify boundary cases as the basis of the model. It deals with problems of non-linearity by increasing the dimensionality of the data, and looking for separations in the higher-dimensional space. 
 
 ## Conclusion
 
