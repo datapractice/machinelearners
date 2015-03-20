@@ -343,6 +343,8 @@ pl.savefig('figure/contour.pdf')
   \label{fig:svm_iris}
 \end{figure}
 
+[HERE: comment on the curves in this contours]
+
 It points to the importance of locality in pattern. Patterns inherently distribute differences. The form of movement engineered into various machine learning techniques grapple with the distribution of differences. But they do it in different ways. Sometimes that take for granted the possibility of separation in a pattern, as if the pattern itself was intrinsically divisible or cleavable along certain lines or contours. At other times, intrinsic inseparability is taken into account as part of the learning.  The power of support vector machine to do this is limited, but instructive. It can deal with various forms of inseparability by taking the difficult-to-classify boundary cases as the basis of the model. It deals with problems of non-linearity by increasing the dimensionality of the data, and looking for separations in the higher-dimensional space. 
 
 ## Conclusion
