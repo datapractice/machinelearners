@@ -4,6 +4,7 @@ Vectorising data in a common space
 
 ## todo
 
+- the response column is what has to be constructed -- it is added on 
 - the basic functions and their transformation of the linear model into a non-linear one
 - go straight into the data -- talk about how hastie and others do this;
 - the thing about looking at patterns -- someone elses turkish carpet
