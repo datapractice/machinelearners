@@ -1,6 +1,8 @@
+
 # 7. Are there enough numbers in the world?
+
 Number supplies and feature engineering 
-# Reconstructing the flow of numbers in data
+ Reconstructing the flow of numbers in data
 
 ## to do
 

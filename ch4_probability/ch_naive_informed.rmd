@@ -1,4 +1,5 @@
-# 4.  $N = all$: machine learning gets all the data
+
+# 4. $N = all$: machine learning gets all the data
 
 ## Introduction
 
