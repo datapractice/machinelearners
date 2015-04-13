@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
+## -*- coding: utf-8 -*-
+## <nbformat>3.0</nbformat>
 
-# <codecell>
+## <codecell>
 
 %load_ext autoreload
 %autoreload 2
@@ -11,12 +11,12 @@ import nltk
 import pickle
 import operator
 
-# <codecell>
+## <codecell>
 
 df = ml.load_records('data/')
 df.shape
 
-# <codecell>
+## <codecell>
 
 print(len(df.SC.unique()))
 topic_list = df.SC.str.lower().str.split('; ')
@@ -26,14 +26,14 @@ topic_list
 topics = sorted([e  for el in topic_list for e in el])
 {e:topics.count(e) for e in topics}
 
-# <codecell>
+## <codecell>
 
-#the problem is that computer science clutters everything -- get rid of it?
+##the problem is that computer science clutters everything -- get rid of it?
 
 topics = df.SC.str.lower()
 print topics.value_counts().order(ascending=False)[0:20]
 
-# <codecell>
+## <codecell>
 
 topics_sans = topics.str.replace('(computer science; ?)|(engineering; ?)', '')
 topics_sans = topics_sans.map(lambda x: re.split(';', str(x))[0])
@@ -41,15 +41,15 @@ topics_sans.value_counts()
 
 
 print topics_sans.value_counts()[0:50]
-#print topics_sans.value_counts()[0:20]
+##print topics_sans.value_counts()[0:20]
 
-# <codecell>
+## <codecell>
 
-# the relation between supervised and unsupervised
+## the relation between supervised and unsupervised
 print(len(df.TI[(df.AB.str.contains(pat = 'supervised|unsupervise', case=False, na=False))]))
 print(df.TI[(df.AB.str.contains(pat = 'supervised|unsupervise', case=False, na=False))])
 
-# <codecell>
+## <codecell>
 
 figure(figsize=(10,10))
 subplot(1,2,2)
@@ -58,34 +58,34 @@ hist(df.PY, bins=100, alpha=0.6, label= 'Machine Learning Publications by Year')
 subplot(1,2,1)
 topics_sans.value_counts()[0:20].plot(kind='barh', alpha=0.5, grid=False)
 
-# <markdowncell>
+## <markdowncell>
 
-# # The corpus of ML
+## ## The corpus of ML
 
-# <codecell>
+## <codecell>
 
 ti_ab = df.TI + df.AB
 mlt = nltk.TextCollection([nltk.tokenize.word_tokenize(t) for t in ti_ab.dropna()])
 
-# <markdowncell>
+## <markdowncell>
 
-# # The citations
+## ## The citations
 
-# <codecell>
+## <codecell>
 
 all_refs = [r for ref in df.cited_refs for r in ref]
 
-# <codecell>
+## <codecell>
 
 ref_set = set(all_refs)
 ref_counts = {ref:all_refs.count(r) for ref in ref_set}
 
-# <codecell>
+## <codecell>
 
 ref_counts
 print(sorted(ref_counts.iteritems(), key = operator.itemgetter(1), reverse=True)[0:20])
 
-# <codecell>
+## <codecell>
 
 mlt.tokens[0:100]
 

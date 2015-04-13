@@ -11,8 +11,9 @@ Number supplies and feature engineering
 
 ## from the proposal
 
-#### Key examples: A/H1N1, Google Flu;
-#### Key techniques: transmission models, nested models
+## Key examples: A/H1N1, Google Flu;
+
+## Key techniques: transmission models, nested models
 
   - functions & supply chains; APIs; multiplication & convolution; states and functions of the lived;
 
