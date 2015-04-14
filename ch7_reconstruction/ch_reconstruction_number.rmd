@@ -6,6 +6,7 @@ Number supplies and feature engineering
 
 ## to do
 
+- joint distributions -- the argument from baroque piece -- really important to bring that out here as a post-disciplinary argument -- joint distributions and generative models
 - in ch1, I said I'd return to multiplication. This is one place I want to talk about the problems of implementing multiplication
 - add in Badiou style argument about numbers
 
