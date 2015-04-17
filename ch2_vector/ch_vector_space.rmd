@@ -33,6 +33,8 @@ Vectorising data in a common space
 
 ## Dataset as auratic diagrams
 
+>In the form of the disciplinary distribution, on the other hand, the table has the function of treating multiplicity itself, distributing it and deriving from it as many effects as possible [@Foucault_1997, 149]
+
 I sometimes have the feeling that machine learners  want to go everywhere in the world, that they aim to take on any problem, that they see no data as too difficult to learn on. This formulation from Matthew Kirk's _Thoughtful Machine Learning_ is typical:
 
 > Machine learning is an amazing application of computation because it tackles problems that are straight out of science fiction. These algorithms can solve voice recognition, mapping, recommendations, and disease detection. The applications are endless, which is what makes machine learning so fascinating [@Kirk_2014, 11]
