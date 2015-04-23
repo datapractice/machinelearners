@@ -37,7 +37,7 @@ df = ml.clean_topics(df)
 # <markdowncell>
 
 # # Co-word analysis of the machine learning literature
-# 
+#
 
 # <codecell>
 
@@ -88,17 +88,17 @@ ml.sorted_map(ml_betweenness)[:20]
 
 # <markdowncell>
 
-# For co-word analysis, calculate a matrix of equivalence scores and look for largest values. I'm drawing on Callon M, Courtial JP and Laville F (1991) Co-word analysis as a tool for describing the network of interactions between basic and technological research: The case of polymer chemsitry. _Scientometrics_, 22(1), 155–205 for this. 
-# 
+# For co-word analysis, calculate a matrix of equivalence scores and look for largest values. I'm drawing on Callon M, Courtial JP and Laville F (1991) Co-word analysis as a tool for describing the network of interactions between basic and technological research: The case of polymer chemsitry. _Scientometrics_, 22(1), 155–205 for this.
+#
 # They write:
-# 
+#
 # > The calculation of all coefficients between all possible word pairs (even if the
 # value of these coefficients is often equal to zero) generates a considerable number of
 # links - far too many to able to represent graphically. This is why we have developed
 # algorithms for generating sub-groups that can be more easily visualized and
 # interpreted. 161
-# 
-# Much of their method is devoted to better ways of dealing with the proliferation of links. I'm not sure we have the same problem today, because of machine learning. 
+#
+# Much of their method is devoted to better ways of dealing with the proliferation of links. I'm not sure we have the same problem today, because of machine learning.
 
 # <codecell>
 
@@ -114,7 +114,7 @@ eq2.hist(bins=500)
 
 # <markdowncell>
 
-# Classic coword analysis looks for clusters using thresholds. 
+# Classic coword analysis looks for clusters using thresholds.
 
 # <codecell>
 
@@ -131,8 +131,8 @@ nx.draw_graphviz(eqnx, node_size=30)
 # <markdowncell>
 
 # ## Development analysis
-# 
-# The problem is that I'm keeping 25 years of research together. There is no chance of looking at development, or seeing relationships. 
+#
+# The problem is that I'm keeping 25 years of research together. There is no chance of looking at development, or seeing relationships.
 # Before 1990, there are very few machine learning papers (less than 100). So the first snapshot could be 1990
 
 # <codecell>
@@ -143,7 +143,7 @@ print('There are %s papers by the end of 1990'%df_pre.shape[0])
 
 # <markdowncell>
 
-# There are very few abstracts in this collection, and as we will see, not too many keywords. So might need to use titles 
+# There are very few abstracts in this collection, and as we will see, not too many keywords. So might need to use titles
 
 # <codecell>
 
@@ -177,10 +177,10 @@ nx.draw_graphviz(pre_90_nx, alpha=0.5, node_size=50, with_labels=True, labels=la
 
 # <markdowncell>
 
-# What is slightly interesting here are the two different networks around learning and machine learning. But this is all based on a handful of references, so there is little point going further with it. 
-# 
+# What is slightly interesting here are the two different networks around learning and machine learning. But this is all based on a handful of references, so there is little point going further with it.
+#
 # # How do things go after 1990? The 1990- 1995 analysis
-# 
+#
 
 # <codecell>
 
@@ -193,8 +193,8 @@ pos = nx.spring_layout(net)
 plt.figure(figsize=(12.5,12.5))
 plt.title('Pre-%s keywords and their relations'%end_year)
 print('drawing the network .... ')
-nx.draw(net, pos=pos, alpha=0.5, 
-            node_size=nx.get_node_attributes(net, 'between_central'), with_labels=True, 
+nx.draw(net, pos=pos, alpha=0.5,
+            node_size=nx.get_node_attributes(net, 'between_central'), with_labels=True,
             labels=nx.get_node_attributes(net, 'keyword'))
 plt.show()
 
@@ -205,13 +205,13 @@ plt.title('Pre-%s keywords and their relations'%end_year)
 coword_net = net
 pos = nx.spring_layout(coword_net)
 labels = nx.get_node_attributes(coword_net, 'keyword')
-nx.draw_graphviz(coword_net,  alpha=0.5, 
-        node_size=[1000*d for d in nx.eigenvector_centrality(net).values()], 
+nx.draw_graphviz(coword_net,  alpha=0.5,
+        node_size=[1000*d for d in nx.eigenvector_centrality(net).values()],
         with_labels=True, labels=labels)
 
 # <markdowncell>
 
-# This is a much more complicated structure. This couple of dozen keywords have morphed into hundres and there is some degree of structure here. 
+# This is a much more complicated structure. This couple of dozen keywords have morphed into hundres and there is some degree of structure here.
 
 # <codecell>
 
@@ -237,12 +237,12 @@ nx.draw_graphviz(pre_95_nx_trim,  alpha=0.5, node_size=50, with_labels=True, lab
 
 # <markdowncell>
 
-# Not entirely clear what is happening here, a couple of things stand out. There are all the database-mining, bridge design(!), knowledge-discovery, image-processing, fault diagnosis, information retrieval, as well as quite a lot on the epistemology of learning -- inductive inference, learning from examples, etc. Pattern recognition and decision support are quite important. 
-# In terms of particular techniques, neural networks, decision trees and interestingly id3 (need to check that one out).  As well as some that would seem odd now -- genetic algorithms, self-organization and fuzzy sets. 
+# Not entirely clear what is happening here, a couple of things stand out. There are all the database-mining, bridge design(!), knowledge-discovery, image-processing, fault diagnosis, information retrieval, as well as quite a lot on the epistemology of learning -- inductive inference, learning from examples, etc. Pattern recognition and decision support are quite important.
+# In terms of particular techniques, neural networks, decision trees and interestingly id3 (need to check that one out).  As well as some that would seem odd now -- genetic algorithms, self-organization and fuzzy sets.
 
 # <markdowncell>
 
-# The presence of these particular algorithms -- neural networks, decision tree and id3 would be worth tracking more over time. These techniques might need to be treat in their own right. 
+# The presence of these particular algorithms -- neural networks, decision tree and id3 would be worth tracking more over time. These techniques might need to be treat in their own right.
 
 # <markdowncell>
 
@@ -315,7 +315,7 @@ ml_net_2006_tr = ml.trim_draw_network(ml_net_2006, 50)
 
 # <markdowncell>
 
-# # Can't remember what this section was meant to do ... 
+# # Can't remember what this section was meant to do ...
 
 # <codecell>
 
@@ -416,8 +416,8 @@ len(pre_2000_nx_trim.nodes())
 # <markdowncell>
 
 # ## Digression: Support Vector Machine & Neural Networks over time
-# 
-# I wanted to see how these two techniques have changed over time. 
+#
+# I wanted to see how these two techniques have changed over time.
 
 # <codecell>
 
@@ -443,7 +443,7 @@ svm_keys
 
 # <markdowncell>
 
-# This is pretty amazing -- only 14000 of the 23000 references have keywords, so if 1400 or so have svm as a keyword, then it is a heavily used technique. Also there are lots of keywords associated with svm. 
+# This is pretty amazing -- only 14000 of the 23000 references have keywords, so if 1400 or so have svm as a keyword, then it is a heavily used technique. Also there are lots of keywords associated with svm.
 
 # <markdowncell>
 
@@ -469,8 +469,8 @@ print('There are %d keywords associated with "decision tree"' % len(dt_keys))
 
 # <markdowncell>
 
-# Ok, for decision tree, a much older technique, things look different. Still quite a few keywords, but the less than half for the other techniques. This is not to say that decision trees are not incredibly widely used. But they are not being relayed in the same way through the literature. 
-# 
+# Ok, for decision tree, a much older technique, things look different. Still quite a few keywords, but the less than half for the other techniques. This is not to say that decision trees are not incredibly widely used. But they are not being relayed in the same way through the literature.
+#
 # To deal too many keywords, break into a couple of time periods.
 
 # <codecell>
@@ -500,7 +500,7 @@ nx.draw_spring(svm_nx, with_labels=True, labels = labels, font_size=10,font_fami
 
 # <markdowncell>
 
-# Between 2000- 2005, there is much growth. 
+# Between 2000- 2005, there is much growth.
 
 # <codecell>
 
