@@ -4,6 +4,7 @@ Vectorising data in a common space
 
 ## todo
 
+- the tables are not meant to be looked at -- cf. a typical report table; the quote from MF d&P is really relevant here -- present the contrast?
 - the rows are sometimes called 'the observations' -- connect to MF on observation
 - the response column is what has to be constructed -- it is added on 
 - the basic functions and their transformation of the linear model into a non-linear one

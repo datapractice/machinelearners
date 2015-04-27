@@ -1,0 +1,32 @@
+\documentclass[a4paper]{book}
+
+\usepackage{mystyle}
+
+\begin{document}
+\frontmatter
+\subfile{preface}
+\subfile{acknowledge}
+\tableofcontents
+\mainmatter
+\subfile{introduction}
+
+this is some text that \cite{Hastie_2009}
+
+\subfile{part1}
+\subfile{diagram}
+
+this is some text that cites \cite{Mackenzie_2010}
+
+\subfile{vector}
+\subfile{function}
+\subfile{probability}
+\subfile{part2}
+\subfile{dimensionality}
+\subfile{genome}
+\subfile{compete}
+\subfile{conclusion}
+\backmatter
+%\bibliographystyle{plain}
+%\bibliography{data_forms_thought,mackenzie}
+\printbibliography
+\end{document}
