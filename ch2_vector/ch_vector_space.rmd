@@ -4,6 +4,7 @@ Vectorising data in a common space
 
 ## todo
 
+- the rows are sometimes called 'the observations' -- connect to MF on observation
 - the response column is what has to be constructed -- it is added on 
 - the basic functions and their transformation of the linear model into a non-linear one
 - go straight into the data -- talk about how hastie and others do this;
