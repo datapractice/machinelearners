@@ -175,132 +175,126 @@ Package: logreq 2010/08/04 v1.0 xml request logger
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\c@tabx@nest=\count104
-\c@listtotal=\count105
-\c@listcount=\count106
-\c@liststart=\count107
-\c@liststop=\count108
-\c@citecount=\count109
-\c@citetotal=\count110
-\c@multicitecount=\count111
-\c@multicitetotal=\count112
-\c@instcount=\count113
-\c@maxnames=\count114
-\c@minnames=\count115
-\c@maxitems=\count116
-\c@minitems=\count117
-\c@citecounter=\count118
-\c@savedcitecounter=\count119
-\c@uniquelist=\count120
-\c@uniquename=\count121
-\c@refsection=\count122
-\c@refsegment=\count123
-\c@maxextratitle=\count124
-\c@maxextratitleyear=\count125
-\c@maxextrayear=\count126
-\c@maxextraalpha=\count127
-\c@abbrvpenalty=\count128
-\c@highnamepenalty=\count129
-\c@lownamepenalty=\count130
-\c@maxparens=\count131
-\c@parenlevel=\count132
-\blx@tempcnta=\count133
-\blx@tempcntb=\count134
-\blx@tempcntc=\count135
-\blx@maxsection=\count136
-\blx@maxsegment@0=\count137
-\blx@notetype=\count138
-\blx@parenlevel@text=\count139
-\blx@parenlevel@foot=\count140
-\blx@sectionciteorder@0=\count141
-\labelnumberwidth=\skip44
-\labelalphawidth=\skip45
-\shorthandwidth=\skip46
-\biblabelsep=\skip47
-\bibitemsep=\skip48
-\bibnamesep=\skip49
-\bibinitsep=\skip50
-\bibparsep=\skip51
-\bibhang=\skip52
-\blx@bcfin=\read2
-\blx@bcfout=\write3
-\c@mincomprange=\count142
-\c@maxcomprange=\count143
-\c@mincompwidth=\count144
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count145
-\c@savedafterword=\count146
-\c@annotator=\count147
-\c@savedannotator=\count148
-\c@author=\count149
-\c@savedauthor=\count150
-\c@bookauthor=\count151
-\c@savedbookauthor=\count152
-\c@commentator=\count153
-\c@savedcommentator=\count154
-\c@editor=\count155
-\c@savededitor=\count156
-\c@editora=\count157
-\c@savededitora=\count158
-\c@editorb=\count159
-\c@savededitorb=\count160
-\c@editorc=\count161
-\c@savededitorc=\count162
-\c@foreword=\count163
-\c@savedforeword=\count164
-\c@holder=\count165
-\c@savedholder=\count166
-\c@introduction=\count167
-\c@savedintroduction=\count168
-\c@namea=\count169
-\c@savednamea=\count170
-\c@nameb=\count171
-\c@savednameb=\count172
-\c@namec=\count173
-\c@savednamec=\count174
-\c@shortauthor=\count175
-\c@savedshortauthor=\count176
-\c@shorteditor=\count177
-\c@savedshorteditor=\count178
-\c@translator=\count179
-\c@savedtranslator=\count180
-\c@labelname=\count181
-\c@savedlabelname=\count182
-\c@institution=\count183
-\c@savedinstitution=\count184
-\c@lista=\count185
-\c@savedlista=\count186
-\c@listb=\count187
-\c@savedlistb=\count188
-\c@listc=\count189
-\c@savedlistc=\count190
-\c@listd=\count191
-\c@savedlistd=\count192
-\c@liste=\count193
-\c@savedliste=\count194
-\c@listf=\count195
-\c@savedlistf=\count196
-\c@location=\count197
-\c@savedlocation=\count198
-\c@organization=\count199
-\c@savedorganization=\count200
-\c@origlocation=\count201
-\c@savedoriglocation=\count202
-\c@origpublisher=\count203
-\c@savedorigpublisher=\count204
-\c@publisher=\count205
-\c@savedpublisher=\count206
-\c@language=\count207
-\c@savedlanguage=\count208
-\c@pageref=\count209
-\c@savedpageref=\count210
-Package biblatex Info: Trying to load compatibility code...
+Package: ifk.toc)
+\tf@toc=\write4
+\openout4 = `book.toc'.
+
+ [5] [6
+
+]
+(./introduction.tex
+Runaway argument?
+! Paragraph ended before \addcontentsline was complete.
+<to be read again> 
+                   \par 
+l.7 
+    
+? 
+) (./part1.tex [1
+
+] [2
+
+] [3] [4]) (./diagram.tex [5] [6
+
+]
+Chapter 1.
+) (./vector.tex [7] [8
+
+]
+Chapter 2.
+) (./function.tex [9] [10
+
+]
+Chapter 3.
+) (./probability.tex [11] [12
+
+]
+Chapter 4.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 4.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <24.88> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <20.74> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 4.
+) (./part2.tex [13]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+ [14
+
+] [15] [16]) (./dimensionality.tex [17] [18
+
+]
+Chapter 5.
+) (./genome.tex [19]
+Overfull \hbox (166.70601pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 20 \OT1/cmr/m/sl/10 CHAPTER 5.  SPLITTING, PROPAGATING AND HYPE
+R-PLANING: PATTERNS OF MOVEMENT IN DATA 
+ []
+
+[20
+
+]
+Chapter 6.
+) (./compete.tex [21]
+Overfull \hbox (58.85979pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 22 \OT1/cmr/m/sl/10 CHAPTER 6.  RE-SCALING AND SHIFTING OBJECTS
+ WITH MACHINE LEARNING
+ []
+
+[22
+
+]
+Chapter 7.
+) (./conclusion.tex [23] [24
+
+]
+Chapter 8.
+) [25] [26
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 23.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 23.
+ (./book.aux
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.51 addvspace {10\p@ }
+                       }
+? X
+ 
+Here is how much of TeX's memory you used:
+ 4391 strings out of 495028
+ 65579 string characters out of 6181497
+ 139299 words of memory out of 5000000
+ 7532 multiletter control sequences out of 15000+600000
+ 8262 words of font info for 29 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 34i,5n,26p,177b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsl10.pfb>
+Output written on book.pdf (32 pages, 92439 bytes).
+PDF statistics:
+ 250 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+
+o: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2013/11/25 v2.8a biblatex compatibility (PK/JW/AB)
