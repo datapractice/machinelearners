@@ -4,7 +4,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Acknowledgments}{iii}{chapter*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Introduction}{1}{chapter*.4}
+\contentsline {chapter}{List of Figures}{vii}{chapter*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{ix}{chapter*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Introduction}{1}{chapter*.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{I\hspace {1em}Into the data}{3}{part.1}
 \defcounter {refsection}{0}\relax 
@@ -28,6 +32,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Bibliography}{27}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Index}{29}{chapter*.5}
+\contentsline {chapter}{mlrs}{29}{chapter*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Index}{29}{chapter*.5}
+\contentsline {chapter}{general}{29}{chapter*.7}
