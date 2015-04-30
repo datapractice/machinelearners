@@ -110,10 +110,8 @@ A relatively new set of scientific-engineering techniques of abstraction  have b
 \begin{figure}
   \centering
       \includegraphics[width=0.9\textwidth]{figure/gray-tabby-cat-with-green-eyes-close-up.jpg}
-        \caption{Close up of cat. 
-        
-        Photo courtesy photos-public-domain.com}
-  \label{fig:cat
+        \caption{Close up of cat. Photo courtesy photos-public-domain.com}
+  \label{fig:cat}
 \end{figure}
 
 Take the case of `kittydar,` a small demonstration of machine learning techniques in the area of computer vision (see [kittydar](http://harthur.github.io/kittydar)): 'Kittydar is short for kitty radar. Kittydar takes an image (canvas) and tells you the locations of all the cats in the image' [@Arthur_2012]. This playful piece of software demonstrates the deployment of computer vision in the mundane, not to say banal, domain of cat photos on the internet. Heather Arthur, who developed `kittydar` writes:
