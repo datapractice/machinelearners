@@ -31,6 +31,9 @@ Finally, the introduction will sketch the themes of 'in the data' and  'modes of
 
 ## to do
 
+- what is the main story mean -- is it the point down 2 -- how to get a grip?
+- the overlap between signal processing and machine learning  -- including my own work on this -- means that the data itself is not given freely: machine learning  has already gone into the data; and that's why we have so many images for instance in kittydar -- compression, loss compression in particular, 514; Shannon coding theory [@Gersho_1992] on signal compression
+- how do we get a grip on these methods that does not leave us lesser amazons? key narrative: book is an attempt to develop a way of making sense of things that are consistently mystified, hyped, etc
 - book could be seen as a history of a lineage of computational culture associated with knowledge, and with shifts in knowledge, rather than information, communication, control, etc. 
 - into the data: this is a question and a form of movement: what is put into the data, rather than what comes out of it; 
 - masculinity? write large -- hegemonic? fixity in face of much change; hard to see past this in the literature
