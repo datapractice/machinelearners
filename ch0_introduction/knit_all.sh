@@ -2,5 +2,5 @@
 
 library(knitr)
 #knit('warwick.rmd')
-knit('warwick_presentation.rmd')
+knit('ch_introduction.rmd')
 
