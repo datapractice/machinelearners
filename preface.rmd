@@ -1,6 +1,11 @@
 # Preface
 
 ## todo
+
+- the sea and the escarpment; the trajectory - steel, coal, not the epicentre;
+- there is a punishing level of technical specificity here. That will disinterest some people, and rightly so. Not everyone should have to do this. 
+- highly literate machine learners will not find enough technical detail here - they should read for the outside; what about the others? focus on the diagrammatic ... 
+- the choice of datasets -- deliberately limited; I've not gone searching for outside data, but stuck with the literature very closely in most cases; but the literature includes code;
 - talk about the various meanings of 'into' : what is put in, a movement inwards, into as in like, a historical transition; link to James on conjunctions
 - talking about unlearning  -- and what that might mean
 - the look of this book -- it imitates its objects in certain ways -- typographically, diagrammatically, and infrastructurally ... 
