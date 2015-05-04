@@ -65,7 +65,6 @@ plot_publication_types <- function(wos){
 plot_by_discipline <- function(wos) {
   dy<-dlply(wos,.variables='PY' )
   extract_fields <- function(x){
-#     browser()
     x_s <- sapply(x$WC, str_split, pattern=';')
     return(str_trim(unlist(x_s,use.names=FALSE)))
   }
