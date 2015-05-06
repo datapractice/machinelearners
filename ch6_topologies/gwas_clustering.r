@@ -2,8 +2,13 @@ library(cluster)
 library(gplots)
 library(ape)
 library(stringr)
+library(dplyr)
+
+#clean up the data and remove duplicates
 gw = read.csv('data/gwas_catalog_v1.0-downloaded_2015-04-27.tsv', sep='\t')
 colnames(gw)
+gw_sel = distinct(select(gw, 2,4,8,33))
+sort(table(gw_sel$DISEASE.TRAIT))
 #construct N and p features
 plat = gw$PLATFORM..SNPS.PASSING.QC.
 p = str_extract(plat, pattern='\\[.*\\]')
@@ -25,6 +30,7 @@ gw_top_diseases = gw_sub[gw_sub$DISEASE.TRAIT %in% top_traits,]
 gw_top_diseases_full = gw[gw$DISEASE.TRAIT %in% top_traits,]
 gw_sample = gw_top_diseases[sample(nrow(gw_top_diseases),100),]
 gw_sample = gw_sub[sample(nrow(gw),100),]
+gw_sample = sample_n(gw_sel, 200)
 #dist_top = daisy(gw_top_diseases[sample(nrow(gw_top_diseases),1000),], metric='gower'
 dist_top = daisy(gw_sample, metric='gower')
 attr(dist_top, 'Labels') = gw_sample$DISEASE.TRAIT
@@ -33,6 +39,7 @@ attr(dist_top, 'Labels') = paste(gw_sample$DISEASE.TRAIT, gw_sample$p)
 heatmap.2(as.matrix(dist_top), trace='none')
 heatmap.2(as.matrix(dist_top),labCol= gw_sample$DISEASE.TRAIT, labRow = gw_sample$p, trace='none')
 plot(hclust(dist_top),cex=0.6)
+plot(as.dendrogram(hclust(dist_top)),cex=0.5, horiz=TRUE)
 
 ##abbreviate dendrogram labels
 
