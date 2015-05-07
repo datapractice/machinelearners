@@ -3,6 +3,7 @@
 
 ## to do
 
+- the Higgs Boson challenge
 - MF in d&p writes about how the individual internalises the disciplinary mechanism -- we are all machine learners now?
 - the masculinity of machine learning -- how to deal with that? some prominent women, but massively masculinist -- takes me back to 1996 publication - also use SI of angelaki on geophilosophy of masculinity. See zotero masculinity folder
 - my experience with vlad, sitting apart from everyone working on the neural networks -- such a shift
