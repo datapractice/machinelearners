@@ -1,4 +1,5 @@
 library('stringr')
+library(dplyr)
 library(plyr)
 library(reshape2)
 library('ggplot2')
