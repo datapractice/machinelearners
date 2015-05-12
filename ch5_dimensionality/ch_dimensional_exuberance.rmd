@@ -13,6 +13,7 @@ opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
 
 ## todo
 
+- vapnik and russia vs decision tree/random forest (Breiman; St Ives)
 - what happens in code here -- the inner product; the recursive, the backprop algorithm ... 
 - what happens to knowledge -- knowledge understood in Foucaultean sense as savoir;  the discursive practices that criss words and things
 - the dispersion of techniques in domains suggests something like an enunciative function; at the same time, the techniques themselves are statements addressing a common problem around separating that which overlaps or blurs; 
