@@ -2,6 +2,7 @@
 
 ## todo
 
+- vignettes from texas 97 calculator through manchester fieldwork, etc
 - the sea and the escarpment; the trajectory - steel, coal, not the epicentre;
 - there is a punishing level of technical specificity here. That will disinterest some people, and rightly so. Not everyone should have to do this. 
 - highly literate machine learners will not find enough technical detail here - they should read for the outside; what about the others? focus on the diagrammatic ... 
