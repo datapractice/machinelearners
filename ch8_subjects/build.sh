@@ -8,3 +8,6 @@
 
 ##format bibliography and  display
 ./pandoc.sh
+
+evince ch_learning_subjects.pdf
+
