@@ -37,6 +37,7 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
 
 ## Todo
 
+- the fact that spark has mlib and its examples as the standard ones
 - the github argument -- how it is changing the way in which these systems are put together
 - add in McCloskey 2014 paper on the diagrammatic (in doc archive -- data_intensve)
 - add in notes from Exeter paper about diagonalization; and perhaps start with the diagonal diagram from hastie;
