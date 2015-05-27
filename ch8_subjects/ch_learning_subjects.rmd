@@ -69,9 +69,33 @@ What accounts for the somewhat uneven fortunes of the neural net amongst machine
 
 ## A privileged machine and its human others
 
-What accounts for this acceleration and slowing-down, the intensified interactions and abandonments of neural nets over the last three decades? Despite their apparent differences in origin, neural net share much with other machine learners. The language of brain, neurones and cognition associated with neural net covers over their much more familiar vector-space, function-finding and optimisations they draw on in practice. 'The central idea,' write Hastie and co-authors, 'is to extract linear combinations of the inputs as derived features, and then model the target as a nonlinear function of these features. The result is a powerful learning method, with widespread applications in many fields' [@Hastie_2009, 389]. Much of the operation of the neural net is already familiar to us. The neural networks traverse data in a vector space. They make use of the sigmoid function \index{sigmoid function} that lies at the heart of one of the main linear classifiers used in machine learning, logistic regression \index{logistic regression}. Their training and learning processes have come to rely on the same kinds of cost, loss or error functions \index{cost function} we have seen in other  machine learners. Their apparently increasingly power to learn (to see, to find, to predict) again seems to owe much to re-configuration, to the diagrammatic movements that recombine operations in new intersections. 
+What accounts for this acceleration and slowing-down, the intensified interactions and abandonments of neural nets over the last three decades? Despite their apparent differences in origin, neural net share much with other machine learners. The language of brain, neurones and cognition associated with neural net covers over their much more familiar vector-space, function-finding and optimisations they draw on in practice. 'The central idea,' write Hastie and co-authors, 'is to extract linear combinations of the inputs as derived features, and then model the target as a nonlinear function of these features. The result is a powerful learning method, with widespread applications in many fields' [@Hastie_2009, 389]. 
+The 'central idea' can be seen in the algebraic expressions that Hastie and co-authors provide for the basic neural net model (see equation \ref{eq:nn_equation}:
 
-We can see this common ground in almost any actual example of a neural net. In the code vignette shown below, the data is a spreadsheet of information about passengers of the Titanic. The `titanic` dataset, like `iris` or `boston` is often used in contemporary machine learning pedagogy. It is for instance, the main training dataset used by (kaggle.com)[http://kaggle.com], an online machine learning competition site I will discuss below. The first few lines of the `R` code load the dataset and transform it into vector space. For instance, variables such as `sex` that take values such as `male` and `female` become vectors of `1` and `0` in a new variable `sexmale`. 
+\begin {equation}
+\label {eq:nn_equation}
+Z_m = \sigma(\alpha_0m + \alpha_m^TX) m = 1, ...,M
+T_k = \beta_0k + \beta_k^TZ, k = 1, ..., K,
+f_k (X) = g_k (T), k = 1, ..., K,
+\end {equation}
+
+>where $Z = (Z_1 , Z_2, ..., Z_M )$, and $T = (T_1 , T_2 ,..., T_K ). The activation function $\sigma(v)$ is usually chosen to be the sigmoid 
+    $$\sigma(v) = 1/(1 + e −v )$$
+
+[@Hastie_2009, 392]
+
+Equation \ref{eq:nn_equation} is a diagram with some familiar elements as well as some novelty. Much of the diagrammatic operation of the neural net is already familiar from the linear models. The neural networks traverse data in a vector space denoted by $X$. They make use of the non-linear sigmoid function \index{sigmoid function} that lies at the heart of one of the main linear classifiers used in machine learning, logistic regression \index{logistic regression}. Their training and learning processes have come to rely on the same kinds of cost, loss or error functions \index{cost function} we have seen in other  machine learners. Their apparently increasingly power to learn (to see, to find, to predict) again seems to owe much to re-configuration, to the diagrammatic movements that recombine operations in new intersections.
+
+There are, however, some differences in this diagram. Equation \ref{eq:nn_equation} has three lines rather than one, and this layering distinguishes neural nets from linear   models more generally.
+
+\begin {equation}
+\label {eq:linear_model}
+\hat{Y} = \hat{\beta_0}  + \sum^p_{j=1} X_j \hat{\beta_j}
+\end {equation}
+ 
+Whereas the standard linear model \index{linear model} shown in Equation \ref{eq:linear_model} indexes a single common vector space $X_j$ and approximates a single function $\hat{Y}$ by searching for the values of the parameters $\beta_j$ that best incline a plane through the given data, it seems that the three lines of the neural net model show in equation \ref{eq:nn_equation} are woven through each other much more consecutively than the linear regression and logistic regression models. 
+
+The common diagrammatic operations of neural nets and other supervised machine learners immediately appears in almost any actual example of a neural net. In the code vignette shown below, the data is a spreadsheet of information about passengers of the Titanic. The `titanic` dataset, like `iris` or `boston` is often used in contemporary machine learning pedagogy. It is for instance, the main training dataset used by (kaggle.com)[http://kaggle.com], an online machine learning competition site I will discuss below \index{Kaggle.com}. The first few lines of the `R` code load the dataset and transform it into vector space. For instance, variables such as `sex` that take values such as `male` and `female` become vectors of `1` and `0` in a new variable `sexmale`. 
 
 ```{r neural_net1, echo=TRUE, message=FALSE, warning=FALSE, cache=TRUE, fig.cap=''}
 library(neuralnet)
@@ -89,17 +113,19 @@ test_error = round(sum( 0.5 < compute(titanic_net, titanic_test[,-c(1,2)])$net.r
 ```
 
 
-The line of the code that constructs a neural net using the `neuralnet` library [@Fritsch_2012], and the description of the classifier here is a familiar one. Despite its biological inspiration, the formula for the neural net looks very similar to other machine learners. It models whether someone `survived` the wreck of the Titanic in terms of their age, class of fare (`pclass`), sex, number of siblings/spouse (`sibsp`), number of parents/children (`parch`) and port of departure:
+The line of the code that constructs a neural net using the `neuralnet` library [@Fritsch_2012], and the description of the classifier here is a familiar one. Despite its biological inspiration, the `R` formula for the neural net looks very similar to other machine learners. It models whether someone `survived` the wreck of the Titanic in terms of their age, class of fare (`pclass`), sex, number of siblings/spouse (`sibsp`), number of parents/children (`parch`) and port of departure:
 
 `survived ~ age +pclass + fare + sexmale + sibsp + parch + embarkedC + embarkedQ + embarkedS`
 
 As is normally the case in `R` model formula, the response or target variable `survived` is expressed as a combination of other variables. In this case, the plus sign `+` indicates that the combination is linear or additive. As Hastie puts, 'the central idea is to extract linear combinations of the inputs' or predictor variables. If this model formula looks so similar to other machine learning techniques we have been discussing, what do neural networks add? Why did and do so many people turn to them?
 
-In the code vignette above, the expression `hidden = 5` points to the distinctive features of these techniques, features that do not appear in the model formula. These 'hidden units' are key to neural networks. As Rumelhart, Winton and Williams announce the algorithm in a latter to _Nature_ in 1986:
+In the code vignette above, the expression `hidden = 5` points to the distinctive features of these techniques, features that do not appear in the model formula but do appear in the lines of Equation \ref{eq:nn_equation}. The hidden units are indexed in the first line of the model in the variables $Z_m$.  These 'hidden units' are key to neural net since they construct the 'derived features' that the model learns from the input data $X$. As Rumelhart, Winton and Williams announce the algorithm in a letter to _Nature_ in 1986 entitled 'Learning representations by back-propagating errors' \index{back-propagation}:
 
 > We describe a new learning procedure, back-propagation, for networks of neurone-like units. The procedure repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference between the actual output vector of the net and the desired output vector. As a result of the weight adjustments, internal ‘hidden’ units which are not part of the input or output come to represent important features of the task domain, and the regularities in the task are captured by the interactions of these units. The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure [@Rumelhart_1986, 533].
 
-Again, despite the common reference to biology, but the description of the 'new learning procedure' starts to sound more like machine learning. There is talk of minimizing a measure of difference between actual and desire output vectors, as well as mention of 'features' and 'weights' (usually a synonym for model parameters). The novelty consists in the 'hidden' units whose interactions 'represent important features.' In other words, the flat additive combination of features expressed in the model formula above does not convey the interactions of these units. Yet these units can only viably interact in the neural nets because the back-propagation algorithm offers a way to create 'useful, new features' from the data.
+Again, despite the common reference to biology, the description of the 'new learning procedure' starts to sound more like machine learning. There is talk of minimizing a measure of difference between actual and desire output vectors, as well as mention of 'features' and 'weights' (usually a synonym for model parameters). The novelty consists in the 'hidden' units whose interactions 'represent important features.' In other words, the flat additive combination of features expressed in the model formula above does not convey the interactions of these units. Yet these units can only viably interact in the neural nets because the back-propagation algorithm offers a way to create 'useful, new features' from the data.
+
+The final major diagrammatic form in which neural net appear is the network graph. Network graphs already appeared in Rosenblatt's perceptron work [@Rosenblatt_1958], but they ramify tremendously in the aftermath of back-propagation. 
 
 ```{r plot_neural_net, echo=FALSE, cache=TRUE, fig.cap=''}
 source('plot_nn.r')
@@ -116,18 +142,6 @@ dev.off()
 \end{figure}
 
 
-\\begin {equation}
-\label {eq:nn_equation}
-Z_m = \sigma(\alpha_0m + \alpha_m^TX) m = 1, ...,M
-T_k = \beta_0k + \beta_k^TZ, k = 1, ..., K,
-(11.5)
-f_k (X) = g_k (T), k = 1, ..., K,
-\end {equation}
-
-where Z = (Z_1 , Z_2, ..., Z_M ), and T = (T_1 , T_2 ,..., T_K ).
-The activation function \sigma(v) is usually chosen to be the sigmoid \sigma(v) =
-1/(1 + e −v )
-[@Hastie_2009, 392]
 
 [HERE]
 
