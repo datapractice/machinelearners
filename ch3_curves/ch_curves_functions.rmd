@@ -1,4 +1,5 @@
 # 3. Machines finding functions
+\label{ch:function}
 
 ## to do
 

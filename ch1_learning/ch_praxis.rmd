@@ -1,5 +1,5 @@
-
 # 1. Diagramming machines for data
+\label{ch:diagram}
 
 Writing about data
 How to write about data and models

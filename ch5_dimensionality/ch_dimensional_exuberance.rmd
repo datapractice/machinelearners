@@ -1,5 +1,6 @@
 
 # 5. Splitting, propagating and hyper-planing: patterns of movement in data 
+\label{ch:pattern}
 
 The contemporary form of knowledge as pattern-finding 
 Finding patterns in data
