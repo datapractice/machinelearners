@@ -44,7 +44,7 @@ I sometimes have the feeling that machine learners  want to go everywhere in the
 
 It is hard to find dissenting or sceptical voices (although Anand Rajaraman and David Ullman in their _Mining Massive Datasets_ do voice doubts about the power of machine learning algorithms [@Rajaraman_2012]). The epistemic imperium is not only due to the generic mathematical or computational techniques. It might arise from the data, and in particular the indexical aura of the datasets that play across play across many pages in _Elements of Statistical Learning_.   The power of the techniques  hinges on a very specific diagrammatization of data that has already begun to appear in the NAND truth table. Machine learning literature does admittedly display a somewhat stunning variety of datasets. The plots of New Zealand fishing patterns lie next to plots of factors in South African heart disease. This seemingly diasporic variety of data as well as the variety of domains and situates the datasets index are salient components of the experience of reading these texts.  What do we make of the datasets? The datasets associated with the book can be read in various ways.  
 
-```{r elemstatlearn_data, echo=FALSE, results = "asis"}
+```{r elemstatlearn_data_2, echo=FALSE, results = "asis"}
 library(ElemStatLearn)
 library(xtable)
 datasets_results <-data(package='ElemStatLearn')$results[,3:4]
