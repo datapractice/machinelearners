@@ -107,14 +107,16 @@ The 'central idea' can be seen in the algebraic expressions that Hastie and co-a
 
 \begin {equation}
 \label {eq:nn_equation}
-Z_m = \sigma(\alpha_0m + \alpha_m^TX) m = 1, ...,M
-T_k = \beta_0k + \beta_k^TZ, k = 1, ..., K,
+\begin {split}
+Z_m = \sigma(\alpha_0m + \alpha_m^TX) m = 1, ...,M\\
+T_k = \beta_0k + \beta_k^TZ, k = 1, ..., K,\\
 f_k (X) = g_k (T), k = 1, ..., K,
+\end {split}
 \end {equation}
 
 >where $Z = (Z_1 , Z_2, ..., Z_M )$, and $T = (T_1 , T_2 ,..., T_K )$. The activation function $\sigma(v)$ is usually chosen to be the sigmoid $\sigma(v) = 1/(1 + e −v )$
 
-[@Hastie_2009, 392]
+>[@Hastie_2009, 392]
 
 Equation \ref{eq:nn_equation} is a diagram with some familiar elements as well as some novelty. Some of the diagrammatic operation of the neural net is already familiar from the linear models. The neural networks traverse data in a vector space denoted by $X$. That is common to nearly all machine learners.  They make use of the non-linear sigmoid function \index{sigmoid function} that lies at the heart of one of the main linear classifiers used in machine learning, logistic regression \index{logistic regression}. Their training and learning processes have come to rely on the same kinds of cost, loss or error functions \index{cost function} we have seen in other  machine learners. Their apparently increasingly power to learn (to see, to find, to predict) again seems to owe much to re-configuration, to the diagrammatic movements that recombine operations in new intersections.
 
@@ -200,11 +202,13 @@ How could an algorithm such as back-propagation diagram the coincidence of subje
 
 \begin {equation}
 \label {eq:back_prop}
-\beta_{km}^{(r+1)} =  \beta^{(r)}_{km} - \gamma_r \sum_{i=1}^{N} \frac{\partial R_i}{\partial \beta_{km}^{(r)}}
-\alpha_{ml}^{(r+1) = \alpha^{(r)}_{km} - \gamma_r \sum_{i=1}^{N}\frac{\partial R_i}{\partial \alpha_{km}^{(r)}}
+\begin {split}
+\beta_{km}^{(r+1)} =  \beta^{(r)}_{km} - \gamma_r \sum_{i=1}^{N} \frac{\partial R_i}{\partial \beta_{km}^{(r)}}\\
+\alpha_{ml}^{(r+1)} = \alpha^{(r)}_{km} - \gamma_r \sum_{i=1}^{N}\frac{\partial R_i}{\partial \alpha_{km}^{(r)}}
+\end {split}
 \end {equation}
 
-    [@Hastie_2009, 396]
+>[@Hastie_2009, 396]
 
 There are many different variables in the equations \ref{eq:back_prop}. They include measures of error ($R$), values of the weights or parameters in various layers of the models ($\beta$, $\alpha$), variables that count the number of iterations the model has performed ($r$, $r+1$) and the functional operators such as summation ($\sum$) and partial differentiation ($\partial$). The usual indexical relations to data appear in $N$, the number of rows or observations, as well as $K$, the number of outputs and $M$, the number of nodes in the hidden layer.   In the densely iconic and indexical diagram of equation \ref{eq:back_prop}, the interweaving of the subscripts in the two lines show that the ways in which values of the parameters in the models of the first two lines of equation \ref{eq:nn_equation} are varied as the model is trained on the input data. The two lines of equation \ref{eq:back_prop} specify how first the values of the parameters of the $K$ nodes of the output layer should be altered in the light of the difference between the actual and expected output values, and then how the weight of the $M$ nodes of the hidden layer should be adjusted. Once these are adjusted, the forward movement defined by equations \ref{eq:nn_equation} begin again. In adjusting weights in the layers, back-propagation always starts at the outputs, and travels back into the net towards the input layer at the bottom (or left hand side in diagram \ref{fig:titanic_net}. 'It is as if the error propagates from the output _y_ back to the inputs and hence the name _back-propagation_ was coined' writes Alpaydin [@Alpaydin_2010, 250]. As in any gradient descent operation (see chapter \ref{ch:function}), a rate parameter (here $\gamma$) regulates the speed of descent. If $\gamma$ is too large, the gradient descent might jump over a valley that contains the absolute minimum error; if $\gamma$ is  too small, then the descent is too slow for fast machine learning. In some versions of neural net, the value of $\gamma$ changes each at iteration $r$ of the model. 
 
@@ -218,7 +222,26 @@ These practical considerations have different significance in different settings
 
 Again, the treatment of errors provides a useful thread to follow here. At almost step of its development as a field, and in almost every aspect of its operation, competitions conducted through forms of examination of error rates lie at the intersection of human and machine learners. The learning of machine learning seems to incarnate learning through examination. We saw above that competitions to recognise handwritten digits constituted a focal point for neural nets during the 1990s. Much of the discussion of neural net in _Elements of Statistical Learning_ revolves around a competition conducted in 2003. As we will soon see, machine learning competitions more generally form one of the principal ways in which  people and machines come together. What can we learn from such competitions about subject positions in machine learning?
 
-The competitions all the take the form of examinations that set a problem, define some limits or constraints on its solution, and create a space that qualifies, ranks and displays the work of individuals or groups in relation to the problem. Machine learning competitions furnish a contemporary instance of the practices of examination that Foucault described in _Discipline and Punish_:
+If we take a typical contemporary machine learning competition, something of the backwards and forwards movement between human and machine machine learners starts to appear. The competitions run by [kaggle](http://www.kaggle.com) exemplify many of the movements that the back-propagation algorithm implements.\index{Kaggle data   Competitors no doubt enter these competitions for various reasons, not the least of which is their employment prospects. In Figure \ref{fig:kaggle}, the competition organizers list three injunctions: download (the data), build (a model), and submit (an entry or many entries to the competition). From these three movements, a variety of different outcomes appear. Leader-boards and individual rankings within the Kaggle's "world's largest community of data scientists" [@Kaggle_2015b], [^7.20] allow clients of Kaggle (corporations mostly) to 'harness the "cognitive surplus"' [@Kaggle_2015c].  The figure also shows some of the typical diversity of  machine learning: diabetic retinopathy and west Nile virus prediction competition appear next to search results relevance or context ad clicks competitions.\index{data diversity} This proximity, whether accidental or constructed, between very disparate entities suggests that machine learners possess a special epistemic mobility not readily available to the experts in diabetes, virology, information retrieval or search engine optimisation. 
+
+[^7.2]: At the time of writing, Kaggle claims around 320,000 players.
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.9\textwidth]{figure/kaggle.pdf}
+        \caption{Kaggle data science competitions}
+  \label{fig:kaggle}
+\end{figure}
+
+While the several hundred thousand participants in the competitions on Kaggle are all machine learners and invoke various machine learners in the models they build and submit, their participation in the competitions is itself, like nearly all the classifiers we have been discussing, subject to ranking and indeed prediction. The recursiveness of this 
+
+> *Predict if an online bid is made by a machine or a human*
+
+>    Ever wonder what it's like to work at Facebook? Facebook and Kaggle are launching an Engineering competition for 2015. Trail blaze your way to the top of the leader board to earn an opportunity at interviewing for a role as a software engineer, working on world class Machine Learning problems [@Kaggle_2015]
+
+
+
+The competitions all take the form of examinations that set a problem, define some limits or constraints on its solution, and create a space that qualifies, ranks and displays the work of individuals or groups in relation to the problem. Machine learning competitions furnish a contemporary instance of the practices of examination that Foucault described in _Discipline and Punish_:
 
 >The examination combines the techniques of an observing hierarchy and those of a normalizing judgement. It is a normalizing gaze, a surveillance that makes it possible to qualify, to classify and to punish. It establishes over individuals a visibility through which one differentiates them and judges them. That is why, in all the mechanisms of discipline, the examination is highly ritualized. In it are combined the ceremony of power and the form of the experiment, the deployment of force and the establishment of truth. At the heart of the procedures of discipline, it manifests the subjection of those who are perceived as objects and the objectification of those who are subjected. The superimposition of the power relations and knowledge relations assumes in the examination all its visible brilliance [@Foucault_1977, 183-185]. 
 

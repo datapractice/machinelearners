@@ -3,6 +3,7 @@
 
 ## to do
 
+- the programming of ml as the backpropagation and feed forward of machine learning as function finding into finding a function for machine learning 
 - hinton -- backpropagation of error -- the 1986 nature paper uses examples of people
 - 'generalization error is what we care about' [@Ng_2008f]
 - deep neural nets [@Hassabis_2013] should appear here
@@ -15,10 +16,18 @@
 - use Lazzarato here -- semiotics, etc
 - MF from archaeology of knowledge on the subject in the discursive formation
 
+## key points for framing
+
+- error is the cross-over
+- examination is what allows both parallel architectures and competitions to come together
+- examination makes each individual a case -- not just the data, but the machine learners are examined
+- my own sense of uncertainty about this stuff, and mixtures of optimism and sense of having to keep moving forward, of needing to re-calibrate, to go in parallel, to avoid overfitting myself, but at the same complexifying what I'm doing. 
 
 ## Introduction
 
 > If a proposition, a sentence, a group of signs can be called 'statement' , it is not therefore because, one day, someone happened to speak them or put them into some concrete form of writing; it is because the position of the subject can be assigned [@Foucault_1972,  95]
+
+> 'generalization error is what we care about' [@Ng_2008f]
 
 Here are the words of Hilary Mason, Chief Scientist at bitly.com (a service that shortens URLs), at a London conference in 2012 called 'Bacon: Things Developers Love':
 
@@ -34,7 +43,7 @@ These  propositions, if they amount to a _statement_ in Michel Foucault's archae
 
 ## The uneven presence of neural nets in machine learning 
 
-In almost every machine learning class, neural nets make some appearance. They have an ambivalent status. In some ways, they renew long-standing hopes in biology, and particularly, brains and cognition as models of computational power, or, sometimes more pragmatically. In other ways, they gain traction as a ways of dealing with changing computational infrastructures, and the difficulties of capitalising on infrastructure that is powerful yet difficult to manage. Neural nets are often described from this deeply split perspective. On the one hand, they stem from a biological inspiration (dating at least back to the work on McCulloch and Pitts in the 1940s [REF TBA]). On the other hand, they respond to changes in information infrastructures and digital devices. For instance, David Ackley, Geoffrey Hinton (an important figure in the inception of neural nets during the 1980s and in the revival of neural net in the form of deep learning in the last decade), and Terrence Sejnowski wrote in the early 1980s: 
+In almost every machine learning class, neural nets make some appearance. They have an ambivalent status. Neural nets are often described from a deeply split perspective that in some points turns towards human subjects, or at least, the brains of human subjects, and in other ways towards the ongoing expansion of computational platforms. In some ways, they renew long-standing hopes in biology, and particularly, brains and cognition as models of computational power.  They stem from a biological inspiration (dating at least back to the work on McCulloch and Pitts in the 1940s [REF TBA]). In other ways, they gain traction as a ways of dealing with changing computational infrastructures, and the difficulties of capitalising on infrastructure that is powerful yet difficult to manage. On the other hand, they respond to changes in information infrastructures and digital devices. For instance, David Ackley, Geoffrey Hinton (an important figure in the inception of neural nets during the 1980s and in the revival of neural net in the form of deep learning in the last decade), and Terrence Sejnowski wrote in the early 1980s: 
 
 > Evidence about the architecture of the brain and the potential of the new VLSI technology have led to a resurgence of interest in “connectionist” sys-terns ...  that store their long-term knowledge as the strengths of the connections between simple neuron-like processing elements. These networks are clearly suited to tasks like vision that can be performed efficiently in parallel networks which have physical connections in just the places where processes need to communicate. ... The more difficult problem is to discover parallel organizations that do not require so much problem-dependent information to be built into the architecture of the network. Ideally, such a system would adapt a given structure of processors and communication paths to whatever problem it was faced with [@Ackley_1985, 147-148].
 
@@ -63,7 +72,6 @@ The handwritten digits used in these competitions, particularly the Neural Infor
 
 Despite this binding function, neural networks have had a somewhat problematic position in relation to both statistics and other practices of computation. Even in relation to the paradigmatic handwritten digit recognition problem, neural nets struggled to gain purchase. As _Elements of Statistical Learning_ puts it, it required 'pioneering efforts to handcraft the neural network to overcome some these deficiencies..., which ultimately led to the state of the art in neural network performance' [@Hastie_2009, 404]. It is rare to find the word 'handcraft' in machine learning literature. The operational premise of most machine learners is that machine learning works without handcrafting. 
 
-
 The shifting fortunes of neural nets are frequently discussed in contrasting terms by machine learners themselves, but in recent years they share an awareness of some kind of transformation:
 
 >Neural networks went out of fashion for a while in the 90s - 2005 because they are hard to train and other techniques like SVMs beat them on some problems. Now people have figured out better methods for training deep neural networks, requiring far fewer problem-specific tweaks. You can use the same pretraining whether you want a neural network to identify whose handwriting it is or if you want to decipher the handwriting, and the same pretraining methods work on very different problems. Neural networks are back in fashion and have been outperforming other methods, and not just in contests [@Zare_2012].
@@ -72,14 +80,26 @@ Neural nets also receive uneven attention in the machine learning literature. In
 
 The somewhat vacillating presence of neural nets in the machine learning literature itself finds parallels in the fortunes of individual machine learners. Yann LeCun's work on optical character recognition during 1980-1990s is said to have discovered the back-propagation algorithm at the same time as Rumelhart, Hinton and Williams [@Rumelhart_1986]. His implementations in `LeNet` led many academic machine learning  competitions during the 1990s. In 2007, Andrew Ng could casually observe that neural nets _were_ the best, but in  2014, LeCun find himself working on machine learning at Facebook [@Gomes_2014]. Similarly, the cognitive psychologist Geoffrey Hinton's involvement in the early 1980s work on connectionist learning procedures in neural nets and subsequently on 'deep learning nets' [@Hinton_2006] delivers him to Google in 2013. These trajectories between academic research and industry are not unusual. Many of the techniques in machine learning have been incorporated into companies later acquired by other larger companies. Even if there is no spin-off company to be acquired, machine learners themselves have been assigned key positions in many industry settings. Corinna Cortes, co-inventor with Vladimir Vapnik of the  support vector machine, heads research at Google New York. Ng himself in 2014 began work as chief scientist for the Chinese search engine, Baidu leading a team of AI researchers specializing in 'deep learning,' the contemporary incarnation of neural nets [@Hof_2014]. In 2011, Ng led a neural net-based project at Google that had, among other things, detected cats  in millions of hours of Youtube videos.[^8.3] In recent years, (2012-2015), work on neural nets has again intensified, most prominently in association with social media platforms, but also in the increasingly common speech and face recognition systems found in everyday services and devices. Many of these neural nets are like `kittydar`, but implemented on a much larger and more distributed scale (for instance, in classifying videos on Youtube). 
 
-What accounts for the somewhat uneven fortunes of the neural net amongst machine learners? The unevenness of their performance, from limited curiosity in the late 1960s to best performer in the machine learning image classification competitions of the 1990s, from second best competitor in late 1990s to the spectacular promise of deep belief networks in 2012, suggests that some powerful dynamics or becomings are in play around them. These dynamics are not easily understood in terms of celebrity machine learners (human and non-human) suddenly rising to prominent or privileged positions in the research departments of social media platforms.[^8.7]  Nor does it make sense to attribute the rising fortunes of the neural net to the algorithms themselves, as if some decisive advance occurred in algorithms. The algorithms used in neural net have not, as we will see, been radically transformed in their core operations since the 1980s, and even then, the algorithms themselves (principally gradient descent \index{gradient descent}) were not new. There have been important changes in scale (similar to those described in the previous chapter in the case of the `RF-ACE` algorithm and Google Compute), but as is often the case in machine learning, their re-invention occurs through proliferation, changes in scale, re-distributions of knowledge and infrastructure and specific optimisations. While machine learners in their machine form can be assigned a privileged position in the transformations of knowledge and action today, human machine learners are not exactly marginalized, at least in high profile cases such as Ng, LeCun, Hinton and others. Rather, the scale of machine learning seems to be changing both for the algorithms and for the human computer scientists, programmers and engineers. 
+Finally, neural nets also figure the vicissitudes of human machine learners quite well. They test machine learners for their capacity to understand how models relate to data, and they test them in relation to their knowledge and experience of how of to craft and to regularize the parameters of models in a given situation. Perhaps more profoundly, they figure a much more deeply competitive imperative that frames much of the practice in machine learning, and in many ways constrains thinking around machine learning. This competition is not always explicit or overt but it almost transpires in the form of examination. For instance, in _Doing Data Science_, Cathy O'Neil and Rachel Schutt offer a pragmatic set of steps for working with machine learners:
+
+>The big picture is that given data, a real-world classification problem, and constraints, you need to determine:
+    >1. Which classifier to use
+    >2. Which optimization method to employ
+    >3. Which loss function to minimize
+    >4. Which features to take from the data
+    >5. Which evaluation metric to use
+
+    [@Schutt_2013, 116]
+
+Perhaps the order of these steps would be contested by some people, but each of these determinations is definitely a matter of competitive contention. Whether or not this competition deeply structures the field of machine learning is also a matter for further investigation. But in my experience, immersion in the field of machine learning, navigating its social textures, and getting a feeling for how it is to exist in these conditions definitely entails a sense of becoming the subject of examination. This feeling, which is concretised in the numerous machine learning competitions and online instructional materials, is convoluted because it concerns the constitution of machine learners themselves as operations of examination and as a form of documentation or statement of examination, test, and validation focused on errors. As Andrew Ng opines, 'we care about generalization error,' \index{Ng, Andrew} \index{error} \index{examination}, but error here both refers to something that neither the responsibility simply of the machine or its human others. Rather, responses to and care for this error move forwards and backwards between the human and non-human machine learners. 
 
 [^8.3]: Unlike the cats detected by `kittydar,` the software discussed in the introduction to this book, the Google experiment did not use supervised learning. The deep learning approach was unsupervised [@Markoff_2012]. That is, the neural nets were not given images in which cats were labelled to train on. 
 
-[^8.7]: In any case, social media and search engines cannot be understood apart from the machine learning techniques that have been thoroughly woven through them since their inception.  Hence _Elements of Statistical Learning_ devotes several pages Google's famous _PageRank_ algorithm, describing it as an unsupervised learner [@Hastie_2009, 576-578].
-
-
 ## A privileged machine and its diagrammatic forms
+
+What accounts for the somewhat uneven fortunes of the neural net amongst machine learners? The unevenness of their performance, from limited curiosity in the late 1960s to best performer in the machine learning image classification competitions of the 1990s, from second best competitor in late 1990s to the spectacular promise of deep belief networks in 2012, suggests that some powerful dynamics or becomings are in play around them. These dynamics are not easily understood in terms of celebrity machine learners (human and non-human) suddenly rising to prominent or privileged positions in the research departments of social media platforms.[^8.7]  Nor does it make sense to attribute the rising fortunes of the neural net to the algorithms themselves, as if some decisive advance occurred in algorithms. The algorithms used in neural net have not, as we will see, been radically transformed in their core operations since the 1980s, and even then, the algorithms themselves (principally gradient descent \index{gradient descent}) were not new. There have been important changes in scale (similar to those described in the previous chapter in the case of the `RF-ACE` algorithm and Google Compute), but as is often the case in machine learning, their re-invention occurs through proliferation, changes in scale, re-distributions of knowledge and infrastructure and specific optimisations. While machine learners in their machine form can be assigned a privileged position in the transformations of knowledge and action today, human machine learners are not exactly marginalized, at least in high profile cases such as Ng, LeCun, Hinton and others. Rather, the scale of machine learning seems to be changing both for the algorithms and for the human computer scientists, programmers and engineers. 
+
+[^8.7]: In any case, social media and search engines cannot be understood apart from the machine learning techniques that have been thoroughly woven through them since their inception.  Hence _Elements of Statistical Learning_ devotes several pages Google's famous _PageRank_ algorithm, describing it as an unsupervised learner [@Hastie_2009, 576-578].
 
 What accounts for this acceleration and slowing-down, the intensified interactions and abandonments of neural nets over the last three decades? Despite their apparent differences in origin, neural net share much with other machine learners. The language of brain, neurones and cognition associated with neural net covers over their much more familiar vector-space, function-finding and optimisations they draw on in practice. 'The central idea,' write Hastie and co-authors, 'is to extract linear combinations of the inputs as derived features, and then model the target as a nonlinear function of these features. The result is a powerful learning method, with widespread applications in many fields' [@Hastie_2009, 389]. 
 
@@ -87,16 +107,16 @@ The 'central idea' can be seen in the algebraic expressions that Hastie and co-a
 
 \begin {equation}
 \label {eq:nn_equation}
-\begin{split}
-Z_m = \sigma(\alpha_0m + \alpha_m^TX) m = 1, ...,M
-T_k = \beta_0k + \beta_k^TZ, k = 1, ..., K,
+\begin {split}
+Z_m = \sigma(\alpha_0m + \alpha_m^TX) m = 1, ...,M\\
+T_k = \beta_0k + \beta_k^TZ, k = 1, ..., K,\\
 f_k (X) = g_k (T), k = 1, ..., K,
-\end{split}
+\end {split}
 \end {equation}
 
 >where $Z = (Z_1 , Z_2, ..., Z_M )$, and $T = (T_1 , T_2 ,..., T_K )$. The activation function $\sigma(v)$ is usually chosen to be the sigmoid $\sigma(v) = 1/(1 + e −v )$
 
-[@Hastie_2009, 392]
+>[@Hastie_2009, 392]
 
 Equation \ref{eq:nn_equation} is a diagram with some familiar elements as well as some novelty. Some of the diagrammatic operation of the neural net is already familiar from the linear models. The neural networks traverse data in a vector space denoted by $X$. That is common to nearly all machine learners.  They make use of the non-linear sigmoid function \index{sigmoid function} that lies at the heart of one of the main linear classifiers used in machine learning, logistic regression \index{logistic regression}. Their training and learning processes have come to rely on the same kinds of cost, loss or error functions \index{cost function} we have seen in other  machine learners. Their apparently increasingly power to learn (to see, to find, to predict) again seems to owe much to re-configuration, to the diagrammatic movements that recombine operations in new intersections.
 
@@ -107,13 +127,20 @@ There are, however, some differences in this diagram. Equation \ref{eq:nn_equati
 \hat{Y} = \hat{\beta_0}  + \sum^p_{j=1} X_j \hat{\beta_j}
 \end {equation}
  
-Whereas the standard linear model \index{linear model} shown in Equation \ref{eq:linear_model} indexes a single common vector space $X_j$ and approximates a single function $\hat{Y}$ by searching for the values of the parameters $\beta_j$ that best incline a plane through the given data, it seems that the three lines of the neural net model show in equation \ref{eq:nn_equation} are woven through each other much more consecutively than the linear regression and logistic regression models. Much hinges on the unobstrusive sigmoid function operator written as \sigma: 'a neural network can be thought of as a nonlinear generalization of the linear model, both for regression and classification. By introducing the nonlinear transformation \sigma, it greatly enlarges the class of linear models' [@Hastie_2009, 394]. \sigma, it seems, allows neural nets to work as generalize beyond the linear model. 
+Whereas the standard linear model \index{linear model} shown in Equation \ref{eq:linear_model} indexes a single common vector space $X_j$ and approximates a single function $\hat{Y}$ by searching for the values of the parameters $\beta_j$ that best incline a plane through the given data, it seems that the three lines of the neural net model show in equation \ref{eq:nn_equation} are woven through each other much more consecutively than the linear regression and logistic regression models. Much hinges on the unobstrusive sigmoid function operator written as $\sigma$: 'a neural network can be thought of as a nonlinear generalization of the linear model, both for regression and classification. By introducing the nonlinear transformation $\sigma$, it greatly enlarges the class of linear models' [@Hastie_2009, 394]. $\sigma$, it seems, allows neural nets to work as generalize beyond the linear model. 
 
 The common diagrammatic operations of neural nets and other supervised machine learners immediately appears in almost any actual example of a neural net. In the code vignette shown below, the data is a spreadsheet of information about passengers of the Titanic. The `titanic` dataset, like `iris` or `boston` is often used in contemporary machine learning pedagogy. It is for instance, the main training dataset used by (kaggle.com)[http://kaggle.com], an online machine learning competition site I will discuss below \index{Kaggle.com}. The first few lines of the `R` code load the dataset and transform it into vector space. For instance, variables such as `sex` that take values such as `male` and `female` become vectors of `1` and `0` in a new variable `sexmale`. 
 
 
 ```r
 library(neuralnet)
+```
+
+```
+## Error in library(neuralnet): there is no package called 'neuralnet'
+```
+
+```r
 titanic = read.csv('data/titanic3.csv')
 titanic_transformed = as.data.frame(model.matrix(~survived + age+ pclass + fare+ sibsp + sex
 + parch + embarked, titanic))
@@ -143,8 +170,19 @@ titanic_train = titanic_transformed[train_index,]
 titanic_net = neuralnet(survived ~ age +pclass + fare + sexmale + sibsp + parch
 + embarkedC + embarkedQ + embarkedS, data=titanic_train, err.fct='ce',
 linear.output=FALSE, hidden=5) 
+```
+
+```
+## Error in eval(expr, envir, enclos): could not find function "neuralnet"
+```
+
+```r
 titanic_test = titanic_transformed[-train_index,]
 test_error = round(sum( 0.5 < compute(titanic_net, titanic_test[,-c(1,2)])$net.result)/sum(titanic_test$survived), 2)
+```
+
+```
+## Error in eval(expr, envir, enclos): could not find function "compute"
 ```
 
 
@@ -164,7 +202,7 @@ The final major form in which neural net appear is the network diagram. Network 
 
 
 ```
-## NULL
+## Error in plot.nn(titanic_net, fontsize = 8, show.weights = FALSE): object 'titanic_net' not found
 ```
 
 ```
@@ -194,47 +232,71 @@ It is fitting that Foucault's examples here include subjects who say things like
 
 This might be loosely formalised for any machine learner as follows: the diagrammatic operations of the machine learner   support the production of statements; these operations become a way of producing future statements to the extent that the subject of the operation is _also_ the subject of the statement. The assignation of a subject position occurs in this forward and backward, feed-forwarding and back-propagating movement between operation and statement. Although the gap between what is done operationally and what is stated might seem  small, there are many slippages and divergences in it. The specificity of seemingly minor statements such as 'we see that Net-5 does the best, having errors of only 1.6%, compared to 13% for the “vanilla” network Net-2' [@Hastie_2009, 407] bears within it, in its  coupling to all the operations comprising 'Net-5,' a set of determinations and relations for variously positioned subjects. (These might include machine learners, such as Hinton or Lecun, but also U.S. Postal workers).   In any concrete situation, in relation to any specific machine learner, the diagrammatic operations and statements will position subjects in specific ways. There is no simple referent here, no simple object facing a knowing or controlling subject, since on this account, the operations and statements in their dispersions, accumulations and distributions overflow any simple dyadic relation between a subject-object or human-machine/world. 
 
-## Competitions that propagate machine learning 
+## Algorithms that propagate machine learning 
 
 The coincidence of the subject of the operation and the subject of the statement mobilises machine learners in the sense that it aligns future operations and statements. It puts them in movement but a form of movement propagated by specific operations. Neural nets, especially in their algorithmic operation, make this propagation between statement and operation more tangible. Take the back-propagation algorithm. In their initial publication, Rumelhart, Hinton and Williams conclude:
 
 > The learning procedure, in its current form, is not a plausible model of learning in brains. However, applying the produced to various tasks shows that interesting internal representations can be constructed by gradient descent in weight-space, and this suggests that it is worth looking for more biologically plausible ways of doing gradient descent in neural networks [@Rumelhart_1986, 536].
 
-In some respects, this is the standard disclaimer: the brain has only analogical relevance to machine learning, although it can certainly be a source of novel mechanisms ('biologically plausible ways of doing gradient descent'). At the same time, if a machine learner   can construct 'interesting internal representations ... in weight-space,' then the process whereby these representations become interesting will be of great interest. That is, when the operations of the algorithm  -- in this case, back-propagation -- become a focus of interest or perhaps a matter of concern [@Stengers_2005, 161].  
+In some respects, this is the standard disclaimer: the brain has only analogical relevance to machine learning, although it can certainly be a source of novel mechanisms ('biologically plausible ways of doing gradient descent'). At the same time, if a machine learner   can construct 'interesting internal representations ... in weight-space,' then the process whereby these representations become interesting will be of great interest. That is, when the operations of the algorithm  -- in this case, back-propagation -- become a focus of interest or perhaps a matter of concern [@Stengers_2005, 161]. \index{Stengers, Isabelle}  
 
-How could an algorithm such as back-propagation engender the coincidence of subject of operation and subject of statement that defines machine learners? The automatic character of most  machine learners derives from the way they update model parameters in the light of incoming data, and errors or differences between expected and actual outputs. Every   machine learner  makes different determinations in relation to model parameters and errors. The distinctive feature of  neural nets, at least in their ordinary 'vanilla' forms, consists in their use of gradient descent to minimise errors by adjusting the weights (or parameters) of all the nodes (or linear models) comprising the machine learner. Adjusting the parameters of the nodes in the neural net hardly seems a striking achievement. If we, however, look more closely at the way in which the 'representations' are iteratively constructed in neural nets, something more interesting begins to emerge from the forwards and backwards movement of this algorithm. We have already seen something of the forward movement. It is defined by the equations \ref{eq:nn_equation} that move data through a succession of layers and their nodes.  Conversely, the equations \ref{eq:back_prop} specify the way in which the weights of various nodes in the output layer nodes and the hidden layer nodes in a neural net are updated during the back-propagation phase of the iteration:
+How could an algorithm such as back-propagation diagram the coincidence of subject of operation and subject of statement that defines machine learners? The pivotal point here is error. Errors, error rates, training error, test error, validation error: these are just some of the errors that criss-cross between human and machine learners. Errors move between operations and statements. While not all of these errors figure directly in the algorithms, the The automatic character of most  machine learners derives from the way they update model parameters in the light of incoming data, and errors or differences between expected and actual outputs. Every   machine learner  makes different determinations in relation to model parameters and errors. The distinctive feature of  neural nets, at least in their ordinary 'vanilla' forms, consists in their use of gradient descent to minimise errors by adjusting the weights (or parameters) of all the nodes (or linear models) comprising the machine learner. Adjusting the parameters of the nodes in the neural net hardly seems a striking achievement. If we, however, look more closely at the way in which the 'representations' are iteratively constructed in neural nets, something more interesting begins to emerge from the forwards and backwards movement of this algorithm. We have already seen something of the forward movement. It is defined by the equations \ref{eq:nn_equation} that move data through a succession of layers and their nodes.  Conversely, the equations \ref{eq:back_prop} specify the way in which the weights of various nodes in the output layer nodes and the hidden layer nodes in a neural net are updated during the back-propagation phase of the iteration:
 
 \begin {equation}
 \label {eq:back_prop}
 \begin {split}
-\beta_{km}^{(r+1)} =  \beta^{(r)}_{km} - \gamma_r \sum_{i=1}^{N} \frac{\partial R_i}{\partial \beta_{km}^{(r)}}
-\alpha_{ml}^{(r+1) = \alpha^{(r)}_{km} - \gamma_r \sum_{i=1}^{N}\frac{\partial R_i}{\partial \alpha_{km}^{(r)}}
+\beta_{km}^{(r+1)} =  \beta^{(r)}_{km} - \gamma_r \sum_{i=1}^{N} \frac{\partial R_i}{\partial \beta_{km}^{(r)}}\\
+\alpha_{ml}^{(r+1)} = \alpha^{(r)}_{km} - \gamma_r \sum_{i=1}^{N}\frac{\partial R_i}{\partial \alpha_{km}^{(r)}}
 \end {split}
 \end {equation}
-    [@Hastie_2009, 396]
 
-In the densely iconic and indexical diagram of equation \ref{eq:back_prop}, the interweaving of the subscripts in the two lines show that the ways in which values of the parameters in the models of the first two lines of equation \ref{eq:nn_equation} are varied as the model is trained on the input data. The two lines of equation \ref{eq:back_prop} specify how first the values of the parameters of the $K$ nodes of the output layer should be altered in the light of the difference between the actual and expected output values, and then how the weight of the $M$ nodes of the hidden layer should be adjusted. In adjusting weights in the layers, back-propagation always starts at the outputs, and travels back into the net towards the input layer at the bottom (or left hand side in diagram \ref{fig:titanic_net}. 'It is as if the error propagates from the output _y_ back to the inputs and hence the name _back-propagation_ was coined' writes Alpaydin [@Alpaydin_2010, 250]. As in any gradient descent operation (see chapter \ref{ch:function}), a rate parameter (here $\gamma$) regulates the speed of descent. If $\gamma$ is too large, the gradient descent might jump over a valley that contains the absolute minimum error; if $\gamma$ is  too small, then the descent is too slow for fast machine learning. 
+>[@Hastie_2009, 396]
+
+There are many different variables in the equations \ref{eq:back_prop}. They include measures of error ($R$), values of the weights or parameters in various layers of the models ($\beta$, $\alpha$), variables that count the number of iterations the model has performed ($r$, $r+1$) and the functional operators such as summation ($\sum$) and partial differentiation ($\partial$). The usual indexical relations to data appear in $N$, the number of rows or observations, as well as $K$, the number of outputs and $M$, the number of nodes in the hidden layer.   In the densely iconic and indexical diagram of equation \ref{eq:back_prop}, the interweaving of the subscripts in the two lines show that the ways in which values of the parameters in the models of the first two lines of equation \ref{eq:nn_equation} are varied as the model is trained on the input data. The two lines of equation \ref{eq:back_prop} specify how first the values of the parameters of the $K$ nodes of the output layer should be altered in the light of the difference between the actual and expected output values, and then how the weight of the $M$ nodes of the hidden layer should be adjusted. Once these are adjusted, the forward movement defined by equations \ref{eq:nn_equation} begin again. In adjusting weights in the layers, back-propagation always starts at the outputs, and travels back into the net towards the input layer at the bottom (or left hand side in diagram \ref{fig:titanic_net}. 'It is as if the error propagates from the output _y_ back to the inputs and hence the name _back-propagation_ was coined' writes Alpaydin [@Alpaydin_2010, 250]. As in any gradient descent operation (see chapter \ref{ch:function}), a rate parameter (here $\gamma$) regulates the speed of descent. If $\gamma$ is too large, the gradient descent might jump over a valley that contains the absolute minimum error; if $\gamma$ is  too small, then the descent is too slow for fast machine learning. In some versions of neural net, the value of $\gamma$ changes each at iteration $r$ of the model. 
+
+If back-propagation was formulated in the 1980s (and indeed, was already known in  1960), what do we learn from its current re-iterations? Given the effort that went into crafting neural nets to recognise handwritten digits during the 1980s and 1990s, what does the revival of neural nets suggest about machine learning? From the early publications such as [@Rumelhart_1985] on, the layered composition of the model has been linked to architectural considerations. As Hastie and co-authors write:
 
 >The advantages of back-propagation are its simple, local nature. In the back propagation algorithm, each hidden unit passes and receives information only to and from units that share a connection. Hence it can be implemented efficiently on a parallel architecture computer [@Hastie_2009, 397].
 
+These practical considerations have different significance in different settings. Some of the current iterations of neural nets in deep learning rely on massively parallel computing architectures (for instance, Andrew Ng's GoogleX Youtube video project). Yet the information sharing that happens during back-propagation might also encompass the human others of neural nets. The efficient parallel implementation in computing architecture affects, I would suggest, human and non-human machine learners in different ways. Given that equations \ref{eq:nn_equation} and \ref{eq:back_prop} seem to function automatically, without any hand in their movement, how could humans fit here?
 
-We saw above that competitions to recognise handwritten digits constituted a focal point for neural nets during the 1990s. What can we learn from such competitions about subject positions in machine learning?
-HERE
+## The competitions as examination
 
--- cf Ng, Hassabis, Hinton, Le Cun, etc. with others
+Again, the treatment of errors provides a useful thread to follow here. At almost step of its development as a field, and in almost every aspect of its operation, competitions conducted through forms of examination of error rates lie at the intersection of human and machine learners. The learning of machine learning seems to incarnate learning through examination. We saw above that competitions to recognise handwritten digits constituted a focal point for neural nets during the 1990s. Much of the discussion of neural net in _Elements of Statistical Learning_ revolves around a competition conducted in 2003. As we will soon see, machine learning competitions more generally form one of the principal ways in which  people and machines come together. What can we learn from such competitions about subject positions in machine learning?
+
+If we take a typical contemporary machine learning competition, something of the backwards and forwards movement between human and machine machine learners starts to appear. The competitions run by [kaggle](http://www.kaggle.com) exemplify many of the movements that the back-propagation algorithm implements.  In 
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.9\textwidth]{figure/kaggle.pdf}
+        \caption{Kaggle data science competitions}
+  \label{fig:kaggle}
+\end{figure}
+
+> *Predict if an online bid is made by a machine or a human*
+
+>    Ever wonder what it's like to work at Facebook? Facebook and Kaggle are launching an Engineering competition for 2015. Trail blaze your way to the top of the leader board to earn an opportunity at interviewing for a role as a software engineer, working on world class Machine Learning problems [@Kaggle_2015]
+
+
+
+The competitions all take the form of examinations that set a problem, define some limits or constraints on its solution, and create a space that qualifies, ranks and displays the work of individuals or groups in relation to the problem. Machine learning competitions furnish a contemporary instance of the practices of examination that Foucault described in _Discipline and Punish_:
+
+>The examination combines the techniques of an observing hierarchy and those of a normalizing judgement. It is a normalizing gaze, a surveillance that makes it possible to qualify, to classify and to punish. It establishes over individuals a visibility through which one differentiates them and judges them. That is why, in all the mechanisms of discipline, the examination is highly ritualized. In it are combined the ceremony of power and the form of the experiment, the deployment of force and the establishment of truth. At the heart of the procedures of discipline, it manifests the subjection of those who are perceived as objects and the objectification of those who are subjected. The superimposition of the power relations and knowledge relations assumes in the examination all its visible brilliance [@Foucault_1977, 183-185]. 
+
+In this formulation, Foucault links epistemic and operational aspects of examination. Examinations combine ceremony, ritual, experiment, force and truth, as well as processes of subjectification and objectification. If, as already been suggested above, the pack-ice of machine learning formed around neural nets during the 1990s, we might say that the re-solidification of neural nets today in high profile deep learning projects can be understood in terms of a much more pervasive practice of examining and testing occurring through machine learning training and competitions. How would such a process be legible? The forms of visibility created by competitions, the ways in which they individualize and document machine learners (often by proper names), and that maximise extractions of force, time, propensities and aptitudes.  
+
+In competitive examinations, we might see attempts to construct 'parallel architectures' for people doing machine learning. Machine learning competitions effectively implement a parallel architecture for machine learners with limited communication. 
+
+
+From this perspective, it should come as no surprise that machine learning itself as a predictive practice has become a matter of prediction and optimisation. In machine learning and data mining, as in many other domains, competitions are one way that highly technical challenges are addressed. Often these competition are associated with academic events such as conferences. Sometimes they are associated with programmer recruitment, as in the 'Google Code jam' [@google_google_2012] that each year attracts tens of thousands of programmers. Increasingly, programming work is also allocated through competitive outsourcing sites such as Topcoder, 'the world's largest competitive commmunity for software development and digital creation' [@topcoder_inc_topcoder_2012]. A social media platform called 'Kaggle' stages machine learning competitions [@kaggle_inc_description_2011].  The list of competitions on Kaggle provides a general snapshot of anticipatory projects in the world of big data. Kaggle sponsors data-mining or statistical analysis competitions ranging across health data, chess ratings, tourism, grant application outcomes, dark matter, essay scoring and the progression of HIV infections. Like bitly.com's Hilary Mason, Kaggle's founder and CEO, Anthony Goldbloom, attracts media attention. In 2012, he was one of _Forbes_ magazines '30 under 30' leading technology entrepreneurs [@Barrett_2012]. 
+
+In 2011, the data blog Dataist.com sponsored a Kaggle machine learning competition called 'R Package Recommendation Engine.' In the case of the 'R Package Recommendation Engine' competition, competitors were supplied with meta-data from the R CRAN repository describing which of the several thousand R packages available there were installed by 52 R users. Competitors were tasked to use this so-called 'training data' to build a predictive model of what programmers would do with R. Having modelled this sample population, competitors were meant to predict what packages would be installed by another a much larger group of R users, describing in the 'test data.' The underlying idea here is that a 'recommendation engine' suggest to new users of R  what R packages they should install. The predictions produced by the 'R Package Recommendation Engine' would in some ways, however modestly, address an object - machine learning - that is problematically multiple and open-ended. In this competition, what programmers do as they install - and perhaps use - R packages become features or predictors for a machine learning problem.  It seems then that one response to the newly acquired popularity of R in the regime of anticipation is an attempt to re-anchor it in the stabilizing form of a machine learning model. In other words, the possibility of the divergent, free-associating play of methods in R is reorganised by machine learning to predict what programmers will want. Predictive practice can be applied to the agents of anticipation themselves.
+
+Winners of Kaggle competitions often write statements describing what they did to win. The winner of the 'R Package Recommendation Engine' competition, under the name 'OneOldDog,' describes himself as 'a computer scientist with over 48 years of programming experience and more than 25 years doing machine learning and predictive analytics. Now that I am retired from full-time employment, I have endeavored to keep my skills sharp by participating in machine learning and data mining contests' [@kaggle_inc_dave_2011]. OneOldDog goes onto to describe how he used the 'same core forecasting technology that I've employed in other contests.' The third placed competitor, 'lib-GUNDAM,' is in a very different situation: 'I recently got my Bachelor degree from National Taiwan University (NTU). ... Noticing that the machine learning society lacks software on various kinds of algorithms that may be beneficial to our daily life, I am now developing pieces of tools that compile various state-of-the-art algorithms performing well in many data or contests. One of these pieces is lib-GUNDAM' [@kaggle_inc_how_2011]. Using his software lib-GUNDAM, lib-GUNDAM managed to develop a successful model to predict what software packages other programmers should use. The contrast between OneOldDog and lib-GUNDAM is marked by differences in age, differences in software production (old vs fresh code), reasons for participation (keep skills sharp vs the needs of 'the machine learning society'). If OneOldDog's enthusiastic participation (he made 55 different models) seems to be a return to a familiar scene (more than 25 years of machine learning), lib-GUNDAM  he/she writes code 'beneficial to our daily life' because it is 'state-of-the-art.'
+
+There are other examples of this recursive application of predictive practice to agents of anticipation. For instance, a later competition at Kaggle was sponsored by Facebook, under the banner 'Facebook Recruiting Competition: Show Them Your Talent Not Your Resume' [@kaggle_inc_description_2012]. Given a dataset of describing friend-relations between the people ('a directed social graph'), the challenge is 'to make ranked predictions for each user in the test set of which other users they would want to follow' [@kaggle_inc_description_2012]. The prize for this competition is not money, but a job interview at Facebook. This is another case where the agents of anticipation, those who implement predictivity, show how they are in turn subjectified through their own attachments.  In both cases - the package recommendation competition or the Facebook recruitment competition - there is a striking symmetry between the situation faced by Facebook users, and R programmers, the 'useRs'. Once the practices of programming are also processed in a predictive analytics recommendation engine, unruly predictive practices can be brought into the regime of anticipation itself. This is both stultifying and exciting since it places programmers themselves in the same impasse as all the other inhabitants of regimes of anticipation. UseRs become more like users with calculable response rates and retention ratios. Self-abductively, useR!s become users. 
 
 ## Who is a machine learner?
-
->The big picture is that given data, a real-world classification problem, and constraints, you need to determine:
-
-    >1. Which classifier to use
-    >2. Which optimization method to employ
-    >3. Which loss function to minimize
-    >4. Which features to take from the data
-    >5. Which evaluation metric to use
-
-
-    [@Schutt_2013, 116]
 
 ## Competition and the work of optimisation
 
