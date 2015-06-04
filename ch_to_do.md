@@ -119,3 +119,128 @@
 - the praxiography -- writing code as practice that allows something about movement to be contoured and perhaps countered. 
 
 
+## from toodledo
+
+
+Buy trust in numbers
+Could data science turn the tide in the fight against cybercrime?
+Data You Can Believe In - NYTimes.com
+Do data explore on clinical
+Get 9 important statistics papers
+Get data center book
+Get john Johnston on ai
+Get king science article to chapter 6
+Get riding the wave report eu
+Get schull on gambling
+Go through history of infoviz
+Guest Post: ROB TIBSHIRANI | Normal Deviate
+How Twitter Found Its Money Mojo ﻗ°½ Backchannel ﻗ°½ Medium
+How to balance false positive and negatives
+Index of /yks/documents/classes/mlbook/pdf
+Jeff Larson kills it at the Lede Program http://mathbabe.org/2014/08/22/jeff-larson-kills-it-at-the-lede-program/
+O'Reilly Radar - News & Commentary
+Part2: describe as modes of ordering
+Proposal: book has simple theoretical argument
+Proposal: highlight literature as data
+Proposal: say why not doing visual
+The curse of big data ﻗ°± AnalyticBridge
+Web page not available
+another mooc on ml
+ch0.: Computational social science: Making the links
+ch0:  use breiman to contrast statistics and machine learning
+ch0: "Guest post: Rage against the algorithms" http://feedly.com/k/1b6WZCr
+ch0: A List of Data Science and Machine Learning Resources | Conductrics
+ch0: A chart of the big data ecosystem | matt turck
+ch0: Gary king on social science
+ch0: O'Reilly Radar - News & Commentary
+ch0: Papers in Big Data  Mendeley Group
+ch0: Scientists See Advances in Deep Learning, a Part of Artificial Intelligence - NYTimes.com
+ch0: Twitter data crunching: The new crystal ball
+ch0: add conditional random field work on video
+ch0: add recent literature on algorithms - solon baroccas, etc
+ch0: appadurai on calculation
+ch0: expectation-maximisation algorithm
+ch0: gane on empiricism
+ch0: get strathern common knowledge 2011
+ch0: introduce the ML literature
+ch0: lury on amphibious
+ch0: proposal: add Andrejevic 2013
+ch0: put Marquard smith in
+ch0: put order of things in
+ch0: put some big data talk in from various books, media and technical
+ch0: say why neural nets are important
+ch0: titanic -- use this analysis
+ch0: uhlman's point about the limits of machine learning
+ch0: zest finance: example of big data in money
+ch0:Big Data Is Great, but Donﻗ°ﻷt Forget Intuition - NYTimes.com
+ch1 Programming: Pick up Python : Nature News & Comment
+ch1 Python Gets a Big Data Boost From DARPA
+ch1 p-value.info: Free Datascience books
+ch1: Add diversity of factor, binning, merging in R
+ch1: List methods to use in book
+ch1: Make some big data
+ch1: Programming tools: Adventures with R : Nature News & Comment
+ch1: visualization as method - use Rose, Mitchell
+ch2 add the constructible of the prediction column
+ch2 put manhattan plot into list of graphics
+ch2: Look at hastie glmnet datasets
+ch2: add Malley on logistic regression
+ch2: add olazaran perceptron articel
+ch3: Why Generic Machine Learning Fails  Metamarkets
+ch3: add Hinton 2006
+ch3: add gradient descent history to ch
+ch3: discuss vector space model
+ch3: kinect for decision tree
+ch3: neural networks as the bridge
+ch3: put in transduction vapnik into
+ch3: use graph of techniques to motivate choice of techniques
+ch4  add Naive Bayes & Bayes Optimality
+ch4: CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers ﺁ٧ GitHub
+ch4: Get Warner & Toronto 1961
+ch4: Obama Wins: How chicago's Data-Driven Campaign Triumphed  TIME.com
+ch4: autonomy bayesian - put into bayes case study
+ch4: check Mcnally on bayes
+ch5 World's Top Data Scientists Open Doors To Big-Cash Contests - Forbes
+ch5 data gotham videos as good source of speakers and examples
+ch5: Claudia Perlich
+ch5: In The Future, The Data Scientist Will be Replaced by Tools
+ch5: Poseurs should not own the backlash against data science poseurs
+ch5: Prize-based contests can provide solutions to computational biology problems : Nature Biotechnology : Nature Publishing Group
+ch5: Put Nyt infographics into reality subjectivity chapter
+ch5: Social Science Statistics Blog: Kaggle is going to take your job
+ch5: Top technology gurus to design mobile phone game to speed up cancer cures : Cancer Research UK
+ch5: courses:bigdata:start  CILVR Lab @ NYU
+ch5: dataedge event speakers
+ch5: knack approach to people analytics
+ch5: people to put into subjectivity chapter - cathy  oneil, rachel schutt
+ch5: winner of kaggle adzuna contest -- vlad minh
+ch5:: Columbia Data Science course, week 7: Hunch.com, recommendation engines, SVD, alternating least squares, convexity, filter bubbles  mathbabe
+ch5:: add Obama data guy
+ch6 Add hansen lecture 3 to goldsmiths number paper
+ch6 add h1n1 pubmed articles to h1n1
+ch7 Genophen as example of ml
+ch7 Put buffalo ms study into reality world
+ch7: New big data firm to pioneer topological data analysis
+ch7: Track machine learning in biology over 20 years
+ch7: kaggles own analysis of its talent
+ch7: rf-ace - multivariate machine learning with heterogeneous data - Google Project Hosting
+ch7:The Mathematical Shape of Big Science Data | Simons Foundation
+ch8 AI Software That Could Score You the Perfect Job | WIRED
+ch8: sketch what book means for doing data
+ch8: sketch what book means for researching social
+ch8: sketch what book means for theories of social
+check Dan Sperber's work
+check David rokeby videos and peter campus
+check HiveR package in R
+check body in james
+check descolla
+check myers recent
+check out hayles how we think
+get import requests
+look up eugene thacker's after life
+m.guardian.co.uk
+mastodonC and nhs prescriptions as case study
+put Cleveland's data science article into my collections and also book outline
+raltmet/R/stackexchange.r at master ﺁ٧ ropensci/raltmet ﺁ٧ GitHub
+read desrosiers on ca
+write why the focus on classification not regression

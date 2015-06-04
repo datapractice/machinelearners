@@ -264,7 +264,9 @@ These practical considerations have different significance in different settings
 
 Again, the treatment of errors provides a useful thread to follow here. At almost step of its development as a field, and in almost every aspect of its operation, competitions conducted through forms of examination of error rates lie at the intersection of human and machine learners. The learning of machine learning seems to incarnate learning through examination. We saw above that competitions to recognise handwritten digits constituted a focal point for neural nets during the 1990s. Much of the discussion of neural net in _Elements of Statistical Learning_ revolves around a competition conducted in 2003. As we will soon see, machine learning competitions more generally form one of the principal ways in which  people and machines come together. What can we learn from such competitions about subject positions in machine learning?
 
-If we take a typical contemporary machine learning competition, something of the backwards and forwards movement between human and machine machine learners starts to appear. The competitions run by [kaggle](http://www.kaggle.com) exemplify many of the movements that the back-propagation algorithm implements.  In 
+If we take a typical contemporary machine learning competition, something of the backwards and forwards movement between human and machine machine learners starts to appear. The competitions run by [kaggle](http://www.kaggle.com) exemplify many of the movements that the back-propagation algorithm implements.\index{Kaggle data   Competitors no doubt enter these competitions for various reasons, not the least of which is their employment prospects. In Figure \ref{fig:kaggle}, the competition organizers list three injunctions: download (the data), build (a model), and submit (an entry or many entries to the competition). From these three movements, a variety of different outcomes appear. Leader-boards and individual rankings within the Kaggle's "world's largest community of data scientists" [@Kaggle_2015b], [^7.20] allow clients of Kaggle (corporations mostly) to 'harness the "cognitive surplus"' [@Kaggle_2015c].  The figure also shows some of the typical diversity of  machine learning: diabetic retinopathy and west Nile virus prediction competition appear next to search results relevance or context ad clicks competitions.\index{data diversity} This proximity, whether accidental or constructed, between very disparate entities suggests that machine learners possess a special epistemic mobility not readily available to the experts in diabetes, virology, information retrieval or search engine optimisation. 
+
+[^7.2]: At the time of writing, Kaggle claims around 320,000 players.
 
 \begin{figure}
   \centering
@@ -272,6 +274,8 @@ If we take a typical contemporary machine learning competition, something of the
         \caption{Kaggle data science competitions}
   \label{fig:kaggle}
 \end{figure}
+
+While the several hundred thousand participants in the competitions on Kaggle are all machine learners and invoke various machine learners in the models they build and submit, their participation in the competitions is itself, like nearly all the classifiers we have been discussing, subject to ranking and indeed prediction. The recursiveness of this 
 
 > *Predict if an online bid is made by a machine or a human*
 
