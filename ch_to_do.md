@@ -13,6 +13,10 @@
 - the typographic conventions used in this book -- follow Venables and Ripley
 
 
+## ch introduction
+
+- the feeling of agency, no matter how limited, comes from movement. This movement can take different forms -- it can be motoric, perceptual, affective, conceptual, animated, mechanised. But the point is that the feeling can then be concatenated, give rise to patterns of imitation, and to conflagrations and contagions that ignite or flow along faultlines and zones of slippage. We should not, according to Foucault begin from the vast strategic or even hegemonic monuments but from the local relations of force. 
+
 ## ch_praxis
 
 
