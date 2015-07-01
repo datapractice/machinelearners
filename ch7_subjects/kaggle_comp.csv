@@ -1,0 +1,2303 @@
+,Competition Name,Reward,Teams,Deadline,Competition
+0,"
+
+
+
+
+Forecast Eurovision Voting 
+
+This competition requires contestants to forecast the voting for this year's Eurovision Song Contest in Norway on May 25th, 27th and 29th. 
+
+
+","$1,000",22,5 years ago,"Forecast Eurovision Voting 
+
+This competition requires contestants to forecast the voting for this year's Eurovision Song Contest in Norway on May 25th, 27th and 29th."
+1,"
+
+
+
+
+World Cup 2010 - Confidence Challenge
+
+The Confidence Challenge requires competitors to assign a level of confidence to their World Cup predictions. 
+
+
+",$100,63,5 years ago,"World Cup 2010 - Confidence Challenge
+
+The Confidence Challenge requires competitors to assign a level of confidence to their World Cup predictions."
+2,"
+
+
+
+
+World Cup 2010 - Take on the Quants
+
+Quants at Goldman Sachs and JP Morgan have modeled the likely outcomes of the 2010 World Cup. Can you do better?
+
+
+",$100,0,5 years ago,"World Cup 2010 - Take on the Quants
+
+Quants at Goldman Sachs and JP Morgan have modeled the likely outcomes of the 2010 World Cup. Can you do better?"
+3,"
+
+
+
+
+Predict HIV Progression
+
+This contest requires competitors to predict the likelihood that an HIV patient's infection will become less severe, given a small dataset and limited clinical information. 
+
+
+",$500,107,4 years ago,"Predict HIV Progression
+
+This contest requires competitors to predict the likelihood that an HIV patient's infection will become less severe, given a small dataset and limited clinical information."
+4,"
+
+
+
+
+Tourism Forecasting Part One
+
+Part one requires competitors to predict 518 tourism-related time series. The winner of this competition will be invited to contribute a discussion paper to the International Journal of Forecasting.
+
+
+",$500,55,4 years ago,"Tourism Forecasting Part One
+
+Part one requires competitors to predict 518 tourism-related time series. The winner of this competition will be invited to contribute a discussion paper to the International Journal of Forecasting."
+5,"
+
+
+
+
+INFORMS Data Mining Contest 2010
+
+The goal of this contest is to predict short term movements in stock prices. The winners of this contest will be honoured of the INFORMS Annual Meeting in Austin-Texas (November 7-10).
+
+
+",$0,145,4 years ago,"INFORMS Data Mining Contest 2010
+
+The goal of this contest is to predict short term movements in stock prices. The winners of this contest will be honoured of the INFORMS Annual Meeting in Austin-Texas (November 7-10)."
+6,"
+
+
+
+
+Chess ratings - Elo versus the Rest of the World
+
+This competition aims to discover whether other approaches can predict the outcome of chess games more accurately than the workhorse Elo rating system.
+
+
+",$617,252,4 years ago,"Chess ratings - Elo versus the Rest of the World
+
+This competition aims to discover whether other approaches can predict the outcome of chess games more accurately than the workhorse Elo rating system."
+7,"
+
+
+
+
+Tourism Forecasting Part Two
+
+Part two requires competitors to predict 793 tourism-related time series. The winner of this competition will be invited to contribute a discussion paper to the International Journal of Forecasting.
+
+
+",$500,42,4 years ago,"Tourism Forecasting Part Two
+
+Part two requires competitors to predict 793 tourism-related time series. The winner of this competition will be invited to contribute a discussion paper to the International Journal of Forecasting."
+8,"
+
+
+
+
+IJCNN Social Network Challenge 
+
+This competition requires participants to predict edges in an online social network. The winner will receive free registration and the opportunity to present their solution at IJCNN 2011.
+
+
+",$950,117,4 years ago,"IJCNN Social Network Challenge 
+
+This competition requires participants to predict edges in an online social network. The winner will receive free registration and the opportunity to present their solution at IJCNN 2011."
+9,"
+
+
+
+
+R Package Recommendation Engine
+
+The aim of this competition is to develop a recommendation engine for R libraries (or packages). (R is opensource statistics software.)
+
+
+",$150,57,4 years ago,"R Package Recommendation Engine
+
+The aim of this competition is to develop a recommendation engine for R libraries (or packages). (R is opensource statistics software.)"
+10,"
+
+
+
+
+RTA Freeway Travel Time Prediction
+
+This competition requires participants to predict travel time on Sydney's M4 freeway from past travel time observations.
+
+
+","$10,000",356,4 years ago,"RTA Freeway Travel Time Prediction
+
+This competition requires participants to predict travel time on Sydney's M4 freeway from past travel time observations."
+11,"
+
+
+
+
+Predict Grant Applications
+
+This task requires participants to predict the outcome of grant applications for the University of Melbourne. 
+
+
+","$5,000",204,4 years ago,"Predict Grant Applications
+
+This task requires participants to predict the outcome of grant applications for the University of Melbourne."
+12,"
+
+
+
+
+Stay Alert! The Ford Challenge
+
+Driving while not alert can be deadly. The objective is to design a classifier that will detect whether the driver is alert or not alert, employing data that are acquired while driving.
+
+
+",$950,176,4 years ago,"Stay Alert! The Ford Challenge
+
+Driving while not alert can be deadly. The objective is to design a classifier that will detect whether the driver is alert or not alert, employing data that are acquired while driving."
+13,"
+
+
+
+
+ICDAR 2011 - Arabic Writer Identification
+
+This competition require participants to develop an algorithm to identify who wrote which documents. The winner will be honored at a special session of the ICDAR 2011 conference. 
+
+
+","$1,000",30,4 years ago,"ICDAR 2011 - Arabic Writer Identification
+
+This competition require participants to develop an algorithm to identify who wrote which documents. The winner will be honored at a special session of the ICDAR 2011 conference."
+14,"
+
+
+
+
+Deloitte/FIDE Chess Rating Challenge
+
+This contest, sponsored by professional services firm Deloitte, will find the most accurate system to predict chess outcomes, and FIDE will also bring a top finisher to Athens to present their system
+
+
+","$10,000",181,4 years ago,"Deloitte/FIDE Chess Rating Challenge
+
+This contest, sponsored by professional services firm Deloitte, will find the most accurate system to predict chess outcomes, and FIDE will also bring a top finisher to Athens to present their system"
+15,"
+
+
+
+
+Don't Overfit!
+
+With nearly as many variables as training cases, what are the best techniques to avoid disaster? 
+
+
+",$500,259,4 years ago,"Don't Overfit!
+
+With nearly as many variables as training cases, what are the best techniques to avoid disaster?"
+16,"
+
+
+
+
+Mapping Dark Matter
+
+Supported by NASA and the Royal Astronomical Society. A cosmological image analysis competition to measure the small distortion in galaxy images caused by dark matter. The prize is an expenses paid visit to the NASA Jet Propulsion Laboratory (JPL).
+
+
+","$3,000",70,3 years ago,"Mapping Dark Matter
+
+Supported by NASA and the Royal Astronomical Society. A cosmological image analysis competition to measure the small distortion in galaxy images caused by dark matter. The prize is an expenses paid visit to the NASA Jet Propulsion Laboratory (JPL)."
+17,"
+
+
+
+
+Wikipedia's Participation Challenge
+
+This competition challenges data-mining experts to build a predictive model that predicts the number of edits an editor will make five months from the end date of the training dataset. 
+
+
+","$10,000",90,3 years ago,"Wikipedia's Participation Challenge
+
+This competition challenges data-mining experts to build a predictive model that predicts the number of edits an editor will make five months from the end date of the training dataset."
+18,"
+
+
+
+
+dunnhumby's Shopper Challenge
+
+Going grocery shopping, we all have to do it, some even enjoy it, but can you predict it? dunnhumby is looking to build a model to better predict when supermarket shoppers will next visit the store and how much they will spend. 
+
+
+","$10,000",277,3 years ago,"dunnhumby's Shopper Challenge
+
+Going grocery shopping, we all have to do it, some even enjoy it, but can you predict it? dunnhumby is looking to build a model to better predict when supermarket shoppers will next visit the store and how much they will spend."
+19,"
+
+
+
+
+Allstate Claim Prediction Challenge
+
+A key part of insurance is charging each customer the appropriate price for the risk they represent.
+
+
+","$10,000",102,3 years ago,"Allstate Claim Prediction Challenge
+
+A key part of insurance is charging each customer the appropriate price for the risk they represent."
+20,"
+
+
+
+
+Semi-Supervised Feature Learning
+
+There's been a lot of recent work done in unsupervised feature learning for classification and there are a ton of older methods that also work well. The purpose of this competition is to find out which of these methods work best on relatively large-scale high dimensional learning tasks.
+
+
+",$500,26,3 years ago,"Semi-Supervised Feature Learning
+
+There's been a lot of recent work done in unsupervised feature learning for classification and there are a ton of older methods that also work well. The purpose of this competition is to find out which of these methods work best on relatively large-scale high dimensional learning tasks."
+21,"
+
+
+
+
+Photo Quality Prediction
+
+Given anonymized information on thousands of photo albums, predict whether a human evaluator would mark them as 'good'.
+
+
+","$5,000",200,3 years ago,"Photo Quality Prediction
+
+Given anonymized information on thousands of photo albums, predict whether a human evaluator would mark them as 'good'."
+22,"
+
+
+
+
+Give Me Some Credit
+
+Improve on the state of the art in credit scoring by predicting the probability that somebody will experience financial distress in the next two years.  
+
+
+","$5,000",925,3 years ago,"Give Me Some Credit
+
+Improve on the state of the art in credit scoring by predicting the probability that somebody will experience financial distress in the next two years."
+23,"
+
+
+
+
+Don't Get Kicked!
+
+Predict if a car purchased at auction is a lemon
+
+
+","$10,000",570,3 years ago,"Don't Get Kicked!
+
+Predict if a car purchased at auction is a lemon"
+24,"
+
+
+
+
+Algorithmic Trading Challenge
+
+Develop new models to accurately predict the market response to large trades.
+
+
+","$10,000",111,3 years ago,"Algorithmic Trading Challenge
+
+Develop new models to accurately predict the market response to large trades."
+25,"
+
+
+
+
+Getting Started
+
+Create a forum for New Users
+
+
+","$10,000",0,3 years ago,"Getting Started
+
+Create a forum for New Users"
+26,"
+
+
+
+
+What Do You Know?
+
+Improve the state of the art in student evaluation by predicting whether a student will answer the next test question correctly.
+
+
+","$5,000",239,3 years ago,"What Do You Know?
+
+Improve the state of the art in student evaluation by predicting whether a student will answer the next test question correctly."
+27,"
+
+
+
+
+CHALEARN Gesture Challenge
+
+Develop a Gesture Recognizer for Microsoft Kinect (TM)
+
+
+","$10,000",47,3 years ago,"CHALEARN Gesture Challenge
+
+Develop a Gesture Recognizer for Microsoft Kinect (TM)"
+28,"
+
+
+
+
+Eye Movements Verification and Identification Competition
+
+Determine how people may be identified based on their eye movement characteristic.
+
+
+",Kudos,46,3 years ago,"Eye Movements Verification and Identification Competition
+
+Determine how people may be identified based on their eye movement characteristic."
+29,"
+
+
+
+
+ICFHR 2012 - Arabic Writer Identification
+
+Identify which writer wrote which documents.
+
+
+","$1,000",42,3 years ago,"ICFHR 2012 - Arabic Writer Identification
+
+Identify which writer wrote which documents."
+30,"
+
+
+
+
+EMC Data Science Global Hackathon (Air Quality Prediction)
+
+Build a local early warning systems to accurately predict dangerous levels of air pollutants on an hourly basis.
+
+
+","$7,030",110,3 years ago,"EMC Data Science Global Hackathon (Air Quality Prediction)
+
+Build a local early warning systems to accurately predict dangerous levels of air pollutants on an hourly basis."
+31,"
+
+
+
+
+The Hewlett Foundation: Automated Essay Scoring
+
+Develop an automated scoring algorithm for student-written essays.
+
+
+","$100,000",154,3 years ago,"The Hewlett Foundation: Automated Essay Scoring
+
+Develop an automated scoring algorithm for student-written essays."
+32,"
+
+
+
+
+Benchmark Bond Trade Price Challenge
+
+Develop models to accurately predict the trade price of a bond.
+
+
+","$17,500",264,3 years ago,"Benchmark Bond Trade Price Challenge
+
+Develop models to accurately predict the trade price of a bond."
+33,"
+
+
+
+
+KDD Cup 2012, Track 1
+
+Predict which users (or information sources) one user might follow in Tencent Weibo.
+
+
+","$8,000",657,3 years ago,"KDD Cup 2012, Track 1
+
+Predict which users (or information sources) one user might follow in Tencent Weibo."
+34,"
+
+
+
+
+KDD Cup 2012, Track 2
+
+Predict the click-through rate of ads given the query and user information.
+
+
+","$8,000",163,3 years ago,"KDD Cup 2012, Track 2
+
+Predict the click-through rate of ads given the query and user information."
+35,"
+
+
+
+
+Predicting a Biological Response
+
+Predict a biological response of molecules from their chemical properties
+
+
+","$20,000",699,3 years ago,"Predicting a Biological Response
+
+Predict a biological response of molecules from their chemical properties"
+36,"
+
+
+
+
+Psychopathy Prediction Based on Twitter Usage
+
+Identify people who have a high degree of Psychopathy based on Twitter usage.
+
+
+","$1,000",111,3 years ago,"Psychopathy Prediction Based on Twitter Usage
+
+Identify people who have a high degree of Psychopathy based on Twitter usage."
+37,"
+
+
+
+
+Personality Prediction Based on Twitter Stream
+
+Identify the best performing model(s) to predict personality traits based on Twitter usage
+
+
+",$500,89,3 years ago,"Personality Prediction Based on Twitter Stream
+
+Identify the best performing model(s) to predict personality traits based on Twitter usage"
+38,"
+
+
+
+
+Practice Fusion Analyze This! 2012 - Prediction Challenge
+
+Start digging into electronic health records and submit your ideas for the most promising, impactful or interesting predictive modeling competitions
+
+
+","$10,500",0,3 years ago,"Practice Fusion Analyze This! 2012 - Prediction Challenge
+
+Start digging into electronic health records and submit your ideas for the most promising, impactful or interesting predictive modeling competitions"
+39,"
+
+
+
+
+Online Product Sales
+
+Predict the online sales of a consumer product based on a data set of product features.
+
+
+","$22,500",363,2 years ago,"Online Product Sales
+
+Predict the online sales of a consumer product based on a data set of product features."
+40,"
+
+
+
+
+Facebook Recruiting Competition
+
+
+
+            Data Scientist   
+                at 
+        
+Facebook 
+Multiple Locations
+
+
+
+",Jobs,418,2 years ago,"Facebook Recruiting Competition
+
+
+
+            Data Scientist   
+                at 
+        
+Facebook 
+Multiple Locations"
+41,"
+
+
+
+
+EMI Music Data Science Hackathon - July 21st - 24 hours
+
+Can you predict if a listener will love a new song?
+
+
+","$10,000",133,2 years ago,"EMI Music Data Science Hackathon - July 21st - 24 hours
+
+Can you predict if a listener will love a new song?"
+42,"
+
+
+
+
+Million Song Dataset Challenge
+
+Predict which songs a user will listen to.
+
+
+",Kudos,150,2 years ago,"Million Song Dataset Challenge
+
+Predict which songs a user will listen to."
+43,"
+
+
+
+
+Harvard Business Review 'Vision Statement' Prospect
+
+Your Analysis and/or Visualization featured in the Harvard Business Review
+
+
+","$2,500",0,2 years ago,"Harvard Business Review 'Vision Statement' Prospect
+
+Your Analysis and/or Visualization featured in the Harvard Business Review"
+44,"
+
+
+
+
+EMC Israel Data Science Challenge
+
+Match source code files to the open source code project
+
+
+","$10,000",86,2 years ago,"EMC Israel Data Science Challenge
+
+Match source code files to the open source code project"
+45,"
+
+
+
+
+The Hewlett Foundation: Short Answer Scoring
+
+Develop a scoring algorithm for student-written short-answer responses.
+
+
+","$100,000",152,2 years ago,"The Hewlett Foundation: Short Answer Scoring
+
+Develop a scoring algorithm for student-written short-answer responses."
+46,"
+
+
+
+
+GigaOM WordPress Challenge: Splunk Innovation Prospect
+
+Predict which blog posts someone will like.
+
+
+","$25,000",75,2 years ago,"GigaOM WordPress Challenge: Splunk Innovation Prospect
+
+Predict which blog posts someone will like."
+47,"
+
+
+
+
+Practice Fusion Analyze This! 2012 - Open Challenge
+
+Start digging into electronic health records and submit your creative, insightful, and visually striking analyses.
+
+
+","$10,000",0,2 years ago,"Practice Fusion Analyze This! 2012 - Open Challenge
+
+Start digging into electronic health records and submit your creative, insightful, and visually striking analyses."
+48,"
+
+
+
+
+Practice Fusion Diabetes Classification
+
+Identify patients diagnosed with Type 2 Diabetes
+
+
+","$10,000",146,2 years ago,"Practice Fusion Diabetes Classification
+
+Identify patients diagnosed with Type 2 Diabetes"
+49,"
+
+
+
+
+CHALEARN Gesture Challenge 2
+
+Develop a Gesture Recognizer for Microsoft Kinect (TM)
+
+
+","$10,000",30,2 years ago,"CHALEARN Gesture Challenge 2
+
+Develop a Gesture Recognizer for Microsoft Kinect (TM)"
+50,"
+
+
+
+
+Raising Money to Fund an Organizational Mission
+
+Help worthy organizations more efficiently target and recruit loyal donors to support their causes. 
+
+
+","$10,000",27,2 years ago,"Raising Money to Fund an Organizational Mission
+
+Help worthy organizations more efficiently target and recruit loyal donors to support their causes."
+51,"
+
+
+
+
+Detecting Insults in Social Commentary
+
+
+
+            Principal Data Scientist   
+                at 
+        
+Impermium Corporation
+Redwood City, CA
+
+
+
+","$10,000",50,2 years ago,"Detecting Insults in Social Commentary
+
+
+
+            Principal Data Scientist   
+                at 
+        
+Impermium Corporation
+Redwood City, CA"
+52,"
+
+
+
+
+CPROD1: Consumer PRODucts contest #1
+
+Identify product mentions within a largely user-generated web-based corpus and disambiguate the mentions against a large product catalog.
+
+
+","$10,000",29,2 years ago,"CPROD1: Consumer PRODucts contest #1
+
+Identify product mentions within a largely user-generated web-based corpus and disambiguate the mentions against a large product catalog."
+53,"
+
+
+
+
+Data Mining Hackathon on BIG DATA (7GB) Best Buy mobile web site
+
+Predict which BestBuy product a mobile web visitor will be most interested in based on their search query or behavior over 2 years (7 GB).
+
+
+","$1,000",25,2 years ago,"Data Mining Hackathon on BIG DATA (7GB) Best Buy mobile web site
+
+Predict which BestBuy product a mobile web visitor will be most interested in based on their search query or behavior over 2 years (7 GB)."
+54,"
+
+
+
+
+Data Mining Hackathon on (20 mb) Best Buy mobile web site - ACM SF Bay Area Chapter
+
+Getting Started - Predict which Xbox game a visitor will be most interested in based on their search query.  (20 MB)
+
+
+",$600,96,2 years ago,"Data Mining Hackathon on (20 mb) Best Buy mobile web site - ACM SF Bay Area Chapter
+
+Getting Started - Predict which Xbox game a visitor will be most interested in based on their search query.  (20 MB)"
+55,"
+
+
+
+
+Job Recommendation Challenge
+
+Predict which jobs users will apply to
+
+
+","$20,000",81,2 years ago,"Job Recommendation Challenge
+
+Predict which jobs users will apply to"
+56,"
+
+
+
+
+Follow the Money: Investigative Reporting Prospect
+
+Find hidden patterns, connections, and ultimately compelling stories in a treasure trove of data about US federal campaign contributions
+
+
+","$1,000",0,2 years ago,"Follow the Money: Investigative Reporting Prospect
+
+Find hidden patterns, connections, and ultimately compelling stories in a treasure trove of data about US federal campaign contributions"
+57,"
+
+
+
+
+Merck Molecular Activity Challenge
+
+Help develop safe and effective medicines by predicting molecular activity.
+
+
+","$40,000",236,2 years ago,"Merck Molecular Activity Challenge
+
+Help develop safe and effective medicines by predicting molecular activity."
+58,"
+
+
+
+
+Global Energy Forecasting Competition 2012 - Load Forecasting
+
+A hierarchical load forecasting problem: backcasting and forecasting hourly loads (in kW) for a US utility with 20 zones.
+
+
+","$7,500",104,2 years ago,"Global Energy Forecasting Competition 2012 - Load Forecasting
+
+A hierarchical load forecasting problem: backcasting and forecasting hourly loads (in kW) for a US utility with 20 zones."
+59,"
+
+
+
+
+Global Energy Forecasting Competition 2012 - Wind Forecasting
+
+A wind power forecasting problem: predicting hourly power generation up to 48 hours ahead at 7 wind farms
+
+
+","$7,500",133,2 years ago,"Global Energy Forecasting Competition 2012 - Wind Forecasting
+
+A wind power forecasting problem: predicting hourly power generation up to 48 hours ahead at 7 wind farms"
+60,"
+
+
+
+
+Predict Closed Questions on Stack Overflow
+
+Predict which new questions asked on Stack Overflow will be closed
+
+
+","$20,000",161,2 years ago,"Predict Closed Questions on Stack Overflow
+
+Predict which new questions asked on Stack Overflow will be closed"
+61,"
+
+
+
+
+U.S. Census Return Rate Challenge
+
+Predict census mail return rates.
+
+
+","$25,000",243,2 years ago,"U.S. Census Return Rate Challenge
+
+Predict census mail return rates."
+62,"
+
+
+
+
+Facebook II - Mapping the Internet
+
+
+
+            Data Engineer   
+                at 
+        
+Facebook
+Multiple
+
+
+
+",Jobs,111,2 years ago,"Facebook II - Mapping the Internet
+
+
+
+            Data Engineer   
+                at 
+        
+Facebook
+Multiple"
+63,"
+
+
+
+limited
+
+Will I Stay or Will I Go?
+
+Predict which of our current customers will stay insured with us for an entire policy term.  
+
+
+",Private,12,2 years ago,"limited
+
+Will I Stay or Will I Go?
+
+Predict which of our current customers will stay insured with us for an entire policy term."
+64,"
+
+
+
+
+Observing Dark Worlds
+
+Can you find the Dark Matter that dominates our Universe? Winton Capital offers you the chance to unlock the secrets of dark worlds.
+
+
+","$20,000",353,2 years ago,"Observing Dark Worlds
+
+Can you find the Dark Matter that dominates our Universe? Winton Capital offers you the chance to unlock the secrets of dark worlds."
+65,"
+
+
+
+
+Traveling Santa Problem
+
+Solve ye olde traveling salesman problem to help Santa Claus deliver his presents
+
+
+","$3,000",355,2 years ago,"Traveling Santa Problem
+
+Solve ye olde traveling salesman problem to help Santa Claus deliver his presents"
+66,"
+
+
+
+
+Visualize the State of Public Education in Colorado
+
+Using 3 years of school grading data supplied by the Colorado Department of Education and R-Squared Research, visually uncover trends in the Colorado public school system.
+
+
+","$5,000",0,2 years ago,"Visualize the State of Public Education in Colorado
+
+Using 3 years of school grading data supplied by the Colorado Department of Education and R-Squared Research, visually uncover trends in the Colorado public school system."
+67,"
+
+
+
+limited
+
+Prescription Volume Prediction
+
+Predict future prescription volume
+
+
+",Private,12,2 years ago,"limited
+
+Prescription Volume Prediction
+
+Predict future prescription volume"
+68,"
+
+
+
+
+Leaping Leaderboard Leapfrogs
+
+Provide creative visualizations of the Kaggle leaderboard 
+
+
+",$900,0,2 years ago,"Leaping Leaderboard Leapfrogs
+
+Provide creative visualizations of the Kaggle leaderboard"
+69,"
+
+
+
+
+GE Hospital Quest
+
+Think it’s possible to make hospital visits hassle-free? GE does.
+
+
+","$100,000",0,2 years ago,"GE Hospital Quest
+
+Think it’s possible to make hospital visits hassle-free? GE does."
+70,"
+
+
+
+
+Event Recommendation Engine Challenge
+
+Predict what events our users will be interested in based on user actions, event metadata, and demographic information.
+
+
+","$5,000",223,2 years ago,"Event Recommendation Engine Challenge
+
+Predict what events our users will be interested in based on user actions, event metadata, and demographic information."
+71,"
+
+
+
+
+Just the Basics - Strata 2013
+
+Live from Santa Clara, CA - Core Data Science Skills with Kaggle’s Top Competitors
+
+
+",Knowledge,49,2 years ago,"Just the Basics - Strata 2013
+
+Live from Santa Clara, CA - Core Data Science Skills with Kaggle’s Top Competitors"
+72,"
+
+
+
+
+Just the Basics - Strata 2013 After-party
+
+Live from Santa Clara, CA
+
+
+",Knowledge,48,2 years ago,"Just the Basics - Strata 2013 After-party
+
+Live from Santa Clara, CA"
+73,"
+
+
+
+
+GE Flight Quest
+
+Think you can change the future of flight?
+
+
+","$250,000",173,2 years ago,"GE Flight Quest
+
+Think you can change the future of flight?"
+74,"
+
+
+
+
+Predicting Parkinson's Disease Progression with Smartphone Data
+
+Can we objectively measure the symptoms of Parkinson’s disease with a smartphone? We have the data to find out!
+
+
+","$10,000",0,2 years ago,"Predicting Parkinson's Disease Progression with Smartphone Data
+
+Can we objectively measure the symptoms of Parkinson’s disease with a smartphone? We have the data to find out!"
+75,"
+
+
+
+
+Job Salary Prediction
+
+Predict the salary of any UK job ad based on its contents
+
+
+","$6,000",289,2 years ago,"Job Salary Prediction
+
+Predict the salary of any UK job ad based on its contents"
+76,"
+
+
+
+
+Heritage Health Prize
+
+Identify patients who will be admitted to a hospital within the next year using historical claims data. (Enter by 06:59:59 UTC Oct 4 2012) 
+
+
+","$500,000",1353,2 years ago,"Heritage Health Prize
+
+Identify patients who will be admitted to a hospital within the next year using historical claims data. (Enter by 06:59:59 UTC Oct 4 2012)"
+77,"
+
+
+
+
+The Marinexplore and Cornell University Whale Detection Challenge
+
+Create an algorithm to detect North Atlantic right whale calls from audio recordings, prevent collisions with shipping traffic
+
+
+","$10,000",245,2 years ago,"The Marinexplore and Cornell University Whale Detection Challenge
+
+Create an algorithm to detect North Atlantic right whale calls from audio recordings, prevent collisions with shipping traffic"
+78,"
+
+
+
+
+Influencers in Social Networks
+
+Predict which people are influential in a social network
+
+
+","$2,350",132,2 years ago,"Influencers in Social Networks
+
+Predict which people are influential in a social network"
+79,"
+
+
+
+
+ICDAR2013 - Gender Prediction from Handwriting
+
+Predict if a handwritten document has been produced by a male or a female writer
+
+
+","$1,000",190,2 years ago,"ICDAR2013 - Gender Prediction from Handwriting
+
+Predict if a handwritten document has been produced by a male or a female writer"
+80,"
+
+
+
+
+Blue Book for Bulldozers
+
+Predict the auction sale price for a piece of heavy equipment to create a ""blue book"" for bulldozers.
+
+
+","$10,000",475,2 years ago,"Blue Book for Bulldozers
+
+Predict the auction sale price for a piece of heavy equipment to create a ""blue book"" for bulldozers."
+81,"
+
+
+
+
+ICDAR2013 - Handwriting Stroke Recovery from Offline Data
+
+Predict the trajectory of a handwritten signature
+
+
+","$1,000",40,2 years ago,"ICDAR2013 - Handwriting Stroke Recovery from Offline Data
+
+Predict the trajectory of a handwritten signature"
+82,"
+
+
+
+
+dunnhumby & hack/reduce Product Launch Challenge
+
+The success or failure of a new product launch is often evident within the first few weeks of sales. Can you predict a product's destiny? 
+
+
+","$5,000",108,2 years ago,"dunnhumby & hack/reduce Product Launch Challenge
+
+The success or failure of a new product launch is often evident within the first few weeks of sales. Can you predict a product's destiny?"
+83,"
+
+
+
+
+Challenges in Representation Learning: Multi-modal Learning
+
+The multi-modal learning challenge
+
+
+",$500,0,2 years ago,"Challenges in Representation Learning: Multi-modal Learning
+
+The multi-modal learning challenge"
+84,"
+
+
+
+
+Challenges in Representation Learning: Facial Expression Recognition Challenge
+
+Learn facial expressions from an image
+
+
+",$500,56,2 years ago,"Challenges in Representation Learning: Facial Expression Recognition Challenge
+
+Learn facial expressions from an image"
+85,"
+
+
+
+
+Challenges in Representation Learning: The Black Box Learning Challenge
+
+Competitors train a classifier on a dataset that is not human readable, without knowledge of what the data consists of.
+
+
+",$500,211,2 years ago,"Challenges in Representation Learning: The Black Box Learning Challenge
+
+Competitors train a classifier on a dataset that is not human readable, without knowledge of what the data consists of."
+86,"
+
+
+
+
+KDD Cup 2013 - Author Disambiguation Challenge (Track 2)
+
+Identify which authors correspond to the same person
+
+
+","$7,500",237,2 years ago,"KDD Cup 2013 - Author Disambiguation Challenge (Track 2)
+
+Identify which authors correspond to the same person"
+87,"
+
+
+
+
+The ICML 2013 Bird Challenge
+
+Identify bird species from continuous audio recordings
+
+
+",$500,76,2 years ago,"The ICML 2013 Bird Challenge
+
+Identify bird species from continuous audio recordings"
+88,"
+
+
+
+
+The ICML 2013 Whale Challenge - Right Whale Redux
+
+Develop recognition solutions to detect and classify right whales for BIG data mining and exploration studies
+
+
+",$500,129,2 years ago,"The ICML 2013 Whale Challenge - Right Whale Redux
+
+Develop recognition solutions to detect and classify right whales for BIG data mining and exploration studies"
+89,"
+
+
+
+
+KDD Cup 2013 - Author-Paper Identification Challenge (Track 1)
+
+Determine whether an author has written a given paper
+
+
+","$7,500",553,2 years ago,"KDD Cup 2013 - Author-Paper Identification Challenge (Track 1)
+
+Determine whether an author has written a given paper"
+90,"
+
+
+
+
+Yelp Recruiting Competition
+
+
+
+            Data Scientist   
+                at 
+        
+Yelp
+San Francisco, CA
+
+
+
+",Jobs,350,2 years ago,"Yelp Recruiting Competition
+
+
+
+            Data Scientist   
+                at 
+        
+Yelp
+San Francisco, CA"
+91,"
+
+
+
+
+Amazon.com - Employee Access Challenge
+
+Predict an employee's access needs, given his/her job role
+
+
+","$5,000",1687,23 months ago,"Amazon.com - Employee Access Challenge
+
+Predict an employee's access needs, given his/her job role"
+92,"
+
+
+
+limited
+
+MasterCard - Data Cleansing Competition
+
+Improve the quality of information within transaction data
+
+
+",Private,6,23 months ago,"limited
+
+MasterCard - Data Cleansing Competition
+
+Improve the quality of information within transaction data"
+93,"
+
+
+
+
+MLSP 2013 Bird Classification Challenge
+
+Predict the set of bird species present in an audio recording, collected in field conditions.
+
+
+","$1,800",79,22 months ago,"MLSP 2013 Bird Classification Challenge
+
+Predict the set of bird species present in an audio recording, collected in field conditions."
+94,"
+
+
+
+
+Multi-modal Gesture Recognition
+
+Recognize gesture sequences in video and depth data from Kinect
+
+
+","$10,000",53,22 months ago,"Multi-modal Gesture Recognition
+
+Recognize gesture sequences in video and depth data from Kinect"
+95,"
+
+
+
+
+RecSys2013: Yelp Business Rating Prediction
+
+RecSys Challenge 2013: Yelp business rating prediction
+
+
+",$500,158,22 months ago,"RecSys2013: Yelp Business Rating Prediction
+
+RecSys Challenge 2013: Yelp business rating prediction"
+96,"
+
+
+
+
+Cause-effect pairs
+
+Given samples from a pair of variables A, B, find whether A is a cause of B.
+
+
+","$10,000",266,22 months ago,"Cause-effect pairs
+
+Given samples from a pair of variables A, B, find whether A is a cause of B."
+97,"
+
+
+
+
+Flight Quest 2: Flight Optimization, Milestone Phase
+
+Optimize flight routes based on current weather and traffic.
+
+
+","$250,000",129,21 months ago,"Flight Quest 2: Flight Optimization, Milestone Phase
+
+Optimize flight routes based on current weather and traffic."
+98,"
+
+
+
+
+See Click Predict Fix - Hackathon
+
+Predict which 311 issues are most important to citizens
+
+
+","$1,000",80,21 months ago,"See Click Predict Fix - Hackathon
+
+Predict which 311 issues are most important to citizens"
+99,"
+
+
+
+
+The Big Data Combine Engineered by BattleFin
+
+Predict short term movements in stock prices using news and sentiment data provided by RavenPack 
+
+
+","$18,500",425,21 months ago,"The Big Data Combine Engineered by BattleFin
+
+Predict short term movements in stock prices using news and sentiment data provided by RavenPack"
+100,"
+
+
+
+
+Belkin Energy Disaggregation Competition
+
+Disaggregate household energy consumption into individual appliances
+
+
+","$25,000",165,20 months ago,"Belkin Energy Disaggregation Competition
+
+Disaggregate household energy consumption into individual appliances"
+101,"
+
+
+
+
+StumbleUpon Evergreen Classification Challenge
+
+Build a classifier to categorize webpages as evergreen or non-evergreen
+
+
+","$5,000",625,20 months ago,"StumbleUpon Evergreen Classification Challenge
+
+Build a classifier to categorize webpages as evergreen or non-evergreen"
+102,"
+
+
+
+
+Personalize Expedia Hotel Searches - ICDM 2013
+
+Learning to rank hotels to maximize purchases
+
+
+","$25,000",337,20 months ago,"Personalize Expedia Hotel Searches - ICDM 2013
+
+Learning to rank hotels to maximize purchases"
+103,"
+
+
+
+
+AMS 2013-2014 Solar Energy Prediction Contest
+
+Forecast daily solar energy with an ensemble of weather models
+
+
+","$1,000",160,19 months ago,"AMS 2013-2014 Solar Energy Prediction Contest
+
+Forecast daily solar energy with an ensemble of weather models"
+104,"
+
+
+
+
+Accelerometer Biometric Competition
+
+Recognize users of mobile devices from accelerometer data
+
+
+","$5,000",633,19 months ago,"Accelerometer Biometric Competition
+
+Recognize users of mobile devices from accelerometer data"
+105,"
+
+
+
+
+Multi-label Bird Species Classification - NIPS 2013
+
+Identify which of 87 classes of birds and amphibians are present into 1000 continuous wild sound recordings
+
+
+",Knowledge,32,19 months ago,"Multi-label Bird Species Classification - NIPS 2013
+
+Identify which of 87 classes of birds and amphibians are present into 1000 continuous wild sound recordings"
+106,"
+
+
+
+
+See Click Predict Fix
+
+Predict which 311 issues are most important to citizens
+
+
+","$4,000",532,19 months ago,"See Click Predict Fix
+
+Predict which 311 issues are most important to citizens"
+107,"
+
+
+
+
+Partly Sunny with a Chance of Hashtags
+
+What can a #machine learn from tweets about the #weather?
+
+
+",$500,259,19 months ago,"Partly Sunny with a Chance of Hashtags
+
+What can a #machine learn from tweets about the #weather?"
+108,"
+
+
+
+
+Facebook Recruiting III - Keyword Extraction
+
+
+
+            Data Scientist   
+                at 
+        
+Facebook
+Menlo Park, CA
+
+
+
+",Jobs,367,18 months ago,"Facebook Recruiting III - Keyword Extraction
+
+
+
+            Data Scientist   
+                at 
+        
+Facebook
+Menlo Park, CA"
+109,"
+
+
+
+limited
+
+As the World Churns
+
+Predict which customers will leave an insurance company in the next 12 months.
+
+
+",Private,37,18 months ago,"limited
+
+As the World Churns
+
+Predict which customers will leave an insurance company in the next 12 months."
+110,"
+
+
+
+
+Personalized Web Search Challenge
+
+Re-rank web documents using personal preferences
+
+
+","$9,000",194,17 months ago,"Personalized Web Search Challenge
+
+Re-rank web documents using personal preferences"
+111,"
+
+
+
+
+Flight Quest 2: Flight Optimization, Main Phase
+
+Optimize flight routes based on current weather and traffic.
+
+
+","$220,000",121,17 months ago,"Flight Quest 2: Flight Optimization, Main Phase
+
+Optimize flight routes based on current weather and traffic."
+112,"
+
+
+
+
+Packing Santa's Sleigh
+
+He's making a list, checking it twice; to fill up his sleigh, he needs your advice
+
+
+","$10,000",362,17 months ago,"Packing Santa's Sleigh
+
+He's making a list, checking it twice; to fill up his sleigh, he needs your advice"
+113,"
+
+
+
+
+Dogs vs. Cats
+
+Create an algorithm to distinguish dogs from cats
+
+
+",Swag,215,17 months ago,"Dogs vs. Cats
+
+Create an algorithm to distinguish dogs from cats"
+114,"
+
+
+
+
+Flight Quest 2: Flight Optimization, Final Phase
+
+Final Phase of Flight Quest 2
+
+
+","$220,000",33,16 months ago,"Flight Quest 2: Flight Optimization, Final Phase
+
+Final Phase of Flight Quest 2"
+115,"
+
+
+
+
+Conway's Reverse Game of Life
+
+Reverse the arrow of time in the Game of Life
+
+
+",Swag,142,16 months ago,"Conway's Reverse Game of Life
+
+Reverse the arrow of time in the Game of Life"
+116,"
+
+
+
+limited
+
+Flu Forecasting
+
+Predict when, where and how strong the flu will be
+
+
+",Private,50,16 months ago,"limited
+
+Flu Forecasting
+
+Predict when, where and how strong the flu will be"
+117,"
+
+
+
+
+Loan Default Prediction - Imperial College London
+
+Constructing an optimal portfolio of loans
+
+
+","$10,000",675,15 months ago,"Loan Default Prediction - Imperial College London
+
+Constructing an optimal portfolio of loans"
+118,"
+
+
+
+
+PAKDD 2014 - ASUS Malfunctional Components Prediction
+
+Predict malfunctional components of ASUS notebooks
+
+
+","$8,500",610,15 months ago,"PAKDD 2014 - ASUS Malfunctional Components Prediction
+
+Predict malfunctional components of ASUS notebooks"
+119,"
+
+
+
+
+The Random Number Grand Challenge
+
+Decode a sequence of pseudorandom numbers
+
+
+","$1,000",205,15 months ago,"The Random Number Grand Challenge
+
+Decode a sequence of pseudorandom numbers"
+120,"
+
+
+
+
+Galaxy Zoo - The Galaxy Challenge
+
+Classify the morphologies of distant galaxies in our Universe
+
+
+","$16,000",326,15 months ago,"Galaxy Zoo - The Galaxy Challenge
+
+Classify the morphologies of distant galaxies in our Universe"
+121,"
+
+
+
+
+March Machine Learning Mania
+
+Tip off college basketball by predicting the 2014 NCAA Tournament
+
+
+","$15,000",248,14 months ago,"March Machine Learning Mania
+
+Tip off college basketball by predicting the 2014 NCAA Tournament"
+122,"
+
+
+
+
+Large Scale Hierarchical Text Classification
+
+Classify Wikipedia documents into one of 325,056 categories
+
+
+",Swag,119,14 months ago,"Large Scale Hierarchical Text Classification
+
+Classify Wikipedia documents into one of 325,056 categories"
+123,"
+
+
+
+
+CONNECTOMICS
+
+Reconstruct the wiring between neurons from fluorescence imaging of neural activity
+
+
+","$3,000",143,14 months ago,"CONNECTOMICS
+
+Reconstruct the wiring between neurons from fluorescence imaging of neural activity"
+124,"
+
+
+
+limited
+
+The Analytics Edge (15.071x)
+
+Learn what predicts happiness by using informal polling questions.
+
+
+",Private,1685,14 months ago,"limited
+
+The Analytics Edge (15.071x)
+
+Learn what predicts happiness by using informal polling questions."
+125,"
+
+
+
+
+Walmart Recruiting - Store Sales Forecasting
+
+
+
+            Data Scientist   
+                at 
+        
+Walmart
+Various Locations
+
+
+
+",Jobs,691,14 months ago,"Walmart Recruiting - Store Sales Forecasting
+
+
+
+            Data Scientist   
+                at 
+        
+Walmart
+Various Locations"
+126,"
+
+
+
+
+Allstate Purchase Prediction Challenge
+
+Predict a purchased policy based on transaction history
+
+
+","$50,000",1568,13 months ago,"Allstate Purchase Prediction Challenge
+
+Predict a purchased policy based on transaction history"
+127,"
+
+
+
+limited
+
+Risky Business
+
+Predict the risk of customer credit default
+
+
+",Private,44,13 months ago,"limited
+
+Risky Business
+
+Predict the risk of customer credit default"
+128,"
+
+
+
+
+Acquire Valued Shoppers Challenge
+
+Predict which shoppers will become repeat buyers
+
+
+","$30,000",952,11 months ago,"Acquire Valued Shoppers Challenge
+
+Predict which shoppers will become repeat buyers"
+129,"
+
+
+
+
+KDD Cup 2014 - Predicting Excitement at DonorsChoose.org
+
+Predict funding requests that deserve an A+
+
+
+","$2,000",472,11 months ago,"KDD Cup 2014 - Predicting Excitement at DonorsChoose.org
+
+Predict funding requests that deserve an A+"
+130,"
+
+
+
+
+Greek Media Monitoring Multilabel Classification (WISE 2014)
+
+Multi-label classification of printed media articles to topics
+
+
+",$680,120,11 months ago,"Greek Media Monitoring Multilabel Classification (WISE 2014)
+
+Multi-label classification of printed media articles to topics"
+131,"
+
+
+
+
+MLSP 2014 Schizophrenia Classification Challenge
+
+Diagnose schizophrenia using multimodal features from MRI scans
+
+
+",Kudos,313,11 months ago,"MLSP 2014 Schizophrenia Classification Challenge
+
+Diagnose schizophrenia using multimodal features from MRI scans"
+132,"
+
+
+
+
+DecMeg2014 - Decoding the Human Brain
+
+Predict visual stimuli from MEG recordings of human brain activity
+
+
+","$5,000",267,11 months ago,"DecMeg2014 - Decoding the Human Brain
+
+Predict visual stimuli from MEG recordings of human brain activity"
+133,"
+
+
+
+
+UPenn and Mayo Clinic's Seizure Detection Challenge
+
+Detect seizures in intracranial EEG recordings
+
+
+","$8,000",200,10 months ago,"UPenn and Mayo Clinic's Seizure Detection Challenge
+
+Detect seizures in intracranial EEG recordings"
+134,"
+
+
+
+
+The Hunt for Prohibited Content
+
+Predict which ads contain illicit content
+
+
+","$25,000",285,10 months ago,"The Hunt for Prohibited Content
+
+Predict which ads contain illicit content"
+135,"
+
+
+
+
+Liberty Mutual Group - Fire Peril Loss Cost
+
+Predict expected fire losses for insurance policies
+
+
+","$25,000",634,10 months ago,"Liberty Mutual Group - Fire Peril Loss Cost
+
+Predict expected fire losses for insurance policies"
+136,"
+
+
+
+
+Higgs Boson Machine Learning Challenge
+
+Use the ATLAS experiment to identify the Higgs boson
+
+
+","$13,000",1785,9 months ago,"Higgs Boson Machine Learning Challenge
+
+Use the ATLAS experiment to identify the Higgs boson"
+137,"
+
+
+
+
+Display Advertising Challenge
+
+Predict click-through rates on display ads
+
+
+","$16,000",718,9 months ago,"Display Advertising Challenge
+
+Predict click-through rates on display ads"
+138,"
+
+
+
+
+CIFAR-10 - Object Recognition in Images
+
+Identify the subject of 60,000 labeled images
+
+
+",Knowledge,231,8 months ago,"CIFAR-10 - Object Recognition in Images
+
+Identify the subject of 60,000 labeled images"
+139,"
+
+
+
+
+Africa Soil Property Prediction Challenge 
+
+Predict physical and chemical properties of soil using spectral measurements
+
+
+","$8,000",1233,8 months ago,"Africa Soil Property Prediction Challenge 
+
+Predict physical and chemical properties of soil using spectral measurements"
+140,"
+
+
+
+
+Learning Social Circles in Networks
+
+Model friend memberships to multiple circles
+
+
+",Knowledge,203,8 months ago,"Learning Social Circles in Networks
+
+Model friend memberships to multiple circles"
+141,"
+
+
+
+
+Tradeshift Text Classification
+
+Classify text blocks in documents
+
+
+","$5,000",375,7 months ago,"Tradeshift Text Classification
+
+Classify text blocks in documents"
+142,"
+
+
+
+
+American Epilepsy Society Seizure Prediction Challenge
+
+Predict seizures in intracranial EEG recordings
+
+
+","$25,000",504,7 months ago,"American Epilepsy Society Seizure Prediction Challenge
+
+Predict seizures in intracranial EEG recordings"
+143,"
+
+
+
+
+Data Science London + Scikit-learn
+
+Scikit-learn is an open-source machine learning library for Python. Give it a try here!
+
+
+",Knowledge,191,6 months ago,"Data Science London + Scikit-learn
+
+Scikit-learn is an open-source machine learning library for Python. Give it a try here!"
+144,"
+
+
+
+
+Helping Santa's Helpers
+
+Jingle bells, Santa tells ... 
+
+
+","$20,000",439,5 months ago,"Helping Santa's Helpers
+
+Jingle bells, Santa tells ..."
+145,"
+
+
+
+
+Click-Through Rate Prediction
+
+Predict whether a mobile ad will be clicked
+
+
+","$15,000",1604,4 months ago,"Click-Through Rate Prediction
+
+Predict whether a mobile ad will be clicked"
+146,"
+
+
+
+
+BCI Challenge @ NER 2015
+
+A spell on you if you cannot detect errors!
+
+
+","$1,000",260,4 months ago,"BCI Challenge @ NER 2015
+
+A spell on you if you cannot detect errors!"
+147,"
+
+
+
+
+Sentiment Analysis on Movie Reviews
+
+Classify the sentiment of sentences from the Rotten Tomatoes dataset
+
+
+",Knowledge,861,4 months ago,"Sentiment Analysis on Movie Reviews
+
+Classify the sentiment of sentences from the Rotten Tomatoes dataset"
+148,"
+
+
+
+
+Driver Telematics Analysis
+
+Use telematic data to identify a driver signature
+
+
+","$30,000",1528,3 months ago,"Driver Telematics Analysis
+
+Use telematic data to identify a driver signature"
+149,"
+
+
+
+
+National Data Science Bowl
+
+Predict ocean health, one plankton at a time
+
+
+","$175,000",1049,3 months ago,"National Data Science Bowl
+
+Predict ocean health, one plankton at a time"
+150,"
+
+
+
+
+Finding Elo
+
+Predict a chess player's FIDE Elo rating from one game
+
+
+",Knowledge,158,3 months ago,"Finding Elo
+
+Predict a chess player's FIDE Elo rating from one game"
+151,"
+
+
+
+limited
+
+15.071x - The Analytics Edge (Spring 2015)
+
+Test your analytics skills by predicting which New York Times blog articles will be the most popular.
+
+
+",Private,0,2 months ago,"limited
+
+15.071x - The Analytics Edge (Spring 2015)
+
+Test your analytics skills by predicting which New York Times blog articles will be the most popular."
+152,"
+
+
+
+
+March Machine Learning Mania 2015
+
+Predict the 2015 NCAA Basketball Tournament
+
+
+","$15,000",341,2 months ago,"March Machine Learning Mania 2015
+
+Predict the 2015 NCAA Basketball Tournament"
+153,"
+
+
+
+
+Microsoft Malware Classification Challenge (BIG 2015)
+
+Classify malware into families based on file content and characteristics
+
+
+","$16,000",377,2 months ago,"Microsoft Malware Classification Challenge (BIG 2015)
+
+Classify malware into families based on file content and characteristics"
+154,"
+
+
+
+
+Billion Word Imputation
+
+Find and impute missing words in the billion word corpus
+
+
+",Knowledge,87,60 days ago,"Billion Word Imputation
+
+Find and impute missing words in the billion word corpus"
+155,"
+
+
+
+
+Restaurant Revenue Prediction
+
+Predict annual restaurant sales based on objective measurements
+
+
+","$30,000",2257,57 days ago,"Restaurant Revenue Prediction
+
+Predict annual restaurant sales based on objective measurements"
+156,"
+
+
+
+limited
+
+15.071x - The Analytics Edge (Spring 2015)
+
+Test your analytics skills by predicting which New York Times blog articles will be the most popular
+
+
+",Private,2923,57 days ago,"limited
+
+15.071x - The Analytics Edge (Spring 2015)
+
+Test your analytics skills by predicting which New York Times blog articles will be the most popular"
+157,"
+
+
+
+
+Forest Cover Type Prediction
+
+Use cartographic variables to classify forest categories
+
+
+",Knowledge,1694,50 days ago,"Forest Cover Type Prediction
+
+Use cartographic variables to classify forest categories"
+158,"
+
+
+
+
+How Much Did It Rain?
+
+Predict probabilistic distribution of hourly rain given polarimetric radar measurements
+
+
+",$500,321,46 days ago,"How Much Did It Rain?
+
+Predict probabilistic distribution of hourly rain given polarimetric radar measurements"
+159,"
+
+
+
+
+Otto Group Product Classification Challenge
+
+Classify products into the correct category
+
+
+","$10,000",3514,43 days ago,"Otto Group Product Classification Challenge
+
+Classify products into the correct category"
+160,"
+
+
+
+
+Walmart Recruiting II: Sales in Stormy Weather
+
+
+
+            Data Scientist   
+                at 
+        
+Walmart
+Various Locations
+
+
+
+",Jobs,485,36 days ago,"Walmart Recruiting II: Sales in Stormy Weather
+
+
+
+            Data Scientist   
+                at 
+        
+Walmart
+Various Locations"
+161,"
+
+
+
+
+Bike Sharing Demand
+
+Forecast use of a city bikeshare system
+
+
+",Knowledge,3252,32 days ago,"Bike Sharing Demand
+
+Forecast use of a city bikeshare system"
+162,"
+
+
+
+
+Random Acts of Pizza
+
+Predicting altruism through free pizza
+
+
+",Knowledge,464,29 days ago,"Random Acts of Pizza
+
+Predicting altruism through free pizza"
+163,"
+
+
+
+
+Poker Rule Induction
+
+Determine the poker hand of five playing cards
+
+
+",Knowledge,209,29 days ago,"Poker Rule Induction
+
+Determine the poker hand of five playing cards"
+164,"
+
+
+
+
+Facebook Recruiting IV: Human or Robot?
+
+
+
+            Software Engineer, Machine Learning   
+                at 
+        
+Facebook
+Menlo Park - Seattle - New York - London
+
+
+
+",Jobs,985,22 days ago,"Facebook Recruiting IV: Human or Robot?
+
+
+
+            Software Engineer, Machine Learning   
+                at 
+        
+Facebook
+Menlo Park - Seattle - New York - London"
+165,"
+
+
+
+
+West Nile Virus Prediction
+
+Predict West Nile virus in mosquitos across the city of Chicago
+
+
+","$40,000",1306,13 days ago,"West Nile Virus Prediction
+
+Predict West Nile virus in mosquitos across the city of Chicago"
+166,"
+
+
+
+
+Bag of Words Meets Bags of Popcorn
+
+Use Google's Word2Vec for movie reviews
+
+
+",Knowledge,579,16 hours ago,"Bag of Words Meets Bags of Popcorn
+
+Use Google's Word2Vec for movie reviews"
