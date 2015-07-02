@@ -16,6 +16,8 @@ Woven throughout this discussion of a praxiography of data, [TBC] Via a discussi
 
 ## Todo
 
+- quote from lazzaratto -- 
+>Diagrams (like equations, designs, graphs, apparatuses, machines, etc.) come to accelerate or slow down, destruct or stabilize, processes of deterritorialization which language has difficulty grasping. 87
 - use some of _Speaking Code_ cox-maclean to justify practice
 - the fact that spark has mlib and its examples as the standard ones
 - the github argument -- how it is changing the way in which these systems are put together
