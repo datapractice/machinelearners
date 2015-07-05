@@ -1,16 +1,27 @@
 library('stringr')
+library(dplyr)
+library(plyr)
+library(reshape2)
 library('ggplot2')
 library('tm')
 source('phrase_structures.R')
 
+read_clean <- function(f){
+      cs = read.csv(f, sep='\t', row.names=NULL, as.is=TRUE, quote='')
+      if (ncol(cs)>59) {
+          cs = subset(cs, select =-c(EI, PM))
+      }
+      return( cs) 
+  }
 #################################
 #
 # combine a whole lot of 500 record downloads into one data frame
 #
 #################################
-combine_wos_records <- function(dir){
-  files <- dir(dir,full.names=TRUE, pattern='savedrecs.*')
-  recs <-lapply(files, read.csv, sep='\t', header=TRUE, as.is=TRUE, quote='', row.names=NULL)  
+combine_wos_records <- function(data_dir){
+  files <- dir(data_dir,full.names=TRUE, pattern='savedrecs.*')
+  recs = lapply(files, read_clean)
+  #recs <-lapply(files, read.csv, sep='\t', header=TRUE, as.is=TRUE, quote='', row.names=NULL)  
   df <-do.call( rbind, recs )
   
 #   had to do this workaround to get full web of science working -- something
@@ -55,49 +66,35 @@ plot_publication_types <- function(wos){
 plot_by_discipline <- function(wos) {
   dy<-dlply(wos,.variables='PY' )
   extract_fields <- function(x){
-#     browser()
     x_s <- sapply(x$WC, str_split, pattern=';')
     return(str_trim(unlist(x_s,use.names=FALSE)))
   }
   field_year <- lapply(dy, extract_fields)
-  field_year[[10]]
-  
-#   names(f_y)
-#   sapply(f_y, length)
-#   is.vector(  f_y[[10]])
-  field_year_melt<-melt.list(field_year)
+  field_year_melt<-melt(field_year)
   names(field_year_melt) <- c('field', 'year')
-  field_year_melt[1,]
 #   could clean things up more by combining similar fields e.g. all different psychologyies
   field_year_melt$field_short <-str_extract(field_year_melt$field, pattern='\\w+')
   field_table_df <- count(field_year_melt, 'field_short')
   field_table_df <- arrange(field_table_df, freq, field_short)
-field_table_df[1:20,]
   field_table_df <- na.omit(field_table_df)
 
   field_table_df <- field_table_df[field_table_df$freq >20,]
-  ggplot(data=field_table_df, aes(x=field_short, y=freq, fill=field_short)) + geom_bar(stat='identity') +coord_flip()+opts(axis.text.y=theme_text(size=7,hjust=1)) 
+  ggplot(data=field_table_df, aes(x=field_short, y=freq, fill=field_short)) + geom_bar(stat='identity') +coord_flip()
   
   #   get all the records relating to top 30 fields
-  fields_top <-names(tail(sort(table(field_year_melt$field)),20))
-  
-  
+  fields_top <-names(tail(sort(table(field_year_melt$field)),30))
   f <- which(field_year_melt$field %in% fields_top)
-  f[1:5]
-  
   field_year_melt_top <- field_year_melt[f, ]
   field_year_melt_top <- droplevels.data.frame(field_year_melt_top)
-  field_year_melt_top[1:3,]
 #   plots of fields by years
-  ggplot(field_year_melt_top, aes(field)) + geom_bar() + coord_flip()  + facet_wrap(~year, nrow=4) +opts(axis.text.y=theme_text(size=7))
+  ggplot(field_year_melt_top, aes(field)) + geom_bar() + coord_flip()  + facet_wrap(~year, nrow=4) 
   
 #   plot the topfields over years by fields
-  ggplot(field_year_melt_top, aes(year)) + geom_bar() + facet_wrap(~field,ncol=4) +scale_x_discrete(name='years', breaks=seq(1966, 2011, 5))  
-  
-    ggplot(field_year_melt_top, aes(x=year)) + geom_histogram(aes(fill=field)) + facet_grid(field~.) 
-
-  
-
+  g = ggplot(field_year_melt_top, aes(as.Date(year, '%Y'))) + geom_bar() + facet_wrap(~field,ncol=4) 
+  #scale_x_discrete(name='years', breaks=seq(1966, 2011, 5))  
+  g  = g + scale_y_log10() + theme(text = element_text(size=7))
+    #ggplot(field_year_melt_top, aes(x=year)) + geom_histogram(aes(fill=field)) + facet_grid(field~.) 
+  return(g)
 }
 
 ##################################

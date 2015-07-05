@@ -2,4 +2,4 @@
 
 library(knitr)
 # knit('technique_demos.rmd', output='technique_demos.md')
-knit('proposal.rmd', output='proposal.md')
+knit('book.rmd', output='book.md')

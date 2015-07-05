@@ -1,11 +1,11 @@
 library(tm)
 library(topicmodels)
-library(multicore)
+library(parallel)
 files = list.files('data/topicmodel_WOS', full.names=T)
 #df = read.delim(files[1], as.is=TRUE, header=TRUE, row.names=NULL)
 #df2= read.delim(files[2], as.is=TRUE, header=TRUE, row.names=NULL)
 #df3 = rbind(df, df2)
-res = lapply(files, function(x){
+res = mclapply(files, function(x){
        read.delim(x, as.is=TRUE, header=TRUE, row.names=NULL)})
 df_all = do.call(rbind, res)
 cols = colnames(df_all)

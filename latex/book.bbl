@@ -1,0 +1,75 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{nty}
+    \entry{Hastie_2009}{book}{useprefix}
+      \name{labelname}{3}{}{%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{Hastie}{H\bibinitperiod}{Trevor}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{Tibshirani}{T\bibinitperiod}{Robert}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=6df955e00dece4d624abb0b61029f4e0}{Friedman}{F\bibinitperiod}{Jerome\bibnamedelima H.}{J\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{Hastie}{H\bibinitperiod}{Trevor}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{Tibshirani}{T\bibinitperiod}{Robert}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=6df955e00dece4d624abb0b61029f4e0}{Friedman}{F\bibinitperiod}{Jerome\bibnamedelima H.}{J\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{58d86698615fa60d4359e428ac9f10e9}
+      \strng{fullhash}{58d86698615fa60d4359e428ac9f10e9}
+      \field{sortinit}{H}
+      \field{labeltitle}{The elements of statistical learning}
+      \field{edition}{2nd edition}
+      \field{isbn}{9780387848570}
+      \field{pagetotal}{758}
+      \field{shorttitle}{The elements of statistical learning}
+      \field{title}{The elements of statistical learning: data mining, inference, and prediction}
+      \field{year}{2009}
+    \endentry
+    \entry{Mackenzie_2010}{article}{useprefix}
+      \name{labelname}{1}{}{%
+        {{hash=3cfb03bb8d2b2c3c2209dadb06e45fe9}{Mackenzie}{M\bibinitperiod}{Adrian}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=3cfb03bb8d2b2c3c2209dadb06e45fe9}{Mackenzie}{M\bibinitperiod}{Adrian}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{3cfb03bb8d2b2c3c2209dadb06e45fe9}
+      \strng{fullhash}{3cfb03bb8d2b2c3c2209dadb06e45fe9}
+      \field{sortinit}{M}
+      \field{labeltitle}{Design in synthetic biology}
+      \field{journaltitle}{{BioSocieties}}
+      \field{number}{2}
+      \field{shortjournal}{{BioSocieties}}
+      \field{title}{Design in synthetic biology}
+      \field{volume}{5}
+      \field{year}{2010}
+      \field{pages}{1\bibrangedash 19}
+      \verb{doi}
+      \verb 10.1057/biosoc.2010.4
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

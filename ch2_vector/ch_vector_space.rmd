@@ -1,8 +1,15 @@
 # 2. The vector space and its products
+\label{ch:vector}
 
 Vectorising data in a common space
 
 ## todo
+
+- the tables are not meant to be looked at -- cf. a typical report table; the quote from MF d&P is really relevant here -- present the contrast?
+- put map-reduce in -- parallelising -- my earlier paper; and also hadoop and then spark; as well as Jeff Hammerbacher\index{Hammerbacher, Jeff}j
+- the rows are sometimes called 'the observations' -- connect to MF on observation
+- the response column is what has to be constructed -- it is added on 
+- the basic functions and their transformation of the linear model into a non-linear one
 - go straight into the data -- talk about how hastie and others do this;
 - the thing about looking at patterns -- someone elses turkish carpet
 - Beniger article on history of stats graphics; Marchese on tables;
@@ -30,13 +37,15 @@ Vectorising data in a common space
 
 ## Dataset as auratic diagrams
 
+>In the form of the disciplinary distribution, on the other hand, the table has the function of treating multiplicity itself, distributing it and deriving from it as many effects as possible [@Foucault_1997, 149] \index{table} \index{Foucault, Michel}
+
 I sometimes have the feeling that machine learners  want to go everywhere in the world, that they aim to take on any problem, that they see no data as too difficult to learn on. This formulation from Matthew Kirk's _Thoughtful Machine Learning_ is typical:
 
 > Machine learning is an amazing application of computation because it tackles problems that are straight out of science fiction. These algorithms can solve voice recognition, mapping, recommendations, and disease detection. The applications are endless, which is what makes machine learning so fascinating [@Kirk_2014, 11]
 
 It is hard to find dissenting or sceptical voices (although Anand Rajaraman and David Ullman in their _Mining Massive Datasets_ do voice doubts about the power of machine learning algorithms [@Rajaraman_2012]). The epistemic imperium is not only due to the generic mathematical or computational techniques. It might arise from the data, and in particular the indexical aura of the datasets that play across play across many pages in _Elements of Statistical Learning_.   The power of the techniques  hinges on a very specific diagrammatization of data that has already begun to appear in the NAND truth table. Machine learning literature does admittedly display a somewhat stunning variety of datasets. The plots of New Zealand fishing patterns lie next to plots of factors in South African heart disease. This seemingly diasporic variety of data as well as the variety of domains and situates the datasets index are salient components of the experience of reading these texts.  What do we make of the datasets? The datasets associated with the book can be read in various ways.  
 
-```{r elemstatlearn_data, echo=FALSE, results = "asis"}
+```{r elemstatlearn_data_2, echo=FALSE, results = "asis"}
 library(ElemStatLearn)
 library(xtable)
 datasets_results <-data(package='ElemStatLearn')$results[,3:4]
@@ -47,7 +56,7 @@ print(dataset_table)
 
 ```
 
-The `r dataset_count` datasets  shown in \ref{table:datasets_elemstatlearn'} typify the diaspora of domains found in [@Hastie_2009; @Hastie_2001]. As mentioned above (by myself, but also by Kirk),  their domains span the scientific, clinical, commercial and media fields. Note that they include speaking, seeing, writing and reading, as well as the broader concerns of galaxies, caner, climate and national economies. This span of interests is not unusual. To give a another example, one of the most cited journal papers in the machine learning literature is Leo Breiman's 2001 article on random forests [@Breiman_2001]. In some ways, it simply continues what statistics as a field has always done: rove  across scattered fields ranging from astronomy to statecraft, from zoology to epidemiology, gleaning data as it goes (see [@Stigler_1986; @Hacking_1990] for samples of this trekking movement). 
+The `r dataset_count` datasets  shown in \ref{table:datasets_elemstatlearn'} typify the diaspora of domains found in [@Hastie_2009; @Hastie_2001]. As mentioned above (by myself, but also by Kirk),  their domains span the scientific, clinical, commercial and media fields. Note that they include speaking, seeing, writing and reading, as well as the broader concerns of galaxies, caner, climate and national economies. This span of interests is not unusual. To give a another example, one of the most cited journal papers in the machine learning literature is Leo Breiman's 2001 article on random forests [@Breiman_2001]. \index{Breiman, Leo} In some ways, it simply continues what statistics as a field has always done: rove  across scattered fields ranging from astronomy to statecraft, from zoology to epidemiology, gleaning data as it goes (see [@Stigler_1986; @Hacking_1990] for samples of this trekking movement). 
 
 In _Elements of Statistical Learning_ and the field of machine learning more generally, something is moving through these datasets. Their diversity is almost aleatory, as if the datasets were the fruit of random derivè in the world.  Rather than random drifting, I think it more likely the field of machine learning performs something like one of its own statistical procedures in 'bagging' (bootstrap aggregating [@Hastie_2009, 300]) datasets in order to average its predictions out across different domains. While the datasets span many domains -- vowels, ozone, bone density, marketing, prostate cancer, and spam -- their diversity  demonstrates the mobility of the techniques. The shape and organisation of these datasets attest to a certain set of alignments or architectures even that we should pay close attention to. The tabular form, the practices of naming and labelling, and the sorting of different data types exemplified in these diverse datasets can tell us a lot about how machine learning organises and energises its movement through worlds. For instance, the different shapes and composition of the datasets could be read as providing indications of the spatial forms that  machine learning algorithms actually can grapple with. There are many different ways to encounter data. Let us imagine it happens somewhat by chance, as when walking down a city street we notice something about a building for the first time. Some feature, old or new, attracts our attention. What is happening in such situations?
 
