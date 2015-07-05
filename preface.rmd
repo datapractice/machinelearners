@@ -2,6 +2,7 @@
 
 ## todo
 
+- book might not satisfy sts, mcs, philosophy or machine learning  colleagues because it does not sufficiently use any of their work
 - vignettes from texas 97 calculator through manchester fieldwork, etc
 - the sea and the escarpment; the trajectory - steel, coal, not the epicentre;
 - there is a punishing level of technical specificity here. That will disinterest some people, and rightly so. Not everyone should have to do this. 
