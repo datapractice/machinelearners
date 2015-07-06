@@ -3,6 +3,7 @@
 
 ## to do
 
+- hinton's post 2006 talk of seeing the mind of neural net  as important -- very close coupling; also opens the possibility of building deeper layers -- this is more than allegorical, since it allow neural net machine learners to capitalise on the analogical force of neural nets. but the site of this is still the competition
 - the programming of ml as the backpropagation and feed forward of machine learning as function finding into finding a function for machine learning 
 - hinton -- backpropagation of error -- the 1986 nature paper uses examples of people
 - deep neural nets [@Hassabis_2013] should appear here
@@ -215,7 +216,7 @@ These practical considerations have different significance in different settings
 
 Again, the treatment of errors provides a useful thread to follow here in locating the subject of machine learning operations. At almost every step of its development as a field, and in almost every aspect of its operation, competitions conducted through forms of examination of error rates lie at the intersection of human and machine learners. At this intersection, errors are not purely epistemic. They circulate within a wider economy of competitive optimisation that connect them to power, value and agency.  The learning of machine learning seems to incarnate learning through examinations that rank human and non-human machine learners according to error rates. We saw above that competitions to recognise handwritten digits constituted a focal point for neural nets during the 1990s. Much of the discussion of neural net in _Elements of Statistical Learning_ revolves around a competition conducted in 2003. As we will soon see, machine learning competitions more generally form one of the principal ways in which people and machines come together. What can we learn from such competitions about subject positions in machine learning?
 
-If we take a typical contemporary machine learning competition, something of the backwards and forwards movement between human and machine machine learners starts to appear. The competitions run by [Kaggle](http://www.kaggle.com) exemplify many of the movements that the back-propagation algorithm implements.\index{Kaggle} It efficiently implements a parallel architecture machine learning process by back-propagating errors to the hidden nodes embodied in individual competitors who, in principle at least, are not connected to each other, but only to the layers and nodes of Kaggle itself as a platform.  Unlike the research-oriented machine learning competitions such as the annual (KDD Cup)[http://www.sigkdd.org/kddcup/index.php] run by the Association of Computing Machinery (ACM) Special Interest Group on Knowledge Discovery and Data Mining, the NIPS (Neural Information Processing Systems) Challenges    or the International Conference on Machine Learning (ICML)[http://machinelearning.org/icml.html], the Kaggle competitions attract a range of academic, industry, commercial and individual entries. Competitors no doubt enter these competitions for various reasons, not the least of which is their employment prospects or the promotion of their machine learning products (for instance, the winner of a major competition, the Heritage Health Fund Prize in 2012 uses that prize to promote the data mining software made by his company (Tiberius)[Tiberius.biz]; an entrant in the Hewlett 'Automated Essay Competition' again in 2012 included Pacific Metrics, a US company whose automated essay scoring products were already in use in U.S. schools; while Pacific Metrics did not win the competition, it acquired the winning entry and incorporated it into its products [@GettingSmart_2012]). Kaggle.com is effectively an employment agency for machine learners [@Kaggle_2015d]. Certain competitions have recruitment as the prize (for instance, several competitions sponsored by Facebook have positions as data scientist at Facebook as the prize).
+If we take a typical contemporary machine learning competition, something of the backwards and forwards movement between human and machine machine learners starts to appear. The competitions run by [Kaggle](http://www.kaggle.com) exemplify many of the movements that the back-propagation algorithm implements.\index{Kaggle} It efficiently implements a parallel architecture machine learning process by back-propagating errors to the hidden nodes embodied in individual competitors who, in principle at least, are not connected to each other, but only to the layers and nodes of Kaggle itself as a platform.  Unlike the research-oriented machine learning competitions such as the annual (KDD Cup)[http://www.sigkdd.org/kddcup/index.php] run by the Association of Computing Machinery (ACM) Special Interest Group on Knowledge Discovery and Data Mining, the NIPS (Neural Information Processing Systems) Challenges, the ImageNet Large Scale Visual Recognition Challenge [@ILSVRC_2014]    or the International Conference on Machine Learning (ICML)[http://machinelearning.org/icml.html], the Kaggle competitions attract a range of academic, industry, commercial and individual entries. Competitors no doubt enter these competitions for various reasons, not the least of which is their employment prospects or the promotion of their machine learning products (for instance, the winner of a major competition, the Heritage Health Fund Prize in 2012 uses that prize to promote the data mining software made by his company (Tiberius)[Tiberius.biz]; an entrant in the Hewlett 'Automated Essay Competition' again in 2012 included Pacific Metrics, a US company whose automated essay scoring products were already in use in U.S. schools; while Pacific Metrics did not win the competition, it acquired the winning entry and incorporated it into its products [@GettingSmart_2012]). Kaggle.com is effectively an employment agency for machine learners [@Kaggle_2015d]. Certain competitions have recruitment as the prize (for instance, several competitions sponsored by Facebook have positions as data scientist at Facebook as the prize).
 
 > Ever wonder what it's like to work at Facebook? Facebook and Kaggle are launching an Engineering competition for 2015. Trail blaze your way to the top of the leader board to earn an opportunity at interviewing for a role as a software engineer, working on world class Machine Learning problems [@Kaggle_2015]
 
@@ -246,7 +247,6 @@ Machine learning competitions furnish a contemporary instance of the practices o
 
 In its disciplinary form, Foucault links epistemic and operational aspects of examination. Examinations combine ceremony, ritual, experiment, force and truth, as well as processes of subjectification and objectification. If, as already been suggested above, the pack-ice of machine learning formed around neural nets during the 1990s, we might say that the re-solidification of neural nets today in high profile deep learning projects can be understood in terms of a much more pervasive practice of examining and testing occurring through machine learning training and competitions. How would such a process be legible? The forms of visibility created by competitions, the ways in which they individualize and document machine learners (often by proper names), and that maximise extractions of force, time, propensities and aptitudes.  In competitive examinations, we might see attempts to construct 'parallel architectures' for people doing machine learning. Machine learning competitions effectively implement a parallel architecture for machine learners with limited communication. 
 
-[HERE] -- the data bowl and plankton identification as an update on mnist problem -- rotation, scaling, learning of features at various levels; how many science projects become like handwriting recognition -- looking at variation in images; how the competitions work with different datatypes; how the image work brings into the GPU architectures, developed for rendering of images; they become the means of classifying images, fulfilling the 1980s promise. 
 
 ```{r kaggle, echo=FALSE, messages=FALSE, warnings=FALSE, results='asis'}
     library(xtable)
@@ -255,8 +255,106 @@ In its disciplinary form, Foucault links epistemic and operational aspects of ex
     tab = xtable(df[, c('domain', 'data_type')], label='tab:kaggle_competitions')
     print(tab, 'latex')
 ```
-To take just a single example of a Kaggle competition, the National Data Science Bowl competition in 2015 tasked competitors to learn how to classify 121 different kinds of plankton using images captured by cameras towed behind ships in the waters around Florida. The data takes the form of images, just as the handwritten digits in the `MNIST` dataset do, but now appearing in much greater variety and diversity of scales and orientations. The winners of this competition, the Deep Sea team [@Kaggle_2015e] deposited the code for their winning model in a Github.com repository [@Dieleman_2015], and from their description of their team work [@Dieleman_2015b], it can be seen that deep continuities connect image-based competitions with work done on the `MNIST` dataset during the preceding decades. 
 
+
+```{r deepsea, echo=FALSE, messages=FALSE, results='asis'}
+
+    deepsea = read.csv('deep_sea_model.csv')
+    library(xtable)
+
+    tab = xtable(deepsea, label='tab:deep_sea')
+    print(tab, 'latex')
+
+```
+
+
+In many Kaggle competitions, winning entries come from teams of  machine learners working together. In the National Data Science Bowl competition of 2015, the winning team comprised seven graduate and post-doctoral researchers from Ghent University, Belgium. In a jointly written blog account of their winning entry, team 'Deep Sea' describe something of the construction of the deep learning models they built. These were convolutional  neural nets, neural nets in which unit of the network only 'look' at overlapping tiles of the input images:
+
+>We started with a fairly shallow models by modern standards (~ 6 layers) and gradually added more layers when we noticed it improved performance (it usually did). Near the end of the competition, we were training models with up to 16 layers. The challenge, as always, was balancing improved performance with increased overfitting [@Dieleman_2015a].
+
+Like many of the entrants in image-based classification competitions such as the ImageNet Large Scale Visual Recognition Challenge [@ILSVRC_2014], 'Deep Sea' built their machine learner  in several stages, first deriving features \index{feature} from the data by creating various layers that looked for common features across various scales, rotations and other transformations of the plankton images, and then adding neural net layers to classify those derived features using the labels supplied in the training set. In this respect, and in almost perfect synchrony with the deep learning teams at Google, Facebook and many other places, 'Deep Sea' combined supervised and unsupervised learning techniques \index{learning, supervised}. The lower convolutional layers that process the images are strictly speaker unsupervised because they make no use of the known labels or categories of the plankton; the upper layers are supervised because they make use of tthe labels in the normal back-propagation process of neural net training. 
+
+In comparison to the neural nets discussed above, the deep belief networks involve many more parameters, stages of observation and modelling, configuration of hardware and infrastructural arrangements and comparison of results. 'Deep Sea' describe the architecture of one of their more successful models:
+
+> It has 13 layers with parameters (10 convolutional, 3 fully connected) and 4 spatial pooling layers. The input shape is (32, 1, 95, 95), in bc01 order (batch size, number of channels, height, width). The output shape is (32, 121). For a given input, the network outputs 121 probabilities that sum to 1, one for each class.
+
+They go on to describe the different layers -- cyclic slice, convolutional, spatial pooling -- that derive features from the data or augmenting it - by examining overlapping tiles, by rotating or scaling the images, so that any given image, is 'seen' in a number of different ways, and the model learns to detect these variations. (A summary of this architecture is shown in \ref{tab:deep_sea}.)  These combinations of diverse layers in a stratified model introduces many different parameters into the model and implies heavy computational work. Probably many other competitors in this competition would not have had access to the Tesla K40 or 'NVIDIA GTX 980 Superclocked' GPU cards that 'Deep Sea' relied on to. Even with that intensive computational resource, their models required 'between 24 and 48 hours to reach convergence.' They constructed around 300 models. Because of the plethora of models with different architectures and parameters, 'we had to select how many and which models to use in the final blend. For this, we used cross-validation on our validation set' [@Dieleman_2015a]. As is so often the case in machine learning, the configuration of machine learners by competitive examination engenders populations of models whose aggregate tendencies come to embody a model -- in the sense of optimum  -- performance. The competition itself, then, is more like a meta-population event, since populations of models converge in a visible hierarchy within it. Both during and after the conference, the visibility of the leaderboard becomes gives access to and elicits further efforts to render visible, usually in the form of descriptions of winning entries and sometimes positing of model code.[^7.40] The 'DeepSea' team might be a typical intersectional entity today. Like the 'wonderful people' described by Hilary Mason, they bring together infrastructure, engineering, mathematics/statistics and some knowledge of human behaviour (although the knowledge of human behaviour in this case might have more to do with what other Kaggle competitors might be doing, as well as an awareness of the cutting edge research leaders in the field of visual object recognition techniques). 
+
+[HERE]
+
+```
+    l0_variable = nn.layers.InputLayer((batch_size, 1, patch_sizes[0][0], patch_sizes[0][1]))
+    l0c = dihedral.CyclicSliceLayer(l0_variable)
+
+    l1a = Conv2DLayer(l0c, num_filters=32, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l1b = Conv2DLayer(l1a, num_filters=16, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l1 = MaxPool2DLayer(l1b, ds=(3, 3), strides=(2, 2))
+    l1r = dihedral.CyclicConvRollLayer(l1)
+
+    l2a = Conv2DLayer(l1r, num_filters=64, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l2b = Conv2DLayer(l2a, num_filters=32, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l2 = MaxPool2DLayer(l2b, ds=(3, 3), strides=(2, 2))
+    l2r = dihedral.CyclicConvRollLayer(l2)
+
+    l3a = Conv2DLayer(l2r, num_filters=128, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l3b = Conv2DLayer(l3a, num_filters=128, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l3c = Conv2DLayer(l3b, num_filters=64, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l3 = MaxPool2DLayer(l3c, ds=(3, 3), strides=(2, 2))
+    l3r = dihedral.CyclicConvRollLayer(l3)
+
+    l4a = Conv2DLayer(l3r, num_filters=256, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l4b = Conv2DLayer(l4a, num_filters=256, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l4c = Conv2DLayer(l4b, num_filters=128, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)    
+    l4 = MaxPool2DLayer(l4c, ds=(3, 3), strides=(2, 2))
+    l4r = dihedral.CyclicConvRollLayer(l4)
+    l4f = nn.layers.flatten(l4r)
+
+    l5 = nn.layers.DenseLayer(l4f, num_units=256, W=nn_plankton.Orthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l5r = dihedral.CyclicRollLayer(l5)
+
+    l6 = nn.layers.DenseLayer(l5r, num_units=256, W=nn_plankton.Orthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+    l_variable = dihedral.CyclicPoolLayer(l6, pool_function=nn_plankton.rms)
+
+
+    # fixed scale part
+    l0_fixed = nn.layers.InputLayer((batch_size, 1, patch_sizes[1][0], patch_sizes[1][1]))
+    l0c = dihedral.CyclicSliceLayer(l0_fixed)
+
+    l1a = Conv2DLayer(l0c, num_filters=16, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+    l1b = Conv2DLayer(l1a, num_filters=8, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+    l1 = MaxPool2DLayer(l1b, ds=(3, 3), strides=(2, 2))
+    l1r = dihedral.CyclicConvRollLayer(l1)
+
+    l2a = Conv2DLayer(l1r, num_filters=32, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+    l2b = Conv2DLayer(l2a, num_filters=16, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+    l2 = MaxPool2DLayer(l2b, ds=(3, 3), strides=(2, 2))
+    l2r = dihedral.CyclicConvRollLayer(l2)
+
+    l3a = Conv2DLayer(l2r, num_filters=64, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+    l3b = Conv2DLayer(l3a, num_filters=64, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+    l3c = Conv2DLayer(l3b, num_filters=32, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+    l3 = MaxPool2DLayer(l3c, ds=(3, 3), strides=(2, 2))
+    l3r = dihedral.CyclicConvRollLayer(l3)
+    l3f = nn.layers.flatten(l3r)
+
+    l4 = nn.layers.DenseLayer(l3f, num_units=128, W=nn_plankton.Orthogonal(1.0), b=nn.init.Constant(0.1))
+    l4r = dihedral.CyclicRollLayer(l4)
+
+    l5 = nn.layers.DenseLayer(l4r, num_units=128, W=nn_plankton.Orthogonal(1.0), b=nn.init.Constant(0.1))
+    l_fixed = dihedral.CyclicPoolLayer(l5, pool_function=nn_plankton.rms)    
+
+
+    # merge the parts
+    l_merged = nn.layers.concat([l_variable, l_fixed])
+
+    l7 = nn.layers.DenseLayer(l_merged, num_units=data.num_classes, nonlinearity=T.nnet.softmax, W=nn_plankton.Orthogonal(1.0))
+
+```
+
+[^7.40]: On the command line, `git clone https://github.com/benanne/kaggle-ndsb` makes a copy of the model code. The code in that github repository gives some idea of the mosaic of techniques, configurations, variations and tests undertaken by 'DeepSea.'
+
+
+[HERE] -- the data bowl and plankton identification as an update on mnist problem -- rotation, scaling, learning of features at various levels; how many science projects become like handwriting recognition -- looking at variation in images; how the competitions work with different datatypes; how the image work brings into the GPU architectures, developed for rendering of images; they become the means of classifying images, fulfilling the 1980s promise. 
 
 ## Conclusion
 
