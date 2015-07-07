@@ -11,6 +11,7 @@
 
 ## todo
 
+- inceptionism as the complement of kittydar?
 - present what I've been doing as an account of a transformation in human-machine relations; something that transforms scale, agency, dispersion, etc;
 - return to 'into' and 'out' of the data: so many attempts to get things out of the data; little effort to puts things into the data;
 - what if this book was a model -- what kind of model would it be
