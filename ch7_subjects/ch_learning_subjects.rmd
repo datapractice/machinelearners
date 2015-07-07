@@ -3,6 +3,11 @@
 
 ## to do
 
+
+- quote to use:
+> One example is here the Kaggle plankton detection competition. At first I thought about entering the competition as I might have a huge advantage through my 4 GPU system. I reasoned I might be able to train a very large convolutional net in a very short time – one thing that others cannot do because they lack the hardware. 
+https://timdettmers.wordpress.com/2014/08/14/which-gpu-for-deep-learning/
+
 - the programming of ml as the backpropagation and feed forward of machine learning as function finding into finding a function for machine learning 
 - hinton -- backpropagation of error -- the 1986 nature paper uses examples of people
 - deep neural nets [@Hassabis_2013] should appear here
