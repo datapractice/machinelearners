@@ -16,11 +16,11 @@
 ## ch introduction
 
 - the feeling of agency, no matter how limited, comes from movement. This movement can take different forms -- it can be motoric, perceptual, affective, conceptual, animated, mechanised. But the point is that the feeling can then be concatenated, give rise to patterns of imitation, and to conflagrations and contagions that ignite or flow along faultlines and zones of slippage. We should not, according to Foucault begin from the vast strategic or even hegemonic monuments but from the local relations of force. 
-- add pasquinelli on feeling for mathematical
+- add pasquinelli on feeling for mathematical - I have that in notes file ... 
 
 ## ch_praxis
 
-
+- use some of the literature from sts handbook on design/making e.g. Ratto
 - the fact that spark has mlib and its examples as the standard ones
 - the github argument -- how it is changing the way in which these systems are put together
 - add in McCloskey 2014 paper on the diagrammatic (in doc archive -- data_intensve)
