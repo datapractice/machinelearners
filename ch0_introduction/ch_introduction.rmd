@@ -1,11 +1,11 @@
-# Introduction
+\chapter{Introduction}
 \label{ch:introduction}
 
 ## Introduction - a decisive change in the place of prediction
 
->_Definition_: A computer program is said to **learn** from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, improves with experience $E$ 2.  [@Mitchell_1997, 2]
+>_Definition_: A computer program is said to **learn** from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, improves with experience $E$ 2  [@Mitchell_1997, 2]. \index{Mitchell, Tom}
 
->In the past fifteen years, the growth in algorithmic modeling applications and methodology has been rapid. It has occurred largely outside statistics in a new community—often called machine learning—that is mostly young computer scientists (Section 7). The advances, particularly over the last five years, have been startling [@Breiman_2001a,200].
+>In the past fifteen years, the growth in algorithmic modeling applications and methodology has been rapid. It has occurred largely outside statistics in a new community—often called machine learning—that is mostly young computer scientists (Section 7). The advances, particularly over the last five years, have been startling [@Breiman_2001a,200] \index{Breiman, Leo}
 
 >The key question isn't 'How much will be automated?' It's how we'll conceive of whatever _can't_ be automated at a given time. [@Lanier_2013, 77]
 
