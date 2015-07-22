@@ -1,0 +1,10 @@
+library(ggplot2)
+library(stringr)
+library(reshape)
+df = read.csv('data/google_trends_clean.csv',  header=TRUE,stringsAsFactors=FALSE)
+df$week = str_extract(df$Week, '\\d{4}-\\d{2}-\\d{2}')
+df = df[, -1]
+dfm = melt(df, id.vars='week')
+g = ggplot(dfm, aes(x=as.Date(week), y=value, group=variable))+ geom_line(aes(linetype=variable)) + geom_smooth(aes(linetype=variable),size=1.5) + scale_x_date()
+g + geom_text(data=NULL, x=5, y=30, label = 'Google Trends shows search term usage globally 2004-2015')
+g +  theme(legend.justification=c(1,0), legend.position=c(1,0.6))
