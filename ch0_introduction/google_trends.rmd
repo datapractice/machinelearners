@@ -1,0 +1,21 @@
+## 'Breakout' search terms on Google
+
+```{r google_trends_load, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(stringr)
+df = read.csv('data/google_trends_clean.csv',  header=TRUE,stringsAsFactors=FALSE)
+df$week = str_extract(df$Week, '\\d{4}-\\d{2}-\\d{2}')
+df = df[, -1]
+```
+
+The volume and geography of searches on Google provide some evidence of interest in particular topics. If we search for terms such as `r colnames(df)[1:5]` on the [Google Trends](http://www.google.com/trends) service, the results for the last decade or so suggest both increasing and decreasing interest in these topics. 
+
+```{r google_trends, echo=FALSE, message=FALSE, fig.cap='test', dpi=600, dev='CairoPDF', warning=FALSE}
+library(ggplot2)
+library(reshape)
+dfm = melt(df, id.vars='week')
+g = ggplot(dfm, aes(x=as.Date(week), y=value, group=variable))+ geom_line(aes(linetype=variable)) + geom_smooth(aes(linetype=variable)) + scale_x_date() + xlab('Years')
+g +  theme(legend.justification=c(1,0), legend.position=c(0.9,0.6), panel.grid.minor=element_blank(),  panel.grid.major=element_blank())
+
+```
+
