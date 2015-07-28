@@ -1,5 +1,5 @@
 
-# 6. Re-scaling and shifting objects with machine learning
+\chapter{ Re-scaling and shifting objects with machine learning}
 \label{ch:genome}
 
 ## todo

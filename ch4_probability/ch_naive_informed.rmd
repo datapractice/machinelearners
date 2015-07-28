@@ -1,5 +1,5 @@
 
-# 4. $N = all$: machine learning gets all the data
+\chapter{$N = all$: machine learning gets all the data}
 \label{ch:probability}
 
 ## Introduction

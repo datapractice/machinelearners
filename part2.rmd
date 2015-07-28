@@ -1,8 +1,7 @@
 
-# Part 2: Modes of ordering
-# Part 2: Regularities and dispersed diagrams
+\Part{ Modes of dispersion}
 
-
+- Part 2: Regularities and dispersed diagrams
 - objects and subjects
 - large brain
 - deep reconstruction
