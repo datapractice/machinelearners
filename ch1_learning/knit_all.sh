@@ -1,4 +1,4 @@
 #!/usr/bin/Rscript
 
 library(knitr)
-knit('ch1_praxis.rmd', output='ch1_praxis.md')
+knit('ch_praxis.rmd', output='ch_praxis.md')
