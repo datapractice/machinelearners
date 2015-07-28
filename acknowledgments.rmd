@@ -1,4 +1,4 @@
-## Acknowledgment
+\section{ Acknowledgment}
 \label{ch:acknowledgment}
 
 This book stems from a matrix of  protracted and varying correlations. My engagement with the topic of machine learning took place quite obliquely, yet in some ways represents the prolongation of a long trajectory. I would like to acknowledge my Texas Instruments TI-97 scientific calculator on which I first intuited in high school mathematics classes something of correlation. There I first glimpsed the idea of fitting a line to points without using just a pencil and a ruler to work out the best fit. I also would like to thank my mathematics teachers at Wollongong High for the simple pleasures of numerical optimization they first introduced to me. I note with interest that Newton's method for finding the minimum value of a continuous function is still  massively prevalent in machine learning. I would also like to acknowledge several computers, principally my Toshiba laptop with Xubuntu operating system and solid state drive as well as a score of wireless routers that have supported my connection to code, data, scientific papers, search engines and so forth.  

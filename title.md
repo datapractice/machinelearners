@@ -1,10 +1,10 @@
-\documentclass[timesfont,dblspace]{MITPress-diacriTech-7x9}
-\booktitle{ Into the data}
+\documentclass[timesfont,dblspace]{book}
 
-\subtitle{An archaeology of machine learning}
+\title{ Into the data: An archaeology of machine learning}
 
 
-\edauthor{Adrian Mackenzie}
+
+\author{Adrian Mackenzie}
 
 - Machine learners: an archaeology of prediction
 - Unlearning machine learning
