@@ -1,6 +1,5 @@
 #!/usr/bin/zsh
 
-# convert all rmd to md using knitr
 #
 # give list of md to pandoc to produce one latex document
 rm book.rmd
