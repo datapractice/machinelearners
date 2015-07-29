@@ -1,8 +1,4 @@
-\documentclass[timesfont,dblspace]{book}
-
 \title{ Into the data: An archaeology of machine learning}
-
-
 
 \author{Adrian Mackenzie}
 
