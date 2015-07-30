@@ -4,10 +4,12 @@
 #pandoc --smart --normalize --latex-engine=xelatex  --template=template.latex --bibliography=~/Documents/ref_bibs/data_forms_thought.bib --bibliography=references/machine_learning.bib --bibliography=references/ch5_refs.bib proposal.rmd -o proposal.pdf 
 
 pandoc --biblatex title.md -o title.tex
+echo '\documentclass[book.tex]{subfiles}\n' | cat - title.tex > temp && mv temp title.tex
 pandoc --biblatex acknowledgments.rmd -o acknowledgments.tex
 pandoc --biblatex preface.rmd -o preface.tex
 cd ch0_introduction/
 pandoc --biblatex ch_introduction.md -o ch.tex
+echo '\documentclass[../book.tex]{subfiles}\n' | cat - ch.tex > temp && mv temp ch.tex
 cd ..
 cd ch1_learning/
 pandoc --biblatex ch_praxis.md -o ch.tex

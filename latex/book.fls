@@ -54,8 +54,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex2.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex2.sty
-INPUT /usr/share/texmf/tex/latex/etoolbox/etoolbox.sty
-INPUT /usr/share/texmf/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty

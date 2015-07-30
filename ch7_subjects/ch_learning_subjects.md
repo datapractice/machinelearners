@@ -131,6 +131,13 @@ The common diagrammatic operations of neural nets and other supervised machine l
 
 ```r
 library(neuralnet)
+```
+
+```
+## Error in library(neuralnet): there is no package called 'neuralnet'
+```
+
+```r
 titanic = read.csv('data/titanic3.csv')
 titanic_transformed = as.data.frame(model.matrix(~survived + age+ pclass + fare+ sibsp + sex
 + parch + embarked, titanic))
@@ -160,8 +167,19 @@ titanic_train = titanic_transformed[train_index,]
 titanic_net = neuralnet(survived ~ age +pclass + fare + sexmale + sibsp + parch
 + embarkedC + embarkedQ + embarkedS, data=titanic_train, err.fct='ce',
 linear.output=FALSE, hidden=5) 
+```
+
+```
+## Error in eval(expr, envir, enclos): could not find function "neuralnet"
+```
+
+```r
 titanic_test = titanic_transformed[-train_index,]
 test_error = round(sum( 0.5 < compute(titanic_net, titanic_test[,-c(1,2)])$net.result)/sum(titanic_test$survived), 2)
+```
+
+```
+## Error in eval(expr, envir, enclos): could not find function "compute"
 ```
 
 The line of the code that constructs a neural net using the `neuralnet` library [@Fritsch_2012], and the description of the classifier here is a familiar one. Despite its biological inspiration, the `R` formula for the neural net looks very similar to other machine learners. It models whether someone `survived` the wreck of the Titanic in terms of their age, class of fare (`pclass`), sex, number of siblings/spouse (`sibsp`), number of parents/children (`parch`) and port of departure:
@@ -180,7 +198,7 @@ The final major form in which neural net appear is the network diagram. Network 
 
 
 ```
-## NULL
+## Error in plot.nn(titanic_net, fontsize = 8, show.weights = FALSE): object 'titanic_net' not found
 ```
 
 ```
@@ -282,7 +300,7 @@ In its disciplinary form, Foucault links epistemic and operational aspects of ex
 ```
 
 % latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Wed Jul 29 12:37:25 2015
+% Thu Jul 30 16:34:30 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rll}
@@ -477,7 +495,7 @@ In its disciplinary form, Foucault links epistemic and operational aspects of ex
 
 
 % latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Wed Jul 29 12:37:25 2015
+% Thu Jul 30 16:34:30 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rlll}

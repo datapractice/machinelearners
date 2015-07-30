@@ -1,6 +1,6 @@
 # Fdb version 3
-["latex"] 1438163368 "book.tex" "book.dvi" "book" 1438163368
-  "/etc/texmf/web2c/texmf.cnf" 1433798572 475 c0e671620eb5563b2130f56340a5fde8 ""
+["latex"] 1438270193 "book.tex" "book.dvi" "book" 1438270193
+  "/etc/texmf/web2c/texmf.cnf" 1433779079 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty" 1338332114 189108 8b3553a56c83ff61acecb36b75d817e2 ""
   "/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty" 1338332114 70752 45fa392800e07da61fa13446ad46b34d ""
@@ -19,6 +19,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty" 1368312746 65148 c61accbd2b9a5316d9be0887ec48d722 ""
   "/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty" 1368312746 62748 b02c0dc118f5f35146d37cec569e83b1 ""
   "/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty" 1214928088 15274 9f6a2469ac8ebe6168e12b8f32cbe599 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1294098555 41188 02561c41bb08b479074b6e76f0b7d639 ""
   "/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty" 1284422013 40502 e003406220954b0716679d7928aedd8a ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty" 1399675188 2317 0ace13e225e9d95dd9defe947adc9fbb ""
   "/usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def" 1352416072 3471 43fa5241d35e8bdbf02746c6d8e25fc2 ""
@@ -37,23 +38,22 @@
   "/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty" 1424169028 7052 fac8c3b541ee104f7f49d30661393644 ""
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1424169028 31088 8e088e958dd0258cc5414842768a3a00 ""
-  "/usr/share/texmf/tex/latex/etoolbox/etoolbox.sty" 1294074850 41188 02561c41bb08b479074b6e76f0b7d639 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1424169028 31088 8e088e958dd0258cc5414842768a3a00 ""
-  "/var/lib/texmf/web2c/pdftex/latex.fmt" 1433798777 722833 a08f209f2af5da9eb5f9a7ba404e72f4 ""
-  "book.aux" 1430431830 5470 70c5ce629f9baa3f6782a9d708e1b52a ""
-  "book.ind" 1438163368 0 d41d8cd98f00b204e9800998ecf8427e "makeindex book.idx"
-  "book.tex" 1438102109 838 b905675e03ea9e2bf545db12a8a5451b ""
-  "mystyle.sty" 1430431096 396 e1db7cbe096708715c510cad12c3ad56 ""
+  "/var/lib/texmf/web2c/pdftex/latex.fmt" 1437989098 722834 6a789745c081706444ffbed451d0fc58 ""
+  "book.aux" 1430468746 5470 70c5ce629f9baa3f6782a9d708e1b52a ""
+  "book.ind" 0 -1 0 "makeindex book.idx"
+  "book.tex" 1438245064 838 b905675e03ea9e2bf545db12a8a5451b ""
+  "mystyle.sty" 1430468746 396 e1db7cbe096708715c510cad12c3ad56 ""
   (generated)
-  "book.out"
-  "book.aux"
   "book.idx"
-  "book.bcf"
-  "book.toc"
   "book.dvi"
+  "book.aux"
+  "book.out"
   "book.run.xml"
+  "book.toc"
+  "book.bcf"
   "book.log"
-["makeindex book.idx"] 1438163368 "book.idx" "book.ind" "book" 1438163368
+["makeindex book.idx"] 1438163368 "book.idx" "book.ind" "book" 1438270193
   "book.idx" 1438163334 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "book.ind"

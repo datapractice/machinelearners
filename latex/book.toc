@@ -31,7 +31,3 @@
 \contentsline {chapter}{\numberline {8}Conclusion}{25}{chapter.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Bibliography}{27}{chapter.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{mlrs}{29}{chapter*.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{general}{29}{chapter*.7}
