@@ -1,6 +1,6 @@
-\part{Data forms of thought: vectors, functions and distributions}
+\chapter{Operations and diagrams}
 
-# Part 1: Formations and diagrams
+## Part 1: Formations and diagrams
 
 ## alternate title - diagrams and asignifying machine
 - Personify techniques of vectorization

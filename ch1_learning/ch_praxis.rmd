@@ -282,7 +282,14 @@ The so-called 'learning problem' and the theory of learning machines that was de
 
 If we compare \ref{fig:perceptron_1958}  to a typical contemporary diagram of a neural network, the differences are not that great in many ways.
 
-![Single layer feedforward artificial network [@Hastie_2009, 393]](figure/ann_hastie_2009_393.png)
+\begin{figure}
+  \centering
+      \includegraphics[width=0.9\textwidth]{figure/hastie_ann_2009_393.pdf}
+        \caption{Neural network from Hastie (2009); Single layer feedforward artificial neural network}
+  \label{fig:hastie_ann}
+\end{figure}
+
+![Single layer feedforward artificial network [@Hastie_2009, 393]](figure/hastie_ann_2009_393.pdf)
 
 The diagram of a neural network found in _Elements of Statistical Learning_ is very typical. Almost identical diagrams will be found in any number of places. The contrast between the two figures, if we leave aside the typography and the artefacts relating to the how the diagrams were produced (on a typewriter or a vector-based drawing software) relate mainly to the labelling. Figure 1 from [@Rosenblatt_1958] has no mathematical symbols on it, but the one from [@Hastie_2009] does. Rosenblatt's retains neuro-cognitive-anatomical reference points (retina, association area, projection area) whereas Hastie et. al.'s replaces them with the symbols that we have already seen in play in the expression for the linear model \ref{eq:linear_model}. What has happened between the two diagrams?
 
