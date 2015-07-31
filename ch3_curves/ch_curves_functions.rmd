@@ -1,6 +1,12 @@
 \chapter{Machines finding functions}
 \label{ch:function}
 
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8, 
+                      echo=FALSE, warning=FALSE, message=FALSE, dev='pdf')
+```
+
 ## to do
 
 - add secondary refs from zotero on steepest descent

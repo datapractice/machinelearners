@@ -1,12 +1,11 @@
 \documentclass[a4paper,11pt]{book}
 \usepackage{mybook} 
 \usepackage{subfiles}
-\usepackage{hyperref}
-%\usepackage[backend=biber]{biblatex}
-%\bibliography{bib}
+\title{ Into the data: An archaeology of machine learning}
+\author{Adrian Mackenzie}
 \begin{document}
 \frontmatter
-\subfile{title.tex}
+\maketitle
 \subfile{preface.tex}
 \subfile{acknowledgments.tex}
 \tableofcontents
@@ -24,19 +23,17 @@
 \cleardoublepage \phantomsection \addcontentsline{toc}{chapter}{Part II}
 \part*{Modes of dispersion}
 \subfile{part2.tex}
-\subfile{ch5_dimensionality/ch.tex}
-\subfile{ch6_topologies/ch.tex}
-\subfile{ch7_subjects/ch.tex}
-\subfile{ch8_conclusion/ch.tex}
+%\subfile{ch5_dimensionality/ch.tex}
+%\subfile{ch6_topologies/ch.tex}
+%\subfile{ch7_subjects/ch.tex}
+%\subfile{ch8_conclusion/ch.tex}
 \backmatter
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{Bibliography}
 %\printbibliography
-\cleardoublepage
-\addcontentsline{toc}{chapter}{Bibliography}
-\printbibliography
-\cleardoublepage
+%\cleardoublepage
 %\addcontentsline{toc}{chapter}{mlrs}
 %\addcontentsline{toc}{chapter}{general}
 %\printindex{mlrs}{Machine learners}
 \printindex
-\addcontentsline{toc}{chapter}{Index}
 \end{document}

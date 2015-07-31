@@ -2,6 +2,12 @@
 \chapter{$N = all$: machine learning gets all the data}
 \label{ch:probability}
 
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8, 
+                      echo=FALSE, warning=FALSE, message=FALSE, dev='pdf')
+```
+
 ## Introduction
 
 In the final pages of _The Taming of Chance_, the philosopher Ian Hacking describes the work of the geodesic philosopher C.S. Peirce in terms of a twin affirmation of chance. On the one hand, Peirce, following the work of the psychophysicist Gustav Fechner and before him the astronomer-sociologist Adolphe Quetelet, makes the normal curve into an underlying reality.[^4.1] The 'personal equation,' the variation in measurements made by any observer, become 'a reality underneath the phenomena of consciousness' [@Hacking_1990, 205]. At the same time, and in order to show the underlying reality of the curve, 'Peirce deliberately used the properties of chance devices to introduce a new level of control into his experimentation. Control not by getting rid of chance fluctuations, but by adding some more' [@Hacking_1990, 205]. Peirce's belief in absolute chance, 'a universe of chance' as Hacking puts it, came in the way of a series of 'realization' of curves, in which first social, then biological and finally psychological variations were all understood as evidence of a generative function, the normal distribution or Gaussian function. In the century or so since, what happened to the thorough-going affirmation of statistical thought and probabilistic practice epitomised by Peirce? Hacking stresses that he does not understand Peirce as the precursor or the innovator of twentieth century statistical thought (Hacking's _Taming of Chance_ ends at 1900), but rather as 'the first philosopher completely to internalize the way chance had been tamed in the nineteenth century' (215). What would the equivalent philosopher-machine learner internalize today? What would such persons, working in science or media or government, hold firm in relation to chance, probability and statistics? 

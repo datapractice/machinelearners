@@ -1,5 +1,8 @@
 \ProvidesPackage{mybook}
 \usepackage{subfiles}
+\usepackage{textpos}
+\usepackage{etex}
+\reserveinserts{32}
 %\usepackage[dvips]{graphicx}
 \usepackage[pdftex]{graphicx} 
 \usepackage{amsmath}
@@ -9,6 +12,9 @@
 \usepackage[font={small}]{caption}
 \usepackage[backend=biber,style=numeric-comp,natbib=true]{biblatex}
 \usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage{listings}
+\lccode`~=0
 \usepackage{showidx}
 \addbibresource{./ref_bibs/data_forms_thought.bib}
 \addbibresource{./ref_bibs/mackenzie.bib}

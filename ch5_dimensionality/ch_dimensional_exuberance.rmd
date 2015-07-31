@@ -7,9 +7,11 @@ Finding patterns in data
 Movements in machine learning: patterns of generalization
 Dimensional exuberance and pattern recognition in movement
 
-```{r echo=FALSE} 
-library(knitr)
-opts_chunk$set(results='asis', message=FALSE, warnings=FALSE, cache=TRUE)
+
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8, 
+                      echo=FALSE, warning=FALSE, message=FALSE, dev='pdf')
 ```
 
 ## todo

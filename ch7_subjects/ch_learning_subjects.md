@@ -1,6 +1,9 @@
 \chapter{ Optimising machine learners to learn on their own}
 \label{ch:subjects}
 
+
+
+
 ## to do
 
 - possibly add the convolutional aspect of this -- feature learning -- isn't this an important shift
@@ -164,6 +167,10 @@ titanic_test = titanic_transformed[-train_index,]
 test_error = round(sum( 0.5 < compute(titanic_net, titanic_test[,-c(1,2)])$net.result)/sum(titanic_test$survived), 2)
 ```
 
+```
+## Error in nrow[w] * ncol[w]: non-numeric argument to binary operator
+```
+
 The line of the code that constructs a neural net using the `neuralnet` library [@Fritsch_2012], and the description of the classifier here is a familiar one. Despite its biological inspiration, the `R` formula for the neural net looks very similar to other machine learners. It models whether someone `survived` the wreck of the Titanic in terms of their age, class of fare (`pclass`), sex, number of siblings/spouse (`sibsp`), number of parents/children (`parch`) and port of departure:
 
 `survived ~ age +pclass + fare + sexmale + sibsp + parch + embarkedC + embarkedQ + embarkedS`
@@ -180,11 +187,11 @@ The final major form in which neural net appear is the network diagram. Network 
 
 
 ```
-## NULL
+## Error in plot.nn(titanic_net, fontsize = 8, show.weights = FALSE): weights were not calculated
 ```
 
 ```
-## png 
+## pdf 
 ##   2
 ```
 
@@ -276,13 +283,8 @@ Machine learning competitions furnish a contemporary instance of the practices o
 In its disciplinary form, Foucault links epistemic and operational aspects of examination. Examinations combine ceremony, ritual, experiment, force and truth, as well as processes of subjectification and objectification. If, as already been suggested above, the pack-ice of machine learning formed around neural nets during the 1990s, we might say that the re-solidification of neural nets today in high profile deep learning projects can be understood in terms of a much more pervasive practice of examining and testing occurring through machine learning training and competitions. How would such a process be legible? The forms of visibility created by competitions, the ways in which they individualize and document machine learners (often by proper names), and that maximise extractions of force, time, propensities and aptitudes.  In competitive examinations, we might see attempts to construct 'parallel architectures' for people doing machine learning. Machine learning competitions effectively implement a parallel architecture for machine learners with limited communication. 
 
 
-
-```
-## Loading required package: methods
-```
-
 % latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Fri Jul 31 14:49:09 2015
+% Fri Jul 31 22:31:06 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rll}
@@ -477,7 +479,7 @@ In its disciplinary form, Foucault links epistemic and operational aspects of ex
 
 
 % latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Fri Jul 31 14:49:09 2015
+% Fri Jul 31 22:31:06 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rlll}

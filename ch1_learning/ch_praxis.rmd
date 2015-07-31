@@ -1,6 +1,11 @@
 \chapter{Diagramming machines for data}
 \label{ch:diagram}
 
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8, 
+                      echo=FALSE, warning=FALSE, message=FALSE, dev='pdf')
+```
+
 Writing about data
 How to write about data and models
 Making models of data
@@ -182,7 +187,7 @@ def keyword_counts(wos_df):
 
 ```
 
-```{r plot_hastie_pages, cache=TRUE, echo=FALSE}
+```{r plot_hastie_pages, cache=TRUE}
 library(ggplot2)
 hastie_pages = read.csv('data/hastie_pages.csv')
 colnames(hastie_pages) = c('page', 'reference_count')

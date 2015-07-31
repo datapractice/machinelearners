@@ -2,6 +2,12 @@
 \chapter{ Re-scaling and shifting objects with machine learning}
 \label{ch:genome}
 
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8, 
+                      echo=FALSE, warning=FALSE, message=FALSE, dev='pdf')
+```
+
 ## todo
 
 - blast-hadoop paper is good on hashing search, and what that means for the genome -- draw on that a bit?
