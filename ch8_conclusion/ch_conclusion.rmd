@@ -12,7 +12,7 @@
 ## todo
 
 - add Golumbia on computationalism?
-- add the inceptionism stuff -- unsettling to look at the world in this way?
+- add the inceptionism stuff -- unsettling to look at the world in this way? see http://www.cs.toronto.edu/~graves/handwriting.cgi?text=&style=&bias=0.75&samples=3
 - inceptionism as the complement of kittydar?
 - present what I've been doing as an account of a transformation in human-machine relations; something that transforms scale, agency, dispersion, etc;
 - return to 'into' and 'out' of the data: so many attempts to get things out of the data; little effort to puts things into the data;
