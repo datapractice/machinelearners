@@ -21,4 +21,5 @@ xargs -a chapter_list.txt cat >>book.md
 echo "Building references, bibliography and pdf ...."
 pandoc -R book.md -o book.latex --bibliography ref_bibs/R.bib --bibliography ref_bibs/data_forms_thought.bib --bibliography ref_bibs/ngs.bib --bibliography ref_bibs/at_this_moment.bib  --bibliography ref_bibs/machine_learning.bib --bibliography ref_bibs/mackenzie.bib
 
-
+echo "Converting latex to pdf ... "
+#pdflatex book.latex
