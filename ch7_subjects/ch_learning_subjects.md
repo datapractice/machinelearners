@@ -282,7 +282,7 @@ In its disciplinary form, Foucault links epistemic and operational aspects of ex
 ```
 
 % latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Fri Jul 31 14:37:50 2015
+% Fri Jul 31 14:49:09 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rll}
@@ -477,7 +477,7 @@ In its disciplinary form, Foucault links epistemic and operational aspects of ex
 
 
 % latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Fri Jul 31 14:37:50 2015
+% Fri Jul 31 14:49:09 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rlll}

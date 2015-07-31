@@ -10,7 +10,7 @@ pandoc --biblatex preface.rmd -o preface.tex
 pandoc --biblatex part1.rmd -o part1.tex
 pandoc --biblatex part2.rmd -o part2.tex
 cd ch0_introduction/
-pandoc --biblatex ch_introduction.md -o ch0.tex
+pandoc --biblatex ch_introduction.md -o ch.tex
 echo '\documentclass[../book.tex]{subfiles}\n' | cat - ch.tex > temp && mv temp ch.tex
 cd ..
 cd ch1_learning/
