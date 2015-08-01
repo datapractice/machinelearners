@@ -1,5 +1,5 @@
 #!/bin/sh
-
+./knit_front_matter.sh
 cd ch0_introduction/
 ./knit_all.sh
 cd ..

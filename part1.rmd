@@ -1,6 +1,5 @@
-\chapter{Operations and diagrams}
+\chapter*{Operations and diagrams}
 
-## Part 1: Formations and diagrams
 
 ## alternate title - diagrams and asignifying machine
 - Personify techniques of vectorization

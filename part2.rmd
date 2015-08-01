@@ -1,7 +1,6 @@
 
-\chapter{ Modes of dispersion}
+\chapter*{Modes of dispersion}
 
-# Part 2: Regularities and dispersed diagrams
 
 - objects and subjects
 - large brain
