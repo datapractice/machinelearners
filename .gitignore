@@ -1,5 +1,5 @@
 *.png
-*.pdf
+**/*.pdf
 *.jpg
 */cache
 cache/
