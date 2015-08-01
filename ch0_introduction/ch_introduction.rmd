@@ -49,7 +49,7 @@ plt.savefig('cat_hog.pdf')
 \begin{figure}
   \centering
       \includegraphics[width=0.9\textwidth]{figure/cat_hog.pdf}
-        \caption{Close up of cat. The image on the left is already signal processed as JPEG format file. The image on the right is further signal processed using histogram of oriented gradients (HOG) edge detection. \texttt{kittydar} models HOG features.  Photo courtesy photos-public-domain.com}
+        \caption[Cat as histogram of gradients]{Close up of cat. The image on the left is already signal processed as JPEG format file. The image on the right is further signal processed using histogram of oriented gradients (HOG) edge detection. \texttt{kittydar} models HOG features.  Photo courtesy photos-public-domain.com}
   \label{fig:cat}
 \end{figure}
 

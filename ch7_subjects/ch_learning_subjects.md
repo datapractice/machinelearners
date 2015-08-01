@@ -112,7 +112,7 @@ f_k (X) = g_k (T), k = 1, ..., K,
 \end {split}
 \end {equation}
 
->where $Z = (Z_1 , Z_2, ..., Z_M )$, and $T = (T_1 , T_2 ,..., T_K )$. The activation function $\sigma(v)$ is usually chosen to be the sigmoid $\sigma(v) = 1/(1 + e −v )$
+>where $Z = (Z_1 , Z_2, ..., Z_M )$, and $T = (T_1 , T_2 ,..., T_K )$. The activation function $\sigma(v)$ is usually chosen to be the sigmoid $\sigma(v) = 1/(1 + e - v )$
 
 >[@Hastie_2009, 392]
 
@@ -160,15 +160,9 @@ head(titanic_transformed)
 ```r
 train_index = sample.int(nrow(titanic)/2)
 titanic_train = titanic_transformed[train_index,]
-titanic_net = neuralnet(survived ~ age +pclass + fare + sexmale + sibsp + parch
-+ embarkedC + embarkedQ + embarkedS, data=titanic_train, err.fct='ce',
-linear.output=FALSE, hidden=5) 
+titanic_net = neuralnet(survived ~ age +pclass + fare + sexmale + sibsp + parch + embarkedC + embarkedQ + embarkedS, data=titanic_train, err.fct='ce', linear.output=FALSE, rep=5, hidden=3, stepmax=1e6) 
 titanic_test = titanic_transformed[-train_index,]
 test_error = round(sum( 0.5 < compute(titanic_net, titanic_test[,-c(1,2)])$net.result)/sum(titanic_test$survived), 2)
-```
-
-```
-## Error in nrow[w] * ncol[w]: non-numeric argument to binary operator
 ```
 
 The line of the code that constructs a neural net using the `neuralnet` library [@Fritsch_2012], and the description of the classifier here is a familiar one. Despite its biological inspiration, the `R` formula for the neural net looks very similar to other machine learners. It models whether someone `survived` the wreck of the Titanic in terms of their age, class of fare (`pclass`), sex, number of siblings/spouse (`sibsp`), number of parents/children (`parch`) and port of departure:
@@ -284,7 +278,7 @@ In its disciplinary form, Foucault links epistemic and operational aspects of ex
 
 
 % latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Sat Aug  1 12:02:20 2015
+% Sat Aug  1 17:44:46 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rll}
@@ -479,7 +473,7 @@ In its disciplinary form, Foucault links epistemic and operational aspects of ex
 
 
 % latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Sat Aug  1 12:02:21 2015
+% Sat Aug  1 17:44:46 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rlll}

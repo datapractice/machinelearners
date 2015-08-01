@@ -203,7 +203,7 @@ Deciding on the cost function means thinking about how the predictions relate to
 A typical and widely cost function associated with regression is defined as: 
 \begin {equation}
 \label {eq:cost_function_logreg}
-l(\beta) = \sum_{i=1}^{m} y_i log{ h(x_i)} + (1 − y_i) log{(1 − h(x_i)})
+(\beta) = \sum_{i=1}^{m} y_i log{ h(x_i)} + (1  y_i) log{(1 - h(x_i)})
 \end {equation}
 
 where 

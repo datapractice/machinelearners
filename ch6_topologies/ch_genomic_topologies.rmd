@@ -190,7 +190,7 @@ plot(l1, main='')
 
 \begin{figure}
   \centering
-      \includegraphics[width=1.0\textwidth]{figure/lasso-1.png}
+      \includegraphics[width=1.0\textwidth]{figure/lasso-1.pdf}
         \caption{Shrinkage path of coefficients for Lasso regression on (Golub,1999) leukemia data}
   \label{fig:lasso}
 \end{figure}
@@ -312,7 +312,7 @@ Why do these models, in this case of exactly the same kind of data we have been 
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.9\textwidth]{figure/knn-1.png}
+      \includegraphics[width=0.9\textwidth]{figure/knn-1.pdf}
         \caption{KNN models for simulated data in two classes. The decision boundary that separates the two classes is non-linear for both versions of the KNN model. For $k=5$, the decision boundary is more non-linear than for $k=15$ }
   \label{fig:knn}
 \end{figure}
