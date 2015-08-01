@@ -1,5 +1,5 @@
 *.png
-*.sublime-workspace
+*.pdf
 *.jpg
 */cache
 cache/
