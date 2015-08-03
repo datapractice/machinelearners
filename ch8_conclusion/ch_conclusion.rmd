@@ -18,6 +18,7 @@ knitr::opts_chunk$set(fig.width=12, fig.height=8,
 
 ## todo
 
+- add morton on hyperobjects
 - add Golumbia on computationalism?
 - add the inceptionism stuff -- unsettling to look at the world in this way? see http://www.cs.toronto.edu/~graves/handwriting.cgi?text=&style=&bias=0.75&samples=3
 - inceptionism as the complement of kittydar?
