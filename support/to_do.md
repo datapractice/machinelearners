@@ -17,6 +17,7 @@
 
 - the feeling of agency, no matter how limited, comes from movement. This movement can take different forms -- it can be motoric, perceptual, affective, conceptual, animated, mechanised. But the point is that the feeling can then be concatenated, give rise to patterns of imitation, and to conflagrations and contagions that ignite or flow along faultlines and zones of slippage. We should not, according to Foucault begin from the vast strategic or even hegemonic monuments but from the local relations of force. 
 - add pasquinelli on feeling for mathematical - I have that in notes file ... 
+- add Gillespie 2014 on algorithm and training
 - the change in machine learning to deep learning
 ch0: put Marquard smith in
 ch0: put order of things in
@@ -46,6 +47,47 @@ ch0: introduce the ML literature
 ch0: lury on amphibious
 ch0: proposal: add Andrejevic 2013
 
+- what is the main story mean -- is it the point down 2 -- how to get a grip?
+- the deliberate naivete, the attempt to engender profound data literacy, respond to the injunction to work with the data, but not do too much, and not outsource it to the experts. 
+- the overlap between signal processing and machine learning  -- including my own work on this -- means that the data itself is not given freely: machine learning  has already gone into the data; and that's why we have so many images for instance in kittydar -- compression, loss compression in particular, 514; Shannon coding theory [@Gersho_1992] on signal compression
+- how do we get a grip on these methods that does not leave us lesser amazons? key narrative: book is an attempt to develop a way of making sense of things that are consistently mystified, hyped, etc
+- book could be seen as a history of a lineage of computational culture associated with knowledge, and with shifts in knowledge, rather than information, communication, control, etc. 
+- into the data: this is a question and a form of movement: what is put into the data, rather than what comes out of it; 
+- masculinity? write large -- hegemonic? fixity in face of much change; hard to see past this in the literature
+-the problem of focusing on the algorithm - does it reproduce the power hierarchy of computer science
+- the restructuring of the table -- to include the Foucault discussion of tables
+- make the point about machine learning being somewhat reducible to each other (with enough contortions), and that means it is not necessary to cover everything
+- the structure of the book in terms of media, science and government; the structure of the book in terms of life, labour and language
+- bring in materials from warwick talk
+- add stengers on abstraction from invention of modern science
+- see potential as predictable, question the bifurcation between abstract and concrete;
+- how is difference being done differently
+- use presentations nodes from transforming data workshop
+- is it a matter of taking the machine perspectives; 
+- say why I am focusing on machine learning and not data more generally -- databases, infrastructures, visualization, etc. - i.e. it is essential but opaque; it is the most slow-moving and tectonic aspect of what is happening with data; it has high levels of abstraction and generates many different potentials; it is a challenge for any re-thinking of what social sciences and critical humanities will do with data.
+- the role of industry -- machine learning as industrial and maybe link this to the labour question
+- the difference between ML and IR, data-mining, - use IR book, use mining massive datasets; use db books to show this
+- make the distinction between supervised and unsupervised, classifiers and predictions
+- the literature on digital sociology; methods
+- the form of writing; finding oneself experimenting with code and data
+- trying to find experiments and experiences
+-  the ml literature -- how the terms takes shape -- use ipython notebooks for that. machine learning as very loose assemblage; how it coalesces; etc. 
+-  I can't cover all the algorithms, techniques, settings, but this abundance, and description of it is part of the phenomena and the practice;
+-  FICO, DunneRaby, Teradata -- huge amounts happening in these commercial spaces that I haven't investigate. Could be done through patent literature .... 
+-  the development of machine learning out of AI -- shift from rule-based experts (cd Suchman; Collins  on this); visible in early textbooks (Tom Mitchell); decisive role of pattern recognition approaches focused on images (Bishop 1996 on this); Donald Michie for even earlier
+-  the identificatino of ML and data-mining and predictive analytics
+-  provenance of _iris_ dataset - -Fisher (1936) and Gaspe Peninsula, W.E. Anderson
+- order of things -- big picture stuff on transdisciplinary episteme
+- section on the digital humanities debate -- use Liu, and articles from _Differences_ 2014 to do this; + Hall; key points here in notes on Galloway's article. Contrast this with the attempts to conceptualise new forms of number and value in Latour, in Tarde, in STS, in Deleuze, etc.  -- I have PDFs of all these
+- Arendt on statistics and praxis (nothing can happen the more predictive we become) vs Virno on the introjection of communicative praxis into poiesis and production vs ... SEE Notes files on both of these
+- really important to see that these abstractions move through the data, pulling features and relations from aggregates in order to create probabilistic or decisionistic classifications and projects. The experience of personalization that has become so mundane is largely predictive and a product of an abstraction, and not the reflection of any individual tracking as such. 
+- add Totaro, Gillespie and Neyland, and Italian people: on algorithms
+- add Whitehead on abstraction: 
+    A second  and related emphasis comes from the work of the early twentieth century Alfred North Whitehead. Despite his fame as co-author with Bertrand Russell of _Principia Mathematica_, a tome whose Latinate title attests to its weighty ambitions,  Whitehead's later work in books such as _The Concept of Nature_ [@Whitehead_2013], _Science and the Modern World_ [@Whitehead_1970] and _Modes of Thought_ [@Whitehead_1956] on how scientific and mathematical abstractions are embodied is highly relevant to thinking about machine learning [^5]. Whitehead is comprehensively critical of certain tendencies in modern science (the pervasive 'fallacy of misplaced concreteness' that treats abstractions as pre-given foundations; the reduction of space-time to discrete  exterior locations, etc), but he is very enthusiastic about the potential for better abstractions. While his affirmative account of enhanced abstractions is voiced in terminology that takes some getting used to, the broad point can be grasped. Here he writes about better abstractions as energy enhancing:
+
+    > But this enhancement of energy presupposes that the abstraction is preserved with its adequate relevance to the concrete sense of value-attainment from which it is derived. In this way, the effect of the abstraction stimulates the vividness and depth of the whole of experience. [@Whitehead_1956,169]
+
+    The enhancement of energy Whitehead talks about here is concerned with the 'fortunate use of abstractions' (169). Machine learning and  much work with data today can be seen as a form of abstraction (as can much of science). The crucial question for Whitehead, however, is how to abstract well. Like Mol, he advocates keeping abstractions together ('preserved with its adequate relevance') with something like practice (' to the concrete sense of value-attainment from which it is derived'). Like Mol too, the virtue of this bundling together of abstractions with their concrete sense affects the 'whole of the experience.' Abstractions can make experience more vivid or deep if they are aligned and assembled connectively. Here I pin some methodological hope on Whitehead's work as a way to experiment with abstraction as stimulant and enrichment, not as reduction or pale imitation. 
 
 ## ch_praxis
 

@@ -8,7 +8,7 @@ df$week = str_extract(df$Week, '\\d{4}-\\d{2}-\\d{2}')
 df = df[, -1]
 ```
 
-The volume and geography of searches on Google provide some evidence of interest in particular topics. If we search for terms such as `r colnames(df)[1:5]` on the [Google Trends](http://www.google.com/trends) service, the results for the last decade or so suggest both increasing and decreasing interest in these topics. 
+The volume and geography of searches on Google provide some evidence of interest in particular topics. If we search for terms such as `r colnames(df)[1:5]` on the [Google Trends](http://www.google.com/trends) service \index{Google Trends}, the results for the last decade or so suggest both increasing and decreasing interest in these topics. 
 
 ```{r google_trends, echo=FALSE, message=FALSE, fig.env=TRUE, fig.cap='', include=FALSE, dpi=600, dev='CairoPDF', warning=FALSE}
 library(ggplot2)
