@@ -35,7 +35,7 @@
   \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
   \newcommand{\euro}{€}
 \fi
-\DeclareUnicodeCharacter{00A0}{ }
+%\DeclareUnicodeCharacter{00A0}{ }
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
@@ -90,8 +90,8 @@
 
 %\usepackage[backend=biber,style=numeric-comp,natbib=true]{biblatex}
 \usepackage[backend=biber,authordate]{biblatex-chicago}
-\usepackage[xindy, splitindex]{imakeidx}
-%\usepackage{makeidx}
+%\usepackage{imakeidx}
+\usepackage{makeidx}
 \usepackage{hyperref}
 \usepackage{listings}
 \lccode`~=0
@@ -102,6 +102,3 @@
 \addbibresource{./ref_bibs/machine_learning.bib}
 \addbibresource{./ref_bibs/ngs.bib}
 \makeindex
-%\usepackage{splitidx}
-%\makeindex{mlrs}
-%\makeindex{general}

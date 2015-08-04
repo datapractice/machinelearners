@@ -5,10 +5,10 @@ latexmk -C book.tex
 #./md_to_latex.sh
 cp ch*/figure/*.pdf figure
 cp ch*/figure/*.jpg figure
-pdflatex book.tex
+lualatex book.tex
 biber book
 makeindex book.idx
 #texindy book.idx
-pdflatex book.tex
+lualatex book.tex
 #pdflatex book.tex
 evince book.pdf
