@@ -12,6 +12,7 @@ res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
 
 ## to do
 
+- partial observer trajectory 
 - add secondary refs from zotero on steepest descent
 - comment on other optimisation algorithms -- EM; non-gradient-based; Newton-Raphson; etc
 - more on SAheart example

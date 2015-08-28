@@ -16,10 +16,10 @@
 ## ch introduction
 
 - the feeling of agency, no matter how limited, comes from movement. This movement can take different forms -- it can be motoric, perceptual, affective, conceptual, animated, mechanised. But the point is that the feeling can then be concatenated, give rise to patterns of imitation, and to conflagrations and contagions that ignite or flow along faultlines and zones of slippage. We should not, according to Foucault begin from the vast strategic or even hegemonic monuments but from the local relations of force. 
-- add pasquinelli on feeling for mathematical - I have that in notes file ... 
+- add pasquinelli on feeling for mathematical - I have that in notes file ... DONE
 - add Gillespie 2014 on algorithm and training
 - the change in machine learning to deep learning
-ch0: put Marquard smith in
+ch0: put Marquard smith in - DONE
 ch0: put order of things in
 ch0: put some big data talk in from various books, media and technical
 ch0: say why neural nets are important
