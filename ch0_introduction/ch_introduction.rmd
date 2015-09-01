@@ -193,27 +193,31 @@ print(table, type='latex')
 
 Table \ref{tab:climate_ml} presents a small random sample of scientific literature at the intersection of 'climate' and machine learning. This sample, while no doubt dwarfed by the flood of publications on recommendation systems, targeted advertising or handwriting recognition, is typical of the epistemic atmosphere associated with machine learners. (I return to this topic in Chapter \ref{ch:genome} in discussing how the leveraging of scientific data via predictive models and classifiers deeply affects the fabric and composition of objects of scientific knowledge.) But the longevity and plurality of experiments, variants, alternative techniques, implementations and understandings associated with machine learning makes it difficult to immediately reduce them to capitalist captures of knowledge production.  
 
-
 ```{r machine_learning_over_time, cache=TRUE, include=FALSE, echo=FALSE}
 library(ggplot2)
-query = 'select * from basic_refs where anchor like "%machine%" order by PY desc, TC desc'
+query = 'select * from basic_refs where anchor like "%svm%" order by PY desc, TC desc'
 query1 = 'select * from basic_refs where anchor like "%naive%" order by PY desc, TC desc'
 query2 = 'select * from basic_refs where anchor like "%decision_tree%" order by PY desc, TC desc'
 query3 = 'select * from basic_refs where anchor like "%expect%" order by PY desc, TC desc'
+query4 = 'select * from basic_refs where anchor like "%random%" order by PY desc, TC desc'
 res = dbGetQuery(con, query)
 res1 = dbGetQuery(con, query1)
 res2 = dbGetQuery(con, query2)
 res3 = dbGetQuery(con, query3)
-res_all = rbind(res, res1, res2, res3)
-g = ggplot(res_all, aes(x=PY, group=anchor, fill=anchor,alpha=0.6, color=anchor)) + geom_density()
-g + ggtitle('Decision tree, Naive Bayes and Expectation Maximisation over time') + xlab('Year of publication') + ylab('Proportion of publications')
-
+res4 = dbGetQuery(con, query4)
+res_all = rbind(res, res1, res2, res3, res4)
+g = ggplot(res_all, aes(x=PY, group=anchor, alpha=0.6, linetype=anchor)) + geom_density()
+g = g + xlab('Year of publication') + ylab('Proportion of publications')
+g = g + scale_linetype_discrete(name = 'Machine learner', labels = c('Decision tree', 'Expectation Maximisation', 'Support Vector Machine', 'Naive Bayes', 'Random forest'))
+g = g + guides(alpha = FALSE) 
+g = g +  theme(legend.justification=c(1,0), legend.position=c(0.4,0.6), panel.grid.minor=element_blank(),  panel.grid.major=element_blank())
+g
 ``` 
 
 \begin{figure}
   \centering
       \includegraphics[width=0.9\textwidth]{figure/machine_learning_over_time-1.pdf}
-        \caption{Machine learners in scientific literature}
+        \caption{Machine learners in scientific literature. The lines in the graph suggest something of the changing fortunes of machine learners over time. The publication data comes from Thomson Reuter's \textit{Web of Science}. Separate searches were run for each machine learner. In these plots, as in the GoogleTrends data, the actual counts of publications have been normalised. In contrast to the GoogleTrend plots, these plots do not show the relative counts of the publications, only their distribution in time. }
   \label{fig:scientific_lit}
 \end{figure}
 
