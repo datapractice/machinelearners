@@ -189,7 +189,6 @@ In what circumstances would any critical efficacy accumulate around machine lear
 
 library(xtable)
 query = 'select * from basic_refs where TI like "%climate%" or DE LIKE "%climate% order by TC desc, PY;"'
-query = 'select * from basic_refs where TI like "%diversity%" or DE LIKE "%diversity% order by TC desc, PY;"'
 res = dbGetQuery(con, query)
 res_sample = res[sample.int(nrow(res), 15), ]
 res_sample = res_sample[order(res_sample$PY),]
