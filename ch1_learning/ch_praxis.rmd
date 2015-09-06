@@ -8,6 +8,7 @@ options(xtable.comment = FALSE)
 library(RSQLite)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
 library(ggplot2)
+library(stringr)
 ```
 
 
@@ -166,18 +167,21 @@ Conversely, the semiotic machinery of the book generates vectors and orbital tra
 
 ```{r hastie_references, results='hide', include=FALSE, cache=TRUE, echo=FALSE}
 system('pdftotext -f 717 -l 746 ../ml_lit/hastie_elem/hastie_elements_2009.pdf hastie_references.txt')
-refs_text = read.delim('../ml_lit/hastie_elem/hastie_references.txt', sep='\n', stringsAsFactors=FALSE)
 refs_text = readLines('../ml_lit/hastie_elem/hastie_references.txt')
 refs_parsed = paste(refs_text, sep=' ', collapse='\n')
 refs_split = unlist(str_split(refs_parsed, '\\.\n'))
 refs_clean = str_trim(str_replace_all(refs_split, '\n', ' '))
-years = str_replace_all(str_extract(refs_clean, '\\(\\d{4}\\)'), '[()]', replacement='')
-years_df = as.data.frame(table(years))
-rowcount = dim(years_df)[1]
-years_df = years_df[1:rowcount-1,]
-colnames(years_df) = c('Year', 'Citations')
-g2 = ggplot(years_df, aes(x=as.Date(Year, '%Y'), y=Citations, group=1)) + geom_freqpoly(stat='identity')
+years = str_replace_all(str_extract(refs_clean, '\\([[:digit:]]{4}[[:alpha:]]{0,1}\\)'), '[()abcd]', replacement='')
+yearsnum = as.numeric(years)
+years_df = data.frame(years=yearsnum, refs = refs_clean)
+years_df = na.omit((years_df[yearsnum<2010,]))
+years_df = years_df[order(years_df$years),]
+colnames(years_df) = c('Year', 'Reference')
+g2 = ggplot(years_df, aes(x=as.Date(as.character(Year), '%Y'))) + geom_freqpoly()
 g2 + ylab('Publications cited/year') + xlab('Year of publication') 
+yr = as.numeric(years_df$Year)
+years_df$Reference[yr>1970 & yr <=1980]
+HERE
 ```
 
 \begin{figure}
