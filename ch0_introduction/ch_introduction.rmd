@@ -9,6 +9,10 @@ knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8,
 library(RSQLite)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
 res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
+library(ggplot2)
+library(stringr)
+library(xtable)
+options(xtable.comment = FALSE)
 ```
 
 ## Introduction - a decisive change in the place of prediction
@@ -228,9 +232,9 @@ In each of these well-known cases -- reverse engineering political campaign mach
 
 Perhaps only one thing is missing here. The *phronesis* of this engineering does not yet deliberate on its own calculations as much as it operationalises them. Paolo Pasquinelli proposes that 
 
-> a progressive political agenda for the present is about moving at the same level of abstraction of the algorithm in order to make the patterns of new social compositions and subjectivities emerge. We have to produce new revolutionary institutions out of data and algorithms. If the abnormal returns into politics as a mathematical object, it will have to find its strategy of resistance and organisation, in the upcoming century, in a mathematical way [@Pasquinelli_2015]. \index{Pasquinelli, Paolo}
+> a progressive political agenda for the present is about moving at the same level of abstraction as the algorithm in order to make the patterns of new social compositions and subjectivities emerge. We have to produce new revolutionary institutions out of data and algorithms. If the abnormal returns into politics as a mathematical object, it will have to find its strategy of resistance and organisation, in the upcoming century, in a mathematical way [@Pasquinelli_2015]. \index{Pasquinelli, Paolo}
 
-'Moving at the same level of abstraction of the algorithm' offers some purchase as a formulation, albeit with its still troublesome invocation of 'the' algorithm and 'a mathematical way.' From the standpoint of diverse  machine learners and the many different person-thing-object-relations they encompass, there is no single level of abstraction, but something more like the torque and flux of different moments of abstraction at work in generalizing, classifying, circulating and stratifying in the midst of transient and plural multiplicities. [^0.12]  
+'Moving at the same level of abstraction as the algorithm' offers some purchase as a formulation, albeit with its still troublesome invocation of 'the' algorithm and 'a mathematical way.' From the standpoint of diverse  machine learners and the many different person-thing-object-relations they encompass, there is no single level of abstraction, but something more like the torque and flux of different moments of abstraction at work in generalizing, classifying, circulating and stratifying in the midst of transient and plural multiplicities. [^0.12]  
 
 
 [^0.12]: A more emphatic version of the relation to modelling comes from the Alex 'Sandy' Pentland. In a recent book on social physics \index{social physics}, Pentland calls for a dialogue between 'our human intuition and the big data statistics':
