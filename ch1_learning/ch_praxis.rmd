@@ -285,6 +285,8 @@ The so-called 'learning problem' and the theory of learning machines developed l
         \caption[Neural network from Hastie (2009)]{Neural network from Hastie (2009); Single layer feedforward artificial neural network.}
   \label{fig:hastie_ann}
     \end{subfigure}
+    \label{figure:perceptron_ann}
+    \caption{1958 perceptron and 2001 neural net compared}
 \end{figure}
 
 If we compare the diagram of Rosenblatt's perceptron shown in Figure \ref{fig:perceptron_1958}  to the typical contemporary diagram of a neural network shown in Figure \ref{fig:hastie_ann}, the differences are not that great in many ways. The diagram of a neural network found in Rosenblatt's paper [@Rosenblatt_1958]  has no mathematical symbols on it, but the one from [@Hastie_2009] does. Rosenblatt's retains neuro-cognitive-anatomical reference points (retina, association area, projection area) whereas Hastie et. al.'s replaces them with the symbols that we have already seen in play in the expression for the linear model \ref{eq:linear_model}. What has happened between the two diagrams? As Vladimir Vapnik, a leading machine learning theorist, observes: 'the perceptron was constructed to solve pattern recognition problems; in the simplest case this is the problem of constructing a rule for separating data of two different categories using given examples' [@Vapnik_1999, 2]. \index{Vapnik, Vladimir} While computer scientists in artificial intelligence of the time, such as Marvin Minsky and Seymour Papert, were sceptical about the capacity of the perceptron model to distinguish  or 'learn' different patterns [@Minsky_1969], later work showed that perceptrons could 'learn universally'[^1.19].\index{perceptron|} For present purposes, the key point is not that neural networks have turned out several decades later to be extremely powerful algorithms in learning to distinguish patterns, and that intense research in neural networks has led to their ongoing development and increasing sophistication in many 'real world' applications (see for instance, for their use in sciences [@Hinton_2006], or in commercial applications such as drug prediction [@Dahl_2013] and above all in the current surge of interest in 'deep learning' by social media platform and search engines such as Facebook and Google). \index{neural net} For our purposes, the important point is that the notion of the learning machine began to establish an ongoing diagonalization that transforms basic diagrammatic pattern through substitutions of increasingly convoluted or nested operations. The whole claim that machines 'learn' rests on this diagrammatization that recurrently and sometimes recursively transforms the icon of relations, sometimes in the graphic forms shown above and more often in the algebraic patterns.\index{diagrammatization} 
@@ -389,13 +391,16 @@ library(xtable)
 pack = available.packages()
 pack_df = as.data.frame(pack)
 
-df = as.data.frame(head(sort(table(pack_df['Suggests']), decreasing=TRUE),30)) 
-colnames(df) = c('Package', 'How often suggested')
+df = as.data.frame(head(sort(table(pack_df['Suggests']), decreasing=TRUE),20)) 
+colnames(df) = c( 'How often suggested')
 table1 = xtable(df, caption=c('R packages suggested by the ElemStatLearn package', 'ElemStatLearn suggest R packages'), label='tab:elemstat_learn_suggests')
 
-df2 = as.data.frame(head(sort(table(pack_df['Depends']), decreasing=TRUE),30)) 
-colnames(df) = c('Package', 'How often depended on')
-table2 = xtable(df2,  caption=c('`R` packages depended on by the `ElemStatLearn` package', '`ElemStatLearn` depends on R packages'), label='tab:elemstat_learn_depends')
+df2 = as.data.frame(sort(table(pack_df['Depends']), decreasing=TRUE)) 
+
+df2 = cbind(rownames(df2), df2)
+colnames(df2) = c( 'Package', 'How often depended on')
+df3 = df2[-grep(df2[,1], pattern='^R\\W?\\('),]
+table2 = xtable(df3[1:20,],  caption=c('`R` packages depended on by the `ElemStatLearn` package', '`ElemStatLearn` depends on R packages'), label='tab:elemstat_learn_depends')
 print(table1, type='latex', table.placement="!htb")
 print(table2, type='latex', table.placement="!htb")
 ```
