@@ -17,7 +17,7 @@ res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
 - comment on other optimisation algorithms -- EM; non-gradient-based; Newton-Raphson; etc
 - more on SAheart example
 - diagrams of the problem of classification
-
+- key point: saying and seeing don't quite coincide Put prosaically,  the graphics and the text cannot quite hold together.  What is common is a fracture or fault. A fault line ramifies to a less or greater degree across all machine learning. It runs between what is said and what is shown, between statements and visibilities. As Gilles Deleuze writes in his account of Foucault, 'statements and visibilities ... grapple like fighters, force one another to do something or capture one another, and on every occasion constitute "truth"' [@Deleuze_1988, 67]. 
 > Because of a gradient that no doubt characterizes our cultures, discursive formations are constantly becoming epistemologized [@Foucault_1972, 195]
 
 The opening pages of machine learning textbooks often warn or enthuse about the profusion of techniques. 'The first problem facing you', writes Pedro Domingos, 'is the bewildering variety of learning algorithms available. Which one to use? There are literally thousands available, and hundreds more are published each year [@Domingos_2012, 1]. 'The literature on machine learning is vast, as is the overlap with the relevant areas of statistics and engineering' writes David Barber in _Bayesian Reasoning and Machine Learning_[@Barber_2011,4]; 'statistical learning refers to a vast set of tools for understanding data' writes James and co-authors in an _Introduction to Statistical Learning with R_ [@James_2013,1]; or Matthew Kirk in _Thoughtful Machine Learning_ comments:

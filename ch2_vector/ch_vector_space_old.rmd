@@ -151,7 +151,7 @@ All of this lies somewhat in a pre-machine learning space. Similar tables and pl
 [^2.31]: Despite the intensive work that Hastie and co-authors conduct on the `prostate` data, all with a view to better predicting PSA levels using volumes and weights of prostates, etc., Stamey and other urologists more than a decade or so concluded that PSA is not a good biomarker for prostate cancer. Stamey writes in 2004:
     What is urgently needed is a serum marker for prostate cancer that is truly proportional to the volume and grade of this ubiquitous cancer, and solid observations on who should and should not be treated which will surely require randomized trials once such a marker is available. Since there is no such marker for any other organ confined cancer, little is likely to change the current state of overdiagnosis (and over-treatment) of prostate cancer, a cancer we all get if we live long enough unbound points in the matrix [@Stamey_2004, 1301]
 
-[[^2.33:] Carl Friedrich Gauss and Adrien-Marie Legendre's work on linear regression at this time is well-known. The first independent use of linear regression was Gauss' prediction of the location of an 'occluded volume,' the position of the asteroid Ceres after it reappeared in its orbit behind the sun. [@Stigler_2002] -- TBA page ref
+[^2.33:] Carl Friedrich Gauss and Adrien-Marie Legendre's work on linear regression at this time is well-known. The first independent use of linear regression was Gauss' prediction of the location of an 'occluded volume,' the position of the asteroid Ceres after it reappeared in its orbit behind the sun. [@Stigler_2002] -- TBA page ref
 
 ## The expansion of the vector space
 
