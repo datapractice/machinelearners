@@ -216,7 +216,7 @@ ch1- things to include:
 
 ## ch function
 
-
+- NIST handbook of functions -- good reference guide http://dlmf.nist.gov
 ch2 add the constructible of the prediction column
 ch2 put manhattan plot into list of graphics
 ch2: Look at hastie glmnet datasets
