@@ -14,6 +14,7 @@ res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
 ## todo
 
 - blast-hadoop paper is good on hashing search, and what that means for the genome -- draw on that a bit?
+- add Baldi as references
 - spectacular indexicality is a key theme here -- need to massively strengthen this
 - conclusion is still not right -- shorten it
 - knn discussion is not properly integrated -- how to do that? Does the technique itself suggest a manner of moving? also, it's not of khan, golub, etc -- redo with Khan; add hclust dendrogram
