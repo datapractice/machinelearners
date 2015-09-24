@@ -64,7 +64,6 @@ con.commit()
 # res = con.execute('select * from basic_refs where TI like "%random forest%" OR DE like "%support vector machine%" order by TC desc;')
 # q = res.fetchall()
 print df_all.shape
-print pd.unique(df_all).shape
 
 
 # In[35]:
