@@ -40,6 +40,7 @@ put Cleveland's data science article into my collections and also book outline
 raltmet/R/stackexchange.r at master ﺁ٧ ropensci/raltmet ﺁ٧ GitHub
 read desrosiers on ca
 write why the focus on classification not regression
+add franchi reference on AI to ai section
 
 
 ## preface
