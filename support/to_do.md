@@ -1,6 +1,7 @@
 #todo
 
 ## in general
+-put control revolution in somewhere
 Buy trust in numbers
 Could data science turn the tide in the fight against cybercrime?
 Data You Can Believe In - NYTimes.com
@@ -160,7 +161,6 @@ ch1: List methods to use in book
 ch1: Make some big data
 ch1: Programming tools: Adventures with R : Nature News & Comment
 ch1: visualization as method - use Rose, Mitchell
-
 ch1- things to include:
     - my `R` books, libraries, papers, competitions, blogs, talking, courses
     - `knitr`/`ipython` notebooks - executable - some examples from python notebooks
@@ -214,6 +214,7 @@ ch1- things to include:
 - the dot product or inner product - creates the vector space
 -  Knowledge as a 'mechanism of statements and visibilities'
 -  generalization as what cannot be seen
+- add book on tables
 
 ## ch function
 
@@ -235,7 +236,7 @@ ch3: use graph of techniques to motivate choice of techniques
  diagrams of the problem of classification
 
 ## ch allness
-
+- endow machine learners with probabilistic semantics
 - the possibility of modeling the joint distribution and the rise of generative models
     - why important: because of generative; reference my own work; why they used to be hard
 
