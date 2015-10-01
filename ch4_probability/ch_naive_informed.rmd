@@ -28,7 +28,7 @@ In a broad sense, the setting that concerned Peirce in his work at the U.S. Gove
 
 >The field of Statistics is constantly challenged by the problems that science and industry brings to its door. In the early days, these problems often came from agricultural and industrial experiments and were relatively small in scope [@Hastie_2009, xi]
 
-At the end of the preface, they also cite, we might note in passing, Hacking's work: 'The quiet statisticians have changed our world' [@Hastie_2009, xii]. With some justification, we might ask therefore: what difference do the 'vast amounts of data ... generated in many fields' (xi) make to what machine learners internalize of their world? This question of how worlds becomes thinkable through machine learning can be addressed partly by contrasting the 'taming of chance' achieved  eighteenth and nineteenth century statistical, and the statistical practices of machine learning today. Is machine learning a further taming of chance? What role does randomness and probability play in machine learning? \index{machine learning!statistical practices}
+At the end of the preface, they also cite, we might note in passing, Hacking's work: 'The quiet statisticians have changed our world' [@Hastie_2009, xii]. One of the challenges science and industry has brought to its door in recent years has been more data but also learning machines. With some justification, we might ask therefore: what difference do the 'vast amounts of data ... generated in many fields' (xi) make to the field of statistics? Statistics has, I will suggest in this chapter, gradually endowed machine learners with an increasing probabilistic semantics. This deeply affects how machine learners internalize their world. Conversely, we should ask: what do machine learners do to statistics? Is machine learning a further taming of chance? What role does randomness and probability play in machine learning? These questions of how worlds becomes thinkable through machine learning can be addressed partly by contrasting the 'taming of chance' achieved  by eighteenth and nineteenth century statistics and the statistical practices of machine learning today. \index{machine learning!statistical practices}
 
 The broadest claim associated with statistical machine learning might be the simple expression shown in:
 
@@ -41,7 +41,7 @@ In Equation \ref{eq:n_all}, $N$ refers to the number of observations (and hence 
 
 >Using all the data makes it possible to spot connections and details that are otherwise cloaked in the vastness of the information. For instance, the detection of credit card fraud works by looking for anomalies, and the best way to find them is to crunch all the data rather than a sample [@Mayer-Schonberger_2013, 2013,  27]
 
-In the several hundred pages that follow in _Big Data_, the problem of how to 'crunch all the data' is not a major topic. \index{Mayer-Schőnberger, Viktor} \index{Cukier, Kenneth} While they mention the role of social network theory (30), 'sophisticated computational analysis' (55),  'predictive analytics' (58) and 'correlations' (7),  and they observe that 'the revolution' is 'about applying math to huge quantities of data in order to infer probabilities' (12), any further consideration of a change in statistical practices is largely confined to a business-oriented contrast between having some of the data and having all the data (that is, businesses often have all the data on their customers). This is not to criticize a book that sets out to describe trends affecting business and government for a general readership, but without a sense of how statistical thinking animates almost all salient features of crunching the data and particularly the predictions, it becomes hard to see how the 'revolution' takes place. Just as nineteenth century statistics transformed measurements (for instance, the mean as average of all measured values) into real quantities (for instance, mean as the ideal or abstract property of a population; e.g. life expectancy), the shift between $n$ and $\forall X$, a shift very much animating and dependent on  machine learning, internalizes, I will suggest, a probability and chance into machinic operations. This is a statistical event akin to the advent of the Normal distribution (and indeed, $\mathnormal{N}$ is a standard symbol for the Normal distribution in statistics textbooks) as a way of knowing and controlling populations [@Hacking_1975, 108]. 
+In the several hundred pages that follow in _Big Data_, the problem of how to 'crunch all the data' is not a major topic. \index{Mayer-Schőnberger, Viktor} \index{Cukier, Kenneth} While they mention the role of social network theory (30), 'sophisticated computational analysis' (55),  'predictive analytics' (58) and 'correlations' (7),  and they observe that 'the revolution' is 'about applying math to huge quantities of data in order to infer probabilities' (12), any further consideration of a change in statistical practices is largely confined to a business-oriented contrast between having some of the data and having all the data (that is, businesses often have all the data on their customers). This is not to criticize a book that sets out to describe trends affecting business and government for a general readership, but without a sense of how statistical thinking animates almost all salient features of crunching the data and particularly the predictions, it becomes hard to see how the 'revolution' takes place. Just as nineteenth century statistics transformed measurements (for instance, the mean as average of all measured values) into real quantities (for instance, mean as the ideal or abstract property of a population; e.g. life expectancy), the shift between $n$ and $\forall X$, a shift very much animating and dependent on  machine learning, internalizes, I will suggest, probability and chance into machinic operations. This is a statistical event akin to the advent of the Normal distribution (and indeed, $\mathnormal{N}$ is a standard symbol for the Normal distribution in statistics textbooks) as a way of knowing and controlling populations [@Hacking_1975, 108]. 
 
 ## Machine learning as statistics inside out
 
@@ -65,9 +65,9 @@ generative &  discriminative \\
 
 Reading and working with machine learning techniques usually means encountering and responding to some of that statistical apparatus drawn from statistics, but these are not typically the statistical tests of significance or variation. In contrast to a statistics textbook such as the widely used _Basic Practice of Statistics_ [@Moore_2009] or even a more advanced guide such as _All of Statistics_ [@Wasserman_2003], where statistics (t-test, chi-squared test, etc.) hypothesis testing, and analysis of uncertainties (confidence intervals, etc) order the exposition, the machine learning texts invoke a thoroughly probabilistic conceptual apparatus curiously de-populated of the community fo practice found in statistics. Statistical underpinnings may be fundamental, but this does not mean that  machine learners simply automate statistics.[^4.4] For instance,  a basic set of contrasts or indeed oppositions that owe much to statistical thinking pattern statements on machine learning. \index{machine learning!structure differences} The contrasts shown in Table \ref{tab:ml_diffs} all have a statistical facet and anchoring  to them. Some refer to variations and errors that affect how a machine learner refers to data (bias and variance); some designate an underlying statistical intuition about how particular machine learners treat data (does the model seek to generate the data or classify -- discriminate -- it; e.g. Naive Bayes or Latent Dirichlet Allocation are _generative_ models whereas logistic regression or support vector machines are _discriminative_); parametric and non-parametric describe the role of probability distributions in the model; and others indicate different kinds of statistical knowledge practice (prediction seeks to anticipate while inference seeks to interpret, etc.). \index{machine learning!structuring differences} These broad structuring differences reach down deeply into the architecture, the diagrams, the practices, statements and visual objects and computer code associated with $N=\forall X$. Because they  anchor basic elements of  machine learning in statistical statements, a profuse set of techniques and formalisms derived from statistics has come to populate the field, furnishing and rearranging  its diagrammatic references \index{diagram!reference}  to the worlds of industry, agriculture, earth science, genomics, etc,. but also, crucially, triggering ontological mutations in machine learners themselves. [^4.113]  \index{machine learners!ontological mutations of}
 
-HERE
+While these structuring differences are practically very important, and deeply shape certain kinds of practice in machine learning, the underlying operator that allows swapping between knowledge and the world, and then between events and devices is probability thinking, and in particular, the functions that describe variations in probability, probability distributions. \index{function!probability distributions} Historically, two distributions loom large. The binomial distribution, which describes the probability of the number of $n$ 'successes' out of $N$ trials or observations, was explored extensively in the seventeenth and eighteenth centuries in the context of games of chance [@Hacking_1975, 57-134]. The normal distribution pervades nineteenth century statistical thinking as it generalizes across law, medicine, agriculture, finance and not least, sociology. In all of these settings, probability distributions are a common way of showing and  talking about _random variables_ in statistics. These distributions appear in countless shapes and forms in scientific, government and popular literature of many different kinds. Statistical graphics have a rich history and semiology that I do not discuss here (see [@Bertin_1983]).
 
-While these structuring differences are practically very important, and deeply shape certain kinds of practice in machine learning, the underlying operator that allows swapping between knowledge and the world, and then between events and devices is probability thinking, and in particular, the functions that describe variations in probability, probability distributions. \index{function!probability distributions} Historically, two distributions loom large. The binomial distribution was explored extensively in the seventeenth and eighteenth centuries in the context of games of chance [@Hacking_1975, 57-134]. The normal distribution pervades nineteenth century statistical thinking as it generalizes across law, medicine, agriculture, finance and not least, sociology. In all of these settings, probability distributions are a common way of showing and  talking about _random variables_ in statistics. These distributions appear in countless shapes and forms in scientific, government and popular literature of many different kinds. Statistical graphics have a rich history and semiology that I do not discuss here (see [@Bertin_1983]). Perhaps the most famous function or mapping is the normal or Gaussian distribution:
+Perhaps the most famous function or mapping is the normal or Gaussian distribution:
 
 \begin {equation}
 \label {eq:gaussian_distribution}
@@ -75,7 +75,171 @@ f(x;\mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\si
 \end {equation}
 
 
-The  function shown in equation (\ref{eq:gaussian_distribution}) is the so-called normal or Gaussian distribution. Its  mathematics were intensively worked over during the late eighteenth and early nineteenth centuries in what has been termed 'one of the major success stories in the history of science' [@Stigler_1986, 158], and it has a power-laden biopolitical history closely tied with knowledges and governing of  national and other  populations in terms of morality, health, and wealth (see [@Hacking_1975, 113-124]. The key symbols here include $\mu$, the mean and $\sigma$, the variance, a number that describes how widely dispersed the values of the variable, $x$ are. These two parameters together describe the shape of the curve. Given $\mu$ and $\sigma$, it become possible to map different outcomes to probabilities. Put more statistically, viewed in terms of functions such as the Gaussian distribution, events become random variables. Following the kind of definition that we find in a standard statistics textbook, every variable potentially becomes a function: 'a random variable is a mapping that assigns a real number to each outcome' [@Wasserman_2003,19]. The possibility of treating all variables as random variables, that is, as probability distributions was a significant historical achievement, but one that continues to develop. We might note the real power of probability distributions when conceptualised as real quantities in the world, not epiphenomenal by-products of inaccuracies in our observations or measuring devices. For instance, given the normal distribution, it is possible, under certain circumstances, to effectively subjectify someone on the spot. If an educational psychologist indicates to someone that their intelligence lies towards the left-hand side of the normal curve peak in Figure 2 (and hence less than the population mean), they quickly render them somehow subject to a potentially institutionally and economically consequential trajectory. This is not a recent development. Since its inception in the social physics of Quetelet as a way of referring to a property of populations, the normal curve has promised or threatened to support the re-shaping and control of populations (in terms of health, morality and wealth). Since then, probability distributions and their corresponding curves have multiplies. Subsequent statisticians used dozens of different probability distributions to map continuous and discrete variations to real numbers. Other probability distributions abound — normal (Gaussian), uniform, Cauchy exponential, gamma, beta,  hypergeometric, binomial, Poisson, chi-squared, Dirichlet, Boltzmann-Gibbs distributions, etc. (see [@NIST_2012] for a gallery of distributions) — because outcomes occur in widely differing patterns. The  queuing times at airport check-ins do not, for instance, easily fit a normal distribution. Queues are usually modelled using a Poisson distribution, which unfortunately for travellers, distributes waiting times very differently.  Similarly, it might be better to think of the probability of rain today in Lancaster in terms of a Poisson distribution that models that queue of clouds in the Atlantic just waiting to land on the northwest coast of England. Rather than addressing the question of if it will rain or not, a Poisson-based model might address the question of how soon.
+The  function shown in equation (\ref{eq:gaussian_distribution}) is the so-called normal or Gaussian distribution. Its  mathematics were intensively worked over during the late eighteenth and early nineteenth centuries in what has been termed 'one of the major success stories in the history of science' [@Stigler_1986, 158], and it has a power-laden biopolitical history closely tied with knowledges and governing of  national and other  populations in terms of morality, health, and wealth (see [@Hacking_1975, 113-124]. The key symbols here include $\mu$, the mean and $\sigma$, the variance, a number that describes how widely dispersed the values of the variable, $x$ are. These two parameters together describe the shape of the curve. Given knowledge of $\mu$ and $\sigma$, the normal or Gaussian probability distribution maps all outcomes to probabilities (or numbers in the range $0$ to $1$). Put more statistically, viewed in terms of functions such as the Gaussian distribution, events become random variables.  Every variable potentially becomes a function: 'a random variable is a mapping that assigns a real number to each outcome' [@Wasserman_2003,19]. \index{random variable!seealso{function!probability distribution}}
+ 
+
+The possibility of treating all variables as random variables, that is, as probability distributions, was a significant historical achievement, but one that continues to develop and ramify.[^4.114] When conceptualised as real quantities in the world rather than epiphenomenal by-products of inaccuracies in our observations or measuring devices, probability distributions weave directly into the productive operations of power. Distribution in the sense of locating, positioning, partitioning, sectioning, serialising or queuing operations pervades the development of disciplinary power, as Michel Foucault richly details [@Foucault_1977], but in almost every setting, distribution in the sense of counting and weighting of different outcomes also operates. This constant interweaving of spatial, architectural, logistical and calculative processes has energised statistical thought for several centuries.[^4.115] \index{distribution!see{function!probability distribution} For instance, given the normal distribution, it is possible, under certain circumstances, to effectively subjectify someone on the spot. If an educational psychologist indicates to someone that their intelligence lies towards the left-hand side of the normal curve peak (and hence less than the population mean), they quickly assign them to a potentially institutionally and economically consequential trajectory. Since its inception in the social physics of Adolphe Quetelet as a way of referring to a property of populations, the normal curve has promised or threatened to support the re-shaping and control of populations (in terms of health, morality and wealth). Since then, probability distributions and their corresponding curves have multiplies.
+
+Subsequent statisticians developed dozens of different probability distributions to map continuous and discrete variations to real numbers. Other probability distributions abound — normal (Gaussian), uniform, Cauchy exponential, gamma, beta,  hypergeometric, binomial, Poisson, chi-squared, Dirichlet, Boltzmann-Gibbs distributions, etc. (see [@NIST_2012] for a gallery of distributions) — because outcomes occur in widely differing patterns. The  queuing times at airport check-ins do not, for instance, easily fit a normal distribution. Statisticians model queues using a Poisson distribution, in which, unfortunately for travellers, distributes the number of events in a given time interval quite broadly.  Similarly, it might be better to think of the probability of rain today in north-west England in terms of a Poisson distribution that models clouds in the Atlantic queuing to rain on the northwest coast of England. (Rather than addressing the question of whether it will rain or not, a Poisson-based model might address the question of how many times it will rain today.)
+
+If functions such as equation (\ref{eq:gaussian_distribution}) have persisted for so long as operational underpinnings, what happen to them in machine learning? The pages of a book such as _Elements of Statistical Learning_ show many signs of an ongoing re-distribution of probability distributions. Superficially we could simply note their abundance. Hastie and co-authors diversely invoke probability distributions. They speak of 'Gaussian mixtures,' 'bivariate Gaussian distributions,' standard Gaussian,' 'Gaussian kernels,' 'Gaussian errors', 'Gaussian assumptions,' 'Gaussian errors,' 'Gaussian noise,' 'Gaussian radial basis function,' 'Gaussian variables,' 'Gaussian densities,' 'Gaussian process,' and so forth. The term 'normal' appears in an even wider spectrum of similar guises, but they uniformly entail treating events, things, properties or attributes as probability distributions. The wide distribution of the Gaussian function does not mean that one function, the Gaussian probability density function reigns supreme above all machine learners. \index{function!probability distribution!Gaussian}
+
+The diverse curves of probability distributions — and we will see below some reasons why we can expect them to proliferate in certain settings — attests to the variety of ways in which events might be mapped to real numbers. Despite  the sometimes dense mathematical diagrammatics, the term *distribution* emphasises a tangible and practically resonant way of thinking about how events or possible outcomes shift about as the parameters of a function vary. Machine learners adjust these parameters in different ways. For instance, parametric and non-parametric models (see table \ref{tab:ml_differences}) differ  in that the former have a limited number of parameters and the latter an undefined number of parameters (for instance, Naive Bayes, _k_ nearest neighbours or support vector machine models). But both kinds assume that an underlying probability distribution -- a function, ‘unobservable’ or not -- operates, even if it changes with new data. A probability distribution under these assumptions becomes the closest reality we have to whatever process generated  all the variations in data gathered through experiments and observations. From a probabilistic perspective, the task of machine learning is to estimate the parameters (the mean $\mu$ and variance $\sigma$ in the case of Gaussian curve) that shape of the curve of the probability distribution. Given the shape of that curve, many inferences and predictions become possible. The probability distribution function is a crucial control surface for machine learning understood as a form of movement through data.  \index{machine learner!probability distribution as control surface} In contrast to the gradual endowment of realities with probability that we see in the history of statistics (and later in natural sciences such as physics and biology), statistical machine learning endows devices and control systems with probability. 
+
+## Naive Bayes and the distribution of probabilities
+
+What does this mean in practice? The mathematical expression for one of the most popular of all machine learning classifiers, the Naive Bayes classifier, stands out for its simplicity and lack of parameters. 
+
+\begin {equation}
+\label {eq:naive_bayes}
+f_j(X) = \prod_{k=1}^{p}f_{jk}(X_k)
+\end {equation}
+
+>[@Hastie_2009, 211]
+
+Some machine learners are so simple that they can be implemented in a few lines of code. \index{machine learner!Naive Bayes} Their simplicity, however, belies their power. The function shown above in equation (\ref{eq:naive_bayes}) is about the simplest one to be found in most machine textbooks yet easily adapts for high dimensional data, the kind of data associated with $N = \forall X$.[^4.116]  While the Naive Bayes classifier is one of the most popular machine learning algorithms, it is more than 50 years old [@Hand_2001]. The key diagrammatic elements of the classifier as expressed in the equation are $\prod$, an operator that multiplies all the values (from $1$ to $p$) to generate a product. What product does the Naive Bayes classifier produce? The expression $f_j(X)$ refers to a probability density; that is, it describes the probability that a particular thing (a document, an image, an email message, a set of URLs, etc.) belongs to the class of things $j$. In constructing this estimate of the probability that a thing is an instance of class $j$, $p$ different features of the thing are taken into account. The subscripts $k=1$ on the $\prod$ operator, and $k$ on the data $X_k$ indicate that the Naive Bayes classifier makes use of a series of probabilities in calculating the overall probability that a given thing belongs to a class. The classifier produces a product $f_j(X)$ by calculating the _joint probability_ of all the _conditional_ probabilities of the features or predictor variables in $X$ for the class $j$. As  _Elements of Statistical Learning_ rather tersely puts it, 'each of the class densities are products of the marginal densities' [@Hastie_2009,108]. 
+
+Almost everything about the  Naive Bayes classifier concerns probability (including its name, with its reference to the Bayes Theorem, an important late eighteenth century concept), yet there is little obvious connection to statistics in its modern form of tests of significance. As Drew Conway and John Myles-White write in _Machine Learning for Hackers_, 
+
+>At its core, [Naive Bayes] ... is a 20th century application of the 18th century concept of _conditional probability_. A conditional probability is the likelihood of observing some thing given some other thing we already know about [@Conway_2012, 77] 
+
+They point here to the role of 'conditional probability,' a probability conditioned on the probability of something else. Conditional probability lies at the heart of many of the data transformation associated with prediction or pattern recognition since it links different variable or features together as we see in Naive Bayes often by simply multiplying probabilities.[^4.117] \index{probability!conditional} As any of the many accounts of the technique will explain, the name comes from Bayes Theorem, one of the most basic yet widely used results in probability theory (again dating from the eighteenth century), yet Naive Bayes does not even fully embrace Bayes Theorem as the principle of its operation. The classifier has a simple probabilistic architecture based on the concepts of conditional probability and joint probability; it calculates a probability density function $f_j(X)$ or probability distribution for each possible class of things. Its architecture is simple, however, because it makes a drastically reductionist assumption that features are independent of each other (hence the name 'naive'), where 'independent' means that they do not affect each other, or that they have no relation to each other. We will see below that dramatic simplifications do not necessarily weaken the referential grasp of machine learners on the world, but in certain ways allow them to relate to it more directly.
+
+## Spam: when $\forall{N}$ is too much?
+
+While equation (\ref{eq:naive_bayes}) does not set out all the steps in transforming some data into a prediction of the class that a given instance, event, thing or observation belongs to, the code needed to do this are relatively brief. In _Doing Data Science_, Rachel Schutt and Cathy O'Neill furnish a bash script (that is, command line instructions) to download a well-known email dataset and build a Naive Bayes classifier that labels email as spam or not. In many ways, this is canonical machine learner pedagogy, and for Naive Bayes, email spam detection has become the standard example (Andrew Ng uses it in CSS 229, Lecture 5 [@Ng_2008]). In this setting, machine learners operating as spam filters coping with too much communication. $\forall{N}$ can be a bother. Nevertheless, the concision of the small script, which fetches the Enron email dataset, calculates the 'marginal densities' or conditional probabilities for each word given how often it is associated with either spam or non-spam email, and then outputs the probability that a particular email is spam, is striking.[^4.7] These few dozen lines convert some part of a communicative reality -- the Enron email dataset -- into a predictive classifier that tests the world:  is a given message spam or not? \index{dataset!spam email!Enron}
+
+A typical spam email in the Enron dataset, a dataset that derives from the U.S Federal Energy Regulatory Commission's investigation into Enron Corporation [@Klimt_2004],  looks like this:
+
+> Subject: it's cheating, but it works !
+can you guess how old she is ? the woman in this photograph looks like a happy teenager about to go to her high school prom, doesn' t she ? she' s an international, professional model whose photographs have appeared in hundreds of ads and articles whenever a client needs a photo of an attractive, teenage girl.but guess what ? this model is not a teenager ! no, she is old enough to have a 7-year-old daughter.. and...the model' s real age is in her 30' s.all she will say about her age to her close friends is, " i'm dangerously close to 40." she also says, " if it weren't for this amazing new cosmetic cream called ' deception, ' i would lose hundreds of modeling assignments...because...there is no way i could pass myself off as a teenager." 
+service dept
+9420 reseda blvd # 133
+northridge, ca 91324
+
+The text of a typical non-spam email like this:
+
+> Subject: industrials suggestions......
+----------------------forwarded by kenneth seaman / hou / ect on 01 / 04 / 2000
+12 : 47 pm-------------------------- -
+pat clynes @ enron
+01 / 04 / 2000 12 : 46 pm
+to : kenneth seaman / hou / ect @ ect, robert e lloyd / hou / ect @ ect
+cc :
+subject : industrials
+ken and robert,
+the industrials should be completely transitioned to robert as of january 1, 2000.please let me know if this is not complete and what else is left to transition .
+thanks, pat
+
+These are both recognisable things in the world for anyone who uses email. How do they become $X$ or even $f_j(X)$ in the Naive Bayes classifier? How do words in a document because probability distributions? The code is instructive:
+
+
+```{r enron_nb_bash, engine='bash', echo=TRUE}
+    #!/bin/bash
+    # file: enron_naive_bayes.sh
+    # description: trains a simple one-word naive bayes spam
+    # filter using enron email data
+    # usage: ./enron_naive_bayes.sh <word>
+    # requirements:
+    #    wget
+    #
+    # author: jake hofman (gmail: jhofman)
+    # how to use the code
+    if [ $# -eq 1 ]
+    then
+        word=$1
+    else
+        echo "usage: enron_naive_bayes.sh <word>"
+        exit
+    fi
+
+     ### PART 1
+    if ! [ -e enron1.tar.gz ]
+    then
+        wget 'http://www.aueb.gr/users/ion/data/enron-spam/preprocessed/enron1.tar.gz'
+    fi
+
+    if ! [ -d enron1 ]
+    then
+        tar zxvf enron1.tar.gz
+    fi
+
+    cd enron1
+
+    ### PART 2
+    Nspam=`ls -l spam/*.txt | wc -l`
+    Nham=`ls -l ham/*.txt | wc -l`
+    Ntot=$Nspam+$Nham
+    echo $Nspam spam examples
+    echo $Nham ham examples
+
+    Nword_spam=`grep -il $word spam/*.txt | wc -l`
+    Nword_ham=`grep -il $word ham/*.txt | wc -l`
+    echo $Nword_spam "spam examples containing $word"
+    echo $Nword_ham "ham examples containing $word"
+
+    ### PART 3
+    Pspam=`echo "scale=4; $Nspam / ($Nspam+$Nham)" | bc`
+    Pham=`echo "scale=4; 1-$Pspam" | bc`
+    echo
+    echo "estimated P(spam) =" $Pspam
+    echo "estimated P(ham) =" $Pham
+    Pword_spam=`echo "scale=4; $Nword_spam / $Nspam" | bc`
+    Pword_ham=`echo "scale=4; $Nword_ham / $Nham" | bc`
+    echo "estimated P($word|spam) =" $Pword_spam
+    echo "estimated P($word|ham) =" $Pword_ham
+
+    ### PART 4
+    Pspam_word=`echo "scale=4; $Pword_spam*$Pspam" | bc`
+    Pham_word=`echo "scale=4; $Pword_ham*$Pham" | bc`
+    Pword=`echo "scale=4; $Pspam_word+$Pham_word" | bc`
+    Pspam_word=`echo "scale=4; $Pspam_word / $Pword" | bc`
+    echo
+    echo "P(spam|$word) =" $Pspam_word
+    cd ..
+```
+
+[@Schutt_2013, 105-106]
+
+```{r enron_nb_r, echo = FALSE}
+
+        f_ham = list.files('enron1/ham', full.names = TRUE)
+        f_spam = list.files('enron1/spam', full.names = TRUE)
+        ham_count = length(f_ham) 
+        spam_count = length(f_spam)
+
+        ham = sapply(f_ham, readLines, warn=FALSE)
+        spam = sapply(f_spam, readLines, warn=FALSE)
+        P_ham = ham_count/(ham_count + spam_count)
+        P_spam = spam_count/(ham_count + spam_count)
+        word = 'gas'
+
+        predict_spam <- function(word) {
+            ## count the occurrence of the word in each
+            Nword_in_ham = sum(grepl(word, ham))
+            Nword_in_spam = sum(grepl(word, spam))
+            #cat(Nword_in_ham, ' ham examples contain ', word,  '\n')
+            #cat(Nword_in_spam, ' spam examples contain ', word,  '\n')
+
+            #cat('estimated P(spam) = ', P_spam,  '\n')
+            #cat('estimated P(ham) = ', P_ham,  '\n')
+
+            Pword_spam = Nword_in_spam/spam_count
+            Pword_ham = Nword_in_ham/ham_count
+            #cat("P(spam|", word, ") = ", Pword_spam,  '\n')
+            #cat("P(ham|", word, ") = ", Pword_ham,  '\n')
+
+            Pham_word = Pword_ham * P_ham
+            Pspam_word = Pword_spam * P_spam
+            Pword = Pspam_word + Pham_word
+            Pspam_word = Pspam_word/Pword
+
+            #cat("P(spam|", word, ")=",  Pspam_word,  '\n')
+            return(Pspam_word)
+        }
+```
+
+After fetching the dataset from a website, the code counts the number of emails in each category and prints them, and the counts the number of times that the chosen word (e.g. 'finance' or 'deal') occurs in both the spam and non-spam or ham categories. Using these counts, the script  estimates probabilities of any email being spam or ham, and then given that email is spam or ham, that the particular word occurs. To estimate a probability means, in this case, to divide the word count for the chosen word by the count of the number of spam emails, and ditto for the ham emails.  In Part 4, the final transformation of the data, these probabilities are used to calculate the probability of an email being spam given the presence of that word. Again, the mathematical operations here are no more complicated than adding, multiplying and dividing. The probability that the chosen word is a spam word is, for instance, the probability of occurrence of the word in a spam email multiplied by the overall probability that an email is spam. Finally, given that the overall probability of the chosen word occurring in the email dataset is the probability of it occurring in spam plus the probability of it occurring in ham, the overall probability that an email in the Enron data is spam given the presence of that word can be calculated. It is the probability that the chosen word is a spam word divide by the probability of that word in general. 
 
 ## Conclusion
 
@@ -83,7 +247,7 @@ Mayer-Schönberger and Cukier's argument that having much data or all data ($N=\
 
 >Using all the data makes it possible to spot connections and details that are otherwise cloaked in the vastness of the information. For instance, the detection of credit card fraud works by looking for anomalies, and the best way to find them is to crunch all the data rather than a sample [@Mayer-Schonberger_2013, 27]. 
 
-Versions of this claim can be found running through various scientific and business settings throughout the 20th century.[^4.61] In certain settings, $N=all$ has been around for quite a while (as for instance, in many document classification settings where the whole corpus of documents have been electronically curated for decades). Mayer-Schönberger and Cukier rightly emphasize, it seems to me, that the huge quantities of data sluicing through some contemporary infrastructures support inferences of probabilities (11). The way they describe statistical sampling as a concept 'developed to solve a particular problem at a particular moment in time under specific technological constraints' [@Mayer-Schonberger_2013, 31]] does not, however, take into account the material consequences of statistical thinking. They do not suggest that the very possibility of spotting connections or details that might matter deeply itself relies on statistical configurations that deeply affect all machine learners.  Whether or not someone uses Naive Bayes, a topic model, neural networks or logistic regression, probabilistic practice, random variables,  probability distributions and statistical inferences run deep in the model. In many ways, the Mayer-Schönberger and Cukier account pays so much attention to the potentials of data accumulation that they cannot easily attend to the question of what happens to the data as people try to 'spot connections and details', or of how what is put into the data that goes beyond $N=all$.  Here sampling, estimation, likelihoods, and a whole gamut of dynamic relationships between random variables in joint probability distributions reassert themselves. The data may not be sampled, but the model is sampling as it tries to move through the high-dimensional feature spaces opened up by having 'all' the data. 
+Versions of this claim can be found running through various scientific and business settings throughout the 20th century.[^4.61] In certain settings, $N=all$ has been around for quite a while (as for instance, in many document classification settings where the whole corpus of documents have been electronically curated for decades). Mayer-Schönberger and Cukier rightly emphasize, it seems to me, that the huge quantities of data sluicing through some contemporary infrastructures support inferences of probabilities (11). The way they describe statistical sampling as a concept 'developed to solve a particular problem at a particular moment in time under specific technological constraints' [@Mayer-Schonberger_2013, 31]] does not, however, take into account the material consequences of statistical thinking.  The very possibility of spotting connections or details that might matter itself relies on machine learners becoming statistical.  Whether or not someone uses Naive Bayes, a topic model, neural networks or logistic regression, probabilistic practice, random variables,  probability distributions and statistical inferences have increasingly surrounded and re-configured machine learners, heavily affecting their referentiality. In many ways, the Mayer-Schönberger and Cukier account pays so much attention to the potentials of data accumulation that they cannot easily attend to the question of what happens to the data as people try to 'spot connections and details', or of how what is put into the data that goes beyond $N=all$.  Here sampling, estimation, likelihoods, and a whole gamut of dynamic relationships between random variables in joint probability distributions reassert themselves. The data may not be sampled, but the model is sampling as it tries to move through the high-dimensional feature spaces opened up by having 'all' the data. 
 
 
 Machine learning inhabits worlds that had already witnessed the advent of  statistical realities  at least a century earlier, whether through the social physics of Quetelet, the biopolitical normals of Francis Galton and his regression to the mean (remember that the linear model of regression is probably the basic machine learning model) or later in the probability functions of quantum mechanics in early twentieth century physics. I have been suggesting the machine learning should be understood as a re-inversion of statistical thought. In this inversion, the probability distributions that had become the underlying reality of many different kinds of populations fold back or re-distribute themselves in devices such as machine learners whose variations and uncertainties powerfully generate classifications, predictions and knowledge statements (scientific and otherwise). Populations of models are sampled, measured, and aggregated in the ongoing production of statistical realities whose object is no longer a property of individual members of a population (their height, their life-expectancy, their chance of HIV/AIDS), but a meta-population of models of populations and their probability distributions. We should note that not all machine learners are strictly speaking probabilistic models [^4.60], but the referential relation of any machine learner to the world is statistical by virtue of the both the ancestral probabilities and the bias-variance decomposition. 
@@ -98,7 +262,7 @@ The re-distribution of probability that takes place in machine learning through 
 
 [^4.51]: In 1964, N.J Bailey was taking the same approach to medical diagnosis [@Bailey_1965].  
 
-[^4.61]: Part  II of this book will track several actual instances of having all the data in the sciences, in government and in business in order to show what having all the data entails in different settings. 
+[^4.61]: Later chapters of this book will track several instances of having all the data in the sciences, in government and in business in order to show what having all the data entails in different settings. 
 
 [^4.60]:  Machine learning textbooks written by computer scientists tend to define probabilistic models more narrowly.  As Peter Flach suggests:
 
@@ -112,3 +276,20 @@ The re-distribution of probability that takes place in machine learning through 
 [^4.4]: Leo Breiman writing in 2001 during the heyday of academic development of machine learning argues, describes the 'two cultures' of statistics: 'in the past fifteen years, the growth in algorithmic modeling applications and methodology has been rapid. It has occurred largely outside statistics in a new community—often called machine learning—that is mostly young computer scientists (Section 7). The advances, particularly over the last five years, have been startling' [@Breiman_2001a, 200].\index{Breiman, Leo!on statistical cultures} Soon afterwards, statisticians such as Hastie, Tibshirani and Friedman publish the first major statistical machine learning textbooks [@Hastie_2001]. \index{Breiman, Leo!on statistical cultures}
 
 [^4.113]: Maurizio Lazzarato describes ontological mutations as 'always machinic. They are never the simple result of the actions or choices of the "man" who, leaving the assemblage, removes himself from the non-human, technical, or incorporeal elements that constitute him -- all that is pure abstraction' [@Lazzarato_2014, 83]. Lazzarato's account of diagrams as processes that slip past signification and representation echoes Deleuze and Guattari's, but usefully highlights the plurality of machines that inhabit science, music, art, cities and markets.  \index{Lazzarato, Maurizio!machinic ontological mutation}
+
+[^4.114]: The mapping that assigns numbers to outcomes (heads v. tails; cancer v. benign; spam v. not-spam) is a probability distribution.  As I have argued in [@Mackenzie_2015d], random variables have become much more widespread in statistical practice due to changes in computational techniques. \index{random variable}
+
+[^4.115]: 'Distribution' pervades Foucault's account of power and knowledge from *The Order of Things* [@Foucault_1992] onwards.   \index{Foucault, Michel!on distribution} Foucault treats distributions in several different ways: as spatial or logistical techniques,  as mathematical orderings of large numbers of people or things, and as a methodological and theoretical framing device. In _Discipline and Punish_ [@Foucault_1977], the spatial sense prevails, but in later works, the population or demographic sense of distribution takes precedence [@Foucault_1998]. Distribution certainly has theoretical primacy in his account of power: 'relations of power-knowledge are not static forms of distribution, they are "matrices of transformations"' [@Foucault_1998, 99]. 
+
+[^4.116]: The other contender for simplest machine learner would be the also very popular _k_ nearest neighbours. As Hastie et. al. observe: 'these classifiers are memory-based and require no model to be fit' [@Hastie_2009, 463]. Like the  Naive Bayes classifier, the equation for _k_ nearest neighbours is simple:
+
+\begin {equation}
+\label {eq:knn}
+\hat{Y}(x) =\frac{1}{k} \sum_{x_i \in \textit{N}_{k}(x)} y_i
+\end {equation}
+
+where $\textit{N}_{k}(x)$ is the neighborhood of $x$ defined by the $k$ closest points $x_{i}$ in the training sample [@Hastie_2009, 14]. In equation \ref{eq:knn}, a parameter appears: $k$, the number of neighbours.  This contrasts greatly with the linear models discussed in chapters \ref{ch:vector} and \ref{ch:function} where the number of parameters $p$ usually equals the number of variables in the dataset or dimensions in the common vector space.  \index{machine learner!_k_ nearest neighbours}
+
+[^4.117]: In [@Mackenzie_2014c], I have suggested that the intensification of multiplication associated with probabilistic calculation may constitute an important mutation in the ontological and practical texture of numbers. The epidemiological modelling of H1N1 influenza in London 2009 involved multiplying a great variety of probability distributions in order to calculate the conditional probability of influenza over time.  
+
+[^4.7]: The input to the script is a single word such as 'finance' or 'deal'. The model is so simple that it only classifies a single word as spam. The `bash` script carries out four different transformations of the data in building the model. It uses only command line tools such as `wc` (word count), `bc` (basic calculator), `grep` (text search using pattern matching) and `echo` (display a line of text). These tools or utilities are readily available in almost any UNIX-based operating system (e.g. Linux, MacOS, etc). The point of using only these utilities is to illustrate the simplicity of the algorithmic implementation of the model.  The first part of the code downloads the sample dataset of Enron emails (and I will discuss spam emails and their role in machine learning below). Note that this dataset has already been divided into two classes - 'spam' and 'ham' -- and emails of each class have been placed in separate directories or folders as individual text files. \index{code!command line}

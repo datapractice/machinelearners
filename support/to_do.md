@@ -1,7 +1,12 @@
 #todo
 
 ## in general
--put control revolution in somewhere
+beniger on the control of control; also on the history of the program and programming
+foucault on referentiality for ch_function -- arch of know, 91
+foucault on archaeology - 191 
+peirce on algebra and visual form for ch_vector 
+put control revolution in somewhere -- about the need for control of control
+add comments from chun on programming
 Buy trust in numbers
 Could data science turn the tide in the fight against cybercrime?
 Data You Can Believe In - NYTimes.com
