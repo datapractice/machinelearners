@@ -1,6 +1,9 @@
 #todo
 
 ## in general
+
+add svd and reference to other matrix based techniques in ch on vector space
+add hallinan and striphas on deepening algorithmic in ch on vector space
 beniger on the control of control; also on the history of the program and programming
 foucault on referentiality for ch_function -- arch of know, 91
 foucault on archaeology - 191 
