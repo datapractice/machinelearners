@@ -2,42 +2,43 @@
 
 ## in general
 
-add svd and reference to other matrix based techniques in ch on vector space
-add hallinan and striphas on deepening algorithmic in ch on vector space
-beniger on the control of control; also on the history of the program and programming
-foucault on referentiality for ch_function -- arch of know, 91
-foucault on archaeology - 191 
-peirce on algebra and visual form for ch_vector 
-put control revolution in somewhere -- about the need for control of control
-add comments from chun on programming
-Buy trust in numbers
-Could data science turn the tide in the fight against cybercrime?
-Data You Can Believe In - NYTimes.com
-Do data explore on clinical
-Get 9 important statistics papers
-Get data center book
-Get john Johnston on ai
-Get king science article to chapter 6
-Get riding the wave report eu
-Get schull on gambling
-Go through history of infoviz
-Guest Post: ROB TIBSHIRANI | Normal Deviate
-How Twitter Found Its Money Mojo ﻗ°½ Backchannel ﻗ°½ Medium
-How to balance false positive and negatives
-Index of /yks/documents/classes/mlbook/pdf
-Jeff Larson kills it at the Lede Program http://mathbabe.org/2014/08/22/jeff-larson-kills-it-at-the-lede-program/
-O'Reilly Radar - News & Commentary
-Part2: describe as modes of ordering
-Proposal: book has simple theoretical argument
-Proposal: highlight literature as data
-Proposal: say why not doing visual
-The curse of big data ﻗ°± AnalyticBridge
-Web page not available
-another mooc on ml
-check Dan Sperber's work
-check David rokeby videos and peter campus
-check HiveR package in R
-check body in james
+- ch4: canguilhem on error
+- jadd svd and reference to other matrix based techniques in ch on vector space
+- add hallinan and striphas on deepening algorithmic in ch on vector space
+- beniger on the control of control; also on the history of the program and programming
+- foucault on referentiality for ch_function -- arch of know, 91
+- foucault on archaeology - 191 
+- peirce on algebra and visual form for ch_vector 
+- put control revolution in somewhere -- about the need for control of control
+- add comments from chun on programming
+- Buy trust in numbers
+- Could data science turn the tide in the fight against cybercrime?
+- Data You Can Believe In - NYTimes.com
+- Do data explore on clinical
+- Get 9 important statistics papers
+- Get data center book
+- Get john Johnston on ai
+- Get king science article to chapter 6
+- Get riding the wave report eu
+- Get schull on gambling
+- Go through history of infoviz
+- Guest Post: ROB TIBSHIRANI | Normal Deviate
+- How Twitter Found Its Money Mojo ﻗ°½ Backchannel ﻗ°½ Medium
+- How to balance false positive and negatives
+- Index of /yks/documents/classes/mlbook/pdf
+- Jeff Larson kills it at the Lede Program http://mathbabe.org/2014/08/22/jeff-larson-kills-it-at-the-lede-program/
+- O'Reilly Radar - News & Commentary
+- Part2: describe as modes of ordering
+- Proposal: book has simple theoretical argument
+- Proposal: highlight literature as data
+- Proposal: say why not doing visual
+- The curse of big data ﻗ°± AnalyticBridge
+- Web page not available
+- another mooc on ml
+- check Dan Sperber's work
+- check David rokeby videos and peter campus
+- check HiveR package in R
+- jcheck body in james
 check descolla
 check myers recent
 check out hayles how we think
