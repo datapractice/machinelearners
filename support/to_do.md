@@ -2,6 +2,8 @@
 
 ## in general
 
+- mention svm and its treatment of dimensions in ch2
+- introduce idea of statement and quote about its non-linguistic character from Foucault early in ch0/1
 - ch4: canguilhem on error
 - jadd svd and reference to other matrix based techniques in ch on vector space
 - add hallinan and striphas on deepening algorithmic in ch on vector space
