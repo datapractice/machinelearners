@@ -2,6 +2,7 @@
 
 ## in general
 
+- curves as generalizations of the line -- put this in ch3 -- this sense of generalization -- turning the line into a curve, but maintaining almost everything else in place. Compare with generalization error. 
 - mention svm and its treatment of dimensions in ch2
 - introduce idea of statement and quote about its non-linguistic character from Foucault early in ch0/1
 - ch4: canguilhem on error
