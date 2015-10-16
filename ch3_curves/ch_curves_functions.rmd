@@ -41,7 +41,8 @@ print('\n'.join(modules_clean))
 ```
 
 The architecture of these software libraries itself classifies and orders machine learners.  `Scikit-learn` for instance comprises a number of sub-packages:
-Modules such as `lda` (linear discriminant analysis), `svm` (support vector machine) or `neighbors` (_k_ nearest neighbours) point to well-known machine learners, whilst `cross-validation` or `feature_selection` refer to ways of testing models or transforming data respectively. Again, machine learning patches together a variety of abstractive practices. \index{abstraction!levels of} These divisions, maps and classifications help order the techniques, but they obscure the problematic process that first generated a competing profusion of machine learners. That profusion comes from a slippage between three main senses of the function: function as mathematical relation or operator, function as concrete machinic operation and function in the sense of what something does.  \index{function!different senses of!mathematical, algorithmic, operational}
+Modules such as `lda` (linear discriminant analysis), `svm` (support vector machine) or `neighbors` (_k_ nearest neighbours) point to well-known machine learners, whilst `cross-validation` or `feature_selection` refer to ways of testing models or transforming data respectively. Again, machine learning patches together a variety of abstractive practices. \index{abstraction!levels of} These divisions, maps and classifications help order the techniques, but they obscure the problematic process that first generated a competing profusion of machine learners. That profusion comes from a slippage between three main senses of the function: function as mathematical relation or operator, function as concrete machinic operation and function in the sense of what something does.[^3.301]  \index{function!different senses of!mathematical, algorithmic, operational}
+
 
 ```{r function_lit, results='asis'}
 
@@ -310,3 +311,5 @@ The novel structures and functions in 'our data' are  precisely the functions th
 
 
 [^3.6]: The derivative $\frac {\partial }{\partial \beta_j}J(\beta_j)$ is _partial_ because $\beta$ is a vector $\beta_0, \beta_1 ... \beta_j$.
+
+[^3.301]: I discuss the sense of function as operation or process in chapter \ref{ch:genome}. There I suggest that this important sense of function as operation or process, a sense that has underpinned transformations in life, social and clinical sciences may be shifting towards a different ordering.  \index{function:transformation in meaning of}
