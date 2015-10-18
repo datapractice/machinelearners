@@ -35,12 +35,6 @@ If we turn to the research done on machine learning during 1990-2010, biology, a
 
 ## The positivity of the genome
 
-```{r disciplines,  engine='python', results='asis', echo=FALSE, warning=FALSE, message=FALSE}
-
-
-
-```
-
 Genomes, I would suggest, are antigens that provoke a multiplicity of  machine learners to bind to them. Reciprocally, the incursion of  machine learners profoundly re-configures the highly economically charged fields of biomedicine and biological sciences more generally, and generates new modes of action, accounting, testing, examining and sorting biological processes.  Wide-ranging infrastructural, institutional, professional and financial arrangements follow along new paths constructed by the modes of operation of machine learning, with its epistopological transformations, its function-finding, its regimes of probabilistic, decisionistic and geometrical engagement with data.
 
 In the generalization of machine learning, genomics appears with  multiple valencies. Genomes are both a challenge to the capacity of machine learning to produce scientific (as distinct from say the merely commercial knowledge of a credit risk model), and a way of validating machine learning  as a life-death relevant biomedical knowledge practice. Genomes also provide the pretext for many infrastructural re-configurations. The Google Compute Engine, a globally-distributed ensemble of computers typical of recent distributed commercial computing architectures,  was briefly turned over to exploration of cancer genomics during 2012, and publicly demonstrated at the annual Google I/O conference. Midway through the demonstration, in which a human genome is visualized as a ring in 'Circos' form [@Krzywinski_2009]  the speaker, Urs Hölzle, Senior Vice President of Infrastructure at Google 'then went even further and scaled the application to run on 600,000 cores across Google’s global data centers' [@GoogleInc.2012]. The audience clapped as the annular diagram of a human genome was decorated with a rapidly increasing number of cross-links, accompanied by a snapping sound as it appeared. The world's '3rd largest supercomputer', as it was called by TechCrunch, a prominent technology blog,  'learns associations between genomic features' [@Anthony_2012]. Note the language of machine learning appearing here: it 'learns ... associations between features.' We are in the midst of many such demonstrations of 'scaling applications' of data in the pursuit of associations between 'features.'[^6.0]
@@ -48,7 +42,7 @@ In the generalization of machine learning, genomics appears with  multiple valen
 \begin{figure}
   \centering
       \includegraphics[width=0.9\textwidth]{figure/circos.pdf}
-        \caption{A human genome diagrammed using the Circos form. The many tracks of this diagram support a range of graphic forms including scatterplots, heatmaps and histograms all anchored to the ideogram of the 23 chromosomes of the human genome. }
+        \caption[{A human genome diagrammed using the Circos]{A human genome diagrammed using the Circos form. The many tracks of this diagram support a range of graphic forms including scatterplots, heatmaps and histograms all anchored to the ideogram of the 23 chromosomes of the human genome. }
   \label{fig:circos}
 \end{figure}
 
