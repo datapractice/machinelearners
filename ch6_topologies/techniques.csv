@@ -1,0 +1,309 @@
+accuracy,n
+active learning,y
+activity recognition,n
+adaboost,y
+affective computing,n
+agent,n
+algorithm,n
+alzheimer's disease,n
+ann,n
+anomaly detection,n
+artificial immune system,n
+artificial intelligence,y
+artificial neural network,y
+association rule,y
+attribute reduction,n
+bagging,y
+bayesian classifier,y
+bayesian network,y
+binary classification,y
+bioinformatic,n
+biomarker,n
+biometric,n
+boosting,y
+brain-computer interface,n
+breast cancer,n
+c4.5,y
+cancer,n
+case-based reasoning,y
+catalytic site prediction,n
+categorization,y
+class imbalance,y
+classification,y
+classification algorithm,y
+classification tree,y
+classifier,y
+classifier ensemble,y
+cluster analysi,y
+clustering,y
+co-training,y
+cognitive radio,n
+collaborative filtering,y
+component,n
+computational biology,n
+computational complexity,y
+computational intelligence,n
+computational learning theory,y
+computer security,n
+computer vision,n
+computer-aided diagnosi,n
+concept drift,y
+concept learning,y
+conditional random field,y
+content-based image retrieval,n
+context,n
+control,n
+convex optimization,y
+cost-sensitive learning,y
+credit scoring,n
+cross-validation,y
+data analysi,n
+data clustering,y
+data fusion,y
+data mining,y
+data preprocessing,y
+data reduction,y
+database,n
+decision making,n
+decision support,y
+decision support system,n
+decision tree,y
+design,n
+diagnosi,n
+dimension reduction,y
+dimensionality reduction,y
+discretization,y
+discriminant analysi,y
+diversity,n
+document classification,n
+drug design,n
+drug discovery,n
+eeg,n
+emotion,n
+ensemble,y
+ensemble classifier,y
+ensemble learning,y
+ensemble method,y
+ensemble of classifier,y
+entropy,n
+evaluation,n
+evolutionary algorithm,y
+evolutionary computation,y
+experimentation,n
+expert system,n
+face detection,n
+face recognition,n
+fault detection,n
+fault diagnosi,n
+feature extraction,y
+feature selection,y
+feature subset selection,y
+fmri,n
+forecasting,n
+function approximation,y
+fuzzy clustering,y
+fuzzy logic,y
+fuzzy set,y
+fuzzy system,y
+gaussian peak,y
+gaussian proces,y
+gaussian processe,y
+gene expression,n
+generalization,y
+genetic algorithm,y
+genetic programming,y
+genomic,n
+granular computing,n
+graphical model,y
+heuristic,n
+hidden markov model,y
+hrm decentralization,y
+human-computer interaction,n
+hybrid system,n
+identification,n
+image analysi,n
+image classification,n
+image processing,n
+image retrieval,n
+image segmentation,n
+incremental learning,y
+independent component analysi,y
+induction,n
+inductive inference,y
+inductive learning,y
+inductive logic programming,y
+inductive machine learning,y
+information extraction,n
+information gain,y
+information retrieval,n
+information system,n
+information theory,y
+instance-based learning,y
+intelligent agent,n
+intelligent system,n
+intrusion detection,n
+intrusion detection system,n
+k-mean,y
+k-means clustering,y
+k-nearest neighbor,y
+kernel,y
+kernel function,y
+kernel method,y
+knowledge acquisition,n
+knowledge discovery,n
+knowledge discovery in database,n
+knowledge management,n
+knowledge representation,n
+knowledge-based system,n
+large margin classification,y
+lasso,y
+learning,y
+learning algorithm,y
+learning classifier system,y
+learning from example,y
+learning theory,y
+learning to rank,y
+linear discriminant analysi,y
+linear programming,y
+linear regression,y
+logistic regression,y
+machine learning,y
+machine learning algorithm,y
+machine learning for signal processing,n
+machine learning method,n
+machine learning technique,y
+machine vision,n
+machine-learning,y
+manifold learning,y
+mascot,n
+mass spectrometry,n
+measurement,n
+medical diagnosi,n
+meta-learning,y
+methods: data analysi,n
+microarray,n
+mimo system,y
+missing data,y
+missing value,y
+mixture model,y
+mobile robot,n
+model,n
+model selection,n
+modeling,n
+mri,n
+multi-agent system,y
+multi-class classification,
+multiclass classification,y
+mutual information,y
+naive baye,y
+naive bayes classifier,y
+named entity recognition,y
+natural language processing,n
+naturalistic data,n
+nearest neighbor,y
+network security,n
+neural net,y
+neural network,y
+object detection,n
+object recognition,n
+online learning,y
+ontology,n
+opinion mining,n
+optimization,y
+parameter estimation,y
+particle swarm optimization,y
+pattern classification,y
+pattern recognition,y
+pca,y
+performance,n
+performance evaluation,n
+personalization,n
+pipeline,y
+planning,n
+prediction,y
+predictive model,y
+principal component analysi,y
+prognosi,n
+protein,n
+protein structure,n
+protein structure prediction,n
+protein-protein interaction,n
+proteomic,n
+pruning,y
+qsar,n
+question answering,n
+radial basis function,y
+random forest,y
+ranking,y
+recommender system,n
+recurrent neural network,y
+regression,y
+regression tree,y
+regularization,y
+reinforcement learning,y
+relevance feedback,n
+relevance vector machine,y
+remote sensing,n
+reproducing kernel hilbert space,y
+robotic,n
+robustnes,n
+roc curve,y
+rough set,y
+rough set theory,y
+rule extraction,y
+rule induction,y
+sampling,y
+scheduling,n
+schizophrenia,n
+security,n
+segmentation,y
+self-organizing map,y
+semantic,n
+semantic web,n
+semi-supervised learning,y
+sensitivity analysi,y
+sensor network,n
+sentiment analysi,n
+signal processing,n
+similarity,n
+similarity measure,y
+simulation,n
+social network,n
+software metric,n
+sparsity,y
+speech recognition,n
+statistic,n
+statistical analysi,y
+statistical learning,y
+statistical machine learning,y
+supervised classification,y
+supervised learning,y
+supervised machine learning,y
+support vector machine,y
+support vector machine (support vector machine),y
+support vector machines (support vector machine),y
+support vector machines (support vector machines),y
+support vector regression,y
+survey,n
+system identification,n
+systems biology,n
+text categorization,n
+text classification,n
+text mining,n
+texture analysi,n
+time serie,y
+tracking,n
+traffic classification,n
+transfer learning,y
+uncertainty,y
+unsupervised learning,y
+user modeling,n
+vaccine,y
+variable selection,y
+virtual screening,n
+visualization,y
+wavelet,y
+web mining,n
+weka,n
+wireless sensor network,n
+word sense disambiguation,n
