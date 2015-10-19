@@ -149,31 +149,31 @@ ch0: proposal: add Andrejevic 2013
 
 ## ch_praxis
 
--ch1 - use some of the literature from sts handbook on design/making e.g. Ratto
--ch1 - the fact that spark has mlib and its examples as the standard ones
--ch1 - the github argument -- how it is changing the way in which these systems are put together
--ch1 - add in McCloskey 2014 paper on the diagrammatic (in doc archive -- data_intensve)
--ch1 - add in notes from Exeter paper about diagonalization; and perhaps start with the diagonal diagram from hastie;
--ch1 - scientific papers form a substrate here; but they are entangled with software, with databases, with institutions, and with a widening circle of actors
--ch1 - learning about learning --
--ch1     - the Literature - landecker and kelty on treating literature as the informant; examples such as Cover-Hart, Breiman, etc
--ch1 - Michie, Spiegelhalter 1994 book has report on the Statlog project -- it tried to bring all method together; good that it mixes stats and computer scientists; managed by Daimler-Benz; shows that the problem of diversity of techniques has been discussed before; look at how they tried to bring  the methods together;
--ch1 - the habit of recursive application of code to itself, or to something close by, without ever going too far -- I'll do that too -- use the algorithms to investigate the literature, to classify the examples, to see how things move; but I don't want to place too much weight on this recursion, as it is something that needs to be analsyed. See the recent Totaro article -- not recursion as an intrinsic formal property, but as a practice in certain domains that allows a form of movement.
--ch1 - Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
--ch1 - done? On the aridness of the textbooks and literature and what to do about that. 
--ch1 - add Parisi quote about software cultures: '
--ch1 >The epochal challenge of programming cultures is to venture into the infinity of incomputable probabilities (infinite discrete unities that are bigger than the totality of the whole sequence of algorithmic instructions) that lies beyond both the digital ground and interactive empiricism. 77
--ch1 - the entwining of the models and the data with this text -- it can't be shown in this text, in the same way that it can't be easily shown in the world.  
--ch1 - complain about all the vignettes and case studies in this area - Mayer-Schonberger, the podcasts, etcs
-ch1 Programming: Pick up Python : Nature News & Comment
-ch1 Python Gets a Big Data Boost From DARPA
-ch1 p-value.info: Free Datascience books
-ch1: Add diversity of factor, binning, merging in R
-ch1: List methods to use in book
-ch1: Make some big data
-ch1: Programming tools: Adventures with R : Nature News & Comment
-ch1: visualization as method - use Rose, Mitchell
-ch1- things to include:
+- -ch1 - use some of the literature from sts handbook on design/making e.g. Ratto
+- -ch1 - the fact that spark has mlib and its examples as the standard ones
+- -ch1 - the github argument -- how it is changing the way in which these systems are put together
+- -ch1 - add in McCloskey 2014 paper on the diagrammatic (in doc archive -- data_intensve)
+- -ch1 - add in notes from Exeter paper about diagonalization; and perhaps start with the diagonal diagram from hastie;
+- -ch1 - scientific papers form a substrate here; but they are entangled with software, with databases, with institutions, and with a widening circle of actors
+- -ch1 - learning about learning --
+- -ch1     - the Literature - landecker and kelty on treating literature as the informant; examples such as Cover-Hart, Breiman, etc
+- -ch1 - Michie, Spiegelhalter 1994 book has report on the Statlog project -- it tried to bring all method together; good that it mixes stats and computer scientists; managed by Daimler-Benz; shows that the problem of diversity of techniques has been discussed before; look at how they tried to bring  the methods together;
+- -ch1 - the habit of recursive application of code to itself, or to something close by, without ever going too far -- I'll do that too -- use the algorithms to investigate the literature, to classify the examples, to see how things move; but I don't want to place too much weight on this recursion, as it is something that needs to be analsyed. See the recent Totaro article -- not recursion as an intrinsic formal property, but as a practice in certain domains that allows a form of movement.
+- -ch1 - Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
+- -ch1 - done? On the aridness of the textbooks and literature and what to do about that. 
+- -ch1 - add Parisi quote about software cultures: '
+- -ch1 >The epochal challenge of programming cultures is to venture into the infinity of incomputable probabilities (infinite discrete unities that are bigger than the totality of the whole sequence of algorithmic instructions) that lies beyond both the digital ground and interactive empiricism. 77
+- -ch1 - the entwining of the models and the data with this text -- it can't be shown in this text, in the same way that it can't be easily shown in the world.  
+- -ch1 - complain about all the vignettes and case studies in this area - Mayer-Schonberger, the podcasts, etcs
+- ch1 Programming: Pick up Python : Nature News & Comment
+- ch1 Python Gets a Big Data Boost From DARPA
+- ch1 p-value.info: Free Datascience books
+- ch1: Add diversity of factor, binning, merging in R
+- ch1: List methods to use in book
+- ch1: Make some big data
+- ch1: Programming tools: Adventures with R : Nature News & Comment
+- ch1: visualization as method - use Rose, Mitchell
+- ch1- things to include:
     - my `R` books, libraries, papers, competitions, blogs, talking, courses
     - `knitr`/`ipython` notebooks - executable - some examples from python notebooks
     - the notion of repl -- read-evaluate-print-loop
@@ -297,24 +297,24 @@ ch7 Put buffalo ms study into reality world
 - MF from archaeology of knowledge on the subject in the discursive formation
 
 
-ch5 World's Top Data Scientists Open Doors To Big-Cash Contests - Forbes
-ch5 data gotham videos as good source of speakers and examples
-ch5: In The Future, The Data Scientist Will be Replaced by Tools
-ch5: Poseurs should not own the backlash against data science poseurs
-ch5: Prize-based contests can provide solutions to computational biology problems : Nature Biotechnology : Nature Publishing Group
-ch5: Put Nyt infographics into reality subjectivity chapter
-ch5: Social Science Statistics Blog: Kaggle is going to take your job
-ch5: Top technology gurus to design mobile phone game to speed up cancer cures : Cancer Research UK
-ch5: courses:bigdata:start  CILVR Lab @ NYU
-ch5: dataedge event speakers
-ch5: knack approach to people analytics
-ch5: people to put into subjectivity chapter - cathy  oneil, rachel schutt
-ch5: winner of kaggle adzuna contest -- vlad minh
-ch5:: Columbia Data Science course, week 7: Hunch.com, recommendation engines, SVD, alternating least squares, convexity, filter bubbles  mathbabe
-ch5:: add Obama data guy
-ch7: kaggles own analysis of its talent
-ch7: rf-ace - multivariate machine learning with heterogeneous data - Google Project Hosting
-ch7:The Mathematical Shape of Big Science Data | Simons Foundation
+- ch5 World's Top Data Scientists Open Doors To Big-Cash Contests - Forbes
+- ch5 data gotham videos as good source of speakers and examples
+- ch5: In The Future, The Data Scientist Will be Replaced by Tools
+- ch5: Poseurs should not own the backlash against data science poseurs
+- ch5: Prize-based contests can provide solutions to computational biology problems : Nature Biotechnology : Nature Publishing Group
+- ch5: Put Nyt infographics into reality subjectivity chapter
+- ch5: Social Science Statistics Blog: Kaggle is going to take your job
+- ch5: Top technology gurus to design mobile phone game to speed up cancer cures : Cancer Research UK
+- ch5: courses:bigdata:start  CILVR Lab @ NYU
+- ch5: dataedge event speakers
+- ch5: knack approach to people analytics
+- ch5: people to put into subjectivity chapter - cathy  oneil, rachel schutt
+- ch5: winner of kaggle adzuna contest -- vlad minh
+- ch5:: Columbia Data Science course, week 7: Hunch.com, recommendation engines, SVD, alternating least squares, convexity, filter bubbles  mathbabe
+- ch5:: add Obama data guy
+- ch7: kaggles own analysis of its talent
+- ch7: rf-ace - multivariate machine learning with heterogeneous data - Google Project Hosting
+- ch7:The Mathematical Shape of Big Science Data | Simons Foundation
 
 ## conclusion
 
@@ -329,8 +329,8 @@ ch7:The Mathematical Shape of Big Science Data | Simons Foundation
 - what does it add to have followed some of the infrastructures, implementations, etc 
 - what happened to the affective/psychoanalytic/movement in thought?
 - the praxiography -- writing code as practice that allows something about movement to be contoured and perhaps countered. 
-ch8 AI Software That Could Score You the Perfect Job | WIRED
-ch8: sketch what book means for doing data
-ch8: sketch what book means for researching social
-ch8: sketch what book means for theories of social
+- ch8 AI Software That Could Score You the Perfect Job | WIRED
+- ch8: sketch what book means for doing data
+- ch8: sketch what book means for researching social
+- ch8: sketch what book means for theories of social
 
