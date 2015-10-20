@@ -33,7 +33,7 @@ res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
 
 ## Introduction
 
-> If a proposition, a sentence, a group of signs can be called 'statement' , it is not therefore because, one day, someone happened to speak them or put them into some concrete form of writing; it is because the position of the subject can be assigned [@Foucault_1972,  95]
+> If a proposition, a sentence, a group of signs can be called 'statement' , it is not therefore because, one day, someone happened to speak them or put them into some concrete form of writing; it is because the position of the subject can be assigned [@Foucault_1972,  95] \index{statement!position of subject}
 
 > 'generalization error is what we care about' [@Ng_2008f]
 
