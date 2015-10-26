@@ -27,7 +27,7 @@
 
 ## Introduction
 
-> If a proposition, a sentence, a group of signs can be called 'statement' , it is not therefore because, one day, someone happened to speak them or put them into some concrete form of writing; it is because the position of the subject can be assigned [@Foucault_1972,  95]
+> If a proposition, a sentence, a group of signs can be called 'statement' , it is not therefore because, one day, someone happened to speak them or put them into some concrete form of writing; it is because the position of the subject can be assigned [@Foucault_1972,  95] \index{statement!position of subject}
 
 > 'generalization error is what we care about' [@Ng_2008f]
 
@@ -116,7 +116,7 @@ f_k (X) = g_k (T), k = 1, ..., K,
 
 >[@Hastie_2009, 392]
 
-Equation \ref{eq:nn} is a diagram with some familiar elements as well as some novelty. Some of the diagrammatic operation of the neural net is already familiar from the linear models. The neural networks traverse data in a vector space denoted by $X$. That is common to nearly all machine learners.  They make use of the non-linear sigmoid function \index{sigmoid function} that lies at the heart of one of the main linear classifiers used in machine learning, logistic regression \index{logistic regression}. Their training and learning processes have come to rely on the same kinds of cost, loss or error functions \index{cost function} we have seen in other  machine learners. Their apparently increasingly power to learn (to see, to find, to predict) again seems to owe much to re-configuration, to the diagrammatic movements that recombine operations in new intersections.
+Equation \ref{eq:nn} is a diagram with some familiar elements as well as some novelty. Some of the diagrammatic operation of the neural net is already familiar from the linear models. The neural networks traverse data in a vector space denoted by $X$. That is common to nearly all machine learners.  They make use of the non-linear sigmoid function \index{function!sigmoid} that lies at the heart of one of the main linear classifiers used in machine learning, logistic regression \index{logistic regression}. Their training and learning processes have come to rely on the same kinds of cost, loss or error functions \index{cost function} we have seen in other  machine learners. Their apparently increasingly power to learn (to see, to find, to predict) again seems to owe much to re-configuration, to the diagrammatic movements that recombine operations in new intersections.
 
 There are, however, some differences in this diagram. Equation \ref{eq:nn} has three lines rather than one, and this layering and its diagonal patterns of indexical referencing running between subscripts distinguishes neural nets from linear   models more generally.
 
@@ -181,7 +181,7 @@ The final major form in which neural net appear is the network diagram. Network 
 
 
 ```
-## Error in plot.nn(titanic_net, fontsize = 8, show.weights = FALSE): weights were not calculated
+## NULL
 ```
 
 ```
@@ -201,7 +201,7 @@ The network topology of the model appears in countless more complicated forms, a
 
 ## The subjects of a hidden operation
 
-Given the diagrammatic forms of the basic model equations, the network diagram and the operational code comprising the privileged machine, how are subject positions assigned? The layered architecture of model generates new textures, densities, pools, sparsities and saturations in both the common vector space, and in the operations of machine learners. In early 2002, while carrying out an ethnographic study of 'extreme programming,' a software development methodology popular at that time [@Mackenzie_2004], I spent several months visiting a company in Manchester developing software for call centres. The purpose of the software was to manage 'knowledge' in call centres such that any query from a caller would be readily answered by call centre staff who would query a knowledge management system. This system was marketed on the promise of the neural net. It contained  an artificial neural network that learned to match queries and responses over time. The taciturn neural network expert, Vlad, sat in a different part of the room from the developers working on the databases and the web interfaces of the knowledge management system. His work with the neural network was at the core of the knowledge management system yet outside the orbit of the software development team and its agile software development processes. They generally regarded Vlad and the neural net as an esoteric and temperamental yet powerful component, a hidden node we might say, of the knowledge management system. As we have already seen with `kittydar` \index{kittyar}, today the situation of neural networks has changed. They are no longer exotic or specialized, but both banal and occasionally spectacular. 
+Given the diagrammatic forms of the basic model equations, the network diagram and the operational code comprising the privileged machine, how are subject positions assigned? The layered architecture of model generates new textures, densities, pools, sparsities and saturations in both the common vector space, and in the operations of machine learners. In early 2002, while carrying out an ethnographic study of 'extreme programming,' a software development methodology popular at that time [@Mackenzie_2004], I spent several months visiting a company in Manchester developing software for call centres. The purpose of the software was to manage 'knowledge' in call centres such that any query from a caller would be readily answered by call centre staff who would query a knowledge management system. This system was marketed on the promise of the neural net. It contained  an artificial neural network that learned to match queries and responses over time. The taciturn neural network expert, Vlad, sat in a different part of the room from the developers working on the databases and the web interfaces of the knowledge management system. His work with the neural network was at the core of the knowledge management system yet outside the orbit of the software development team and its agile software development processes. They generally regarded Vlad and the neural net as an esoteric and temperamental yet powerful component, a hidden node we might say, of the knowledge management system. As we have already seen with `kittydar` \index{kittydar}, today the situation of neural networks has changed. They are no longer exotic or specialized, but both banal and occasionally spectacular. 
 
 How would we describe the figure of human machine learner in this setting? In _The Archaeology of Knowledge_, Michel Foucault refers to the 'position of the subject' \index{subject position} as an anchor point for the power-laden, epistemically conditioning enunciative functions called 'statements.'\index{statements}\index{enunciative function}  When a subject position can be assigned, propositions, diagrams, numbers, models, calculations and data structures can come together in statements, as 'the specific forms of an accumulation' [@Foucault_1972, 125]. But this anchor point is not a unifying point grounded in interiority, in intentionality or even in  single speaking position or voice (that of the  machine learning expert, for instance). On the contrary, 'various enunciative modalities manifest his [sic] dispersion' [@Foucault_1972, 54]. In the mist of this dispersion (a dispersion that is the main focus of this chapter), the position of subject is linked to operations that determine statements that become a kind of law for the subject.
 
@@ -277,8 +277,8 @@ Machine learning competitions furnish a contemporary instance of the practices o
 In its disciplinary form, Foucault links epistemic and operational aspects of examination. Examinations combine ceremony, ritual, experiment, force and truth, as well as processes of subjectification and objectification. If, as already been suggested above, the pack-ice of machine learning formed around neural nets during the 1990s, we might say that the re-solidification of neural nets today in high profile deep learning projects can be understood in terms of a much more pervasive practice of examining and testing occurring through machine learning training and competitions. How would such a process be legible? The forms of visibility created by competitions, the ways in which they individualize and document machine learners (often by proper names), and that maximise extractions of force, time, propensities and aptitudes.  In competitive examinations, we might see attempts to construct 'parallel architectures' for people doing machine learning. Machine learning competitions effectively implement a parallel architecture for machine learners with limited communication. 
 
 
-% latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Thu Sep  3 11:08:05 2015
+% latex table generated in R 3.2.2 by xtable 1.7-4 package
+% Thu Oct 22 13:45:41 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rll}
@@ -472,8 +472,8 @@ In its disciplinary form, Foucault links epistemic and operational aspects of ex
 \end{table}
 
 
-% latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Thu Sep  3 11:08:05 2015
+% latex table generated in R 3.2.2 by xtable 1.7-4 package
+% Thu Oct 22 13:45:41 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rlll}
