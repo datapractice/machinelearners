@@ -2,6 +2,7 @@
 
 \author{Adrian Mackenzie}
 
+- Machine learning: the archaeology of data practice
 - Machine learners: an archaeology of prediction
 - Unlearning machine learning
 - Into the data: diagramming machine learning

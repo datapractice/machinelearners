@@ -15,11 +15,12 @@ badd +1 ch3_curves/ch_curves_functions.rmd
 badd +2 ch4_probability/ch_naive_informed.rmd
 badd +2 ch5_dimensionality/ch_dimensional_exuberance.rmd
 badd +2 ch6_topologies/ch_genomic_topologies.rmd
-badd +1 ch7_subjects/ch_learning_subjects.rmd
-badd +1 ch8_conclusion/ch_conclusion.rmd
+badd +253 ch7_subjects/ch_learning_subjects.rmd
+badd +2 ch8_conclusion/ch_conclusion.rmd
+badd +301 ch7_subjects/ch_learning_subjects_old.rmd
 argglobal
 silent! argdel *
-edit ch8_conclusion/ch_conclusion.rmd
+edit ch7_subjects/ch_learning_subjects.rmd
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -34,13 +35,13 @@ setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 2 - ((1 * winheight(0) + 21) / 43)
+let s:l = 253 - ((1 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
+253
 normal! 0
-lcd ~/Documents/data_intensive/book/ch8_conclusion
+lcd ~/Documents/data_intensive/book/ch0_introduction
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
