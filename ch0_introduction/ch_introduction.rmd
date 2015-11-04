@@ -163,23 +163,24 @@ While these cases may be exceptional achievements, and indeed highlight the suff
 
 ```{r knowledge_diversity, results='asis', echo=FALSE}
 
-library(xtable)
 query = 'select * from basic_refs where TI like "%climate%" or DE LIKE "%climate% order by TC desc, PY;"'
 res = dbGetQuery(con, query)
 res_sample = res[sample.int(nrow(res), 15), ]
 res_sample = res_sample[order(res_sample$PY),]
-table = xtable(res_sample[,c('TI', 'PY')], caption='A small sample of titles of scientific articles that use machine learning in relation to "climate"', label='tab:climate_ml')
-print(table, type='latex')
+res_sample_show = res_sample[,c('TI', 'PY')]
+colnames(res_sample_show) = c('Title', 'Year')
+climate_table = xtable(res_sample_show, type='latex', include.rownames=FALSE, align = c("p{0.55\\textwidth}", "p{0.1\\textwidth}",  "p{0.15\\textwidth}|"), caption='A small sample of titles of scientific articles that use machine learning in relation to "climate"', label='tab:climate_ml')
+print(climate_table, include.rownames=FALSE)
 ```
 
 Table \ref{tab:climate_ml} presents a small sample of scientific literature at the intersection of 'climate' and machine learning. This sample, while no doubt dwarfed by the flood of publications on recommendation systems, targeted advertising or handwriting recognition, is typical of the epistemic atmosphere associated with machine learners. (I return to this topic in Chapter \ref{ch:genome} in discussing how the leveraging of scientific data via predictive models and classifiers deeply affects the fabric and composition of objects of scientific knowledge.) But the longevity and plurality of experiments, variants, alternative techniques, implementations and understandings associated with machine learning makes it difficult to immediately reduce them to capitalist captures of knowledge production.  
 
 ```{r machine_learning_over_time, results = 'hide', cache=TRUE, include=FALSE, echo=FALSE}
-query = 'select * from basic_refs where anchor like "%svm%" order by PY desc, TC desc'
-query1 = 'select * from basic_refs where anchor like "%naive%" order by PY desc, TC desc'
-query2 = 'select * from basic_refs where anchor like "%decision_tree%" order by PY desc, TC desc'
-query3 = 'select * from basic_refs where anchor like "%expect%" order by PY desc, TC desc'
-query4 = 'select * from basic_refs where anchor like "%random%" order by PY desc, TC desc'
+query = 'select PY, anchor from basic_refs where anchor like "%svm%" order by PY desc, TC desc'
+query1 = 'select PY, anchor from basic_refs where anchor like "%naive%" order by PY desc, TC desc'
+query2 = 'select PY, anchor from basic_refs where anchor like "%decision_tree%" order by PY desc, TC desc'
+query3 = 'select PY, anchor from basic_refs where anchor like "%expect%" order by PY desc, TC desc'
+query4 = 'select PY, anchor from basic_refs where anchor like "%random%" order by PY desc, TC desc'
 res = dbGetQuery(con, query)
 res1 = dbGetQuery(con, query1)
 res2 = dbGetQuery(con, query2)
@@ -187,6 +188,7 @@ res3 = dbGetQuery(con, query3)
 res4 = dbGetQuery(con, query4)
 res_all = rbind(res, res1, res2, res3, res4)
 g = ggplot(res_all, aes(x=PY, group=anchor, alpha=0.6, linetype=anchor)) + geom_density()
+g = g +xlim(1950, 2015)
 g = g + xlab('Year of publication') + ylab('Proportion of publications')
 g = g + scale_linetype_discrete(name = 'Machine learner', labels = c('Decision tree', 'Expectation Maximisation', 'Support Vector Machine', 'Naive Bayes', 'Random forest'))
 g = g + guides(alpha = FALSE) 
