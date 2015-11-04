@@ -1,29 +1,6 @@
 \chapter{Acknowledgments}
 \label{ch:acknowledgments}
 
-This book stems from a matrix of  protracted and varying correlations. My engagement with the topic of machine learning took place quite obliquely, yet in some ways represents the prolongation of a long trajectory. I would like to acknowledge my Texas Instruments TI-97 scientific calculator on which I first intuited in high school mathematics classes something of correlation. There I first glimpsed the idea of fitting a line to points without using just a pencil and a ruler to work out the best fit. I also would like to thank my mathematics teachers at Wollongong High for the simple pleasures of numerical optimization they first introduced to me. I note with interest that Newton's method for finding the minimum value of a continuous function is still  massively prevalent in machine learning. I would also like to acknowledge several computers, principally my Toshiba laptop with Xubuntu operating system and solid state drive as well as a score of wireless routers that have supported my connection to code, data, scientific papers, search engines and so forth.  
+My Texas Instruments TI-97 scientific calculator conveyed in high school mathematics classes something of correlation. There I first glimpsed the idea of fitting a line to points without using just a pencil and a ruler to work out the best fit. I also would like to thank my mathematics teachers at Wollongong High for the simple pleasures of numerical optimization they first introduced to me. Newton's method for finding the minimum value of a continuous function still operates in machine learning. 
 
-In a broader biographical vein,  I should acknowledge an economic-industrial nexus and a geographical axis. The coastline of my childhood and adolescence ranged between the chimney stacks and hazy skyline of  steel industry and port to the south-east and a eucalyptus shadowed university campus to the west. The geographical axis of Wollongong, with its glittering escarpment -- a veritable ascending line graph with peaks and troughs running a huge wall north to south to the west of the city -- and the shimmering Pacific horizon to the east not only confined industry and university to the narrow coastal plain, but more vaguely yet powerfully projected dense shapes into the sensori-motor fields of its inhabitants. Waves and mountains in their flow and fixity frame that place in hyperplanes. 
-
-Decades later, from 2007-2012, I benefited greatly from a research position in the UK Economic and Social Research Council-funded Centre for Economic and Social Aspects of Genomics at Lancaster University. Certain colleagues there, initially in the Sociomics Core Facility, participated in the inception of this  book. Ruth McNally first of all, but also Paul Oldham, Maureen McNeil, Richard Tutton, and Brian Wynne were participants in many discussions concerning the transformation of life sciences around which my interest in machine learning first crystallised. Various academic staff in the Department of Applied Mathematics and Statistics at Lancaster University shepherded me through their post-graduate training courses: Brian Francis for his course of 'Data Mining,' David Lucy for his course on 'Bayesian Statistics', Thomas TBA for his course 'Genomic Data Analysis' and TBA's course on 'Missing Data.' My colleagues in science studies at Lancaster, especially Maggie Mort, Lucy Suchman, and Claire Waterton have .  I have been very fortunate to have worked with inspiring doctoral students at Lancaster during the writing of this book. Lara Houston, Mette Kragh Furbo, Felipe Raglianti, Emils Kilis, Xaroula Charalampia, and Nina Ellis have all helped and indeed challenged me in different ways. Sjoerd Bollebakker very kindly updated many of the scientific literature searches towards the end of the book's writing. 
-
-Portions and versions of sections of the book have been presented at various seminars and workshops, sometimes I'm sure to befuddling effect. I've 
-
-
-People -- Dawn Nafus, Joe Dumit, Brit Ross-Winthereik, Jussi Parikka, Iris van der Tuin, Rick Dolphin, Steve Hinchecliffe, the Berlin people
-CompCulture -- Matthew, Andy for , Olga for Dostoevskeyanand Graham for wickedness
-Anna Munster and UNSW group
-
-who at LSE -- Susan ... 
-David DeRoure
-John Law -- methods cresc
-Celia Lury
-Penny Harvey
-Evelyn Ruppert
-Hannah Knox
-Antonia Walford
-
-People at Aarhuus
-Copenhagen Business School
-Francis Lee and Lotta at Linkoping
-
+Decades later, from 2007-2012, I benefited greatly from a research position in the UK Economic and Social Research Council-funded Centre for Economic and Social Aspects of Genomics at Lancaster University. Certain colleagues there, initially in the Sociomics Core Facility, participated in the inception of this  book. Ruth McNally first of all, but also Paul Oldham, Maureen McNeil, Richard Tutton, and Brian Wynne were participants in many discussions concerning the transformation of life sciences around which my interest in machine learning first crystallised. Various academic staff in the Department of Applied Mathematics and Statistics at Lancaster University shepherded me through their post-graduate training courses: Brian Francis for his course of 'Data Mining,' David Lucy for his course on 'Bayesian Statistics', Thomas Jakl for his course 'Genomic Data Analysis' and TBA's course on 'Missing Data.' My colleagues in science studies at Lancaster, especially Maggie Mort, Lucy Suchman, and Claire Waterton have .  I have been very fortunate to have worked with inspiring and adventurous doctoral students at Lancaster during the writing of this book. Lara Houston, Mette Kragh Furbo, Felipe Raglianti, Emils Kilis, Xaroula Charalampia, and Nina Ellis have all helped and indeed challenged me in different ways. Sjoerd Bollebakker very kindly updated many of the scientific literature searches towards the end of the book's writing. 
