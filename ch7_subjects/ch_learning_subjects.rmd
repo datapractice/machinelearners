@@ -4,7 +4,7 @@
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8, 
-                      echo=FALSE,  warning=FALSE, message=FALSE, dev='pdf')
+                      echo=FALSE, results='hide',  fig.show='hide', warning=FALSE, message=FALSE, dev='pdf')
 library(RSQLite)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
 res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
@@ -34,7 +34,7 @@ Machine learner subject positions are the topic of this chapter. I draw on artif
 
 # Propagating neural nets in machine learning 
 
-```{r nn_de, cache=TRUE}
+```{r nn_de, cache=TRUE, results='asis'}
 
 library(stringr)
 library(RSQLite)
@@ -154,12 +154,10 @@ The common diagrammatic operations of neural nets and other supervised machine l
 ```{r neural_net1, echo=TRUE, message=FALSE, warning=FALSE, cache=TRUE, fig.cap=''}
 library(neuralnet)
 titanic = read.csv('data/titanic3.csv')
-titanic_transformed = as.data.frame(model.matrix(~survived + age+ pclass + fare+ sibsp + sex
-+ parch + embarked, titanic))
-head(titanic_transformed)
+titanic_transformed = as.data.frame(model.matrix(~survived + age+ pclass + fare+ sibsp + sex + parch + embarked, titanic))
 train_index = sample.int(nrow(titanic)/2)
 titanic_train = titanic_transformed[train_index,]
-titanic_net = neuralnet(survived ~ age +pclass + fare + sexmale + sibsp + parch + embarkedC + embarkedQ + embarkedS, data=titanic_train, err.fct='ce', linear.output=FALSE, rep=5, hidden=3, stepmax=1e6) 
+titanic_net = neuralnet(survived ~ age +pclass + fare + sexmale + sibsp + parch + embarkedC + embarkedQ + embarkedS, data=titanic_train, err.fct='ce', linear.output=FALSE, rep=5, hidden=3, stepmax=1e4) 
 titanic_test = titanic_transformed[-train_index,]
 test_error = round(sum( 0.5 < compute(titanic_net, titanic_test[,-c(1,2)])$net.result)/sum(titanic_test$survived), 2)
 ```
@@ -260,7 +258,6 @@ The disciplinary form of the examination of errors and errancy links statements 
 
 ```{r kaggle, echo=FALSE, messages=FALSE, warnings=FALSE, results='asis'}
     library(xtable)
-    library(ggplot2)
     df = read.csv('data/kaggle.csv')
     df_excerpt = head(df[order(df$Reward_amount, decreasing=TRUE),], 20)
     tab = xtable(df_excerpt[, c('Competition', 'Reward_amount', 'domain', 'data_type')], caption='The highest prize money machine learning competitions on Kaggle',  label='tab:kaggle_competitions')
@@ -279,7 +276,7 @@ In comparison to the neural nets discussed above, the deep belief networks invol
 
 They go on to describe the different layers -- cyclic slice, convolutional, spatial pooling -- that derive features from the data or augmenting it - by examining overlapping tiles, by rotating or scaling the images, so that any given image, is 'seen' in a number of different ways, and the model learns to detect these variations.   The combination of diverse layers in a stratified model introduces many different parameters into the model and implies heavy computational work. Crucially, the massive parallel computing allows 'deep' learning. Infrastructure and cognition entwine heavily here, since the very possibility of building many layered neural nets depends on the possibility of relatively quickly training them. Probably many other competitors in this competition would not have had access to the Tesla K40 or 'NVIDIA GTX 980 Superclocked' GPU cards that 'Deep Sea' relied on.[^7.100] \index{GPU|see{vectorization!hardware}} Even with that intensive computational resource, their models required 'between 24 and 48 hours to reach convergence.' They constructed around 300 models. Because of the plethora of models with different architectures and parameters, 'we had to select how many and which models to use in the final blend. For this, we used cross-validation on our validation set' [@Dieleman_2015a]. As is often the case, competitive examination engenders populations of machine learners whose aggregate tendencies stage model -- in the sense of optimum  -- performance. The competition itself, then, creates of a visible hierarchy amidst a population of machine learners.  Both during and after the competition, the visibility of the leaderboard gives access to and elicits further efforts to render visible, usually in the form of descriptions of winning entries and sometimes positing of model code.[^7.40] The 'DeepSea' team might be a typical intersectional entity today. Like the 'wonderful people' described by Hilary Mason, they bring together infrastructure, engineering, mathematics/statistics and some knowledge of human behaviour (although the knowledge of human behaviour in this case might have more to do with what other Kaggle competitors might be doing, as well as an awareness of the cutting edge research leaders in the field of visual object recognition techniques). 
 
-# Subject positions in the confusion matrix[^7.202]
+# Subject positions in the confusion matrix
 
 The members of 'DeepSea' built models that classify more than a hundred kinds of plankton with few errors. But in driving down error rates, they ineluctably occupy the subject position assigned by the conjunction of operation and the statements in machine learning. Neural nets in the form of deep belief nets are already automating through their many convolutional layers the feature engineering \index{feature engineering} that characterised the skilled configuration work in machine learning in decision trees, linear regressions, support vector machines and predecessor neural nets. In all of this augmentation, pre-processing, unsupervised and supervised training, the competitions assign subject positions to machine learners amidst science, industry, media and government. The subject position of a machine learner, however, exposes its occupants to the zone of diagrammatic slippage between statements and operations. \index{statements!and operations!zone of slippage} Neural nets strongly diagram the act of seeing machine learning itself. Hinton's \index{Hinton, Geoffrey} references to 'mind' \index{machine learner!neural net!mind of} might make sense here as part of the re-drawing human-machine differences. If some machine learners, such as neural nets, afford visibility to what they see in the world, then their function as 'minds,' as cognitive processes  -- I think this is what Hinton has in mind as a cognitive psychologist -- effectively does begin to internalise the operations and statements that previously were handled by human machine learners. This back-propagating re-distribution privileges the machine as site of learning, but also quickly assigns new subject positions. 
 

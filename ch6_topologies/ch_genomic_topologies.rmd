@@ -5,10 +5,9 @@
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8, 
-                      echo=FALSE,  results='hide', warning=FALSE, message=FALSE, dev='pdf')
+                      echo=FALSE,  cache=TRUE, fig.show='hide', results='hide', warning=FALSE, message=FALSE, dev='pdf')
 library(RSQLite)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
-res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
 library(ggplot2)
 library(stringr)
 library(xtable)
@@ -43,7 +42,6 @@ de = unlist(str_split(res$DE, '; '))
 det = as.data.frame(sort(table(de), decreasing=TRUE), rowNames = NULL)
 det$keyword = rownames(det)
 colnames(det) = c('freq', 'keyword')
-dtt = xtable(head(det,50), label = 'tab:top_keywords', caption = 'Most common author-supplied keywords from the 5000 cited research publications in machine learning, 1990-2015')
 terms= read.csv('techniques.csv', header=FALSE)
 colnames(terms) = c('keyword', 'technique')
 techniques =terms$keyword[terms$technique=='y']
@@ -55,7 +53,7 @@ wct = as.data.frame(sort(table(wc), decreasing=TRUE), rowNames = NULL)
 wct$keyword = rownames(wct)
 colnames(wct) = c('freq', 'discipline')
 
-wtt = xtable(head(wct,20), label = 'tab:top_discp', caption = 'The top 20 disciplines of the top 5000 cited research publications in machine learning, 1990-2015')
+wtt = xtable(head(wct,20), label = 'tab:top_discp', align = c("p{0.1\\textwidth}", "p{0.1\\textwidth}","p{0.8\\textwidth}"), caption = 'The top 20 disciplines of the top 5000 cited research publications in machine learning, 1990-2015')
 print(wtt, type='latex')
 ```
 
@@ -110,7 +108,7 @@ library(datamicroarray)
 tab1 = xtable(describe_data(), label='microarray_data', caption ='Microarray datasets used in machine learning')
 data('khan')
 tab = xtable(head(khan[[1]], 5), label='srbct', caption='Small round blue-cell tumour data sample (Khan, 2001)')
-print(tab, type='latex')
+print(tab, type='latex', include.rownames=FALSE)
 ```
 
 The sample of the `SRBCT` data shown in Table \ref{tab:srbct} does not readily accommodate the wide table of this dataset. Unlike `iris`, the thousands of variables simply cannot be displayed on a page or screen. _Wide_ datasets are quite common in machine learning settings generally, but particularly common in genomics where in a given study there might only be a relatively small number of biological samples but a huge amount of sequencer or microarray data for each sample. This wide dimensionality of the data is common. Note too that while _Elements of Statistical Learning_ picks up the `SRBCT` dataset from biomedical research ([@Khan_2001] appears in the journal _Nature Medicine_), many other similar datasets appear in the machine learning literature. Much genomic data shares this generic feature of width.[^6.70]
@@ -138,7 +136,7 @@ The sample of the `SRBCT` data shown in Table \ref{tab:srbct} does not readily a
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.9\textwidth]{figure/filename.pdf}
+      \includegraphics[width=0.9\textwidth]{figure/srbct_cluster-1.pdf}
         \caption{Hierarchical clustering of the SBRCT gene expression data}
   \label{fig:sbrct_clust}
 \end{figure}
@@ -355,7 +353,7 @@ The very justification for using such techniques is the inordinate difficulty of
 
 [^6.3]: A large and very diverse social science and humanities literature now exists around genomics. I draw on some of that literature as general background here, especially [@SunderRajan_2006; @Thacker_2005a; @Stevens_2011; @Leonelli_2014] and [@Haraway_1997], but largely do not address it directly.
 
-[^6.12]: As data forms, genomes have a problematic mode of existence. They resemble cat images on the internet. As a data form, genomes are remarkably homogeneous. They are one-dimensional strings of letters corresponding to the well-known four nucleic acids (`g`, `a`, `t`, `c`). \index{data!form of!genomic} While many earlier tabulations of variation, difference, groups, types and relations are woven through the life sciences, genomes have for the last several decades mesmerised biological sciences as a way of analysing and re-distributing the confused multiplicities associated with living things. The raw data for genomes comes from the sequencing of DNA obtained from various organisms - viruses, bacteria, plants, fish, animals and humans. The sequencing of DNA, especially DNA that encodes the proteins that pervade biological processes, that structure tissues or assemble in complicated metabolic pathways, has been the concern first of molecular biology (mainly in the 1970s-1990s) and more recently  genomics (post-1990). In molecular biology, DNA sequences were carefully elicited (using the experimental techniques for instance of Sanger sequencing) and then compared with already known sequences of DNA to identify similarities that might have biology significance (for instance, evolution from a common ancestor). In genomics, DNA sequences generally originate from increasingly high-throughput sequencers that output massive datasets (see [@Stevens_2013; @Mackenzie_20bb]. Given both the accumulated store of already sequenced DNA and the increasingly viable practices of sequencing all of the DNA in a given organism, genomics has  promised a much wider and more detailed understanding of biological complexity than any previous life science had been able to obtain. With genomes in hand, biologists for the first time would be in a position to build models of entire domains of biology, domains that previously could only be explored through painstaking experiments targeting specific cells, molecules, biochemical reactions and networks. The vast yet somewhat dispersed knowledges of the life sciences might be re-ordered and aligned on a new very extensive yet quite homogeneous  backbone of the genome read out as billions of DNA base pairs. 
+[^6.12]: As data forms, genomes have a problematic mode of existence. They resemble cat images on the internet. As a data form, genomes are remarkably homogeneous. They are one-dimensional strings of letters corresponding to the well-known four nucleic acids (`g`, `a`, `t`, `c`). \index{data!form of!genomic} While many earlier tabulations of variation, difference, groups, types and relations are woven through the life sciences, genomes have for the last several decades mesmerised biological sciences as a way of analysing and re-distributing the confused multiplicities associated with living things. The raw data for genomes comes from the sequencing of DNA obtained from various organisms - viruses, bacteria, plants, fish, animals and humans. The sequencing of DNA, especially DNA that encodes the proteins that pervade biological processes, that structure tissues or assemble in complicated metabolic pathways, has been the concern first of molecular biology (mainly in the 1970s-1990s) and more recently  genomics (post-1990). In molecular biology, DNA sequences were carefully elicited (using the experimental techniques for instance of Sanger sequencing) and then compared with already known sequences of DNA to identify similarities that might have biology significance (for instance, evolution from a common ancestor). In genomics, DNA sequences generally originate from increasingly high-throughput sequencers that output massive datasets (see [@Stevens_2013; @Mackenzie_2015]. Given both the accumulated store of already sequenced DNA and the increasingly viable practices of sequencing all of the DNA in a given organism, genomics has  promised a much wider and more detailed understanding of biological complexity than any previous life science had been able to obtain. With genomes in hand, biologists for the first time would be in a position to build models of entire domains of biology, domains that previously could only be explored through painstaking experiments targeting specific cells, molecules, biochemical reactions and networks. The vast yet somewhat dispersed knowledges of the life sciences might be re-ordered and aligned on a new very extensive yet quite homogeneous  backbone of the genome read out as billions of DNA base pairs. 
 
 
 [^6.5]: Richard Durbin, Sean Eddy, Anders Krogh and Graeme Mitchison's highly cited _Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids_ [@Durbin_1998] was based almost entirely on Hidden Markov Models, a way of modelling a sequence of states that _Elements of Statistical Learning_ treats at chapter length (see [@Hastie_2009, Chapter 17]). \index{machine learners!Hidden Markov Model!in genome assembly} While sequence alignment was regarded as a deeply algorithmic and statistical problem in the former volume, it is not at all formulated in the language of machine learning. There is little discussion of cost functions, vector spaces, optimisation, problems of generalization, supervised or unsupervised learning. On the other, David Haussler, a key bioinformatician in the first draft of the human genome in his work explicitly sought to bring  machine learning methods to bear on biology, and continues to do so. See [@Zerbino_2012] for a review of the relevance of machine learning to genomic science.  

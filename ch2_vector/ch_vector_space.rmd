@@ -1,7 +1,6 @@
 \chapter{The vector space and its products}
 \label{ch:vector}
 
-# The vector space and its products
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8, 
@@ -21,7 +20,7 @@ Do machine learners  want to go everywhere in the world, take on any problem, an
 
 > Machine learning is an amazing application of computation because it tackles problems that are straight out of science fiction. These algorithms can solve voice recognition, mapping, recommendations, and disease detection. The applications are endless, which is what makes machine learning so fascinating [@Kirk_2014, 11] \index{Kirk, Matthew}
 
-It is harder but not impossible to find dissenting or sceptical voices.  Computer scientists such as Anand Rajaraman and David Ullman in their _Mining Massive Datasets_ voice doubts about the general power of machine learning algorithms and contrast these algorithms with specialized search and retrieval techniques [@Rajaraman_2012]. Similarly, the mathematician Cathy O'Neil trenchantly criticises the rapid extension of machine learning approaches in finance. Regardless of reservations and criticisms, the belief in 'endless' applications is hardly exaggerated. Machine learning has, once you start looking for it, become astonishingly generalized. The epistemic mobility of  its operation is not only due to the generic mathematical, statistical or computational advances. It attests to the advent of a new model of truth, which opens onto an expanding epistemic continuum. The continuum arises, I will suggest, from a very specific diagrammatization of data. This diagrammatic movement generates a continuum, a continuum that has already surfaced in the perceptron's treatment of NAND truth table as discussed in chapter \ref{ch:diagram}, that *vectorises* data. Machine learning moves data vectorally; it displaces data in specific directions. \index{data!vectorisation|see{common vector space!vectorisation}
+It is harder but not impossible to find dissenting or sceptical voices.  Computer scientists such as Anand Rajaraman and David Ullman in their _Mining Massive Datasets_ voice doubts about the general power of machine learning algorithms and contrast these algorithms with specialized search and retrieval techniques [@Rajaraman_2012]. Similarly, the mathematician Cathy O'Neil trenchantly criticises the rapid extension of machine learning approaches in finance. Regardless of reservations and criticisms, the belief in 'endless' applications is hardly exaggerated. Machine learning has, once you start looking for it, become astonishingly generalized. The epistemic mobility of  its operation is not only due to the generic mathematical, statistical or computational advances. It attests to the advent of a new model of truth, which opens onto an expanding epistemic continuum. The continuum arises, I will suggest, from a very specific diagrammatization of data. This diagrammatic movement generates a continuum, a continuum that has already surfaced in the perceptron's treatment of NAND truth table as discussed in chapter \ref{ch:diagram}, that *vectorises* data. Machine learning moves data vectorally; it displaces data in specific directions. \index{data!vectorisation|see{common vector space!vectorisation}}
 
 Often data is  represented as if it is an homogeneous mass or a continuous stream. If there is any such homogeneity,  we should examine the transformations that allow different shapes and densities of data to mix. Data in its local complexes spaces out in many different density shapes, depending on how the data has been generated or instanced [^2.104]. Whatever the starting point -- a measuring instrument, people clicking and typing on websites, a device like a camera, a random number generator, etc. --  a given machine learner draws data into specific *vectorised* shapes (vectors,  matrices, arrays, etc), and will scale it within a geometrically coordinate volume.  \index{vectorisation} \index{data!volume}  The process of composing data for statistical, visual, predictive or even storage purposes, seeks to map a concrete situation, some state of affairs, onto forms imbued with various geometrical, probabilistic, and decisionist attributes that fit  the mathematical functions or mathematical models.  This mapping and forming is sometimes referred to as 'data cleaning' but this term covers over important but largely taken for granted transformations.   If, as I have been proposing, we seek contact with the practices or concrete value-situations, then the reshaping and reflowing of data densities into vectors matters greatly.   This forming and reforming of data is evidence of  implicated relations. These practices attest to what the philosopher A.N. Whitehead called 'strain': 'a feeling in which the forms exemplified in the datum concern geometrical, straight, and flat loci will be called a "strain." In a strain, qualitative elements, other than the geometrical forms, express themselves as qualities implicated in those forms' [@Whitehead_1960, 310]. \index{Whitehead, A. North}  \index{data!strain} In many machine learning models the exemplified forms are straight or flat loci (as we see in chapter \ref{ch:function}).  Yet  different practices also seek to elicit relations that strain the linear shaping of data, that show how it does not fit.  Some  practices working in the name of linear forms effectively trace strain feelings. These feelings are affective connectors between the abstractions and the concrete-value situations in which data arises. 
 
@@ -37,7 +36,7 @@ dataset_table = xtable(datasets, caption='Datasets in _Elements of Statistical L
 print.xtable(dataset_table, type='latex')
 ```
 
-In _Elements of Statistical Learning_,  data appears in various forms. Plots of New Zealand fishing patterns lie next to plots of factors in South African heart disease. The `r dataset_count` datasets  shown in table \ref{tab:datasets_elemstatlearn'} typify the variety of domains found in [@Hastie_2009; @Hastie_2001]. They span scientific, clinical, commercial and media fields. Note that they include many patches and pathways of everyday life -- speaking, seeing, writing and reading -- as well as specific scientific objects of knowledge such as galaxies, cancer, climate and national economies. This span of situations is not unusual for machine learners.  To give another example, the statistician Leo Breiman's 2001 article on random forests [@Breiman_2001] \index{random forest} is one of the most cited journal papers in the machine learning literature and displays a similarly diagonal line across human and non-human worlds: \index{Breiman, Leo}
+In _Elements of Statistical Learning_,  data appears in various forms. Plots of New Zealand fishing patterns lie next to plots of factors in South African heart disease. The `r dataset_count` datasets  shown in table \ref{tab:datasets_elemstatlearn'} typify the variety of domains found in [@Hastie_2009; @Hastie_2001]. They span scientific, clinical, commercial and media fields. Note that they include many patches and pathways of everyday life -- speaking, seeing, writing and reading -- as well as specific scientific objects of knowledge such as galaxies, cancer, climate and national economies. This span of situations is not unusual for machine learners.  To give another example, the statistician Leo Breiman's 2001 article on random forests [@Breiman_2001] \index{machine learner!random forest} is one of the most cited journal papers in the machine learning literature and displays a similarly diagonal line across human and non-human worlds: \index{Breiman, Leo}
 
 >Glass,  Breast cancer,  Diabetes,  Sonar,  Vowel,  Ionosphere,  Vehicle,  Soybean,  German credit,  Image,  Ecoli,  Votes,  Liver,  Letters,  Sat-images,  Zip-code,  Waveform,  Twonorm,  Threenorm,  Ringnorm,  [@Breiman_2001, 12].
 
@@ -70,7 +69,7 @@ This brief résumé of one of the main arguments in _The Order of Things_ might 
 ```[r ElemStatLearn_data, echo=TRUE}
 library('ElemStatLearn')
 datasets = data(package='ElemStatLearn')
-datasets$results[,3]
+datasets[['results']][,3]
 ```
 
 The `ElemStatLearn` `R` package brings, as we have seen in the previous chapter, with it around 20 different datasets, including the four we see in the opening examples. At this point, I'm not so much interested in gauging the rhetorical effect of this mixing of differences,  as in exploring how  _Elements of Statistical Learning_ goes into and between data tables.  On the one hand, every the data table indexes a localised complex of activities (clinical, social media platform, financial transactions, etc.). On the other hand, for machine learners, the table is a space of similarities and differences both within the table itself (e.g. how much does row number 1000 differ from row 1,000,000) and between tables (e.g. how much does this table of clinical test results differ from that table of microarray data?).  These internal and external differences entwine with each other in ways that create a fault line. It is this fault or fold line, I propose, that diagrammatically transforms data tables into the expansive and moving substrate of the common vector space. \index{diagrammatic movement} 
@@ -87,16 +86,16 @@ In the epistopic mode of diagramming, machine learners  find edges in data table
 
 In the ensuing discussion,  they begin to dissect the tables and point to various discontinuities traversing the tables. The major discontinuity is already remarked in the common cut between 'inputs which are measured' and values that might called 'outputs' that inputs 'influence.' Not all tables are cut by machine learners in this way, but this cut is epistopic since the table now shows that some things are measured and some might not be (the values of the outputs). In addition to this vertical discontinuity dividing tables, more diverse horizontal discontinuities can be seen (and Hastie et. al. go on to describe it). Some of the variables in the table are continuous numerical values, others are discrete (they can only take on certain values such as a whole number), and indeed may be categorical or nominal (for instance, when predicting the actual digit from the handwritten digits, the predicted digit itself is a categorical variable, since the prediction must choose one of the digits 0,1,2,3,4,5,6,7,8 or 9). \index{data!variable!types} Discrete qualitative data appears frequently in machine learning, or wherever classification problems can be found. \index{classification} (I will have much more to say about classification and machine learning classifiers in later chapters. For the moment, we need only note that predicting the class to which things belong is a major topic of interest.)
 
-```{r prostate_plot, echo=TRUE, message=FALSE, results = 'hide', fig.cap=''}
+```{r prostate_plot, echo=TRUE, message=FALSE, results = 'hide', fig.show='hide'}
 library('ElemStatLearn')
 data('prostate')
-pairs(prostate[, -10], main='Scatterplot matrix of the `prostate` dataset', cex=0.2)
+pairs(prostate[, -10],  cex=0.2)
 ```
 
 ```{r prostate_data, results='asis'}
 
 library(xtable)
-print(xtable(head(prostate), label= 'tab:prostate', caption='First rows of the \`prostate\` dataset'))
+print(xtable(head(prostate, 3), label= 'tab:prostate', caption='First rows of the \`prostate\` dataset'))
 ```
 
 \begin{figure}
@@ -161,7 +160,7 @@ Similarly, although the mathematics is slightly more complicated than high schoo
 \hat{\beta} = (\mathbf{X}^T\mathbf{X})^-1\mathbf{X}^T\mathbf{y}
 \end {equation}
 
-In this expression, the data shown as $\mathfb{X}$ supports the calculation of the coefficients $\hat{\beta}$ that define a flat surface or plane cutting across the common vector space.[^2.38a] The derivation of the analytical 'ordinary least squares' solution \index{ordinary least squares} relies on some differential calculus \index{calculus!differential} as well as a range of linear algebra operations such as matrix transpose, inner product and matrix inversion, the details of which need not trouble us here. (As usual, and in keeping the diagrammatic reading of these forms, these operations all consist of ways of either moving or combining numbers in practice.) The relevant point is that equation \ref{eq:linear_model_solution} calculates some values for the linear regression model coefficients $\hat\beta$ and therefore assigns a slope and intercept, a direction and displacement to a line or flat surface traversing the density-shape of a dataset in its full dimensional vector space (nine dimensions in the case of `prostate`).[^2.38] 
+In this expression, the data shown as $\mathbf{X}$ supports the calculation of the coefficients $\hat{\beta}$ that define a flat surface or plane cutting across the common vector space.[^2.38a] The derivation of the analytical 'ordinary least squares' solution \index{ordinary least squares} relies on some differential calculus \index{calculus!differential} as well as a range of linear algebra operations such as matrix transpose, inner product and matrix inversion, the details of which need not trouble us here. (As usual, and in keeping the diagrammatic reading of these forms, these operations all consist of ways of either moving or combining numbers in practice.) The relevant point is that equation \ref{eq:linear_model_solution} calculates some values for the linear regression model coefficients $\hat\beta$ and therefore assigns a slope and intercept, a direction and displacement to a line or flat surface traversing the density-shape of a dataset in its full dimensional vector space (nine dimensions in the case of `prostate`).[^2.38] 
 
 # `-ply`: vectorisation and the transformation of common space 
 
@@ -196,7 +195,7 @@ The infrastructural implication we have just seen:  the implicit and explicit ve
 
 'We fit a linear model' write Hastie and co-authors, referring to the `prostate` data. Models constrain movement in the fluxing dimensionality of common vector space. \index{common vector space!dimensionality} In `R` this might look like the code excerpt shown below:
 
-```{r prostate_model, echo=TRUE}
+```{r prostate_model, echo=TRUE, results='asis'}
 library(ElemStatLearn)
 library(xtable)
 data(prostate)
@@ -206,8 +205,8 @@ prostate_standard = as.data.frame(scale(prostate_standard))
 prostate_standard = cbind(prostate_standard, gleason=prostate$gleason, svi = prostate$svi, train = prostate$train)
 train = prostate$train ==TRUE
 prostate_model = lm(lpsa~., prostate_standard[train,-10])
-tab1 = xtable(summary(prostate_model), caption = 'Fitting a linear model', label='tab:prostate_linear_regression')
-print(tab1)
+tab1 = xtable(summary(prostate_model), caption = 'Fitting a linear model', label='tab:prostate_linear_regression', type='latex')
+print(tab1, include.rownames = FALSE)
 ```
 
 The epistopic character of Table \ref{tab:prostate_linear_regression} surfaces around the coefficients  $\hat{\beta}$  that define the direction of a flat surface running through the common vector space of the `prostate` data.[^2.101] \index{dataset!prostate} This vector is a product of operations in that space. As Hastie and co-authors write, the 'unique solution' to the problem of fitting a linear model to a given dataset using the most popular method of 'least squares' [@Hastie_2009, 12] is given by the operations we have seen in equation \ref{eq:linear_model_solution}. This tightly coiled expression calculates the parameters $\hat{\beta}$ for a linear model. The two matrices involved are the $X$ input variables (all of the `prostate` variables apart from the variable chosen as the response variable, in this case `lpsa`, the log of the PSA level) and a 1-dimensional matrix $y$, the `lpsa` values. These matrices are multiplied, transposed (a form of rotation that swaps rows for columns) and inverted (a more complex operation that finds another matrix). Epitomising the vectorised code often used in machine learning, calculating $\hat{\beta}$ for  the `prostate` data only requires one line of `R` code:

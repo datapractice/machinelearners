@@ -4,7 +4,7 @@
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8, 
-                      echo=FALSE,  results='hide', warning=FALSE, message=FALSE, dev='pdf')
+                      echo=FALSE, fig.show='hide',  results='hide', warning=FALSE, message=FALSE, dev='pdf')
 
 library(RSQLite)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
@@ -52,9 +52,8 @@ fun_top$TI = sapply(fun_top$TI, simpleCap)
 fun_top$DE = tolower(fun_top$DE)
 fun_top  = fun_top[sample(nrow(fun_top), 25),]
 fun_top = fun_top[order(fun_top$PY),]
-dim(fun_top)
-al = '|l|l|l|l|l|'
-tab = xtable(fun_top, align=al, label='tab:function_in_ml', caption='Sample of highly cited machine learning publications referring to "function" in title or keyword')
+colnames(fun_top) = c('Title', 'Year', 'Keywords', 'Citations')
+tab = xtable(fun_top,  align = c("p{0.00\\textwidth}",  "p{0.5\\textwidth}","p{0.1\\textwidth}",  "p{0.3\\textwidth}", "p{0.10\\textwidth}"), label='tab:function_in_ml', caption='Sample of highly cited machine learning publications referring to "function" in title or keyword')
 print(tab, type='latex', include.rownames=FALSE)
 
 ```
@@ -161,9 +160,9 @@ logdf = res[order(res$TC, decreasing=TRUE),]
 logdf = logdf[-c(1,2),]
 logdf$TI = sapply(logdf$TI, simpleCap)
 logdf$DE = sapply(logdf$DE, simpleCap)
+colnames(logdf) = c('Title', 'Year', 'Keyword', 'Citations')
 logdf = head(logdf[order(logdf$PY),], 20)
-tab = xtable(logdf[-c(1,2),], align=al, label='tab:logistic_in_ml', caption='Sample of highly cited scientific publications referring to "logistic regression" in title or keyword')
-align(tab) <- "p{0.1\\textwidth}|p{0.4\\textwidth}|p{0.4\\textwidth}| p{0.1\\textwidth}"
+tab = xtable(logdf[-c(1,2),], align=c("p{0.05\\textwidth}",  "p{0.5\\textwidth}","p{0.3\\textwidth}",  "p{0.1\\textwidth}", "p{0.05\\textwidth}"), label='tab:logistic_in_ml', caption='Sample of highly cited scientific publications referring to "logistic regression" in title or keyword')
 print(tab, type='latex', include.rownames=FALSE)
 ```
 

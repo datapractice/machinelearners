@@ -24,40 +24,37 @@ Machine learner subject positions are the topic of this chapter. I draw on artif
 
 # Propagating neural nets in machine learning 
 
-
-```
-## \begin{table}[ht]
-## \centering
-## \begin{tabular}{rlrlrlrl}
-##   \hline
-## count & discipline & count & discipline & count & discipline & count & discipline \\ 
-##   \hline
-## 1202 & em algorithm & 229 & machine learning & 8318 & machine learning & 4505 & machine learning \\ 
-##   579 & variable selection & 205 & em algorithm & 6966 & data mining & 3553 & data mining \\ 
-##   469 & lasso & 162 & classification & 3869 & classification & 2334 & support vector machine \\ 
-##   423 & classification & 118 & variable selection & 3460 & support vector machine & 2102 & classification \\ 
-##   409 & machine learning & 112 & data mining & 2549 & clustering & 1852 & neural network \\ 
-##   284 & model selection &  91 & support vector machine & 2440 & neural network & 1435 & clustering \\ 
-##   241 & support vector machine &  77 & lasso & 2034 & feature selection & 1032 & feature selection \\ 
-##   225 & mixture model &  75 & clustering & 1572 & decision tree & 797 & decision tree \\ 
-##   207 & data mining &  74 & feature selection & 1227 & genetic algorithm & 772 & k-mean \\ 
-##   196 & missing data &  65 & random forest & 1070 & k-mean & 730 & pattern recognition \\ 
-##   184 & random forest &  56 & neural network & 1015 & pattern recognition & 633 & feature extraction \\ 
-##   180 & regularization &  54 & algorithm & 825 & em algorithm & 602 & genetic algorithm \\ 
-##   179 & maximum likelihood &  52 & gene expression & 769 & random forest & 550 & em algorithm \\ 
-##   175 & clustering &  49 & mixture model & 723 & naive baye & 538 & random forest \\ 
-##   174 & sparsity &  47 & genetic algorithm & 694 & association rule & 500 & k-means clustering \\ 
-##   148 & cross-validation &  42 & maximum likelihood & 684 & algorithm & 403 & support vector machine (support vector machine) \\ 
-##   140 & logistic regression &  40 & regularization & 684 & feature extraction & 398 & image segmentation \\ 
-##   123 & bootstrap &  37 & missing data & 584 & rough set & 376 & segmentation \\ 
-##   123 & feature selection &  36 & model selection & 554 & k-means clustering & 302 & association rule \\ 
-##   123 & longitudinal data &  35 & boosting & 554 & knowledge discovery & 299 & algorithm \\ 
-##    \hline
-## \end{tabular}
-## \caption{Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015} 
-## \label{tab:disc_tech}
-## \end{table}
-```
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlrlrlrl}
+  \hline
+count & discipline & count & discipline & count & discipline & count & discipline \\ 
+  \hline
+1202 & em algorithm & 229 & machine learning & 8318 & machine learning & 4505 & machine learning \\ 
+  579 & variable selection & 205 & em algorithm & 6966 & data mining & 3553 & data mining \\ 
+  469 & lasso & 162 & classification & 3869 & classification & 2334 & support vector machine \\ 
+  423 & classification & 118 & variable selection & 3460 & support vector machine & 2102 & classification \\ 
+  409 & machine learning & 112 & data mining & 2549 & clustering & 1852 & neural network \\ 
+  284 & model selection &  91 & support vector machine & 2440 & neural network & 1435 & clustering \\ 
+  241 & support vector machine &  77 & lasso & 2034 & feature selection & 1032 & feature selection \\ 
+  225 & mixture model &  75 & clustering & 1572 & decision tree & 797 & decision tree \\ 
+  207 & data mining &  74 & feature selection & 1227 & genetic algorithm & 772 & k-mean \\ 
+  196 & missing data &  65 & random forest & 1070 & k-mean & 730 & pattern recognition \\ 
+  184 & random forest &  56 & neural network & 1015 & pattern recognition & 633 & feature extraction \\ 
+  180 & regularization &  54 & algorithm & 825 & em algorithm & 602 & genetic algorithm \\ 
+  179 & maximum likelihood &  52 & gene expression & 769 & random forest & 550 & em algorithm \\ 
+  175 & clustering &  49 & mixture model & 723 & naive baye & 538 & random forest \\ 
+  174 & sparsity &  47 & genetic algorithm & 694 & association rule & 500 & k-means clustering \\ 
+  148 & cross-validation &  42 & maximum likelihood & 684 & algorithm & 403 & support vector machine (support vector machine) \\ 
+  140 & logistic regression &  40 & regularization & 684 & feature extraction & 398 & image segmentation \\ 
+  123 & bootstrap &  37 & missing data & 584 & rough set & 376 & segmentation \\ 
+  123 & feature selection &  36 & model selection & 554 & k-means clustering & 302 & association rule \\ 
+  123 & longitudinal data &  35 & boosting & 554 & knowledge discovery & 299 & algorithm \\ 
+   \hline
+\end{tabular}
+\caption{Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015} 
+\label{tab:disc_tech}
+\end{table}
 
 Almost every machine learning class, textbook, demonstration, and in recent years, in machine learning competitions at some point turns to neural nets. They display, however, some instability in the research literature. Table \ref{tab:disc_tech} shows the most frequent keywords for technical publications across the three main disciplinary domains inhabited by machine learners. While neural nets rank very high in computer science and engineering disciplines (appearing just after support vector machines), they do not appear in the statistics literature until 33 in the rankings. The prominence of neural nets on the engineering side of machine learning suggests they perform specific enunciative functions. \index{function!enunciative!of neural net}   Neural nets are often described from a deeply split perspective that in some points turns towards human subjects, or at least, the brains of human subjects, and in other ways towards the ongoing expansion of computational platforms. In some ways, they renew long-standing cybernetic hopes of brains and cognition as models of computational intelligence and agency.  Although they stem from a biological inspiration (dating at least back to the work on McCulloch and Pitts in the 1940s [@Halpern_2015; @Wilson_2010]), they gain traction first in the 1980s and then again from mid-2000s onwards, as ways of dealing with changing computational infrastructures, and the difficulties of capitalising on infrastructure that is powerful yet difficult to manage. Neural nets almost constantly oscillate between brain and information infrastructure. In the course of fifty years, their triple re-invention -- from perceptron via neural net to deep belief net -- re-distributes subject positions amidst infrastructural re-configurations and vectorisation. \index{infrastructure!reconfiguration of} \index{vectorisation!of infrastructure} For instance, David Ackley, Geoffrey Hinton (an important figure in the inception of neural nets during the 1980s and in the revival of neural net in the form of deep learning in the last decade), and Terrence Sejnowski wrote in the early 1980s: \index{Hinton, Geoffrey}
 
@@ -135,32 +132,11 @@ library(neuralnet)
 titanic = read.csv("data/titanic3.csv")
 titanic_transformed = as.data.frame(model.matrix(~survived + age + pclass + 
     fare + sibsp + sex + parch + embarked, titanic))
-head(titanic_transformed)
-```
-
-```
-##   (Intercept) survived   age pclass     fare sibsp sexmale parch embarkedC
-## 1           1        1 29.00      1 211.3375     0       0     0         0
-## 2           1        1  0.92      1 151.5500     1       1     2         0
-## 3           1        0  2.00      1 151.5500     1       0     2         0
-## 4           1        0 30.00      1 151.5500     1       1     2         0
-## 5           1        0 25.00      1 151.5500     1       0     2         0
-## 6           1        1 48.00      1  26.5500     0       1     0         0
-##   embarkedQ embarkedS
-## 1         0         1
-## 2         0         1
-## 3         0         1
-## 4         0         1
-## 5         0         1
-## 6         0         1
-```
-
-```r
 train_index = sample.int(nrow(titanic)/2)
 titanic_train = titanic_transformed[train_index, ]
 titanic_net = neuralnet(survived ~ age + pclass + fare + sexmale + sibsp + parch + 
     embarkedC + embarkedQ + embarkedS, data = titanic_train, err.fct = "ce", 
-    linear.output = FALSE, rep = 5, hidden = 3, stepmax = 1e+06)
+    linear.output = FALSE, rep = 5, hidden = 3, stepmax = 10000)
 titanic_test = titanic_transformed[-train_index, ]
 test_error = round(sum(0.5 < compute(titanic_net, titanic_test[, -c(1, 2)])$net.result)/sum(titanic_test$survived), 
     2)
@@ -181,14 +157,6 @@ Again, despite the persistent reference to biology, the description of the 'new 
 The final major form in which neural net appear is the network diagram. Network graphs already appeared in Rosenblatt's perceptron work [@Rosenblatt_1958], but they ramify tremendously in the aftermath of back-propagation. Almost every book and article relating to  neural net presents some version of the diagram shown in Figure \ref{fig:titanic_net}.  
 
 
-```
-## NULL
-```
-
-```
-## pdf 
-##   2
-```
 
 \begin{figure}
   \centering
@@ -307,7 +275,7 @@ In comparison to the neural nets discussed above, the deep belief networks invol
 
 They go on to describe the different layers -- cyclic slice, convolutional, spatial pooling -- that derive features from the data or augmenting it - by examining overlapping tiles, by rotating or scaling the images, so that any given image, is 'seen' in a number of different ways, and the model learns to detect these variations.   The combination of diverse layers in a stratified model introduces many different parameters into the model and implies heavy computational work. Crucially, the massive parallel computing allows 'deep' learning. Infrastructure and cognition entwine heavily here, since the very possibility of building many layered neural nets depends on the possibility of relatively quickly training them. Probably many other competitors in this competition would not have had access to the Tesla K40 or 'NVIDIA GTX 980 Superclocked' GPU cards that 'Deep Sea' relied on.[^7.100] \index{GPU|see{vectorization!hardware}} Even with that intensive computational resource, their models required 'between 24 and 48 hours to reach convergence.' They constructed around 300 models. Because of the plethora of models with different architectures and parameters, 'we had to select how many and which models to use in the final blend. For this, we used cross-validation on our validation set' [@Dieleman_2015a]. As is often the case, competitive examination engenders populations of machine learners whose aggregate tendencies stage model -- in the sense of optimum  -- performance. The competition itself, then, creates of a visible hierarchy amidst a population of machine learners.  Both during and after the competition, the visibility of the leaderboard gives access to and elicits further efforts to render visible, usually in the form of descriptions of winning entries and sometimes positing of model code.[^7.40] The 'DeepSea' team might be a typical intersectional entity today. Like the 'wonderful people' described by Hilary Mason, they bring together infrastructure, engineering, mathematics/statistics and some knowledge of human behaviour (although the knowledge of human behaviour in this case might have more to do with what other Kaggle competitors might be doing, as well as an awareness of the cutting edge research leaders in the field of visual object recognition techniques). 
 
-# Subject positions in the confusion matrix[^7.202]
+# Subject positions in the confusion matrix
 
 The members of 'DeepSea' built models that classify more than a hundred kinds of plankton with few errors. But in driving down error rates, they ineluctably occupy the subject position assigned by the conjunction of operation and the statements in machine learning. Neural nets in the form of deep belief nets are already automating through their many convolutional layers the feature engineering \index{feature engineering} that characterised the skilled configuration work in machine learning in decision trees, linear regressions, support vector machines and predecessor neural nets. In all of this augmentation, pre-processing, unsupervised and supervised training, the competitions assign subject positions to machine learners amidst science, industry, media and government. The subject position of a machine learner, however, exposes its occupants to the zone of diagrammatic slippage between statements and operations. \index{statements!and operations!zone of slippage} Neural nets strongly diagram the act of seeing machine learning itself. Hinton's \index{Hinton, Geoffrey} references to 'mind' \index{machine learner!neural net!mind of} might make sense here as part of the re-drawing human-machine differences. If some machine learners, such as neural nets, afford visibility to what they see in the world, then their function as 'minds,' as cognitive processes  -- I think this is what Hinton has in mind as a cognitive psychologist -- effectively does begin to internalise the operations and statements that previously were handled by human machine learners. This back-propagating re-distribution privileges the machine as site of learning, but also quickly assigns new subject positions. 
 

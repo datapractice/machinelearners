@@ -4,7 +4,7 @@
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8, 
-                      echo=FALSE,  results='hide', warning=FALSE, message=FALSE, dev='pdf')
+                      echo=FALSE,  results='hide', fig.show='hide', warning=FALSE, message=FALSE, dev='pdf')
 library(RSQLite)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
 res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
@@ -50,11 +50,12 @@ Decision trees promise an understanding of machine learning.   The enunciative f
 Tree-based methods are supervised learners as they require the data to either be labelled with a class or to have some outcome value. \index{machine learning!supervised} The variable types in the feature space (or common vector space of the data) \index{feature space|see{common vector space}} can be mixed. Because the method cuts the common vector space into a tiled surface, the features or data variables can be continuous or discontinuous. The 'simple models' that tree methods construct each inhabit one of the rectangular regions or partitions of the feature space. In Figure \ref{fig:rpart}, the different regions or partitions produced by a decision tree are labelled $R1, R2$ etc. 
 
 ```{r aid, echo=FALSE, results='asis', cache=TRUE } 
-    q = "select * from basic_refs where anchor = 'morgan_sonquist_WOS'"
+    q = "select TI, PY, TC from basic_refs where anchor = 'morgan_sonquist_WOS'"
     res = dbGetQuery(con, q)
     res$TI = sapply(res$TI, simpleCap) 
-    tab  = xtable(res[1:10,c('TI', 'PY' ,'TC')], caption="References to Morgan and Sonquist's Automatic Interaction Detector", label='table:aid_citation')
-    print(tab, type='latex')
+    colnames(res) = c('Title', 'Year', 'Citations')
+    tab  = xtable(res[1:10,], caption="References to Morgan and Sonquist's Automatic Interaction Detector", label='table:aid_citation')
+    print(tab, type='latex', include.rownames=FALSE)
    
 ```
 
@@ -63,7 +64,7 @@ Work on classification and regression techniques using decision trees goes back 
 \begin{figure}
   \centering
       \includegraphics[width=0.9\textwidth]{figure/morgan_sonquist_p430.pdf}
-        \caption{AID classifies annual earnings (Morgan & Sonquist, 1963, 430)}
+        \caption{AID classifies annual earnings (Morgan \& Sonquist, 1963, 430)}
   \label{fig:aid_tree}
 \end{figure}
 
@@ -167,8 +168,9 @@ Already in the growing and pruning of the decision tree, and even more markedly 
     query = 'select TI, PY, TC from basic_refs where TI like "%support vector machine%" or anchor = "svm_WOS"'
     res = dbGetQuery(con, query)
     svm = res[order(res$TC, decreasing=TRUE),]
-    tab = xtable(head(svm,20), label = 'tab:svm_lit', caption = 'Most cited papers on support vector machines')
-    print(tab, type='latex')
+    colnames(svm) = c('Title', 'Year', 'Citations')
+    tab = xtable(head(svm,20), label = 'tab:svm_lit', align = c("p{0.05\\textwidth}",  "p{0.8\\textwidth}","p{0.1\\textwidth}",  "p{0.1\\textwidth}", "p{0.15\\textwidth}"), caption = 'Most cited papers on support vector machines')
+    print(tab, type='latex', include.rownames=FALSE)
 ```
 
 The rapid rise to popularity of the support vector machine can be seen in the machine learning research literature, very small slice of which appears in Table \ref{table:svm_lit}. A substantial fraction of the overall research publication since the mid-1990s accumulates around this single technique, and as usual ranges across credit analysis, land cover prediction, protein structures, brain states and face recognition. The support vector machine covers the normal biopolitical gamut of life, labour and language. The influence of the technique  can also be seen in  adjacent and overlapping fields such as pattern recognition and data mining, where [@Cortes_1995] and similar papers rank near the top-cited papers.[^5.112]  This kind of growth betokens high levels of interest, identification and investment on the part of the researchers, and presumably more widely. What is it about this technique?

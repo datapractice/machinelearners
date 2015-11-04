@@ -2,11 +2,10 @@
 \chapter{$N = all$: machine learning as probabilisation
 \label{ch:probability}
 
-# {$N = all$: machine learning gets all the data}
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8, 
-                      echo=FALSE,  results='hide', warning=FALSE, message=FALSE, dev='pdf')
+                      echo=FALSE,  fig.show='hide', results='hide', warning=FALSE, message=FALSE, dev='pdf')
 library(RSQLite)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
 res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
@@ -249,8 +248,8 @@ Naive Bayes classifiers have been surprisingly successful. Like statistics more 
     dim(res)
     colnames(res)
     nb = res[order(res$TC, decreasing=TRUE),]
-    nb2 = unique(nb[, c('TI', 'AU', 'PY')])
-    tab = xtable(head(nb2[order(nb2$PY),],30), caption = 'Most cited Naive Bayes publications 1945-2015', label='tab:nb_most_cited')
+    nb2 = unique(nb[, c('TI',  'PY')])
+    tab = xtable(head(nb2[order(nb2$PY),],30), caption = 'Most cited Naive Bayes publications 1945-2015', align = c("p{0.05\\textwidth}",  "p{0.8\\textwidth}",  "p{0.1\\textwidth}", "p{0.15\\textwidth}"), label='tab:nb_most_cited')
     print(tab, type='latex', row.names=FALSE)
 ```
 
@@ -342,7 +341,7 @@ Machine learning inhabits worlds that had already absorbed  statistical realitie
 
     \begin {equation}
     \label {eq:knn}
-   \hat{Y}(x) =\frac{1}{k} \sum_{x_i \in \textit{N}_{k}(x)} y_i_
+   \hat{Y}(x) =\frac{1}{k} \sum_{x_i \in \textit{N}_{k}(x)} y_i
     \end {equation}
 
     where $\textit{N}_{k}(x)$ is the neighborhood of $x$ defined by the $k$ closest points $x_{i}$ in the training sample [@Hastie_2009, 14].

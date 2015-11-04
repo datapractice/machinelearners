@@ -1,5 +1,5 @@
 
-\chapter{ Out of the Data}
+\chapter{Conclusion: Out of the Data}
 \label{ch:conclusion}
 
 
