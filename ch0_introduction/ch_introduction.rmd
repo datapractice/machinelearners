@@ -198,8 +198,8 @@ g
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.9\textwidth]{figure/machine_learning_over_time-1.pdf}
-        \caption[Machine learners in scientific literature]{Machine learners in scientific literature. The lines in the graph suggest something of the changing fortunes of machine learners over time. The publication data comes from Thomson Reuter's \textit{Web of Science}. Separate searches were run for each machine learner. In these plots, as in the GoogleTrends data, the actual counts of publications have been normalised. In contrast to the GoogleTrend plots, these plots do not show the relative counts of the publications, only their distribution in time. }
+  \includegraphics[width=0.9\textwidth]{figure/machine_learning_over_time-1.pdf}
+    \caption[Machine learners in scientific literature]{Machine learners in scientific literature. The lines in the graph suggest something of the changing fortunes of machine learners over time. The publication data comes from Thomson Reuter's \textit{Web of Science}. Separate searches were run for each machine learner. In these plots, as in the GoogleTrends data, the actual counts of publications have been normalised. In contrast to the GoogleTrend plots, these plots do not show the relative counts of the publications, only their distribution in time. }
   \label{fig:scientific_lit}
 \end{figure}
 

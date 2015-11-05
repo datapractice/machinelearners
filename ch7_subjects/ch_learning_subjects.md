@@ -26,9 +26,9 @@ Machine learner subject positions are the topic of this chapter. I draw on artif
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{rlrlrlrl}
+\begin{tabular}{p{0.2	extwidth}p{0.05	extwidth}p{0.2	extwidth}p{0.05	extwidth}p{0.2	extwidth}p{0.05	extwidth}p{0.2	extwidth}p{0.05	extwidth}}
   \hline
-count & discipline & count & discipline & count & discipline & count & discipline \\ 
+Statistics & Count & Interdisciplinary & Count & Computer Science & Count & Engineering & Count \\ 
   \hline
 1202 & em algorithm & 229 & machine learning & 8318 & machine learning & 4505 & machine learning \\ 
   579 & variable selection & 205 & em algorithm & 6966 & data mining & 3553 & data mining \\ 
@@ -140,6 +140,9 @@ titanic_net = neuralnet(survived ~ age + pclass + fare + sexmale + sibsp + parch
 titanic_test = titanic_transformed[-train_index, ]
 test_error = round(sum(0.5 < compute(titanic_net, titanic_test[, -c(1, 2)])$net.result)/sum(titanic_test$survived), 
     2)
+```
+
+```
 ```
 
 The line of the code that constructs a neural net using the `neuralnet` library [@Fritsch_2012], and the description of the classifier here is a familiar one. Despite its biological inspiration, the `R` formula for the neural net looks very similar to other machine learners such as logistic regression. It models whether someone `survived` the wreck of the Titanic in terms of their age, class of fare (`pclass`), sex, number of siblings/spouse (`sibsp`), number of parents/children (`parch`) and port of departure:

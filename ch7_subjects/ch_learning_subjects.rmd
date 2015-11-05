@@ -39,6 +39,7 @@ Machine learner subject positions are the topic of this chapter. I draw on artif
 library(stringr)
 library(RSQLite)
 library(ggplot2)
+library(GGally)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
 res = dbGetQuery(con, statement = "select DE, WC, SC, TI, PY from basic_refs")
 res$WC = tolower(res$WC)
@@ -77,7 +78,8 @@ compsci_df = (head(tablify(res$DE[compsci]), 100))
 eng_df = (head(tablify(res$DE[eng]), 100))
 
 df = cbind(stat_df, inter_df, compsci_df, eng_df)
-dft = xtable(df[1:20,],  label='tab:disc_tech', caption='Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015')
+colnames(df) = c('Statistics', 'Count', 'Interdisciplinary', 'Count', 'Computer Science', 'Count', 'Engineering', 'Count')
+dft = xtable(df[1:20,],  align = c("p{0.01\\textwidth}", "p{0.2\textwidth}",   "p{0.05\textwidth}",  "p{0.2\textwidth}",   "p{0.05\textwidth}",  "p{0.2\textwidth}",   "p{0.05\textwidth}",  "p{0.2\textwidth}",   "p{0.05\textwidth}" ), label='tab:disc_tech', caption='Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015')
 print(dft, type='latex', include.rownames = FALSE)
 ```
 
@@ -151,7 +153,7 @@ Whereas the standard linear model \index{linear model} shown in Equation \ref{eq
 
 The common diagrammatic operations of neural nets and other supervised machine learners immediately appears in almost any actual example of a neural net. In the code vignette shown below, the data is a spreadsheet of information about passengers of the Titanic. The `titanic` dataset, like `iris` or `boston` is often used in contemporary machine learning pedagogy. \index{dataset!Titanic}  It is for instance, the main training dataset used by (kaggle.com)[http://kaggle.com], an online machine learning competition site I will discuss below \index{Kaggle.com}. The first few lines of the `R` code load the dataset and transform it into vector space. For instance, variables such as `sex` that take values such as `male` and `female` become vectors of `1` and `0` in a new variable `sexmale`. 
 
-```{r neural_net1, echo=TRUE, message=FALSE, warning=FALSE, cache=TRUE, fig.cap=''}
+```{r neural_net1, echo=TRUE, include=TRUE, message=FALSE, warning=FALSE, cache=TRUE}
 library(neuralnet)
 titanic = read.csv('data/titanic3.csv')
 titanic_transformed = as.data.frame(model.matrix(~survived + age+ pclass + fare+ sibsp + sex + parch + embarked, titanic))
@@ -176,7 +178,7 @@ Again, despite the persistent reference to biology, the description of the 'new 
 
 The final major form in which neural net appear is the network diagram. Network graphs already appeared in Rosenblatt's perceptron work [@Rosenblatt_1958], but they ramify tremendously in the aftermath of back-propagation. Almost every book and article relating to  neural net presents some version of the diagram shown in Figure \ref{fig:titanic_net}.  
 
-```{r plot_neural_net, cache=TRUE}
+```{r plot_neural_net, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE}
 source('plot_nn.r')
 pdf(file = 'figure/titanic_net.pdf')
 print(plot.nn(titanic_net, fontsize=8, show.weights=FALSE))
