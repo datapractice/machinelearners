@@ -1,4 +1,4 @@
-\chapter{ Optimising machine learners to learn on their own}
+\chapter{Propagating subject positions}
 \label{ch:subjects}
 
 
@@ -24,9 +24,14 @@ Machine learner subject positions are the topic of this chapter. I draw on artif
 
 # Propagating neural nets in machine learning 
 
+
+```
+## Error in library(GGally): there is no package called 'GGally'
+```
+
 \begin{table}[ht]
 \centering
-\begin{tabular}{p{0.2	extwidth}p{0.05	extwidth}p{0.2	extwidth}p{0.05	extwidth}p{0.2	extwidth}p{0.05	extwidth}p{0.2	extwidth}p{0.05	extwidth}}
+\begin{tabular}{p{0.2\textwidth}p{0.05\textwidth}p{0.2\textwidth}p{0.05\textwidth}p{0.2\textwidth}p{0.05\textwidth}p{0.2\textwidth}p{0.05\textwidth}}
   \hline
 Statistics & Count & Interdisciplinary & Count & Computer Science & Count & Engineering & Count \\ 
   \hline
@@ -237,7 +242,7 @@ The disciplinary form of the examination of errors and errancy links statements 
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{lrll}
+\begin{tabular}{p{0.6\textwidth}p{0.10\textwidth}p{0.15\textwidth}p{0.1\textwidth}}
   \hline
 Competition & Reward\_amount & domain & data\_type \\ 
   \hline

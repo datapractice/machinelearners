@@ -1,4 +1,4 @@
-\chapter{ Optimising machine learners to learn on their own}
+\chapter{Propagating subject positions}
 \label{ch:subjects}
 
 
@@ -79,7 +79,7 @@ eng_df = (head(tablify(res$DE[eng]), 100))
 
 df = cbind(stat_df, inter_df, compsci_df, eng_df)
 colnames(df) = c('Statistics', 'Count', 'Interdisciplinary', 'Count', 'Computer Science', 'Count', 'Engineering', 'Count')
-dft = xtable(df[1:20,],  align = c("p{0.01\\textwidth}", "p{0.2\textwidth}",   "p{0.05\textwidth}",  "p{0.2\textwidth}",   "p{0.05\textwidth}",  "p{0.2\textwidth}",   "p{0.05\textwidth}",  "p{0.2\textwidth}",   "p{0.05\textwidth}" ), label='tab:disc_tech', caption='Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015')
+dft = xtable(df[1:20,],  align = c("p{0.01\\textwidth}", "p{0.2\\textwidth}",   "p{0.05\\textwidth}",  "p{0.2\\textwidth}",   "p{0.05\\textwidth}",  "p{0.2\\textwidth}",   "p{0.05\\textwidth}",  "p{0.2\\textwidth}",   "p{0.05\\textwidth}" ), label='tab:disc_tech', caption='Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015')
 print(dft, type='latex', include.rownames = FALSE)
 ```
 
@@ -262,8 +262,8 @@ The disciplinary form of the examination of errors and errancy links statements 
     library(xtable)
     df = read.csv('data/kaggle.csv')
     df_excerpt = head(df[order(df$Reward_amount, decreasing=TRUE),], 20)
-    tab = xtable(df_excerpt[, c('Competition', 'Reward_amount', 'domain', 'data_type')], caption='The highest prize money machine learning competitions on Kaggle',  label='tab:kaggle_competitions')
-    print(tab, type= 'latex', include.rownames=FALSE)
+    tab_kaggle = xtable(df_excerpt[, c('Competition', 'Reward_amount', 'domain', 'data_type')], caption='The highest prize money machine learning competitions on Kaggle',  label='tab:kaggle_competitions', align = c( "p{0.05\\textwidth}", "p{0.6\\textwidth}", "p{0.10\\textwidth}", "p{0.15\\textwidth}", "p{0.1\\textwidth}"))
+    print(tab_kaggle, type= 'latex', include.rownames=FALSE)
 ```
 
 In many Kaggle competitions (some titles are shown in table \ref{tab:kaggle_competitions}), winning entries come from machine learners working together. In the National Data Science Bowl competition of 2015, the winning team comprised seven graduate and post-doctoral researchers from Ghent University, Belgium. In a jointly written blog account of their winning entry, team 'Deep Sea' describe something of the construction of the deep learning models they built. These were convolutional  neural nets, neural nets in which unit of the network only 'look' at overlapping tiles of the input images:

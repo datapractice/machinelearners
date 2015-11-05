@@ -1,5 +1,5 @@
 
-\chapter{The problem of pattern: accumulation and dispersions }
+\chapter{Patterns of accumulation and dispersion}
 \label{ch:pattern}
 
 ```{r global_options, include=FALSE}
@@ -169,8 +169,8 @@ Already in the growing and pruning of the decision tree, and even more markedly 
     res = dbGetQuery(con, query)
     svm = res[order(res$TC, decreasing=TRUE),]
     colnames(svm) = c('Title', 'Year', 'Citations')
-    tab = xtable(head(svm,20), label = 'tab:svm_lit', align = c("p{0.05\\textwidth}",  "p{0.8\\textwidth}","p{0.1\\textwidth}",  "p{0.1\\textwidth}", "p{0.15\\textwidth}"), caption = 'Most cited papers on support vector machines')
-    print(tab, type='latex', include.rownames=FALSE)
+    tab2 = xtable(head(svm,20), label = 'tab:svm_lit', align = c("p{0.05\\textwidth}",  "p{0.7\\textwidth}","p{0.1\\textwidth}",  "p{0.15\textwidth}"), caption = 'Most cited papers on support vector machines')
+    print(tab2, type='latex', include.rownames=FALSE)
 ```
 
 The rapid rise to popularity of the support vector machine can be seen in the machine learning research literature, very small slice of which appears in Table \ref{table:svm_lit}. A substantial fraction of the overall research publication since the mid-1990s accumulates around this single technique, and as usual ranges across credit analysis, land cover prediction, protein structures, brain states and face recognition. The support vector machine covers the normal biopolitical gamut of life, labour and language. The influence of the technique  can also be seen in  adjacent and overlapping fields such as pattern recognition and data mining, where [@Cortes_1995] and similar papers rank near the top-cited papers.[^5.112]  This kind of growth betokens high levels of interest, identification and investment on the part of the researchers, and presumably more widely. What is it about this technique?

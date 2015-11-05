@@ -1,5 +1,5 @@
 
-\chapter{ Re-scaling and shifting objects with machine learning}
+\chapter{ Regularizing objects}
 \label{ch:genome}
 
 
@@ -87,11 +87,11 @@ The plurality of applications can sometimes make it seem that machine learning d
 
 We can see this cross-validation at work in the treatment of genomic data in _Elements of Statistical Learning_. As to the former problem of dimensionality, both the RF-ACE cancer biology demonstration and  the DNA microarray data extensively modelled in the final chapter of  _Elements of Statistical Learning_ address some elementary problems associated with genomic data. If we turn back to the `iris` dataset [@Fisher_1936], perhaps the most heavily used pedagogical dataset in the literature, it is strikingly obvious that the data does not provoke the infrastructural contortions associated with Google Compute, or for that matter, the highly sophisticated and quite subtle treatment of gene expression we find in genomics-related machine learning. 
 
-```{r iris, echo=FALSE, message=FALSE, cache=TRUE,  fig.cap ="Fisher's iris dataset, 1936",comment=NA, size='smallsize'} 
+```{r iris, echo=FALSE, message=FALSE, cache=TRUE, results='asis', comment=NA, size='smallsize'} 
     library(xtable)
 	data(iris)
     tab = xtable(iris[1:5,], label='iris_sample', caption="First 5 rows of Fisher's `iris` dataset")
-	print(tab)
+	print(tab, include.rownames=FALSE, type='latex')
 ```
 
 It is usual, in working with `iris,` to construct machine learners that use the variables from the first four columns shown in \ref{tab:iris_sample} to infer the value of the `Species` variable (as seen in Chapter 5, where a decision tree was constructed using this same dataset). The measurements of petals and sepals of the irises of the Gaspé Peninsula in Novia Scotia, and their classification into different species is perhaps a typical mid-twentieth century biological procedure. The technique of linear discriminant analysis that Fisher demonstrated as a way of classifying the species of iris continues in use, but the shape and texture of contemporary datasets differs greatly from what we see in this table. Even in the excerpt shown in Table \ref{tab:iris_sample}, we can see that it is quite narrow as it has only a few columns, the data is nearly all of one type (measurements of lengths and widths), and the data is clean (there are no missing values). The data is tightly contained in the table. `Iris` is typical of classic statistics, and much  biological data prior to genomics in its relatively homogeneity and distinct partitioning. \index{dataset!iris}
@@ -107,7 +107,8 @@ library(xtable)
 library(datamicroarray)
 tab1 = xtable(describe_data(), label='microarray_data', caption ='Microarray datasets used in machine learning')
 data('khan')
-tab = xtable(head(khan[[1]], 5), label='srbct', caption='Small round blue-cell tumour data sample (Khan, 2001)')
+df = khan[[1]]
+tab = xtable(df[1:5,1:20], label='srbct', caption='Small round blue-cell tumour data sample (Khan, 2001)')
 print(tab, type='latex', include.rownames=FALSE)
 ```
 

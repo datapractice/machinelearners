@@ -160,9 +160,10 @@ logdf = res[order(res$TC, decreasing=TRUE),]
 logdf = logdf[-c(1,2),]
 logdf$TI = sapply(logdf$TI, simpleCap)
 logdf$DE = sapply(logdf$DE, simpleCap)
-colnames(logdf) = c('Title', 'Year', 'Keyword', 'Citations')
+logdf = logdf[c('PY', 'TI', 'DE', 'TC')]
+colnames(logdf) = c( 'Year','Title', 'Keywords', 'Citations')
 logdf = head(logdf[order(logdf$PY),], 20)
-tab = xtable(logdf[-c(1,2),], align=c("p{0.05\\textwidth}",  "p{0.5\\textwidth}","p{0.3\\textwidth}",  "p{0.1\\textwidth}", "p{0.05\\textwidth}"), label='tab:logistic_in_ml', caption='Sample of highly cited scientific publications referring to "logistic regression" in title or keyword')
+tab = xtable(logdf[-c(1,2),], align=c("p{0.00\\textwidth}",  "p{0.1\\textwidth}","p{0.5\\textwidth}",  "p{0.3\\textwidth}", "p{0.10\\textwidth}"), label='tab:logistic_in_ml', caption='Sample of highly cited scientific publications referring to "logistic regression" in title or keyword')
 print(tab, type='latex', include.rownames=FALSE)
 ```
 
