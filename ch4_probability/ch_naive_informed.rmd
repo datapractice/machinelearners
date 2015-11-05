@@ -1,5 +1,4 @@
-
-\chapter{$N = all$: machine learning as probabilisation
+\chapter{$N = all$: Probabilisation}
 \label{ch:probability}
 
 

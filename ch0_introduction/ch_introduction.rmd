@@ -151,7 +151,7 @@ Even if 'cultural workers' do manage to learn to machine learn, and become adept
 
 This perhaps is a more serious charge. The 'techniques' of machine learning are positivist (and hence implicitly at odds with critical thought?), and moreover complicit -- 'aligned' -- with capitalist work. Again, there is something that feels right in the naming of the predicament -- intellectual work of the kind associated with  machine learning -- is definitely at the centre of many governmental, media, business and scientific fields of operation. Increasingly, they anchor the operations of these fields. 
 
-## What cannot be automated? 
+# What cannot be automated? 
 
 Like Galloway, I'm wary of certain deployments of machine learning, particularly the platform-based deployments and their associated sociality [@Gillespie_2010; @VanDijck_2012]. In certain case, they do seem to be 'laying claim to the apparatus of knowledge production.' Yet even amidst the trashy ephemerality of targeted online advertising or the more elevated analytics of literary history, the transformations in knowledge and knowing do not simply align  intellectual work and capitalist work.  Machine learning as a data practice is not simply automating  existing economic relations, even if that reproduction heavily steers its normal practice. While Hammerbacher and Galloway are understandably somewhat dismissive of the existential gratifications and critical efficacy of building targeted advertising systems or document classifiers, the 'deployment' of machine learning is not a finished process, but very much in train, constantly subject to revision, re-configuration and alteration. Could machine learners become engines of difference? Where in the algorithms, calculations, abstractions and regularizing practices of machine learning would differences be re-draw?
 
@@ -165,11 +165,11 @@ While these cases may be exceptional achievements, and indeed highlight the suff
 
 query = 'select * from basic_refs where TI like "%climate%" or DE LIKE "%climate% order by TC desc, PY;"'
 res = dbGetQuery(con, query)
-res_sample = res[sample.int(nrow(res), 15), ]
+res_sample = res[sample.int(nrow(res), 10), ]
 res_sample = res_sample[order(res_sample$PY),]
 res_sample_show = res_sample[,c('TI', 'PY')]
 colnames(res_sample_show) = c('Title', 'Year')
-climate_table = xtable(res_sample_show, type='latex', include.rownames=FALSE, align = c("p{0.1\\textwidth}", "p{0.8\\textwidth}",  "p{0.10\\textwidth}"), caption='A small sample of titles of scientific articles that use machine learning in relation to "climate"', label='tab:climate_ml')
+climate_table = xtable(res_sample_show, type='latex', include.rownames=FALSE, align = c("p{0.1\\textwidth}", "p{0.8\\textwidth}",  "p{0.10\\textwidth}"), caption='A small sample of titles of scientific articles that use machine learning in relation to "climate"', label='tab:climate_ml',table.placement="ht")
 print(climate_table, include.rownames=FALSE)
 ```
 

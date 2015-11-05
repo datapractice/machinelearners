@@ -312,4 +312,4 @@ The novel structures and functions in 'our data' are  precisely the functions th
 
 [^3.6]: The derivative $\frac {\partial }{\partial \beta_j}J(\beta_j)$ is _partial_ because $\beta$ is a vector $\beta_0, \beta_1 ... \beta_j$.
 
-[^3.301]: I discuss the sense of function as operation or process in chapter \ref{ch:genome}. There I suggest that this important sense of function as operation or process, a sense that has underpinned transformations in life, social and clinical sciences may be shifting towards a different ordering.  \index{function:transformation in meaning of}
+[^3.301]: I discuss the sense of function as operation or process in chapter \ref{ch:genome}. There I suggest that this important sense of function as operation or process, a sense that has underpinned transformations in life, social and clinical sciences may be shifting towards a different ordering.  \index{function!transformation in meaning of}

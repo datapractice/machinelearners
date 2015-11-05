@@ -1,4 +1,4 @@
-\chapter{The vector space and its products}
+\chapter{The vector space and its movements}
 \label{ch:vector}
 
 
@@ -32,7 +32,7 @@ library(xtable)
 datasets_results <-data(package='ElemStatLearn')$results[,3:4]
 datasets = as.data.frame(datasets_results)
 dataset_count <- nrow(datasets)
-dataset_table = xtable(datasets, caption='Datasets in _Elements of Statistical Learning_', label = 'tab:datasets_elemstatlearn')
+dataset_table = xtable(datasets, caption='Datasets in \\textit{Elements of Statistical Learning}', label = 'tab:datasets_elemstatlearn', table.placement = '!ht')
 print.xtable(dataset_table, type='latex')
 ```
 

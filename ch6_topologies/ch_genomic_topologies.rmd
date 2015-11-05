@@ -1,5 +1,5 @@
 
-\chapter{ Regularizing objects}
+\chapter{Regularizing objects}
 \label{ch:genome}
 
 

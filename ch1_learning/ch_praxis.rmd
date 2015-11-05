@@ -52,8 +52,9 @@ res = dbGetQuery(con, query)
 sc = res$SC
 fields = str_trim(unlist(str_split(sc, ';')))
 tf = as.data.frame(sort(table(fields), decreasing=TRUE)[1:20])
-colnames(tf) = c('Field', 'Citations')
-tab = xtable(tf, label = 'tab:fields_citing_hastie', align = c("p{0.1\\textwidth}", "p{0.8\\textwidth}", "p{0.1\\textwidth}"), caption = 'Subject categories of academic research literature citing \\textit{Elements of Statistical Learning} 2001-2015. These subject categories derive from Thomson-Reuter \\textit{Web of Science}.' )
+tf['Field'] = rownames(tf)
+colnames(tf) = c( 'Citations','Field')
+tab = xtable(tf, label = 'tab:fields_citing_hastie', align = c("p{0.05\\textwidth}", "p{0.1\\textwidth}", "p{0.85\\textwidth}"), caption = 'Subject categories of academic research literature citing \\textit{Elements of Statistical Learning} 2001-2015. These subject categories derive from Thomson-Reuter \\textit{Web of Science}.' )
 print(tab, comment=FALSE, type='latex', include.rownames=FALSE)
 ```
 
@@ -287,7 +288,7 @@ X1  X2  X3  Y
 1   1   0   1
 1   1   1   0
 
-Table:  the Boolean function  NOT-AND truth table  \label{tab:boolean}
+Table:  The Boolean function  NOT-AND truth table  \label{tab:boolean}
 
 For present purposes, these kinds of logical and symbolic diagrams have triple relevance. First, the spatial arrangement of the table is fundamental to not only machine learning and most contemporary data practice. (Transformations in tables are the main topic of chapter \ref{ch:vector}.) That spatial form is diagrammatic in various ways, but principally through the horizontal and vertical relationships it installs. Most datasets come as tables, or end up as tables at some point in their analysis. Second, the elements or cells of this table are numbers. These numbers, $1$ and $0$ are the binary digits as well as the 'truth' values 'True' and 'False' in classical logic. The truth table for NOT-AND is in some ways typical of data tables because it contain numbers.  These numbers are readable as symbolic logical propositions. Hence this table acts as a hinge between numbers and symbolic thought or cognition. (In [@Hastie_2009] most tables contain data in the forms of numbers rather than truth values.) Third,  the NAND  table in particular has an obvious operational importance in digital logic, since digital circuits of all kinds -- memory, processing, and communication -- comprise such logical functions knitted together in the intricate  fabrics of contemporary calculation.[^1.30]   
 
