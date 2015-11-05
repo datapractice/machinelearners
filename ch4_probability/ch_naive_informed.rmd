@@ -249,7 +249,8 @@ Naive Bayes classifiers have been surprisingly successful. Like statistics more 
     colnames(res)
     nb = res[order(res$TC, decreasing=TRUE),]
     nb2 = unique(nb[, c('TI',  'PY')])
-    tab = xtable(head(nb2[order(nb2$PY),],30), caption = 'Most cited Naive Bayes publications 1945-2015', align = c("p{0.05\\textwidth}",  "p{0.8\\textwidth}",  "p{0.1\\textwidth}", "p{0.15\\textwidth}"), label='tab:nb_most_cited')
+    colnames(nb2) = c('Title', 'Year')
+    tab = xtable(head(nb2[order(nb2$PY),],30), caption = 'Most cited Naive Bayes publications 1945-2015', align = c("p{0.05\\textwidth}",  "p{0.85\\textwidth}",  "p{0.1\\textwidth}", "p{0.15\\textwidth}"), label='tab:nb_most_cited')
     print(tab, type='latex', row.names=FALSE)
 ```
 

@@ -52,8 +52,8 @@ fun_top$TI = sapply(fun_top$TI, simpleCap)
 fun_top$DE = tolower(fun_top$DE)
 fun_top  = fun_top[sample(nrow(fun_top), 25),]
 fun_top = fun_top[order(fun_top$PY),]
-colnames(fun_top) = c('Title', 'Year', 'Keywords', 'Citations')
-tab = xtable(fun_top,  align = c("p{0.00\\textwidth}",  "p{0.5\\textwidth}","p{0.1\\textwidth}",  "p{0.3\\textwidth}", "p{0.10\\textwidth}"), label='tab:function_in_ml', caption='Sample of highly cited machine learning publications referring to "function" in title or keyword')
+colnames(fun_top) = c( 'Year','Title', 'Keywords', 'Citations')
+tab = xtable(fun_top,  align = c("p{0.00\\textwidth}",  "p{0.1\\textwidth}","p{0.5\\textwidth}",  "p{0.3\\textwidth}", "p{0.10\\textwidth}"), label='tab:function_in_ml', caption='Sample of highly cited machine learning publications referring to "function" in title or keyword')
 print(tab, type='latex', include.rownames=FALSE)
 
 ```

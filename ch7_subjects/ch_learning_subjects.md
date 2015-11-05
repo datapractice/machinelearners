@@ -143,6 +143,7 @@ test_error = round(sum(0.5 < compute(titanic_net, titanic_test[, -c(1, 2)])$net.
 ```
 
 ```
+## Error in nrow[w] * ncol[w]: non-numeric argument to binary operator
 ```
 
 The line of the code that constructs a neural net using the `neuralnet` library [@Fritsch_2012], and the description of the classifier here is a familiar one. Despite its biological inspiration, the `R` formula for the neural net looks very similar to other machine learners such as logistic regression. It models whether someone `survived` the wreck of the Titanic in terms of their age, class of fare (`pclass`), sex, number of siblings/spouse (`sibsp`), number of parents/children (`parch`) and port of departure:
