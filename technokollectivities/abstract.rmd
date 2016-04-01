@@ -1,0 +1,41 @@
+# AlphaGo 
+
+## Title: Predictive participation as non-participation?
+
+GPUs and vectors of predictive participation
+
+What are the forms of collective when belonging, inclusion and participation are largely predictive?
+The architecture of the Graphics Processing Unit (GPU) and its recent re-purposing in machine learning offers a key starting point here. 
+In its capitalisation of socially networked participation as learnable patterns, machine learning sometimes spectacularly presents the working edge of predictive automation.
+An automation that deeply yet unevenly affects everyday experience, we can differentiate different elements of predictivity realised and promised at different rates in machine learning. 
+The paper will focus on one well-established and highly infrastructurally-leveraged aspect of this predictivity: the vectorisation of data. 
+Vectorisation, such as we see in the re-purposing of GPUs for prediction, reshapes and transforms participation into a re-configurable and expanding matrix of movements. 
+If identity, differences or inclusion takes on a predictive texture, as some have suggested, what other forms of collective life  can we expect to take shape, and how are they taking shape? 
+I will explore some of the ways in which people and others might inhabit or sense the vectorising predictivity that increasingly populates media, devices and platforms. 
+
+
+What has happened to images is now happening to social relations: from vector graphics to vector sociality
+
+The move that shocked Lee Solel: AlphaGo as a new transductive lineage?
+
+How do we relate to those moves? Why was that move shocking? Could we understand something by tracing the genesis of just that one move, with all its affective resonances, streamed live?
+
+What had the model seen? This was so widely reported
+
+
+## Todo
+
+- go through nature articles looking for the convolutional layers, and the superimposed knowledges at work here
+- look at existing programs and online databases of moves at https://www.gokgs.com/
+- look at the history of games that have been played, and how the training has been done (human players)
+- compile media database listing
+- look at alphago on Github 
+- look at deepmind on gh and on website
+- connect deepmind to other people ... 
+- think about the role of the visual here
+- think about how alphago connects to infrastructures
+- look at simondon again to see what he'd think about it, especially the way that Fan Hui and the KGS games were used
+ 
+## cfp notes
+
+We look for contributions that elucidate these infrastructures and their modes of automatic participation through critical lenses, as well as contributions that suggest alternative or experimental modes of participation by reintegrating the current network technologies.
