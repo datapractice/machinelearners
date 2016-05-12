@@ -8,3 +8,13 @@
 - struggling with 'last accessed' field -- that needs to be 'by type'. 
 - sorted this out by adding stuff to 'mybook.sty' --\clearfield(urlyear},etc. A bit of pfaff and too me all morning, but references are now much cleaner. 
 - will go through rest of reference list adding page numbers, etc. 
+
+
+
+
+
+## Thu May 12 13:14:42 BST 2016
+
+- reading conclusion (crap!) + intro to see how they map onto each other. Not too much at th e moment
+- adding new index entries into index on a couple of docs. 
+

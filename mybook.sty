@@ -100,21 +100,9 @@
 \usepackage[backend=biber,authordate,doi=false,url=false,isbn=false]{biblatex-chicago}
 \addbibresource{./ref_bibs/uni.bib}
 \AtEveryBibitem{% Clean up the bibtex rather than editing it
-    %\clearlist{address}
-    %\clearfield{date}
-    %\clearfield{eprint}
-    %\clearfield{issn}
-    %\clearlist{location}
-    %\clearfield{month}
-    %\clearfield{series}
     \ifentrytype{online}
         {}
         {\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}}
-    %\ifentrytype{article}{% Remove url access date except for online
-        %\clearlist{urldate}
-        %\clearfield{urldate}
-        %\clearname{urldate}
-  %}
 }
 \usepackage{makeidx}
 \usepackage{hyperref}
