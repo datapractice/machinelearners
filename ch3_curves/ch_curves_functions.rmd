@@ -13,6 +13,8 @@ library(ggplot2)
 library(stringr)
 library(xtable)
 options(xtable.comment = FALSE)
+options(xtable.size = 'tiny')
+options(xtable.tableplacement = '!htbp')
 simpleCap <- function(x) {
     s <- strsplit(x, " |-")[[1]]
     return (paste(toupper(substring(s, 1,1)), tolower(substring(s, 2)), sep="", collapse=" "))

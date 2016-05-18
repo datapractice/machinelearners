@@ -24,11 +24,6 @@ Machine learner subject positions are the topic of this chapter. I draw on artif
 
 # Propagating neural nets in machine learning 
 
-
-```
-## Error in library(GGally): there is no package called 'GGally'
-```
-
 \begin{table}[ht]
 \centering
 \begin{tabular}{p{0.2\textwidth}p{0.05\textwidth}p{0.2\textwidth}p{0.05\textwidth}p{0.2\textwidth}p{0.05\textwidth}p{0.2\textwidth}p{0.05\textwidth}}

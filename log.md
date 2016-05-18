@@ -36,4 +36,8 @@
 - read rest of ch2 -- its ok -- needs quite a bit of tightening, and not sure hw well the code vectorisation stuff fits. Needs to be also be understood as a topos, or some other threshold thing. 
 
 
+## Wed May 18 09:27:26 BST 2016
 
+- reading ch4 -- ok so far. Not sure of what the hook is: slippage between different senses of function (superimposed thresholds!) or something else
+- need to resize tables, so did that by adding lines to mybook.sty; trying to rebuild with that. ; ok, worked by putting size in the xtable options at beginning of knitr code. Need to put this across all the chapters. 
+- got 10 pages into chapter, but still no strong hook -- optimisation is what I want to get to -- to say that the threshold that has been crossed is one in which learning == optimisation, and optimisation is a kind of searching
