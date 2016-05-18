@@ -4,7 +4,7 @@ This book is not an ethnography although it has an ethnographic situation. If it
 
 Readers familiar with textbooks in computer science and statistics can see the traces of this site in some typographic conventions drawn from the fields I write about. Important conventions include:
 
-1. Typesetting  code and names of devices and datasets in a san serif font like `this`;
+1. Typesetting  the name of any actual machine learners, code or devices that do machine learning, and datasets on which machine learners operate  in a san serif font like `this`;
 2. Presenting formulae, functions, and equations using the bristling indexicality of mathematical typography
 
 Why emulate the apparatus of science and engineering publication in this way? Social science and humanities researchers, even when they are observant participants in their field sites, rarely experience a coincidence between their own writing practices and those of research subjects. The object of study in this book is a knowledge practice that documents itself in code, equations, diagrams and statements circulated in articles, books and various online formats (blogs, wikis, software repositories). 

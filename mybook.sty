@@ -21,7 +21,6 @@
 \usepackage[font={small}]{caption}
 \usepackage{subcaption}
 \usepackage{amsmath}
-%\usepackage[hidelinks]{hyperref}
 \usepackage[top=4cm,right=6cm]{geometry}
 \usepackage[nottoc,numbib]{tocbibind}
 %\added the following section to get shaded verbatim working ... 
@@ -104,9 +103,13 @@
         {}
         {\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}}
 }
+\usepackage[toc]{glossaries}
 \usepackage{makeidx}
+%\usepackage{xindy}
 \usepackage{hyperref}
 \usepackage{listings}
 \lccode`~=0
 \usepackage{showidx}
 \makeindex
+\makeglossaries
+\loadglsentries{glossary.tex}
