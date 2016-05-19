@@ -41,3 +41,11 @@
 - reading ch4 -- ok so far. Not sure of what the hook is: slippage between different senses of function (superimposed thresholds!) or something else
 - need to resize tables, so did that by adding lines to mybook.sty; trying to rebuild with that. ; ok, worked by putting size in the xtable options at beginning of knitr code. Need to put this across all the chapters. 
 - got 10 pages into chapter, but still no strong hook -- optimisation is what I want to get to -- to say that the threshold that has been crossed is one in which learning == optimisation, and optimisation is a kind of searching
+
+## Thu May 19 16:24:19 BST 2016
+
+- got a fair ways  through ch4 on curves -- learning is still struggling to get through -- so complicated to disentangle all the functions
+- also played with building everything on hp machine -- didn#t go so well. Some missing dependencies?
+- talked to press about deadline -- mid-July -- need to work back from that ... 
+
+
