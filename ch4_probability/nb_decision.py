@@ -1,7 +1,6 @@
 from sklearn import datasets
 import matplotlib.pyplot as plt
 import seaborn
-import matplotlib.pyplot as plt
 from mlxtend.evaluate import plot_decision_regions
 import matplotlib.gridspec as gridspec
 import itertools
@@ -27,3 +26,5 @@ for clf, lab, grd in zip([clf1, clf3 ],
         ax = plt.subplot(gs[grd[0], grd[1]])
         fig = plot_decision_regions(X=X, y=y, clf=clf)
         plt.title(lab)
+
+plt.savefig('figure/decision_boundary.svg')

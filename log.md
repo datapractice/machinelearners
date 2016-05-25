@@ -53,3 +53,4 @@
 - got through chapter 5 -- feels like quite a lot needed on it -- some diagrams too would help
 - starting chapter 6
 - install mlxtend to help plot decision boundaries and put some code in chapter 5 area to plot decision boundary for naive bayes on iris. Could replace this with the enron data?
+- also looked at R code to do the decision boundary -- its there on stackexchange ..
