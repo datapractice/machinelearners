@@ -49,3 +49,7 @@
 - talked to press about deadline -- mid-July -- need to work back from that ... 
 
 
+## Wed May 25 11:30:41 BST 2016
+- got through chapter 5 -- feels like quite a lot needed on it -- some diagrams too would help
+- starting chapter 6
+- install mlxtend to help plot decision boundaries and put some code in chapter 5 area to plot decision boundary for naive bayes on iris. Could replace this with the enron data?
