@@ -54,3 +54,10 @@
 - starting chapter 6
 - install mlxtend to help plot decision boundaries and put some code in chapter 5 area to plot decision boundary for naive bayes on iris. Could replace this with the enron data?
 - also looked at R code to do the decision boundary -- its there on stackexchange ..
+
+## Thu May 26 09:33:57 BST 2016
+- finding it hard to start today -- did a lot yesterdy on ch 6, trying to iron out different terminologies -- enunciative function, enunciative modality, statement, discourse, discursive formation, archive, archaeology ... Feel a bit better about these, but still not sure what the main point of the chapter is. Something about pattern, and the difference between sparsity and abundance, a few things that stand out versus a mass of things. ... 
+- after lunch, reached last 10 pages, but horrible conceptual work around statements still needs to be done. 
+- finished ch6 -- thinking about main point -- it should really be about how to think about differences; changed title to reflect this: 'patterns and differences in ml'
+- also looked at how to fix code listings -- use 'minted' package - can label all code listings using that. 
+- been adding many glossary entries -- might need to sub-divide glossaries to separate technical and critical entries. 
