@@ -61,3 +61,12 @@
 - finished ch6 -- thinking about main point -- it should really be about how to think about differences; changed title to reflect this: 'patterns and differences in ml'
 - also looked at how to fix code listings -- use 'minted' package - can label all code listings using that. 
 - been adding many glossary entries -- might need to sub-divide glossaries to separate technical and critical entries. 
+
+
+## Fri May 27 13:35:51 BST 2016
+- startgin ch7 -- seems to be on the referential. But is that really what I want to talk about here? It seems a pretty obscure concept. Chapter is meant to be about the ways that machine learning brings new kinds of things into existence, so that would be ok. 
+- ok, had a good idea to intensify the referential as the collective pre-individual reserve, the hyperobject for machine learning; there are a number of these -- images (faces-things-places), genome, social media, market-entanglements, network-states, epidemics ... 
+
+## Mon May 30 16:33:44 BST 2016
+- got through ch7 -- feels like a the hyperobject chapter really is a hyperobject. Do I characterise the hyperobject clearly enough? Felt that maybe the MF material on referentials, positivity, is a really a bit arcane. 
+- starting ch8 -- the neural net stuff is ok so far. 
