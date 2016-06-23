@@ -70,3 +70,8 @@
 ## Mon May 30 16:33:44 BST 2016
 - got through ch7 -- feels like a the hyperobject chapter really is a hyperobject. Do I characterise the hyperobject clearly enough? Felt that maybe the MF material on referentials, positivity, is a really a bit arcane. 
 - starting ch8 -- the neural net stuff is ok so far. 
+
+## Thu Jun 23 15:56:25 BST 2016
+- been working a lot on chapters on paper -- now on ch7 again -- still dealing with referentials, but trying to capture the somewhat excessive aspect of it more, to see what happens to it under mlr conditions. 
+
+
