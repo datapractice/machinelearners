@@ -75,3 +75,6 @@
 - been working a lot on chapters on paper -- now on ch7 again -- still dealing with referentials, but trying to capture the somewhat excessive aspect of it more, to see what happens to it under mlr conditions. 
 
 
+## Tue Jun 28 14:21:34 BST 2016
+- think I've finished the chapters now. Can either redo conclusion or start adding corrections, or both. 
+
