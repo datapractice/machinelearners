@@ -37,15 +37,19 @@ Let me resume the argument of the book, an argument that comprising seven major 
 
 Chapter \ref{ch:vector} examined the practices of vectorising data, situating machine learners themselves in an organised, dimensioned space accommodating an increasing repertoire of movements and transformations operating on vectors. Vectorisation subsumes many differences in data. It is a practice of working with data \index{vectorisation} to accommodate all differences within an expanding dimensional space. Both in terms of infrastructure and epistemic cultures, the vector space NEED MORE HERE.
 
-In chapter \ref{ch:function}, we discussed how learning might be understood as an experimental process that relays between operation and observation in optimising functions that predict and classify.  Viewed as an experimental relay, optimisation includes partial observers. NEED MORE HERE
+What happens to control in machine learning? If information and computation can be understood as responding to a crisis in control, what do machine learners do? In chapter \ref{ch:function}, we discussed how learning might be understood as an experimental process that relays between operation and observation in optimising functions that predict and classify.  Viewed as an experimental relay, optimisation includes partial observers. NEED MORE HERE
 
-Having all the data, chapter \ref{ch:probability} suggested, is not the principal stake in contemporary data cultures. Instead, the probabilisation \index{probabilisation} of both data and machine learners in populations suggests some of the axes of power-knowledge developing in machine learning. 
+An important and wide-reaching critical strand of work in humanities and social sciences over the last few decades has focused on populations, collectives, knowledge and power. Having all the data, chapter \ref{ch:probability} suggested, is not the principal stake in contemporary data cultures. Instead, the probabilisation \index{probabilisation} of both data and machine learners in populations suggests some of the axes of power-knowledge developing in machine learning. 
 
 What happens to differences amidst vectorisation, learning as optimisation, probabilisation and the generalized diagrammatic abstraction of machine learning? \index{differences}. Treated  as pattern, chapter \ref{ch:pattern}, differences bifurcate between infinitesimal graduation and rigid decision boundaries, sometimes blurring or overlapping, and sometimes distributed into inaccessibly high-dimensional inner data spaces.
 
 Rather than any new materiality, I have pointed to transformations in referentiality associated with machine learning. The topic of chapter \ref{ch:genome} was  a particular contemporary scientific object, genomes. I argued there that as a data form, genomic sequence data provoke re-use, transcription and transmission of classifications and predictions. 
 
 Finally, chapter \ref{ch:subject} explored the subject position of machine learners. The argument here concerned human-machine differences and the dispersion of subject positions through operations that alter those differences. NEED MORE HERE 
+
+## The broader stack
+
+Beyond these facets of the argument concerning abstraction, inclusion, control, multiplicity, differences, materiality and subject positions, another argument shaped discussion in the preceding chapters. One central problem for critical thought today (and by critical thought I mean post-Foucaultian engagements with the event that constitutes us subjects of what we say, do and think \index{critical thought}) concerns how to engage with operational formations. To an even greater extant than the discursive formations that Foucault and many subsequent scholars have analysed, operational formations \index{operational formation!compared to discursive formation},  
 
 HERE  As an operational formation, machine learning does not determine anything.  Under what conditions would that practice maximisation be divergent rather than convergent? It might not result in infinitely expanded $N=all$-type infrastructures subsuming all data.  in the closing pages of _The Archaeology of Knowledge_, Foucault writes:
 
