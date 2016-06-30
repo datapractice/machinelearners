@@ -81,3 +81,7 @@
 ## Wed Jun 29 18:25:23 BST 2016
 - starting working on the conclusion; got the RNN in. 
 
+## Thu Jun 30 12:47:49 BST 2016
+
+- put main summary of chapters and the bigger argument about technologies of self into conclusion; going ok, although not especially scintillating. 
+
