@@ -78,3 +78,6 @@
 ## Tue Jun 28 14:21:34 BST 2016
 - think I've finished the chapters now. Can either redo conclusion or start adding corrections, or both. 
 
+## Wed Jun 29 18:25:23 BST 2016
+- starting working on the conclusion; got the RNN in. 
+
