@@ -85,3 +85,6 @@
 
 - put main summary of chapters and the bigger argument about technologies of self into conclusion; going ok, although not especially scintillating. 
 
+## Sun Jul  3 22:35:16 BST 2016
+
+- almost finished intro rev
