@@ -88,3 +88,7 @@
 ## Sun Jul  3 22:35:16 BST 2016
 
 - almost finished intro rev
+
+## Wed Jul  6 22:43:53 BST 2016
+- lot of revisions on ch1 and ch2. Almost on schedule
+
