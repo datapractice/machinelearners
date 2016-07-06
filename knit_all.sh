@@ -6,9 +6,9 @@ cd ..
 cd ch1_learning/
 ./knit_all.sh
 cd ..
-#cd ch2_vector/
-#./knit_all.sh
-#cd ..
+cd ch2_vector/
+./knit_all.sh
+cd ..
 #cd ch3_curves/
 #./knit_all.sh
 #cd ..
