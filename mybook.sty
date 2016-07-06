@@ -100,7 +100,9 @@
 
 \date{}
 
-%\usepackage[backend=biber,style=numeric-comp,natbib=true]{biblatex}
+%\usepackage[backend=biber,style=authordate,natbib=true]
+%\usepackage[backend=biber,style=authordate,natbib=true]{biblatex-chicago}
+%\usepackage{biblatex-chicago}
 \usepackage[backend=biber,authordate,doi=false,url=false,isbn=false]{biblatex-chicago}
 \addbibresource{./ref_bibs/uni.bib}
 \AtEveryBibitem{% Clean up the bibtex rather than editing it
@@ -108,7 +110,7 @@
         {}
         {\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}}
 }
-\usepackage[toc]{glossaries}
+\usepackage{glossaries}
 \usepackage{makeidx}
 %\usepackage{xindy}
 \usepackage{hyperref}

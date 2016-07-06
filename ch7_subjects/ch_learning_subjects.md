@@ -134,13 +134,6 @@ The common diagrammatic operations of neural nets and other supervised machine l
 
 ```r
 library(neuralnet)
-```
-
-```
-## Error in library(neuralnet): there is no package called 'neuralnet'
-```
-
-```r
 titanic = read.csv("data/titanic3.csv")
 titanic_transformed = as.data.frame(model.matrix(~survived + age + pclass + 
     fare + sibsp + sex + parch + embarked, titanic))
@@ -149,20 +142,13 @@ titanic_train = titanic_transformed[train_index, ]
 titanic_net = neuralnet(survived ~ age + pclass + fare + sexmale + sibsp + parch + 
     embarkedC + embarkedQ + embarkedS, data = titanic_train, err.fct = "ce", 
     linear.output = FALSE, rep = 5, hidden = 3, stepmax = 10000)
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "neuralnet"
-```
-
-```r
 titanic_test = titanic_transformed[-train_index, ]
 test_error = round(sum(0.5 < compute(titanic_net, titanic_test[, -c(1, 2)])$net.result)/sum(titanic_test$survived), 
     2)
 ```
 
 ```
-## Error in eval(expr, envir, enclos): could not find function "compute"
+## Error in nrow[w] * ncol[w]: non-numeric argument to binary operator
 ```
 
 The line of the code that constructs a neural net using the `neuralnet` library [@Fritsch_2012], and the description of the classifier here is a familiar one. Despite its biological inspiration, the `R` formula for the neural net looks very similar to other machine learners such as logistic regression. It models whether someone `survived` the wreck of the Titanic in terms of their age, class of fare (`pclass`), sex, number of siblings/spouse (`sibsp`), number of parents/children (`parch`) and port of departure:
@@ -180,9 +166,6 @@ Again, despite the persistent reference to biology, the description of the 'new 
 The final major form in which neural net appear is the network diagram. Network graphs already appeared in Rosenblatt's perceptron work [@Rosenblatt_1958], but they ramify tremendously in the aftermath of back-propagation. Almost every book and article relating to  neural net presents some version of the diagram shown in Figure \ref{fig:titanic_net}.  
 
 
-```
-## Error in plot.nn(titanic_net, fontsize = 8, show.weights = FALSE): object 'titanic_net' not found
-```
 
 \begin{figure}
   \centering
