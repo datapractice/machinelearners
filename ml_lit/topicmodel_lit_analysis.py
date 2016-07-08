@@ -9,7 +9,7 @@ from gensim import corpora, models, similarities
 from itertools import chain
 from operator import itemgetter
 from nltk.tokenize import word_tokenize
-files='data/expect_max_WOS/'
+files='data'
 tm = ml.load_records(files)
 ab_title = tm.TI + ' ' + tm.AB
 documents = ab_title.dropna().tolist()
