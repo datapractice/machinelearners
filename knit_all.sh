@@ -1,11 +1,11 @@
 #!/bin/sh
 ./knit_front_matter.sh
-cd ch0_introduction/
-./knit_all.sh
-cd ..
-cd ch1_learning/
-./knit_all.sh
-cd ..
+#cd ch0_introduction/
+#./knit_all.sh
+#cd ..
+#cd ch1_learning/
+#./knit_all.sh
+#cd ..
 cd ch2_vector/
 ./knit_all.sh
 cd ..
