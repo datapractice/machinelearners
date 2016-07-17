@@ -1,4 +1,4 @@
-\chapter{$N = all\boldsymbol{X}$ Probabilisation and the Taming of Machines}
+\chapter{$N = \forall\boldsymbol{X}$ Probabilisation and the Taming of Machines}
 \label{ch:probability}
 
 ```{r global_options, include=FALSE}
@@ -36,7 +36,7 @@ The broadest claim associated with machine learning hinges on  the simple expres
 N = \forall\boldsymbol{X}
 \end {equation}
 
-In Equation \ref{eq:n_all}, $N$ refers to the number of observations (and hence the size of the dataset), the logical operator  $\forall$ means 'all' since this is the level of inclusion which many fields of knowledge in science, government, media, commerce and industry envisage, and $\boldsymbol{X}$ refers to the data itself arrayed in vector space. Note that this expression leaves some things out. $Y$, the response variable, for instance, may or may not be known or part of the data $\boldsymbol{X}$. \\index{data!all of}   While both the expansion of data in the vector space and the machine learners that transform and observe  it have appeared in previous chapters, I focus here  on changes in probability practices associated with machine learning, and in particular, $N = \forall\boldsymbol{X$}, the claim that with all the data, the production of knowledge fundamentally changes. \index{'Big Data'|see {data!all of}}
+In Equation \ref{eq:n_all}, $N$ refers to the number of observations (and hence the size of the dataset), the logical operator  $\forall$ means 'all' since this is the level of inclusion which many fields of knowledge in science, government, media, commerce and industry envisage, and $\boldsymbol{X}$ refers to the data itself arrayed in vector space. Note that this expression leaves some things out. $Y$, the response variable, for instance, may or may not be known or part of the data $\boldsymbol{X}$. \index{data!all of}   While both the expansion of data in the vector space and the machine learners that transform and observe  it have appeared in previous chapters, I focus here  on changes in probability practices associated with machine learning, and in particular, $N = \forall\boldsymbol{X}$, the claim that with all the data, the production of knowledge fundamentally changes. \index{'Big Data'|see {data!all of}}
 
 The claim that with $N=\forall\boldsymbol{X}$ the nature of knowledge changes has been widely discussed.[^4.2]  Viktor Mayer-Schönberger and Kenneth Cukier's _Big Data: A Revolution That Will Transform How We Live, Work and Think_  present this shift in many different settings in the course of the vignettes and teeming comparisons that have become typical of the data revolution genre. In a chapter entitled 'More,' they sketch the transition from data practices reliant on sampling to data practices that deal with all the data:\index{data!sampling!limits of} 
 
@@ -169,15 +169,13 @@ Such communications, with their mixture of solicitation and imperative  are fami
 ```
 
 
-\begin{lstlisting}[language='shell', label={lst:nb_spam}]
-```{r enron_nb_bash, engine='bash', echo=TRUE}
+\begin{lstlisting}[language=bash, label={lst:nb_spam}]
+```{r enron_nb_bash, eval=FALSE, engine='bash', echo=TRUE}
     #!/bin/bash
-    # file: enron_naive_bayes.sh
     # description: trains a simple one-word naive bayes spam
     # filter using enron email data
     # usage: ./enron_naive_bayes.sh <word>
     # author: jake hofman (gmail: jhofman)
-    # how to use the code
 
     ### PART 1
     Nspam=`ls -l spam/*.txt | wc -l`
@@ -365,7 +363,7 @@ Machine learning inhabits a reality that had already introjected  statistical re
 
     where $\textit{N}_{k}(x)$ is the neighborhood of $x$ defined by the $k$ closest points $x_{i}$ in the training sample [@Hastie_2009, 14].
     
-    In equation \ref{eq:knn}, a parameter appears: $k$, the number of neighbours.  This contrasts greatly with the linear models discussed in chapters \ref{ch:vector} and \ref{ch:function} where the number of parameters $p$ usually equals the number of variables in the dataset or dimensions in the vector space.  \index{machine learner!_k_-nearest neighbours}
+    In equation \ref{eq:knn}, a parameter appears: $k$, the number of neighbours.  This contrasts greatly with the linear models discussed in chapters \ref{ch:vector} and \ref{ch:function} where the number of parameters $p$ usually equals the number of variables in the dataset or dimensions in the vector space.  \index{machine learner!\textit{k}-nearest neighbours}
 
 [^4.117]: In [@Mackenzie_2014c], I have suggested that the intensification of multiplication associated with probabilistic calculation may constitute an important mutation in the ontological and practical texture of numbers. The epidemiological modelling of H1N1 influenza in London 2009 involved multiplying a great variety of probability distributions in order to calculate the conditional probability of influenza over time.  
 

@@ -12,8 +12,8 @@
 \usepackage{booktabs}
 \usepackage{framed}
 \usepackage{textpos}
-\usepackage{float}
-\restylefloat{table}
+%\usepackage{float}
+%\restylefloat{table}
 %make sure table font is not too big
 \usepackage{floatrow}
 \DeclareFloatFont{tiny}{\tiny}
@@ -26,10 +26,12 @@
 \usepackage[font={small}]{caption}
 \usepackage{subcaption}
 \usepackage{amsmath}
+\usepackage{xfrac}
 \usepackage[top=4cm,right=6cm]{geometry}
 \usepackage[nottoc,numbib]{tocbibind}
 %\added the following section to get shaded verbatim working ... 
-
+\providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -110,7 +112,7 @@
         {}
         {\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}}
 }
-\usepackage{glossaries}
+\usepackage[nonumberlist]{glossaries}
 \usepackage{makeidx}
 %\usepackage{xindy}
 \usepackage{hyperref}
