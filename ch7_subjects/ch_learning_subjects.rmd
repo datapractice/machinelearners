@@ -12,9 +12,12 @@ library(ggplot2)
 library(stringr)
 library(xtable)
 options(xtable.comment = FALSE)
+options(xtable.size = 'tiny')
+options(xtable.tableplacement = '!htbp')
+options(xtable.rownames=FALSE)
 ```
 
-> If a proposition, a sentence, a group of signs can be called 'statement,' it is not therefore because, one day, someone happened to speak them or put them into some concrete form of writing; it is because the position of the subject can be assigned [@Foucault_1972, 95] \index{statement!position of subject}
+> If a proposition, a sentence, a group of signs can be called 'statement,' it is not therefore because, one day, someone happened to speak them or put them into some concrete form of writing; it is because the position of the subject can be assigned [@Foucault_1972, 95] \index{statements!position of subject}
 
 > Generalization error is what we care about  [@Ng_2008f]
 
@@ -30,7 +33,7 @@ These 'things that are different,'  what I have been calling an operational form
 
 The  concatenation of 'one package, one mind' does not definitively allocate agency to people or things. (A 'package' after all is another name for a library of code.)  Mason adumbrates the outline of a subject position located  at the intersection of network infrastructure, mathematics and human behaviour.[^7.1] Mason, herself one of _Fortune_ magazines 'Top 40 under 40' business leaders to watch [@CNN_2011] and also featured in _Glamour_, a teenage fashion magazine [@Mason_2012], might personify such a 'wonderful person.' \index{Mason, Hilary} She is not a lone example. In mid-2016 Google announced a comprehensive program to re-train its software developers as machine learners [@Levy_2016].[^7.2] 
 
-'It is the privileged machine in this context that creates its marginalized human others' writes Lucy Suchman in her account of  the encounters that 'effect "persons" and "machines" as distinct entities' [@Suchman_2006, 269] \index{Suchman, Lucy!human-machine difference}. \index{differences!human-machine}  While Mason and other relatively well-known human machine learners are not exactly marginalized (just the opposite, they achieve minor celebrity status in some cases), Suchman recommends 'recognition of the particularities of bodies and artifacts, of the cultural-historical practices through which human-machine differences are (re-)iteratively drawn, and of the possibilities for and politics of redistribution across the human machine boundary' (285). The intersections that machine learners currently occupy are heavily re-distributional. In almost every instance, machine learners claim to do something that humans alone, no matter how expert, could not. Does the re-distribution of engineering, mathematics, curiosity, infrastructure and 'something that usually falls under the social sciences' (but perhaps no longer does so?) both energise subjects ('its a pretty exciting time to be in any of these things') and assign them a marginal albeit still pivotal position in relation to privileged machines?
+'It is the privileged machine in this context that creates its marginalized human others' writes Lucy Suchman in her account of  the encounters that 'effect "persons" and "machines" as distinct entities' [@Suchman_2006, 269]. \index{Suchman, Lucy!human-machine difference} \index{differences!human-machine}  While Mason and other relatively well-known human machine learners are not exactly marginalized (just the opposite, they achieve minor celebrity status in some cases), Suchman recommends 'recognition of the particularities of bodies and artifacts, of the cultural-historical practices through which human-machine differences are (re-)iteratively drawn, and of the possibilities for and politics of redistribution across the human machine boundary' (285). The intersections that machine learners currently occupy are heavily re-distributional. In almost every instance, machine learners claim to do something that humans alone, no matter how expert, could not. Does the re-distribution of engineering, mathematics, curiosity, infrastructure and 'something that usually falls under the social sciences' (but perhaps no longer does so?) both energise subjects ('its a pretty exciting time to be in any of these things') and assign them a marginal albeit still pivotal position in relation to privileged machines?
 
 Machine learner subject positions are the topic of this chapter. I focus on artificial neural networks, or neural nets, in their various forms ranging from the multilayer perceptron (MLP) to the convolutional neural nets (CNN), recurrent neural nets (RNN) and deep belief networks of many recent deep learning projects (particularly in machine learning  competitions, as discussed below [@Dahl_2013]). \index{neural net|see{machine learner!neural net}} in exploring the re-drawing of subject-machine positions.  \index{diagram!machine learner as} Neural nets propagate between infrastructures, engineering and human behaviour (as Mason puts it), re-drawing human-machine differences, sometimes making it hard to seen what subject position they entail, where subjects are located or what they say, see and do. 
 
@@ -41,9 +44,6 @@ The substitution of 'mind' and model reproduces many aspects of the figure  of a
 
 ```{r nn_de, cache=TRUE, results='asis'}
 
-library(stringr)
-library(RSQLite)
-library(ggplot2)
 library(GGally)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
 res = dbGetQuery(con, statement = "select DE, WC, SC, TI, PY from basic_refs")
@@ -57,7 +57,8 @@ interdisc = intersect(stat, compsci)
 norm_terms <- function(x){
     y = str_replace(x, pattern='artificial ', '')
     z = str_replace(y, pattern='svm', 'support vector machine')
-    return(z)
+    z2 = str_replace(z, pattern='-', ' ')
+    return(z2)
 }
 
 de_plural <- function(x){
@@ -76,19 +77,30 @@ tablify <- function(x) {
     df = data.frame(count = z, discipline = names(z))
     return(df)
 } 
-
-stat_df = (head(tablify(res$DE[stat]), 100))
-inter_df = (head(tablify(res$DE[interdisc]), 100))
-compsci_df = (head(tablify(res$DE[compsci]), 100))
-eng_df = (head(tablify(res$DE[eng]), 100))
+sample = 50
+stat_df = (head(tablify(res$DE[stat]), sample))
+inter_df = (head(tablify(res$DE[interdisc]), sample))
+compsci_df = (head(tablify(res$DE[compsci]), sample))
+eng_df = (head(tablify(res$DE[eng]), sample))
 
 df = cbind(stat_df, inter_df, compsci_df, eng_df)
 colnames(df) = c('Statistics', 'Count', 'Interdisciplinary', 'Count', 'Computer Science', 'Count', 'Engineering', 'Count')
-dft = xtable(df[1:20,], table.placement='ht',  align = c("p{0.01\\textwidth}", "p{0.2\\textwidth}",   "p{0.05\\textwidth}",  "p{0.2\\textwidth}",   "p{0.05\\textwidth}",  "p{0.2\\textwidth}",   "p{0.05\\textwidth}",  "p{0.2\\textwidth}",   "p{0.05\\textwidth}" ), label='tab:disc_tech', caption='Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015')
-print(dft, type='latex', include.rownames = FALSE)
+library(reshape2)
+
+dfm = melt(df, id.vars='Count')
+colnames(dfm) = c('Technique', 'Discipline', 'Count')
+ggplot(dfm, aes(x=Technique, y=Count, fill=Discipline)) + geom_bar(stat='identity') + coord_flip() + scale_y_log10()
+dft = xtable(df[1:20,],   align = c("p{0.01\\textwidth}", "p{0.2\\textwidth}",   "p{0.05\\textwidth}",  "p{0.2\\textwidth}",   "p{0.05\\textwidth}",  "p{0.2\\textwidth}",   "p{0.05\\textwidth}",  "p{0.2\\textwidth}",   "p{0.05\\textwidth}" ), label='tab:disc_tech', caption='Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015')
 ```
 
-Almost every machine learning class, textbook, demonstration, and in recent years, machine learning competitions at some point turns to neural nets.\index{machine learner!neural net!popularity of}  Neural nets  display, however, some instability in the research literature. Table \ref{tab:disc_tech} shows the most frequent keywords for technical publications across the three main disciplinary domains inhabited by machine learners. While neural nets rank very high in computer science and engineering disciplines (appearing just after support vector machines), they do not appear in the statistics literature until `r which(stat_df$discipline == 'neural network')` in the rankings. The prominence of neural nets on the engineering side of machine learning suggests a  specific enunciative mapping. \index{enunciative function!of neural net} 
+\begin{figure}
+  \centering
+      \includegraphics[width=0.9\textwidth]{figure/nn_de.pdf}
+        \caption{Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015}
+  \label{fig:disc_tech}
+\end{figure}
+
+Almost every machine learning class, textbook, demonstration, and in recent years, machine learning competitions at some point turns to neural nets.\index{machine learner!neural net!popularity of}  Neural nets  display, however, some instability in the research literature. Figure \ref{fig:disc_tech} shows the most frequent keywords for technical publications across the three main disciplinary domains inhabited by machine learners. While neural nets rank very high in computer science and engineering disciplines (appearing just after support vector machines), they do not appear in the statistics literature until `r which(stat_df$discipline == 'neural network')` in the rankings. The prominence of neural nets on the engineering side of machine learning suggests a  specific enunciative mapping. \index{enunciative function!of neural net} 
 
 Neural nets are often described from a deeply split perspective.  At some moments, the description  turns towards human subjects, or at least, the brains of human subjects. At other other moments, neural nets turn towards the vectorisation of data. \index{vectorisation} Neural nets constantly oscillate between brain and information infrastructure.  In some ways, they renew long-standing cybernetic hopes of bring brains and computation together in  models of computational intelligence and agency [@Hayles_1999]. \index{machine learner!neural net!cybernetics in}   Although they stem from a biological inspiration (dating at least back to the work by  McCulloch and Pitts in the 1940s [@Halpern_2015; @Wilson_2010]\index{Pitts, Walter}), they gain traction first in the 1980s and then again from mid-2000s onwards, as ways of dealing with changing computational infrastructures, and the difficulties of capitalising on infrastructure that is powerful but hard to control. In the course of fifty years, their serial re-invention -- from perceptron via neural net to deep belief net -- triply re-distributes subject positions amidst infrastructural re-configurations and vectorisation. \index{infrastructure!reconfiguration of} \index{vectorisation!of infrastructure}
 
@@ -126,7 +138,7 @@ _Elements of Statistical Learning_ devotes a lengthy section to the analysis of 
 
 >This problem captured the attention of the machine learning and neural network community for many years, and has remained a benchmark problem in the field [@Hastie_2009, 404].
 
-As Hastie and co-authors observe, 'at this point the digit recognition datasets became test beds for every new learning procedure, and researchers worked hard to drive down the error rates' [@Hastie_2009, 408-409]. such as zipcodes on envelopes (the set of handwritten digits we have already seen in chapter \ref{ch:pattern}, the `mnist` datasets [@LeCun_2012]). \index{dataset!\texttt{mnist}} \index{machine learning!competitions} The many competitions focused on the `mnist` dataset are, I suggest, a form of demonstration and testing of machines and people that propagate machine-human differences in machine learning. \index{data!images} 
+As Hastie and co-authors observe, 'at this point the digit recognition datasets became test beds for every new learning procedure, and researchers worked hard to drive down the error rates' [@Hastie_2009, 408-409]. such as zipcodes on envelopes (the set of handwritten digits we have already seen in chapter \ref{ch:pattern}, the `mnist` datasets [@LeCun_2012]). \index{dataset!\texttt{mnist}} \index{machine learning!competitions} The many competitions focused on the `mnist` dataset are, I suggest, a form of demonstration and testing of machines and people that propagate machine-human differences in machine learning. \index{data!image as} 
 
 Although they brought statistics and computer science closer, neural networks have had a somewhat problematic position in machine learning. Even in relation to the paradigmatic handwritten digit recognition problem, neural nets struggled to gain purchase precisely because a human subject position remained intimately interwoven into their operation.  On the one hand, their analogies and figurations as sophisticated neuronal-style models suggested cognitive capacities surpassing the more geometrical, algebraic and statistically grounded machine learners such as linear discriminant analysis, logistic regression, or decision trees. On the other hand, the density and complexity of their architecture made them difficult to train. Neural nets could easily overfit \index{overfitting} the data. As _Elements of Statistical Learning_ puts it, it required 'pioneering efforts to handcraft the neural network to overcome some these deficiencies..., which ultimately led to the state of the art in neural network performance' [@Hastie_2009, 404].\index{machine learning!craft in}  It is rare to find the word 'handcraft' in machine learning literature. The operational premise of most machine learners is that machine learning works without handcrafting, or that it automates what had previously been programmed by hand. \index{programmining!automation of}  \index{programmability!problem of} Somewhat loopily, the competition to automate recognition of handwritten digits, the traces that epitomise movements of hands,  entailed much handcrafting and recognition of variations in performances of the machine.
 
@@ -136,7 +148,7 @@ The unstable position of subjects in relation to  neural nets are frequently dis
 
 The somewhat vacillating presence of neural nets in the machine learning literature itself finds parallels in the movements of individual machine learners. Yann Le Cun's work on optical character recognition during 1980-1990s is said to have discovered the back-propagation algorithm at the same time as Rumelhart, Hinton and Williams [@Rumelhart_1986]. His implementations in `LeNet` won many research machine learning  competitions during the 1990s. In 2007, Andrew Ng could casually observe that neural nets _were_ the best, but in  2014, Le Cun find himself working on machine learning at Facebook [@Gomes_2014]. \index{Le Cun, Yann} Similarly, the cognitive psychologist Geoffrey Hinton's involvement in the early 1980s work on connectionist learning procedures in neural nets and subsequently on 'deep learning nets' [@Hinton_2006] delivers him to Google in 2013. \index{Hinton, Geoffrey}
 
-Trajectories between academic research and industry are not unusual for machine learners.\index{subject position!sites}  Many of the techniques in machine learning have been incorporated into companies later acquired by other larger companies. Even if there is no spin-off company to be acquired, machine learners themselves have been assigned key positions in many industry settings. Corinna Cortes, co-inventor with Vladimir Vapnik of the  support vector machine, heads research at Google New York \index{Cortes, Corinna}. In 2011, Ng led a neural net-based project at Google that had, among other things, detected cats  in millions of hours of Youtube videos.[^7.3] Ng himself in 2014 began work as chief scientist for the Chinese search engine, Baidu leading a team of AI researchers specializing in 'deep learning,' the contemporary incarnation of neural nets [@Hof_2014] \index{deep learning|see{machine learner!deep learning}}. \index{Ng, Andrew} In recent years, (2012-2015), work on neural nets has again intensified, most prominently in association with social media platforms, but also in the increasingly common speech and face recognition systems found in everyday services and devices. Many of these neural nets are like `kittydar` \index{machine learner!i\texttt{kittydar}}, but implemented on a much larger and more distributed scale (for instance, in classifying videos on Youtube). In contemporary machine learning competitions, as we will see, neural nets again surface as intersectional machines, re-distributing differences between humans and machines. 
+Trajectories between academic research and industry are not unusual for machine learners.\index{subject position!sites}  Many of the techniques in machine learning have been incorporated into companies later acquired by other larger companies. Even if there is no spin-off company to be acquired, machine learners themselves have been assigned key positions in many industry settings. Corinna Cortes, co-inventor with Vladimir Vapnik of the  support vector machine, heads research at Google New York \index{Cortes, Corinna}. In 2011, Ng led a neural net-based project at Google that had, among other things, detected cats  in millions of hours of Youtube videos.[^7.3] Ng himself in 2014 began work as chief scientist for the Chinese search engine, Baidu leading a team of AI researchers specializing in 'deep learning,' the contemporary incarnation of neural nets [@Hof_2014] \index{deep learning|see{machine learner!deep learning}}. \index{Ng, Andrew} In recent years, (2012-2015), work on neural nets has again intensified, most prominently in association with social media platforms, but also in the increasingly common speech and face recognition systems found in everyday services and devices. Many of these neural nets are like `kittydar` \index{machine learner!\texttt{kittydar}}, but implemented on a much larger and more distributed scale (for instance, in classifying videos on Youtube). In contemporary machine learning competitions, as we will see, neural nets again surface as intersectional machines, re-distributing differences between humans and machines. 
 
 # A privileged machine and its diagrammatic forms
 
@@ -159,7 +171,7 @@ f_k (X) = g_k (T), k = 1, ..., K,
 
 >[@Hastie_2009, 392]
 
-Equation \ref{eq:nn} diagrams some familiar elements as well as some novelty. Some elements of the neural net are already familiar from linear models. The neural networks transform data in a vector space denoted by $X$. That is common to nearly all machine learners.  They make use of the non-linear sigmoid function \index{function!sigmoid} that lies at the heart of one of the main linear classifiers used in machine learning, logistic regression.\index{machine learner!logistic regression} Their training and learning processes have come to rely on the same kinds of cost, loss or error functions \index{cost function} we have seen in other  machine learners. \index{machine learner!neural net!central idea of}
+Equation \ref{eq:nn} diagrams some familiar elements as well as some novelty. Some elements of the neural net are already familiar from linear models. The neural networks transform data in a vector space denoted by $X$. That is common to nearly all machine learners.  They make use of the non-linear sigmoid function \index{function!sigmoid} that lies at the heart of one of the main linear classifiers used in machine learning, logistic regression.\index{machine learner!logistic regression} Their training and learning processes have come to rely on the same kinds of cost, loss or error functions \index{function!cost} we have seen in other  machine learners. \index{machine learner!neural net!central idea of}
 
 The apparently increasing power of neural nets  to learn (to see, to find, to classify, to rank, to predict) owes much to diagrammatic substitutions that recombine operations of past machine learners in new intersections. These movements appear in the equations.\index{diagrammatic!substitution}   Equation \ref{eq:nn} has three lines rather than one, and this layering and its diagonal patterns of indexical referencing running between subscripts distinguishes neural nets from the linear  models it assembles. \index{diagram!equation as} 
 
@@ -172,7 +184,7 @@ Whereas the standard linear model \index{linear model} shown in Equation \ref{eq
 
 # Varying subject positions in code
 
-The operational diagram of neural nets, I would suggest, ascribes subject positions associated with it. How does that happen?   Some familiar diagrammatic operations immediately appear in almost any actual example of a neural net. In the code vignette shown below, the dataset is a spreadsheet of information about passengers of the Titanic. The `titanic` dataset, like `iris` or `boston` is often used in contemporary machine learning pedagogy. \index{dataset!titanic}  It is for instance, the main training dataset used by (kaggle.com)[http://kaggle.com], an online machine learning competition site I will discuss below \index{Kaggle.com}. The first few lines of the `R` code load the dataset and transform it into vector space. For instance, variables such as `sex` that take values such as `male` and `female` become vectors of `1` and `0` in a new variable `sexmale`. 
+The operational diagram of neural nets, I would suggest, ascribes subject positions associated with it. How does that happen?   Some familiar diagrammatic operations immediately appear in almost any actual example of a neural net. In the code vignette shown below, the dataset is a spreadsheet of information about passengers of the Titanic. The `titanic` dataset, like `iris` or `boston` is often used in contemporary machine learning pedagogy. \index{dataset!\texttt{titanic}}  It is for instance, the main training dataset used by (kaggle.com)[http://kaggle.com], an online machine learning competition site I will discuss below \index{Kaggle.com}. The first few lines of the `R` code load the dataset and transform it into vector space. For instance, variables such as `sex` that take values such as `male` and `female` become vectors of `1` and `0` in a new variable `sexmale`. 
 
 \begin{lstlisting}[language=R, label={lst:titanic_nn}]
 ```{r neural_net1, echo=TRUE, include=TRUE, message=FALSE, warning=FALSE, cache=TRUE}
@@ -221,7 +233,7 @@ Although the network topology of the model appears in many more complicated form
 
 # The subjects of a hidden operation
 
-How do the diagrammatic forms of the basic model equations, the network diagram and the operational code comprising the privileged machine at work recognising handwritten digits or classifying the passengers on the Titanic, assign subject positions? How would we describe the figure of human machine learner in this setting? Is the human machine learner like Vlad, the former Eastern European mathematician tending the training of a neural net at the heart of the call centre knowledge management system, or more like Heather Arthur, the programmer who wrote `kittydar`? \index{machine learner!kittydar} 
+How do the diagrammatic forms of the basic model equations, the network diagram and the operational code comprising the privileged machine at work recognising handwritten digits or classifying the passengers on the Titanic, assign subject positions? How would we describe the figure of human machine learner in this setting? Is the human machine learner like Vlad, the former Eastern European mathematician tending the training of a neural net at the heart of the call centre knowledge management system, or more like Heather Arthur, the programmer who wrote `kittydar`? \index{machine learner!\texttt{kittydar}} 
 
 When in _The Archaeology of Knowledge_, Foucault presents the 'position of the subject' \index{subject position} as an anchor point for the power-laden, knowledge forming  enunciative functions,\index{statements!enunciative function} he does not identify it as a unifying point grounded in interiority, in intentionality or even in  single speaking position or voice (that of *the*  machine learning expert, for instance). On the contrary, 'various enunciative modalities manifest his [sic] dispersion' [@Foucault_1972, 54].  Positions derive from operations that determine statements that become a kind of law for the subject.\index{subject position!operational assignment of}
 
@@ -268,7 +280,7 @@ Competitors no doubt enter these competitions for various reasons, not the least
 
 While most employment agencies rely on CVs (curriculum vitae), Kaggle operates more like feed-forward and back-propagation between multiple competitions as a way of optimising its ranking of machine learners. \index{machine learning!competitions!Kaggle}
 
-The competition organizers list three injunctions: download (the data), build (a model), and submit (an entry or many entries to the competition). Leader-boards and individual rankings within the Kaggle's "world's largest community of data scientists" [@Kaggle_2015b], [^7.20] allow clients --corporations mostly -- to 'harness the "cognitive surplus"' [@Kaggle_2015c].  The figure also shows some of the typical diversity of  the several hundred machine learning competitions that Kaggle has staged since 2011: diabetic retinopathy and west Nile virus prediction competition appear next to search results relevance or context ad clicks competitions.\index{data diversity} As we have seen frequently, accumulation,  aggregation and  proximity, whether accidental or constructed, between very disparate entities suggests that machine learners possess epistemic mobility not readily available to the domain experts (in diabetes, virology, information retrieval or search engine optimisation). 
+The competition organizers list three injunctions: download (the data), build (a model), and submit (an entry or many entries to the competition). Leader-boards and individual rankings within the Kaggle's "world's largest community of data scientists" [@Kaggle_2015b], [^7.20] allow clients --corporations mostly -- to 'harness the "cognitive surplus"' [@Kaggle_2015c].  The figure also shows some of the typical diversity of  the several hundred machine learning competitions that Kaggle has staged since 2011: diabetic retinopathy and west Nile virus prediction competition appear next to search results relevance or context ad clicks competitions.\index{data!diversity of} As we have seen frequently, accumulation,  aggregation and  proximity, whether accidental or constructed, between very disparate entities suggests that machine learners possess epistemic mobility not readily available to the domain experts (in diabetes, virology, information retrieval or search engine optimisation). 
 
 
 \begin{figure}
@@ -282,7 +294,7 @@ Like a neural network with many layers and nodes, competitions subject competito
 
 > The leaderboard is a central fixture of the Kaggle experience. It provides context to the incredible work accomplished by the Kaggle data science community. To a competitor, the leaderboard is a dynamic, living, action-filled battle. Tactics come to life. Individuals leapfrog over each other.  Teams merge and blend submissions.  Some submit early and often, attempting to build up insurmountable leads. Others bide time, waiting to pounce minutes before the buzzer with their finest of forests.  We see the joys of regularization and the agony of overfitting.   ... It's thousands of hours of collective human toil [@Kaggle_2015c]
 
-The dynamics of ranking, and the experience of being ranked here arise from a fairly simple mechanism. Entrants in a given competition download two datasets, a training dataset that includes labels for all the response variables, and a test dataset that does not include the labels. In principle, competitors construct machine learners using the training dataset, use their machine learner  to predict labels for the test dataset, and then upload the predicted labels to Kaggle as a submission to the competition. The Kaggle platform then calculates a ranking based on the generalization error in the test labels.[^7.913]  Competitors optimise their entries against each other, but the competition overall functions as a kind of general optimization process in which many hidden nodes adjust their treatment to the training data as scores and rankings propagate through via the leaderboard system. The very stylised injunction to download-model-submit many times effectively creates an algorithmic process in which many hidden nodes operate in parallel to produce predictions. \index{Kaggle!competition!as optimisation process}
+The dynamics of ranking, and the experience of being ranked here arise from a fairly simple mechanism. Entrants in a given competition download two datasets, a training dataset that includes labels for all the response variables, and a test dataset that does not include the labels. In principle, competitors construct machine learners using the training dataset, use their machine learner  to predict labels for the test dataset, and then upload the predicted labels to Kaggle as a submission to the competition. The Kaggle platform then calculates a ranking based on the generalization error in the test labels.[^7.913]  Competitors optimise their entries against each other, but the competition overall functions as a kind of general optimization process in which many hidden nodes adjust their treatment to the training data as scores and rankings propagate through via the leaderboard system. The very stylised injunction to download-model-submit many times effectively creates an algorithmic process in which many hidden nodes operate in parallel to produce predictions. \index{Kaggle!competitions!as optimisation process}
 
 [^7.913]:  Kaggle itself has the actual labels for the test dataset. Entrants monitor the leaderboard and attempt to improve their rankings by making new submissions with improved or altered models. The many entries that participants sometimes submit to the competitions suggest that rankings, and their visibility operate like the loss functions that optimise the fit of a subject position to an operational formation. \index{optimisation!competition as process}
 
@@ -300,7 +312,7 @@ The disciplinary form of the examination of errors links statements and operatio
     library(xtable)
     df = read.csv('data/kaggle.csv')
     df_excerpt = head(df[order(df$Reward_amount, decreasing=TRUE),], 20)
-    tab_kaggle = xtable(df_excerpt[, c('Competition', 'Reward_amount', 'domain', 'data_type')], caption='The highest prize money machine learning competitions on Kaggle',  label='tab:kaggle_competitions', table.placement='ht',  align = c( "p{0.05\\textwidth}", "p{0.6\\textwidth}", "p{0.10\\textwidth}", "p{0.15\\textwidth}", "p{0.1\\textwidth}"))
+    tab_kaggle = xtable(df_excerpt[, c('Competition', 'Reward_amount', 'domain', 'data_type')], caption='The highest prize money machine learning competitions on Kaggle',  label='tab:kaggle_competitions',   align = c( "p{0.05\\textwidth}", "p{0.6\\textwidth}", "p{0.10\\textwidth}", "p{0.15\\textwidth}", "p{0.1\\textwidth}"))
     print(tab_kaggle, type= 'latex', include.rownames=FALSE)
 ```
 
@@ -332,7 +344,7 @@ Human and machine learner differences can be re-drawn in two different direction
 
 [^7.343]: The cultural theorist Lauren Berlant describes optimism as an operation:
 
-        >The surrender to the return to the scene where the object hovers in its potentialities is the operation of optimism as an affective form [@Berlant_2007, 20]
+    >The surrender to the return to the scene where the object hovers in its potentialities is the operation of optimism as an affective form [@Berlant_2007, 20]
 
     Berlant's complicated formulation brings together surrender, return, scene, object, potentialities and affective form. These movements, places and things might be understood as purely psychic or semiotic processes. But optimism as an asignifying diagrammatic operation also plays out across the manifold surfaces of algorithms, datasets, models, platforms and ranking systems associated with machine learning as a competitive examination. \index{Berlant, Lauren!optimism}
 
