@@ -11,6 +11,10 @@ library(ggplot2)
 library(stringr)
 library(xtable)
 options(xtable.comment = FALSE)
+options(xtable.comment = FALSE)
+options(xtable.size = 'tiny')
+options(xtable.tableplacement = '!htbp')
+options(xtable.rownames = FALSE)
 simpleCap <- function(x) {
     s <- strsplit(x, " |-")[[1]]
     return (paste(toupper(substring(s, 1,1)), tolower(substring(s, 2)), sep="", collapse=" "))
@@ -23,7 +27,7 @@ In the final pages of _The Taming of Chance_,  Ian Hacking describes the work of
 
 Does the setting that machine learners encounter differ from that concerned Peirce in his work at the U.S. Government Coast Survey in the 1870s? In the opening lines of the preface to the First Edition of _Elements of Statistical Learning_, Hastie, Tibshirani and Friedman write:
 
->The field of Statistics is constantly challenged by the problems that science and industry brings to its door. In the early days, these problems often came from agricultural and industrial experiments and were relatively small in scope [@Hastie_2009, xi] \index{textit{Elements of Statistical Learning}!on statistics}
+>The field of Statistics is constantly challenged by the problems that science and industry brings to its door. In the early days, these problems often came from agricultural and industrial experiments and were relatively small in scope [@Hastie_2009, xi] \index{\textit{Elements of Statistical Learning}!on statistics}
 
 At the end of the preface, they also cite, we might note in passing, Hacking's work: 'The quiet statisticians have changed our world' [@Hastie_2009, xii]. One of the challenges science and industry has brought to the  door of statistics in recent years has not only been more data but also machine learners.  What difference do the 'vast amounts of data ... generated in many fields' (xi) make to the field of statistics? Statistics has, I will suggest in this chapter, gradually _probabilised_ machine learners, or endowed with a substratum of chance that flows directly from their operation. \index{probabilisation} To grasp this \gls{probabilisation}, we need to determine what role randomness, change and the probabilistic distribution of elements and events play in machine learning.  These questions of how worlds becomes thinkable through machine learning can be addressed partly by contrasting the 'taming of chance' achieved  by eighteenth and nineteenth century statistics and the taming of data -- and machines -- in statistical practices of machine learning today. \index{machine learning!statistical practices}
 
@@ -170,7 +174,6 @@ Such communications, with their mixture of solicitation and imperative  are fami
 
 
 \begin{lstlisting}[language=bash, label={lst:nb_spam}]
-```{r enron_nb_bash, eval=FALSE, engine='bash', echo=TRUE}
     #!/bin/bash
     # description: trains a simple one-word naive bayes spam
     # filter using enron email data
@@ -208,7 +211,6 @@ Such communications, with their mixture of solicitation and imperative  are fami
     echo
     echo "P(spam|$word) =" $Pspam_word
     cd ..
-```
 \end{lstlisting}
 
 [@Schutt_2013, 105-106]
@@ -251,15 +253,13 @@ The script draws out something of how the joint probability function in equation
 
 There is something quite artificial at work in the construction of these populations and their associated probability distributions. \index{probabilisation!construction of populations}  They are intentionally artificial and limited.  They do not correspond or refer directly to what we know, for instance, of how language works, but instead to a rather different set of concerns.  Like most machine learning techniques encountering complex realities, classifiers such as Naive Bayes ignore many obvious structural or semiotic features of emails as documents (for instance, word order, or co-occurrences of words). Yet this very artificiality or limitation in their reference to the world allows machine learners to appear in many different guises. Despite their simple architecture, Naive Bayes classifiers have been surprisingly successful. Many machine learners transform vectorised data into probability distributions populated by fields of random variables in process of change. They render all things as populations.  
 
-```{r nb_applications, results='asis'}
-    q = "select * from basic_refs where TI like '%Naive Bayes%' or DE like '%Naive Bayes%' or anchor = 'naive_bayes_WOS'"
+```{r nb_applications, echo=FALSE, results='asis'}
+    q = "select * from basic_refs where TI like '%Naive Bayes%'"
     res = dbGetQuery(con, q)
-    dim(res)
-    colnames(res)
-    nb = res[order(res$TC, decreasing=TRUE),]
-    nb2 = unique(nb[, c('TI',  'PY')])
-    colnames(nb2) = c('Title', 'Year')
-    tab = xtable(head(nb2[order(nb2$Year),],30), table.placement='!ht', caption = 'Most cited Naive Bayes publications 1945-2015', align = c("p{0.05\\textwidth}",  "p{0.85\\textwidth}",  "p{0.1\\textwidth}", "p{0.15\\textwidth}"), label='tab:nb_most_cited')
+    nb = res[order(res$TC, decreasing=TRUE)[1:20],]
+    nb2 = unique(nb[, c('PY', 'TI')])
+    colnames(nb2) = c('Year', 'Title')
+    tab = xtable(nb2[order(nb2$Year),],  caption = 'Most cited Naive Bayes publications 1945-2015', align = c("p{0.05\\textwidth}", "p{0.10\\textwidth}",  "p{0.85\\textwidth}"), label='tab:nb_most_cited')
     print(tab, type='latex', row.names=FALSE)
 ```
 
@@ -294,7 +294,7 @@ This treatment of the abstracts as documents, then as lists of words, and then a
 
 # Statistical decompositions: bias, variance and observed errors
 
-Even with an eye on the ancestral communities that constantly accompany and heavily shape the indexical diagram of machine learning in the world, we still need a way of accounting for the artificiality of Naive Bayes. \index{diagram!indexical} The classifiers generates highly arbitrary probabilities of document class membership, yet these arbitrary probabilities still allow effective classification. Machine learners view the persistence of manifest artifice (in the case of Naive Bayes, a model that eschews any modelling of relations between things in the word such as words) in terms of another of the structuring differences of machine learning: the so-called _bias-variance_decomposition_[@Hastie_2009,24]. \index{errors!bias-variance|(}
+Even with an eye on the ancestral communities that constantly accompany and heavily shape the indexical diagram of machine learning in the world, we still need a way of accounting for the artificiality of Naive Bayes. \index{diagram!indexical} The classifiers generates highly arbitrary probabilities of document class membership, yet these arbitrary probabilities still allow effective classification. Machine learners view the persistence of manifest artifice (in the case of Naive Bayes, a model that eschews any modelling of relations between things in the word such as words) in terms of another of the structuring differences of machine learning: the so-called _bias-variance_decomposition_[@Hastie_2009,24]. \index{error!bias-variance|(}
 
 The terms 'bias' and 'variance' stem from the long history of statistical interest in errors (as Hacking's account of the transposition of measurement errors into population norms illustrates). \index{statistics!errors} The \gls{bias} and \gls{variance} of 'estimators' -- the estimates of the parameters of the models usually written as $\hat{\beta}$ or $\hat{\theta}$-- feature heavily in machine learning discussions of prediction errors. The terms point to tensions that all machine learners experience. On the one hand, _variance_ refers to the inevitable reliance of a machine learner on the data it 'learns.' To put it more formally, 'variance refers to the amount by which $\hat{f}$ would change if we estimated it using a different training data set' [@James_2013,34]. On the other hand, _bias_ 'refers to the error that is introduced by approximating a real-life problem, which may be extremely complicated, by a much simpler model' [@James_2013, 35].
 
@@ -315,7 +315,7 @@ A rather elaborate set of concepts and techniques address the bias-variance deco
 
 The trade-offs between bias and variance shift  markedly  between different types of models, and generates many different conceptual analyses of error in machine learning literature ('optimism of the training error rate' (228), 'estimates of in-sample prediction error' (230), 'Bayesian information criterion' (233), 'Vapnik-Chervonenkis dimension' (237), 'minimum description length' (235)) and technical methods of estimating prediction error ('cross-validation' (241), 'bootstrap methods'  (249),  'expectation-maximization algorithm' (272), 'bagging' (282), or 'Markov Chain Monte Carlo (MCMC)' (279)), many of which date from the 1970s (e.g. cross-validation [@Stone_1974], bootstrap [@Efron_1979], expectation-maximization [@Dempster_1977]). \index{error!analysis of in machine learning} \index{error!techniques of estimating} 
 
-A daunting field of concepts, themes, techniques and methods all gravitate to the threshold of probabilisation.  \index{probabilisation!threshold of} They invoke in some cases sophisticated mathematical or statistical constructs. They also very often rely on computational iteration or infrastructural scale to optimise parameters in models whose underlying intuitions remain quite  straightforward (as in a linear regression or Naive Bayes). In some cases, the implementation of a model may be very simple, but analysis of how the machine learner manages to curtail a source of error such as bias or variance entails much more sophisticated statistical understanding.  Many analyses  of how a model becomes a 'useful approximation' reconfigure treat the models themselves as members of a population whose variations and uncertainties, whose tendencies and predispositions must be sampled, tested and monitored.\index{population!machine learners} The bias-variance decomposition points to an irreducible friction in the way that machine learning structures differences in the world. \index{errors!bias-variance|)}
+A daunting field of concepts, themes, techniques and methods all gravitate to the threshold of probabilisation.  \index{probabilisation!threshold of} They invoke in some cases sophisticated mathematical or statistical constructs. They also very often rely on computational iteration or infrastructural scale to optimise parameters in models whose underlying intuitions remain quite  straightforward (as in a linear regression or Naive Bayes). In some cases, the implementation of a model may be very simple, but analysis of how the machine learner manages to curtail a source of error such as bias or variance entails much more sophisticated statistical understanding.  Many analyses  of how a model becomes a 'useful approximation' reconfigure treat the models themselves as members of a population whose variations and uncertainties, whose tendencies and predispositions must be sampled, tested and monitored.\index{population!machine learners} The bias-variance decomposition points to an irreducible friction in the way that machine learning structures differences in the world. \index{error!bias-variance|)}
 
 # Does machine learning construct a new statistical reality?
 
@@ -336,7 +336,7 @@ Machine learning inhabits a reality that had already introjected  statistical re
 
 [^4.51]: In 1964, N.J Bailey was taking the same approach to medical diagnosis [@Bailey_1965].  
 
-[^4.61]: Later chapters of this book will track several instances of having all the data in the sciences, in government and in business in order to show what having all the data entails in different settings. \index{data!all of the}
+[^4.61]: Later chapters of this book will track several instances of having all the data in the sciences, in government and in business in order to show what having all the data entails in different settings. \index{data!all of}
 
 [^4.60]:  Machine learning textbooks written by computer scientists tend to define probabilistic models more narrowly.  As Peter Flach suggests:
 

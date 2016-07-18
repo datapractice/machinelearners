@@ -6,7 +6,7 @@
 cp ch*/figure/*.pdf figure
 cp ch*/figure/*.jpg figure
 cp ch*/figure/*.png figure
-lualatex --halt-on-error  book.tex
+lualatex book.tex
 biber book
 makeindex book.idx
 makeindex -s book.ist -o book.gls book.glo 

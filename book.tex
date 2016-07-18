@@ -4,6 +4,7 @@
 \usepackage{subfiles}
 \title{Machine Learning: Archaeology of a Data Practice}
 \author{Adrian Mackenzie}
+\renewcommand\lstlistlistingname{List of Code}
 \begin{document}
 \frontmatter
 \maketitle
@@ -12,6 +13,8 @@
 \tableofcontents
 \listoffigures
 \listoftables
+\clearpage
+\addcontentsline{toc}{chapter}{\lstlistlistingname}
 \lstlistoflistings
 \mainmatter
 %\subfile{ch0_introduction/ch.tex}
@@ -19,8 +22,8 @@
 %\subfile{ch2_vector/ch.tex}
 %\subfile{ch3_curves/ch.tex}
 %\subfile{ch4_probability/ch.tex}
-\subfile{ch5_dimensionality/ch.tex}
-\subfile{ch6_topologies/ch.tex}
+%\subfile{ch5_dimensionality/ch.tex}
+%\subfile{ch6_topologies/ch.tex}
 \subfile{ch7_subjects/ch.tex}
 \subfile{ch8_conclusion/ch.tex}
 \backmatter

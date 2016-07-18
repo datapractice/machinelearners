@@ -21,8 +21,8 @@
 
 \usepackage{etex}
 \reserveinserts{32}
-%\usepackage[dvips]{graphicx}
 \usepackage[pdftex]{graphicx} 
+\usepackage{svg} 
 \usepackage[font={small}]{caption}
 \usepackage{subcaption}
 \usepackage{amsmath}
@@ -117,6 +117,12 @@
 %\usepackage{xindy}
 \usepackage{hyperref}
 \usepackage{listings}
+\lstset{
+        frame=single,
+        breaklines=true,
+        postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
+        basicstyle=\footnotesize\ttfamily
+}
 \lccode`~=0
 \usepackage{showidx}
 \makeindex

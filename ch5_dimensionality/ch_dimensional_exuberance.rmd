@@ -12,6 +12,8 @@ library(ggplot2)
 library(stringr)
 library(xtable)
 options(xtable.comment = FALSE)
+options(xtable.size = 'tiny')
+options(xtable.tableplacement = '!htbp')
 simpleCap <- function(x) {
     s <- strsplit(x, " |-")[[1]]
     return (paste(toupper(substring(s, 1,1)), tolower(substring(s, 2)), sep="", collapse=" "))
@@ -26,7 +28,7 @@ Do machine learners generate new patterns of difference? Should we hold machine 
 
 Across  vectors, functions and populations, the diagram of machine learning weaves and knots many points of emergence, continuity and conjunction. I view the formidable accumulations of infrastructure, devices and expertise accreting around machine learning as multi-faceted abstractions, where abstraction is understood diagrammatically. \index{abstraction!diagrammatic} Three highly developed and heavily used machine learners  -- decision trees, support vector machines and neural nets  -- more or less mesmerised the machine learning scientific literature between 1980-2000. They initiated relatively novel and somewhat heterogeneous diagrammatic movements into data.[^5.05]  \index{machine learner!decision tree} \index{machine learner!support vector machine} \index{machine learner!neural net}   These diagrammatic movements, which we might characterise as _splitting_, and _marginalising_  not only animate subsequent machine learners in producing newer techniques,  they re-donfigure what counts as pattern. \index{diagram!movement} Since machine learning has no fixed idea of pattern (a term lacks much operational definition), then claims that machine learners uncover hidden patterns in data might be better  grounded in the operational practices of working with differences.[^5.08] 
 
-As machine learners of recent decades, the decision tree and support vector machine embody a new \gls{enunciative modality}, a way of describing, locating and perceiving differences in which differences of degree and differences of kind are re-mapped.  \index{enunciative modality|see{statement!enunciative modality of}} Practically,  decision trees and support vector machines  loom large in various contemporary accounts of machine learning as a way of knowing (for instance, in popular machine learning  books such as _Machine Learning for Hackers_ [@Conway_2012] or _Doing Data Science_ [@Schutt_2013]). The machine learning research published in statistics, computer science, mathematics, artificial intelligence and a swathe of related scientific fields during 1980-2010 bristles with references to decision trees and support vector machine, as well as neural networks.[^5.321]
+As machine learners of recent decades, the decision tree and support vector machine embody a new \gls{enunciative modality}, a way of describing, locating and perceiving differences in which differences of degree and differences of kind are re-mapped.  \index{enunciative modality|see{statements!enunciative modality of}} Practically,  decision trees and support vector machines  loom large in various contemporary accounts of machine learning as a way of knowing (for instance, in popular machine learning  books such as _Machine Learning for Hackers_ [@Conway_2012] or _Doing Data Science_ [@Schutt_2013]). The machine learning research published in statistics, computer science, mathematics, artificial intelligence and a swathe of related scientific fields during 1980-2010 bristles with references to decision trees and support vector machine, as well as neural networks.[^5.321]
 
 [^5.321]: The top 20 most cited publications in the field include  Ross Quinlan and Leo Breiman's papers on decision trees [@Quinlan_1986; @Breiman_1984], Vladimir Vapnik and Corinna Cortes' support vector machines papers [@Vapnik_1999; @Cortes_1995],  an early textbook written by a computer scientist on machine learning [@Mitchell_1997], a textbook and software package on data mining using Java [@Witten_2005]; a textbook on pattern recognition dating from the 1970s [@Duda_2012], a tutorial on an error control technique (ROC - Receiver Operating Characteristics, first developed by the US military during WWII) and somewhat lower, another well-known textbook, this time on neural networks and pattern recognition [@Bishop_2006].  \index{machine learning!publications!most cited}
 
@@ -36,11 +38,11 @@ Rather than seeing pattern as something discovered in data, the notion of enunci
 
 > Mastering the details of tree growth and management is an excellent way to understand the activities of learning machine generally [@Malley_2011, 118]. \index{Malley, James!on decision trees}
 
-Decision trees promise an understanding of machine learning. \index{machine learner!decision tree}  The enunciative modality of the decision tree  concerns the observability and comprehensibility of machine learning. \index{statement!enunciative modality of} As we will see, not all machine learners readily support observation or comprehension. The cost of comprehensibility, however, is a certain highly restricted framing of differences in transforming. As _Elements of Statistical Learning_ puts it: 'tree-based methods partition the feature space into a set of rectangles, and then fit a simple model (like a constant) in each one. They are conceptually simple yet powerful' [@Hastie_2009, 305]. \index{\textit{Elements of Statistical Learning}!on decision trees} 
+Decision trees promise an understanding of machine learning. \index{machine learner!decision tree}  The enunciative modality of the decision tree  concerns the observability and comprehensibility of machine learning. \index{statement!enunciative modality of} As we will see, not all machine learners readily support observation or comprehension. The cost of comprehensibility, however, is a certain highly restricted framing of differences in transforming. As _Elements of Statistical Learning_ puts it: 'tree-based methods partition the feature space into a set of rectangles, and then fit a simple model (like a constant) in each one. They are conceptually simple yet powerful' [@Hastie_2009, 305]. \index{\textit{Elements of Statistical Learning}!decision trees} 
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.9\textwidth]{figure/recursive_partitioning.pdf}
+      \includegraphics[width=0.9\textwidth]{figure/recursive_partitioning.png}
         \caption{Recursive partitioning of the feature space}
   \label{fig:rpart}
 \end{figure}
@@ -52,6 +54,7 @@ Tree-based methods are supervised learners as they require the data to either be
     res = dbGetQuery(con, q)
     res$TI = sapply(res$TI, simpleCap) 
     colnames(res) = c('Title', 'Year', 'Citations')
+    res = res[res['Citations'] > 5,]
     tab  = xtable(res[1:10,], caption="References to Morgan and Sonquist's Automatic Interaction Detector", label='table:aid_citation', table.placement='ht')
     print(tab, type='latex', include.rownames=FALSE)
    
@@ -88,15 +91,18 @@ An initial symptom of the transformation of the technique appears in a name chan
 The implementation of machine learning techniques in `R`  accentuates the statistical side of decision tree practice, but that has certain forensic virtues not offered by commercial or closed-source software often produced by computer scientists.  The name of one long-standing and widely-used `R` package itself attests to something: `rpart` is a contraction of 'recursive partitioning' and this term generally describes how the decision tree algorithm works to partition the vector space into the form shown in Figure \ref{fig:rpart} [@Therneau_2015].  \index{R!packages!\texttt{rpart}} 'CART,' on the other hand, is a registered trademark of Salford Systems, the software company mentioned above, who sell the leading commercial implementation of classification and regression trees. Hence, the `R` package `rpart` cannot call itself the more obvious name `cart, ` and instead invokes the underlying algorithmic process: recursive partitioning.[^5.06] \index{algorithm!recursive partitioning} \index{programming languages!R}
 
 \begin{lstlisting}[language=R,label={rpart_iris}]
-```{r iris_tree, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' } 
+    data(iris)
+    library(rpart)
+    iris_tree =rpart(Species ~ ., iris)
+\end{lstlisting}
 
+```{r iris_tree, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' } 
     data(iris)
     library(rpart)
     iris_tree =rpart(Species ~ ., iris)
 ```
-\end{lstlisting}
 
-R.A. Fisher's `iris` dataset, which contains 150 measurements made in the 1930s of petal and sepal lengths of _iris virginica, iris setosa_ and _iris versicolor_ is a standard instructional example for decision trees [@Fisher_1938].[^5.12] \index{dataset!iris} The code shown here loads the `iris` data (the dataset  is routinely installed with many data analysis tools), loads the `rpart` decision tree library, and builds a decision to classify the irises by species.  What has happened to the iris data in this decision tree? The `R` code that invokes the recursive partitioning algorithm is so brief `iris_tree =rpart(Species ~ ., iris)` that we can't tell much about how the data has been 'recursively partitioned.' We know that the _iris_ has `r nrow(iris)` rows, and that there are equal numbers of the three iris varieties. 
+R.A. Fisher's `iris` dataset, which contains 150 measurements made in the 1930s of petal and sepal lengths of _iris virginica, iris setosa_ and _iris versicolor_ is a standard instructional example for decision trees [@Fisher_1938].[^5.12] \index{dataset!\texttt{iris}} The code shown here loads the `iris` data (the dataset  is routinely installed with many data analysis tools), loads the `rpart` decision tree library, and builds a decision to classify the irises by species.  What has happened to the iris data in this decision tree? The `R` code that invokes the recursive partitioning algorithm is so brief `iris_tree =rpart(Species ~ ., iris)` that we can't tell much about how the data has been 'recursively partitioned.' We know that the _iris_ has `r nrow(iris)` rows, and that there are equal numbers of the three iris varieties. 
 
 Code brevity indicates a great deal of formalization of practice has accrued around decision trees. \index{code!brevity of!} Some of this formalization was described in the landmark _Classification and Regression Trees_ monograph [@Breiman_1984]. Classification in decision trees operates  by splitting each of the dimensions of vector space into two parts (as we saw in figure \ref{fig:rpart}).  These splits institute branches along which differences are hierarchically ordered in a tree structure. The recursive splitting algorithm draws a diagram of hierarchical differences.  The problem here is that many splits are possible. What is a good split or ordering of differences? \index{differences!ordering of}
 
@@ -104,15 +110,12 @@ Code brevity indicates a great deal of formalization of practice has accrued aro
 
 Tree construction hinges on the notion of purity or more precisely 'node impurity', a function that measures to what extent data labelled as belonging to different classes are mixed together at a given branch or node in a decision tree: 'that is, the node impurity is largest when all classes are equally mixed together in it, and smallest when the node contains only one class' [@Breiman_1984, 24]. As Malley and co-authors note, 'the collection of purity measures is still a subject of research' [@Malley_2011, 123], but Breiman, Friedman, Olshen and Stone promoted a particular form of impurity measure for classification trees known as 'Gini index of diversity' [@Breiman_1984, 38].  \index{difference!Gini index of diversity} Like the planar decision surface used in classifiers such as the perceptron or linear regression model, recursive partitioning combined with measures of node impurity transforms data by  cuts or divides.\index{learning!as dividing}  Whereas in linear model-based machine learners, the intuition motivating the function-finding or learning was 'find the line that best expresses the distribution of the data, \index{machine learner!logistic regression!gradient descent} here the intuition is more like: 'find the cuts that minimize mixing'. Good splits decrease the level of impurity in the tree. In a tree with maximum purity, each terminal node -- the nodes at the base of the tree -- would contain a single class. 
 
-The results of the application of measures of node impurity can be seen below in two plots. 
-
 ```{r iris_tree_plot, echo=FALSE,  fig.cap ='Decision tree on _iris_ dataset', cache=TRUE, message=FALSE, warning=FALSE, comment=NA, results='asis' } 
 
     par(mfrow = c(1,2), xpd=NA)
     plot(iris_tree, main = 'tree recursive partitioning of iris')
     text(iris_tree, cex=0.8, use.n=TRUE)
-    table(iris$Species) # is data.frame with 'Species' factor
-     iS <- iris$Species == "setosa"
+    iS <- iris$Species == "setosa"
      iV <- iris$Species == "versicolor"
      op <- par(bg = "bisque")
      matplot(c(1, 8), c(0, 4.5), type =  "n", xlab = "Length", ylab = "Width",
@@ -164,11 +167,12 @@ In growing and pruning decision trees, and even more markedly in support vector 
 
 
 ```{r pattern_recognition1, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='asis' } 
-    query = 'select TI, PY, TC from basic_refs where TI like "%support vector machine%" or anchor = "svm_WOS"'
+    query = 'select TI, PY, TC from basic_refs where TI like "%support vector machine%"'
     res = dbGetQuery(con, query)
-    svm = res[order(res$TC, decreasing=TRUE),]
+    svm = res[order(res$TC, decreasing=TRUE)[1:20],]
     colnames(svm) = c('Title', 'Year', 'Citations')
-    tab2 = xtable(head(svm,20), label = 'tab:svm_lit',table.placement='ht',  align = c("p{0.05\\textwidth}",  "p{0.7\\textwidth}","p{0.1\\textwidth}",  "p{0.15\textwidth}"), caption = 'Most cited papers on support vector machines')
+    svm = svm[!duplicated(svm['Title']),]
+    tab2 = xtable(svm,  label = 'tab:svm_lit',table.placement='ht',  align = c("p{0.05\\textwidth}",  "p{0.7\\textwidth}","p{0.1\\textwidth}",  "p{0.15\\textwidth}"), caption = 'Most cited papers on support vector machines')
     print(tab2, type='latex', include.rownames=FALSE)
 ```
 
@@ -228,7 +232,7 @@ In his 1936 article in the _Annual Review of Eugenics_, Fisher comments on simil
 
 # The decision boundary blurs?
 
-Decision boundaries change in two ways in support vector machines. They blur and bend, again affecting what counts as pattern. \index{pattern!dispersion of}   The support vector machine addresses the problem of how to model differences when differences are blurred. An oft-repeated illustration of how the support vector machine transforms data appears in Cortes and Vapnik's initial publication simply entitled 'Support Vector Networks' [@Cortes_1995]. They demonstrate how the support vector machine classifies handwritten digits drawn from a dataset supplied by the US Postal Service [@LeCun_2012]. Like `iris`, the US Postal Service digits and a larger version from the US National Institute of Standard (`mnist`) are  standard machine learning dataset. They have been frequently used to measure the performance of competing learning algorithms. \index{dataset!U.S. Postal digits|see{dataset!MNIST}}  In contrast to `iris`, the `mnist` is high dimensional. Each digit in the dataset is stored as a 16x16 pixel image. Image classification typically treats each pixel as a feature  or variable in the input space. So each digit as represented by  16x16 pixels amounts to a 256 dimensional input space.\index{data!image as}  By comparison, `iris` has five dimensions. Unsurprisingly, there are also many more digits in the US Postal Service Database than in flowers in `iris`. The `mnist` dataset has around 70,000. Aside from this dimensional growth, the handwritten digits aptly convey the blurring of differences.  On the one hand, many people can easily recognise slight variations in handwritten digits with few errors. This is despite the many variations in handwriting that skew, morph and distort the ideal graphic forms of numbers.[^5.23]  
+Decision boundaries change in two ways in support vector machines. They blur and bend, again affecting what counts as pattern. \index{pattern!dispersion of}   The support vector machine addresses the problem of how to model differences when differences are blurred. An oft-repeated illustration of how the support vector machine transforms data appears in Cortes and Vapnik's initial publication simply entitled 'Support Vector Networks' [@Cortes_1995]. They demonstrate how the support vector machine classifies handwritten digits drawn from a dataset supplied by the US Postal Service [@LeCun_2012]. Like `iris`, the US Postal Service digits and a larger version from the US National Institute of Standard (`mnist`) are  standard machine learning dataset. They have been frequently used to measure the performance of competing learning algorithms. \index{dataset!U.S. Postal digits|see{dataset!\texttt{mnist}}}  In contrast to `iris`, the `mnist` is high dimensional. Each digit in the dataset is stored as a 16x16 pixel image. Image classification typically treats each pixel as a feature  or variable in the input space. So each digit as represented by  16x16 pixels amounts to a 256 dimensional input space.\index{data!image as}  By comparison, `iris` has five dimensions. Unsurprisingly, there are also many more digits in the US Postal Service Database than in flowers in `iris`. The `mnist` dataset has around 70,000. Aside from this dimensional growth, the handwritten digits aptly convey the blurring of differences.  On the one hand, many people can easily recognise slight variations in handwritten digits with few errors. This is despite the many variations in handwriting that skew, morph and distort the ideal graphic forms of numbers.[^5.23]  
 
 
 \begin{figure}
@@ -238,7 +242,7 @@ Decision boundaries change in two ways in support vector machines. They blur and
   \label{fig:postal_digits}
 \end{figure}
 
-In their experiments with digit recognition (shown in figure \ref{fig:postal_digits}, Cortes and Vapnik contrast the error rates of decision trees (CART and C4.5), neural networks and the support vector machine working at various level of dimensionality. Support vector machines deal with blurred differences or continuous variations  by superimposing two operations: 'soft margins' and 'kernelisation.' Nearly all expositions of the support vector machine including [@Cortes_1995]  highlight the 'soft margin' that runs in parallel to the solid decision boundary.  The support vector machine develops Fisher's linear discriminant analysis since it searches for a separating hyperplane in the data. \index{hyperplane|see{decision surface}} While  linear discriminant analysis constructs a  hyperplane by finding the most likely linear  boundary between classes based on all the data, the support vector machine searches for a hyperplane resting only on those cases in the data that lie near the boundary. It introduces the intuition that the best hyperplane differentiating  classes will run near to the cases -- the _support vectors_ --  that are most difficult to classify. Hard-to-classify cases become the 'support vectors' \index{machine learner!support vector machine!support vectors in}  whose relative proximities tilt the decision surface in various directions. In contra-distinction to the $N=\forall{\boldsymbol{X}}$ proposition (discussed in chapter \ref{ch:probability}), the machine learner discards much of the data. In contrast to linear discriminant analysis, as Ethem Alpayadin writes, 'we do not care about correctly estimating the densities [probability distributions of variables] inside class regions; all we care about is the correct estimation of the _boundaries_ between the class regions' [@Alpaydin_2010, 210]. \index{Alpayadim, Ethem!on decision boundaries} \index{machine learner!linear discriminant analysis}
+In their experiments with digit recognition (shown in figure \ref{fig:postal_digits}, Cortes and Vapnik contrast the error rates of decision trees (CART and C4.5), neural networks and the support vector machine working at various level of dimensionality. Support vector machines deal with blurred differences or continuous variations  by superimposing two operations: 'soft margins' and 'kernelisation.' Nearly all expositions of the support vector machine including [@Cortes_1995]  highlight the 'soft margin' that runs in parallel to the solid decision boundary.  The support vector machine develops Fisher's linear discriminant analysis since it searches for a separating hyperplane in the data. \index{hyperplane|see{decision surface}} While  linear discriminant analysis constructs a  hyperplane by finding the most likely linear  boundary between classes based on all the data, the support vector machine searches for a hyperplane resting only on those cases in the data that lie near the boundary. It introduces the intuition that the best hyperplane differentiating  classes will run near to the cases -- the _support vectors_ --  that are most difficult to classify. Hard-to-classify cases become the 'support vectors' \index{machine learner!support vector machine!support vectors in}  whose relative proximities tilt the decision surface in various directions. In contra-distinction to the $N=\forall{\boldsymbol{X}}$ proposition (discussed in chapter \ref{ch:probability}), the machine learner discards much of the data. In contrast to linear discriminant analysis, as Ethem Alpayadin writes, 'we do not care about correctly estimating the densities [probability distributions of variables] inside class regions; all we care about is the correct estimation of the _boundaries_ between the class regions' [@Alpaydin_2010, 210]. \index{Alpaydin, Ethem!on decision boundaries} \index{machine learner!linear discriminant analysis}
 
 ```{r svm_margins, cache=TRUE, dev='pdf'}
 library(kernlab)
