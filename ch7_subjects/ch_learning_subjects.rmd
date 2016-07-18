@@ -95,7 +95,7 @@ dft = xtable(df[1:20,],   align = c("p{0.01\\textwidth}", "p{0.2\\textwidth}",  
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.9\textwidth]{figure/nn_de.pdf}
+      \includegraphics[width=0.9\textwidth]{figure/nn_de-1.pdf}
         \caption{Techniques and concepts most frequently mentioned in machine learning publication keywords, 1955-2015}
   \label{fig:disc_tech}
 \end{figure}
