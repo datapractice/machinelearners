@@ -107,7 +107,7 @@ Instead,  we are now confronted by kaleidoscopically transmuted tables whose exp
 
 # The epistopic fault line in tables
 
-```{r ElemStatLearn_data, echo=TRUE}
+```{r ElemStatLearn_data, echo=FALSE}
 library('ElemStatLearn')
 datasets = data(package='ElemStatLearn')
 datasets[['results']][,3]
@@ -121,7 +121,7 @@ The table has been vectorised. We might say that the vectorization of the table 
 
 The local complex of activities for associating datasets shatters tables from a different direction than that described by Foucault in _The Order of Things_. Algebra,  linear algebra in particular, organizes and distributes differences in vector space. _Mathesis_ in the form of algebraic operations of addition and multiplication of  collections of tabular elements such as rows and columns, now re-defined as vectors, re-structure tabular data as a vector space, as a 'set' whose membership is only limited by the applicability of the constructing relations. These operations absorb and subtend differences in quality, type, kind and quantity. \index{vector space!ramification in}
 
-```{r prostate_plot, echo=TRUE, message=FALSE, results = 'hide', fig.show='hide'}
+```{r prostate_plot, echo=FALSE, message=FALSE, results = 'hide', fig.show='hide'}
 library('ElemStatLearn')
 data('prostate')
 pairs(prostate[, -10],  cex=0.2)
@@ -210,8 +210,23 @@ In vectorised languages such as `R`, transformations of a data structure  expres
 
 [^2.934]: `R` sometimes presents difficulties for programmers trained to code using so-called procedural programming languages because it so thoroughly embraces the notion of the _vector_ -- and hence, regards all data as inhabiting vector space. In many mainstream programming languages, transformations of data rely on loops and array constructs in which some operation is successively repeated on each element of a data structure. \index{programming languages!vectorized} 
 
-\begin{lstlisting}[language=R, label={lst:vectorizing}]
-```{r vectorization, echo=TRUE, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
+\begin{lstlisting}[language=R, caption={Vectorising code}, label={lst:vectorizing}]
+     vector1 <- c(0,1,2,3,4,5,6,8,9,10)
+     vector2 <- c(0,1,2,3,4,5,6,8,9,10)
+
+     #procedural programming-style looped addition
+     result_looped = vector()
+     for (i in vector1) {
+        result_looped[i] = vector1[i] + vector2[i]
+     }
+     result_looped
+
+     #vectorised addition
+     result_vectorised  <- vector1 + vector2
+     result_vectorised
+\end{lstlisting}
+
+```{r vectorization, cache=TRUE, message=FALSE, warning=FALSE, comment=NA, size='smallsize', results='markup' } 
  
      vector1 <- c(0,1,2,3,4,5,6,8,9,10)
      vector2 <- c(0,1,2,3,4,5,6,8,9,10)
@@ -227,7 +242,6 @@ In vectorised languages such as `R`, transformations of a data structure  expres
      result_vectorised  <- vector1 + vector2
      result_vectorised
 ```
-\end{lstlisting}
 
 The practical difference between the two approaches to moving through data is illustrated in the code listing \ref{lst:vectorizing} in which two 'vectors' of numbers are added together, in the first case using a classic `for`-loop construct, and in the second case using an implicitly vectorised arithmetic operation `+`. The difference between adding $1 ... 10$ using a loop or vector arithmetic is completely trivial here, or as we will soon see, nested operations are involved,   these differences in coding significantly affect human-machine relations. \index{code!as human-machine relation}  This simultaneity is only apparent, since somehow the underlying code has to deal with all the individual elements, but vectorised programming languages take advantage of hardware optimisations or carefully-crafted low-level linear algebra libraries.[^2.41] More importantly, this is a different mode of movement. Operations now longer step through a series of coordinates that address data elements, but wield planes, diagonals, cross-sections and whole-space transformations. Vectorized code reduces both data and computational frictions. The real stake in vectorizing data is not speed but transformation. It  makes working with data less like iteration through data structures (lists, indexes, arrays, fields, dictionaries, variables),   and more like folding a pliable material. Such practical shifts in feeling for data are mundane yet crucial to the epistopic movements in data. \index{vector space!vectorization!function}  [^2.455]
 
@@ -239,8 +253,18 @@ Vectorization also motivates  increasingly parallel contemporary chip architectu
 
 How does the combination of algebraic vector space and vectorised code play out in data? 'We fit a linear model' write Hastie and co-authors, referring to one epistopic operation on `prostate` data in _Elements of Statistical Learning_.  In `R` this might look like the code excerpt shown below:
 
-\begin{lstlisting}[language=R, label={lst:prostate_lm}]
-```{r prostate_model, echo=TRUE}
+\begin{lstlisting}[language=R, caption={Building a \texttt{prostate} model}, label={lst:prostate_lm}]
+library(ElemStatLearn)
+data(prostate)
+columns_to_standardize = c(1,2,3,4,6,8,9)
+prostate_standard = as.matrix(prostate[, columns_to_standardize]) 
+prostate_standard = as.data.frame(scale(prostate_standard))
+prostate_standard = cbind(prostate_standard, gleason=prostate$gleason, svi = prostate$svi, train = prostate$train)
+train = prostate$train ==TRUE
+prostate_model = lm(lpsa~., prostate_standard[train,-10])
+\end{lstlisting}
+
+```{r prostate_model}
 library(ElemStatLearn)
 data(prostate)
 columns_to_standardize = c(1,2,3,4,6,8,9)
@@ -251,7 +275,6 @@ train = prostate$train ==TRUE
 prostate_model = lm(lpsa~., prostate_standard[train,-10])
 
 ```
-\end{lstlisting}
 
 ```{r prostate_model_output, echo=FALSE, results = 'asis'}
 tab1 = xtable(summary(prostate_model), caption = 'Fitting a linear model to the \texttt{prostate} dataset', label='tab:prostate_linear_regression', type='latex')
@@ -262,11 +285,10 @@ Table \ref{tab:prostate_linear_regression} displays estimates of the coefficient
 
 The 'unique solution' to the problem of fitting a linear model to a given dataset using the popular method of 'least squares' [@Hastie_2009, 12] is given by the operations we have seen in equation \ref{eq:linear_model_solution}. This tightly coiled expression calculates the $\hat{\beta}$ parameters that set the slope and location of a flat surface or plane in nine-dimensional vector space using all of the `prostate` variables apart from one variable chosen as the response or predicted variable, in this case `lpsa`. $X$ and $y$  matrices are multiplied, transposed (a form of rotation that swaps rows for columns) and inverted (a more complex operation that finds another matrix) in a series of linear algebra transformations. Epitomising the implicitly vectorised code often seen in machine learning, calculating $\hat{\beta}$ for  the `prostate` data only requires one line of `R` code: \index{code!implicit vectorization of}
 
-\begin{lstlisting}[language=R, label={lst:beta_hat}]
-```{r beta_hat, echo=TRUE, eval = FALSE}
+\begin{lstlisting}[language=R, caption={Closed form evaluation of linear model parameters}, label={lst:beta_hat}]
 beta_hat = ginv(t(X) %*% X) %*% t(X) %*% y
-```
 \end{lstlisting}
+
 
 The implicit vectorization of the `R` code in the code listing \ref{lst:beta_hat}, the fact that it already concretely operates in the vector space, operationalizes the concise diagrammatizing of equation \ref{eq:linear_model_solution} as a machine process. \index{vector space!vectorization} More importantly, the vectorised multiplication, transposition and inversion of data creates the new vector $\hat{\beta}$ whose variations can be explored, observed, graphed and varied in ways that go well beyond the statistical tests of significance, variation, and error reported in Table \ref{tab:prostate_linear_regression}. \index{statistics!tests of significance}  (We will have occasion to return to these statistical estimates in chapter \ref{ch:probability}.) The play of values that starts to appear even in fitting one linear model will become much more significant when fitting hundreds or thousands of models, as some machine learners do.[^2.300] \index{parameters!estimation of}
 

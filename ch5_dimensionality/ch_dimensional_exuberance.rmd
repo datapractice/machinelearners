@@ -90,7 +90,7 @@ An initial symptom of the transformation of the technique appears in a name chan
 
 The implementation of machine learning techniques in `R`  accentuates the statistical side of decision tree practice, but that has certain forensic virtues not offered by commercial or closed-source software often produced by computer scientists.  The name of one long-standing and widely-used `R` package itself attests to something: `rpart` is a contraction of 'recursive partitioning' and this term generally describes how the decision tree algorithm works to partition the vector space into the form shown in Figure \ref{fig:rpart} [@Therneau_2015].  \index{R!packages!\texttt{rpart}} 'CART,' on the other hand, is a registered trademark of Salford Systems, the software company mentioned above, who sell the leading commercial implementation of classification and regression trees. Hence, the `R` package `rpart` cannot call itself the more obvious name `cart, ` and instead invokes the underlying algorithmic process: recursive partitioning.[^5.06] \index{algorithm!recursive partitioning} \index{programming languages!R}
 
-\begin{lstlisting}[language=R,label={rpart_iris}]
+\begin{lstlisting}[language=R,caption={Decision tree for \texttt{iris} dataset}, label={rpart_iris}]
     data(iris)
     library(rpart)
     iris_tree =rpart(Species ~ ., iris)
