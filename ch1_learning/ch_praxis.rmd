@@ -61,7 +61,7 @@ Now in Foucaultean terms, the truth table and its component propositions constit
 
 A pre-machine learning programmer, tasked with implementing the logical NAND function might write:
 
-\begin{lstlisting}[label={lst:nand}]
+\begin{lstlisting}[language=Python, caption={XOR function in Python}, label={lst:nand}]
 Y = not(X1 & X2 & X3)
 \end{lstlisting}
 
@@ -102,7 +102,7 @@ while True:
 outfile.close()
 
 ```
-\begin{lstlisting}[label={lst:perceptron_code}]
+\begin{lstlisting}[language=Python, caption={Perceptron learning $XOR$ function}, label={lst:perceptron_code}]
 
 threshold = 0.5
 learning_rate = 0.1
@@ -395,7 +395,7 @@ Bill Venables and Brian Ripley, statisticians working on developing `S`, the alm
 
 While the view that code is a precise expression of ideas makes sense, it does not capture the relational complexity of `R` code as it operates in a setting such as _Elements of Statistical Learning_.  In machine learning,  code, along with mathematics, is a primary operational form that ideas take as they become machine learners. But code as an expressive operation by which 'an individual formulates an idea' or as 'a rational activity that may operate in a system of inference' [@Foucault_1972, 117] does not exhaust and should not be conflated with operational practice in machine learning. \index{operational practice} Similarly, the intersection of `R` with machine learning also lies somewhat at odds with Pedro Domingos' characterisation of machine learning as a shift away from people building to learners growing programs. 
 
-\begin{lstlisting}[language=R, label={lst:install_package}]
+\begin{lstlisting}[language=R, caption={Install packages in \texttt{R}}, label={lst:install_package}]
 `install.packages('ElemStatLearn', dependencies='Suggests', repos = 'http://cran.us.r-project.org')
 \end{lstlisting}
 

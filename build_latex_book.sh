@@ -8,6 +8,7 @@ cp ch*/figure/*.jpg figure
 cp ch*/figure/*.png figure
 lualatex book.tex
 biber book
+makeglossaries book
 makeindex book.idx
 makeindex -s book.ist -o book.gls book.glo 
 #texindy book.idx

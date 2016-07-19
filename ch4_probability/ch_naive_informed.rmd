@@ -173,7 +173,7 @@ Such communications, with their mixture of solicitation and imperative  are fami
 ```
 
 
-\begin{lstlisting}[language=bash, label={lst:nb_spam}]
+\begin{lstlisting}[language=bash, caption={A Naive Bayes classifiers for \texttt{enron} email}, label={lst:nb_spam}]
     #!/bin/bash
     # description: trains a simple one-word naive bayes spam
     # filter using enron email data

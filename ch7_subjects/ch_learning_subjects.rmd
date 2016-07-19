@@ -186,7 +186,7 @@ Whereas the standard linear model \index{linear model} shown in Equation \ref{eq
 
 The operational diagram of neural nets, I would suggest, ascribes subject positions associated with it. How does that happen?   Some familiar diagrammatic operations immediately appear in almost any actual example of a neural net. In the code vignette shown below, the dataset is a spreadsheet of information about passengers of the Titanic. The `titanic` dataset, like `iris` or `boston` is often used in contemporary machine learning pedagogy. \index{dataset!\texttt{titanic}}  It is for instance, the main training dataset used by (kaggle.com)[http://kaggle.com], an online machine learning competition site I will discuss below \index{Kaggle.com}. The first few lines of the `R` code load the dataset and transform it into vector space. For instance, variables such as `sex` that take values such as `male` and `female` become vectors of `1` and `0` in a new variable `sexmale`. 
 
-\begin{lstlisting}[language=R, label={lst:titanic_nn}]
+\begin{lstlisting}[language=R, caption={Neural net for \texttt{titanic} dataset}, label={lst:titanic_nn}]
 ```{r neural_net1, echo=TRUE, include=TRUE, message=FALSE, warning=FALSE, cache=TRUE}
 library(neuralnet)
 titanic = read.csv('data/titanic3.csv', stringsAsFactors=FALSE)
