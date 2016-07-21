@@ -101,7 +101,7 @@ tablify_yr <- function(x) {
 stat_df = data.frame(discipline= 'statistics', tablify_yr(res[stat,]))
 compsci_df =  data.frame(discipline='computer science', tablify_yr(res[compsci,]))
 eng_df =  data.frame(discipline= 'engineering', tablify_yr(res[eng,]))
-df = rbind(stat_df, inter_df, compsci_df, eng_df)
+df = rbind(stat_df,  compsci_df, eng_df)
 dim(df)
 head(df)
 top_techniques = names((sort(table(df$techniques), decreasing=TRUE)))[6:25]
@@ -347,7 +347,7 @@ They go on to describe the different layers -- cyclic slice, convolutional, spat
 
 A  massive parallel computation allows 'deep' learning. Infrastructure and cognition entwine heavily here, since the very possibility of training large many-layered neural nets depends heavily on vectorised transformations of image data.  Probably few other competitors in this competition would have had access to the Tesla K40 or 'NVIDIA GTX 980 Superclocked' GPU cards that 'Deep Sea' relied on.[^7.100] \index{GPU|see{vectorization!hardware!graphics processing unit}} Even with that intensive computational resource, their models required 'between 24 and 48 hours to reach convergence.' They constructed around 300 models. Because of the plethora of models with different architectures and parameters, 'we had to select how many and which models to use in the final blend' [@Dieleman_2015a]. As is often the case, competition engenders populations of machine learners whose aggregate tendencies model optimum performance.[^7.40] The 'DeepSea' team might epitomise machine learning subject positions. Like the 'wonderful people' described by Hilary Mason, they bring together infrastructure, engineering, mathematics/statistics and some knowledge of human behaviour (although the knowledge of human behaviour in this case might have more to do with what other Kaggle competitors might be doing, as well as an awareness of cutting edge research leaders in image recognition techniques). 
 
-# Stacked subject positions
+# Ranked subject positions
 
 'DeepSea' built models that classify images of  more than a hundred kinds of plankton with few errors. In driving down error rates more than the hundreds of other competitors, they occupy a privileged subject position at the conjunction of operation and the statements in machine learning. Machine learners such as  deep belief nets adjust and align subject positions through their many convolutional layers.  They supplant, for instance, the skilled configuration of feature engineering \index{feature engineering} that characterised work on decision trees, linear regressions, support vector machines and predecessor neural nets. Similarly, they absorb the professional skills of Go players in training models that win against the best human players [@Silver_2016].   The subject position of a machine learner occupies a  zone of diagrammatic slippage between statements and operations. \index{statements!and operations!zone of slippage between}
 

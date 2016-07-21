@@ -170,7 +170,7 @@ The sample of the `SRBCT` data shown in table \ref{tab:srbct} does not readily a
 
 In contrast to the direct measurements of petals and sepals in the `iris` data, the `SRBCT` data incorporates  and diagonally connects many levels of practice. \index{datasets!diagrammatic character of} The columns in table \ref{tab:sbrct}  refer to genes whose levels of expression in different samples are measured and then grouped by comparison to their levels in a reference sample (see the hierarchical clustering \index{machine learner!hierarchial clustering} of the data shown in figure \ref{fig:sbrct_clust}.) Even the identification of the several thousand genes whose levels of expression are measured by the microarray experiments presupposes much preceding work on DNA sequences and the identification of protein-coding DNA regions amidst the highly repetitive vector of the genome sequence. Highly leveraged infrastructures for access to biological data underpin such  datasets. Considered more diagrammatically, genomes in many  ways becomes less linear or flat than the bare base DNA sequences might suggest.
 
-# Regularizing machine learning in genomics
+# Cross-validating machine learning in genomics
 
 The linear sequences of DNA data mix and diffuse partly through the archival accumulation that allows them to be superimposed, annotated and layered, but also through the many efforts to traverse their expanded volume using classifiers and predictive models. A recent review in the journal *Genomics* highlights the increasing bearing of machine learning techniques on genomic science:
 

@@ -18,11 +18,9 @@ simpleCap <- function(x) {
   }
 ```
 
-
 >Machine learning is not magic; it cannot get something from nothing. What it does is get more from less. Programming, like all engineering, is a lot of work: we have to build everything from scratch. Learning is more like farming, which lets nature do most of the work. Farmers combine seeds with nutrients to grow crops. Learners combine knowledge with data to grow programs. [@Domingos_2012, 81] \index{Domingos, Pedro} 
 
 >The tools or material machines have to be chosen first of all by a diagram  [@Deleuze_1988,39] \index{Deleuze, Gilles} \index{diagram}
-
 
 The 'learning' in machine learning embodies a change in programming practice or indeed the programmability of machines.   Our sense of the potentials of machine learning can be understood, according to Pedro Domingos, in terms of  a contrast between  programming as 'a lot of [building] work' and the 'farming' done by machine learners to 'grow programs.' In characterising machine learning, the tensions between the programming 'we' (programmers, computer scientists?) do and the programming that learners do ('growing') are worth pursuing. \index{programming!human vs. machine} While Domingos suggests that machine learners 'get more from less,' I will propose that an immense constellation of documents, software, publications, blog pages, books, spreadsheets, databases, data centre architectures,  whiteboard and blackboard drawings, and an inordinate amount of talk and visual media orbit around machine learning. \index{programmability!problem of} There has been lively growth in  machine learning, but this liveliness and the sometimes life-like growth of machine learners are a regional expression of a distributed formation. 'Wherever there is a region of nature,' the philosopher Alfred North Whitehead writes 'which is itself the primary field of the expressions issuing from each of its parts, that region is alive' [@Whitehead_1956, 31]. \index{Whitehead, Alfred North!life}
 

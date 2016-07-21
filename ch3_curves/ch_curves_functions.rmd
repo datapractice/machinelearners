@@ -159,7 +159,7 @@ Sometimes these parameters can be varied so much as to suggest entirely differen
 ```{r logistic_occurrence, results='asis'}
 query = "select  distinct TI, PY, DE, TC from basic_refs where TC >100 and (TI like '%logistic%' or DE like '%logistic%')"
 res = dbGetQuery(con, query)
-logdf = res[order(res$TC, decreasing=TRUE),]
+logdf = res[order(res['TC'], decreasing=TRUE),]
 logdf = logdf[-c(1,2),]
 logdf$TI = sapply(logdf$TI, simpleCap)
 logdf$DE = sapply(logdf$DE, simpleCap)
@@ -168,7 +168,7 @@ logdf = logdf[order(logdf$PY),]
 logdf = logdf[c('PY', 'TI', 'DE', 'TC')]
 colnames(logdf) = c( 'Year','Title', 'Keywords', 'Citations')
 logdf = logdf[!duplicated(logdf['Title']),]
-logdf = head(logdf[order(logdf['Year'], 20))
+logdf = head(logdf[order(logdf[,'Year']),],  20) 
 tab = xtable(logdf[-c(1,2),],  align=c("p{0.00\\textwidth}",  "p{0.1\\textwidth}","p{0.5\\textwidth}",  "p{0.3\\textwidth}", "p{0.10\\textwidth}"), label='tab:logistic_in_ml', caption='Sample of highly cited scientific publications referring to "logistic regression" in title or keyword')
 print(tab, type='latex', include.rownames=FALSE)
 ```

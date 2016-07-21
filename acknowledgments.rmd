@@ -8,9 +8,9 @@ The Technology in Practice Group at ITU Copenhagen hosted some of the research w
 
 My colleagues in the science studies at Lancaster, especially Maggie Mort, Lucy Suchman, and Claire Waterton are always a delight to work with.  I have also been  fortunate to have worked with inspiring and adventurous doctoral students at Lancaster during the writing of this book. Lara Houston, Mette Kragh Furbo, Felipe Raglianti, Emils Kilis, Xaroula Charalampia, and Nina Ellis have all helped and provided inspiration in different ways. Sjoerd Bollebakker very kindly updated many of the scientific literature searches towards the end of the book's writing. 
 
-Various academic staff in the Department of Applied Mathematics and Statistics at Lancaster University shepherded me through their post-graduate training courses: Brian Francis for his course of 'Data Mining,' David Lucy for his course on 'Bayesian Statistics', Thomas Jakl for his course 'Genomic Data Analysis' and TBA's course on 'Missing Data.'  Since 2015, I've also come to know some machine learners much better through the Data Science Institute, Lancaster University.
+Various academic staff in the Department of Applied Mathematics and Statistics at Lancaster University shepherded me through post-graduate statistics training courses: Brian Francis for his course of 'Data Mining,' David Lucy for his course on 'Bayesian Statistics', Thomas Jakl for his course 'Genomic Data Analysis' and TBA's course on 'Missing Data.'  Since 2015, I've also come to know some machine learners much better through the Data Science Institute, Lancaster University.
 
-My inestimable friends in the _Computational Cultures_ editorial group have listened to and irrationally encouraged various threads of work runnning the book. I warmly acknowledge the existence of Matthew Fuller, Andrew Goffey, Graham Harwood and Olga Goriunova.  
+My inestimable friends in the _Computational Cultures_ editorial group have listened to and irrationally encouraged various threads of work runnning the book. I warmly acknowledge the existence of Matthew Fuller, Andrew Goffey, Graham Harwood and Olga Goriunova. Nina Wakeford at once point encouraged me to be naïve.  
 
 Far away in Australia, Anna Munster has stayed in touch.  As always, Celia Roberts helped me sort out what I really want to do. 
 
