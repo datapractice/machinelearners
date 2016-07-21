@@ -1,5 +1,5 @@
 
-\chapter{Patterns of accumulation and dispersion}
+\chapter{Patterns and differences
 \label{ch:pattern}
 
 ```{r global_options, include=FALSE}
