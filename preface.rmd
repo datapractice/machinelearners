@@ -1,8 +1,8 @@
 # Preface
 
-This book is not an ethnography although it has an ethnographic situation. If it has a field site, it lies close to the places where the writing was done -- in universities, on campuses, in classrooms and online training courses (including MOOCs), and then amidst the books, documents, websites, software manuals and documentation,  and a rather vast accumulation of scientific publications.
+This book is not an ethnography although it has an ethnographic situation. If it has a field site, it lies close to the places where the writing was done -- in universities, on campuses, in classrooms and online training courses (including MOOCs), and then amidst the books, documents, websites, software manuals and documentation,  and a rather vast accumulation of scientific publications. It's a case of 'dig where you stand,' or 'auto-archaeology.'
 
-Readers familiar with textbooks in computer science and statistics can see the traces of this setting in some typographic conventions drawn from the fields I write about. Important conventions include:
+Readers familiar with textbooks in computer science and statistics can detect the traces of this setting in some typographic conventions drawn from the fields I write about. Important conventions include:
 
 1. Typesetting  the name of any code or devices that do machine learning  and datasets on which machine learners operate  in a `monospace` or terminal font: `machine learner` or `iris`;
 2. Presenting formulae, functions, and equations using the bristling indexicality of mathematical typography: $\hat{\beta}}$
