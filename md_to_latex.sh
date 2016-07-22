@@ -1,15 +1,8 @@
 #!/bin/sh
 
-pandoc --biblatex title.md -o title.tex
-echo '\documentclass[book.tex]{subfiles}\n' | cat - title.tex > temp && mv temp title.tex
-pandoc --biblatex acknowledgments.md -o acknowledgments.tex
 echo '\documentclass[book.tex]{subfiles}\n' | cat - acknowledgments.tex > temp && mv temp acknowledgments.tex
 pandoc --biblatex preface.md -o preface.tex
 echo '\documentclass[book.tex]{subfiles}\n' | cat - preface.tex > temp && mv temp preface.tex
-pandoc --biblatex part1.md -o part1.tex
-echo '\documentclass[book.tex]{subfiles}\n' | cat - part1.tex > temp && mv temp part1.tex
-pandoc --biblatex part2.md -o part2.tex
-echo '\documentclass[book.tex]{subfiles}\n' | cat - part2.tex > temp && mv temp part2.tex
 cd ch0_introduction/
 pandoc --biblatex ch_introduction.md -o ch.tex
 echo '\documentclass[../book.tex]{subfiles}\n' | cat - ch.tex > temp && mv temp ch.tex

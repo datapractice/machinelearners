@@ -2,13 +2,11 @@ title.md
 acknowledgments.rmd
 preface.rmd
 ch0_introduction/ch_introduction.rmd
-part1.rmd
 ch1_learning/ch_praxis.rmd
 ch2_vector/ch_vector_space.rmd
 ch3_curves/ch_curves_functions.rmd
 ch4_probability/ch_naive_informed.rmd
 ch5_dimensionality/ch_dimensional_exuberance.rmd
-part2.rmd
 ch6_topologies/ch_genomic_topologies.rmd
 ch7_subjects/ch_learning_subjects.rmd
 ch8_conclusion/ch_conclusion.rmd

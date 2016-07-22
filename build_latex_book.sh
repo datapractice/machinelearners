@@ -11,7 +11,5 @@ biber book
 makeglossaries book
 makeindex book.idx
 makeindex -s book.ist -o book.gls book.glo 
-#texindy book.idx
 lualatex book.tex
-#pdflatex book.tex
 evince book.pdf

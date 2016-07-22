@@ -2,9 +2,8 @@
 \documentclass[a4paper,11pt]{book}
 \usepackage{mybook} 
 \usepackage{subfiles}
-\title{Machine Learning: Archaeology of a Data Practice}
+\title{Machine Learners: Archaeology of a Data Practice}
 \author{Adrian Mackenzie}
-\renewcommand\lstlistlistingname{List of Code}
 \begin{document}
 \frontmatter
 \maketitle
@@ -13,6 +12,7 @@
 \tableofcontents
 \listoffigures
 \listoftables
+\renewcommand\lstlistlistingname{List of Code}
 \addcontentsline{toc}{chapter}{\lstlistlistingname}
 \lstlistoflistings
 \mainmatter
@@ -34,7 +34,4 @@
 \cleardoublepage
 \printindex
 \addcontentsline{toc}{chapter}{Index}
-%\addcontentsline{toc}{chapter}{mlrs}
-%\addcontentsline{toc}{chapter}{general}
-%\printindex{mlrs}{Machine learners}
 \end{document}
