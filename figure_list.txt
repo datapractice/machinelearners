@@ -1,5 +1,4 @@
 ch6_topologies/figure:
-fix_hodges_excerpt.xcf
 fix_hodges_excerpt.pdf
 circos.pdf
 knn-1.png
