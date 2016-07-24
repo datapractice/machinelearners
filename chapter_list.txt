@@ -1,3 +1,5 @@
+preface.md  
+acknowledgments.md
 ch0_introduction/ch_introduction.md
 ch1_learning/ch_praxis.md
 ch2_vector/ch_vector_space.md
