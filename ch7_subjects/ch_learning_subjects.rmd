@@ -1,7 +1,6 @@
 \chapter{Propagating subject positions}
 \label{ch:subjects}
 
-
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8, 
                       echo=FALSE,  fig.show='hide', results='hide', warning=FALSE, message=FALSE, dev='pdf')

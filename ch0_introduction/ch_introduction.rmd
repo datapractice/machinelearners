@@ -37,19 +37,19 @@ In all of these settings, applications and fields, machine learning is said to t
 
 Three different accumulations cross-stratify in machine learning: settings, data and devices. The volume and geography of searches on Google Search provides some evidence of the diverse settings or sites doing machine learning. If we search for terms such as `artificial intelligence, machine learning` and `data mining` on the [Google Trends](http://www.google.com/trends) service \index{Google!Google Trends}, the results for the last decade or so suggest shifting interest in these topics. 
 
-```{r google_trends, cache=TRUE, echo=FALSE, message=FALSE, fig.env=TRUE, fig.cap='', include=FALSE, dpi=600, warning=FALSE}
+```{r google_trends, cache=TRUE, echo=FALSE, message=FALSE, fig.env=TRUE, fig.cap='', include=FALSE, eval=FALSE, dpi=600, warning=FALSE}
 library(ggplot2)
 library(gtrendsR)
 library(reshape2)
-cred = readLines('../credentials.txt')
-ch = gtrendsR::gconnect(usr=cred[1],cred[2])
-query = c('artificial intelligence', 'machine learning', 'data mining', 'predictive analytics')
-ml = gtrends(query=query, ch=ch)
-df = ml$trend
-dfm=melt(df, id.vars='end', measure.vars=colnames(df[3:5]) )
-g=ggplot(dfm, aes(x=as.Date(end), y=value, group=variable, color=variable)) + geom_line(aes(linetype=variable)) + geom_smooth(aes(linetype=variable)) + scale_x_date() + xlab('Years') + ylab('Google search volume')
-g +  theme(legend.justification=c(1,0), legend.position=c(0.9,0.6), panel.grid.minor=element_blank(),  panel.grid.major=element_blank())
-g
+# cred = readLines('../credentials.txt')
+# ch = gtrendsR::gconnect(usr=cred[1],cred[2])
+# query = c('artificial intelligence', 'machine learning', 'data mining', 'predictive analytics')
+# ml = gtrends(query=query, ch=ch)
+# df = ml$trend
+# dfm=melt(df, id.vars='end', measure.vars=colnames(df[3:5]) )
+# g=ggplot(dfm, aes(x=as.Date(end), y=value, group=variable, color=variable)) + geom_line(aes(linetype=variable)) + geom_smooth(aes(linetype=variable)) + scale_x_date() + xlab('Years') + ylab('Google search volume')
+# g +  theme(legend.justification=c(1,0), legend.position=c(0.9,0.6), panel.grid.minor=element_blank(),  panel.grid.major=element_blank())
+# g
 ```
 
 \begin{figure}

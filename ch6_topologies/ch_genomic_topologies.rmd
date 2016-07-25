@@ -32,7 +32,7 @@ Why does the referential of machine learning matter?  When hyperobjects are mach
 
 # Genomic referentiality and materiality
  
->`gaagctccac accagccatt acaaccctgc caatctcaag cacctgcctc tacaggtacc` [@NCBIa_2016]
+>`gaagctccac accagccatt acaaccctgc caatctcaag cacctgcctc tacaggtacc` [@NCBI_2016]
 
 By contrast with industry, commerce, media and government, where much that happens is obscured from view, the great virtue or genomic science is the relative openness of its workings and its resolute insistence on DNA as the primary form of data. The fact that data practices are relatively generic and accessible means that critical research into transformations associated with genomic data and knowledge can accompany nearly every aspect of practice. \index{science!genomics!openness of}
 

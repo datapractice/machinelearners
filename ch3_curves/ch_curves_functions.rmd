@@ -5,10 +5,8 @@
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8, 
                       echo=FALSE, fig.show='hide',  results='hide', warning=FALSE, message=FALSE, dev='pdf')
-
 library(RSQLite)
 con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
-res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
 library(ggplot2)
 library(stringr)
 library(xtable)
@@ -163,7 +161,7 @@ query = "select  distinct TI, PY, DE, TC from basic_refs where TC >100 and (TI l
 res = dbGetQuery(con, query)
 logdf = res[order(res['TC'], decreasing=TRUE),]
 logdf = logdf[-c(1,2),]
-logdf$TI = sapply(logdf$TI, simpleCap)
+logdf$TI = sapply(logdf['TI'], simpleCap)
 logdf$DE = sapply(logdf$DE, simpleCap)
 logdf  = logdf[sample(nrow(logdf), 25),]
 logdf = logdf[order(logdf$PY),]
@@ -197,13 +195,24 @@ Whether or not the logistic function is a useful approximation to 'the function 
 
 If we turn just to the diagrammatic forms associated with logistic regression in _Elements of Statistical Learning_, something quite different and much more complicated than calculating the values of a known function presents itself there. For instance, in their analysis of the `South African coronary heart` disease data, Hastie and co-authors repeatedly model the risk of occurrence of heart disease using logistic regression. \index{dataset!South African Heart Disease} They first apply logistic regression fitted by 'maximum likelihood', and then by 'L1 regularized logistic regression' [@Hastie_2009, 126]. The results of this function-finding work appear as tables of coefficients or as 'regularization plots.' As is often the case, _Elements of Statistical Learning_ assumes that readers already understand conventional statistical usages of logistic regression. Discussion dwells instead on observing how values of the model parameter change as different variants of the model transform the data.  
 
-```{r sa_heart_model, echo=FALSE, fig.cap = ''}
+```{r sa_heart_model, cache=TRUE, echo=FALSE, hidden=TRUE, fig.cap = ''}
     library(ElemStatLearn)
     library(glmnet)
     data(SAheart)
     SAheart$chd = factor(SAheart$chd)
-    ggplot(SAheart, aes(x=sbp, y = ldl, shape=chd)) + geom_point()
     sah = as.matrix(SAheart[,c('sbp', 'ldl', 'adiposity', 'typea', 'obesity', 'alcohol', 'age')])
+
+    xlim = range(SAheart$sbp)
+    ylim = range(SAheart$ldl)
+    ytmp = seq(ylim[1], ylim[2], len=75)
+    xtmp = seq(xlim[1], xlim[2], len=75)
+    newx = expand.grid(xtmp, ytmp)
+    SAheart_model2 = glmnet(y=SAheart[,'chd'], x = as.matrix(SAheart[, c('sbp', 'ldl')]), family='binomial')
+    yhat = predict(SAheart_model2, as.matrix(newx), type="class", s=0.001)
+    df = data.frame(x=rep(xtmp, length(ytmp)), y=rep(ytmp, each=length(xtmp)), z=as.numeric(as.vector(yhat)))
+    g=ggplot(data=SAheart, aes(x=sbp, y = ldl)) + geom_point(aes(color=chd, shape=chd))
+    g= g+geom_contour(data=df, aes(x=x,y=y, z=z), breaks=c(0,0.5))
+    g
     SAheart_model2 = glmnet(y=SAheart[,'chd'], x = sah, family='binomial')
     plot(SAheart_model2)
     tab2 = summary(SAheart_model2)
@@ -211,11 +220,11 @@ If we turn just to the diagrammatic forms associated with logistic regression in
 ```
 
 \begin{figure}
-  \centering
       \includegraphics[width=0.9\textwidth]{figure/sa_heart_model-2.pdf}
         \caption{South African Heart disease regularization plot}
   \label{fig:heart_model}
 \end{figure}
+
 \begin{figure}
   \centering
       \includegraphics[width=0.9\textwidth]{figure/sa_heart_model-1.pdf}
