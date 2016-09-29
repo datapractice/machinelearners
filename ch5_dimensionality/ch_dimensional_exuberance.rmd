@@ -1,5 +1,5 @@
 
-\chapter{Patterns and differences
+\chapter{Patterns and difference}
 \label{ch:pattern}
 
 
