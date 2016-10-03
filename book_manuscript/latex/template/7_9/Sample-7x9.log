@@ -1,0 +1,1250 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=latex 2015.6.8)  27 JUL 2015 10:02
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Sample-7x9.tex
+(./Sample-7x9.tex
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 2 languages loaded.
+(./MITPress-diacriTech-7x9.cls
+Document Class: MITPress-diacriTech-7x9 2014/05/15 v1.0 Standard LaTeX document
+ class for MIT Press - grid 7x9
+\c@part=\count79
+\c@apart=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@subsubparagraph=\count87
+\c@subsubsubparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+(./DIA-mfonts.sty
+Package: DIA-mfonts 2004/03/11 v0.1 Loading melior as the main font
+\symalphabets=\mathgroup4
+\symnumbers=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `alphabets' in version `normal'
+(Font)                  OT1/ptm/m/it --> OT1/ptm/m/it on input line 9.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `normal'
+(Font)                  OT1/ptm/m/n --> OT1/ptm/m/n on input line 10.
+LaTeX Font Info:    Overwriting symbol font `alphabets' in version `bold'
+(Font)                  OT1/ptm/m/it --> OT1/ptm/b/it on input line 12.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  OT1/ptm/m/n --> OT1/ptm/b/n on input line 13.
+) (./fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+ (./ot1enc.def
+File: ot1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding OT1 on input line 43.
+)) (./mathtime.sty
+Package: mathtime 1999/03/29 v1.1mathtime font support (FMi/DPC)
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptm/m/n on input line 77.
+LaTeX Font Info:    Encoding `OML' has changed to `MY1' for symbol font
+(Font)              `letters' in the math version `normal' on input line 78.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> MY1/mtt/m/it on input line 78.
+LaTeX Font Info:    Encoding `OMS' has changed to `MY2' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 79.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> MY2/mtt/m/n on input line 79.
+LaTeX Font Info:    Encoding `OMX' has changed to `MY3' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 8
+0.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> MY3/mtt/m/n on input line 80.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/b/n on input line 108.
+LaTeX Font Info:    Encoding `OML' has changed to `MY1' for symbol font
+(Font)              `letters' in the math version `bold' on input line 109.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> MY1/mtt/b/it on input line 109.
+LaTeX Font Info:    Encoding `OMS' has changed to `MY2' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 110.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> MY2/mtt/b/n on input line 110.
+LaTeX Font Info:    Encoding `OMX' has changed to `MY3' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 111
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> MY3/mtt/b/n on input line 111.
+\c@mv@heavy=\count91
+LaTeX Font Info:    Overwriting symbol font `operators' in version `heavy'
+(Font)                  OT1/cmr/m/n --> OT1/ptm/b/n on input line 113.
+LaTeX Font Info:    Encoding `OML' has changed to `MY1' for symbol font
+(Font)              `letters' in the math version `heavy' on input line 114.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `heavy'
+(Font)                  OML/cmm/m/it --> MY1/mtt/ub/it on input line 114.
+LaTeX Font Info:    Encoding `OMS' has changed to `MY2' for symbol font
+(Font)              `symbols' in the math version `heavy' on input line 115.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `heavy'
+(Font)                  OMS/cmsy/m/n --> MY2/mtt/ub/n on input line 115.
+LaTeX Font Info:    Encoding `OMX' has changed to `MY3' for symbol font
+(Font)              `largesymbols' in the math version `heavy' on input line 11
+6.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `heavy'
+(Font)                  OMX/cmex/m/n --> MY3/mtt/ub/n on input line 116.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/ptm/m/n --> OT1/ptm/m/n on input line 136.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/b/n on input line 137.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 138.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/phv/m/n on input line 139.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 140.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/ptm/b/n --> OT1/ptm/b/n on input line 143.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/b/n on input line 144.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/b/it on input line 145.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/phv/b/n on input line 146.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/b/n on input line 147.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `heavy'
+(Font)                  OT1/ptm/b/n --> OT1/ptm/b/n on input line 151.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `heavy'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/b/n on input line 152.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `heavy'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/b/it on input line 153.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `heavy'
+(Font)                  OT1/cmss/m/n --> OT1/phv/b/n on input line 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `heavy'
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/b/n on input line 155.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `normal'
+(Font)                  OMS/cmsy/b/n --> OMS/cmsy/m/n on input line 184.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 188.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 189.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 190.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 191.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 192.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 193.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 196.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 197.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 198.
+LaTeX Font Info:    Redeclaring math symbol \triangleleft on input line 214.
+LaTeX Font Info:    Redeclaring math symbol \triangleright on input line 215.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 226.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 227.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 228.
+LaTeX Font Info:    Redeclaring math accent \check on input line 229.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 230.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 231.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 232.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 233.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 234.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 235.
+LaTeX Info: Redefining \hbar on input line 262.
+\symtextcomp=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `textcomp' in version `bold'
+(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 297.
+LaTeX Font Info:    Overwriting symbol font `textcomp' in version `heavy'
+(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 301.
+LaTeX Font Info:    Redeclaring math symbol \dagger on input line 303.
+LaTeX Font Info:    Redeclaring math symbol \ddagger on input line 304.
+LaTeX Font Info:    Redeclaring math symbol \mathsection on input line 305.
+LaTeX Font Info:    Redeclaring math symbol \mathparagraph on input line 306.
+)
+(./footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks14
+\footnotemargin=\dimen103
+\c@pp@next@reset=\count92
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+\RHeadbox=\box26
+ (./soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks15
+\SOUL@lasttoken=\toks16
+\SOUL@cmds=\toks17
+\SOUL@buffer=\toks18
+\SOUL@token=\toks19
+\SOUL@spaceskip=\skip43
+\SOUL@ttwidth=\dimen104
+\SOUL@uldp=\dimen105
+\SOUL@ulht=\dimen106
+) (./MIT-DIA-crop.sty
+Package: MIT-DIA-crop 2014/05/15 v1.0 MIT-DIA-crop marks (mf)
+\stockwidth=\dimen107
+\stockheight=\dimen108
+\CROP@index=\count93
+ (./color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+ (./color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+
+(./dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+) (./dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (./graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+ (./trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (./graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+)
+\CROP@offset=\count94
+Package MIT-EDDT-crop Info: Local config file crop.cfg used on input line 584.
+
+(./crop.cfg))
+\Indexskip=\skip44
+ (./eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+ (./atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+ (./infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) (./ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(./ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)) (./keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks20
+)) (./rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+ (./graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen109
+\Gin@req@width=\dimen110
+) (./ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count95
+\rotFPtop=\skip45
+\rotFPbot=\skip46
+\rot@float@box=\box27
+\rot@mess@toks=\toks21
+) (./makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+) (./amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (./amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks22
+\symAMSa=\mathgroup7
+\symAMSb=\mathgroup8
+\symAMSbb=\mathgroup9
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 97.
+)
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 260.
+) (./eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box28
+)
+(./amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+(./amstext.sty
+Package: amstext 2000/06/29 v2.01
+ (./amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks23
+\ex@=\dimen111
+)) (./amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen112
+) (./amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count96
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count97
+\leftroot@=\count98
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count99
+\DOTSCASE@=\count100
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
+\dotsspace@=\muskip10
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
+\tag@help=\toks24
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
+\andhelp@=\toks25
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks26
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) (./endnotes.sty
+\c@endnote=\count108
+\endnotesep=\dimen120
+\@enotes=\write3
+)
+(./fancyhdr.sty
+\fancy@headwidth=\skip50
+\f@ncyO@elh=\skip51
+\f@ncyO@erh=\skip52
+\f@ncyO@olh=\skip53
+\f@ncyO@orh=\skip54
+\f@ncyO@elf=\skip55
+\f@ncyO@erf=\skip56
+\f@ncyO@olf=\skip57
+\f@ncyO@orf=\skip58
+) (./mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+ (./kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+ (./kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(./etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+ (./ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))) (./xparse.sty (./expl3.sty (./l3names.sty
+(./l3bootstrap.sty
+Package: l3bootstrap 2014/01/04 v4640 L3 Experimental bootstrap code
+)
+Package: l3names 2014/01/04 v4640 L3 Namespace for primitives
+) (./etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count109
+)
+Package: expl3 2014/01/07 v4646 L3 Experimental code bundle wrapper
+ (./l3basics.sty
+Package: l3basics 2014/01/04 v4642 L3 Basic definitions
+) (./l3expan.sty
+Package: l3expan 2014/01/04 v4642 L3 Argument expansion
+) (./l3tl.sty
+Package: l3tl 2013/12/27 v4625 L3 Token lists
+) (./l3seq.sty
+Package: l3seq 2013/12/14 v4623 L3 Sequences and stacks
+) (./l3int.sty
+Package: l3int 2013/08/02 v4583 L3 Integers
+\c_max_int=\count110
+\l_tmpa_int=\count111
+\l_tmpb_int=\count112
+\g_tmpa_int=\count113
+\g_tmpb_int=\count114
+) (./l3quark.sty
+Package: l3quark 2013/12/14 v4623 L3 Quarks
+) (./l3prg.sty
+Package: l3prg 2014/01/04 v4642 L3 Control structures
+\g__prg_map_int=\count115
+) (./l3clist.sty
+Package: l3clist 2013/07/28 v4581 L3 Comma separated lists
+)
+(./l3token.sty
+Package: l3token 2013/08/25 v4587 L3 Experimental token manipulation
+) (./l3prop.sty
+Package: l3prop 2013/12/14 v4623 L3 Property lists
+) (./l3msg.sty
+Package: l3msg 2013/07/28 v4581 L3 Messages
+) (./l3file.sty
+Package: l3file 2013/10/13 v4596 L3 File and I/O operations
+\l_iow_line_count_int=\count116
+\l__iow_target_count_int=\count117
+\l__iow_current_line_int=\count118
+\l__iow_current_word_int=\count119
+\l__iow_current_indentation_int=\count120
+) (./l3skip.sty
+Package: l3skip 2013/07/28 v4581 L3 Dimensions and skips
+\c_zero_dim=\dimen121
+\c_max_dim=\dimen122
+\l_tmpa_dim=\dimen123
+\l_tmpb_dim=\dimen124
+\g_tmpa_dim=\dimen125
+\g_tmpb_dim=\dimen126
+\c_zero_skip=\skip59
+\c_max_skip=\skip60
+\l_tmpa_skip=\skip61
+\l_tmpb_skip=\skip62
+\g_tmpa_skip=\skip63
+\g_tmpb_skip=\skip64
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
+)
+(./l3keys.sty
+Package: l3keys 2013/12/08 v4614 L3 Experimental key-value interfaces
+\g__keyval_level_int=\count121
+\l_keys_choice_int=\count122
+) (./l3fp.sty
+Package: l3fp 2014/01/04 v4642 L3 Floating points
+\c__fp_leading_shift_int=\count123
+\c__fp_middle_shift_int=\count124
+\c__fp_trailing_shift_int=\count125
+\c__fp_big_leading_shift_int=\count126
+\c__fp_big_middle_shift_int=\count127
+\c__fp_big_trailing_shift_int=\count128
+\c__fp_Bigg_leading_shift_int=\count129
+\c__fp_Bigg_middle_shift_int=\count130
+\c__fp_Bigg_trailing_shift_int=\count131
+) (./l3box.sty
+Package: l3box 2013/07/28 v4581 L3 Experimental boxes
+\c_empty_box=\box31
+\l_tmpa_box=\box32
+\l_tmpb_box=\box33
+\g_tmpa_box=\box34
+\g_tmpb_box=\box35
+) (./l3coffins.sty
+Package: l3coffins 2013/12/14 v4624 L3 Coffin code layer
+\l__coffin_internal_box=\box36
+\l__coffin_internal_dim=\dimen127
+\l__coffin_offset_x_dim=\dimen128
+\l__coffin_offset_y_dim=\dimen129
+\l__coffin_x_dim=\dimen130
+\l__coffin_y_dim=\dimen131
+\l__coffin_x_prime_dim=\dimen132
+\l__coffin_y_prime_dim=\dimen133
+\c_empty_coffin=\box37
+\l__coffin_aligned_coffin=\box38
+\l__coffin_aligned_internal_coffin=\box39
+\l_tmpa_coffin=\box40
+\l_tmpb_coffin=\box41
+\l__coffin_display_coffin=\box42
+\l__coffin_display_coord_coffin=\box43
+\l__coffin_display_pole_coffin=\box44
+\l__coffin_display_offset_dim=\dimen134
+\l__coffin_display_x_dim=\dimen135
+\l__coffin_display_y_dim=\dimen136
+) (./l3color.sty
+Package: l3color 2012/08/29 v4156 L3 Experimental color support
+)
+(./l3luatex.sty
+Package: l3luatex 2013/07/28 v4581 L3 Experimental LuaTeX-specific functions
+\g__cctab_allocate_int=\count132
+\g__cctab_stack_int=\count133
+) (./l3candidates.sty
+Package: l3candidates 2014/01/06 v4643 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen137
+\l__box_bottom_dim=\dimen138
+\l__box_left_dim=\dimen139
+\l__box_right_dim=\dimen140
+\l__box_top_new_dim=\dimen141
+\l__box_bottom_new_dim=\dimen142
+\l__box_left_new_dim=\dimen143
+\l__box_right_new_dim=\dimen144
+\l__box_internal_box=\box45
+\l__coffin_bounding_shift_dim=\dimen145
+\l__coffin_left_corner_dim=\dimen146
+\l__coffin_right_corner_dim=\dimen147
+\l__coffin_bottom_corner_dim=\dimen148
+\l__coffin_top_corner_dim=\dimen149
+\l__coffin_scaled_total_height_dim=\dimen150
+\l__coffin_scaled_width_dim=\dimen151
+))
+Package: xparse 2013/12/31 v4634 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count134
+\l__xparse_m_args_int=\count135
+\l__xparse_mandatory_args_int=\count136
+\l__xparse_processor_int=\count137
+\l__xparse_v_nesting_int=\count138
+) (./etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+\etb@tempcnta=\count139
+) (./zref-abspage.sty
+Package: zref-abspage 2012/04/04 v2.24 Module abspage for zref (HO)
+
+(./zref-base.sty
+Package: zref-base 2012/04/04 v2.24 Module base for zref (HO)
+ (./kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+) (./pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+) (./auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 759.
+Package zref Info: New property: default on input line 760.
+Package zref Info: New property: page on input line 761.
+)
+\c@abspage=\count140
+Package zref Info: New property: abspage on input line 62.
+)
+(./needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip65
+\c@mdf@globalstyle@cnt=\count141
+\mdf@skipabove@length=\skip66
+\mdf@skipbelow@length=\skip67
+\mdf@leftmargin@length=\skip68
+\mdf@rightmargin@length=\skip69
+\mdf@innerleftmargin@length=\skip70
+\mdf@innerrightmargin@length=\skip71
+\mdf@innertopmargin@length=\skip72
+\mdf@innerbottommargin@length=\skip73
+\mdf@splittopskip@length=\skip74
+\mdf@splitbottomskip@length=\skip75
+\mdf@outermargin@length=\skip76
+\mdf@innermargin@length=\skip77
+\mdf@linewidth@length=\skip78
+\mdf@innerlinewidth@length=\skip79
+\mdf@middlelinewidth@length=\skip80
+\mdf@outerlinewidth@length=\skip81
+\mdf@roundcorner@length=\skip82
+\mdf@footenotedistance@length=\skip83
+\mdf@userdefinedwidth@length=\skip84
+\mdf@needspace@length=\skip85
+\mdf@frametitleaboveskip@length=\skip86
+\mdf@frametitlebelowskip@length=\skip87
+\mdf@frametitlerulewidth@length=\skip88
+\mdf@frametitleleftmargin@length=\skip89
+\mdf@frametitlerightmargin@length=\skip90
+\mdf@shadowsize@length=\skip91
+\mdf@extratopheight@length=\skip92
+\mdf@subtitleabovelinewidth@length=\skip93
+\mdf@subtitlebelowlinewidth@length=\skip94
+\mdf@subtitleaboveskip@length=\skip95
+\mdf@subtitlebelowskip@length=\skip96
+\mdf@subtitleinneraboveskip@length=\skip97
+\mdf@subtitleinnerbelowskip@length=\skip98
+\mdf@subsubtitleabovelinewidth@length=\skip99
+\mdf@subsubtitlebelowlinewidth@length=\skip100
+\mdf@subsubtitleaboveskip@length=\skip101
+\mdf@subsubtitlebelowskip@length=\skip102
+\mdf@subsubtitleinneraboveskip@length=\skip103
+\mdf@subsubtitleinnerbelowskip@length=\skip104
+ (./md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box46
+\mdf@footnotebox=\box47
+\mdf@splitbox@one=\box48
+\mdf@splitbox@two=\box49
+\mdf@splitbox@save=\box50
+\mdfsplitboxwidth=\skip105
+\mdfsplitboxtotalwidth=\skip106
+\mdfsplitboxheight=\skip107
+\mdfsplitboxdepth=\skip108
+\mdfsplitboxtotalheight=\skip109
+\mdfframetitleboxwidth=\skip110
+\mdfframetitleboxtotalwidth=\skip111
+\mdfframetitleboxheight=\skip112
+\mdfframetitleboxdepth=\skip113
+\mdfframetitleboxtotalheight=\skip114
+\mdffootnoteboxwidth=\skip115
+\mdffootnoteboxtotalwidth=\skip116
+\mdffootnoteboxheight=\skip117
+\mdffootnoteboxdepth=\skip118
+\mdffootnoteboxtotalheight=\skip119
+\mdftotallinewidth=\skip120
+\mdfboundingboxwidth=\skip121
+\mdfboundingboxtotalwidth=\skip122
+\mdfboundingboxheight=\skip123
+\mdfboundingboxdepth=\skip124
+\mdfboundingboxtotalheight=\skip125
+\mdf@freevspace@length=\skip126
+\mdf@horizontalwidthofbox@length=\skip127
+\mdf@verticalmarginwhole@length=\skip128
+\mdf@horizontalspaceofbox=\skip129
+\mdfsubtitleheight=\skip130
+\mdfsubsubtitleheight=\skip131
+\c@mdfcountframes=\count142
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newmdtheoremenv with arg. spec. 'O{} m o m o ' on
+. line 601.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \mdtheorem with arg. spec. ' O{} m o m o ' on line
+. 701.
+.................................................
+\mdf@envdepth=\count143
+\c@mdf@env@i=\count144
+\c@mdf@env@ii=\count145
+\c@mdf@zref@counter=\count146
+Package zref Info: New property: mdf@pagevalue on input line 895.
+) (./listings.sty
+\lst@mode=\count147
+\lst@gtempboxa=\box51
+\lst@token=\toks28
+\lst@length=\count148
+\lst@currlwidth=\dimen152
+\lst@column=\count149
+\lst@pos=\count150
+\lst@lostspace=\dimen153
+\lst@width=\dimen154
+\lst@newlines=\count151
+\lst@lineno=\count152
+\lst@maxwidth=\dimen155
+ (./lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count153
+\lst@skipnumbers=\count154
+\lst@framebox=\box52
+)
+(./listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+ (./tikz.sty (./pgf.sty (./pgfrcs.sty (./pgfutil-common.tex
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen156
+\pgfutil@tempdimb=\dimen157
+
+(./pgfutil-common-lists.tex)) (./pgfutil-latex.def
+\pgfutil@abb=\box53
+ (./everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(./pgfrcs.code.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+ (./pgfcore.sty (./pgfsys.sty (./pgfsys.code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+
+(./pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+ (./pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen158
+\pgf@y=\dimen159
+\pgf@xa=\dimen160
+\pgf@ya=\dimen161
+\pgf@xb=\dimen162
+\pgf@yb=\dimen163
+\pgf@xc=\dimen164
+\pgf@yc=\dimen165
+\w@pgf@writea=\write4
+\r@pgf@reada=\read1
+\c@pgf@counta=\count155
+\c@pgf@countb=\count156
+\c@pgf@countc=\count157
+\c@pgf@countd=\count158
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+ (./pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-dvips.def
+
+(./pgfsys-dvips.def
+File: pgfsys-dvips.def 2013/07/16  (rcs-revision 1.23)
+ (./pgfsys-common-postscript.def
+File: pgfsys-common-postscript.def 2008/10/01  (rcs-revision 1.22)
+\pgf@objectcount=\count159
+)))
+(./pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count160
+\pgfsyssoftpath@bigbuffer@items=\count161
+) (./pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+ (./color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(./pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+ (./pgfmath.code.tex (./pgfmathcalc.code.tex
+(./pgfmathutil.code.tex) (./pgfmathparser.code.tex
+\pgfmath@dimen=\dimen166
+\pgfmath@count=\count162
+\pgfmath@box=\box54
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
+)
+(./pgfmathfunctions.code.tex (./pgfmathfunctions.basic.code.tex)
+(./pgfmathfunctions.trigonometric.code.tex) (./pgfmathfunctions.random.code.tex
+) (./pgfmathfunctions.comparison.code.tex) (./pgfmathfunctions.base.code.tex)
+(./pgfmathfunctions.round.code.tex) (./pgfmathfunctions.misc.code.tex)
+(./pgfmathfunctions.integerarithmetics.code.tex))) (./pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count163
+))
+(./pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen167
+\pgf@picmaxx=\dimen168
+\pgf@picminy=\dimen169
+\pgf@picmaxy=\dimen170
+\pgf@pathminx=\dimen171
+\pgf@pathmaxx=\dimen172
+\pgf@pathminy=\dimen173
+\pgf@pathmaxy=\dimen174
+\pgf@xx=\dimen175
+\pgf@xy=\dimen176
+\pgf@yx=\dimen177
+\pgf@yy=\dimen178
+\pgf@zx=\dimen179
+\pgf@zy=\dimen180
+) (./pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen181
+\pgf@path@lasty=\dimen182
+)
+(./pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen183
+\pgf@shorten@start@additional=\dimen184
+) (./pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count164
+)
+(./pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen185
+) (./pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen186
+\pgf@pt@y=\dimen187
+\pgf@pt@temp=\dimen188
+)
+(./pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+) (./pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(./pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+) (./pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen189
+)
+(./pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen190
+\pgf@sys@shading@range@num=\count165
+) (./pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+ (./pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box58
+)) (./pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+) (./pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(./pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+))) (./pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box59
+)
+(./pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+) (./pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen191
+\pgf@nodesepend=\dimen192
+)
+(./pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(./pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(./pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(./pgfmath.code.tex)
+\pgffor@iter=\dimen193
+\pgffor@skip=\dimen194
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+)) (./tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+ (./pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count166
+\pgfplotmarksize=\dimen195
+)
+\tikz@lastx=\dimen196
+\tikz@lasty=\dimen197
+\tikz@lastxsaved=\dimen198
+\tikz@lastysaved=\dimen199
+\tikzleveldistance=\dimen200
+\tikzsiblingdistance=\dimen201
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count167
+\tikznumberofchildren=\count168
+\tikznumberofcurrentchild=\count169
+\tikz@fig@count=\count170
+
+(./pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count171
+\pgfmatrixcurrentcolumn=\count172
+\pgf@matrix@numberofcolumns=\count173
+)
+\tikz@expandcount=\count174
+ (./tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+))) (./authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip132
+\@affilsep=\skip133
+\c@Maxaffil=\count175
+\c@authors=\count176
+\c@affil=\count177
+)
+\tbelowcaptionskip=\skip134
+\tabovecaptionskip=\skip135
+
+(./dcolumn.sty
+Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
+ (./array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+Normal \dimen register pool exhausted, switching to extended pool.
+\col@sep=\dimen256
+\extrarowheight=\dimen257
+\NC@list=\toks41
+\extratabsurround=\skip136
+\backup@length=\skip137
+)) (./balance.sty
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen258
+)
+\@tempdimaa=\skip138
+\@tempdimab=\skip139
+ (./amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks42
+\thm@bodyfont=\toks43
+\thm@headfont=\toks44
+\thm@notefont=\toks45
+\thm@headpunct=\toks46
+\thm@preskip=\skip140
+\thm@postskip=\skip141
+\thm@headsep=\skip142
+\dth@everypar=\toks47
+)
+\c@theorem=\count178
+\c@examples=\count179
+\c@remark=\count180
+\c@demonstrations=\count181
+\c@solution=\count182
+\c@xboxhead=\count183
+\rotdimen=\dimen259
+\tempdime=\dimen260
+\temptbox=\box64
+\tabbotskip=\skip143
+ (./natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip144
+\bibsep=\skip145
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count184
+)
+(./floatpag.sty
+Package: floatpag 2012/05/29 v1.1 Different pagestyles on float pages
+Package: floatpag 1999/04/29 FLOAT PAGESTYLE
+)) (./Sample-7x9.aux)
+\openout1 = `Sample-7x9.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for MY1/mtt/m/it on input line 6.
+LaTeX Font Info:    Try loading font information for MY1+mtt on input line 6.
+ (./my1mtt.fd
+File: my1mtt.fd 2001/05/30 v1.0c Mathtime Encoding 1 (FMi)
+)
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for MY2/mtt/m/n on input line 6.
+LaTeX Font Info:    Try loading font information for MY2+mtt on input line 6.
+ (./my2mtt.fd
+File: my2mtt.fd 2001/05/30 v1.0c Mathtime Encoding 2 (FMi)
+)
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for MY3/mtt/m/n on input line 6.
+LaTeX Font Info:    Try loading font information for MY3+mtt on input line 6.
+ (./my3mtt.fd
+File: my3mtt.fd 2001/05/30 v1.0c Mathtime Encoding 3 (FMi)
+)
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 6.
+
+(./ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 6.
+ (./ot1ptm.fd
+File: ot1ptm.fd 2010/04/29 Fontinst v1.929 font definitions for OT1/ptm.
+)
+Package MIT-EDDT-crop Info: requested driver: `' on input line 6.
+Package MIT-EDDT-crop Info: detected driver: `dvips' on input line 6.
+Package MIT-EDDT-crop Info: using `dvips' graphics driver on input line 6.
+\AtBeginShipoutBox=\box65
+Package atbegshi Info: Package `crop' patched.
+\c@lstlisting=\count185
+ ABD: EveryShipout initializing macros
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+
+! Font MY1/mtt/m/it/10=mtmi at 10.0pt not loadable: Metric (TFM) file not found
+.
+<to be read again> 
+                   relax 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+? q^^HX
+OK, entering batchmode...
+! Font MY1/mtt/m/it/7.6=mtmi at 7.6pt not loadable: Metric (TFM) file not found
+.
+<to be read again> 
+                   relax 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY1/mtt/m/it/6=mtmi at 6.0pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY2/mtt/m/n/10=mtsy at 10.0pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY2/mtt/m/n/7.6=mtsy at 7.6pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY2/mtt/m/n/6=mtsy at 6.0pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY3/mtt/m/n/10=mtex at 10.0pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY3/mtt/m/n/7.6=mtex at 7.6pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY3/mtt/m/n/6=mtex at 6.0pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 10.
+ (./ts1ptm.fd
+File: ts1ptm.fd 2010/04/29 Fontinst v1.929 font definitions for TS1/ptm.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 10.
+ (./umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 10.
+ (./umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+Missing character: There is no . in font nullfont!
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.10 \halftitle{Introduction to Algorithms}
+                                           
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 13.
+ (./ot1phv.fd
+File: ot1phv.fd 2010/07/23 Fontinst v1.929 font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 13.
+ [1
+
+
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.15 \seriestitle{Series Title}
+                               
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.17 \serieseditor{Clifford Stein}
+                                  
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.21 \seriesauthor{Ronald L. Rivest}
+                                    
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.24 \seriesauthor{Ronald L. Rivest}
+                                    
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+ [2]
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.30 \booktitle{Introduction to Algorithms}
+                                           
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.32 \subtitle{Sub Title}
+                         
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.35 \edition{Third Edition}
+                            
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.41 }
+      
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+! Math formula deleted: Insufficient symbol fonts.
+\@iiiparbox ...bm@#3\endcsname }\if@pboxsw \m@th $
+                                                  \fi \@end@tempboxa 
+l.46 London, England}
+                     
+Sorry, but I can't typeset math unless \textfont 2
+and \scriptfont 2 and \scriptscriptfont 2 have all
+the \fontdimen values needed in math symbol fonts.
+
+ [3
+
+]
+! Font MY1/mtt/m/it/8=mtmi at 8.0pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.49 $\copyright
+                $ 2009 Massachusetts Institute of Technology\\
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY1/mtt/m/it/6.8=mtmi at 6.8pt not loadable: Metric (TFM) file not found
+.
+<to be read again> 
+                   relax 
+l.49 $\copyright
+                $ 2009 Massachusetts Institute of Technology\\
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY2/mtt/m/n/8=mtsy at 8.0pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.49 $\copyright
+                $ 2009 Massachusetts Institute of Technology\\
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+! Font MY2/mtt/m/n/6.8=mtsy at 6.8pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.49 $\copyright
+                $ 2009 Massachusetts Institute of Technology\\
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+
+! Interruption.
+extract@font ...ont font@name external@font relax 
+                                                  font@name relax csname f@e...
+l.49 $\copyright
+                $ 2009 Massachusetts Institute of Technology\\
+? X
+ 
+Here is how much of TeX's memory you used:
+ 21651 strings out of 495021
+ 395180 string characters out of 6181351
+ 448753 words of memory out of 5000000
+ 24473 multiletter control sequences out of 15000+600000
+ 14863 words of font info for 42 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 62i,10n,56p,10425b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on Sample-7x9.dvi (3 pages, 6688 bytes).
