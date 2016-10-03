@@ -1,5 +1,16 @@
 # Technocollective paper
 
+## Todo
+
+- go through nature articles looking for the convolutional layers, and the superimposed knowledges at work here
+- look at existing programs and online databases of moves at https://www.gokgs.com/
+- look at the history of games that have been played, and how the training has been done (human players)
+- compile media database listing
+- look at alphago on Github 
+- look at deepmind on gh and on website
+- connect deepmind to other people ... 
+- think about the role of the visual here
+- think about how alphago connects to infrastructures
 
 ## Fri Apr  1 11:02:25 BST 2016
 
