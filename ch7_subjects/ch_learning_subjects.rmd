@@ -108,11 +108,9 @@ stat_df = data.frame(discipline= 'statistics', tablify_yr(res[stat,]))
 compsci_df =  data.frame(discipline='computer science', tablify_yr(res[compsci,]))
 eng_df =  data.frame(discipline= 'engineering', tablify_yr(res[eng,]))
 df = rbind(stat_df,  compsci_df, eng_df)
-dim(df)
-head(df)
 top_techniques = names((sort(table(df$techniques), decreasing=TRUE)))[6:25]
-top_techniques
 df_top = df[df$techniques %in% top_techniques, ]
+nn_rank = which(names(sort(table(df_top$techniques[df_top$discipline=='statistics']), decreasing=TRUE))=='neural network')
 ggplot(df_top, aes(x=year, fill=discipline)) + geom_histogram(binwidth=1) + facet_wrap(~techniques) 
 ```
 
@@ -123,7 +121,7 @@ ggplot(df_top, aes(x=year, fill=discipline)) + geom_histogram(binwidth=1) + face
   \label{fig:disc_tech}
 \end{figure}
 
-Almost every machine learning class, textbook, demonstration, and in recent years, machine learning competitions at some point turns to neural nets.\index{machine learner!neural net!popularity of}  Neural nets  display, however, some instability in the research literature. Figure \ref{fig:disc_tech} shows the most frequent keywords for technical publications across the three main disciplinary domains inhabited by machine learners. While neural nets rank very high in computer science and engineering disciplines (appearing just after support vector machines), they do not appear in the statistics literature until `r which(stat_df$discipline == 'neural network')` in the rankings. The prominence of neural nets on the engineering side of machine learning suggests a  specific enunciative mapping. \index{enunciative function!of neural net} 
+Almost every machine learning class, textbook, demonstration, and in recent years, machine learning competitions at some point turns to neural nets.\index{machine learner!neural net!popularity of}  Neural nets  display, however, some instability in the research literature. Figure \ref{fig:disc_tech} shows the most frequent keywords for technical publications across the three main disciplinary domains inhabited by machine learners. While neural nets rank very high in computer science and engineering disciplines (appearing just after support vector machines), they do not appear in the statistics literature until `r nn_rank` in the rankings. The prominence of neural nets on the engineering side of machine learning suggests a  specific enunciative mapping. \index{enunciative function!of neural net} 
 
 Neural nets are often described from a deeply split perspective.  At some moments, the description  turns towards human subjects, or at least, the brains of human subjects. At other other moments, neural nets turn towards the vectorisation of data. \index{vectorisation} Neural nets constantly oscillate between brain and information infrastructure.  In some ways, they renew long-standing cybernetic hopes of bring brains and computation together in  models of computational intelligence and agency [@Hayles_1999]. \index{machine learner!neural net!cybernetics in}   Although they stem from a biological inspiration (dating at least back to the work by  McCulloch and Pitts in the 1940s [@Halpern_2015; @Wilson_2010]\index{Pitts, Walter}), they gain traction first in the 1980s and then again from mid-2000s onwards, as ways of dealing with changing computational infrastructures, and the difficulties of capitalising on infrastructure that is powerful but hard to control. In the course of fifty years, their serial re-invention -- from perceptron via neural net to deep belief net -- triply re-distributes subject positions amidst infrastructural re-configurations and vectorisation. \index{infrastructure!reconfiguration of} \index{vectorisation!of infrastructure}
 
