@@ -1,1 +1,0 @@
-/home/mackenza/notes/foucault_archaeology.md
