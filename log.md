@@ -99,3 +99,9 @@
 - addressing image permissions for openscikit image and american statistical association journal. Figures 4.1 and 6.2
 - scikit-learn image is here http://scikit-learn.org/stable/tutorial/machine_learning_map/ It is under BSD Licence, which I read to mean that a copyright notice needs to accompany the figure. i.e. **Copyright** (c) 2010 - 2016, scikit-learn developers, (see https://en.wikipedia.org/wiki/BSD_licenses) for details.   
 - american statist: probably will need to use copyright clearance centre http://www.amstat.org/ASA/Copyright.aspx has the details. 
+
+
+
+## Tue Dec  6 14:57:30 GMT 2016
+- requested prices from RightsLink for figure 6.2 -- waiting for Taylor & Francis to get back to me
+- TODO: look at rest of queries on size, etc
