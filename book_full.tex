@@ -1,0 +1,39 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage{mybook} 
+\usepackage{subfiles}
+\title{Machine Learning: Archaeology of a Data Practice}
+\author{Adrian Mackenzie}
+\begin{document}
+\frontmatter
+\maketitle
+\subfile{preface.tex}
+\subfile{acknowledgments.tex}
+\tableofcontents
+\listoffigures
+\listoftables
+\mainmatter
+\subfile{ch0_introduction/ch.tex}
+\cleardoublepage \phantomsection \addcontentsline{toc}{chapter}{Part I}
+\part*{Operations and diagrams}
+\subfile{part1.tex}
+\subfile{ch1_learning/ch.tex}
+\subfile{ch2_vector/ch.tex}
+\subfile{ch3_curves/ch.tex}
+\subfile{ch4_probability/ch.tex}
+\cleardoublepage \phantomsection \addcontentsline{toc}{chapter}{Part II}
+\part*{Modes of dispersion}
+\subfile{part2.tex}
+\subfile{ch5_dimensionality/ch.tex}
+\subfile{ch6_topologies/ch.tex}
+\subfile{ch7_subjects/ch.tex}
+\subfile{ch8_conclusion/ch.tex}
+\backmatter
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+\cleardoublepage
+\printindex
+\addcontentsline{toc}{chapter}{Index}
+%\addcontentsline{toc}{chapter}{mlrs}
+%\addcontentsline{toc}{chapter}{general}
+%\printindex{mlrs}{Machine learners}
+\end{document}

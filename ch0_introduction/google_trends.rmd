@@ -1,0 +1,33 @@
+## 'Breakout' search terms on Google
+
+```{r google_trends_load, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(stringr)
+df = read.csv('data/google_trends_clean.csv',  header=TRUE,stringsAsFactors=FALSE)
+df$week = str_extract(df$Week, '\\d{4}-\\d{2}-\\d{2}')
+df = df[, -1]
+```
+
+The volume and geography of searches on Google provide some evidence of interest in particular topics. If we search for terms such as `r colnames(df)[1:5]` on the [Google Trends](http://www.google.com/trends) service \index{Google Trends}, the results for the last decade or so suggest both increasing and decreasing interest in these topics. 
+
+```{r google_trends, echo=FALSE, message=FALSE, fig.env=TRUE, fig.cap='', include=FALSE, dpi=600, dev='CairoPDF', warning=FALSE}
+library(ggplot2)
+library(reshape)
+dfm = melt(df, id.vars='week')
+g = ggplot(dfm, aes(x=as.Date(week), y=value, group=variable))+ geom_line(aes(linetype=variable)) + geom_smooth(aes(linetype=variable)) + scale_x_date() + xlab('Years') + ylab('Google search volume')
+g +  theme(legend.justification=c(1,0), legend.position=c(0.9,0.6), panel.grid.minor=element_blank(),  panel.grid.major=element_blank())
+
+```
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.9\textwidth]{figure/google_trends-1.pdf}
+        \caption{Google Trends search volume for `machine learning` and related query terms in English, globally 2004-2015}
+  \label{fig:google_trends}
+\end{figure}
+
+Note that search terms that had a very high search volume in 2004 -- 'artificial intelligence' and 'data mining' -- both display a relative decline over the years. By contrast, 'machine learning,' 'deep learning,' and 'predictive analytics' tend to increase during that decade. `Machine learning` interestingly appears prominently in 2004, loses volume until around 2008, and then gradually swells again.
+
+In the plot, the weekly variations in search volume on Google give rise to many spikes in the data. These spikes can be linked to specific invents such as significant press releases, public debates, media attention and film releases. Geographical variations may contribute to the variations as well. The graphics shown Figure \ref{fig:google_trends} actually show two lines for each trend. The 'raw' GoogleTrends data appears in the very spiky lines, but a much smoother line shows the general trend more easily. This smoothing line is the product of a statistical model -- a local regression or loess model [@Cleveland_1992] developed in the late 1970s \index{local regression} -- that depends on some intensive computation and a variety of machine learning techniques (linear regression, _k_ nearest neighbours, \index{k-nearest neighbors, linear regression}.
+
+These smoother lines seem to make the spiky weekly search counts supplied by Google much easier to see. They construct alignments in  the data by replacing the heterogeneous variations with something that unequivocally runs through time. 

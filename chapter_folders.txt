@@ -1,0 +1,10 @@
+ch0_introduction/
+ch1_learning/
+ch2_vector/
+ch3_curves/
+ch4_probability/
+ch5_dimensionality/
+ch6_topologies/
+ch7_subjects/
+ch8_conclusion/
+

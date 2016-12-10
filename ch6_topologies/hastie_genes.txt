@@ -1,0 +1,164 @@
+5:       cluding genomic and proteomic studies, and document classification.
+5:       cluding genomic and proteomic studies, and document classification.
+16:14.3.8 Example: Human Tumor Microarray Data . .                 . 512
+23:Example 4: DNA Expression Microarrays
+23:up human chromosomes. DNA microarrays measure the expression of a
+23:acid) present for that gene. Microarrays are considered a breakthrough
+23:   Here is how a DNA microarray works. The nucleotide sequences for a few
+23:thousand genes are printed on a glass slide. A target sample and a reference
+23:of each gene in the target relative to the reference sample. Positive values
+23:   A gene expression dataset collects together the expression values from a
+23:series of DNA microarray experiments, with each column representing an
+23:ample of Figure 1.3 there are 6830 genes (rows) and 64 samples (columns),
+23:   The challenge here is to understand how the genes and samples are or-
+23: (b) which genes are most similar to each other, in terms of their expression
+23: (c) do certain genes show very high (or low) expression for certain cancer
+24:FIGURE 1.3. DNA microarray data: expression matrix of 6830 genes (rows)
+24:FIGURE 1.3. DNA microarray data: expression matrix of 6830 genes (rows)
+131:expression measurements in microarray studies. There the methods focus
+263:arise, for example, in genomic or proteomic applications. A typical strategy
+263:arise, for example, in genomic or proteomic applications. A typical strategy
+265:With the large numbers of predictors that are so common in genomic and
+265:argument was made to us by a scientist at a proteomics lab meeting, and led
+530:                      14.3.8 Example: Human Tumor Microarray Data
+530:We apply K-means clustering to the human tumor microarray data de-
+531:plied to the human tumor microarray data.
+531:expression measurement for a gene (row) and sample (column). Here we
+539:   For the microarray data, Figure 14.12 shows the dendrogram resulting
+540:      average linkage to the human tumor microarray data.
+542:      man tumor microarray data.
+543:Example: Human Cancer Microarray Data (Continued)
+543:linkage agglomerative clustering of the samples (columns) of the microarray
+543:have arranged the genes (rows) and samples (columns) of the expression
+544:dendrogram in the figure.) Individual genes are the tightest clusters possi-
+544:ble, and merges involving two individual genes place them in order by their
+544:ture of the genes and samples. This picture is more informative than the
+544:interpret the gene clusters in terms of biological processes.
+545:FIGURE 14.14. DNA microarray data: average linkage hierarchical clustering
+599:grid. Apply them to the columns of the human tumor microarray data, us-
+643:nomics and proteomics, where they provide rough models of cell pathways.
+649:variables is nonzero. These are popular in genomics, see especially Butte
+668:kind of data that we might see in a high-dimensional genomic or proteomic
+668:kind of data that we might see in a high-dimensional genomic or proteomic
+669:a matrix of 2308 genes (columns) and 63 samples (rows), from a set of
+669:to a particular (gene-specific) spot on the microarray, and G is the corre-
+670:and x ¯kj = i∈Ck xij /Nk is the mean of the Nk values for gene j in class
+670:where x  ¯j is the overall mean for gene j, m2k = 1/Nk − 1/N and s0 is a
+671:   Notice that only the genes that have a nonzero dkj for at least one of the
+671:of genes can often be discarded. In this example, all but 43 genes were
+671:of genes can often be discarded. In this example, all but 43 genes were
+671:discarded, leaving a small interpretable set of genes that characterize each
+671:class. Figure 18.3 represents the genes in a heatmap.
+672:Ramaswamy et al. (2001) present a more difficult microarray classification
+672:cancer, and a test set of 54 patients. Gene expression measurements were
+672:partitions, we have ordered the genes by hierarchical clustering, and
+674:TABLE 18.1. Prediction results for microarray data with 14 cancer classes.
+674:Out of 144         Out of 54     Genes Used
+676:removing genes with small coefficients, and refitting the classifier. This is
+676:classifier starts to degrade as the number of genes is reduced from the full
+680:lection chose 269 genes altogether. A similar approach is used in Genkin
+680:                         In genomic applications, there are often strong
+680:                      variables; genes tend to operate in molecular pathways.
+682:end of Section 18.3.2), but all the 7129 genes are selected. With α = 1,
+682:elastic-net solutions include more genes in the separating hyperplane.
+685: Genome order
+685:copy-number of a gene in a tumor sample, relative to that of a control (on
+685:data in the panel come from a Comparative Genomic Hybridization (CGH)
+685:                      copies of each gene in a tumor sample, as compared to a
+685:idea is that in cancer cells, genes are often amplified (duplicated) or
+685:to detect locations of gains and losses of genes in the tumor.
+692:on another microarray data example. The data is taken from Rosenwald
+692:B-cell lymphoma (DLBCL), with gene expression measurements for 7399
+694:the expression of genes that reflect it.
+694:approach would give the most weight to those genes having the strongest
+694:relationship with survival. These genes are partially, but not perfectly, re-
+694:the patients, often reflected by a sizable signature of genes acting together
+695:dle vertical column. The top 50 and bottom 50 genes are shown. The supervised
+695:principal component uses the top 27 genes (chosen by 10-fold CV). It is
+695:the log-rank test. The top panel does the same, using the top-scoring gene on
+695:tion is also poor. Each of the top genes can be interpreted as noisy
+696:   The top-right panel of Figure 18.14 uses the top scoring gene (dichot-
+699:FIGURE 18.15. Heatmap of the outcome (left column) and first 500 genes from
+699:realization from model (18.37). The genes are in the columns, and the samples
+699:difference correlates with the outcome y. The next 200 genes have a large
+699:the genes are noise. Figure 18.15 shows a heatmap of a typical realization,
+699:with the outcome at the left, and the first 500 genes to the right.
+702:TABLE 18.4. Subset of the 12, 625 genes from microarray study of radiation
+702:TABLE 18.4. Subset of the 12, 625 genes from microarray study of radiation
+702:  Gene   1           7.85  29.74    29.50    ...     17.20 -50.75      -18.89
+702:  Gene   2          15.44   2.70    19.37    ...      6.57    -7.41     79.18
+702:  Gene   3          -1.79  15.52    -3.13    ...     -8.32    12.64      4.75
+702:  Gene   4         -11.74  22.35 -36.11      ...    -52.17     7.24     -2.32
+702:   Gene  12,625    -14.09  32.77    57.78    ...    -32.84    24.09 -101.44
+702:     Consider, for example, the microarray data in Table 18.4, taken from a
+702:(Rieger et al., 2004). Each row consists of the expression of genes in 58
+702:were made on oligo-nucleotide microarrays. The object of the experiment
+702:was to find genes whose expression was different in the radiation sensitive
+702:group of patients. There are M = 12, 625 genes altogether; the table shows
+702:the data for some of the genes and samples for illustration.
+702:The quantity sej is the pooled within-group standard error for gene j:
+703:FIGURE 18.18. Radiation sensitivity microarray example. A histogram of the
+703:Here there are 1189 genes with |tj | ≥ 2. However with 12,625 genes we
+703:Here there are 1189 genes with |tj | ≥ 2. However with 12,625 genes we
+703:had no effect on any gene. For example, if the genes were independent
+703:(which they are surely not), the number of falsely significant genes would
+703:k compute the t-statistics tkj . Then the p-value for gene j is
+704:   To exploit the fact that the genes are similar (e.g., measured on the
+704:same scale), we can instead pool the results for all genes in computing the
+704:                  H0j      =   treatment has no effect on gene j
+704:                  H1j      =   treatment has an effect on gene j
+704:occurs in practice, in particular in genomic studies.
+704:that is, it calls too few genes significant.
+704:0.05/12, 625 = 3.9×10−6 . None of the 12, 625 genes had a p-value
+705:In the microarray setting, this is the expected proportion of genes that
+705:In the microarray setting, this is the expected proportion of genes that
+705:are incorrectly called significant, among the R genes that are called signif-
+706:                                                   Genes ordered by p−value
+706:FIGURE 18.19. Microarray example continued. Shown is a plot of the ordered
+706:calls significant the 11 genes (in red) with smallest p-values.
+707:the 11 genes with smallest p-values. Note that the cutoff occurs at the 11th
+707:Thus we reject the 11 genes with |tj | ≥ 4.101.
+708:false discovery rate is the expected proportion of false positive genes among
+708:the list of genes that the statistician tells him are significant. Microarray
+708:the list of genes that the statistician tells him are significant. Microarray
+708:or all of the differentially expressed genes change in the positive direc-
+708:   The significance analysis of microarrays (SAM) approach offers a way of
+708:leave the band. This defines the upper cutpoint Chi and all genes beyond
+708:cutpoint Clow for genes in the bottom left corner. Thus each value of the
+708:value of ∆, no genes are called significant on the left (negative) side. We
+709:FIGURE 18.20. SAM plot for the radiation sensitivity microarray data. On the
+709:origin and moving to the right, we find the first place that the genes leave
+709:This defines the upper cut-point Chi and all genes beyond that point are
+709:value of ∆ = 0.71 in the plot, no genes are called significant in the
+711:is say 10%, then a gene with say tj = 5 will be more significant than a gene
+711:ison of discrimination methods for gene expression data. Levina (2002)
+711:   Microarray technology has led to a flurry of statistical research: see for
+712:(2002), Storey (2002), Genovese and Wasserman (2004), Storey and Tib-
+712:review methods for identifying differentially expressed genes in microarray
+712:review methods for identifying differentially expressed genes in microarray
+718:Ambroise, C. and McLachlan, G. (2002). Selection bias in gene extraction
+718:     on the basis of microarray gene-expression data, Proceedings of the
+718:     patient survival from gene expression data, PLOS Biology 2: 511–522.
+723:    nation methods for the classification of tumors using gene expression
+723:    ods for identifying differentially expressed genes in replicated cDNA
+723:    microarray experiments, Statistica Sinica pp. 111–139.
+724:Efron, B. and Tibshirani, R. (2002). Microarrays, empirical Bayes methods,
+724:     Bayes analysis of a microarray experiment, Journal of the American
+728:     and class prediction by gene expression monitoring, Science 286: 531–
+728:inant analysis and its application in microarrays, Biostatistics 8: 86–
+728:Guyon, I., Weston, J., Barnhill, S. and Vapnik, V. (2002). Gene selection for
+734:Lee, M.-L. (2004). Analysis of Microarray Gene Expression Data, Kluwer
+734:Lee, M.-L. (2004). Analysis of Microarray Gene Expression Data, Kluwer
+737:     The Analysis of Gene Expression Data, Springer, New York.
+737:     E. and Liotta, L. A. (2002). Use of proteomic patterns in serum to
+738:     diagnosis using tumor gene expression signature, PNAS 98: 15149–
+740:      G. and Zhao, Y. (2004). Design and Analysis of DNA Microarray
+741:Speed, T. (ed.) (2003). Statistical Analysis of Gene Expression Microarray
+741:Speed, T. (ed.) (2003). Statistical Analysis of Gene Expression Microarray
+741:Storey, J. and Tibshirani, R. (2003). Statistical significance for genomewide
+742:    of multiple cancer types by shrunken centroids of gene expression,
+742:    microarrays, Statistical Science 18(1): 104–117.
+744:Zhu, J. and Hastie, T. (2004). Classification of gene microarrays by penal-
+744:Zhu, J. and Hastie, T. (2004). Classification of gene microarrays by penal-
+755:          ods, 475–478                  microarray, 5, 505, 532
+762:          ysis of Microarrays             interaction, 428

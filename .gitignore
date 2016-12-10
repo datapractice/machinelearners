@@ -1,0 +1,12 @@
+credentials.txt
+*.sqlite3
+*.swp
+*.png
+*.pdf
+*.jpg
+*/cache
+cache/
+animations/
+.ipynb_checkpoints/
+.ropeproject/
+*.pyc
