@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="">
+
+<title></title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="1-acknowledgments.html#acknowledgments"><span class="toc-section-number">1</span> Acknowledgments</a></li>
+<li><a href="2-machine-learners.html#machine-learners"><span class="toc-section-number">2</span> 250,000 machine learners</a></li>
+<li><a href="3-a-summary-of-the-argument.html#a-summary-of-the-argument"><span class="toc-section-number">3</span> A summary of the argument</a></li>
+<li><a href="4-in-situ-hybridization.html#in-situ-hybridization"><span class="toc-section-number">4</span> In-situ hybridization</a></li>
+<li><a href="5-critical-operational-practice.html#critical-operational-practice"><span class="toc-section-number">5</span> Critical operational practice?</a></li>
+<li><a href="6-obstacles-to-the-work-of-freeing-machine-learning.html#obstacles-to-the-work-of-freeing-machine-learning"><span class="toc-section-number">6</span> Obstacles to the work of freeing machine learning</a></li>
+<li><a href="7-preface.html#preface"><span class="toc-section-number">7</span> Preface</a></li>
+<li><a href="8-introduction-into-the-data.html#introduction-into-the-data"><span class="toc-section-number">8</span> Introduction: Into the Data</a></li>
+<li><a href="9-three-accumulations-settings-data-and-devices.html#three-accumulations-settings-data-and-devices"><span class="toc-section-number">9</span> Three accumulations: settings, data and devices</a></li>
+<li><a href="10-who-or-what-is-a-machine-learner.html#who-or-what-is-a-machine-learner"><span class="toc-section-number">10</span> Who or what is a machine learner?</a></li>
+<li><a href="11-algorithmic-control-to-the-machine-learners.html#algorithmic-control-to-the-machine-learners"><span class="toc-section-number">11</span> Algorithmic control to the machine learners?</a></li>
+<li><a href="12-the-archaeology-of-operations.html#the-archaeology-of-operations"><span class="toc-section-number">12</span> The archaeology of operations</a></li>
+<li><a href="13-asymmetries-in-common-knowledge.html#asymmetries-in-common-knowledge"><span class="toc-section-number">13</span> Asymmetries in common knowledge</a></li>
+<li><a href="14-what-cannot-be-automated.html#what-cannot-be-automated"><span class="toc-section-number">14</span> What cannot be automated?</a></li>
+<li><a href="15-different-fields-in-machine-learning.html#different-fields-in-machine-learning"><span class="toc-section-number">15</span> Different fields in machine learning?</a></li>
+<li><a href="16-the-diagram-in-critical-thought.html#the-diagram-in-critical-thought"><span class="toc-section-number">16</span> The diagram in critical thought</a></li>
+<li><a href="17-we-dont-have-to-write-programs.html#we-dont-have-to-write-programs"><span class="toc-section-number">17</span> ‘We don’t have to write programs’?</a></li>
+<li><a href="18-the-elements-of-machine-learning.html#the-elements-of-machine-learning"><span class="toc-section-number">18</span> The elements of machine learning</a></li>
+<li><a href="19-who-reads-machine-learning-textbooks.html#who-reads-machine-learning-textbooks"><span class="toc-section-number">19</span> Who reads machine learning textbooks?</a></li>
+<li><a href="20-r-a-matrix-of-transformations.html#r-a-matrix-of-transformations"><span class="toc-section-number">20</span> <code>R</code>: a matrix of transformations</a></li>
+<li><a href="21-the-obdurate-mathematical-glint-of-machine-learning.html#the-obdurate-mathematical-glint-of-machine-learning"><span class="toc-section-number">21</span> The obdurate mathematical glint of machine learning</a></li>
+<li><a href="22-cs229-2007-returning-again-and-again-to-certain-features.html#cs229-2007-returning-again-and-again-to-certain-features"><span class="toc-section-number">22</span> CS229, 2007: returning again and again to certain features</a></li>
+<li><a href="23-the-visible-learning-of-machine-learning.html#the-visible-learning-of-machine-learning"><span class="toc-section-number">23</span> The visible learning of machine learning</a></li>
+<li><a href="24-the-diagram-of-an-operational-formation.html#the-diagram-of-an-operational-formation"><span class="toc-section-number">24</span> The diagram of an operational formation</a></li>
+<li><a href="25-vector-space-and-geometry.html#vector-space-and-geometry"><span class="toc-section-number">25</span> Vector space and geometry</a></li>
+<li><a href="26-mixing-places.html#mixing-places"><span class="toc-section-number">26</span> Mixing places</a></li>
+<li><a href="27-truth-is-no-longer-in-the-table.html#truth-is-no-longer-in-the-table"><span class="toc-section-number">27</span> Truth is no longer in the table?</a></li>
+<li><a href="28-the-epistopic-fault-line-in-tables.html#the-epistopic-fault-line-in-tables"><span class="toc-section-number">28</span> The epistopic fault line in tables</a></li>
+<li><a href="29-surface-and-depths-the-problem-of-volume-in-data.html#surface-and-depths-the-problem-of-volume-in-data"><span class="toc-section-number">29</span> Surface and depths: the problem of volume in data</a></li>
+<li><a href="30-vector-space-expansion.html#vector-space-expansion"><span class="toc-section-number">30</span> Vector space expansion</a></li>
+<li><a href="31-drawing-lines-in-a-common-space-of-transformation.html#drawing-lines-in-a-common-space-of-transformation"><span class="toc-section-number">31</span> Drawing lines in a common space of transformation</a></li>
+<li><a href="32-implicit-vectorization-in-code-and-infrastructures.html#implicit-vectorization-in-code-and-infrastructures"><span class="toc-section-number">32</span> Implicit vectorization in code and infrastructures</a></li>
+<li><a href="33-lines-traversing-behind-the-light.html#lines-traversing-behind-the-light"><span class="toc-section-number">33</span> Lines traversing behind the light</a></li>
+<li><a href="34-the-vectorised-table.html#the-vectorised-table"><span class="toc-section-number">34</span> The vectorised table?</a></li>
+<li><a href="35-learning-functions.html#learning-functions"><span class="toc-section-number">35</span> Learning functions</a></li>
+<li><a href="36-supervised-unsupervised-reinforcement-learning-and-functions.html#supervised-unsupervised-reinforcement-learning-and-functions"><span class="toc-section-number">36</span> Supervised, unsupervised, reinforcement learning and functions</a></li>
+<li><a href="37-which-function-operates.html#which-function-operates"><span class="toc-section-number">37</span> Which function operates?</a></li>
+<li><a href="38-what-does-a-function-learn.html#what-does-a-function-learn"><span class="toc-section-number">38</span> What does a function learn?</a></li>
+<li><a href="39-observing-with-curves-the-logistic-function.html#observing-with-curves-the-logistic-function"><span class="toc-section-number">39</span> Observing with curves: the logistic function</a></li>
+<li><a href="40-the-cost-of-curves-in-machine-learning.html#the-cost-of-curves-in-machine-learning"><span class="toc-section-number">40</span> The cost of curves in machine learning</a></li>
+<li><a href="41-curves-and-the-variation-in-models.html#curves-and-the-variation-in-models"><span class="toc-section-number">41</span> Curves and the variation in models</a></li>
+<li><a href="42-observing-costs-losses-and-objectives-through-optimisation.html#observing-costs-losses-and-objectives-through-optimisation"><span class="toc-section-number">42</span> Observing costs, losses and objectives through optimisation</a></li>
+<li><a href="43-gradients-as-partial-observers.html#gradients-as-partial-observers"><span class="toc-section-number">43</span> Gradients as partial observers</a></li>
+<li><a href="44-the-power-to-learn.html#the-power-to-learn"><span class="toc-section-number">44</span> The power to learn</a></li>
+<li><a href="45-data-reduces-uncertainty.html#data-reduces-uncertainty"><span class="toc-section-number">45</span> Data reduces uncertainty?</a></li>
+<li><a href="46-machine-learning-as-statistics-inside-out.html#machine-learning-as-statistics-inside-out"><span class="toc-section-number">46</span> Machine learning as statistics inside out</a></li>
+<li><a href="47-distributed-probabilities.html#distributed-probabilities"><span class="toc-section-number">47</span> Distributed probabilities</a></li>
+<li><a href="48-naive-bayes-and-the-distribution-of-probabilities.html#naive-bayes-and-the-distribution-of-probabilities"><span class="toc-section-number">48</span> Naive Bayes and the distribution of probabilities</a></li>
+<li><a href="49-spam-when-foralln-is-too-much.html#spam-when-foralln-is-too-much"><span class="toc-section-number">49</span> Spam: when <span class="math inline">\(\forall{N}\)</span> is too much?</a></li>
+<li><a href="50-the-improbable-success-of-the-naive-bayes-classifier.html#the-improbable-success-of-the-naive-bayes-classifier"><span class="toc-section-number">50</span> The improbable success of the Naive Bayes classifier</a></li>
+<li><a href="51-ancestral-probabilities-in-documents-inference-and-prediction.html#ancestral-probabilities-in-documents-inference-and-prediction"><span class="toc-section-number">51</span> Ancestral probabilities in documents: inference and prediction</a></li>
+<li><a href="52-statistical-decompositions-bias-variance-and-observed-errors.html#statistical-decompositions-bias-variance-and-observed-errors"><span class="toc-section-number">52</span> Statistical decompositions: bias, variance and observed errors</a></li>
+<li><a href="53-does-machine-learning-construct-a-new-statistical-reality.html#does-machine-learning-construct-a-new-statistical-reality"><span class="toc-section-number">53</span> Does machine learning construct a new statistical reality?</a></li>
+<li><a href="54-splitting-and-the-growth-of-trees.html#splitting-and-the-growth-of-trees"><span class="toc-section-number">54</span> Splitting and the growth of trees</a></li>
+<li><a href="55-differences-in-recursive-partitioning.html#differences-in-recursive-partitioning"><span class="toc-section-number">55</span> 1984: Differences in recursive partitioning</a></li>
+<li><a href="56-limiting-differences.html#limiting-differences"><span class="toc-section-number">56</span> Limiting differences</a></li>
+<li><a href="57-the-successful-dispersion-of-the-support-vector-machine.html#the-successful-dispersion-of-the-support-vector-machine"><span class="toc-section-number">57</span> The successful dispersion of the support vector machine</a></li>
+<li><a href="58-differences-blur.html#differences-blur"><span class="toc-section-number">58</span> Differences blur?</a></li>
+<li><a href="59-bending-the-decision-boundary.html#bending-the-decision-boundary"><span class="toc-section-number">59</span> Bending the decision boundary</a></li>
+<li><a href="60-instituting-patterns.html#instituting-patterns"><span class="toc-section-number">60</span> Instituting patterns</a></li>
+<li><a href="61-genomic-referentiality-and-materiality.html#genomic-referentiality-and-materiality"><span class="toc-section-number">61</span> Genomic referentiality and materiality</a></li>
+<li><a href="62-the-genome-as-threshold-object.html#the-genome-as-threshold-object"><span class="toc-section-number">62</span> The genome as threshold object</a></li>
+<li><a href="63-genomic-knowledges-and-their-datasets.html#genomic-knowledges-and-their-datasets"><span class="toc-section-number">63</span> Genomic knowledges and their datasets</a></li>
+<li><a href="64-the-advent-of-wide-dirty-and-mixed-data.html#the-advent-of-wide-dirty-and-mixed-data"><span class="toc-section-number">64</span> The advent of ‘wide, dirty and mixed’ data</a></li>
+<li><a href="65-cross-validating-machine-learning-in-genomics.html#cross-validating-machine-learning-in-genomics"><span class="toc-section-number">65</span> Cross-validating machine learning in genomics</a></li>
+<li><a href="66-proliferation-of-discoveries.html#proliferation-of-discoveries"><span class="toc-section-number">66</span> Proliferation of discoveries</a></li>
+<li><a href="67-variations-in-the-object-or-in-the-machine-learner.html#variations-in-the-object-or-in-the-machine-learner"><span class="toc-section-number">67</span> Variations in the object or in the machine learner?</a></li>
+<li><a href="68-whole-genome-functions.html#whole-genome-functions"><span class="toc-section-number">68</span> Whole genome functions</a></li>
+<li><a href="69-propagation-across-human-machine-boundaries.html#propagation-across-human-machine-boundaries"><span class="toc-section-number">69</span> Propagation across human-machine boundaries</a></li>
+<li><a href="70-competitive-positioning.html#competitive-positioning"><span class="toc-section-number">70</span> Competitive positioning</a></li>
+<li><a href="71-a-privileged-machine-and-its-diagrammatic-forms.html#a-privileged-machine-and-its-diagrammatic-forms"><span class="toc-section-number">71</span> A privileged machine and its diagrammatic forms</a></li>
+<li><a href="72-varying-subject-positions-in-code.html#varying-subject-positions-in-code"><span class="toc-section-number">72</span> Varying subject positions in code</a></li>
+<li><a href="73-the-subjects-of-a-hidden-operation.html#the-subjects-of-a-hidden-operation"><span class="toc-section-number">73</span> The subjects of a hidden operation</a></li>
+<li><a href="74-algorithms-that-propagate-errors.html#algorithms-that-propagate-errors"><span class="toc-section-number">74</span> Algorithms that propagate errors</a></li>
+<li><a href="75-competitions-as-examination.html#competitions-as-examination"><span class="toc-section-number">75</span> Competitions as examination</a></li>
+<li><a href="76-superimposing-power-and-knowledge.html#superimposing-power-and-knowledge"><span class="toc-section-number">76</span> Superimposing power and knowledge</a></li>
+<li><a href="77-ranked-subject-positions.html#ranked-subject-positions"><span class="toc-section-number">77</span> Ranked subject positions</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="we-dont-have-to-write-programs" class="section level1">
+<h1><span class="header-section-number">17</span> ‘We don’t have to write programs’?</h1>
+<p>In machine learning, coding changes from what we might call symbolic logical diagrams to statistical algorithmic diagrams. While many machine learning techniques have long statistical lineages (running back to the 1900s in the case of Karl Pearson’s development of the still-heavily used Principal Component Analysis <span class="citation">[@Pearson_1901]</span>),  machine learning techniques often embody a certain dissatisfaction with the classical computer science understanding of programs as manipulation of symbols, even as they rely on such symbolic operations to function. Symbolic manipulation, epitomised by deductive logic or predicate calculus, was very much at the centre of many AI projects during the 1950s and 1960s <span class="citation">[@Dreyfus_1972; @Edwards_1996]</span>.  In machine learning, the privileged symbolic-cognitive forms of logic are subject to a statistical transformation.</p>
+<p>Take for instance once of the most common operations of the Boolean logical calculus, the <code>NOT-AND</code> or <code>NAND</code> function shown in table . The truth table summarises a logical function  that combines three input variables <code>X1</code>, <code>X2</code>, and <code>X3</code> and produces the output variable <code>Y</code>. Because in Boolean calculus, variables or predicates can only take the values <code>true</code> or <code>false</code>, they can be coded in as <code>1</code> and <code>0</code>.</p>
+<table>
+<caption>The truth table for the Boolean function NOT-AND truth </caption>
+<thead>
+<tr class="header">
+<th>X1</th>
+<th>X2</th>
+<th>X3</th>
+<th align="left">Y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+<p>Now in Foucaultean terms, the truth table and its component propositions constitutes a statement. This statement has triple relevance for  of machine learning.  The spatial arrangement of the table is fundamental (and this is the topic of chapter ).  Most datasets come as tables, or end up as tables at some point in their analysis. Second, the elements or cells of this table are numbers. The numbers <span class="math inline">\(1\)</span> and <span class="math inline">\(0\)</span> are the binary digits as well as the ‘truth’ values ‘True’ and ‘False’ in classical logic. These numbers are readable as symbolic logical propositions governed by the rule <span class="math inline">\(Y = \neg{X_1 \and X_2 \and X_3}\)</span>. The table acts as a hinge between numbers and symbolic thought or cognition. Third, the NAND table in particular has an obvious operational relevance in digital logic, since digital circuits of all kinds – memory, processing, and communication – comprise such logical functions knitted together in the intricate gated labyrinths of contemporary calculation.<a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a> </p>
+<p>A pre-machine learning programmer, tasked with implementing the logical NAND function might write:</p>
+
+<p>The trivial simplicity of the code stands out. This looks like the kind of symbol manipulation that that computers can easily be programmed to do. How, by contrast, could such a truth table be learned by a machine, even a machine whose <em>modus operandi</em> and indeed whose very fabric is nothing other than a massive mosaic of <code>NAND</code> operations inscribed in semiconductors? Machine learning of on elementary truth tables is not a typical operation today, but usefully illustrates something of the diagrammatic transformations that programming or coding (and classical AI) has undergone .</p>
+<p>Machine learners such as decision trees or neural nets typically know nothing of the logical calculus and its elementary logical operations. Can they be induced to learn it? A perceptron, an elementary machine learner dating from the 1950s, that ‘learns’ the binary logical operation NAND (Not-AND) is expressed in twenty lines of python code on the Wikipedia ‘Perceptron’ page <span class="citation">[@Wikipedia_2013]</span> (see listing ). It is a standard machine learner almost always included in machine learning textbooks and usually taught in introductory machine learning classes. The code outputs a series of numbers shown in table .</p>
+
+
+<p>What does the code in listing  show or say about the transformation in programmability or the writing of programs?  First of all, we should note the relative conciseness of the code vignette.  Much of the code here is familiar, generic programming. It defines variables, sets up data structures (lists of numerical values), checks conditions, loops through statements or prints results. In citing this code, I am not resorting to a technical publication or scientific literature as such, or even to a machine learning software library or package (in <code>scikit-learn</code>, the same model could be written <code>p = scikit-learn.linearmode.Perceptron(X,Y)</code>), just to a Wikipedia page, and the relatively generic and widely used programming language <code>Python</code>.[^1.31] Whatever the levels of abstraction associated with machine learning, the code is hardly ever hermetically opaque. As statements, everything lies on the surface. </p>
+<p>Second, while the shaping of data, the counting of errors, and the optimisation of models are topics of later discussion, the code shows some typical features of a machine learner in the form of elements such the <code>learning rate</code>, a <code>training_set,</code> <code>weights</code>, an <code>error count</code>, and a loop function that multiplies values (<code>dot_product</code>). Some of the names such as <code>learning_rate</code> or <code>error_count</code> present in the code bear the marks of the theory of learning machines that we will discuss.</p>
+<p>Third, executing this code (by copying and pasting it into a <code>Python</code> terminal, for instance) produces several dozen lines of numbers. They are initially different to each other, but gradually converge on the same values (see table ). These numbers are the ‘weights’ of the nodes of the perceptron as it iteratively ‘learns’ to recognise patterns in the input values. None of the workings of the perceptron need concern us at the moment. Again, what runs across all of these observations are the numbers that the algorithm produces as output – they embody the program the perceptron has written. How has the learning happened in code? The NAND truth table has been re-drawn as a dataset (see line 4 of the code that defines the variable <code>training_set</code>). The perceptron has learned the data by approaching it as a set of training examples, and then adjusting its internal model – the weights that are printed during each loop of the model as the output – repeatedly until the model is producing the correct result values <span class="math inline">\(Y\)</span> of the truth table. The algorithm exits its main loop (<code>while True:</code>) when there are no errors.</p>
+<p>The perceptron algorithm computes numbers - <code>0.79999</code>, <code>2.0</code> – as weights or parameters.  These numbers display no direct correspondence with the symbolic categories of boolean True and False or the binary digits <code>1</code> and <code>0</code>. There may be a relation but it is not obvious at first glance. The problem of mapping these calculated parameters – and they truly abound in machine learning – triggers many different diagrammatic movements in machine learning (and these different movements will be discussed in chapters  and ). These numbers engender much statistical ratiocination (see chapter ). Here we need only note the contrast between symbolically organised statements like the NAND truth table of Table  and the operational statements in table .</p>
+<p>The operation here is recursive: a model or algorithm implemented in digital logic (as <code>Python</code> code) has ‘learned’ – a term we need to explore more carefully – a basic rule of digital logic (the <code>NAND</code> function) at least approximately by treating logical propositions as data. This mode of transformation is symptomatic. The learning done in machine learning has few cognitive or symbolic underpinnings. It differs from classical AI in that it treats existing symbolic, control, communicative and increasingly, signifying processes (such as the cat faces that <code>kittydar</code> tries to find), and latches onto them programmatically only in the form of weights.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="8">
+<li id="fn8"><p>The philosophy Charles Sanders Peirce himself  had first shown that combinations of NAND operations could stand in for any logical expression whatsoever, thus paving the way for the diagrammatic weave of contemporary digital memory and computation in all their permutations. Today, NAND-based logic is norm in digital electronics. NOR – NOT OR – logic is also used in certain applications.<a href="17-we-dont-have-to-write-programs.html#fnref8">↩</a></p></li>
+</ol>
+</div>
+<p style="text-align: center;">
+<a href="16-the-diagram-in-critical-thought.html"><button class="btn btn-default">Previous</button></a>
+<a href="18-the-elements-of-machine-learning.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

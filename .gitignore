@@ -10,3 +10,4 @@ animations/
 .ipynb_checkpoints/
 .ropeproject/
 *.pyc
+.Rproj.user
