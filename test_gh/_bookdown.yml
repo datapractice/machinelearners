@@ -1,15 +1,5 @@
 ---
-title: "Machine Learning: Archaeology of a Data Practice"
-author: "Adrian Mackenzie"
-date: "`r Sys.Date()`"
-site: bookdown::bookdown_site 
-rmd_files: ["0_acknowledgments.rmd", "1_preface.rmd", "3_praxis.rmd"]
+rmd_files: ["00_acknowledgments.rmd", "01_preface.rmd", "02_introduction.rmd"]
 new_session: yes
-output:
-    bookdown::gitbook: default
-    output_dir: docs
-documentclass: book
-bibliography: ["ref_bibs/uni.bib"]
-biblio-style: chicago
-link-citations: yes
+output_dir: docs
 ---

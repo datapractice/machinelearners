@@ -111,3 +111,10 @@
 - had conniptions over versions, but checking branch history and merges, it seems ok
 - using bookdown to build gh-pages html version of the book, following instructions in ~/archive/hui_20106_bookdown.pdf
 - quite tricky to set up -- updated R packages, updated Pandoc, trying now to run render_book
+- spent most of the afternoon on this -- found configuration difficult to do. Went best after total rename of files; managed to get the references in; 
+- turning into an epic slog - 9pm at night still working on getting the images in. Have managed to get the chapters showing ok, altho the numbers are wrong. still no glossary, index, reference list. 
+
+
+## Sun Dec 11 15:16:08 GMT 2016
+
+- experimenting with bookdown to get images showing. Working ok on test files. But will need to go through an convert everything to the format \@ref(fig:x). 

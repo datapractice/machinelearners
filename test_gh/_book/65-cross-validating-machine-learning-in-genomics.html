@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html >
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="" />
-<meta property="og:type" content="book" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Machine Learning: Archaeology of a Data Practice</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Machine Learning: Archaeology of a Data Practice">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Machine Learning: Archaeology of a Data Practice" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Machine Learning: Archaeology of a Data Practice" />
+  
+  
+  
+
+<meta name="author" content="Adrian Mackenzie">
+
+
+<meta name="date" content="2016-12-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="64-the-advent-of-wide-dirty-and-mixed-data.html">
+<link rel="next" href="66-proliferation-of-discoveries.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
 
@@ -17,138 +49,121 @@
 
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
-
-<meta name="description" content="">
-
-<title></title>
-
-<script src="libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="libs/navigation-1.1/tabsets.js"></script>
 
 
 
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-</style>
 </head>
 
 <body>
 
-<div class="container-fluid main-container">
 
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
-<div class="row">
-<div class="col-sm-12">
-<div id="TOC">
-<ul>
-<li><a href="1-acknowledgments.html#acknowledgments"><span class="toc-section-number">1</span> Acknowledgments</a></li>
-<li><a href="2-machine-learners.html#machine-learners"><span class="toc-section-number">2</span> 250,000 machine learners</a></li>
-<li><a href="3-a-summary-of-the-argument.html#a-summary-of-the-argument"><span class="toc-section-number">3</span> A summary of the argument</a></li>
-<li><a href="4-in-situ-hybridization.html#in-situ-hybridization"><span class="toc-section-number">4</span> In-situ hybridization</a></li>
-<li><a href="5-critical-operational-practice.html#critical-operational-practice"><span class="toc-section-number">5</span> Critical operational practice?</a></li>
-<li><a href="6-obstacles-to-the-work-of-freeing-machine-learning.html#obstacles-to-the-work-of-freeing-machine-learning"><span class="toc-section-number">6</span> Obstacles to the work of freeing machine learning</a></li>
-<li><a href="7-preface.html#preface"><span class="toc-section-number">7</span> Preface</a></li>
-<li><a href="8-introduction-into-the-data.html#introduction-into-the-data"><span class="toc-section-number">8</span> Introduction: Into the Data</a></li>
-<li><a href="9-three-accumulations-settings-data-and-devices.html#three-accumulations-settings-data-and-devices"><span class="toc-section-number">9</span> Three accumulations: settings, data and devices</a></li>
-<li><a href="10-who-or-what-is-a-machine-learner.html#who-or-what-is-a-machine-learner"><span class="toc-section-number">10</span> Who or what is a machine learner?</a></li>
-<li><a href="11-algorithmic-control-to-the-machine-learners.html#algorithmic-control-to-the-machine-learners"><span class="toc-section-number">11</span> Algorithmic control to the machine learners?</a></li>
-<li><a href="12-the-archaeology-of-operations.html#the-archaeology-of-operations"><span class="toc-section-number">12</span> The archaeology of operations</a></li>
-<li><a href="13-asymmetries-in-common-knowledge.html#asymmetries-in-common-knowledge"><span class="toc-section-number">13</span> Asymmetries in common knowledge</a></li>
-<li><a href="14-what-cannot-be-automated.html#what-cannot-be-automated"><span class="toc-section-number">14</span> What cannot be automated?</a></li>
-<li><a href="15-different-fields-in-machine-learning.html#different-fields-in-machine-learning"><span class="toc-section-number">15</span> Different fields in machine learning?</a></li>
-<li><a href="16-the-diagram-in-critical-thought.html#the-diagram-in-critical-thought"><span class="toc-section-number">16</span> The diagram in critical thought</a></li>
-<li><a href="17-we-dont-have-to-write-programs.html#we-dont-have-to-write-programs"><span class="toc-section-number">17</span> ‘We don’t have to write programs’?</a></li>
-<li><a href="18-the-elements-of-machine-learning.html#the-elements-of-machine-learning"><span class="toc-section-number">18</span> The elements of machine learning</a></li>
-<li><a href="19-who-reads-machine-learning-textbooks.html#who-reads-machine-learning-textbooks"><span class="toc-section-number">19</span> Who reads machine learning textbooks?</a></li>
-<li><a href="20-r-a-matrix-of-transformations.html#r-a-matrix-of-transformations"><span class="toc-section-number">20</span> <code>R</code>: a matrix of transformations</a></li>
-<li><a href="21-the-obdurate-mathematical-glint-of-machine-learning.html#the-obdurate-mathematical-glint-of-machine-learning"><span class="toc-section-number">21</span> The obdurate mathematical glint of machine learning</a></li>
-<li><a href="22-cs229-2007-returning-again-and-again-to-certain-features.html#cs229-2007-returning-again-and-again-to-certain-features"><span class="toc-section-number">22</span> CS229, 2007: returning again and again to certain features</a></li>
-<li><a href="23-the-visible-learning-of-machine-learning.html#the-visible-learning-of-machine-learning"><span class="toc-section-number">23</span> The visible learning of machine learning</a></li>
-<li><a href="24-the-diagram-of-an-operational-formation.html#the-diagram-of-an-operational-formation"><span class="toc-section-number">24</span> The diagram of an operational formation</a></li>
-<li><a href="25-vector-space-and-geometry.html#vector-space-and-geometry"><span class="toc-section-number">25</span> Vector space and geometry</a></li>
-<li><a href="26-mixing-places.html#mixing-places"><span class="toc-section-number">26</span> Mixing places</a></li>
-<li><a href="27-truth-is-no-longer-in-the-table.html#truth-is-no-longer-in-the-table"><span class="toc-section-number">27</span> Truth is no longer in the table?</a></li>
-<li><a href="28-the-epistopic-fault-line-in-tables.html#the-epistopic-fault-line-in-tables"><span class="toc-section-number">28</span> The epistopic fault line in tables</a></li>
-<li><a href="29-surface-and-depths-the-problem-of-volume-in-data.html#surface-and-depths-the-problem-of-volume-in-data"><span class="toc-section-number">29</span> Surface and depths: the problem of volume in data</a></li>
-<li><a href="30-vector-space-expansion.html#vector-space-expansion"><span class="toc-section-number">30</span> Vector space expansion</a></li>
-<li><a href="31-drawing-lines-in-a-common-space-of-transformation.html#drawing-lines-in-a-common-space-of-transformation"><span class="toc-section-number">31</span> Drawing lines in a common space of transformation</a></li>
-<li><a href="32-implicit-vectorization-in-code-and-infrastructures.html#implicit-vectorization-in-code-and-infrastructures"><span class="toc-section-number">32</span> Implicit vectorization in code and infrastructures</a></li>
-<li><a href="33-lines-traversing-behind-the-light.html#lines-traversing-behind-the-light"><span class="toc-section-number">33</span> Lines traversing behind the light</a></li>
-<li><a href="34-the-vectorised-table.html#the-vectorised-table"><span class="toc-section-number">34</span> The vectorised table?</a></li>
-<li><a href="35-learning-functions.html#learning-functions"><span class="toc-section-number">35</span> Learning functions</a></li>
-<li><a href="36-supervised-unsupervised-reinforcement-learning-and-functions.html#supervised-unsupervised-reinforcement-learning-and-functions"><span class="toc-section-number">36</span> Supervised, unsupervised, reinforcement learning and functions</a></li>
-<li><a href="37-which-function-operates.html#which-function-operates"><span class="toc-section-number">37</span> Which function operates?</a></li>
-<li><a href="38-what-does-a-function-learn.html#what-does-a-function-learn"><span class="toc-section-number">38</span> What does a function learn?</a></li>
-<li><a href="39-observing-with-curves-the-logistic-function.html#observing-with-curves-the-logistic-function"><span class="toc-section-number">39</span> Observing with curves: the logistic function</a></li>
-<li><a href="40-the-cost-of-curves-in-machine-learning.html#the-cost-of-curves-in-machine-learning"><span class="toc-section-number">40</span> The cost of curves in machine learning</a></li>
-<li><a href="41-curves-and-the-variation-in-models.html#curves-and-the-variation-in-models"><span class="toc-section-number">41</span> Curves and the variation in models</a></li>
-<li><a href="42-observing-costs-losses-and-objectives-through-optimisation.html#observing-costs-losses-and-objectives-through-optimisation"><span class="toc-section-number">42</span> Observing costs, losses and objectives through optimisation</a></li>
-<li><a href="43-gradients-as-partial-observers.html#gradients-as-partial-observers"><span class="toc-section-number">43</span> Gradients as partial observers</a></li>
-<li><a href="44-the-power-to-learn.html#the-power-to-learn"><span class="toc-section-number">44</span> The power to learn</a></li>
-<li><a href="45-data-reduces-uncertainty.html#data-reduces-uncertainty"><span class="toc-section-number">45</span> Data reduces uncertainty?</a></li>
-<li><a href="46-machine-learning-as-statistics-inside-out.html#machine-learning-as-statistics-inside-out"><span class="toc-section-number">46</span> Machine learning as statistics inside out</a></li>
-<li><a href="47-distributed-probabilities.html#distributed-probabilities"><span class="toc-section-number">47</span> Distributed probabilities</a></li>
-<li><a href="48-naive-bayes-and-the-distribution-of-probabilities.html#naive-bayes-and-the-distribution-of-probabilities"><span class="toc-section-number">48</span> Naive Bayes and the distribution of probabilities</a></li>
-<li><a href="49-spam-when-foralln-is-too-much.html#spam-when-foralln-is-too-much"><span class="toc-section-number">49</span> Spam: when <span class="math inline">\(\forall{N}\)</span> is too much?</a></li>
-<li><a href="50-the-improbable-success-of-the-naive-bayes-classifier.html#the-improbable-success-of-the-naive-bayes-classifier"><span class="toc-section-number">50</span> The improbable success of the Naive Bayes classifier</a></li>
-<li><a href="51-ancestral-probabilities-in-documents-inference-and-prediction.html#ancestral-probabilities-in-documents-inference-and-prediction"><span class="toc-section-number">51</span> Ancestral probabilities in documents: inference and prediction</a></li>
-<li><a href="52-statistical-decompositions-bias-variance-and-observed-errors.html#statistical-decompositions-bias-variance-and-observed-errors"><span class="toc-section-number">52</span> Statistical decompositions: bias, variance and observed errors</a></li>
-<li><a href="53-does-machine-learning-construct-a-new-statistical-reality.html#does-machine-learning-construct-a-new-statistical-reality"><span class="toc-section-number">53</span> Does machine learning construct a new statistical reality?</a></li>
-<li><a href="54-splitting-and-the-growth-of-trees.html#splitting-and-the-growth-of-trees"><span class="toc-section-number">54</span> Splitting and the growth of trees</a></li>
-<li><a href="55-differences-in-recursive-partitioning.html#differences-in-recursive-partitioning"><span class="toc-section-number">55</span> 1984: Differences in recursive partitioning</a></li>
-<li><a href="56-limiting-differences.html#limiting-differences"><span class="toc-section-number">56</span> Limiting differences</a></li>
-<li><a href="57-the-successful-dispersion-of-the-support-vector-machine.html#the-successful-dispersion-of-the-support-vector-machine"><span class="toc-section-number">57</span> The successful dispersion of the support vector machine</a></li>
-<li><a href="58-differences-blur.html#differences-blur"><span class="toc-section-number">58</span> Differences blur?</a></li>
-<li><a href="59-bending-the-decision-boundary.html#bending-the-decision-boundary"><span class="toc-section-number">59</span> Bending the decision boundary</a></li>
-<li><a href="60-instituting-patterns.html#instituting-patterns"><span class="toc-section-number">60</span> Instituting patterns</a></li>
-<li><a href="61-genomic-referentiality-and-materiality.html#genomic-referentiality-and-materiality"><span class="toc-section-number">61</span> Genomic referentiality and materiality</a></li>
-<li><a href="62-the-genome-as-threshold-object.html#the-genome-as-threshold-object"><span class="toc-section-number">62</span> The genome as threshold object</a></li>
-<li><a href="63-genomic-knowledges-and-their-datasets.html#genomic-knowledges-and-their-datasets"><span class="toc-section-number">63</span> Genomic knowledges and their datasets</a></li>
-<li><a href="64-the-advent-of-wide-dirty-and-mixed-data.html#the-advent-of-wide-dirty-and-mixed-data"><span class="toc-section-number">64</span> The advent of ‘wide, dirty and mixed’ data</a></li>
-<li><a href="65-cross-validating-machine-learning-in-genomics.html#cross-validating-machine-learning-in-genomics"><span class="toc-section-number">65</span> Cross-validating machine learning in genomics</a></li>
-<li><a href="66-proliferation-of-discoveries.html#proliferation-of-discoveries"><span class="toc-section-number">66</span> Proliferation of discoveries</a></li>
-<li><a href="67-variations-in-the-object-or-in-the-machine-learner.html#variations-in-the-object-or-in-the-machine-learner"><span class="toc-section-number">67</span> Variations in the object or in the machine learner?</a></li>
-<li><a href="68-whole-genome-functions.html#whole-genome-functions"><span class="toc-section-number">68</span> Whole genome functions</a></li>
-<li><a href="69-propagation-across-human-machine-boundaries.html#propagation-across-human-machine-boundaries"><span class="toc-section-number">69</span> Propagation across human-machine boundaries</a></li>
-<li><a href="70-competitive-positioning.html#competitive-positioning"><span class="toc-section-number">70</span> Competitive positioning</a></li>
-<li><a href="71-a-privileged-machine-and-its-diagrammatic-forms.html#a-privileged-machine-and-its-diagrammatic-forms"><span class="toc-section-number">71</span> A privileged machine and its diagrammatic forms</a></li>
-<li><a href="72-varying-subject-positions-in-code.html#varying-subject-positions-in-code"><span class="toc-section-number">72</span> Varying subject positions in code</a></li>
-<li><a href="73-the-subjects-of-a-hidden-operation.html#the-subjects-of-a-hidden-operation"><span class="toc-section-number">73</span> The subjects of a hidden operation</a></li>
-<li><a href="74-algorithms-that-propagate-errors.html#algorithms-that-propagate-errors"><span class="toc-section-number">74</span> Algorithms that propagate errors</a></li>
-<li><a href="75-competitions-as-examination.html#competitions-as-examination"><span class="toc-section-number">75</span> Competitions as examination</a></li>
-<li><a href="76-superimposing-power-and-knowledge.html#superimposing-power-and-knowledge"><span class="toc-section-number">76</span> Superimposing power and knowledge</a></li>
-<li><a href="77-ranked-subject-positions.html#ranked-subject-positions"><span class="toc-section-number">77</span> Ranked subject positions</a></li>
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="1-acknowledgments.html"><a href="1-acknowledgments.html"><i class="fa fa-check"></i><b>1</b> Acknowledgments</a></li>
+<li class="chapter" data-level="2" data-path="2-preface.html"><a href="2-preface.html"><i class="fa fa-check"></i><b>2</b> Preface</a></li>
+<li class="chapter" data-level="3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html"><i class="fa fa-check"></i><b>3</b> Introduction: Into the Data</a></li>
+<li class="chapter" data-level="4" data-path="4-three-accumulations-settings-data-and-devices.html"><a href="4-three-accumulations-settings-data-and-devices.html"><i class="fa fa-check"></i><b>4</b> Three accumulations: settings, data and devices</a></li>
+<li class="chapter" data-level="5" data-path="5-who-or-what-is-a-machine-learner.html"><a href="5-who-or-what-is-a-machine-learner.html"><i class="fa fa-check"></i><b>5</b> Who or what is a machine learner?</a></li>
+<li class="chapter" data-level="6" data-path="6-algorithmic-control-to-the-machine-learners.html"><a href="6-algorithmic-control-to-the-machine-learners.html"><i class="fa fa-check"></i><b>6</b> Algorithmic control to the machine learners?</a></li>
+<li class="chapter" data-level="7" data-path="7-the-archaeology-of-operations.html"><a href="7-the-archaeology-of-operations.html"><i class="fa fa-check"></i><b>7</b> The archaeology of operations</a></li>
+<li class="chapter" data-level="8" data-path="8-asymmetries-in-common-knowledge.html"><a href="8-asymmetries-in-common-knowledge.html"><i class="fa fa-check"></i><b>8</b> Asymmetries in common knowledge</a></li>
+<li class="chapter" data-level="9" data-path="9-what-cannot-be-automated.html"><a href="9-what-cannot-be-automated.html"><i class="fa fa-check"></i><b>9</b> What cannot be automated?</a></li>
+<li class="chapter" data-level="10" data-path="10-different-fields-in-machine-learning.html"><a href="10-different-fields-in-machine-learning.html"><i class="fa fa-check"></i><b>10</b> Different fields in machine learning?</a></li>
+<li class="chapter" data-level="11" data-path="11-the-diagram-in-critical-thought.html"><a href="11-the-diagram-in-critical-thought.html"><i class="fa fa-check"></i><b>11</b> The diagram in critical thought</a></li>
+<li class="chapter" data-level="12" data-path="12-we-dont-have-to-write-programs.html"><a href="12-we-dont-have-to-write-programs.html"><i class="fa fa-check"></i><b>12</b> ‘We don’t have to write programs’?</a></li>
+<li class="chapter" data-level="13" data-path="13-the-elements-of-machine-learning.html"><a href="13-the-elements-of-machine-learning.html"><i class="fa fa-check"></i><b>13</b> The elements of machine learning</a></li>
+<li class="chapter" data-level="14" data-path="14-who-reads-machine-learning-textbooks.html"><a href="14-who-reads-machine-learning-textbooks.html"><i class="fa fa-check"></i><b>14</b> Who reads machine learning textbooks?</a></li>
+<li class="chapter" data-level="15" data-path="15-r-a-matrix-of-transformations.html"><a href="15-r-a-matrix-of-transformations.html"><i class="fa fa-check"></i><b>15</b> <code>R</code>: a matrix of transformations</a></li>
+<li class="chapter" data-level="16" data-path="16-the-obdurate-mathematical-glint-of-machine-learning.html"><a href="16-the-obdurate-mathematical-glint-of-machine-learning.html"><i class="fa fa-check"></i><b>16</b> The obdurate mathematical glint of machine learning</a></li>
+<li class="chapter" data-level="17" data-path="17-cs229-2007-returning-again-and-again-to-certain-features.html"><a href="17-cs229-2007-returning-again-and-again-to-certain-features.html"><i class="fa fa-check"></i><b>17</b> CS229, 2007: returning again and again to certain features</a></li>
+<li class="chapter" data-level="18" data-path="18-the-visible-learning-of-machine-learning.html"><a href="18-the-visible-learning-of-machine-learning.html"><i class="fa fa-check"></i><b>18</b> The visible learning of machine learning</a></li>
+<li class="chapter" data-level="19" data-path="19-the-diagram-of-an-operational-formation.html"><a href="19-the-diagram-of-an-operational-formation.html"><i class="fa fa-check"></i><b>19</b> The diagram of an operational formation</a></li>
+<li class="chapter" data-level="20" data-path="20-vectorisation-and-its-consequences.html"><a href="20-vectorisation-and-its-consequences.html"><i class="fa fa-check"></i><b>20</b> Vectorisation and its consequences}</a></li>
+<li class="chapter" data-level="21" data-path="21-vector-space-and-geometry.html"><a href="21-vector-space-and-geometry.html"><i class="fa fa-check"></i><b>21</b> Vector space and geometry</a></li>
+<li class="chapter" data-level="22" data-path="22-mixing-places.html"><a href="22-mixing-places.html"><i class="fa fa-check"></i><b>22</b> Mixing places</a></li>
+<li class="chapter" data-level="23" data-path="23-truth-is-no-longer-in-the-table.html"><a href="23-truth-is-no-longer-in-the-table.html"><i class="fa fa-check"></i><b>23</b> Truth is no longer in the table?</a></li>
+<li class="chapter" data-level="24" data-path="24-the-epistopic-fault-line-in-tables.html"><a href="24-the-epistopic-fault-line-in-tables.html"><i class="fa fa-check"></i><b>24</b> The epistopic fault line in tables</a></li>
+<li class="chapter" data-level="25" data-path="25-surface-and-depths-the-problem-of-volume-in-data.html"><a href="25-surface-and-depths-the-problem-of-volume-in-data.html"><i class="fa fa-check"></i><b>25</b> Surface and depths: the problem of volume in data</a></li>
+<li class="chapter" data-level="26" data-path="26-vector-space-expansion.html"><a href="26-vector-space-expansion.html"><i class="fa fa-check"></i><b>26</b> Vector space expansion</a></li>
+<li class="chapter" data-level="27" data-path="27-drawing-lines-in-a-common-space-of-transformation.html"><a href="27-drawing-lines-in-a-common-space-of-transformation.html"><i class="fa fa-check"></i><b>27</b> Drawing lines in a common space of transformation</a></li>
+<li class="chapter" data-level="28" data-path="28-implicit-vectorization-in-code-and-infrastructures.html"><a href="28-implicit-vectorization-in-code-and-infrastructures.html"><i class="fa fa-check"></i><b>28</b> Implicit vectorization in code and infrastructures</a></li>
+<li class="chapter" data-level="29" data-path="29-lines-traversing-behind-the-light.html"><a href="29-lines-traversing-behind-the-light.html"><i class="fa fa-check"></i><b>29</b> Lines traversing behind the light</a></li>
+<li class="chapter" data-level="30" data-path="30-the-vectorised-table.html"><a href="30-the-vectorised-table.html"><i class="fa fa-check"></i><b>30</b> The vectorised table?</a></li>
+<li class="chapter" data-level="31" data-path="31-machines-finding-functions.html"><a href="31-machines-finding-functions.html"><i class="fa fa-check"></i><b>31</b> Machines finding functions}</a></li>
+<li class="chapter" data-level="32" data-path="32-learning-functions.html"><a href="32-learning-functions.html"><i class="fa fa-check"></i><b>32</b> Learning functions</a></li>
+<li class="chapter" data-level="33" data-path="33-supervised-unsupervised-reinforcement-learning-and-functions.html"><a href="33-supervised-unsupervised-reinforcement-learning-and-functions.html"><i class="fa fa-check"></i><b>33</b> Supervised, unsupervised, reinforcement learning and functions</a></li>
+<li class="chapter" data-level="34" data-path="34-which-function-operates.html"><a href="34-which-function-operates.html"><i class="fa fa-check"></i><b>34</b> Which function operates?</a></li>
+<li class="chapter" data-level="35" data-path="35-what-does-a-function-learn.html"><a href="35-what-does-a-function-learn.html"><i class="fa fa-check"></i><b>35</b> What does a function learn?</a></li>
+<li class="chapter" data-level="36" data-path="36-observing-with-curves-the-logistic-function.html"><a href="36-observing-with-curves-the-logistic-function.html"><i class="fa fa-check"></i><b>36</b> Observing with curves: the logistic function</a></li>
+<li class="chapter" data-level="37" data-path="37-the-cost-of-curves-in-machine-learning.html"><a href="37-the-cost-of-curves-in-machine-learning.html"><i class="fa fa-check"></i><b>37</b> The cost of curves in machine learning</a></li>
+<li class="chapter" data-level="38" data-path="38-curves-and-the-variation-in-models.html"><a href="38-curves-and-the-variation-in-models.html"><i class="fa fa-check"></i><b>38</b> Curves and the variation in models</a></li>
+<li class="chapter" data-level="39" data-path="39-observing-costs-losses-and-objectives-through-optimisation.html"><a href="39-observing-costs-losses-and-objectives-through-optimisation.html"><i class="fa fa-check"></i><b>39</b> Observing costs, losses and objectives through optimisation</a></li>
+<li class="chapter" data-level="40" data-path="40-gradients-as-partial-observers.html"><a href="40-gradients-as-partial-observers.html"><i class="fa fa-check"></i><b>40</b> Gradients as partial observers</a></li>
+<li class="chapter" data-level="41" data-path="41-the-power-to-learn.html"><a href="41-the-power-to-learn.html"><i class="fa fa-check"></i><b>41</b> The power to learn</a></li>
+<li class="chapter" data-level="42" data-path="42-probabilisation-and-the-taming-of-machines.html"><a href="42-probabilisation-and-the-taming-of-machines.html"><i class="fa fa-check"></i><b>42</b> Probabilisation and the Taming of Machines}</a></li>
+<li class="chapter" data-level="43" data-path="43-data-reduces-uncertainty.html"><a href="43-data-reduces-uncertainty.html"><i class="fa fa-check"></i><b>43</b> Data reduces uncertainty?</a></li>
+<li class="chapter" data-level="44" data-path="44-machine-learning-as-statistics-inside-out.html"><a href="44-machine-learning-as-statistics-inside-out.html"><i class="fa fa-check"></i><b>44</b> Machine learning as statistics inside out</a></li>
+<li class="chapter" data-level="45" data-path="45-distributed-probabilities.html"><a href="45-distributed-probabilities.html"><i class="fa fa-check"></i><b>45</b> Distributed probabilities</a></li>
+<li class="chapter" data-level="46" data-path="46-naive-bayes-and-the-distribution-of-probabilities.html"><a href="46-naive-bayes-and-the-distribution-of-probabilities.html"><i class="fa fa-check"></i><b>46</b> Naive Bayes and the distribution of probabilities</a></li>
+<li class="chapter" data-level="47" data-path="47-spam-when-foralln-is-too-much.html"><a href="47-spam-when-foralln-is-too-much.html"><i class="fa fa-check"></i><b>47</b> Spam: when <span class="math inline">\(\forall{N}\)</span> is too much?</a></li>
+<li class="chapter" data-level="48" data-path="48-the-improbable-success-of-the-naive-bayes-classifier.html"><a href="48-the-improbable-success-of-the-naive-bayes-classifier.html"><i class="fa fa-check"></i><b>48</b> The improbable success of the Naive Bayes classifier</a></li>
+<li class="chapter" data-level="49" data-path="49-ancestral-probabilities-in-documents-inference-and-prediction.html"><a href="49-ancestral-probabilities-in-documents-inference-and-prediction.html"><i class="fa fa-check"></i><b>49</b> Ancestral probabilities in documents: inference and prediction</a></li>
+<li class="chapter" data-level="50" data-path="50-statistical-decompositions-bias-variance-and-observed-errors.html"><a href="50-statistical-decompositions-bias-variance-and-observed-errors.html"><i class="fa fa-check"></i><b>50</b> Statistical decompositions: bias, variance and observed errors</a></li>
+<li class="chapter" data-level="51" data-path="51-does-machine-learning-construct-a-new-statistical-reality.html"><a href="51-does-machine-learning-construct-a-new-statistical-reality.html"><i class="fa fa-check"></i><b>51</b> Does machine learning construct a new statistical reality?</a></li>
+<li class="chapter" data-level="52" data-path="52-patterns-and-differences.html"><a href="52-patterns-and-differences.html"><i class="fa fa-check"></i><b>52</b> Patterns and differences</a></li>
+<li class="chapter" data-level="53" data-path="53-splitting-and-the-growth-of-trees.html"><a href="53-splitting-and-the-growth-of-trees.html"><i class="fa fa-check"></i><b>53</b> Splitting and the growth of trees</a></li>
+<li class="chapter" data-level="54" data-path="54-differences-in-recursive-partitioning.html"><a href="54-differences-in-recursive-partitioning.html"><i class="fa fa-check"></i><b>54</b> 1984: Differences in recursive partitioning</a></li>
+<li class="chapter" data-level="55" data-path="55-limiting-differences.html"><a href="55-limiting-differences.html"><i class="fa fa-check"></i><b>55</b> Limiting differences</a></li>
+<li class="chapter" data-level="56" data-path="56-the-successful-dispersion-of-the-support-vector-machine.html"><a href="56-the-successful-dispersion-of-the-support-vector-machine.html"><i class="fa fa-check"></i><b>56</b> The successful dispersion of the support vector machine</a></li>
+<li class="chapter" data-level="57" data-path="57-differences-blur.html"><a href="57-differences-blur.html"><i class="fa fa-check"></i><b>57</b> Differences blur?</a></li>
+<li class="chapter" data-level="58" data-path="58-bending-the-decision-boundary.html"><a href="58-bending-the-decision-boundary.html"><i class="fa fa-check"></i><b>58</b> Bending the decision boundary</a></li>
+<li class="chapter" data-level="59" data-path="59-instituting-patterns.html"><a href="59-instituting-patterns.html"><i class="fa fa-check"></i><b>59</b> Instituting patterns</a></li>
+<li class="chapter" data-level="60" data-path="60-regularizing-and-materializing-objects.html"><a href="60-regularizing-and-materializing-objects.html"><i class="fa fa-check"></i><b>60</b> Regularizing and materializing objects}</a></li>
+<li class="chapter" data-level="61" data-path="61-genomic-referentiality-and-materiality.html"><a href="61-genomic-referentiality-and-materiality.html"><i class="fa fa-check"></i><b>61</b> Genomic referentiality and materiality</a></li>
+<li class="chapter" data-level="62" data-path="62-the-genome-as-threshold-object.html"><a href="62-the-genome-as-threshold-object.html"><i class="fa fa-check"></i><b>62</b> The genome as threshold object</a></li>
+<li class="chapter" data-level="63" data-path="63-genomic-knowledges-and-their-datasets.html"><a href="63-genomic-knowledges-and-their-datasets.html"><i class="fa fa-check"></i><b>63</b> Genomic knowledges and their datasets</a></li>
+<li class="chapter" data-level="64" data-path="64-the-advent-of-wide-dirty-and-mixed-data.html"><a href="64-the-advent-of-wide-dirty-and-mixed-data.html"><i class="fa fa-check"></i><b>64</b> The advent of ‘wide, dirty and mixed’ data</a></li>
+<li class="chapter" data-level="65" data-path="65-cross-validating-machine-learning-in-genomics.html"><a href="65-cross-validating-machine-learning-in-genomics.html"><i class="fa fa-check"></i><b>65</b> Cross-validating machine learning in genomics</a></li>
+<li class="chapter" data-level="66" data-path="66-proliferation-of-discoveries.html"><a href="66-proliferation-of-discoveries.html"><i class="fa fa-check"></i><b>66</b> Proliferation of discoveries</a></li>
+<li class="chapter" data-level="67" data-path="67-variations-in-the-object-or-in-the-machine-learner.html"><a href="67-variations-in-the-object-or-in-the-machine-learner.html"><i class="fa fa-check"></i><b>67</b> Variations in the object or in the machine learner?</a></li>
+<li class="chapter" data-level="68" data-path="68-whole-genome-functions.html"><a href="68-whole-genome-functions.html"><i class="fa fa-check"></i><b>68</b> Whole genome functions</a></li>
+<li class="chapter" data-level="69" data-path="69-propagating-subject-positions.html"><a href="69-propagating-subject-positions.html"><i class="fa fa-check"></i><b>69</b> Propagating subject positions}</a></li>
+<li class="chapter" data-level="70" data-path="70-propagation-across-human-machine-boundaries.html"><a href="70-propagation-across-human-machine-boundaries.html"><i class="fa fa-check"></i><b>70</b> Propagation across human-machine boundaries</a></li>
+<li class="chapter" data-level="71" data-path="71-competitive-positioning.html"><a href="71-competitive-positioning.html"><i class="fa fa-check"></i><b>71</b> Competitive positioning</a></li>
+<li class="chapter" data-level="72" data-path="72-a-privileged-machine-and-its-diagrammatic-forms.html"><a href="72-a-privileged-machine-and-its-diagrammatic-forms.html"><i class="fa fa-check"></i><b>72</b> A privileged machine and its diagrammatic forms</a></li>
+<li class="chapter" data-level="73" data-path="73-varying-subject-positions-in-code.html"><a href="73-varying-subject-positions-in-code.html"><i class="fa fa-check"></i><b>73</b> Varying subject positions in code</a></li>
+<li class="chapter" data-level="74" data-path="74-the-subjects-of-a-hidden-operation.html"><a href="74-the-subjects-of-a-hidden-operation.html"><i class="fa fa-check"></i><b>74</b> The subjects of a hidden operation</a></li>
+<li class="chapter" data-level="75" data-path="75-algorithms-that-propagate-errors.html"><a href="75-algorithms-that-propagate-errors.html"><i class="fa fa-check"></i><b>75</b> Algorithms that propagate errors</a></li>
+<li class="chapter" data-level="76" data-path="76-competitions-as-examination.html"><a href="76-competitions-as-examination.html"><i class="fa fa-check"></i><b>76</b> Competitions as examination</a></li>
+<li class="chapter" data-level="77" data-path="77-superimposing-power-and-knowledge.html"><a href="77-superimposing-power-and-knowledge.html"><i class="fa fa-check"></i><b>77</b> Superimposing power and knowledge</a></li>
+<li class="chapter" data-level="78" data-path="78-ranked-subject-positions.html"><a href="78-ranked-subject-positions.html"><i class="fa fa-check"></i><b>78</b> Ranked subject positions</a></li>
+<li class="chapter" data-level="79" data-path="79-conclusion-out-of-the-data.html"><a href="79-conclusion-out-of-the-data.html"><i class="fa fa-check"></i><b>79</b> Conclusion: Out of the Data}</a></li>
+<li class="chapter" data-level="80" data-path="80-machine-learners.html"><a href="80-machine-learners.html"><i class="fa fa-check"></i><b>80</b> 250,000 machine learners</a></li>
+<li class="chapter" data-level="81" data-path="81-a-summary-of-the-argument.html"><a href="81-a-summary-of-the-argument.html"><i class="fa fa-check"></i><b>81</b> A summary of the argument</a></li>
+<li class="chapter" data-level="82" data-path="82-in-situ-hybridization.html"><a href="82-in-situ-hybridization.html"><i class="fa fa-check"></i><b>82</b> In-situ hybridization</a></li>
+<li class="chapter" data-level="83" data-path="83-critical-operational-practice.html"><a href="83-critical-operational-practice.html"><i class="fa fa-check"></i><b>83</b> Critical operational practice?</a></li>
+<li class="chapter" data-level="84" data-path="84-obstacles-to-the-work-of-freeing-machine-learning.html"><a href="84-obstacles-to-the-work-of-freeing-machine-learning.html"><i class="fa fa-check"></i><b>84</b> Obstacles to the work of freeing machine learning</a></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-12">
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning: Archaeology of a Data Practice</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
 <div id="cross-validating-machine-learning-in-genomics" class="section level1">
 <h1><span class="header-section-number">65</span> Cross-validating machine learning in genomics</h1>
 <p>The linear sequences of DNA data mix and diffuse partly through the archival accumulation that allows them to be superimposed, annotated and layered, but also through the many efforts to traverse their expanded volume using classifiers and predictive models. A recent review in the journal <em>Genomics</em> highlights the increasing bearing of machine learning techniques on genomic science:</p>
@@ -171,7 +186,7 @@ img {
 <p>A technique called ‘lasso regression’ displays features that might help us grasp how machine learners regularize genomic data.  Remember that the linear regression model with its diagonal line or plane running through vector space provides the underlying intuition for many machine learners. We have seen the function in Equation  several times already in different variations, including logistic regression used for classification of types or groupings.</p>
 
 <p>In gene expression models, the values of <span class="math inline">\(\beta\)</span> shown in equation  map on to the different levels of expression of the many genes indexed by the <span class="math inline">\(p\)</span> columns of the microarray dataset. The model tests how different patterns of gene expression associate with different tumour types. As we have already seen, the number of combinations of genes associated with different tumour types vastly outweighs the number of samples.</p>
-<p>The regularized version of the linear regression framework known as ‘lasso’ – Least Absolute Shrinkage and Selection Operator – introduces a different form of training and observation of model construction. This train hinges on the lasso penalty shown in equation <a href="#fn87" class="footnoteRef" id="fnref87"><sup>87</sup></a> </p>
+<p>The regularized version of the linear regression framework known as ‘lasso’ – Least Absolute Shrinkage and Selection Operator – introduces a different form of training and observation of model construction. This train hinges on the lasso penalty shown in equation <a href="#fn86" class="footnoteRef" id="fnref86"><sup>86</sup></a> </p>
 
 <blockquote>
 <blockquote>
@@ -184,28 +199,66 @@ img {
 </div>
 <div class="footnotes">
 <hr />
-<ol start="87">
-<li id="fn87"><p>The original publication of the lasso technique in a paper entitled ‘Shrinkage and Selection via the Lasso’ <span class="citation">[@Tibshirani_1996]</span> has been heavily cited in subsequent literature. <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=tibshirani+1996+lasso">Google Scholar</a> counts around 13,000 citations. For a paper published in the <em>Journal of the Royal Statistical Society</em>, this is surprisingly high, but attests, I would suggest, to the intense interest in renovating linear models for new problems such as image recognition or tumour classification. Somewhat surprisingly, given its heavy usage in other scientists, Andrew Ng’s CS229 machine learning course at Stanford University doesn’t mention the lasso.<a href="65-cross-validating-machine-learning-in-genomics.html#fnref87">↩</a></p></li>
+<ol start="86">
+<li id="fn86"><p>The original publication of the lasso technique in a paper entitled ‘Shrinkage and Selection via the Lasso’ <span class="citation">[@Tibshirani_1996]</span> has been heavily cited in subsequent literature. <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=tibshirani+1996+lasso">Google Scholar</a> counts around 13,000 citations. For a paper published in the <em>Journal of the Royal Statistical Society</em>, this is surprisingly high, but attests, I would suggest, to the intense interest in renovating linear models for new problems such as image recognition or tumour classification. Somewhat surprisingly, given its heavy usage in other scientists, Andrew Ng’s CS229 machine learning course at Stanford University doesn’t mention the lasso.<a href="65-cross-validating-machine-learning-in-genomics.html#fnref86">↩</a></p></li>
 </ol>
 </div>
-<p style="text-align: center;">
-<a href="64-the-advent-of-wide-dirty-and-mixed-data.html"><button class="btn btn-default">Previous</button></a>
-<a href="66-proliferation-of-discoveries.html"><button class="btn btn-default">Next</button></a>
-</p>
-</div>
-</div>
+            </section>
 
+          </div>
+        </div>
+      </div>
+<a href="64-the-advent-of-wide-dirty-and-mixed-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="66-proliferation-of-discoveries.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
-</div>
-
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-
-// add bootstrap table styles to pandoc tables
-$(document).ready(function () {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
 });
-
+});
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
+
 </html>

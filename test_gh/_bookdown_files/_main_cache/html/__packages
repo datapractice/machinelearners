@@ -20,3 +20,5 @@ tidyr
 dplyr
 MASS
 neuralnet
+gtrendsR
+reshape2
