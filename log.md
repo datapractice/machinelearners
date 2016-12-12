@@ -118,3 +118,9 @@
 ## Sun Dec 11 15:16:08 GMT 2016
 
 - experimenting with bookdown to get images showing. Working ok on test files. But will need to go through an convert everything to the format \@ref(fig:x). 
+
+
+## Mon Dec 12 14:36:51 GMT 2016
+- feeling better now that images are starting to show. Had to do a lot of subheading fixing. Undoing latex stuff with simpler bookdown. 
+- working on a script to change all the references: this one is ok for images:
+    sed 's/\\ref{fig:\(\w*\)}/\\@ref(fig:\1)/' 03_praxis.rmd|grep '\\@'
