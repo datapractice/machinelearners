@@ -124,3 +124,10 @@
 - feeling better now that images are starting to show. Had to do a lot of subheading fixing. Undoing latex stuff with simpler bookdown. 
 - working on a script to change all the references: this one is ok for images:
     sed 's/\\ref{fig:\(\w*\)}/\\@ref(fig:\1)/' 03_praxis.rmd|grep '\\@'
+
+## Sun Dec 18 10:16:28 GMT 2016
+- ran the sed script to convert images links
+- then did the tables:
+sed -i 's/\\ref{tab:\(\w*\)}/\\@ref(tab:\1)/' *.rmd 
+- still need to do chapter references
+sed -i 's/\\ref{ch:\(\w*\)}/\\@ref(ch:\1)/' *.rmd 
