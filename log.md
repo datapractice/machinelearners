@@ -130,4 +130,10 @@
 - then did the tables:
 sed -i 's/\\ref{tab:\(\w*\)}/\\@ref(tab:\1)/' *.rmd 
 - still need to do chapter references
-sed -i 's/\\ref{ch:\(\w*\)}/\\@ref(ch:\1)/' *.rmd 
+    sed -i 's/\\ref{ch:\(\w*\)}/\\@ref(ch:\1)/' *.rmd 
+
+## Mon Dec 19 08:55:58 GMT 2016
+- spent quite a long time on the sed expression to change all chunk labels to use hyphens instead of underscores. Wish I knew about that little requirement earlier. 
+    sed  's/`{r \([[:alnum:]]*\)_?\([[:alnum:]]*\)/```{r \1-\2/' *.rmd|grep '{r \w*'
+- it doesn't work properly, not sure why -- oh, ok, begin to see why -- groupings are not right. 
+- giving up on this for the moment -- could probably just get it done manually ... 
