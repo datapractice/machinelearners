@@ -1,13 +1,10 @@
 
-
 ## Tue May 10 10:38:02 BST 2016
 
 - fixing up the bibliography; modified the zotero export to exclude large fields (like notes, abstract); modifying mybook package to suppress other fields
 - struggling with 'last accessed' field -- that needs to be 'by type'. 
 - sorted this out by adding stuff to 'mybook.sty' --\clearfield(urlyear},etc. A bit of pfaff and took me all morning, but references are now much cleaner. 
 - will go through rest of reference list adding page numbers, etc. 
-
-
 
 ## Thu May 12 13:14:42 BST 2016
 
@@ -92,15 +89,11 @@
 ## Wed Jul  6 22:43:53 BST 2016
 - lot of revisions on ch1 and ch2. Almost on schedule
 
-
-
 ## Mon  5 Dec 14:47:17 GMT 2016
 
 - addressing image permissions for openscikit image and american statistical association journal. Figures 4.1 and 6.2
 - scikit-learn image is here http://scikit-learn.org/stable/tutorial/machine_learning_map/ It is under BSD Licence, which I read to mean that a copyright notice needs to accompany the figure. i.e. **Copyright** (c) 2010 - 2016, scikit-learn developers, (see https://en.wikipedia.org/wiki/BSD_licenses) for details.   
 - american statist: probably will need to use copyright clearance centre http://www.amstat.org/ASA/Copyright.aspx has the details. 
-
-
 
 ## Tue Dec  6 14:57:30 GMT 2016
 - requested prices from RightsLink for figure 6.2 -- waiting for Taylor & Francis to get back to me
@@ -108,7 +101,8 @@
 
 
 ## Tue 20 Dec 15:25:33 GMT 2016
-- sbuckley asks: And were you able to get better resolution files for figures 7.1 and 8.2? 
+- **sbuckley asks:** And were you able to get better resolution files for figures 7.1 and 8.2? 
    - 7.1 is the circos genome -- can send the highres version of this. it is big. and here ch6_topologies/figure/circos.pdf 
    - 8.2 early technical report from rumelhart -- not sure that i need this page here. but I extracted it -- as ch7_subjects/figure/fig8-2.pdf 
    - sent both files to sb; but I still have bigger circos at home
+   - actually I don't -- that is the big one. The small circos was manuscript_files/figure/circos_small.pdf -- that's the one the press might have seen ..  
