@@ -105,3 +105,10 @@
 ## Tue Dec  6 14:57:30 GMT 2016
 - requested prices from RightsLink for figure 6.2 -- waiting for Taylor & Francis to get back to me
 - TODO: look at rest of queries on size, etc
+
+
+## Tue 20 Dec 15:25:33 GMT 2016
+- sbuckley asks: And were you able to get better resolution files for figures 7.1 and 8.2? 
+   - 7.1 is the circos genome -- can send the highres version of this. it is big. and here ch6_topologies/figure/circos.pdf 
+   - 8.2 early technical report from rumelhart -- not sure that i need this page here. but I extracted it -- as ch7_subjects/figure/fig8-2.pdf 
+   - sent both files to sb; but I still have bigger circos at home
