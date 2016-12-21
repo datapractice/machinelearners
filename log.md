@@ -119,7 +119,6 @@
 
 - experimenting with bookdown to get images showing. Working ok on test files. But will need to go through an convert everything to the format \@ref(fig:x). 
 
-
 ## Mon Dec 12 14:36:51 GMT 2016
 - feeling better now that images are starting to show. Had to do a lot of subheading fixing. Undoing latex stuff with simpler bookdown. 
 - working on a script to change all the references: this one is ok for images:
@@ -135,5 +134,13 @@ sed -i 's/\\ref{tab:\(\w*\)}/\\@ref(tab:\1)/' *.rmd
 ## Mon Dec 19 08:55:58 GMT 2016
 - spent quite a long time on the sed expression to change all chunk labels to use hyphens instead of underscores. Wish I knew about that little requirement earlier. 
     sed  's/`{r \([[:alnum:]]*\)_?\([[:alnum:]]*\)/```{r \1-\2/' *.rmd|grep '{r \w*'
+`'''{}\```
 - it doesn't work properly, not sure why -- oh, ok, begin to see why -- groupings are not right. 
 - giving up on this for the moment -- could probably just get it done manually ... 
+
+
+## Wed 21 Dec 2016 09:47:00 GMT
+- cleaned up directories on lot on this branch. Need to:
+    - add all the test_gh pages in properly
+    - merge this new branch back into test-gh-pages and then start fixing images agina
+
