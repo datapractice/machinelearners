@@ -15,9 +15,9 @@ output:
 #      toc: yes
 #      css: toc.css
 #documentclass: book
-bibliography: ["ref_bibs/uni.bib"]
-biblio-style: chicago
-link-citations: yes
+#bibliography: ["ref_bibs/uni.bib"]
+#biblio-style: chicago
+#link-citations: yes
 ---
 #  Acknowledgments 
 \label{ch:acknowledgments}
@@ -26,7 +26,7 @@ link-citations: yes
 knitr::opts_chunk$set(fig.width=12, tidy=TRUE, fig.height=8, 
                       echo=FALSE,   fig.show='asis', results='markup', warning=FALSE, message=FALSE )
 library(RSQLite)
-con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
+con <- dbConnect(RSQLite::SQLite(),'ml_lit/all_refs.sqlite3')
 library(ggplot2)
 library(stringr)
 library(xtable)

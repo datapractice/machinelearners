@@ -59,14 +59,7 @@ plt.savefig('figure/cat_hog.pdf')
 plt.savefig('figure/cat_hog.png', dpi=600)
 ```
 
-\begin{figure}
-  \centering
-      \includegraphics[width=0.9\textwidth]{figure/cat_hog.pdf}
-        \caption[Cat as histogram of gradients]{Close up of cat. The image on the left is already signal-processed as a JPEG format file. The image on the right is further processed using histogram of oriented gradients (HOG) edge detection. \texttt{kittydar} models HOG features.  Cat photo courtesy photos-public-domain.com}
-  \label{fig:cat}
-\end{figure}
-
-```{r cat, fig.cap='Cat as histogram of gradients:Close up of cat. The image on the left is already signal-processed as a JPEG format file. The image on the right is further processed using histogram of oriented gradients (HOG) edge detection. \texttt{kittydar} models HOG features.  Cat photo courtesy photos-public-domain.com'}
+```{r cat, fig.cap='Cat as histogram of gradients:Close up of cat. The image on the left is already signal-processed as a JPEG format file. The image on the right is further processed using histogram of oriented gradients (HOG) edge detection. \textit{kittydar} models HOG features.  Cat photo courtesy: photos-public-domain.com'}
 library(knitr)
 include_graphics('figure/cat_hog.png', auto_pdf=TRUE )
 ```
@@ -201,12 +194,6 @@ g
 
 ``` 
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.9\textwidth]{figure/machine_learning_over_time-1.pdf}
-    \caption[Machine learners in scientific literature]{Machine learners in scientific literature. The lines in the graph suggest something of the changing fortunes of machine learners over time. The publication data comes from Thomson Reuter's \textit{Web of Science}. Separate searches were run for each machine learner. In these plots, as in the GoogleTrends data, the actual counts of publications have been normalised. In contrast to the GoogleTrend plots, these plots do not show the relative counts of the publications, only their distribution in time. }
-  \label{fig:scientific_lit}
-\end{figure}
 
 Similarly, if we attend to the flow of machine learning practices, devices and techniques in scientific fields, a diversification rather than a simple scaling-up to industrial-strength infrastructures begins to appear. Figure \@ref( fig:scientific-lit )  derives from counts of scientific publications that mention particular machine learners such as `decision tree` or `Naive Bayes` in their title, their abstract or keywords. The curves, which are probability density plots, \index{graphic!probability density plot} suggest a time-varying distribution of statements and operations for different techniques. This crude plot outlines the duration and the ebbs and flows of work on specific techniques, platforms, knowledges and power relations. Like the Google Trends searches for `machine learning`, the lines shown in Figure \@ref( fig:scientific-lit ) have been normalised in order to adjust for an overall increase in the volume of scientific publications over the last five decades.\index{scientific publications} Unlike the Google Trends search patterns, the scientific literature displays polymorphous temporalities in which different techniques and operations diverge widely from each other over the last half century. Crucially for my purposes, machine learning in the sciences constitutes an a-totality, a heterogeneous volume and de-centred production of statements. \index{statements} \index{science!production of statements}
 

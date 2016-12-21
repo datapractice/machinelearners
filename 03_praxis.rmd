@@ -1,4 +1,4 @@
-# Diagramming machines}
+# Diagramming machines
 \label{ch:diagram}
 
 
@@ -117,7 +117,7 @@ while True:
 ```{r nand_weights_code, results='asis', include=TRUE}
 library(xtable)
 weights = read.csv('perceptron_weights.txt')[1:15,]
-tab = xtable(weights, label='tab:nand_weights', caption= 'Iterative change in weights as a perceptron learns the NAND function' )
+tab = xtable(weights, label='tab:nand-weights', caption= 'Iterative change in weights as a perceptron learns the NAND function' )
 print(tab, 'latex', include.rownames = FALSE, table.placement = '!htb')
 ```
 
@@ -127,14 +127,14 @@ Second, while the shaping of data, the counting of errors, and the optimisation 
 
 Third, executing this code (by copying and pasting it into a `Python` terminal, for instance) produces several dozen lines of numbers. They are initially different to each other, but gradually converge on the same values (see table \@ref(tab:nand_weights)). These numbers are the 'weights' of the nodes of the perceptron as it iteratively 'learns' to recognise patterns in the input values. None of the workings of the perceptron need concern us at the moment. Again, what runs across all of these observations are the numbers that the algorithm produces as output -- they embody the program the perceptron has written. How has the learning happened in code? The NAND truth table has been re-drawn as a dataset (see line 4 of the code that defines the variable `training_set`). The perceptron has learned the data by approaching it as a set of training examples, and then adjusting its internal model -- the weights that are printed during each loop of the model as the output --  repeatedly until the model is producing the correct result values $Y$ of the truth table. The algorithm exits its main loop (`while True:`)  when there are no errors.
 
-The perceptron algorithm computes numbers  - `0.79999`, `2.0` -- as weights or parameters.  \index{weights!see {model!parameters}} These numbers display no direct correspondence with the symbolic categories of boolean True and False or the binary digits `1` and `0`. There may be a relation but it is not obvious at first glance. The problem of mapping these calculated parameters -- and they truly abound in machine learning -- triggers many different diagrammatic movements in machine learning (and these different movements will be discussed in chapters \@ref(ch:vector) and \ref{ch:pattern}). These numbers engender much statistical ratiocination (see chapter \ref{ch:probability}). Here we need only note the contrast between symbolically organised statements like the NAND truth table of Table \@ref(tab:boolean)  and the operational statements in table \@ref(tab:nand_weights).  
+The perceptron algorithm computes numbers  - `0.79999`, `2.0` -- as weights or parameters.  \index{weights!see {model!parameters}} These numbers display no direct correspondence with the symbolic categories of boolean True and False or the binary digits `1` and `0`. There may be a relation but it is not obvious at first glance. The problem of mapping these calculated parameters -- and they truly abound in machine learning -- triggers many different diagrammatic movements in machine learning (and these different movements will be discussed in chapters \@ref(ch:vector) and \ref{ch:pattern}). These numbers engender much statistical ratiocination (see chapter \ref{ch:probability}). Here we need only note the contrast between symbolically organised statements like the NAND truth table of Table \@ref(tab:boolean)  and the operational statements in table \@ref(tab:nand-weights).  
 
 The operation here is recursive: a model or algorithm implemented in digital logic (as `Python` code) has 'learned' -- a term we need to explore more carefully -- a basic rule of digital logic (the `NAND` function) at least approximately by treating logical propositions as data. This mode of transformation is symptomatic. The learning done in machine learning has few cognitive or symbolic underpinnings. It differs from classical AI in that it treats existing symbolic, control, communicative and increasingly, signifying processes (such as the cat faces that `kittydar` tries to find), and latches onto them programmatically only in the form of weights. 
 
 ## The elements of machine learning
 
 ```{r elem_stat_learn_figures_code, cache=TRUE, echo=FALSE, messages=FALSE}
-system('pdftotext -f 10 -l 716 ../ml_lit/hastie_elements_2009.pdf hastie_main.txt')
+system('pdftotext -f 10 -l 716 ml_lit/hastie_elements_2009.pdf hastie_main.txt')
 main_text = readLines('hastie_main.txt')
 figure_count = length(grep(main_text, pattern='FIGURE \\d{1,2}\\.\\d{1,3}'))
 table_count = length(grep(main_text, pattern='TABLE \\d{1,2}\\.\\d{1,3}'))
@@ -145,16 +145,10 @@ device_count = figure_count  + table_count + algorithm_count + equation_count
 
 If this growing of programs through modelling data is a different mode of coding operations, and a different mode of knowing, how does one learn to do it? \index{learning!relation to machine learning}  In the course of writing this book, as well as reading the academic textbooks, popular how-to books, software manuals, help documents and blog-how-to posts,  I attended graduate courses in Bayesian statistics, genomic data analysis, data mining, and missing data.  I also participated in online machine learning courses and some machine learning competitions. These are all widely shared activities for people learning to do machine learning. I watched and copied down by hand many statements, equations and propositions from Youtube videos of the eighteen lectures in  Andrew Ng's \index{Ng, Andrew!CS229 lectures} Stanford University lectures  CS229 computer science course recorded in 2008. These lectures  have cumulative viewing figures of around 500,000 [@Ng_2008]. I spent extended hours learning to use various code libraries, packages and platforms in `R`, `Python` and to a limited extent `Torch` \index{programming languages}. Finally, I gradually accumulated and worked with a set of around 400,000 articles drawn from various fields of science in response to search queries on particular machine learners such as `support vector machine` or `expectation maximization`. \index{science!publications!on machine learning} This accumulation of knowledge appears in figures \@ref(fig:vast-diagram) as a network-cloud.  
 
-\begin{figure}
-  \centering
-      \includegraphics[width=0.9\textwidth]{figure/vast_diagram}
-        \caption{Elements of learning to machine learn}
-  \label{fig:vast_diagram}
-\end{figure}
 
-```{r vast-diagram, echo=FALSE, warning=FALSE}
-library(knitr)
-include_graphic('figure/vast_diagram.png', auto_pdf=TRUE)
+```{r vast-diagram, echo=FALSE,fig.cap='Elements of learning to machine learn',  warning=FALSE}
+    library(knitr)
+    include_graphics('figure/vast_diagram.png', auto_pdf=TRUE)
 ```
 
 
@@ -267,7 +261,7 @@ def keyword_counts(wos_df):
     return key_counts
 
 
-df = load_records('../ml_lit/data/hastie_elem_WOS/')
+df = load_records('ml_lit/data/hastie_elem_WOS/')
 df = clean_topics(df)
 df = clean_fields(df)
 
@@ -293,7 +287,7 @@ pages_counted_sorted.to_csv('data/hastie_pages.csv')
 
 ```
 
-```{r plot-hastie-pages, results='hide', include=FALSE, cache=TRUE}
+```{r hastie-pages, fig.cap='Pages cited from \textit{Elements of Statistical Learning }', echo=FALSE,  cache=TRUE}
 library(ggplot2)
 hastie_pages = read.csv('data/hastie_pages.csv')
 colnames(hastie_pages) = c('page', 'reference_count')
@@ -301,21 +295,14 @@ plt = ggplot(hastie_pages, aes(x =page, y = reference_count))
 plt + geom_bar(stat = 'identity')
 ```
 
-\begin{figure}
-  \centering
-      \includegraphics[width=0.9\textwidth]{figure/plot_hastie_pages-1.pdf}
-        \caption[Pages cited from \textit{Elements of Statistical Learning }]{Pages cited from \textit{Elements of Statistical Learning }  by academic publications in all fields.}
-  \label{fig:hastie_pages}
-\end{figure}
 
-
-So we know that _Elements of Statistical Learning_ passes into many fields. But what do people read in the textual environment of book? In general, the thousands of citations of the book themselves compose a diagram of the book's intersection with different domains of knowledge. The relative concentrations and sparsities of these citations suggest there may be specific sites of engagement in the techniques, approaches and machines that the book documents. Of the around 760 pages in the two editions ([@Hastie_2009] and [@Hastie_2001]), around `r dim(hastie_pages)[1]` distinct pages are referenced in the citing literature. As figure \@ref(fig:hastie_pages) indicates, certain portions of the book are much more heavily cited than others. This distribution of page references in the literature that cites _Elements of Statistical Learning_ is a rough guide to how the book has been read in different settings. For instance, the most commonly cited page in the book is page 553. That page begins a section called 'Non-negative Matrix Factorization', \index{machine learner!Non-negative matrix factorization} a technique frequently used to process digital images to compress their visual complexity into a simpler set of visual signals [@Hastie_2009, 553]. (The underlying reference here is  the highly cited paper [@Lee_1999]) Like `kittydar`, it, as Hastie and co-authors write, 'learns to represent faces with a set of basis images resembling parts of faces' [@Hastie_2009, 555]. (So `kittydar`, which doesn't use NMF, might do better if it did, because it could work just with parts of the images that lie somewhere near the parts of a cat's face -- its nose, its eyes, its ears.\index{machine learner!\texttt{kittydar}}) \index{face recognition}
+So we know that _Elements of Statistical Learning_ passes into many fields. But what do people read in the textual environment of book? In general, the thousands of citations of the book themselves compose a diagram of the book's intersection with different domains of knowledge. The relative concentrations and sparsities of these citations suggest there may be specific sites of engagement in the techniques, approaches and machines that the book documents. Of the around 760 pages in the two editions ([@Hastie_2009] and [@Hastie_2001]), around `r dim(hastie_pages)[1]` distinct pages are referenced in the citing literature. As figure \@ref(fig:hastie-pages) indicates, certain portions of the book are much more heavily cited than others. This distribution of page references in the literature that cites _Elements of Statistical Learning_ is a rough guide to how the book has been read in different settings. For instance, the most commonly cited page in the book is page 553. That page begins a section called 'Non-negative Matrix Factorization', \index{machine learner!Non-negative matrix factorization} a technique frequently used to process digital images to compress their visual complexity into a simpler set of visual signals [@Hastie_2009, 553]. (The underlying reference here is  the highly cited paper [@Lee_1999]) Like `kittydar`, it, as Hastie and co-authors write, 'learns to represent faces with a set of basis images resembling parts of faces' [@Hastie_2009, 555]. (So `kittydar`, which doesn't use NMF, might do better if it did, because it could work just with parts of the images that lie somewhere near the parts of a cat's face -- its nose, its eyes, its ears.\index{machine learner!\texttt{kittydar}}) \index{face recognition}
 
 Conversely, what do the authors of _Elements of Statistical Learning_ read? The book gathers elements from many different quarters and seeks to integrate them in terms of statistical theory. The hyperobject-like aspect of the book comes from the thick weave of equations, diagrams, tables, algorithms, bibliographic apparatus, and numbers wreathed in typographic ornaments drawn from many other sources. For instance, in terms of outgoing references or the literature that it cites, _Elements of Statistical Learning_ webs together a field of scientific and technical work with data and predictive models ranging across half a century. The reference list beginning at page 699 [@Hastie_2009, 699] runs for around 35 pages, and the five hundred or so references there point in many directions. The weave of these elements differs greatly from citational patterns in the humanities or social sciences. Reading this book almost necessitates an archaeological approach since it comprises so many parts and fragments. \index{archaeology!reading practices in}
 
-```{r hastie-references, results='hide', include=FALSE, cache=TRUE, echo=FALSE}
-system('pdftotext -f 717 -l 746 ../ml_lit/hastie_elem/hastie_elements_2009.pdf hastie_references.txt')
-refs_text = readLines('../ml_lit/hastie_elem/hastie_references.txt')
+```{r hastie-references, fig.cap='Publications cited in \textit{Elements of Statistical Learning. The references range over almost 80 years, with peaks in late 1970s, late 1980s, mid-1990s and mid-2000s. These peaks relate to different mixtures of cybernetics, statistics, computer science, medicine, biology and other fields running through machine learning. Regression-related publications form the main body of citation.',  include=FALSE, cache=TRUE, echo=FALSE}
+system('pdftotext -f 717 -l 746 ml_lit/hastie_elem/hastie_elements_2009.pdf hastie_references.txt')
+refs_text = readLines('ml_lit/hastie_elem/hastie_references.txt')
 refs_parsed = paste(refs_text, sep=' ', collapse='\n')
 refs_split = unlist(str_split(refs_parsed, '\\.\n'))
 refs_clean = str_trim(str_replace_all(refs_split, '\n', ' '))
@@ -337,7 +324,7 @@ g2 + ylab('Publications cited/year') + xlab('Year of publication')
 \end{figure}
 
 
-The citational fabric of _Elements of Statistical Learning_ is woven with different threads, some reaching back into early twentieth statistics, some from post-WW2 cybernetics, many from information theory and then in the 1980s onwards, increasingly, from cognitive science and computer science (see  figure \@ref(fig:hastie_cited_refs) to get some sense of their distribution over time). While some of these references either point to Hastie, Tibshirani or Friedman's own publications, or that of their statistical colleagues, the references rove quite widely in other fields and over time. _Elements of Statistical Learning_ as a text is processing, assimilating and recombining techniques, diagrams and data from many different places and times. (The different waves appearing in the references cited in [@Hastie_2009] will shape discussion in later chapters in certain ways; for instance, late 1990s biology is the topic of chapter \@ref(ch:genome) and optimization functions dating from the 1950s are discussed in chapter \ref{ch:function}).
+The citational fabric of _Elements of Statistical Learning_ is woven with different threads, some reaching back into early twentieth statistics, some from post-WW2 cybernetics, many from information theory and then in the 1980s onwards, increasingly, from cognitive science and computer science (see  figure \@ref(fig:hastie-references) to get some sense of their distribution over time). While some of these references either point to Hastie, Tibshirani or Friedman's own publications, or that of their statistical colleagues, the references rove quite widely in other fields and over time. _Elements of Statistical Learning_ as a text is processing, assimilating and recombining techniques, diagrams and data from many different places and times. (The different waves appearing in the references cited in [@Hastie_2009] will shape discussion in later chapters in certain ways; for instance, late 1990s biology is the topic of chapter \@ref(ch:genome) and optimization functions dating from the 1950s are discussed in chapter \ref{ch:function}).
 
 Both the inward and outward movements of citation suggest that _Elements of Statistical Learning_, like much in field of  machine learning, has a matrix-like character that constantly superimposes and transposes elements across boundaries and barriers. The implication here is that machine learning as a knowledge practice has a highly interwoven texture, and in this respect differs somewhat from the classical understandings of scientific disciplines as bounded by communities of practice, norms and problems (as for instance, in Thomas Kuhn's account of normal science [@Kuhn_1996]. \index{Kuhn, Thomas} This aggregate or superimposed character of machine learning should definitely figure in any sense we make of it, and will inevitably affect how critical thought might test itself against it. \index{critical thought}.  
 
@@ -404,13 +391,10 @@ In the course of the book, this mathematical expression appears in many variatio
 
 Any reading of the book has to work out a way to traverse the forms show in equation \ref{eq:linear_model}. 
 
-
-\begin{figure}
-  \centering
-      \includegraphics[width=0.9\textwidth]{figure/formula_labelled.pdf}
-        \caption{The linear regression model}
-  \label{fig:linear_model}
-\end{figure}
+```{r linear-model-labelled, fig.cap='The linear regression model', echo=FALSE}
+    library(knitr)
+    include_graphics('figure/formula_labelled.svg')
+```
 
 In its relatively compressed typographic weave, expressions such as Equation \@ref(fig:linear_model) operationalize movements through data or 'a vector of inputs $X^T$.' These expressions, which are not comfortable reading for non-technical readers, are however worth looking at carefully if we want to move 'at the same level of abstraction as the algorithm' [@Pasquinelli_2015]. \index{Pasquinelli, Paolo!on mathematics as abstraction} They can be found in hundreds in [@Hastie_2009], but also in many other places. While their presence distinguishes machine learning from parts of computer science where mathematical equations are less common, mathematical formalizations also allow the book to suture a panoply of scientific publications  and datasets in fields of statistics, artificial intelligence and computer science. Along with the citations, the graphical plots, and the code relationality, these equations are integral connective tissue in machine learning. 
 
@@ -430,17 +414,13 @@ Does a computer science course offer a more easily followed route? Andrew Ng's c
 
 CS229 is in many ways a  typical computer science pedagogical exposition of machine learning.  Machine learning expositions  usually begin with simple datasets and the simplest possible statistical models and machine learners (linear regression \index{linear regression}), and then, with a greater or lesser degree of attention to issues of implementation, move through a succession of increasingly sophisticated and specialised techniques.  This pattern is found in many of the how-to books, in the online courses, and in the academic textbooks, including [@Hastie_2009].
 
-
-\begin{figure}
-  \centering
-      \includegraphics[width=0.9\textwidth]{figure/ng_lecture_5_generative_discriminative.pdf}
-        \caption{Class notes lecture 5, Stanford CS229, 2007}
-  \label{fig:class_notes}
-\end{figure}
-
 Ng's CS229 lectures differ from most other pedagogical materials in that we see someone writing  and deriving line after line of equations using chalk on a blackboard. Occasionally, questions come from students in the audience (not shown on the Youtube videos), but mostly Ng's transcription of equations and other diagrams from the paper notes he holds to blackboard continues uninterrupted.[^1.23] Ng's Youtube anachronistic but popular lectures have a certain diagrammatic density that comes from the many hours of chalked writing he generates during the course deriving equations. In a time when PowerPoint presentations or some other electronic textuality would very much have been the norm (2007), why is a computer science professor, teaching a fairly advanced postgraduate course, writing on a chalkboard by hand?
 
-Figure \@ref(fig:class_notes) shows a brief portion of around 100 pages of notes I made on this course.  The act of writing down these equations and copying the many hand-drawn graphs Ng produced was a deliberative diagrammatic experiment in 'returning again and again' to what is perhaps overly hardened in  _Elements of Statistical Learning_.  Like the 50,000 or so other people who had watched this video, I partly complied with Ng's injunction to 'copy it, write it out, cover it, and see if you can reproduce it' [@Ng_2008d].  While it occasions much writing and drawing, and many struggles to keep up with the transformations and substitutions that Ng narrates as he writes, it seems to me that writing out derivations, with all their substitutions and variations, alongside the graphic sketches of intuitions about the machine learners, accesses something of the *diagrammatic composition* of machine learning that is quite hard to track in _Elements of Statistical Learning_. \index{diagram!hand-drawn} \index{mathematics!equations!derivation of} There the diagrammatic weave between the expressions of linear algebra, calculus, statistics, and the off-stage implementation in code is almost too tight to work with. In Ng's CS229 lectures, by contrast, the weaving, while still complex, is much more open. The lectures lack the citational tapestry of _Elements of Statistical Learning_. They are not able to wield the datasets and the panoply of graphic forms found there, and virtually no machine learning code appears on  the blackboard (although the CS229 student assignments, also to be found online, are code implementations of the algorithms and models). But Ng's lectures move more slowly, and we begin to see some of the different groupings and associations comprising the operational formation. More importantly perhaps, this absorbing process of writing derivations might begin to transform ways of thinking, saying and knowing.   \index{diagram!hand-drawn}
+```{r class-notes, echo=FALSE, fig.cap='Class notes lecture 5, Stanford CS229, 2007'}
+    include_graphics('figure/ng_lecture_5_generative_discriminative.png', auto_pdf=TRUE)
+```
+
+Figure \@ref(fig:class-notes) shows a brief portion of around 100 pages of notes I made on this course.  The act of writing down these equations and copying the many hand-drawn graphs Ng produced was a deliberative diagrammatic experiment in 'returning again and again' to what is perhaps overly hardened in  _Elements of Statistical Learning_.  Like the 50,000 or so other people who had watched this video, I partly complied with Ng's injunction to 'copy it, write it out, cover it, and see if you can reproduce it' [@Ng_2008d].  While it occasions much writing and drawing, and many struggles to keep up with the transformations and substitutions that Ng narrates as he writes, it seems to me that writing out derivations, with all their substitutions and variations, alongside the graphic sketches of intuitions about the machine learners, accesses something of the *diagrammatic composition* of machine learning that is quite hard to track in _Elements of Statistical Learning_. \index{diagram!hand-drawn} \index{mathematics!equations!derivation of} There the diagrammatic weave between the expressions of linear algebra, calculus, statistics, and the off-stage implementation in code is almost too tight to work with. In Ng's CS229 lectures, by contrast, the weaving, while still complex, is much more open. The lectures lack the citational tapestry of _Elements of Statistical Learning_. They are not able to wield the datasets and the panoply of graphic forms found there, and virtually no machine learning code appears on  the blackboard (although the CS229 student assignments, also to be found online, are code implementations of the algorithms and models). But Ng's lectures move more slowly, and we begin to see some of the different groupings and associations comprising the operational formation. More importantly perhaps, this absorbing process of writing derivations might begin to transform ways of thinking, saying and knowing.   \index{diagram!hand-drawn}
 
 ## The visible learning of machine learning
 
@@ -448,23 +428,15 @@ For a book with 'learning' in its title, _Elements of Statistical Learning_ has 
 
 How then did learning get into the title of _Elements of Statistical Learning_? Does 'learning' anthropomorphize statistical modelling or computer programming? \index{learning}  The so-called 'learning problem' and the theory of learning machines developed by researchers in the 1960-1970s was largely based on work already done in the 1950s on cybernetic devices such as the perceptron, the  prototypical neural network model developed by the psychologist Frank Rosenblatt in the 1950s [@Rosenblatt_1958]. \index{Rosenblatt, Frank} \index{machine learner!perceptron|(}  Drawing on the McCulloch-Pitts model of the neurone and mathematical techniques of optimization [@Bellman_1961], Rosenblatt implemented the perceptron, which today would be called a single-layer neural network [@Hastie_2009, 393] as an electro-mechanical device at the Cornell University Aeronautical Laboratory in 1957. For present purposes, it is interesting to see what diagrams Rosenblatt used and how they differ from contemporary diagrams. 
 
-\begin{figure}
-  \centering
-  \begin{subfigure}[b]{0.4\textwidth}
-      \includegraphics[width=\textwidth]{figure/perceptron_rosenblatt_1958_389.pdf}
-        \caption{The neurological perceptron (Rosenblatt, 1958, 389)}
-          \label{fig:perceptron_1958}
-\end{subfigure}
-  \begin{subfigure}[b]{0.3\textwidth}
-      \includegraphics[width=\textwidth]{figure/hastie_ann_2009_393.pdf}
-        \caption[Neural network from Hastie (2009)]{Neural network from Hastie (2009); Single layer feedforward artificial neural network.}
-  \label{fig:hastie_ann}
-    \end{subfigure}
-    \label{fig:perceptron_ann}
-    \caption{1958 perceptron and 2001 neural net compared}
-\end{figure}
+```{r perceptron-1958, fig.cap='The neurological perceptron (Rosenblatt, 1958, 389)'}
+    include_graphics('figure/perceptron_rosenblatt_1958_389.png', auto_pdf=TRUE)
+```
 
-If we compare the diagram of Rosenblatt's perceptron shown in Figure \@ref(fig:perceptron_1958)  to the typical contemporary diagram of a neural network shown in Figure \@ref(fig:hastie_ann), the differences are not that great in many ways. The diagram of a neural network found in Rosenblatt's paper [@Rosenblatt_1958]  has no mathematical symbols on it, but the one from [@Hastie_2009] does. Rosenblatt's retains neuro-cognitive-anatomical reference points (retina, association area, projection area) whereas Hastie et. al.'s replaces them with the symbols that we have already seen in play in the expression for the linear model \ref{eq:linear_model}. What has happened between the two diagrams? As Vladimir Vapnik, a leading machine learning theorist, observes: 'the perceptron was constructed to solve pattern recognition problems; in the simplest case this is the problem of constructing a rule for separating data of two different categories using given examples' [@Vapnik_1999, 2]. \index{Vapnik, Vladimir} While computer scientists in artificial intelligence of the time, such as Marvin Minsky and Seymour Papert, were sceptical about the capacity of the perceptron model to distinguish  or 'learn' different patterns [@Minsky_1969], later work showed that perceptrons could 'learn universally'[^1.19].\index{machine learner!perceptron|)} For present purposes, the key point is not that neural networks have turned out several decades later to be extremely powerful algorithms in learning to distinguish patterns, and that intense research in neural networks has led to their ongoing development and increasing sophistication in many 'real world' applications (see for instance, for their use in sciences [@Hinton_2006], or in commercial applications such as drug prediction [@Dahl_2013] and above all in the current surge of interest in 'deep learning' by social media platform and search engines such as Facebook and Google). \index{machine learner!neural net} For our purposes, the important point is that the notion of the learning machine began to establish an ongoing diagonalization that transforms basic diagrammatic pattern through substitutions of increasingly convoluted or nested operations. The whole claim that machines 'learn' rests on this diagrammatization that recurrently and sometimes recursively transforms the icon of relations, sometimes in the graphic forms shown above and more often in the algebraic patterns.\index{diagrammatization} 
+```{r hastie-ann, fig.cap='Neural network from Hastie (2009); Single layer feedforward artificial neural network'}
+    include_graphics('figure/hastie_ann_2009_393.png', auto_pdf=TRUE)
+```
+
+If we compare the diagram of Rosenblatt's perceptron shown in Figure \@ref(fig:perceptron-1958)  to the typical contemporary diagram of a neural network shown in Figure \@ref(fig:hastie-ann), the differences are not that great in many ways. The diagram of a neural network found in Rosenblatt's paper [@Rosenblatt_1958]  has no mathematical symbols on it, but the one from [@Hastie_2009] does. Rosenblatt's retains neuro-cognitive-anatomical reference points (retina, association area, projection area) whereas Hastie et. al.'s replaces them with the symbols that we have already seen in play in the expression for the linear model \ref{eq:linear_model}. What has happened between the two diagrams? As Vladimir Vapnik, a leading machine learning theorist, observes: 'the perceptron was constructed to solve pattern recognition problems; in the simplest case this is the problem of constructing a rule for separating data of two different categories using given examples' [@Vapnik_1999, 2]. \index{Vapnik, Vladimir} While computer scientists in artificial intelligence of the time, such as Marvin Minsky and Seymour Papert, were sceptical about the capacity of the perceptron model to distinguish  or 'learn' different patterns [@Minsky_1969], later work showed that perceptrons could 'learn universally'[^1.19].\index{machine learner!perceptron|)} For present purposes, the key point is not that neural networks have turned out several decades later to be extremely powerful algorithms in learning to distinguish patterns, and that intense research in neural networks has led to their ongoing development and increasing sophistication in many 'real world' applications (see for instance, for their use in sciences [@Hinton_2006], or in commercial applications such as drug prediction [@Dahl_2013] and above all in the current surge of interest in 'deep learning' by social media platform and search engines such as Facebook and Google). \index{machine learner!neural net} For our purposes, the important point is that the notion of the learning machine began to establish an ongoing diagonalization that transforms basic diagrammatic pattern through substitutions of increasingly convoluted or nested operations. The whole claim that machines 'learn' rests on this diagrammatization that recurrently and sometimes recursively transforms the icon of relations, sometimes in the graphic forms shown above and more often in the algebraic patterns.\index{diagrammatization} 
 
 The changes in graphics suggest transformations in the operational formation. I am suggesting, then, that we should follow the transformations associated with machine learning diagrammatically, provided we maintain a rich understanding of diagram, and remain open to multiple vectors of abstraction. \index{diagram|(} Following Peirce, we might begin to see machine learning as a diagrammatic practice in which different semiotic forms -- lines, numbers, symbols, operators, patches of colour, words, images, marks such as dots, crosses, ticks and arrowheads --  are constantly connected, substituted, embedded or created from existing diagrams. The diagrams we have already seen from _Elements of Statistical Learning_ - algebraic formulae and network topology - don't exhaust the variations at all. Just a brief glance through this book or almost any other in the field shows not only many formulae, but tables, matrices, arrays, line graphs, contour plots, scatter plots,  dendrograms and trees, as well as algorithms expressed as pseudo-code. The connections between these diagrams are not always very tight or close. Learning to machine learning (whether you are a human learner or a learner in the sense of a machine) means dancing between diagrams. This dance is relatively silent and sometimes almost motionless as signs slide between different diagrammatic articulations. Diagrammatization offers then a way to track the ongoing project which tries treat data like farmers treat crops (see epigraph from Domingos in this chapter).  To understand what machines can learn, we need to look at how they have been drawn, designed, or formalised. But what in this work of designing and formalising predictive models is like farming? Some very divergent trajectories open up here. On the one hand, the diagrams become machines when they are implemented. On the other hand, the machines generate new diagrams when they function. We need to countenance both forms of movement in order to understand any of the preceding diagrams -- the algebraic expressions or the diagrams of models such as the perceptron or its descendants, the neural network.  This means going downstream from the textbooks into actual implementations and places where people, algorithms, and machines mingle more than they do in the relatively neat formality of the textbooks. Rather than history or controversies in the field, I focus on the migratory patterns of  methods, and the many configurational shifts associated with their implementations as the same things appears in different places. \index{diagram|)} 
 

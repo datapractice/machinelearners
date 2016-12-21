@@ -1,4 +1,4 @@
-# Vectorisation and its consequences}
+# Vectorisation and its consequences
 \label{ch:vector}
 
 
@@ -98,7 +98,7 @@ The table has been vectorised. We might say that the vectorization of the table 
 
 The local complex of activities for associating datasets shatters tables from a different direction than that described by Foucault in _The Order of Things_. Algebra,  linear algebra in particular, organizes and distributes differences in vector space. _Mathesis_ in the form of algebraic operations of addition and multiplication of  collections of tabular elements such as rows and columns, now re-defined as vectors, re-structure tabular data as a vector space, as a 'set' whose membership is only limited by the applicability of the constructing relations. These operations absorb and subtend differences in quality, type, kind and quantity. \index{vector space!ramification in}
 
-```{r prostate_plot, echo=FALSE, message=FALSE, results = 'hide', fig.show='hide'}
+```{r prostate-plot-matrix, fig.cap = 'First rows of the \`prostate\` dataset', echo=FALSE, message=FALSE }
 library('ElemStatLearn')
 data('prostate')
 pairs(prostate[, -10],  cex=0.2)
@@ -110,18 +110,12 @@ library(xtable)
 print(xtable(head(prostate, 3), label= 'tab:prostate', caption='First rows of the \`prostate\` dataset'))
 ```
 
-\begin{figure}
-  \centering
-      \includegraphics[width=0.9\textwidth]{figure/prostate_plot-1.pdf}
-        \caption{Scatter plot matrix of \texttt{prostate} data}
-  \label{fig:prostate_plot_matrix}
-\end{figure}
 
-Of the three example datasets  (`prostate`, `spam` and `zip`), _Elements of Statistical Learning_  returns most frequently to `prostate.` This dataset derives from the work of urologists working at Stanford [@Stamey_1989], and concerns various clinical measurements performed on men who were about to undergo radical prostatectomy. The measurements range across the volume and weight of the prostate, as well as levels of various prostate-related biomarkers such as PSA -- prostate specific antigen. Several rows from the dataset are shown in Table \@ref(tab:prostate). The first pages of the book had already exhaustively plotted all the variables in the dataset against each other using the table-related form of a scatter plot matrix [@Hastie_2009,3] (shown in figure \@ref(fig:prostate_plot_matrix), and they return to the same data on almost a dozen occasions in the course of the book, subjecting it to repeated vectorization. \index{dataset!prostate} \index{graphic!scatterplot matrix}
+Of the three example datasets  (`prostate`, `spam` and `zip`), _Elements of Statistical Learning_  returns most frequently to `prostate.` This dataset derives from the work of urologists working at Stanford [@Stamey_1989], and concerns various clinical measurements performed on men who were about to undergo radical prostatectomy. The measurements range across the volume and weight of the prostate, as well as levels of various prostate-related biomarkers such as PSA -- prostate specific antigen. Several rows from the dataset are shown in Table \@ref(tab:prostate). The first pages of the book had already exhaustively plotted all the variables in the dataset against each other using the table-related form of a scatter plot matrix [@Hastie_2009,3] (shown in figure \@ref(fig:prostate-plot-matrix), and they return to the same data on almost a dozen occasions in the course of the book, subjecting it to repeated vectorization. \index{dataset!prostate} \index{graphic!scatterplot matrix}
 
-The contrast between the Table \@ref(tab:prostate) and the Figure \@ref(fig:prostate_plot_matrix) already depends on a transformation intrinsic to vectorization.  On the one hand, the table arrays all different data types in rows and columns. In the table, the relation between the different data types (the log of the weight of prostate - `lwp` and `age` for instance) is quite hard to see. Moreover, different kinds of variables stand side by side. `svi`, short for 'seminal vesicle invasion' is a categorical variable. \index{data!type!categorical} It takes the values 'true' or 'false,' shown here as `1` or `0`, but the other variables either measure or count things (years, sizes, or levels of antigens). 
+The contrast between the Table \@ref(tab:prostate) and the Figure \@ref(fig:prostate-plot-matrix) already depends on a transformation intrinsic to vectorization.  On the one hand, the table arrays all different data types in rows and columns. In the table, the relation between the different data types (the log of the weight of prostate - `lwp` and `age` for instance) is quite hard to see. Moreover, different kinds of variables stand side by side. `svi`, short for 'seminal vesicle invasion' is a categorical variable. \index{data!type!categorical} It takes the values 'true' or 'false,' shown here as `1` or `0`, but the other variables either measure or count things (years, sizes, or levels of antigens). 
 
-On the other hand, the scatter plot matrix also takes the form of a grid-like figure, but the cells of the grid are not occupied by numbers but by `x-y` plots of different pairs of variables in the `prostate` dataset. The 'matrix' of figures shows of 72 plots is mirrored across the diagonal that runs from the top-life to bottom right in figure \@ref(fig:prostate_plot_matrix). Taking this folding into account, we see 36 unique plots with different data in each one. Each sub-plot displays the relation between two variables in the dataset as a scatter plot. Some variables such as `svi` are not very amenable to plotting in this way. More importantly perhaps, certain combinations of variables appear as flat loci that can be read as signs of relations between different variables. The scatter plot matrix constructs a tabular space in which relational contrasts between pairs of variables start to appear. In the light of these contrasts (and I use 'light' here in an almost literal sense to refer to the way in which the architecture of the figure creates a space in which light scatters in varying patterns), the `prostate` dataset begins to expose relations that might be worth knowing about. We have moved on from the bare table of the dataset to a transformed tabulation, from a textual-numerical grid to a geometrical-numerical grid. Everything remains on the surface of a grid here, but the grid permits differences in relationality to begin to appear. \index{differences!visibility in data}
+On the other hand, the scatter plot matrix also takes the form of a grid-like figure, but the cells of the grid are not occupied by numbers but by `x-y` plots of different pairs of variables in the `prostate` dataset. The 'matrix' of figures shows of 72 plots is mirrored across the diagonal that runs from the top-life to bottom right in figure \@ref(fig:prostate-plot-matrix). Taking this folding into account, we see 36 unique plots with different data in each one. Each sub-plot displays the relation between two variables in the dataset as a scatter plot. Some variables such as `svi` are not very amenable to plotting in this way. More importantly perhaps, certain combinations of variables appear as flat loci that can be read as signs of relations between different variables. The scatter plot matrix constructs a tabular space in which relational contrasts between pairs of variables start to appear. In the light of these contrasts (and I use 'light' here in an almost literal sense to refer to the way in which the architecture of the figure creates a space in which light scatters in varying patterns), the `prostate` dataset begins to expose relations that might be worth knowing about. We have moved on from the bare table of the dataset to a transformed tabulation, from a textual-numerical grid to a geometrical-numerical grid. Everything remains on the surface of a grid here, but the grid permits differences in relationality to begin to appear. \index{differences!visibility in data}
 
 All of this somewhat precedes the operational formation of machine learning. Similar tables and plots are part and parcel of statistical data exploration more generally (see [@Beniger_1978] for an historical account of quantitative graphics in statistics). \index{statistics!graphics| seealso {graphics}} The scatterplot matrix does not exhaust differences or relationality in the  `prostate` dataset, but highlights a tendency to approach it from different angles (12 times in the _Elements of Statistical Learning_) in order to map the multiple relations or influences that remain opaque to even the most exhaustive matrices of plots. The scatterplot matrix shows pairs of variables in relation. If the crucial diagnostic factor in this case is an elevated level of the PSA (prostate specific antigen), how do we know what combinations of other measurements might be associated with its elevation? What if multiple variables affect the level of PSA?[^2.31] This question can just about be pursued by scanning the matrix of plots,  but not very stably since different data analysts might see different associations combining with each other there. Different statements or  epistopics could be supported by the same figure. \index{statements!epistopic elements of}
 
@@ -161,12 +155,9 @@ The vector form in equation \ref{eq:linear_model} diagrams an inclined  plane th
 
 ## Drawing lines in a common space of transformation
 
-\begin{figure}
-  \centering
-      \includegraphics[width=0.5\textwidth]{figure/vector_space.png}
-        \caption{Vector space comprises transformations}
-  \label{fig:common_space}
-\end{figure}
+```{r common-space, fig.cap='Vector space comprises transformations'}
+    include_graphics('figure/vector_space.png', auto_pdf=TRUE)
+```
 
 Once data is distributed in vector space, machine learners operate as transformations of that space into other vector spaces, the flat loci. Indeed from the perspective of vector space, machine learners are simple transformations or operations that map vector spaces into different ones, usually of lower but sometimes of higher dimensionality.   \index{machine learning!as transformation of vector space}  For instance,  'drawing' the line of best fit through the `prostate` data or 'fitting a line' can be understood as a purely algebraic operation (although in practice, most machine learners are not purely algebraic -- they optimise and probabilise, as we will see).  \index{linear algebra|)} Viewed in terms of linear algebra, the analytical or 'closed form solution' for the parameters of the linear model is given in equation \ref{eq:linear_model_solution}: \index{model!fitting of} \index{machine learner!linear regression!closed form solution to}
 
@@ -239,7 +230,7 @@ train = prostate$train ==TRUE
 prostate_model = lm(lpsa~., prostate_standard[train,-10])
 \end{lstlisting}
 
-```{r prostate_model}
+```{r prostate-model}
 library(ElemStatLearn)
 data(prostate)
 columns_to_standardize = c(1,2,3,4,6,8,9)
@@ -251,12 +242,12 @@ prostate_model = lm(lpsa~., prostate_standard[train,-10])
 
 ```
 
-```{r prostate_model_output, echo=FALSE, results = 'asis'}
-tab1 = xtable(summary(prostate_model), caption = 'Fitting a linear model to the \texttt{prostate} dataset', label='tab:prostate_linear_regression', type='latex')
+```{r prostate-model-output, echo=FALSE, results = 'asis'}
+tab1 = xtable(summary(prostate_model), caption = 'Fitting a linear model to the \texttt{prostate} dataset', label='tab:prostate-linear-regression', type='latex')
 print(tab1, include.rownames = FALSE)
 ```
 
-Table \@ref(tab:prostate_linear_regression) displays estimates of the coefficients or parameters \gls{$\beta}$}  that define the direction of a flat surface running through the vector space of the `prostate` data.[^2.101] \index{dataset!prostate} This new vector is a product of operations in the vectorized `prostate` data. Some vectorizing operations can be seen in `R` code in listing \ref{lst:prostate_lm} (for instance, `as.matrix` or `scale(prostate_standard)`). 
+Table \@ref(tab:prostate-linear-regression) displays estimates of the coefficients or parameters \gls{$\beta}$}  that define the direction of a flat surface running through the vector space of the `prostate` data.[^2.101] \index{dataset!prostate} This new vector is a product of operations in the vectorized `prostate` data. Some vectorizing operations can be seen in `R` code in listing \ref{lst:prostate_lm} (for instance, `as.matrix` or `scale(prostate_standard)`). 
 
 The 'unique solution' to the problem of fitting a linear model to a given dataset using the popular method of 'least squares' [@Hastie_2009, 12] is given by the operations we have seen in equation \ref{eq:linear_model_solution}. This tightly coiled expression calculates the $\hat{\beta}$ parameters that set the slope and location of a flat surface or plane in nine-dimensional vector space using all of the `prostate` variables apart from one variable chosen as the response or predicted variable, in this case `lpsa`. $X$ and $y$  matrices are multiplied, transposed (a form of rotation that swaps rows for columns) and inverted (a more complex operation that finds another matrix) in a series of linear algebra transformations. Epitomising the implicitly vectorised code often seen in machine learning, calculating $\hat{\beta}$ for  the `prostate` data only requires one line of `R` code: \index{code!implicit vectorization of}
 

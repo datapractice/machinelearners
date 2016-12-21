@@ -128,7 +128,7 @@
 - ran the sed script to convert images links
 - then did the tables:
 sed -i 's/\\ref{tab:\(\w*\)}/\\@ref(tab:\1)/' *.rmd 
-- still need to do chapter references
+- TODO: still need to do chapter references
     sed -i 's/\\ref{ch:\(\w*\)}/\\@ref(ch:\1)/' *.rmd 
 
 ## Mon Dec 19 08:55:58 GMT 2016
@@ -144,3 +144,11 @@ sed -i 's/\\ref{tab:\(\w*\)}/\\@ref(tab:\1)/' *.rmd
     - add all the test_gh pages in properly
     - merge this new branch back into test-gh-pages and then start fixing images agina
 - at home now and have done that. Have cleanish set of directories to work in now. 
+- going through 03_praxis.rmd images 
+- also did 04_vector.rmd
+- TODO: still need to do equation references
+- using this shell 
+    grep -n '\\begin{figure}' 05_function.rmd
+to list all the remaining figures needing conversion in a given chapter. 
+- and running render_book.r to actually built the book and view in browser
+- DONE: 05_function.rmd for images
