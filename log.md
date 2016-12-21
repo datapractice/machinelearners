@@ -143,4 +143,4 @@ sed -i 's/\\ref{tab:\(\w*\)}/\\@ref(tab:\1)/' *.rmd
 - cleaned up directories on lot on this branch. Need to:
     - add all the test_gh pages in properly
     - merge this new branch back into test-gh-pages and then start fixing images agina
-
+- at home now and have done that. Have cleanish set of directories to work in now. 

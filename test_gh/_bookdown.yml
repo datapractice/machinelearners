@@ -1,5 +1,0 @@
----
-rmd_files: ["00_acknowledgments.rmd", "01_preface.rmd", "02_introduction.rmd"]
-new_session: yes
-output_dir: docs
----
