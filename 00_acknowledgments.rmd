@@ -14,10 +14,10 @@ output:
 #    bookdown::tufte_html_book: 
 #      toc: yes
 #      css: toc.css
-#documentclass: book
-#bibliography: ["ref_bibs/uni.bib"]
-#biblio-style: chicago
-#link-citations: yes
+documentclass: book
+bibliography: ["ref_bibs/uni.bib"]
+biblio-style: chicago
+link-citations: yes
 ---
 #  Acknowledgments 
 \label{ch:acknowledgments}
