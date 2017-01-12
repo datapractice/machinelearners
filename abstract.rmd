@@ -1,4 +1,10 @@
-# AlphaGo 
+# Machine learning and the practical indeterminacies of technical ensembles 
+
+ How deeply does machine learning affect collective social life?
+ This paper proposes that rather than seeing machine learning as 'existential threat,' we should analyse how specific forms of predictive or model-based inclusion, participation and difference where they are situated in technical ensembles.
+ From this perspective, we can see predictive, classificatory, ranking and recommendation practices associated with  machine learning as arising from some long-standing problems in configuring and acting amidst technical ensembles.
+ If key features of machine learning - the vectorisation of data, search for mathematical functions that traverse data, assembly of populations of models, reconfiguration of differences and order in terms of pattern -- stem from the problem of the obscure central reality of technical ensembles, then critical research into how machine learning participates in those ensembles might identify both some of the limitations and indeterminacies of predictive practice. 
+ 
 
 ## Title: Predictive participation as non-participation?
 
