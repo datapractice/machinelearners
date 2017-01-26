@@ -152,3 +152,6 @@ sed -i 's/\\ref{tab:\(\w*\)}/\\@ref(tab:\1)/' *.rmd
 to list all the remaining figures needing conversion in a given chapter. 
 - and running render_book.r to actually built the book and view in browser
 - DONE: 05_function.rmd for images
+
+## Thu 26 Jan 2017 11:33:49 GMT
+- its taken a month, but I'm getting back to the formatting work; sorting out 06_probability.rmd 
