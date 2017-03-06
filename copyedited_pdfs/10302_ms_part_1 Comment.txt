@@ -1,0 +1,3300 @@
+Page 1
+	gcrossma Tue Feb 21 20:03:08 GMT 2017 - Sticky Note
+		Note: [Comp: please replace this page with the front matter template]
+Page 2
+	Owner Fri Jan 13 14:42:49 GMT 2017 - Inserted Text
+		Note: this
+	Owner Fri Jan 13 14:43:03 GMT 2017 - Inserted Text
+		Note: then
+	Owner Fri Jan 13 14:43:18 GMT 2017 - Highlight
+	Owner Fri Jan 13 14:44:40 GMT 2017 - Sticky Note
+		Note: insert em-dash and close up space around dash
+	Owner Fri Jan 13 14:46:12 GMT 2017 - Inserted Text
+		Note: massive open online courses [
+	Owner Fri Jan 13 14:48:43 GMT 2017 - Inserted Text
+		Note: ]
+	Owner Fri Jan 13 14:48:54 GMT 2017 - Cross-Out
+	Group
+		Owner Fri Jan 13 14:49:12 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Fri Jan 13 14:49:18 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Fri Jan 13 14:49:23 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Fri Jan 13 14:49:33 GMT 2017 - Inserted Text
+			Note: ."
+	Group
+		Owner Fri Jan 13 14:50:45 GMT 2017 - Inserted Text
+			Note: about which I write
+	Owner Fri Jan 13 14:51:32 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Fri Jan 13 14:51:34 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Fri Jan 13 14:51:52 GMT 2017 - Inserted Text
+		Note: also
+	Owner Fri Jan 13 14:51:56 GMT 2017 - Cross-Out
+	gcrossma Tue Feb 21 20:03:36 GMT 2017 - Sticky Note
+		Note: [Comp: move the TOC to start here as page v. The preface and ack sections will follow the TOC]
+	gcrossma Tue Feb 21 20:30:58 GMT 2017 - Cross-Out
+	gcrossma Tue Feb 21 20:31:25 GMT 2017 - Comment on Text
+		Note: [Comp: set as front matter chapter head]
+Page 3
+	Group
+		Owner Fri Jan 13 14:52:13 GMT 2017 - Inserted Text
+			Note: because
+	Group
+		Owner Fri Jan 13 14:52:21 GMT 2017 - Inserted Text
+			Note: realize
+	Group
+		Owner Fri Jan 13 14:52:37 GMT 2017 - Inserted Text
+			Note: analyzing
+	Owner Fri Jan 13 14:52:58 GMT 2017 - Cross-Out
+	Owner Fri Jan 13 14:53:20 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Fri Jan 13 14:53:35 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Fri Jan 13 14:53:43 GMT 2017 - Cross-Out
+	Group
+		Owner Fri Jan 13 14:54:01 GMT 2017 - Inserted Text
+			Note: have
+	Owner Fri Jan 13 14:54:16 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Fri Jan 13 14:54:21 GMT 2017 - Inserted Text
+		Note: ,
+	gcrossma Tue Feb 21 20:31:54 GMT 2017 - Sticky Note
+		Note: [insert running head "Preface" on versos and rectos in this chapter]
+Page 4
+	Group
+		Owner Fri Jan 13 14:54:33 GMT 2017 - Inserted Text
+			Note: have
+	Group
+		Owner Fri Jan 13 14:54:39 GMT 2017 - Inserted Text
+			Note: than
+	Owner Fri Jan 13 14:54:44 GMT 2017 - Cross-Out
+	Owner Fri Jan 13 14:55:09 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Fri Jan 13 14:55:25 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Fri Jan 13 14:55:32 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Fri Jan 13 14:55:36 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Fri Jan 13 14:55:53 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Fri Jan 13 14:55:59 GMT 2017 - Inserted Text
+			Note: ."
+	Owner Fri Jan 13 14:56:21 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Fri Jan 13 14:56:27 GMT 2017 - Cross-Out
+	Owner Fri Jan 13 14:56:35 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Fri Jan 13 14:56:55 GMT 2017 - Inserted Text
+		Note: "
+	Owner Fri Jan 13 14:57:01 GMT 2017 - Inserted Text
+		Note: "
+	Group
+		Owner Fri Jan 13 14:57:09 GMT 2017 - Inserted Text
+			Note: e.g.
+	Group
+		Owner Fri Jan 13 14:57:15 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Fri Jan 13 14:57:19 GMT 2017 - Inserted Text
+			Note: "
+	Owner Fri Jan 13 14:57:24 GMT 2017 - Cross-Out
+	Group
+		Owner Fri Jan 13 14:57:34 GMT 2017 - Inserted Text
+			Note: modeled
+	Group
+		Owner Fri Jan 13 14:57:47 GMT 2017 - Inserted Text
+			Note: [
+	Group
+		Owner Fri Jan 13 14:58:00 GMT 2017 - Inserted Text
+			Note: ])
+	Group
+		Owner Fri Jan 13 14:58:20 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Fri Jan 13 14:58:26 GMT 2017 - Inserted Text
+			Note: "
+	Owner Fri Jan 13 14:58:39 GMT 2017 - Cross-Out
+Page 5
+	Owner Fri Jan 13 15:00:44 GMT 2017 - Inserted Text
+		Note: then
+	Owner Fri Jan 13 15:00:53 GMT 2017 - Inserted Text
+		Note: ,
+Page 7
+	Group
+		Owner Mon Jan 16 15:05:16 GMT 2017 - Inserted Text
+			Note: 2007 to 2012
+	Group
+		Owner Mon Jan 16 15:05:27 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:05:32 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Mon Jan 16 15:05:43 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:05:48 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:06:12 GMT 2017 - Inserted Text
+			Note: crystallized
+	Owner Mon Jan 16 15:06:32 GMT 2017 - Inserted Text
+		Note: us
+	Owner Mon Jan 16 15:06:37 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:06:44 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 15:06:50 GMT 2017 - Inserted Text
+		Note: also
+	Group
+		Owner Mon Jan 16 15:07:14 GMT 2017 - Inserted Text
+			Note: Big Data" (2013[en-dash]2015)
+	Owner Mon Jan 16 15:07:20 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 15:07:27 GMT 2017 - Inserted Text
+		Note: ,
+Page 8
+	Owner Mon Jan 16 15:07:40 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:07:43 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:07:56 GMT 2017 - Inserted Text
+			Note: postgraduate
+	Group
+		Owner Mon Jan 16 15:08:04 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:08:09 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:08:12 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:08:17 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Mon Jan 16 15:08:22 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:08:27 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Mon Jan 16 15:08:34 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:08:38 GMT 2017 - Inserted Text
+			Note: ."
+	Owner Mon Jan 16 15:09:06 GMT 2017 - Inserted Text
+		Note: ,
+	gcrossma Tue Feb 21 20:32:11 GMT 2017 - Sticky Note
+		Note: [insert "Acknowledgments" running head]
+Page 9
+	Owner Mon Jan 16 15:09:43 GMT 2017 - Sticky Note
+		Note: edit to: Machines
+	Owner Mon Jan 16 15:10:10 GMT 2017 - Sticky Note
+		Note: Edit to:
+		Vectorization
+		and
+		Its Consequences
+	gcrossma Tue Feb 21 20:04:37 GMT 2017 - Sticky Note
+		Note: [Comp: Insert preface, probably p. vii]
+	gcrossma Tue Feb 21 20:04:48 GMT 2017 - Comment on Text
+		Note: [Number as FM]
+	gcrossma Tue Feb 21 20:04:51 GMT 2017 - Comment on Text
+		Note: [Number as FM]
+	gcrossma Tue Feb 21 20:04:53 GMT 2017 - Comment on Text
+		Note: [Number as FM]
+	gcrossma Tue Feb 21 20:04:55 GMT 2017 - Comment on Text
+		Note: [Number as FM]
+	gcrossma Tue Feb 21 20:05:20 GMT 2017 - Comment on Text
+		Note: [Comp: start arabic 1 here]
+Page 10
+	Owner Mon Jan 16 15:10:18 GMT 2017 - Sticky Note
+		Note: Edit to:
+		Finding Functions
+	Owner Mon Jan 16 15:10:29 GMT 2017 - Sticky Note
+		Note: Edit to:
+		Probabilization
+	Owner Mon Jan 16 15:10:37 GMT 2017 - Sticky Note
+		Note: Edit to:
+		Difference
+	Owner Mon Jan 16 15:10:56 GMT 2017 - Sticky Note
+		Note: Edit to:
+		Materializing Objects
+	Owner Mon Jan 16 15:11:06 GMT 2017 - Sticky Note
+		Note: Edi to:
+		Subject Positions
+	gcrossma Tue Feb 21 20:32:26 GMT 2017 - Sticky Note
+		Note: [insert "Contents" running head]
+Page 12
+	Owner Mon Jan 16 15:11:42 GMT 2017 - Sticky Note
+		Note: Edit to:
+		"titanic"
+	gcrossma Tue Feb 21 20:32:40 GMT 2017 - Sticky Note
+		Note: [Insert "List of Figures" running head]
+Page 13
+	Owner Mon Jan 16 15:12:17 GMT 2017 - Sticky Note
+		Note: Edit to:
+		"difference"
+		[first double quote is facing wrong direction]
+	Owner Mon Jan 16 15:12:29 GMT 2017 - Sticky Note
+		Note: Edit to:
+		"prostate"
+	Owner Mon Jan 16 15:12:42 GMT 2017 - Sticky Note
+		Note: Edit to:
+		"function"
+	Owner Mon Jan 16 15:12:57 GMT 2017 - Sticky Note
+		Note: Edit to:
+		"logistic regression"
+Page 14
+	Owner Mon Jan 16 15:13:21 GMT 2017 - Sticky Note
+		Note: Edit to:
+		"iris"
+	Owner Mon Jan 16 15:13:26 GMT 2017 - Sticky Note
+		Note: Edi to:
+		tumor
+	gcrossma Tue Feb 21 20:32:57 GMT 2017 - Sticky Note
+		Note: [insert "List of Tables" running head if needed]
+Page 15
+	gcrossma Tue Feb 21 20:43:19 GMT 2017 - Sticky Note
+		Note: [AU: please add this information now or mark this page to be deleted]
+Page 17
+	Group
+		Owner Mon Jan 16 15:17:29 GMT 2017 - Inserted Text
+			Note: 15
+	Owner Mon Jan 16 15:17:53 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 15:18:00 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:18:07 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 15:18:11 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:18:14 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 15:18:24 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:18:29 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:18:44 GMT 2017 - Inserted Text
+			Note: names[em-dash]machine
+	Group
+		Owner Mon Jan 16 15:18:57 GMT 2017 - Inserted Text
+			Note: mining[em-dash]the
+	Owner Mon Jan 16 15:19:10 GMT 2017 - Inserted Text
+		Note: ,
+	gcrossma Tue Feb 21 20:24:32 GMT 2017 - Sticky Note
+		Note: [Comp: set this paragraph flush left]
+Page 18
+	Owner Mon Jan 16 15:19:19 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:19:23 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:19:31 GMT 2017 - Inserted Text
+			Note: modeling
+	Owner Mon Jan 16 15:19:33 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:19:36 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:19:39 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:19:44 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:19:57 GMT 2017 - Inserted Text
+			Note: g
+	Owner Mon Jan 16 15:21:17 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 15:21:25 GMT 2017 - Inserted Text
+			Note: robots (see
+	Owner Mon Jan 16 15:21:32 GMT 2017 - Inserted Text
+		Note: )
+	Owner Mon Jan 16 15:21:41 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:21:55 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:22:00 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 15:22:04 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:22:08 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 15:22:19 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 15:22:24 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 15:22:38 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 15:22:44 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:22:57 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:23:03 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		gcrossma Tue Feb 21 20:07:20 GMT 2017 - Inserted Text
+			Note: 2
+	Group
+		gcrossma Tue Feb 21 20:07:53 GMT 2017 - Inserted Text
+			Note: Chapter 1
+			
+			[Comp: change on all verso pages of thsi chapter]
+Page 19
+	Group
+		Owner Mon Jan 16 15:23:13 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:23:20 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 15:23:30 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 15:23:37 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 15:23:43 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:23:51 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 15:23:55 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:24:03 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:24:20 GMT 2017 - Inserted Text
+			Note: 2004[em-dash]"artificial
+	Group
+		Owner Mon Jan 16 15:24:24 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:24:27 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:24:40 GMT 2017 - Inserted Text
+			Note: mining"[em-dash]slowly
+	Owner Mon Jan 16 15:25:06 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:25:20 GMT 2017 - Inserted Text
+			Note: data mining
+Page 20
+	Owner Mon Jan 16 15:25:33 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:26:19 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:26:36 GMT 2017 - Inserted Text
+		Note: )
+	Owner Mon Jan 16 15:35:11 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 15:35:18 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:35:31 GMT 2017 - Inserted Text
+			Note: "raw"
+	Group
+		Owner Mon Jan 16 15:35:46 GMT 2017 - Inserted Text
+			Note: data[em-dash]definitely
+	Group
+		Owner Mon Jan 16 15:36:11 GMT 2017 - Inserted Text
+			Note: [em-dash]appear
+	Owner Mon Jan 16 15:36:16 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:36:38 GMT 2017 - Inserted Text
+			Note: model[em-dash]a
+	Group
+		Owner Mon Jan 16 15:37:00 GMT 2017 - Inserted Text
+			Note: neighbors ).
+	Owner Mon Jan 16 15:38:20 GMT 2017 - Inserted Text
+		Note: then
+	Group
+		Owner Mon Jan 16 15:38:30 GMT 2017 - Inserted Text
+			Note: decentered
+	Owner Mon Jan 16 15:38:39 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 15:38:52 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:38:58 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 15:39:01 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 15:39:09 GMT 2017 - Inserted Text
+		Note: ,
+Page 21
+	Owner Mon Jan 16 15:39:27 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:39:42 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 15:39:50 GMT 2017 - Inserted Text
+			Note: ."
+	Owner Mon Jan 16 15:40:06 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 15:40:14 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 15:40:21 GMT 2017 - Inserted Text
+			Note: It
+	Group
+		Owner Mon Jan 16 15:40:44 GMT 2017 - Inserted Text
+			Note: gradients[em-dash]a
+	Group
+		Owner Mon Jan 16 15:40:56 GMT 2017 - Inserted Text
+			Note: [em-dash]
+	Owner Mon Jan 16 15:40:57 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:33:09 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:33:13 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:33:57 GMT 2017 - Inserted Text
+			Note: "‘cat" or "not cat"
+Page 22
+	Group
+		Owner Mon Jan 16 16:38:17 GMT 2017 - Inserted Text
+			Note: ranges
+	Group
+		Owner Mon Jan 16 16:38:28 GMT 2017 - Inserted Text
+			Note: data streams
+	Owner Mon Jan 16 16:38:40 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 16:38:47 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:38:55 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 16:39:03 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:39:16 GMT 2017 - Inserted Text
+			Note: practices[em-dash]normalization
+	Group
+		Owner Mon Jan 16 16:39:21 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 16:39:31 GMT 2017 - Inserted Text
+			Note: [em-dash]embroider
+	Group
+		Owner Mon Jan 16 16:39:38 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 16:39:41 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 16:39:52 GMT 2017 - Inserted Text
+		Note: and 
+	Owner Mon Jan 16 16:39:58 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 16:40:03 GMT 2017 - Cross-Out
+Page 23
+	Group
+		Owner Mon Jan 16 16:41:47 GMT 2017 - Inserted Text
+			Note: learners[em-dash]a
+	Group
+		Owner Mon Jan 16 16:41:58 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Group
+		Owner Mon Jan 16 16:42:12 GMT 2017 - Inserted Text
+			Note: book[em-dash]situated
+	Owner Mon Jan 16 16:42:14 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:42:22 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 16:42:27 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Mon Jan 16 16:42:32 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 16:42:41 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:42:46 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 16:42:51 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:43:08 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:43:19 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 30 17:43:29 GMT 2017 - Cross-Out
+	Owner Mon Jan 30 17:43:33 GMT 2017 - Inserted Text
+		Note: .
+Page 24
+	Owner Mon Jan 16 16:43:43 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 16:43:57 GMT 2017 - Inserted Text
+			Note: settings[em-dash]the
+	Group
+		Owner Mon Jan 16 16:44:02 GMT 2017 - Inserted Text
+			Note: f
+	Group
+		Owner Mon Jan 16 16:44:19 GMT 2017 - Inserted Text
+			Note: [em-dash]attest
+	Owner Mon Jan 16 16:44:21 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:44:26 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 16:44:30 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:44:35 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 16:44:53 GMT 2017 - Inserted Text
+		Note: and
+	Group
+		Owner Mon Jan 16 16:44:59 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Owner Mon Jan 16 16:45:10 GMT 2017 - Inserted Text
+		Note: a
+	Group
+		Owner Mon Jan 16 16:45:20 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:45:27 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 16:45:30 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 16:45:45 GMT 2017 - Inserted Text
+			Note: algorithms[em-dash]also
+	Group
+		Owner Mon Jan 16 16:45:59 GMT 2017 - Inserted Text
+			Note: learners[em-dash]are
+	Owner Mon Jan 16 16:46:01 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:46:07 GMT 2017 - Inserted Text
+		Note: [space]
+	Owner Mon Jan 16 16:46:10 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 16:46:20 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 16:46:24 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:46:28 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 16:46:34 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:46:40 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 16:46:51 GMT 2017 - Inserted Text
+			Note: 19th
+Page 25
+	Group
+		Owner Mon Jan 16 16:47:04 GMT 2017 - Inserted Text
+			Note: centered
+	Group
+		Owner Mon Jan 16 16:47:13 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 16:47:25 GMT 2017 - Inserted Text
+			Note: communication[em-dash]border
+	Group
+		Owner Mon Jan 16 16:47:38 GMT 2017 - Inserted Text
+			Note: adverts[em-dash]processes
+	Group
+		Owner Mon Jan 16 16:47:49 GMT 2017 - Inserted Text
+			Note: us[em-dash]with
+	Owner Mon Jan 16 16:47:56 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:48:25 GMT 2017 - Inserted Text
+			Note: program[em-dash]"a pre-trained" neural net[em-dash]during
+	Group
+		Owner Mon Jan 16 16:48:40 GMT 2017 - Inserted Text
+			Note: knowledge control
+	Owner Mon Jan 16 16:48:52 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:49:07 GMT 2017 - Inserted Text
+			Note: enquiry[em-dashto
+	Group
+		Owner Mon Jan 16 16:49:15 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:49:17 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:49:25 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:49:28 GMT 2017 - Inserted Text
+			Note: "
+Page 26
+	Group
+		Owner Mon Jan 16 16:49:41 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 16:49:46 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 16:49:52 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:49:55 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:50:09 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:50:20 GMT 2017 - Inserted Text
+			Note: sidesteps and substitutes
+	Owner Mon Jan 16 16:50:24 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:50:34 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Group
+		Owner Mon Jan 16 16:51:06 GMT 2017 - Inserted Text
+			Note: learners "write"
+	Group
+		Owner Mon Jan 16 16:51:16 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:51:19 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:51:24 GMT 2017 - Inserted Text
+			Note: that
+	Group
+		Owner Mon Jan 16 16:51:31 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Owner Mon Jan 16 16:51:34 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:51:41 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:51:45 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 16:51:52 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 16:51:57 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:52:20 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:52:26 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 16:52:39 GMT 2017 - Inserted Text
+		Note: the
+	Owner Mon Jan 16 16:53:01 GMT 2017 - Inserted Text
+		Note: then
+	Owner Mon Jan 16 16:53:10 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:53:20 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:53:46 GMT 2017 - Inserted Text
+		Note: ,
+Page 27
+	Owner Mon Jan 16 16:54:53 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:55:15 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:55:19 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:55:23 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:55:27 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:55:31 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:55:35 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:55:39 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:55:43 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:55:59 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:56:05 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:56:35 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:56:38 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:56:45 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:56:49 GMT 2017 - Inserted Text
+			Note: ."
+	Group
+		Owner Mon Jan 16 16:57:11 GMT 2017 - Inserted Text
+			Note: General
+	Owner Mon Jan 16 16:57:15 GMT 2017 - Inserted Text
+		Note: exists
+	Owner Mon Jan 16 16:57:22 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:57:25 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:57:30 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:57:45 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:57:49 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Mon Jan 16 16:57:59 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:58:03 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 16:58:08 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 16:58:14 GMT 2017 - Inserted Text
+			Note: Because
+	Owner Mon Jan 16 16:58:17 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 16:58:29 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 16:58:34 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:58:37 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:58:45 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 16:58:49 GMT 2017 - Inserted Text
+			Note: "
+Page 28
+	Owner Mon Jan 16 16:58:56 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 16:59:07 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 16:59:18 GMT 2017 - Inserted Text
+		Note: that
+	Owner Mon Jan 16 16:59:22 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:59:31 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:59:34 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:59:37 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 16:59:39 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:30:44 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:31:05 GMT 2017 - Inserted Text
+		Note: in chapter
+	Group
+		Owner Mon Jan 16 17:31:23 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Owner Mon Jan 16 17:31:24 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:31:37 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 17:34:24 GMT 2017 - Inserted Text
+		Note: "
+	Owner Mon Jan 16 17:34:29 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:34:38 GMT 2017 - Inserted Text
+			Note: centers
+	Group
+		Owner Mon Jan 16 17:34:49 GMT 2017 - Inserted Text
+			Note: power knowledge
+	Owner Mon Jan 16 17:34:52 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:35:05 GMT 2017 - Inserted Text
+			Note: [en-dash]
+Page 29
+	Group
+		Owner Mon Jan 16 17:35:17 GMT 2017 - Inserted Text
+			Note: because
+	Group
+		Owner Mon Jan 16 17:35:25 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:35:31 GMT 2017 - Inserted Text
+			Note: ."
+	Group
+		Owner Mon Jan 16 17:35:40 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 17:35:53 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 17:36:01 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:36:10 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 17:36:15 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:36:26 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:36:33 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:36:45 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:36:49 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:37:01 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:37:10 GMT 2017 - Inserted Text
+			Note: ,"
+	Owner Mon Jan 16 17:37:13 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 17:37:25 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 17:37:32 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Group
+		Owner Mon Jan 16 17:37:41 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Group
+		Owner Mon Jan 16 17:37:56 GMT 2017 - Inserted Text
+			Note: him or herself
+	Owner Mon Jan 16 17:38:05 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:38:11 GMT 2017 - Inserted Text
+		Note: ,
+Page 30
+	Group
+		Owner Mon Jan 16 17:38:38 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 17:38:45 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:38:49 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:38:53 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:39:05 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:39:11 GMT 2017 - Inserted Text
+		Note: we would
+	Owner Mon Jan 16 17:39:17 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:39:24 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:39:30 GMT 2017 - Inserted Text
+			Note: , which
+	Owner Mon Jan 16 17:39:40 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:39:45 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:39:52 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:39:55 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:39:59 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:40:06 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:41:11 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:41:19 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:41:26 GMT 2017 - Inserted Text
+			Note: .
+	Group
+		Owner Mon Jan 16 17:41:31 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:41:34 GMT 2017 - Inserted Text
+			Note: "
+Page 31
+	Owner Mon Jan 16 17:41:46 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:42:01 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:42:06 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:42:12 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:42:17 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:42:26 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Mon Jan 16 17:42:30 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:42:34 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 17:42:58 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:43:05 GMT 2017 - Inserted Text
+			Note: c
+	Owner Mon Jan 16 17:43:07 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:43:11 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:43:17 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:43:23 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 17:43:37 GMT 2017 - Inserted Text
+			Note: are
+	Group
+		Owner Mon Jan 16 17:43:56 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:44:03 GMT 2017 - Inserted Text
+			Note: ."
+	Owner Mon Jan 16 17:44:09 GMT 2017 - Inserted Text
+		Note:  see
+Page 32
+	Group
+		Owner Mon Jan 16 17:44:23 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:44:27 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:44:36 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:44:53 GMT 2017 - Inserted Text
+			Note: ."
+	Group
+		Owner Mon Jan 16 17:45:01 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Mon Jan 16 17:45:10 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:45:18 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:45:24 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:45:30 GMT 2017 - Inserted Text
+			Note: ."
+	Owner Mon Jan 16 17:45:46 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 17:46:42 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:46:46 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 17:46:52 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 17:46:55 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 17:47:01 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Owner Mon Jan 16 17:47:07 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:47:25 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:47:28 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:47:36 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:47:43 GMT 2017 - Inserted Text
+		Note: "
+	Owner Mon Jan 16 17:47:46 GMT 2017 - Inserted Text
+		Note: "
+Page 33
+	Owner Mon Jan 16 17:47:51 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:47:54 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:48:05 GMT 2017 - Inserted Text
+			Note: scores, they
+	Owner Mon Jan 16 17:48:35 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:48:44 GMT 2017 - Inserted Text
+			Note: concerns
+	Group
+		Owner Mon Jan 16 17:48:51 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:48:53 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 17:49:10 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:49:35 GMT 2017 - Inserted Text
+			Note: complicit[em-dash]"aligned"[em-dash]with
+	Group
+		Owner Mon Jan 16 17:49:45 GMT 2017 - Inserted Text
+			Note: center
+	Owner Mon Jan 16 17:49:51 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:49:55 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 17:50:08 GMT 2017 - Inserted Text
+			Note: observation[em-dash]asymmetries
+	Group
+		Owner Mon Jan 16 17:50:13 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:50:17 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:50:29 GMT 2017 - Inserted Text
+			Note: economy[em-dash]exhausts
+	Group
+		Owner Mon Jan 16 17:50:37 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:50:41 GMT 2017 - Inserted Text
+			Note: ."
+Page 34
+	Group
+		Owner Mon Jan 16 17:50:58 GMT 2017 - Inserted Text
+			Note: question[em-dash]how
+	Group
+		Owner Mon Jan 16 17:51:15 GMT 2017 - Inserted Text
+			Note: [em-dash]suggests
+	Group
+		Owner Mon Jan 16 17:51:27 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:51:33 GMT 2017 - Inserted Text
+			Note: ."
+	Owner Mon Jan 16 17:51:34 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:51:49 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:51:55 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 17:53:53 GMT 2017 - Inserted Text
+			Note: Although
+	Group
+		Owner Mon Jan 16 17:54:11 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:54:14 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 17:54:21 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:54:24 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 17:54:39 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 17:54:47 GMT 2017 - Inserted Text
+			Note: and so on
+	Owner Mon Jan 16 17:54:56 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 17:55:06 GMT 2017 - Inserted Text
+			Note: [em-dash]
+	Owner Mon Jan 16 17:55:10 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:55:17 GMT 2017 - Inserted Text
+		Note: ,
+Page 35
+	Group
+		Owner Mon Jan 16 17:55:31 GMT 2017 - Inserted Text
+			Note: [em-dash]
+	Owner Mon Jan 16 17:55:34 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:55:41 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 17:55:45 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:56:00 GMT 2017 - Inserted Text
+		Note: and
+	Owner Mon Jan 16 17:56:04 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 17:56:18 GMT 2017 - Inserted Text
+			Note: This
+	Group
+		Owner Mon Jan 16 17:56:26 GMT 2017 - Inserted Text
+			Note: knowledge practice
+	Owner Mon Jan 16 17:56:28 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:56:37 GMT 2017 - Inserted Text
+			Note: p
+	Group
+		Owner Mon Jan 16 17:56:51 GMT 2017 - Inserted Text
+			Note: 2011[en-dash]2012
+	Owner Mon Jan 16 17:56:59 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:57:14 GMT 2017 - Inserted Text
+			Note: U.S.
+	Owner Mon Jan 16 17:57:15 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:57:20 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 17:57:26 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 17:57:36 GMT 2017 - Inserted Text
+		Note: [em-dash]
+	Owner Mon Jan 16 17:57:38 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:57:42 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:57:53 GMT 2017 - Inserted Text
+			Note: Machine"[em-dash]using
+	Owner Mon Jan 16 17:57:58 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:58:06 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Mon Jan 16 17:58:17 GMT 2017 - Cross-Out
+Page 36
+	Owner Mon Jan 16 17:58:21 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:58:32 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:58:35 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 17:58:40 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 17:58:50 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 17:59:01 GMT 2017 - Inserted Text
+			Note: Netflix (Madrigal
+	Owner Mon Jan 16 17:59:04 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 17:59:10 GMT 2017 - Inserted Text
+			Note: Although
+	Group
+		Owner Mon Jan 16 17:59:14 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 17:59:37 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 17:59:42 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Mon Jan 16 17:59:53 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:01:38 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:01:42 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:01:51 GMT 2017 - Inserted Text
+			Note: although
+Page 37
+	Group
+		Owner Mon Jan 16 18:02:55 GMT 2017 - Inserted Text
+			Note: c
+	Owner Mon Jan 16 18:03:04 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:03:16 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:03:20 GMT 2017 - Inserted Text
+		Note: then
+	Owner Mon Jan 16 18:03:33 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:03:36 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:03:52 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:03:57 GMT 2017 - Inserted Text
+			Note: f
+	Group
+		Owner Mon Jan 16 18:04:11 GMT 2017 - Inserted Text
+			Note: normalized to
+Page 38
+	Owner Mon Jan 16 18:04:24 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:04:39 GMT 2017 - Inserted Text
+			Note: Google Trends
+	Group
+		Owner Mon Jan 16 18:04:45 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 18:04:52 GMT 2017 - Inserted Text
+			Note: Google Trends
+	Group
+		Owner Mon Jan 16 18:05:16 GMT 2017 - Inserted Text
+			Note: decentered
+	Owner Mon Jan 16 18:05:23 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:05:29 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:05:37 GMT 2017 - Inserted Text
+			Note: with
+	Owner Mon Jan 16 18:05:46 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:05:52 GMT 2017 - Inserted Text
+			Note: To
+Page 39
+	Owner Mon Jan 16 18:06:14 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:06:27 GMT 2017 - Inserted Text
+			Note: Diagrams[em-dash]a
+	Group
+		Owner Mon Jan 16 18:06:39 GMT 2017 - Inserted Text
+			Note: variations[em-dash]practically
+	Owner Mon Jan 16 18:06:47 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:06:52 GMT 2017 - Inserted Text
+			Note: centers
+	Group
+		Owner Mon Jan 16 18:07:00 GMT 2017 - Inserted Text
+			Note: power knowledge
+	Group
+		Owner Mon Jan 16 18:07:12 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:07:16 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:07:26 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:07:52 GMT 2017 - Inserted Text
+			Note: ,"
+	Owner Mon Jan 16 18:08:23 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:08:44 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:08:48 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:08:58 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:09:02 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 18:09:13 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:09:30 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Owner Mon Jan 16 18:09:35 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:09:40 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:09:45 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:09:57 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 18:10:00 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:10:16 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:10:24 GMT 2017 - Inserted Text
+			Note: among
+Page 40
+	Owner Mon Jan 16 18:10:29 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:10:46 GMT 2017 - Inserted Text
+			Note: this[em-dash]certainly
+	Group
+		Owner Mon Jan 16 18:10:57 GMT 2017 - Inserted Text
+			Note: everyone[em-dash]is
+	Group
+		Owner Mon Jan 16 18:11:03 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 18:11:09 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:11:15 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 18:11:24 GMT 2017 - Inserted Text
+			Note: among
+	Owner Mon Jan 16 18:11:51 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:14:04 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:14:10 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:14:16 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:14:23 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Owner Mon Jan 16 18:14:30 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:14:40 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 18:14:42 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 18:14:47 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 18:14:51 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:15:08 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:15:10 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:15:23 GMT 2017 - Inserted Text
+		Note: ,
+Page 41
+	Owner Mon Jan 16 18:15:36 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:15:48 GMT 2017 - Sticky Note
+		Note: AU: Please insert ending chapter number
+	Group
+		Owner Mon Jan 16 18:16:09 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Group
+		Owner Mon Jan 16 18:16:15 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 18:16:21 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Owner Mon Jan 16 18:16:26 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:16:40 GMT 2017 - Inserted Text
+			Note: drawn[em-dash]sometimes
+	Group
+		Owner Mon Jan 16 18:16:49 GMT 2017 - Inserted Text
+			Note: operationally[em-dash]on
+	Owner Mon Jan 16 18:16:55 GMT 2017 - Cross-Out
+Page 43
+	Owner Mon Jan 16 18:28:19 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:28:23 GMT 2017 - Inserted Text
+		Note: .
+	Owner Mon Jan 16 18:28:29 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 18:28:36 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:28:40 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:29:18 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:29:22 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:29:27 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:29:29 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:29:36 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:29:41 GMT 2017 - Inserted Text
+			Note: ."
+	Group
+		Owner Mon Jan 16 18:29:44 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 18:29:51 GMT 2017 - Inserted Text
+			Note: "we"
+	Group
+		Owner Mon Jan 16 18:30:03 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:30:06 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:30:14 GMT 2017 - Inserted Text
+			Note: Although
+	Group
+		Owner Mon Jan 16 18:30:19 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:30:22 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:30:31 GMT 2017 - Inserted Text
+			Note: center
+	Group
+		gcrossma Tue Feb 21 20:09:24 GMT 2017 - Inserted Text
+			Note: M
+	gcrossma Tue Feb 21 20:24:43 GMT 2017 - Sticky Note
+		Note: [Comp: set this paragraph flush left]
+Page 44
+	Group
+		Owner Mon Jan 16 18:30:45 GMT 2017 - Inserted Text
+			Note: Lively
+	Owner Mon Jan 16 18:30:51 GMT 2017 - Inserted Text
+		Note: has occurred
+	Group
+		Owner Mon Jan 16 18:31:02 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:31:08 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 18:31:20 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:31:23 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:31:26 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 18:31:31 GMT 2017 - Inserted Text
+		Note: .
+	Owner Mon Jan 16 18:31:45 GMT 2017 - Inserted Text
+		Note: that
+	Owner Mon Jan 16 18:31:57 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:32:24 GMT 2017 - Inserted Text
+			Note: done[em-dash]or
+	Owner Mon Jan 16 18:32:28 GMT 2017 - Inserted Text
+		Note: .
+	Owner Mon Jan 16 18:32:39 GMT 2017 - Inserted Text
+		Note: of
+	Owner Mon Jan 16 18:33:06 GMT 2017 - Inserted Text
+		Note: by
+	Group
+		Owner Mon Jan 16 18:33:23 GMT 2017 - Inserted Text
+			Note: which
+	Owner Mon Jan 16 18:33:28 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		gcrossma Tue Feb 21 20:08:25 GMT 2017 - Inserted Text
+			Note: Chapter 2
+			
+			[Comp: change on all verso pages in this chapter]
+Page 45
+	Group
+		Owner Mon Jan 16 18:35:01 GMT 2017 - Inserted Text
+			Note: T
+	Owner Mon Jan 16 18:35:06 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:35:17 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:35:26 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Mon Jan 16 18:35:32 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:35:41 GMT 2017 - Inserted Text
+			Note: well documented
+	Group
+		Owner Mon Jan 16 18:35:52 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:35:58 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:36:07 GMT 2017 - Inserted Text
+			Note: because
+	Owner Mon Jan 16 18:36:13 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:36:16 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:36:32 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:36:36 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:36:47 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:36:53 GMT 2017 - Inserted Text
+			Note: among
+	Owner Mon Jan 16 18:36:59 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:37:05 GMT 2017 - Inserted Text
+		Note: ,
+Page 46
+	Owner Mon Jan 16 18:37:14 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:37:22 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:37:31 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:37:45 GMT 2017 - Inserted Text
+		Note: [em-dash]
+	Group
+		Owner Mon Jan 16 18:37:51 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:38:30 GMT 2017 - Inserted Text
+			Note: Translator"[em-dash]have
+	Group
+		Owner Mon Jan 16 18:38:42 GMT 2017 - Inserted Text
+			Note: [e-dash]
+	Owner Mon Jan 16 18:38:50 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:39:00 GMT 2017 - Inserted Text
+			Note: among
+	Group
+		Owner Mon Jan 16 18:39:07 GMT 2017 - Inserted Text
+			Note: and so on.
+	Group
+		Owner Mon Jan 16 18:39:19 GMT 2017 - Inserted Text
+			Note: Although
+	Group
+		Owner Mon Jan 16 18:39:23 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:39:28 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:39:39 GMT 2017 - Inserted Text
+			Note: that
+	Owner Mon Jan 16 18:39:44 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:39:52 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:39:56 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:41:46 GMT 2017 - Inserted Text
+			Note: Although
+Page 47
+	Group
+		Owner Mon Jan 16 18:42:08 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 18:42:17 GMT 2017 - Inserted Text
+			Note: center
+	Group
+		Owner Mon Jan 16 18:42:31 GMT 2017 - Inserted Text
+			Note: artificial intelligence (AI)
+	Owner Mon Jan 16 18:42:39 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:42:42 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 18:42:43 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:42:55 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 18:43:14 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:43:26 GMT 2017 - Cross-Out
+Page 48
+	Group
+		Owner Mon Jan 16 18:43:36 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:43:41 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:43:44 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:43:49 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:43:52 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:43:55 GMT 2017 - Inserted Text
+			Note: "
+Page 49
+	Owner Mon Jan 16 18:45:00 GMT 2017 - Sticky Note
+		Note: Please fix this overlapping text
+Page 51
+	Group
+		Owner Mon Jan 16 18:44:40 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 18:45:12 GMT 2017 - Inserted Text
+		Note: .
+	Owner Mon Jan 16 18:45:17 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:45:22 GMT 2017 - Inserted Text
+		Note: .
+	Owner Mon Jan 16 18:45:25 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 18:45:43 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 18:45:46 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Mon Jan 16 18:45:53 GMT 2017 - Inserted Text
+			Note: are
+	Owner Mon Jan 16 18:45:57 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:46:02 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:46:13 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:46:26 GMT 2017 - Inserted Text
+			Note: their
+	Owner Mon Jan 16 18:46:29 GMT 2017 - Cross-Out
+	Group
+		gcrossma Tue Feb 21 20:09:35 GMT 2017 - Inserted Text
+			Note: I
+	Group
+		gcrossma Tue Feb 21 20:09:39 GMT 2017 - Inserted Text
+			Note: C
+	gcrossma Tue Feb 21 20:24:54 GMT 2017 - Sticky Note
+		Note: [Comp: set this paragraph flush left]
+Page 52
+	Group
+		Owner Mon Jan 16 18:46:36 GMT 2017 - Inserted Text
+			Note: have
+	Group
+		Owner Mon Jan 16 18:46:48 GMT 2017 - Inserted Text
+			Note: point[em-dash]a
+	Owner Mon Jan 16 18:46:55 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 18:47:14 GMT 2017 - Inserted Text
+			Note: generator, and so on on[e,-dash]machine
+	Group
+		Owner Mon Jan 16 18:47:21 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 18:47:26 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:47:34 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:47:39 GMT 2017 - Inserted Text
+			Note: ,"
+	Owner Mon Jan 16 18:47:52 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:48:03 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 18:48:19 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 18:48:36 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 18:48:40 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 18:48:48 GMT 2017 - Inserted Text
+			Note: c
+	Group
+		Owner Mon Jan 16 20:07:26 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 20:07:30 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 20:07:35 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:07:46 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:07:50 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:07:56 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:07:59 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:08:03 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 20:08:09 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 20:08:16 GMT 2017 - Inserted Text
+			Note: ."
+	Group
+		gcrossma Tue Feb 21 20:09:58 GMT 2017 - Inserted Text
+			Note: Chapter 3
+			
+			[Comp: change on all verso pages in this chapter]
+Page 53
+	Group
+		Owner Mon Jan 16 20:08:43 GMT 2017 - Inserted Text
+			Note: surfaces[em-dash]more
+	Owner Mon Jan 16 20:08:56 GMT 2017 - Inserted Text
+		Note: .
+	Owner Mon Jan 16 20:09:05 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 20:09:23 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 20:10:45 GMT 2017 - Inserted Text
+			Note: "
+	Owner Mon Jan 16 20:11:04 GMT 2017 - Sticky Note
+		Note: AU: word missing here.
+	Owner Mon Jan 16 20:11:11 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:11:18 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Mon Jan 16 20:11:25 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 20:11:28 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 20:11:35 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 20:11:38 GMT 2017 - Inserted Text
+			Note: "
+Page 54
+	Owner Mon Jan 16 20:12:02 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 20:12:18 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Owner Mon Jan 16 20:12:26 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 20:12:30 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 20:12:56 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:13:14 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:13:19 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:13:39 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:13:47 GMT 2017 - Inserted Text
+		Note: (
+Page 55
+	Owner Mon Jan 16 20:13:52 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 20:14:09 GMT 2017 - Inserted Text
+			Note: life[em-dash]speaking
+	Owner Mon Jan 16 20:14:15 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 20:14:25 GMT 2017 - Inserted Text
+			Note: reading[em-dash]as
+	Owner Mon Jan 16 20:14:30 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:14:33 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:14:42 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:14:52 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:14:59 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:15:08 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:15:14 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:15:22 GMT 2017 - Inserted Text
+		Note: (Breiman 2001b,
+	Owner Mon Jan 16 20:18:23 GMT 2017 - Cross-Out
+	Group
+		Owner Mon Jan 16 20:18:36 GMT 2017 - Inserted Text
+			Note: ,
+	Group
+		Owner Mon Jan 16 20:19:04 GMT 2017 - Inserted Text
+			Note: datasets[em-dash]vowels
+	Group
+		Owner Mon Jan 16 20:19:30 GMT 2017 - Inserted Text
+			Note: spam[em-dash]in
+	Owner Mon Jan 16 20:19:39 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:19:44 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:19:54 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:19:59 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:20:09 GMT 2017 - Inserted Text
+		Note: [space]
+	Owner Mon Jan 16 20:20:14 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:20:25 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:20:32 GMT 2017 - Inserted Text
+		Note: occurs 
+	Owner Mon Jan 16 20:20:46 GMT 2017 - Inserted Text
+		Note: ,
+Page 56
+	Group
+		Owner Mon Jan 16 20:20:50 GMT 2017 - Inserted Text
+			Note: z
+	Owner Mon Jan 16 20:20:54 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:20:59 GMT 2017 - Cross-Out
+	Owner Mon Jan 16 20:21:18 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:21:47 GMT 2017 - Inserted Text
+		Note: and 
+	Owner Mon Jan 16 20:21:57 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:22:06 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Mon Jan 16 20:22:42 GMT 2017 - Highlight
+	Owner Mon Jan 16 20:23:00 GMT 2017 - Sticky Note
+		Note: AU: Please fix highlighted sentence fragment
+	Group
+		Owner Mon Jan 16 20:23:13 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Mon Jan 16 20:23:17 GMT 2017 - Inserted Text
+			Note: ,"
+	Owner Mon Jan 16 20:23:22 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Mon Jan 16 20:23:40 GMT 2017 - Inserted Text
+			Note: ;
+	Owner Mon Jan 16 20:23:44 GMT 2017 - Inserted Text
+		Note: it
+	Group
+		Owner Mon Jan 16 20:23:55 GMT 2017 - Inserted Text
+			Note: ;
+	Group
+		Owner Mon Jan 16 20:23:58 GMT 2017 - Inserted Text
+			Note: f
+Page 57
+	Owner Tue Jan 17 19:04:36 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:04:46 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:04:51 GMT 2017 - Inserted Text
+		Note: we return to
+	Group
+		Owner Tue Jan 17 19:05:00 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:05:04 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:05:13 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:05:20 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:05:23 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:05:36 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:05:52 GMT 2017 - Inserted Text
+			Note: enterprise-style
+	Owner Tue Jan 17 19:05:57 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:06:08 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:07:52 GMT 2017 - Inserted Text
+			Note: Yet,
+	Group
+		Owner Tue Jan 17 19:08:01 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:08:05 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:08:20 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:08:26 GMT 2017 - Inserted Text
+			Note: "have
+	Group
+		Owner Tue Jan 17 19:08:31 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:08:39 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:08:43 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:08:50 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:08:53 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:09:02 GMT 2017 - Inserted Text
+		Note: [em-dash]
+	Owner Tue Jan 17 19:09:05 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:09:10 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:09:19 GMT 2017 - Inserted Text
+			Note: biology[em-dash]knowledges
+	Group
+		Owner Tue Jan 17 19:09:32 GMT 2017 - Inserted Text
+			Note: Although
+Page 58
+	Owner Tue Jan 17 19:09:38 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:09:52 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:10:04 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:10:15 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:10:22 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:10:29 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:10:44 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:10:53 GMT 2017 - Inserted Text
+		Note: a
+	Owner Tue Jan 17 19:11:01 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:11:10 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:11:17 GMT 2017 - Inserted Text
+			Note: e.g.
+	Group
+		Owner Tue Jan 17 19:11:29 GMT 2017 - Inserted Text
+			Note: Age
+	Owner Tue Jan 17 19:11:41 GMT 2017 - Inserted Text
+		Note: .
+	Owner Tue Jan 17 19:11:51 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:11:59 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:12:05 GMT 2017 - Inserted Text
+			Note: Because
+	Group
+		Owner Tue Jan 17 19:12:19 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:12:23 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:12:38 GMT 2017 - Inserted Text
+			Note: (e.g.,
+	Group
+		Owner Tue Jan 17 19:12:50 GMT 2017 - Inserted Text
+			Note: 18th-century
+	Group
+		Owner Tue Jan 17 19:12:54 GMT 2017 - Inserted Text
+			Note: )
+Page 59
+	Owner Tue Jan 17 19:13:11 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:13:19 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:13:23 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:13:29 GMT 2017 - Inserted Text
+		Note: s
+	Group
+		Owner Tue Jan 17 19:13:33 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:13:40 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:13:46 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:13:51 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:13:58 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:14:24 GMT 2017 - Inserted Text
+			Note: limitation is important because
+	Owner Tue Jan 17 19:14:34 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:14:51 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:15:03 GMT 2017 - Inserted Text
+			Note: ."
+	Group
+		Owner Tue Jan 17 19:15:13 GMT 2017 - Inserted Text
+			Note: 19th
+	Group
+		Owner Tue Jan 17 19:15:31 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Owner Tue Jan 17 19:15:33 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:15:38 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:15:50 GMT 2017 - Inserted Text
+			Note: language[em-dash]Foucault’s
+	Group
+		Owner Tue Jan 17 19:16:40 GMT 2017 - Inserted Text
+			Note: human[em-dash]replace
+	Group
+		Owner Tue Jan 17 19:16:47 GMT 2017 - Inserted Text
+			Note: Age
+	Group
+		Owner Tue Jan 17 19:36:11 GMT 2017 - Inserted Text
+			Note: 19th- and 20th-century
+	Owner Tue Jan 17 19:36:17 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:36:21 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:36:27 GMT 2017 - Cross-Out
+Page 60
+	Owner Tue Jan 17 19:36:38 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:36:50 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:36:54 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:37:14 GMT 2017 - Inserted Text
+		Note: and
+	Owner Tue Jan 17 19:37:19 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:37:30 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:37:47 GMT 2017 - Inserted Text
+			Note: dependent
+	Owner Tue Jan 17 19:38:01 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:38:59 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:39:06 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:40:14 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:40:18 GMT 2017 - Inserted Text
+		Note: that
+	Owner Tue Jan 17 19:40:25 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:40:31 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:40:36 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:40:48 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:40:51 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:40:57 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:41:00 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:41:04 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:41:09 GMT 2017 - Inserted Text
+		Note: ,
+Page 61
+	Group
+		Owner Tue Jan 17 19:41:24 GMT 2017 - Inserted Text
+			Note: z
+	Owner Tue Jan 17 19:43:30 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:43:42 GMT 2017 - Inserted Text
+			Note: z
+	Owner Tue Jan 17 19:43:49 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:44:08 GMT 2017 - Inserted Text
+			Note: z
+	Owner Tue Jan 17 19:44:24 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:44:28 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:44:39 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:44:48 GMT 2017 - Inserted Text
+		Note: ?
+	Group
+		Owner Tue Jan 17 19:45:05 GMT 2017 - Inserted Text
+			Note: This
+	Owner Tue Jan 17 19:45:09 GMT 2017 - Cross-Out
+Page 62
+	Group
+		Owner Tue Jan 17 19:45:32 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Tue Jan 17 19:45:38 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:45:42 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:46:01 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:46:10 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 19:46:18 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:46:21 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:46:28 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:46:31 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:46:36 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:46:41 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:46:48 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:47:41 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:47:44 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:48:16 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:48:21 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:49:10 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:49:16 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:49:31 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:49:36 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:49:44 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:49:49 GMT 2017 - Inserted Text
+		Note: ,
+Page 63
+	Group
+		Owner Tue Jan 17 19:50:06 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 19:50:10 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 19:50:56 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:51:23 GMT 2017 - Inserted Text
+			Note: prostate specific antigen (PSA)
+	Group
+		Owner Tue Jan 17 19:51:35 GMT 2017 - Inserted Text
+			Note: t
+	Owner Tue Jan 17 19:51:44 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:52:07 GMT 2017 - Inserted Text
+		Note: )
+	Owner Tue Jan 17 19:52:15 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:52:20 GMT 2017 - Inserted Text
+			Note: t
+	Owner Tue Jan 17 19:52:22 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:52:27 GMT 2017 - Inserted Text
+			Note: f
+	Owner Tue Jan 17 19:53:10 GMT 2017 - Inserted Text
+		Note: e.g.,
+Page 64
+	Owner Tue Jan 17 19:53:13 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:53:22 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:53:28 GMT 2017 - Inserted Text
+			Note: ,
+	Owner Tue Jan 17 19:56:33 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:56:35 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:56:37 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:56:39 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:56:47 GMT 2017 - Inserted Text
+		Note: e.g.,
+	Owner Tue Jan 17 19:57:09 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:57:11 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 19:57:43 GMT 2017 - Inserted Text
+			Note: top left
+	Owner Tue Jan 17 19:57:49 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:57:58 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:58:03 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:58:05 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:58:09 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 19:58:25 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:58:28 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:58:58 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:59:04 GMT 2017 - Cross-Out
+Page 65
+	Owner Tue Jan 17 19:59:07 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:59:16 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:59:25 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:59:42 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 19:59:57 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:00:04 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:00:12 GMT 2017 - Inserted Text
+			Note: because
+	Owner Tue Jan 17 20:00:25 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:00:34 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:00:43 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:00:51 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:00:58 GMT 2017 - Inserted Text
+		Note: .
+	Owner Tue Jan 17 20:01:05 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:01:13 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 20:01:18 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:01:20 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:01:40 GMT 2017 - Inserted Text
+			Note: nine-dimensional
+	Group
+		Owner Tue Jan 17 20:02:04 GMT 2017 - Inserted Text
+			Note: order[em-dash]the vector space[em-dash]begins
+Page 66
+	Owner Tue Jan 17 20:02:29 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 20:02:44 GMT 2017 - Inserted Text
+			Note: To
+	Owner Tue Jan 17 20:03:01 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:03:14 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Tue Jan 17 20:04:53 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:05:00 GMT 2017 - Inserted Text
+			Note: ."
+	Owner Tue Jan 17 20:05:32 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 20:05:48 GMT 2017 - Inserted Text
+			Note: fault lines
+	Owner Tue Jan 17 20:06:02 GMT 2017 - Inserted Text
+		Note: [em-dash]
+Page 67
+	Owner Tue Jan 17 20:06:04 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:06:21 GMT 2017 - Inserted Text
+			Note: ordinal[em-dash]can
+	Group
+		Owner Tue Jan 17 20:06:34 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:06:49 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 20:06:55 GMT 2017 - Inserted Text
+		Note: .
+	Owner Tue Jan 17 20:07:00 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:07:18 GMT 2017 - Inserted Text
+			Note: loci[em-dash]lines
+	Group
+		Owner Tue Jan 17 20:07:28 GMT 2017 - Inserted Text
+			Note: [em-dash]
+	Group
+		Owner Tue Jan 17 20:07:52 GMT 2017 - Inserted Text
+			Note: expansions[em-dash]and
+	Group
+		Owner Tue Jan 17 20:08:07 GMT 2017 - Inserted Text
+			Note: dimensions[em-dash]subtend
+	Owner Tue Jan 17 20:08:18 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 20:08:35 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:08:50 GMT 2017 - Inserted Text
+			Note: e.g.
+	Owner Tue Jan 17 20:08:52 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:08:55 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:09:04 GMT 2017 - Cross-Out
+Page 68
+	Owner Tue Jan 17 20:09:58 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:10:18 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:10:28 GMT 2017 - Inserted Text
+		Note: as
+	Owner Tue Jan 17 20:10:35 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 20:10:55 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Group
+		Owner Tue Jan 17 20:11:04 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:08 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:15 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:19 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:24 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:28 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:34 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:39 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:45 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:50 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:11:55 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:12:00 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:12:04 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:12:11 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:12:16 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 20:12:23 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 20:12:29 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:12:34 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:12:46 GMT 2017 - Inserted Text
+			Note: "[em-dash]
+	Group
+		Owner Tue Jan 17 20:12:56 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:13:02 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 20:13:15 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 20:13:20 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:13:33 GMT 2017 - Inserted Text
+			Note: high-dimensional
+	Group
+		Owner Tue Jan 17 20:13:37 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 20:13:54 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:14:15 GMT 2017 - Inserted Text
+		Note: and
+	Owner Tue Jan 17 20:14:36 GMT 2017 - Inserted Text
+		Note: .
+	Owner Tue Jan 17 20:14:47 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:14:53 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:15:03 GMT 2017 - Inserted Text
+			Note: More than
+	Group
+		Owner Tue Jan 17 20:15:13 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:15:22 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 20:15:27 GMT 2017 - Inserted Text
+		Note: .
+	Owner Tue Jan 17 20:15:32 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:15:40 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Tue Jan 17 20:15:49 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:15:55 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:16:02 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:16:09 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 20:16:18 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:16:44 GMT 2017 - Sticky Note
+		Note: AU: Please provide missing text here--sentence ends mid-sentence
+	Group
+		Owner Tue Jan 17 20:16:54 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Tue Jan 17 20:17:13 GMT 2017 - Inserted Text
+			Note: {em-dash]vector
+	Group
+		Owner Tue Jan 17 20:17:39 GMT 2017 - Inserted Text
+			Note: and so on[em-dash]that
+	Owner Tue Jan 17 20:21:12 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:21:22 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:21:25 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:21:47 GMT 2017 - Inserted Text
+			Note: high-dimensional
+Page 69
+	Owner Tue Jan 17 20:21:57 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:22:10 GMT 2017 - Inserted Text
+			Note: Because
+	Owner Tue Jan 17 20:22:15 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:22:26 GMT 2017 - Inserted Text
+			Note: [em-dash]a
+	Group
+		Owner Tue Jan 17 20:22:35 GMT 2017 - Inserted Text
+			Note: [em-dash]of
+	Owner Tue Jan 17 20:22:40 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 20:22:55 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:22:58 GMT 2017 - Inserted Text
+		Note: is
+	Owner Tue Jan 17 20:23:01 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:23:03 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:23:07 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:23:12 GMT 2017 - Inserted Text
+		Note: -
+	Owner Tue Jan 17 20:23:16 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:23:31 GMT 2017 - Inserted Text
+			Note: implicitly[em-dash]multiplication
+	Owner Tue Jan 17 20:23:36 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:23:45 GMT 2017 - Inserted Text
+			Note: [em-dash]an
+	Owner Tue Jan 17 20:23:51 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:23:59 GMT 2017 - Inserted Text
+			Note: e
+	Group
+		Owner Tue Jan 17 20:24:10 GMT 2017 - Inserted Text
+			Note: e
+	Group
+		Owner Tue Jan 17 20:24:27 GMT 2017 - Inserted Text
+			Note: well known
+	Group
+		Owner Tue Jan 17 20:24:39 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:24:44 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 20:24:50 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:24:57 GMT 2017 - Inserted Text
+		Note: .
+	Owner Tue Jan 17 20:25:02 GMT 2017 - Highlight
+	Owner Tue Jan 17 20:25:13 GMT 2017 - Sticky Note
+		Note: Please update
+	Group
+		Owner Tue Jan 17 20:25:30 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Tue Jan 17 20:25:40 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:25:45 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Tue Jan 17 20:26:00 GMT 2017 - Inserted Text
+			Note: are
+	Owner Tue Jan 17 20:26:09 GMT 2017 - Inserted Text
+		Note: ,
+Page 70
+	Group
+		Owner Tue Jan 17 20:26:25 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:26:29 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:26:36 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:26:39 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 20:26:43 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:26:51 GMT 2017 - Inserted Text
+		Note: [em-dash]
+	Owner Tue Jan 17 20:26:53 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:26:59 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Tue Jan 17 20:27:02 GMT 2017 - Inserted Text
+			Note: z
+	Owner Tue Jan 17 20:27:07 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:27:16 GMT 2017 - Inserted Text
+			Note: closed-form
+	Owner Tue Jan 17 20:27:19 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:27:35 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:27:39 GMT 2017 - Inserted Text
+			Note: "
+	Owner Tue Jan 17 20:27:46 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 20:27:52 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 20:28:21 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:28:32 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:28:37 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:28:39 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:28:48 GMT 2017 - Inserted Text
+			Note: e.g.
+	Owner Tue Jan 17 20:28:57 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:29:04 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:29:08 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:29:17 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Group
+		Owner Tue Jan 17 20:29:28 GMT 2017 - Inserted Text
+			Note: Regardless of whether
+	Owner Tue Jan 17 20:29:33 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:29:55 GMT 2017 - Sticky Note
+		Note: AU: Provide missing text for this sentence
+	Group
+		Owner Tue Jan 17 20:30:08 GMT 2017 - Inserted Text
+			Note: [em-dash]a
+	Group
+		Owner Tue Jan 17 20:30:14 GMT 2017 - Inserted Text
+			Note: [em-dash]that
+	Group
+		Owner Tue Jan 17 20:30:21 GMT 2017 - Inserted Text
+			Note: density shape
+	Group
+		Owner Tue Jan 17 20:30:33 GMT 2017 - Inserted Text
+			Note: z
+	Owner Tue Jan 17 20:30:44 GMT 2017 - Cross-Out
+Page 71
+	Owner Tue Jan 17 20:30:55 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:31:01 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:31:06 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Tue Jan 17 20:31:10 GMT 2017 - Inserted Text
+			Note: ."
+	Group
+		Owner Tue Jan 17 20:31:21 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Tue Jan 17 20:31:33 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:31:39 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:31:46 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:31:51 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Tue Jan 17 20:32:00 GMT 2017 - Inserted Text
+			Note: are
+	Group
+		Owner Tue Jan 17 20:32:10 GMT 2017 - Inserted Text
+			Note: z
+	Owner Tue Jan 17 20:32:14 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:32:17 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:32:22 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Tue Jan 17 20:32:47 GMT 2017 - Inserted Text
+			Note: package). Vectorized
+	Owner Tue Jan 17 20:32:53 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Tue Jan 17 20:32:58 GMT 2017 - Cross-Out
+	Group
+		Owner Tue Jan 17 20:33:05 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Tue Jan 17 20:33:15 GMT 2017 - Inserted Text
+			Note: z
+	Owner Tue Jan 17 20:33:31 GMT 2017 - Inserted Text
+		Note: [em-dash]
+	Owner Tue Jan 17 20:33:34 GMT 2017 - Cross-Out
+	Owner Tue Jan 17 20:33:43 GMT 2017 - Inserted Text
+		Note: ,
+Page 72
+	Owner Wed Jan 18 18:44:40 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 18:44:47 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 18:44:51 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 18:44:56 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 18:45:27 GMT 2017 - Inserted Text
+		Note: when
+	Group
+		Owner Wed Jan 18 18:45:39 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Group
+		Owner Wed Jan 18 18:45:49 GMT 2017 - Inserted Text
+			Note: because
+	Group
+		Owner Wed Jan 18 19:03:33 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Wed Jan 18 19:03:37 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Wed Jan 18 19:03:45 GMT 2017 - Inserted Text
+			Note: carefully crafted
+	Owner Wed Jan 18 19:03:56 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:04:02 GMT 2017 - Inserted Text
+		Note:  is different
+	Owner Wed Jan 18 19:04:10 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:04:16 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:04:21 GMT 2017 - Inserted Text
+		Note: instead
+	Owner Wed Jan 18 19:04:26 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:04:39 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:04:50 GMT 2017 - Inserted Text
+		Note: and
+	Owner Wed Jan 18 19:04:52 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:05:11 GMT 2017 - Inserted Text
+		Note: a
+	Owner Wed Jan 18 19:05:20 GMT 2017 - Inserted Text
+		Note: .
+	Owner Wed Jan 18 19:05:32 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:05:42 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:05:48 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:05:54 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:06:17 GMT 2017 - Inserted Text
+			Note: language." "Linear
+	Owner Wed Jan 18 19:06:39 GMT 2017 - Sticky Note
+		Note: AU: please provide missing text here.
+	Group
+		Owner Wed Jan 18 19:06:58 GMT 2017 - Inserted Text
+			Note: center
+	Group
+		Owner Wed Jan 18 19:07:20 GMT 2017 - Inserted Text
+			Note: Graphic Processing Units (GPUs),
+	Group
+		Owner Wed Jan 18 19:07:44 GMT 2017 - Inserted Text
+			Note: Field Programmable Gate Arrays (FPGAs),
+Page 73
+	Group
+		Owner Wed Jan 18 19:09:08 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Wed Jan 18 19:09:14 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:09:20 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Wed Jan 18 19:09:38 GMT 2017 - Inserted Text
+			Note: in listing 3.2.
+	Group
+		Owner Wed Jan 18 19:10:00 GMT 2017 - Inserted Text
+			Note: e.g.
+	Group
+		Owner Wed Jan 18 19:10:25 GMT 2017 - Inserted Text
+			Note: t
+	Owner Wed Jan 18 19:10:43 GMT 2017 - Sticky Note
+		Note: AU: Please provide missing text
+Page 74
+	Owner Wed Jan 18 19:10:55 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:10:58 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:11:02 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:11:05 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:11:25 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:11:30 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:11:38 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Wed Jan 18 19:11:43 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Wed Jan 18 19:12:02 GMT 2017 - Inserted Text
+			Note: , as shown in listing 3.3.
+	Group
+		Owner Wed Jan 18 19:12:12 GMT 2017 - Inserted Text
+			Note: Closed-form
+	Group
+		Owner Wed Jan 18 19:12:31 GMT 2017 - Inserted Text
+			Note: z
+	Owner Wed Jan 18 19:12:36 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:12:45 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:12:54 GMT 2017 - Inserted Text
+			Note: t
+	Owner Wed Jan 18 19:13:08 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:13:15 GMT 2017 - Inserted Text
+		Note:  is important
+	Group
+		Owner Wed Jan 18 19:13:22 GMT 2017 - Inserted Text
+			Note: z
+	Owner Wed Jan 18 19:13:37 GMT 2017 - Sticky Note
+		Note: AU: Please provide missing text
+Page 75
+	Group
+		Owner Wed Jan 18 19:16:49 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Wed Jan 18 19:17:05 GMT 2017 - Inserted Text
+			Note: z
+	Owner Wed Jan 18 19:17:18 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:17:21 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:17:31 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:17:41 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:17:57 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:18:09 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Wed Jan 18 19:18:18 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:18:23 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:18:29 GMT 2017 - Inserted Text
+		Note: s
+	Owner Wed Jan 18 19:18:35 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:18:48 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:18:54 GMT 2017 - Inserted Text
+			Note: "
+Page 76
+	Owner Wed Jan 18 19:19:06 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:19:11 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:19:16 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:19:20 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:19:28 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:19:35 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:19:37 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:19:40 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:19:44 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:19:53 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:20:00 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:20:07 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:20:17 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:20:26 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:20:30 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:20:33 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:20:36 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:20:40 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:20:51 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:21:01 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:21:10 GMT 2017 - Inserted Text
+		Note: ,
+Page 77
+	Owner Wed Jan 18 19:21:15 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:21:19 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:21:24 GMT 2017 - Inserted Text
+			Note: z
+	Owner Wed Jan 18 19:22:24 GMT 2017 - Inserted Text
+		Note: , was
+	Owner Wed Jan 18 19:22:34 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:22:38 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:22:43 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:22:51 GMT 2017 - Inserted Text
+			Note: ."
+	Group
+		Owner Wed Jan 18 19:25:27 GMT 2017 - Inserted Text
+			Note: operationality[em-dash]everything
+	Group
+		Owner Wed Jan 18 19:25:44 GMT 2017 - Inserted Text
+			Note: operation[em-dash]and
+	Owner Wed Jan 18 19:25:53 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:26:06 GMT 2017 - Inserted Text
+			Note: "C
+	Group
+		Owner Wed Jan 18 19:26:31 GMT 2017 - Inserted Text
+			Note: Whitehead, "Feelings
+	Group
+		Owner Wed Jan 18 19:26:36 GMT 2017 - Inserted Text
+			Note: '
+	Group
+		Owner Wed Jan 18 19:26:41 GMT 2017 - Inserted Text
+			Note: '
+	Group
+		Owner Wed Jan 18 19:26:45 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:27:17 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:27:22 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:27:25 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:27:33 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:27:39 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Wed Jan 18 19:27:48 GMT 2017 - Inserted Text
+			Note: z
+	Owner Wed Jan 18 19:27:55 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:28:06 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:28:12 GMT 2017 - Inserted Text
+			Note: z
+Page 79
+	Owner Wed Jan 18 19:28:27 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Wed Jan 18 19:28:31 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:28:35 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:28:41 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Wed Jan 18 19:29:52 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:29:56 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:30:03 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:30:08 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:30:15 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:30:19 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:30:25 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:30:30 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:30:41 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:30:46 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:30:54 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Wed Jan 18 19:31:11 GMT 2017 - Inserted Text
+			Note: Domingos'
+	Group
+		Owner Wed Jan 18 19:31:16 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:31:27 GMT 2017 - Inserted Text
+		Note: "
+	Group
+		Owner Wed Jan 18 19:31:34 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:31:40 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Wed Jan 18 19:32:36 GMT 2017 - Inserted Text
+			Note: ; "statistical
+	Group
+		Owner Wed Jan 18 19:32:07 GMT 2017 - Inserted Text
+			Note: ,"
+	Owner Wed Jan 18 19:32:11 GMT 2017 - Cross-Out
+	Group
+		gcrossma Tue Feb 21 20:10:33 GMT 2017 - Inserted Text
+			Note: Fi
+	Group
+		gcrossma Tue Feb 21 20:10:35 GMT 2017 - Inserted Text
+			Note: F
+	gcrossma Tue Feb 21 20:25:11 GMT 2017 - Sticky Note
+		Note: [Comp: set this paragraph flush left]
+Page 80
+	Owner Wed Jan 18 19:32:46 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:32:50 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:32:57 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:33:07 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:33:14 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:33:21 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:33:36 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:33:47 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:33:54 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:34:14 GMT 2017 - Cross-Out
+	Group
+		gcrossma Tue Feb 21 20:11:00 GMT 2017 - Inserted Text
+			Note: Chapter 4
+			
+			[Comp: change on all verso pages in this chapter]
+	gcrossma Tue Feb 21 20:43:25 GMT 2017 - Sticky Note
+		Note: AU: what is this spot of green appearing outside the figure?
+		
+		Also, please note that the figures will appear in black and white.
+Page 81
+	Group
+		Owner Wed Jan 18 19:34:43 GMT 2017 - Inserted Text
+			Note: how-to manuals
+	Owner Wed Jan 18 19:35:25 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:35:41 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:35:45 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:35:54 GMT 2017 - Inserted Text
+			Note: f
+	Owner Wed Jan 18 19:36:02 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:36:33 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:36:37 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:36:50 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:37:00 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:37:03 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:37:07 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:37:14 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:37:19 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:37:28 GMT 2017 - Inserted Text
+			Note: whereas
+	Owner Wed Jan 18 19:37:36 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:37:40 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:37:55 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:38:01 GMT 2017 - Inserted Text
+			Note: z
+Page 82
+	Owner Wed Jan 18 19:38:12 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:38:44 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:38:53 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Wed Jan 18 19:38:58 GMT 2017 - Inserted Text
+			Note: 's
+	Owner Wed Jan 18 19:39:08 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:39:52 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Wed Jan 18 19:40:00 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:40:05 GMT 2017 - Inserted Text
+			Note: ,"
+	Group
+		Owner Wed Jan 18 19:40:09 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Wed Jan 18 19:40:15 GMT 2017 - Inserted Text
+			Note: "
+	Owner Wed Jan 18 19:40:40 GMT 2017 - Inserted Text
+		Note: Foucault 1972,
+	Owner Wed Jan 18 19:48:42 GMT 2017 - Cross-Out
+	Owner Wed Jan 18 19:48:59 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:49:08 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Wed Jan 18 19:49:12 GMT 2017 - Cross-Out
+	Group
+		Owner Wed Jan 18 19:50:28 GMT 2017 - Inserted Text
+			Note: functions[em-dash]"kernel function," "discriminant function,"
+			"radial basis function"[em-dash]mingle with biological and engineering
+			functions[em-dash]"protein-binding function," "intestinal motor function,"
+			or "rules to control locomotion."
+Page 83
+	Group
+		Owner Wed Jan 18 19:51:14 GMT 2017 - Inserted Text
+			Note: "find," "estimate," "approximate," "analyse," and sometimes "decompose"
+	Group
+		Owner Thu Jan 19 14:34:21 GMT 2017 - Inserted Text
+			Note: relation[em-dash]a mapping[em-dash]
+	Owner Thu Jan 19 14:34:35 GMT 2017 - Inserted Text
+		Note: a
+	Group
+		Owner Thu Jan 19 14:34:48 GMT 2017 - Inserted Text
+			Note: an
+	Group
+		Owner Thu Jan 19 14:35:00 GMT 2017 - Inserted Text
+			Note: ).
+	Owner Thu Jan 19 14:35:16 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Thu Jan 19 14:35:28 GMT 2017 - Inserted Text
+			Note: and so on
+	Group
+		Owner Thu Jan 19 14:35:46 GMT 2017 - Inserted Text
+			Note: later
+	Owner Thu Jan 19 14:35:53 GMT 2017 - Inserted Text
+		Note: s
+	Group
+		Owner Thu Jan 19 14:36:15 GMT 2017 - Inserted Text
+			Note: etc.; see
+	Owner Thu Jan 19 14:36:23 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Thu Jan 19 14:37:09 GMT 2017 - Inserted Text
+			Note: expression[em-dash]a function[em-dash]approximating
+	Owner Thu Jan 19 14:37:15 GMT 2017 - Inserted Text
+		Note: ,
+Page 84
+	Group
+		Owner Thu Jan 19 14:37:35 GMT 2017 - Inserted Text
+			Note: were
+	Owner Thu Jan 19 14:37:42 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:38:00 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:38:11 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:38:19 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:38:24 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:38:38 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Thu Jan 19 14:38:45 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:38:56 GMT 2017 - Inserted Text
+			Note: among
+	Group
+		Owner Thu Jan 19 14:39:10 GMT 2017 - Inserted Text
+			Note: [em-dash]supervised
+	Owner Thu Jan 19 14:39:29 GMT 2017 - Inserted Text
+		Note: and
+	Group
+		Owner Thu Jan 19 14:39:37 GMT 2017 - Inserted Text
+			Note: {em-dash]in
+	Owner Thu Jan 19 14:39:56 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:40:02 GMT 2017 - Inserted Text
+		Note: 48
+	Owner Thu Jan 19 14:40:10 GMT 2017 - Inserted Text
+		Note: .
+Page 85
+	Owner Thu Jan 19 14:40:22 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:40:27 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:40:34 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:40:38 GMT 2017 - Inserted Text
+			Note: "
+	Owner Thu Jan 19 14:40:48 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:40:51 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:40:56 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:41:14 GMT 2017 - Inserted Text
+			Note: z
+	Group
+		Owner Thu Jan 19 14:41:33 GMT 2017 - Inserted Text
+			Note: e.g.,
+	Owner Thu Jan 19 14:41:35 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:41:46 GMT 2017 - Inserted Text
+			Note: 50
+	Owner Thu Jan 19 14:41:55 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:42:04 GMT 2017 - Inserted Text
+		Note: an
+	Owner Thu Jan 19 14:42:12 GMT 2017 - Highlight
+	Owner Thu Jan 19 14:42:29 GMT 2017 - Sticky Note
+		Note: AU: Please insert missing text here.
+	Group
+		Owner Thu Jan 19 14:42:57 GMT 2017 - Inserted Text
+			Note: [em-dash]"no
+	Group
+		Owner Thu Jan 19 14:43:12 GMT 2017 - Inserted Text
+			Note: "[em-dash]is
+	Owner Thu Jan 19 14:43:27 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Thu Jan 19 14:43:33 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:43:47 GMT 2017 - Inserted Text
+			Note: " then
+	Owner Thu Jan 19 14:43:59 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:44:12 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:44:18 GMT 2017 - Cross-Out
+Page 86
+	Owner Thu Jan 19 14:44:27 GMT 2017 - Inserted Text
+		Note: .
+	Group
+		Owner Thu Jan 19 14:44:53 GMT 2017 - Inserted Text
+			Note: classifiers[em-dash]perhaps
+	Group
+		Owner Thu Jan 19 14:45:14 GMT 2017 - Inserted Text
+			Note: [em-dash]with
+	Owner Thu Jan 19 14:45:17 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:45:24 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:45:28 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:45:35 GMT 2017 - Inserted Text
+			Note: e.g.
+	Group
+		Owner Thu Jan 19 14:46:06 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:46:14 GMT 2017 - Inserted Text
+			Note: ,"
+	Owner Thu Jan 19 14:46:25 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:46:28 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:46:34 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Thu Jan 19 14:46:46 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:46:53 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:47:03 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:47:07 GMT 2017 - Inserted Text
+			Note: "
+	Owner Thu Jan 19 14:47:21 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:47:29 GMT 2017 - Highlight
+	Owner Thu Jan 19 14:47:44 GMT 2017 - Sticky Note
+		Note: AU: Please insert chapter number here.
+	Group
+		Owner Thu Jan 19 14:47:56 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:48:05 GMT 2017 - Inserted Text
+			Note: ,"
+	Owner Thu Jan 19 14:48:06 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:48:23 GMT 2017 - Inserted Text
+		Note: (
+	Owner Thu Jan 19 14:48:29 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:48:33 GMT 2017 - Inserted Text
+			Note: z
+Page 87
+	Group
+		Owner Thu Jan 19 14:49:04 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:49:09 GMT 2017 - Inserted Text
+			Note: "
+	Owner Thu Jan 19 14:49:16 GMT 2017 - Inserted Text
+		Note: "
+	Group
+		Owner Thu Jan 19 14:49:21 GMT 2017 - Inserted Text
+			Note: "
+	Owner Thu Jan 19 14:49:32 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:49:36 GMT 2017 - Inserted Text
+		Note: (
+	Owner Thu Jan 19 14:49:41 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:49:44 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:49:58 GMT 2017 - Inserted Text
+		Note: [space]
+	Group
+		Owner Thu Jan 19 14:50:24 GMT 2017 - Inserted Text
+			Note: nor
+	Group
+		Owner Thu Jan 19 14:50:35 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Thu Jan 19 14:50:39 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:51:13 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Thu Jan 19 14:51:16 GMT 2017 - Inserted Text
+			Note: z
+	Owner Thu Jan 19 14:51:22 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Thu Jan 19 14:51:37 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Thu Jan 19 14:52:06 GMT 2017 - Inserted Text
+		Note: s
+Page 88
+	Owner Thu Jan 19 14:52:13 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:52:53 GMT 2017 - Inserted Text
+			Note: [em-dash]quadratic, coordinate, basis, or kernel;
+	Group
+		Owner Thu Jan 19 14:53:24 GMT 2017 - Inserted Text
+			Note: [em-dash]likelihood, regression, error, or
+			probability density
+	Group
+		Owner Thu Jan 19 14:54:01 GMT 2017 - Inserted Text
+			Note: [em-dash]activation, weight, loss, constraint, or discriminant.
+	Owner Thu Jan 19 14:55:27 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:55:32 GMT 2017 - Inserted Text
+			Note: do
+	Owner Thu Jan 19 14:55:39 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:55:48 GMT 2017 - Inserted Text
+			Note:  is vexing because
+	Group
+		Owner Thu Jan 19 14:55:58 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Owner Thu Jan 19 14:56:03 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:56:08 GMT 2017 - Inserted Text
+		Note: .
+	Owner Thu Jan 19 14:56:11 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:56:16 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:56:21 GMT 2017 - Inserted Text
+		Note:  then
+	Owner Thu Jan 19 14:56:43 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:56:51 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:56:54 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:57:05 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:57:09 GMT 2017 - Inserted Text
+			Note: "
+	Owner Thu Jan 19 14:57:27 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:57:39 GMT 2017 - Inserted Text
+		Note: the 
+	Owner Thu Jan 19 14:57:46 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:57:53 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:57:57 GMT 2017 - Inserted Text
+		Note: .
+	Owner Thu Jan 19 14:58:21 GMT 2017 - Sticky Note
+		Note: AU: Please provide missing text here.
+Page 89
+	Group
+		Owner Thu Jan 19 14:58:29 GMT 2017 - Inserted Text
+			Note: "
+	Owner Thu Jan 19 14:58:35 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:58:38 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:58:42 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:59:00 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:59:04 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:59:09 GMT 2017 - Inserted Text
+			Note: -
+	Owner Thu Jan 19 14:59:20 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 14:59:33 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 14:59:39 GMT 2017 - Inserted Text
+		Note: better
+	Owner Thu Jan 19 14:59:47 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 14:59:49 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 14:59:58 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 15:00:04 GMT 2017 - Inserted Text
+			Note: he or she
+	Group
+		Owner Thu Jan 19 15:00:10 GMT 2017 - Inserted Text
+			Note: his or her
+	Owner Thu Jan 19 15:00:21 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:00:24 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:00:27 GMT 2017 - Inserted Text
+		Note: (
+	Owner Thu Jan 19 15:00:31 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:00:35 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:00:38 GMT 2017 - Inserted Text
+		Note: )
+	Group
+		Owner Thu Jan 19 15:01:00 GMT 2017 - Inserted Text
+			Note: To
+	Owner Thu Jan 19 15:01:07 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:01:16 GMT 2017 - Cross-Out
+Page 90
+	Owner Thu Jan 19 15:01:18 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:01:21 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Thu Jan 19 15:01:36 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 15:01:42 GMT 2017 - Inserted Text
+			Note: "
+	Group
+		Owner Thu Jan 19 15:02:07 GMT 2017 - Inserted Text
+			Note: [em-dash]
+	Group
+		Owner Thu Jan 19 15:02:22 GMT 2017 - Inserted Text
+			Note: [em-dash]
+	Group
+		Owner Thu Jan 19 15:02:55 GMT 2017 - Inserted Text
+			Note: [en-dash]
+	Owner Thu Jan 19 15:03:06 GMT 2017 - Inserted Text
+		Note: ,
+	Group
+		Owner Thu Jan 19 15:03:14 GMT 2017 - Inserted Text
+			Note: Although
+	Owner Thu Jan 19 15:03:21 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:03:29 GMT 2017 - Inserted Text
+		Note: ,
+Page 91
+	Group
+		Owner Thu Jan 19 15:03:46 GMT 2017 - Inserted Text
+			Note: e.g.
+	Group
+		Owner Thu Jan 19 15:04:02 GMT 2017 - Inserted Text
+			Note: [ROC]
+	Group
+		Owner Thu Jan 19 15:04:21 GMT 2017 - Inserted Text
+			Note: e.g.
+	Owner Thu Jan 19 15:09:58 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:10:01 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:10:04 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:10:08 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:10:11 GMT 2017 - Cross-Out
+	Group
+		Owner Thu Jan 19 15:10:14 GMT 2017 - Inserted Text
+			Note: .
+	Owner Thu Jan 19 15:10:23 GMT 2017 - Inserted Text
+		Note: ,
+	Owner Thu Jan 19 15:10:31 GMT 2017 - Inserted Text
+		Note: s
+	Owner Thu Jan 19 15:10:52 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:10:55 GMT 2017 - Cross-Out
+	Owner Thu Jan 19 15:10:58 GMT 2017 - Cross-Out
