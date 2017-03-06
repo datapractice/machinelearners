@@ -106,3 +106,6 @@
    - 8.2 early technical report from rumelhart -- not sure that i need this page here. but I extracted it -- as ch7_subjects/figure/fig8-2.pdf 
    - sent both files to sb; but I still have bigger circos at home
    - actually I don't -- that is the big one. The small circos was manuscript_files/figure/circos_small.pdf -- that's the one the press might have seen ..  
+
+## Mon 06 Mar 2017 13:33:00 GMT
+- adding script to help clean pdfs for copyedits copyedited_pdfs/cleanpdf.sh  
