@@ -1,5 +1,6 @@
 #!/bin/sh
 
+pandoc --biblatex acknowledgments.md -o acknowledgments.tex
 echo '\documentclass[book.tex]{subfiles}\n' | cat - acknowledgments.tex > temp && mv temp acknowledgments.tex
 pandoc --biblatex preface.md -o preface.tex
 echo '\documentclass[book.tex]{subfiles}\n' | cat - preface.tex > temp && mv temp preface.tex
