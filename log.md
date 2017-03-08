@@ -109,3 +109,7 @@
 
 ## Mon 06 Mar 2017 13:33:00 GMT
 - adding script to help clean pdfs for copyedits copyedited_pdfs/cleanpdf.sh  
+
+## Wed 08 Mar 2017 12:01:36 GMT
+- TODO: work out what to do about the missing footnotes 
+- reached page 26 of Part 2
