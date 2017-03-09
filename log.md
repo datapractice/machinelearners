@@ -112,4 +112,7 @@
 
 ## Wed 08 Mar 2017 12:01:36 GMT
 - TODO: work out what to do about the missing footnotes 
-- reached page 26 of Part 2
+- reached page 26 of Part 2; this part has about 144 pages, so the major one. Part 1 has 91. I've done about 50 of those. Part 3 has 77 pages, of which about 30 are text and the rest references of indexes. So should go faster. 
+
+## Thu 09 Mar 2017 11:05:12 GMT
+- reached p57 of part2 of copyedits. That's 31 pages today, roughly halfway through ch6 patterns. If I do 30 pages tomorrow and 30 pages on monday, that will basically finish this big chunk. I could also just focus on getting part1 working properly  
