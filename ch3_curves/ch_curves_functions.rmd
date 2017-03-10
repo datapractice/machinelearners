@@ -96,7 +96,7 @@ The superimposed or doubling of function as operation and observer is hardly eve
 
 # What does a function learn?
 
-We wish to know: in what sense does a machine learner learn? This question can now be re-framed: how to machine learners find functions? For critical thought, this is a vexing question, for if function-finding agency inheres in machines and devices, then the politics of human-machine relations, and the practices of knowledge production shift. \index{critical thought!on functions}  The philosopher of science Isabelle Stengers sets tight limits on functions: \index{Stengers, Isabelle!on functions} \index{function!learning|(}
+We wish to know: in what sense does a machine learner learn? This question can now be re-framed: how do machine learners find functions? For critical thought, this is a vexing question, for if function-finding agency inheres in machines and devices, then the politics of human-machine relations, and the practices of knowledge production shift. \index{critical thought!on functions}  The philosopher of science Isabelle Stengers sets tight limits on functions: \index{Stengers, Isabelle!on functions} \index{function!learning|(}
 
 > No function can deal with learning, producing, or empowering new habits, as all require and achieve the production of different worlds, non-consensual worlds, actively diverging worlds [@Stengers_2005, 162]
 
@@ -144,7 +144,7 @@ ggplot(df, aes(x,y, group=k,  label=k)) +
 \begin{figure}
   \centering
       \includegraphics[width=0.9\textwidth]{figure/logistic_curve-1.pdf}
-        \caption[Logistic or sigmoid function]{Logistic or sigmoid function for 2 different values of the parameter $k$}
+        \caption[Logistic or sigmoid function]{Logistic or sigmoid function for two different values of the parameter $k$}
   \label{fig:logistic_curve}
 \end{figure}
 
@@ -327,7 +327,7 @@ Novel structures and functions in 'our data' are  precisely the functions that m
 
 [^3.02]: Only in the mid-1980s were the first theories of algorithmic learning formalised [@Valiant_1984].
 
-[^3.03]: Vapnik is said to have invented the support vector machine, one of the most heavily used machine learning technique of recent years on the basis of his theory of computational learning. Chapter \ref{ch:dimension} discusses the support vector machine.
+[^3.03]: Vapnik is said to have invented the support vector machine, one of the most heavily used machine learning technique of recent years on the basis of his theory of computational learning. Chapter \ref{ch:pattern} discusses the support vector machine.
 
 [^3.16]: A major reference here would be Ernst Cassirer [@Cassirer_1923] who posited a philosophical-historical shift from ontologies of substance reaching back to Aristotle's categories [@Aristotle_1975] to a functional ontology emerging in 19th century as the notion of function was generalized across many mathematical and scientific fields. (See [@Heis_2014] for a recent account of the _FunktionBegriff_ in Cassirer's philosophy) \index{Cassirer, Ernst!on functions} \index{function!Cassirer's understanding of}   In a recent article, Paolo Totaro and Domenico Ninno suggest that the transition from substance to function occurs practically in the form of the algorithm [@Totaro_2014].  \index{Aristotle!categories} The idea of computable functions lies at the base of theoretical computer science and has been a topic of interest in some social and cultural theory (e.g. [@Parisi_2013]; see also my [@Mackenzie_1997]), but Totaro and Ninno's suggest that algorithmic processes, as the social practice of the function, form contradictory hybrids with remnants of substance, in particular, categories and classification.  \index{Cassirer, Ernst}. They see bureaucratic logic, for instance, as hopelessly vitiated by a contradiction between classification and function. Machine learning, I'd suggest, is an important counter-example. It hybridises function and classification without any obvious contradiction. \index{algorithm!as function}
 

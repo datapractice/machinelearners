@@ -110,6 +110,7 @@
 ## Mon 06 Mar 2017 13:33:00 GMT
 - adding script to help clean pdfs for copyedits copyedited_pdfs/cleanpdf.sh  
 
+<<<<<<< HEAD
 ## Tue May 10 10:38:02 BST 2016
 - spent most of the afternoon on this -- found configuration difficult to do. Went best after total rename of files; managed to get the references in; 
 - turning into an epic slog - 9pm at night still working on getting the images in. Have managed to get the chapters showing ok, altho the numbers are wrong. still no glossary, index, reference list. 
@@ -156,3 +157,10 @@ to list all the remaining figures needing conversion in a given chapter.
 ## Tue 07 Mar 2017 14:32:02 GMT
 - doing copyedits
 - TODO: need to produce a clean version of the pdf to remedy problems in ch1 -- missing text!
+
+## Wed 08 Mar 2017 12:01:36 GMT
+- TODO: work out what to do about the missing footnotes 
+- reached page 26 of Part 2; this part has about 144 pages, so the major one. Part 1 has 91. I've done about 50 of those. Part 3 has 77 pages, of which about 30 are text and the rest references of indexes. So should go faster. 
+
+## Thu 09 Mar 2017 11:05:12 GMT
+- reached p57 of part2 of copyedits. That's 31 pages today, roughly halfway through ch6 patterns. If I do 30 pages tomorrow and 30 pages on monday, that will basically finish this big chunk. I could also just focus on getting part1 working properly  
