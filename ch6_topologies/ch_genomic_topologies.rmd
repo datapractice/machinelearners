@@ -1,5 +1,5 @@
 
-\chapter{Regularizing and materializing objects}
+\chapter{Regularizing and Materializing Objects}
 \label{ch:genome}
 
 ```{r global_options, include=FALSE}

@@ -164,3 +164,7 @@ to list all the remaining figures needing conversion in a given chapter.
 
 ## Thu 09 Mar 2017 11:05:12 GMT
 - reached p57 of part2 of copyedits. That's 31 pages today, roughly halfway through ch6 patterns. If I do 30 pages tomorrow and 30 pages on monday, that will basically finish this big chunk. I could also just focus on getting part1 working properly  
+
+## Fri 10 Mar 2017 11:48:55 GMT
+- starting at p57 of part2; doing 30 pages gets me to 87 
+- made it to 89. But that means 55 pages to get done on weekend/Monday. If I could 10 more today, that would help.  
