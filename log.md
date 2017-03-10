@@ -1,10 +1,13 @@
 
+
 ## Tue May 10 10:38:02 BST 2016
 
 - fixing up the bibliography; modified the zotero export to exclude large fields (like notes, abstract); modifying mybook package to suppress other fields
 - struggling with 'last accessed' field -- that needs to be 'by type'. 
 - sorted this out by adding stuff to 'mybook.sty' --\clearfield(urlyear},etc. A bit of pfaff and took me all morning, but references are now much cleaner. 
 - will go through rest of reference list adding page numbers, etc. 
+
+
 
 ## Thu May 12 13:14:42 BST 2016
 
@@ -53,9 +56,6 @@
 - also looked at R code to do the decision boundary -- its there on stackexchange ..
 
 ## Thu May 26 09:33:57 BST 2016
-- finding it hard to start today -- did a lot yesterdy on ch 6, trying to iron out different terminologies -- enunciative function, enunciative modality, statement, discourse, discursive formation, archive, archaeology ... Feel a bit better about these, but still not sure what the main point of the chapter is. Something about pattern, and the difference between sparsity and abundance, a few things that stand out versus a mass of things. ... 
-- after lunch, reached last 10 pages, but horrible conceptual work around statements still needs to be done. 
-- finished ch6 -- thinking about main point -- it should really be about how to think about differences; changed title to reflect this: 'patterns and differences in ml'
 - also looked at how to fix code listings -- use 'minted' package - can label all code listings using that. 
 - been adding many glossary entries -- might need to sub-divide glossaries to separate technical and critical entries. 
 
@@ -109,3 +109,50 @@
 
 ## Mon 06 Mar 2017 13:33:00 GMT
 - adding script to help clean pdfs for copyedits copyedited_pdfs/cleanpdf.sh  
+
+## Tue May 10 10:38:02 BST 2016
+- spent most of the afternoon on this -- found configuration difficult to do. Went best after total rename of files; managed to get the references in; 
+- turning into an epic slog - 9pm at night still working on getting the images in. Have managed to get the chapters showing ok, altho the numbers are wrong. still no glossary, index, reference list. 
+
+
+## Sun Dec 11 15:16:08 GMT 2016
+
+- experimenting with bookdown to get images showing. Working ok on test files. But will need to go through an convert everything to the format \@ref(fig:x). 
+
+## Mon Dec 12 14:36:51 GMT 2016
+- feeling better now that images are starting to show. Had to do a lot of subheading fixing. Undoing latex stuff with simpler bookdown. 
+- working on a script to change all the references: this one is ok for images:
+    sed 's/\\ref{fig:\(\w*\)}/\\@ref(fig:\1)/' 03_praxis.rmd|grep '\\@'
+
+## Sun Dec 18 10:16:28 GMT 2016
+- ran the sed script to convert images links
+- then did the tables:
+sed -i 's/\\ref{tab:\(\w*\)}/\\@ref(tab:\1)/' *.rmd 
+- TODO: still need to do chapter references
+    sed -i 's/\\ref{ch:\(\w*\)}/\\@ref(ch:\1)/' *.rmd 
+
+## Mon Dec 19 08:55:58 GMT 2016
+- spent quite a long time on the sed expression to change all chunk labels to use hyphens instead of underscores. Wish I knew about that little requirement earlier. 
+    sed  's/`{r \([[:alnum:]]*\)_?\([[:alnum:]]*\)/```{r \1-\2/' *.rmd|grep '{r \w*'
+`'''{}\```
+- it doesn't work properly, not sure why -- oh, ok, begin to see why -- groupings are not right. 
+- giving up on this for the moment -- could probably just get it done manually ... 
+
+
+## Wed 21 Dec 2016 09:47:00 GMT
+- cleaned up directories on lot on this branch. Need to:
+    - add all the test_gh pages in properly
+    - merge this new branch back into test-gh-pages and then start fixing images agina
+- at home now and have done that. Have cleanish set of directories to work in now. 
+- going through 03_praxis.rmd images 
+- also did 04_vector.rmd
+- TODO: still need to do equation references
+- using this shell 
+    grep -n '\\begin{figure}' 05_function.rmd
+to list all the remaining figures needing conversion in a given chapter. 
+- and running render_book.r to actually built the book and view in browser
+- DONE: 05_function.rmd for images
+
+## Tue 07 Mar 2017 14:32:02 GMT
+- doing copyedits
+- TODO: need to produce a clean version of the pdf to remedy problems in ch1 -- missing text!
