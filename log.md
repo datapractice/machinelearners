@@ -92,7 +92,7 @@
 ## Mon  5 Dec 14:47:17 GMT 2016
 
 - addressing image permissions for openscikit image and american statistical association journal. Figures 4.1 and 6.2
-- scikit-learn image is here http://scikit-learn.org/stable/tutorial/machine_learning_map/ It is under BSD Licence, which I read to mean that a copyright notice needs to accompany the figure. i.e. **Copyright** (c) 2010 - 2016, scikit-learn developers, (see https://en.wikipedia.org/wiki/BSD_licenses) for details.   
+- scikit-learn image is here http://scikit-learn.org/stable/tutorial/machine_learning_map/ It is under BSD Licence, which I read to mean that a copyright notice needs to accompany the figure. i.e. **Copyright** (c) 2010 - 2016, scikit-learn developers, (see https://en.wikipedia.org/wiki/bsd_licenses) for details.   
 - american statist: probably will need to use copyright clearance centre http://www.amstat.org/ASA/Copyright.aspx has the details. 
 
 ## Tue Dec  6 14:57:30 GMT 2016
@@ -103,9 +103,9 @@
 ## Tue 20 Dec 15:25:33 GMT 2016
 - **sbuckley asks:** And were you able to get better resolution files for figures 7.1 and 8.2? 
    - 7.1 is the circos genome -- can send the highres version of this. it is big. and here ch6_topologies/figure/circos.pdf 
-   - 8.2 early technical report from rumelhart -- not sure that i need this page here. but I extracted it -- as ch7_subjects/figure/fig8-2.pdf 
-   - sent both files to sb; but I still have bigger circos at home
-   - actually I don't -- that is the big one. The small circos was manuscript_files/figure/circos_small.pdf -- that's the one the press might have seen ..  
+   - 8.2 early technical report from rumelhart -- not sure that i need this page here. but i extracted it -- as ch7_subjects/figure/fig8-2.pdf 
+   - sent both files to sb; but i still have bigger circos at home
+   - actually i don't -- that is the big one. the small circos was manuscript_files/figure/circos_small.pdf -- that's the one the press might have seen ..  
 
 ## Mon 06 Mar 2017 13:33:00 GMT
 - adding script to help clean pdfs for copyedits copyedited_pdfs/cleanpdf.sh  
@@ -113,7 +113,7 @@
 <<<<<<< HEAD
 ## Tue May 10 10:38:02 BST 2016
 - spent most of the afternoon on this -- found configuration difficult to do. Went best after total rename of files; managed to get the references in; 
-- turning into an epic slog - 9pm at night still working on getting the images in. Have managed to get the chapters showing ok, altho the numbers are wrong. still no glossary, index, reference list. 
+- turning into an epic slog - 9pm at night still working on getting the images in. have managed to get the chapters showing ok, altho the numbers are wrong. still no glossary, index, reference list. 
 
 
 ## Sun Dec 11 15:16:08 GMT 2016
@@ -168,3 +168,8 @@ to list all the remaining figures needing conversion in a given chapter.
 ## Fri 10 Mar 2017 11:48:55 GMT
 - starting at p57 of part2; doing 30 pages gets me to 87 
 - made it to 89. But that means 55 pages to get done on weekend/Monday. If I could 10 more today, that would help.  
+
+## Mon 13 Mar 2017 15:25:05 GMT
+- rebuilt ch2 on diagrams. copyedited it, and made space for it in the copyedit pdf_part1.pdf
+- redid 1st pages of part1.pdf and sent the part1 + ch2_fixed copyedited_pdfs/ch2_fixed.pdf to Ginny Crossman with explanation. 
+- need to rebuild the whole pdf so that can send the long footnotes. 
