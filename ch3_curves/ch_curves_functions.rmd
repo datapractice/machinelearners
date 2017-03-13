@@ -195,9 +195,10 @@ Whether or not the logistic function is a useful approximation to 'the function 
 
 If we turn just to the diagrammatic forms associated with logistic regression in _Elements of Statistical Learning_, something quite different and much more complicated than calculating the values of a known function presents itself there. For instance, in their analysis of the `South African coronary heart` disease data, Hastie and co-authors repeatedly model the risk of occurrence of heart disease using logistic regression. \index{dataset!South African Heart Disease} They first apply logistic regression fitted by 'maximum likelihood', and then by 'L1 regularized logistic regression' [@Hastie_2009, 126]. The results of this function-finding work appear as tables of coefficients or as 'regularization plots.' As is often the case, _Elements of Statistical Learning_ assumes that readers already understand conventional statistical usages of logistic regression. Discussion dwells instead on observing how values of the model parameter change as different variants of the model transform the data.  
 
-```{r sa_heart_model, cache=TRUE, echo=FALSE, hidden=TRUE, fig.cap = ''}
+```{r sa_heart_model, cache=FALSE, echo=FALSE, hidden=TRUE, fig.cap = ''}
     library(ElemStatLearn)
     library(glmnet)
+    library(ggplot2)
     data(SAheart)
     SAheart$chd = factor(SAheart$chd)
     sah = as.matrix(SAheart[,c('sbp', 'ldl', 'adiposity', 'typea', 'obesity', 'alcohol', 'age')])
