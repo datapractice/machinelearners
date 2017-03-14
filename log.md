@@ -110,7 +110,6 @@
 ## Mon 06 Mar 2017 13:33:00 GMT
 - adding script to help clean pdfs for copyedits copyedited_pdfs/cleanpdf.sh  
 
-<<<<<<< HEAD
 ## Tue May 10 10:38:02 BST 2016
 - spent most of the afternoon on this -- found configuration difficult to do. Went best after total rename of files; managed to get the references in; 
 - turning into an epic slog - 9pm at night still working on getting the images in. have managed to get the chapters showing ok, altho the numbers are wrong. still no glossary, index, reference list. 
@@ -173,3 +172,8 @@ to list all the remaining figures needing conversion in a given chapter.
 - rebuilt ch2 on diagrams. copyedited it, and made space for it in the copyedit pdf_part1.pdf
 - redid 1st pages of part1.pdf and sent the part1 + ch2_fixed copyedited_pdfs/ch2_fixed.pdf to Ginny Crossman with explanation. 
 - need to rebuild the whole pdf so that can send the long footnotes. 
+
+## Tue 14 Mar 2017 10:06:27 GMT
+- working on genomics chapter. Missing knn figure. I have it, but its not in the list of Figures at the front of the book; TODO: make revised figure list.
+- brought back the pdf I submitted in July 2016 to check if there were problems - none really in relation to figures etc, that I can find. Also has all footnotes. Can send this. Added as book_submitted_july2016.pdf 
+- allayed some of my anxieties about differences between files by comparing that July PDF to the ones I've been working with. They are more or less the same. 

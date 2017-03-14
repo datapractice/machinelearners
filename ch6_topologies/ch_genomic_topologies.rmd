@@ -135,7 +135,7 @@ library(datamicroarray)
 tab1 = xtable(describe_data(), label='tab:srbct', caption ='Microarray datasets used in machine learning')
 data('khan')
 df = khan[[1]]
-tab = xtable(df[1:5,1:15], label='srbct', caption='Small round blue-cell tumour data sample (Khan, 2001)')
+tab = xtable(df[1:5,1:15], label='tab:srbct', caption='Small round blue-cell tumour data sample (Khan, 2001)')
 print(tab, type='latex', include.rownames=FALSE)
 ```
 
@@ -181,7 +181,7 @@ Commentary on the 'highly correlated structure,' not just the volume, of genomic
 
 Familiar machine learning vectorisation keywords such as  'large p, small n' and 'high dimensional' pepper their recommendations. But the key terms on the genomics side of this formulation would perhaps be 'pathway analysis', 'genetic association,' and 'epistasis.' Such biological terms point to forms of  relationality  associated with biologically interesting processes. Epistasis for instance broadly refers to linked gene action, a process that has been difficult to study before high-throughput methods of functional genomics brought shifting patterns of gene expression to light. \index{science!genomics!epistasis} In contemporary genomic science, these biological processes are increasingly understood in terms of eliciting and modelling the relations between *features* of genomic datasets in order to classify and predict biological outcomes.
 
-How does machine learning differ from the statistical practice that has underpinned much of modern biology? The analysis of `SRBCT` gene expression in _Elements of Statistical Learning_  is symptomatic of a mutual articulation, a cross-validation that entangles genomics and machine learning. \index{referential!cross-validation of}  The overt arrival of machine learning techniques in genomic research was initially largely concerned with the problem of variations in gene expression ( and in fact, nearly all of the analysis of genomic data in _Elements of Statistical Learning_ explicitly deals with various cases of gene expression). \index{dataset!SRBCT} On the one hand, the genomics data promises legibility of all the genes in a given organism (~20,000 for humans). On the hand, the pattern of activity of these genes in time, or any particular point in the life of an organism, cannot be read from the genome but only in time-varying expression, the changes in state and the variations in closely similar genomes. \index{genomics!problem of gene expression}
+How does machine learning differ from the statistical practice that has underpinned much of modern biology? The analysis of `SRBCT` gene expression in _Elements of Statistical Learning_  is symptomatic of a mutual articulation, a cross-validation that entangles genomics and machine learning. \index{referential!cross-validation of}  The overt arrival of machine learning techniques in genomic research was initially largely concerned with the problem of variations in gene expression ( and in fact, nearly all of the analysis of genomic data in _Elements of Statistical Learning_ explicitly deals with various cases of gene expression). \index{dataset!SRBCT} On the one hand, the genomics data promises legibility of all the genes in a given organism (~20,000 for humans). On the other hand, the pattern of activity of these genes in time, or any particular point in the life of an organism, cannot be read from the genome but only in time-varying expression, the changes in state and the variations in closely similar genomes. \index{genomics!problem of gene expression}
 
 Compared to the refined algorithmic craft of whole genome assembly [@Venter_2001; @Myers_2000; @Pevzner_2001], the handling of the problem of gene expression in machine learning settings can seem rather crudely lacking in biological specificity. Hastie and co-authors almost deprecate scientific knowledge: 'we will not go into the scientific background here.' Like the authors of the original scientific study [@Khan_2001], _Elements of Statistical Learning_  treats gene expression profiling largely as a problem of learning to classify differences in disease  or other health-related conditions.  The many gene expression studies seek to discriminate between different conditions, diseases, or pathologies on the basis of differing levels of gene expression. For machine learners, each gene is a variable whose levels of expression in a given sample may help identify what type that sample belongs to. In the case of the `SRBCT` data, the types include lymphomas, sarcomas and neuroblastomas. 
 
@@ -250,7 +250,7 @@ What accounts for this variation? First of all, the teams did not build single m
 \begin{figure}
   \centering
       \includegraphics[width=0.99\textwidth]{figure/fix_hodges_excerpt.pdf}
-        \caption[Formulation of k-nn model]{The earliest formulation of the \textit{k}-nearest neighbours model from Evelyn Fix and Joseph Hodges' work \cite{Fix_1951}}
+        \caption[Formulation of k-nn model]{The earliest formulation of the \textit{k}-nearest neighbours model from Evelyn Fix and Joseph Hodges' 1951 work  \cite{Fix_1951}}
   \label{fig:fix_excerpt}
 \end{figure}
 
