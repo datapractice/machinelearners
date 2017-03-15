@@ -6,3 +6,7 @@
 - looking at O'Reilly AI conference (http://conferences.oreilly.com/artificial-intelligence/ai-deep-learning-bots-ny/public/schedule/grid/public/2016-09-26?view=list)[http://conferences.oreilly.com/artificial-intelligence/ai-deep-learning-bots-ny/public/schedule/grid/public/2016-09-26?view=list] -- has a major list of how ai is being operationalised as part of infrastructure. Could go through this  and analyse what is happening .. downloaded the days programs ast data/2016-09-26?view=list and data/2016-09-27?view=list
 - range of concerns covered here -- from platform to work, from democraticisation to human culture, etc. are symptomatic ... 
 
+## Wed 15 Mar 2017 09:30:59 GMT
+- I'm still interested in Kaggle competitions -- could perhaps learn a lot from looking at the differences between those more closely. e.g. https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection could be worth a look
+
+
