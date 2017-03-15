@@ -133,11 +133,10 @@ sed -i 's/\\ref{tab:\(\w*\)}/\\@ref(tab:\1)/' *.rmd
 
 ## Mon Dec 19 08:55:58 GMT 2016
 - spent quite a long time on the sed expression to change all chunk labels to use hyphens instead of underscores. Wish I knew about that little requirement earlier. 
-    sed  's/`{r \([[:alnum:]]*\)_?\([[:alnum:]]*\)/```{r \1-\2/' *.rmd|grep '{r \w*'
-`'''{}\```
+    sed  's/`{r \([[:alnum:]]*\)_?\([[:alnum:]]*\)/```{r \1-\2/' *.rmd
+    grep '{r \w*' `'''{}\```
 - it doesn't work properly, not sure why -- oh, ok, begin to see why -- groupings are not right. 
 - giving up on this for the moment -- could probably just get it done manually ... 
-
 
 ## Wed 21 Dec 2016 09:47:00 GMT
 - cleaned up directories on lot on this branch. Need to:
@@ -177,3 +176,7 @@ to list all the remaining figures needing conversion in a given chapter.
 - working on genomics chapter. Missing knn figure. I have it, but its not in the list of Figures at the front of the book; TODO: make revised figure list.
 - brought back the pdf I submitted in July 2016 to check if there were problems - none really in relation to figures etc, that I can find. Also has all footnotes. Can send this. Added as book_submitted_july2016.pdf 
 - allayed some of my anxieties about differences between files by comparing that July PDF to the ones I've been working with. They are more or less the same. 
+
+## Wed 15 Mar 2017 09:25:09 GMT
+- have 6 pages left on the 2nd part, but don't really feel like doing them. The chapter is crap! I did them anyway.
+- starting part3 file -- did first 10 pages of 77. If I do 30 pages tomorrow and 30 on Friday, I'm done.  
