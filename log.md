@@ -180,3 +180,8 @@ to list all the remaining figures needing conversion in a given chapter.
 ## Wed 15 Mar 2017 09:25:09 GMT
 - have 6 pages left on the 2nd part, but don't really feel like doing them. The chapter is crap! I did them anyway.
 - starting part3 file -- did first 10 pages of 77. If I do 30 pages tomorrow and 30 on Friday, I'm done.  
+
+## Thu 16 Mar 2017 09:15:42 GMT
+- if I just finished the conclusion today, I'd be going ok! 
+- I did finish it. It's just 17 pages. The final paragraph is perhaps a bit dodgy. 
+- reached page 51 of 77. References are pretty good. Glossary was ok. 
