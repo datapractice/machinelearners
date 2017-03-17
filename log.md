@@ -183,5 +183,9 @@ to list all the remaining figures needing conversion in a given chapter.
 
 ## Thu 16 Mar 2017 09:15:42 GMT
 - if I just finished the conclusion today, I'd be going ok! 
-- I did finish it. It's just 17 pages. The final paragraph is perhaps a bit dodgy. 
+- I did finish it. It's just 17 pages. The final paragraph is perhaps a bit dodgy. No, I've fixed it now!
 - reached page 51 of 77. References are pretty good. Glossary was ok. 
+
+## Fri 17 Mar 2017 11:30:36 GMT
+- I'm hoping today is the last day of work on the copyedits. Need to send the original pdf, + the copyedited pdfs, + revised list of figures.  
+- made a zip with all those files and sent to press today; have tagged the commit 'copyedits_done_march2017'
