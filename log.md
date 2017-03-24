@@ -189,3 +189,6 @@ to list all the remaining figures needing conversion in a given chapter.
 ## Fri 17 Mar 2017 11:30:36 GMT
 - I'm hoping today is the last day of work on the copyedits. Need to send the original pdf, + the copyedited pdfs, + revised list of figures.  
 - made a zip with all those files and sent to press today; have tagged the commit 'copyedits_done_march2017'
+
+## Fri 24 Mar 2017 13:05:21 GMT
+- had somehow missed promo copy messages -- now attending to promo copy in support/promo_copy.md 
