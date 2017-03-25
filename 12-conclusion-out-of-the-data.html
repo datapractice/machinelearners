@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Machine Learning: Archaeology of a Data Practice</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Machine Learning: Archaeology of a Data Practice">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Machine Learning: Archaeology of a Data Practice" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Machine Learning: Archaeology of a Data Practice" />
+  
+  
+  
+
+<meta name="author" content="Adrian Mackenzie">
+
+
+<meta name="date" content="2016-12-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="11-propagating-subject-positions.html">
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="1-acknowledgments.html"><a href="1-acknowledgments.html"><i class="fa fa-check"></i><b>1</b> Acknowledgments</a></li>
+<li class="chapter" data-level="2" data-path="2-preface.html"><a href="2-preface.html"><i class="fa fa-check"></i><b>2</b> Preface</a></li>
+<li class="chapter" data-level="3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html"><i class="fa fa-check"></i><b>3</b> Introduction: Into the Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#three-accumulations-settings-data-and-devices"><i class="fa fa-check"></i><b>3.1</b> Three accumulations: settings, data and devices</a></li>
+<li class="chapter" data-level="3.2" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#who-or-what-is-a-machine-learner"><i class="fa fa-check"></i><b>3.2</b> Who or what is a machine learner?</a></li>
+<li class="chapter" data-level="3.3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#algorithmic-control-to-the-machine-learners"><i class="fa fa-check"></i><b>3.3</b> Algorithmic control to the machine learners?</a></li>
+<li class="chapter" data-level="3.4" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-archaeology-of-operations"><i class="fa fa-check"></i><b>3.4</b> The archaeology of operations</a></li>
+<li class="chapter" data-level="3.5" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#asymmetries-in-common-knowledge"><i class="fa fa-check"></i><b>3.5</b> Asymmetries in common knowledge</a></li>
+<li class="chapter" data-level="3.6" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#what-cannot-be-automated"><i class="fa fa-check"></i><b>3.6</b> What cannot be automated?</a></li>
+<li class="chapter" data-level="3.7" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#different-fields-in-machine-learning"><i class="fa fa-check"></i><b>3.7</b> Different fields in machine learning?</a></li>
+<li class="chapter" data-level="3.8" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-diagram-in-critical-thought"><i class="fa fa-check"></i><b>3.8</b> The diagram in critical thought</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html"><i class="fa fa-check"></i><b>4</b> Diagramming machines}</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#we-dont-have-to-write-programs"><i class="fa fa-check"></i><b>4.1</b> ‘We don’t have to write programs’?</a></li>
+<li class="chapter" data-level="4.2" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-elements-of-machine-learning"><i class="fa fa-check"></i><b>4.2</b> The elements of machine learning</a></li>
+<li class="chapter" data-level="4.3" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#who-reads-machine-learning-textbooks"><i class="fa fa-check"></i><b>4.3</b> Who reads machine learning textbooks?</a></li>
+<li class="chapter" data-level="4.4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#r-a-matrix-of-transformations"><i class="fa fa-check"></i><b>4.4</b> <code>R</code>: a matrix of transformations</a></li>
+<li class="chapter" data-level="4.5" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-obdurate-mathematical-glint-of-machine-learning"><i class="fa fa-check"></i><b>4.5</b> The obdurate mathematical glint of machine learning</a></li>
+<li class="chapter" data-level="4.6" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#cs229-2007-returning-again-and-again-to-certain-features"><i class="fa fa-check"></i><b>4.6</b> CS229, 2007: returning again and again to certain features</a></li>
+<li class="chapter" data-level="4.7" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-visible-learning-of-machine-learning"><i class="fa fa-check"></i><b>4.7</b> The visible learning of machine learning</a></li>
+<li class="chapter" data-level="4.8" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-diagram-of-an-operational-formation"><i class="fa fa-check"></i><b>4.8</b> The diagram of an operational formation</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html"><i class="fa fa-check"></i><b>5</b> Vectorisation and its consequences}</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#vector-space-and-geometry"><i class="fa fa-check"></i><b>5.1</b> Vector space and geometry</a></li>
+<li class="chapter" data-level="5.2" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#mixing-places"><i class="fa fa-check"></i><b>5.2</b> Mixing places</a></li>
+<li class="chapter" data-level="5.3" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#truth-is-no-longer-in-the-table"><i class="fa fa-check"></i><b>5.3</b> Truth is no longer in the table?</a></li>
+<li class="chapter" data-level="5.4" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#the-epistopic-fault-line-in-tables"><i class="fa fa-check"></i><b>5.4</b> The epistopic fault line in tables</a></li>
+<li class="chapter" data-level="5.5" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#surface-and-depths-the-problem-of-volume-in-data"><i class="fa fa-check"></i><b>5.5</b> Surface and depths: the problem of volume in data</a></li>
+<li class="chapter" data-level="5.6" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#vector-space-expansion"><i class="fa fa-check"></i><b>5.6</b> Vector space expansion</a></li>
+<li class="chapter" data-level="5.7" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#drawing-lines-in-a-common-space-of-transformation"><i class="fa fa-check"></i><b>5.7</b> Drawing lines in a common space of transformation</a></li>
+<li class="chapter" data-level="5.8" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#implicit-vectorization-in-code-and-infrastructures"><i class="fa fa-check"></i><b>5.8</b> Implicit vectorization in code and infrastructures</a></li>
+<li class="chapter" data-level="5.9" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#lines-traversing-behind-the-light"><i class="fa fa-check"></i><b>5.9</b> Lines traversing behind the light</a></li>
+<li class="chapter" data-level="5.10" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#the-vectorised-table"><i class="fa fa-check"></i><b>5.10</b> The vectorised table?</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html"><i class="fa fa-check"></i><b>6</b> Machines finding functions}</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#learning-functions"><i class="fa fa-check"></i><b>6.1</b> Learning functions</a></li>
+<li class="chapter" data-level="6.2" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#supervised-unsupervised-reinforcement-learning-and-functions"><i class="fa fa-check"></i><b>6.2</b> Supervised, unsupervised, reinforcement learning and functions</a></li>
+<li class="chapter" data-level="6.3" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#which-function-operates"><i class="fa fa-check"></i><b>6.3</b> Which function operates?</a></li>
+<li class="chapter" data-level="6.4" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#what-does-a-function-learn"><i class="fa fa-check"></i><b>6.4</b> What does a function learn?</a></li>
+<li class="chapter" data-level="6.5" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#observing-with-curves-the-logistic-function"><i class="fa fa-check"></i><b>6.5</b> Observing with curves: the logistic function</a></li>
+<li class="chapter" data-level="6.6" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#the-cost-of-curves-in-machine-learning"><i class="fa fa-check"></i><b>6.6</b> The cost of curves in machine learning</a></li>
+<li class="chapter" data-level="6.7" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#curves-and-the-variation-in-models"><i class="fa fa-check"></i><b>6.7</b> Curves and the variation in models</a></li>
+<li class="chapter" data-level="6.8" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#observing-costs-losses-and-objectives-through-optimisation"><i class="fa fa-check"></i><b>6.8</b> Observing costs, losses and objectives through optimisation</a></li>
+<li class="chapter" data-level="6.9" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#gradients-as-partial-observers"><i class="fa fa-check"></i><b>6.9</b> Gradients as partial observers</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-the-power-to-learn.html"><a href="7-the-power-to-learn.html"><i class="fa fa-check"></i><b>7</b> The power to learn</a></li>
+<li class="chapter" data-level="8" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html"><i class="fa fa-check"></i><b>8</b> Probabilisation and the Taming of Machines}</a><ul>
+<li class="chapter" data-level="8.1" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html#data-reduces-uncertainty"><i class="fa fa-check"></i><b>8.1</b> Data reduces uncertainty?</a></li>
+<li class="chapter" data-level="8.2" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html#machine-learning-as-statistics-inside-out"><i class="fa fa-check"></i><b>8.2</b> Machine learning as statistics inside out</a></li>
+<li class="chapter" data-level="8.3" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html#distributed-probabilities"><i class="fa fa-check"></i><b>8.3</b> Distributed probabilities</a></li>
+<li class="chapter" data-level="8.4" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html#naive-bayes-and-the-distribution-of-probabilities"><i class="fa fa-check"></i><b>8.4</b> Naive Bayes and the distribution of probabilities</a></li>
+<li class="chapter" data-level="8.5" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html#spam-when-foralln-is-too-much"><i class="fa fa-check"></i><b>8.5</b> Spam: when <span class="math inline">\(\forall{N}\)</span> is too much?</a></li>
+<li class="chapter" data-level="8.6" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html#the-improbable-success-of-the-naive-bayes-classifier"><i class="fa fa-check"></i><b>8.6</b> The improbable success of the Naive Bayes classifier</a></li>
+<li class="chapter" data-level="8.7" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html#ancestral-probabilities-in-documents-inference-and-prediction"><i class="fa fa-check"></i><b>8.7</b> Ancestral probabilities in documents: inference and prediction</a></li>
+<li class="chapter" data-level="8.8" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html#statistical-decompositions-bias-variance-and-observed-errors"><i class="fa fa-check"></i><b>8.8</b> Statistical decompositions: bias, variance and observed errors</a></li>
+<li class="chapter" data-level="8.9" data-path="8-probabilisation-and-the-taming-of-machines.html"><a href="8-probabilisation-and-the-taming-of-machines.html#does-machine-learning-construct-a-new-statistical-reality"><i class="fa fa-check"></i><b>8.9</b> Does machine learning construct a new statistical reality?</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-patterns-and-differences.html"><a href="9-patterns-and-differences.html"><i class="fa fa-check"></i><b>9</b> Patterns and differences</a><ul>
+<li class="chapter" data-level="9.1" data-path="9-patterns-and-differences.html"><a href="9-patterns-and-differences.html#splitting-and-the-growth-of-trees"><i class="fa fa-check"></i><b>9.1</b> Splitting and the growth of trees</a></li>
+<li class="chapter" data-level="9.2" data-path="9-patterns-and-differences.html"><a href="9-patterns-and-differences.html#differences-in-recursive-partitioning"><i class="fa fa-check"></i><b>9.2</b> 1984: Differences in recursive partitioning</a></li>
+<li class="chapter" data-level="9.3" data-path="9-patterns-and-differences.html"><a href="9-patterns-and-differences.html#limiting-differences"><i class="fa fa-check"></i><b>9.3</b> Limiting differences</a></li>
+<li class="chapter" data-level="9.4" data-path="9-patterns-and-differences.html"><a href="9-patterns-and-differences.html#the-successful-dispersion-of-the-support-vector-machine"><i class="fa fa-check"></i><b>9.4</b> The successful dispersion of the support vector machine</a></li>
+<li class="chapter" data-level="9.5" data-path="9-patterns-and-differences.html"><a href="9-patterns-and-differences.html#differences-blur"><i class="fa fa-check"></i><b>9.5</b> Differences blur?</a></li>
+<li class="chapter" data-level="9.6" data-path="9-patterns-and-differences.html"><a href="9-patterns-and-differences.html#bending-the-decision-boundary"><i class="fa fa-check"></i><b>9.6</b> Bending the decision boundary</a></li>
+<li class="chapter" data-level="9.7" data-path="9-patterns-and-differences.html"><a href="9-patterns-and-differences.html#instituting-patterns"><i class="fa fa-check"></i><b>9.7</b> Instituting patterns</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-regularizing-and-materializing-objects.html"><a href="10-regularizing-and-materializing-objects.html"><i class="fa fa-check"></i><b>10</b> Regularizing and materializing objects}</a><ul>
+<li class="chapter" data-level="10.1" data-path="10-regularizing-and-materializing-objects.html"><a href="10-regularizing-and-materializing-objects.html#genomic-referentiality-and-materiality"><i class="fa fa-check"></i><b>10.1</b> Genomic referentiality and materiality</a></li>
+<li class="chapter" data-level="10.2" data-path="10-regularizing-and-materializing-objects.html"><a href="10-regularizing-and-materializing-objects.html#the-genome-as-threshold-object"><i class="fa fa-check"></i><b>10.2</b> The genome as threshold object</a></li>
+<li class="chapter" data-level="10.3" data-path="10-regularizing-and-materializing-objects.html"><a href="10-regularizing-and-materializing-objects.html#genomic-knowledges-and-their-datasets"><i class="fa fa-check"></i><b>10.3</b> Genomic knowledges and their datasets</a></li>
+<li class="chapter" data-level="10.4" data-path="10-regularizing-and-materializing-objects.html"><a href="10-regularizing-and-materializing-objects.html#the-advent-of-wide-dirty-and-mixed-data"><i class="fa fa-check"></i><b>10.4</b> The advent of ‘wide, dirty and mixed’ data</a></li>
+<li class="chapter" data-level="10.5" data-path="10-regularizing-and-materializing-objects.html"><a href="10-regularizing-and-materializing-objects.html#cross-validating-machine-learning-in-genomics"><i class="fa fa-check"></i><b>10.5</b> Cross-validating machine learning in genomics</a></li>
+<li class="chapter" data-level="10.6" data-path="10-regularizing-and-materializing-objects.html"><a href="10-regularizing-and-materializing-objects.html#proliferation-of-discoveries"><i class="fa fa-check"></i><b>10.6</b> Proliferation of discoveries</a></li>
+<li class="chapter" data-level="10.7" data-path="10-regularizing-and-materializing-objects.html"><a href="10-regularizing-and-materializing-objects.html#variations-in-the-object-or-in-the-machine-learner"><i class="fa fa-check"></i><b>10.7</b> Variations in the object or in the machine learner?</a></li>
+<li class="chapter" data-level="10.8" data-path="10-regularizing-and-materializing-objects.html"><a href="10-regularizing-and-materializing-objects.html#whole-genome-functions"><i class="fa fa-check"></i><b>10.8</b> Whole genome functions</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html"><i class="fa fa-check"></i><b>11</b> Propagating subject positions}</a><ul>
+<li class="chapter" data-level="11.1" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html#propagation-across-human-machine-boundaries"><i class="fa fa-check"></i><b>11.1</b> Propagation across human-machine boundaries</a></li>
+<li class="chapter" data-level="11.2" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html#competitive-positioning"><i class="fa fa-check"></i><b>11.2</b> Competitive positioning</a></li>
+<li class="chapter" data-level="11.3" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html#a-privileged-machine-and-its-diagrammatic-forms"><i class="fa fa-check"></i><b>11.3</b> A privileged machine and its diagrammatic forms</a></li>
+<li class="chapter" data-level="11.4" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html#varying-subject-positions-in-code"><i class="fa fa-check"></i><b>11.4</b> Varying subject positions in code</a></li>
+<li class="chapter" data-level="11.5" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html#the-subjects-of-a-hidden-operation"><i class="fa fa-check"></i><b>11.5</b> The subjects of a hidden operation</a></li>
+<li class="chapter" data-level="11.6" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html#algorithms-that-propagate-errors"><i class="fa fa-check"></i><b>11.6</b> Algorithms that propagate errors</a></li>
+<li class="chapter" data-level="11.7" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html#competitions-as-examination"><i class="fa fa-check"></i><b>11.7</b> Competitions as examination</a></li>
+<li class="chapter" data-level="11.8" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html#superimposing-power-and-knowledge"><i class="fa fa-check"></i><b>11.8</b> Superimposing power and knowledge</a></li>
+<li class="chapter" data-level="11.9" data-path="11-propagating-subject-positions.html"><a href="11-propagating-subject-positions.html#ranked-subject-positions"><i class="fa fa-check"></i><b>11.9</b> Ranked subject positions</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-conclusion-out-of-the-data.html"><a href="12-conclusion-out-of-the-data.html"><i class="fa fa-check"></i><b>12</b> Conclusion: Out of the Data}</a><ul>
+<li class="chapter" data-level="12.1" data-path="12-conclusion-out-of-the-data.html"><a href="12-conclusion-out-of-the-data.html#machine-learners"><i class="fa fa-check"></i><b>12.1</b> 250,000 machine learners</a></li>
+<li class="chapter" data-level="12.2" data-path="12-conclusion-out-of-the-data.html"><a href="12-conclusion-out-of-the-data.html#a-summary-of-the-argument"><i class="fa fa-check"></i><b>12.2</b> A summary of the argument</a></li>
+<li class="chapter" data-level="12.3" data-path="12-conclusion-out-of-the-data.html"><a href="12-conclusion-out-of-the-data.html#in-situ-hybridization"><i class="fa fa-check"></i><b>12.3</b> In-situ hybridization</a></li>
+<li class="chapter" data-level="12.4" data-path="12-conclusion-out-of-the-data.html"><a href="12-conclusion-out-of-the-data.html#critical-operational-practice"><i class="fa fa-check"></i><b>12.4</b> Critical operational practice?</a></li>
+<li class="chapter" data-level="12.5" data-path="12-conclusion-out-of-the-data.html"><a href="12-conclusion-out-of-the-data.html#obstacles-to-the-work-of-freeing-machine-learning"><i class="fa fa-check"></i><b>12.5</b> Obstacles to the work of freeing machine learning</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning: Archaeology of a Data Practice</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="conclusion-out-of-the-data" class="section level1">
+<h1><span class="header-section-number">12</span> Conclusion: Out of the Data}</h1>
+<p></p>
+<blockquote>
+<p><code>These diagrams of the diagrammatic domains,  they kernel together in localization.</code></p>
+</blockquote>
+<blockquote>
+<p><code>In this contrusion of major forms of invention in natures in machine learning techniques, inter-places, leveraged in and distributed.</code></p>
+</blockquote>
+<p>The two sentences above are the products of a generative model  trained on the raw text of this book. Without any model of syntax, any dictionary of words or terms, relying purely on character sequences as probability distributions, the neural network that sampled these sentences out of its own unsupervised model of the book vectorised as data was primed with starting text of ‘<code>If</code>.’  ‘Diagrams of the diagrammatic domains,’ kernelling together in localization, a ‘contrusion’ of major forms of invention in natures, in machine learning techniques, leveraged in and distributed in inter-places: all of that has been put quite well by the generative model, a two-layer ‘long short term memory’ recurrent neural net <span class="citation">[@Karpathy_2016]</span>.</p>
+<p>I began with a relatively limited question: if machine learning is transforming the production of knowledge, might the practice of critical thought itself change, whether in its empirical or theoretical orientations? Could the ‘experimentation of concepts’ <span class="citation">[@Stengers_2000,153]</span> work with machine learning? My answer is provisionally affirmative. If a book could be a generative model, then I hope this auto-archaeology  might generate or multiply the capacity to problematize the present. For such a machine learner, a model that would learn machine learning in order to diagram a diagrammatic domain, predictions would figure less as statements that rank, order and classify, than as a technology of critical experimentation, a means of effecting a certain number of transformative operations on one’s own conduct, thinking and ways of being amidst the determinations of contemporary reality. It would function as a mode of experimentation on statements. </p>
+<div id="machine-learners" class="section level2">
+<h2><span class="header-section-number">12.1</span> 250,000 machine learners</h2>
+<p>For at least 230,800 human machine learners – the number of unique authors listed in the corpus of machine learning research literature I have been drawing on – , a new kind of operational formation jells in machine learning. People and things, knowledge and power, combine in novel forms to generate statements. Understanding the distribution and production of elements that make up this emerging common space of decision, classification, prediction and anticipation matters contemporary critical thought in its engagement with power, production, conduct, communication, ways of being and thinking, materiality and experience.</p>
+<p>Let us take 146,000 scientific articles, publications and books as statements concerning operations occurring in a variety of sites, modes, and settings connected in the operational formation we are discussing.. As in Foucault’s discursive formations, statements in operational formations function by reference to the position of a subject ( the expert, the engineer, the doctor, the patient, the judge, the teacher, the student), amidst an organised or grouped accumulation of devices, settings and fields (positivity), and with greater or lesser reference to the practices of human-machine interaction. For instance, writing the code that allows the recurrent neural net to build a generative model of this text.</p>
+<p>Although subjects for Foucault do not author statements, the assignment of subject positions always passes through a human subject. In operational formations, subject positions are less distinct, yet highly populated (as the 230,000 authors of these paper suggest). The machine-human mixing in operational formations is highly variable, dynamic and mutable, sometimes planing through code, sometimes diagrammed in visible forms such as graphs and tables, and often ramifying through infrastructures. </p>
+<p>Affective elements have a long-standing connection with computation. Elizabeth Wilson’s study, <em>Affect and Artificial Intelligence</em> <span class="citation">[@Wilson_2010]</span>, draws on a combination of psychoanalytic, psychological and archival materials discussing the work of key figures in the early history of artificial intelligence such as Alan Turing on intelligent machinery, Warren McCulloch and Walter Pitts on neural nets, and recent examples of affective computing and robots such as the MIT robot Kismet.  Her framing of the psychic nexus with machines such as the perceptron is provocative:</p>
+<blockquote>
+<p>Sometimes machines are the very means by which we can stay alive psychically, and they can just as readily be a means for affective expansion and amplification as for affective attenuation. This is especially the case of computational machines <span class="citation">[@Wilson_2010, 30]</span>.</p>
+</blockquote>
+<p>Under what conditions do machines and for present purposes, computational machines, become ‘the very means we can stay alive psychically’? Wilson addresses this question by positing ‘some kind of intrinsic affinity, some kind of intuitive alliance between the machinic and the affective, between calculation and feeling’ (31), and suggesting that the ‘one of the most important challenges will be to operationalize affectivity in ways that facilitate pathways of introjection between humans and machines’ (31).   Introjection, the process of bringing the world within self is, according to psychoanalytic accounts of subjectivity, crucial to the formation of ‘a stable subject position’ (25). Wilson envisages introjection of machine processes as a good, not as a failure or attenuation of relation to the world.</p>
+<p>While I tend to go in the same direction as Wilson in relation to ‘affective expansion’, I don’t see that expansion as unfolding from introjection, but rather from an intensification of diagrammatic processes, the act of creating a ‘concrete being, an intersecting of references’ or abstraction <span class="citation">[@Stengers_2000, 85]</span> </p>
+</div>
+<div id="a-summary-of-the-argument" class="section level2">
+<h2><span class="header-section-number">12.2</span> A summary of the argument</h2>
+<p>I have been experimenting with abstraction in midst of data practices of machine learning. Let me resume the argument of the book, an archaeological argument that excavates seven major facets or intersecting planes that belong to the machine learning as an operational formation.  Chapter  addressed the problem of where amidst the mire of data, mathematics, code, infrastructures, scientific and other knowledge fields, a critical engagement with machine learning might situate itself. I suggested that we should consider the formal, mathematical abstraction and certain transformations in the production of software associated with machine learning as diagrammatic processes that organise and assemble human-machine relations.  Amidst a great accumulation of statements, figures, techniques, constructs, datasets and code implementations derived from many settings, the task is to map the intersecting references, the diagonal connections, and the transformatinos and substitutions that weave through machine learning. The positivity  of machine learning, its specific forms of accumulation, regularity and rarety do not attest to the power of algorithms but rather lend liveliness to the field by concentrating expressions from many regions.</p>
+<p>Chapter  examined the practices of vectorising data, situating machine learners themselves in an organised, dimensioned space accommodating an increasing repertoire of transformations operating on vectors.  Viewed as another mutation of the tabular grid, vector space invites transformations of data. Machine learning is a practice of working with data to accommodate all differences within an expanding dimensional space, a space in which data is under the strain of smooth surfaces, straight lines, regular curves and hyper-planes.  Both in terms of infrastructure and epistemic cultures, the vector space abstracts and concretises  spaces inside data.</p>
+<p>What is learning in machine learning? If information and computation can be understood as responding to a crisis in control, what do machine learners do? Chapter  examined how learning institutes experimental relays between operation and observation in optimising functions that predict and classify. The proliferation of methods and devices in machine learning and the attempts to unify them as ‘learners’ was understood as a result of this entwining of operations and observations. The interplay between operational transformations and observational functions in optimisation accounts for much of the ‘learning’ effect in machine learning. </p>
+<p>An important and wide-reaching critical strand of work in humanities and social sciences over the last few decades has focused on knowledge in its entanglements with apparatuses of governmentalised power. Populations and other large aggregates have been central objects of concern. They remain so in contemporary operational formations, although under somewhat altered conditions. Having all the data, chapter  suggested, is not the principal stake in contemporary data cultures. Instead, the probabilisation  of both data and machine learners as populations, as distributed probabilities, indicates a different axis along which power-knowledge develops in machine learning.</p>
+<p>What happens to differences amidst vectorisation, learning as optimisation, probabilisation and the generalized diagrammatic abstraction of machine learning? . Are all differences reduced to quantitative comparisons? Treated as pattern, chapter  explored different treatments of difference in machine learning. Differences bifurcate between infinitesimal graduation and rigid decision boundaries, sometimes blurring or overlapping, and sometimes distributed into inaccessibly high-dimensional inner data spaces. The archaeological task amidst the dispersed patterns is to locate differences in kind.</p>
+<p>Rather than any new materiality, I have pointed to transformations in referentiality associated with machine learning. From the standpoint of operational , the materiality of machine learning refers to the practices of re-use that stabilise references. Science, by virtue of its experimental inventiveness and truth-authority, cross-validates the referentiality of machine learning.  The topic of chapter  was a particularly data-intensive contemporary scientific hyperobject, the genome. As a data form, genomic sequence data provokes re-use, transcription and transmission of classifications and predictions. This incites both infrastructural transformations but also new concretisations of the hyperobject (as for instance in genome wide association studies).</p>
+<p>Finally, chapter  explored the subject position of machine learners. Within operational formations, subject positions arise in gaps between operations and statements concerning operations. The argument here concerned human-machine differences and the dispersion of subject positions through operations that alter those differences. Even amongst machine learners themselves, subject positions are not fixed or unified. The deep neural networks that beat Go champions in 2015 and 2016 <span class="citation">[@Silver_2016]</span> or developed hitherto unseen tactics in playing Atari computer games <span class="citation">[@Mnih_2015]</span> evidence the deeply competitive or test-based administration of this gap. </p>
+</div>
+<div id="in-situ-hybridization" class="section level2">
+<h2><span class="header-section-number">12.3</span> In-situ hybridization</h2>
+<p>Beyond these facets of the argument concerning abstraction, inclusion, control, multiplicity, differences, materiality and subject positions, another argument shaped discussion in the preceding chapters, one that affectively underpins of the writing. A central problem for critical thought today (and by critical thought I mean post-Foucaultean engagements with the events that constitute us subjects of what we say, do and think ) concerns how to engage with operational formations. To an even greater extant than the discursive formations that Foucault and many subsequent scholars have analysed, operational formations in production, communication, and the regulation of conduct become the field in which the work of ethics and politics takes place. </p>
+<p>The problem of engagement with operational formations is not so much how to gain control, or challenge the asymmetries of access and control that loom so large in them (Facebook can machine learn exponentially more patterns than I can), but to begin to grasp the forms of change that are possible and desirable. Mark Hansen has, for instance, posed the challenge of engaging with data-intensive prediction directly in terms of experience. He writes:</p>
+<blockquote>
+<p>this imperative enjoins us to use the technologies of data capture, analysis and prediction to create a feed-forward structure capable of marshaling the full productive potentiality of data – its commonality, accessibility, and openness – in order to improve, indeed to improve by <em>intensifying</em>, our experience <span class="citation">[@Hansen_2015, 77]</span> </p>
+</blockquote>
+<p>Treating prediction as more than means of disciplinary control, and instead as a resource for individuals and collective to modulate experience, Hansen’s project draws on an extensive engagement with phenomenology and Whitehead’s philosophy. The crucial task in his view is creative or inventive: the ‘feed-forward structure’ must marshal ‘the productive potentiality of data.’</p>
+<p>One way to do this is broadly aligned with Foucault’s emphasis in his later work on care of the self. Technologies of the self ‘permit individuals to effect a certain number of operations of their bodies and social, thoughts, conduct and ways of being, so as to transform themselves in order to attain a certain state of happiness, purity, wisdom, perfection or even immortality’ <span class="citation">[@Foucault_1997, 225]</span>. Could Hansen’s feed-forward structure – the term itself referring to the first phase of neural net’s learning – operate as a technology of the self, not so much focused on improvement or perfection of experience but in name of the potential to invent new tests of and new relations to pressing realities? For scholars producing critical knowledge in humanities and social science through a variety of textual, empirical, theoretical and increasingly implicitly or explicitly computational practices, technologies of self offer a concrete path wending a way into domains of production, communication and governance. Rather than immortality or purity, operations effected on ways of thinking, living and being might transform oneself in the interests of a limited experience of freedom. </p>
+<p>Under what conditions could something like care of the self and technologies of the self have any purchase, relevance or even toehold in the operational formation of machine learning? Five elements, it seems to me, need to be assembled in order to think through that conjunction. The recognition of ourselves as subjects of machine learning is an elementary archaeological task. Whether in relation to knowledge, communication (in the broadest sense), conduct or ways of living, this recognition relies on a description of practices associated with differences, multiplicities, materialities, knowledges and control. Second, as I have endeavoured to emphasise in describing machine learning as an operational formation, the liveliness of machine learning should be understood as a localisation of power-knowledge relations, or a primary field of expressions issuing from many parts (to paraphrase Whitehead ). ‘They kernel together in localization’ as my recurrent neural network  puts it. Third, while the accumulating plethora of techniques, applications and sites is neither unified by a master algorithm or by a latent, underlying meaning, it does demonstrate regularities and point of indetermination or slippage. Fourth, understood as a field of the expression of many parts, an operational formation can also be site of collective individuation. Participating in a collective, individual subjects, far from losing whatever defines their unique or essential identity, gain the chance to individuate, at least in part, the share of pre-individual reality that marks the collective within them. Fifth, by participating in a collective, even an operational formation, individuals may transform themselves (in order to attain certain states or experiences), but also affect the collective itself.</p>
+<p>Whether this might affect the internet filter bubble <span class="citation">[@Pariser_2011]</span>, the ‘stack to come’ <span class="citation">[@Bratton_2016]</span>, digital citizenship <span class="citation">[@Isin_2015]</span>, the character of work <span class="citation">[@Brynjolfsson_2014]</span>, the fabric of experience <span class="citation">[@Hansen_2015]</span> or what counts as knowledge <span class="citation">[@Bowker_2014]</span> is hard to say. As an operational formation, machine learning does not determine anything in its operations, even if it connects directly to strategies of power. Foucault writes that ‘archaeology describes the different spaces of dissension’ <span class="citation">[@Foucault_1972, 152]</span> . These spaces of dissension, it seems to me, form a field in which initiatives, individuations and technologies of the self might articulate a certain number of transformative operations.</p>
+</div>
+<div id="critical-operational-practice" class="section level2">
+<h2><span class="header-section-number">12.4</span> Critical operational practice?</h2>
+<p>Under what conditions would that experimental practice and operation on ways of thinking and saying be divergent rather than convergent? Writing this book, and learning to machine learn in order to write about machine learning, involves participation in a collective, the collective of at least 230,000 scientist-machine learners, and the tends of thousands of programmers developing machine learners evident on Github.com. By participating in the collective operational formation, running the risk of being mobilized by existing interests, we might also individuate differently a share of the pre-individual reality included within us <span class="citation">[@Virno_2004,79]</span>.   Like Anne-Marie Mol’s ‘praxiography,’ which seeks to maintain reality multiples in describing practice <span class="citation">[@Mol_2003, 6]</span>, the description of machine learning as data practice intends to sustain the multiple of reality by identifying the practices that make it multiple.  </p>
+<p>The path I’ve taken here combines writing (a discursive practice) and coding (an operational practice). Writing about machine learning is a practice of diagrammatically mapping the re-iterative drawing of human-machine relations in code, and in particular, in coding that learns from data. Datasets, scientific and engineering publications, textbooks such as <em>Elements of Statistical Learning</em>, software libraries and packages, spectacular demonstrations comprise a whole series of criss-crossings. While not the path that everyone would or should want to take, for me moving into the data like or as a machine learner perhaps allows writing to become more diagrammatic. ‘Between the figure and the text we must admit a whole series of criss-crossings’ wrote Foucault <span class="citation">[@Foucault_1972, 66]</span>, in defining  as a mode of exploration of knowledges, politics and ways of being.</p>
+<p>Very mundanely, I’ve read articles and books, downloaded data and software libraries, watched Youtube lectures and presentations, configured and written bits of code and text, made plots and diagrams, and done much configuration work across various platforms (Github.com, linux, Google Compute, <code>R</code>, <code>python</code> and <code>ipython</code>). Amidst all of this data practice (and much practising), there is no reason to assume that learning machine learning is solely the performance of a conscious subject. When we look at an equation repeatedly, when we comply with the machine learning injunction to ‘find a useful approximation <span class="math inline">\(\hat(f)(x)\)</span> to the function <span class="math inline">\(f(x)\)</span> that underlies the predictive relationship between input and output’ <span class="citation">[@Hastie_2009, 28]</span> by writing code to cross-validate a model, we surrender to ‘learning’ that, however fascinating or surprising, is not that of a conscious human subject but also of human-machine assemblage. To the extent that it is archaeological, operational, diagrammatic writing vibrates around the axis of knowledge/practice, not knowledge/consciousness. </p>
+</div>
+<div id="obstacles-to-the-work-of-freeing-machine-learning" class="section level2">
+<h2><span class="header-section-number">12.5</span> Obstacles to the work of freeing machine learning</h2>
+<p>As I have emphasised on several occasions, machine learning is an uneasy mixture of massively repeated and familiar forms, and something that is not easily understood. On the one hand, the level of imitation, duplications, copying and reproduction associated with the techniques suggests that a process of remaking the world according to particular forms is in process (for instance, in chapter  we saw how Naive Bayes classifiers are almost demonstrated on spam classification problems.) The scientific and engineering literature, with its really frequent variations on similar themes, suggests that imitation and copying are very much at the heart of the movements I have been describing. This is nothing new.  It would be strange of these techniques were not subject to imitation and emulation. That imitation is predictable. We expect it and can account for it sociologically.<a href="#fn104" class="footnoteRef" id="fnref104"><sup>104</sup></a> Some symptoms of these imitative fluxes can be found in the scientific and engineering literature. As we have seen, work on image and video classification, on text and speech, on gene interaction prediction or above all, on predictions of relations or associations between people and things (usually commodities, but not always) is striking in its persevering homogeneity. Moreover, the powerful aspirations evident amongst large media platforms such as Baidu, Google and Facebook to re-ground machine learning in the project of artificial intelligence amidst social media or web page-related data in many ways continues business as usual for computer scientists <span class="citation">[@Gulcehre_2014]</span>.</p>
+<p>How would we get any sense of what is not so easily digested and laid out in social practice? Archaeologies of operational formations aim to present some of the necessary elements for that purpose. In the closing pages of <em>The Archaeology of Knowledge</em>, Foucault writes:</p>
+<blockquote>
+<p>the positivities that I have tried to establish must not be understood as a set of determinations imposed from the outside on the thought of individuals, or inhabiting it from the inside, in advance as it were; they constitute rather the set of conditions in accordance with which a practice is exercised, in accordance with which that practices gives rise to partially or totally new statements, and in accordance with which it can be modified. These positivities are no so much limitations imposed on the initiative of subjects as the field in which that initiative is articulated <span class="citation">[@Foucault_1972, 208-209]</span>. </p>
+</blockquote>
+<p>Here Foucault refers to the restricted freedom that discursive practices and formations open for us. If it is increasingly difficult for science, media, government and business to think and act outside data. And yet Foucault is quite clear that amidst the positivities of knowledge production, knowing the conditions, setting out the rules, and identifying the relations that striate the density and complexity of practice is a pre-condition to any transformations in practice.</p>
+<p>As a data practice, however, machine learning is not entirely predictable. Machine learners, as we have seen, vary too much, they are biased, they overfit, they underfit, and they often fail to generalise.  Despite this, they have enormous allure. In the history of automata, automation and animation, kinetic lures have long exercised fascination, and this may be part of the effect of machine learning. Animating transformations of data (think of the 366 times the logistic regression traverses the <code>South African Heart Disease</code> dataset), and then looking at those optimising animations as ‘learning’ generates operational power dynamics. </p>
+<p>Machine learning more broadly attracts infrastructural, technical, professional, semiotic and financial diagonals – think of the upswing in Google searches for ‘machine learning’ shown in figure  in chapter  – that render its traits more real, more thickly transformative and more ‘performant.’ Yet such performant diagrams generate referential effects. Machine learning becomes ontologically potent. As Maurizio Lazzarato writes in <em>Signs and Machines</em>, ‘ontological mutations are always machinic. They are never the simple result of the actions or choices of the “man” who, leaving the assemblage, removes himself from the non-human, technical, or incorporeal elements that constitute him’ <span class="citation">[@Lazzarato_2014, 83]</span>. </p>
+<p>New machine learners arise from diagrammatic superimposition of existing practices or procedures. Neural networks are like a massively proliferating nest of perceptrons. Moreover, machine learning techniques often repeat something familiar by very different means (think of how <code>kittydar</code> treats photographs, or how a decision tree is legible but often unfamiliar). The event, then, resides less in either something intrinsic to devices operating as algorithmic models, or in something about the domains and places in which the devices operate (biomedicine, state security and intelligence agencies, finance, business, commerce, science, etc.). Perhaps it is a rather more modest event in which the tending of abstractions through estimation, optimisation, high-dimensional vectorisation, probabilistic mixing of latent and feature variables, and imputation unevenly replace existing ontological and epistemic norms of verification, objectification, and attribution. </p>
+<p>I have been less interested in treating these techniques as the predictable re-animation of alienated reason, and more inclined to look for those elements in machine learning that diagrammatically abstract away from structures of representations, subjectification or indeed implementation associated with platforms, services and products (for instance, the interminable implementations of document classifiers, sentiment analyses, or image labelling, or handwritten digit recognition, or autonomous navigation, etc.).</p>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="104">
+<li id="fn104"><p>Accounts that might do this can be found in science and technology studies, particularly in actor-network theory versions, as well as in recent social and cultural theory that, for instance, draws on the work of the 19th century French sociologist, Gabriele Tarde <span class="citation">[@Tarde_1902; @Borch_2005]</span>.<a href="12-conclusion-out-of-the-data.html#fnref104">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="11-propagating-subject-positions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

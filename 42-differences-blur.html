@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Machine Learning: Archaeology of a Data Practice</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Machine Learning: Archaeology of a Data Practice">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Machine Learning: Archaeology of a Data Practice" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Machine Learning: Archaeology of a Data Practice" />
+  
+  
+  
+
+<meta name="author" content="Adrian Mackenzie">
+
+
+<meta name="date" content="2016-12-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="41-the-successful-dispersion-of-the-support-vector-machine.html">
+<link rel="next" href="43-bending-the-decision-boundary.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="1-acknowledgments.html"><a href="1-acknowledgments.html"><i class="fa fa-check"></i><b>1</b> Acknowledgments</a></li>
+<li class="chapter" data-level="2" data-path="2-preface.html"><a href="2-preface.html"><i class="fa fa-check"></i><b>2</b> Preface</a></li>
+<li class="chapter" data-level="3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html"><i class="fa fa-check"></i><b>3</b> Introduction: Into the Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#three-accumulations-settings-data-and-devices"><i class="fa fa-check"></i><b>3.1</b> Three accumulations: settings, data and devices</a></li>
+<li class="chapter" data-level="3.2" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#who-or-what-is-a-machine-learner"><i class="fa fa-check"></i><b>3.2</b> Who or what is a machine learner?</a></li>
+<li class="chapter" data-level="3.3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#algorithmic-control-to-the-machine-learners"><i class="fa fa-check"></i><b>3.3</b> Algorithmic control to the machine learners?</a></li>
+<li class="chapter" data-level="3.4" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-archaeology-of-operations"><i class="fa fa-check"></i><b>3.4</b> The archaeology of operations</a></li>
+<li class="chapter" data-level="3.5" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#asymmetries-in-common-knowledge"><i class="fa fa-check"></i><b>3.5</b> Asymmetries in common knowledge</a></li>
+<li class="chapter" data-level="3.6" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#what-cannot-be-automated"><i class="fa fa-check"></i><b>3.6</b> What cannot be automated?</a></li>
+<li class="chapter" data-level="3.7" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#different-fields-in-machine-learning"><i class="fa fa-check"></i><b>3.7</b> Different fields in machine learning?</a></li>
+<li class="chapter" data-level="3.8" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-diagram-in-critical-thought"><i class="fa fa-check"></i><b>3.8</b> The diagram in critical thought</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html"><i class="fa fa-check"></i><b>4</b> Diagramming machines}</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#we-dont-have-to-write-programs"><i class="fa fa-check"></i><b>4.1</b> ‘We don’t have to write programs’?</a></li>
+<li class="chapter" data-level="4.2" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-elements-of-machine-learning"><i class="fa fa-check"></i><b>4.2</b> The elements of machine learning</a></li>
+<li class="chapter" data-level="4.3" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#who-reads-machine-learning-textbooks"><i class="fa fa-check"></i><b>4.3</b> Who reads machine learning textbooks?</a></li>
+<li class="chapter" data-level="4.4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#r-a-matrix-of-transformations"><i class="fa fa-check"></i><b>4.4</b> <code>R</code>: a matrix of transformations</a></li>
+<li class="chapter" data-level="4.5" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-obdurate-mathematical-glint-of-machine-learning"><i class="fa fa-check"></i><b>4.5</b> The obdurate mathematical glint of machine learning</a></li>
+<li class="chapter" data-level="4.6" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#cs229-2007-returning-again-and-again-to-certain-features"><i class="fa fa-check"></i><b>4.6</b> CS229, 2007: returning again and again to certain features</a></li>
+<li class="chapter" data-level="4.7" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-visible-learning-of-machine-learning"><i class="fa fa-check"></i><b>4.7</b> The visible learning of machine learning</a></li>
+<li class="chapter" data-level="4.8" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-diagram-of-an-operational-formation"><i class="fa fa-check"></i><b>4.8</b> The diagram of an operational formation</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html"><i class="fa fa-check"></i><b>5</b> Vectorisation and its consequences}</a></li>
+<li class="chapter" data-level="6" data-path="6-vector-space-and-geometry.html"><a href="6-vector-space-and-geometry.html"><i class="fa fa-check"></i><b>6</b> Vector space and geometry</a></li>
+<li class="chapter" data-level="7" data-path="7-mixing-places.html"><a href="7-mixing-places.html"><i class="fa fa-check"></i><b>7</b> Mixing places</a></li>
+<li class="chapter" data-level="8" data-path="8-truth-is-no-longer-in-the-table.html"><a href="8-truth-is-no-longer-in-the-table.html"><i class="fa fa-check"></i><b>8</b> Truth is no longer in the table?</a></li>
+<li class="chapter" data-level="9" data-path="9-the-epistopic-fault-line-in-tables.html"><a href="9-the-epistopic-fault-line-in-tables.html"><i class="fa fa-check"></i><b>9</b> The epistopic fault line in tables</a></li>
+<li class="chapter" data-level="10" data-path="10-surface-and-depths-the-problem-of-volume-in-data.html"><a href="10-surface-and-depths-the-problem-of-volume-in-data.html"><i class="fa fa-check"></i><b>10</b> Surface and depths: the problem of volume in data</a></li>
+<li class="chapter" data-level="11" data-path="11-vector-space-expansion.html"><a href="11-vector-space-expansion.html"><i class="fa fa-check"></i><b>11</b> Vector space expansion</a></li>
+<li class="chapter" data-level="12" data-path="12-drawing-lines-in-a-common-space-of-transformation.html"><a href="12-drawing-lines-in-a-common-space-of-transformation.html"><i class="fa fa-check"></i><b>12</b> Drawing lines in a common space of transformation</a></li>
+<li class="chapter" data-level="13" data-path="13-implicit-vectorization-in-code-and-infrastructures.html"><a href="13-implicit-vectorization-in-code-and-infrastructures.html"><i class="fa fa-check"></i><b>13</b> Implicit vectorization in code and infrastructures</a></li>
+<li class="chapter" data-level="14" data-path="14-lines-traversing-behind-the-light.html"><a href="14-lines-traversing-behind-the-light.html"><i class="fa fa-check"></i><b>14</b> Lines traversing behind the light</a></li>
+<li class="chapter" data-level="15" data-path="15-the-vectorised-table.html"><a href="15-the-vectorised-table.html"><i class="fa fa-check"></i><b>15</b> The vectorised table?</a></li>
+<li class="chapter" data-level="16" data-path="16-machines-finding-functions.html"><a href="16-machines-finding-functions.html"><i class="fa fa-check"></i><b>16</b> Machines finding functions}</a></li>
+<li class="chapter" data-level="17" data-path="17-learning-functions.html"><a href="17-learning-functions.html"><i class="fa fa-check"></i><b>17</b> Learning functions</a></li>
+<li class="chapter" data-level="18" data-path="18-supervised-unsupervised-reinforcement-learning-and-functions.html"><a href="18-supervised-unsupervised-reinforcement-learning-and-functions.html"><i class="fa fa-check"></i><b>18</b> Supervised, unsupervised, reinforcement learning and functions</a></li>
+<li class="chapter" data-level="19" data-path="19-which-function-operates.html"><a href="19-which-function-operates.html"><i class="fa fa-check"></i><b>19</b> Which function operates?</a></li>
+<li class="chapter" data-level="20" data-path="20-what-does-a-function-learn.html"><a href="20-what-does-a-function-learn.html"><i class="fa fa-check"></i><b>20</b> What does a function learn?</a></li>
+<li class="chapter" data-level="21" data-path="21-observing-with-curves-the-logistic-function.html"><a href="21-observing-with-curves-the-logistic-function.html"><i class="fa fa-check"></i><b>21</b> Observing with curves: the logistic function</a></li>
+<li class="chapter" data-level="22" data-path="22-the-cost-of-curves-in-machine-learning.html"><a href="22-the-cost-of-curves-in-machine-learning.html"><i class="fa fa-check"></i><b>22</b> The cost of curves in machine learning</a></li>
+<li class="chapter" data-level="23" data-path="23-curves-and-the-variation-in-models.html"><a href="23-curves-and-the-variation-in-models.html"><i class="fa fa-check"></i><b>23</b> Curves and the variation in models</a></li>
+<li class="chapter" data-level="24" data-path="24-observing-costs-losses-and-objectives-through-optimisation.html"><a href="24-observing-costs-losses-and-objectives-through-optimisation.html"><i class="fa fa-check"></i><b>24</b> Observing costs, losses and objectives through optimisation</a></li>
+<li class="chapter" data-level="25" data-path="25-gradients-as-partial-observers.html"><a href="25-gradients-as-partial-observers.html"><i class="fa fa-check"></i><b>25</b> Gradients as partial observers</a></li>
+<li class="chapter" data-level="26" data-path="26-the-power-to-learn.html"><a href="26-the-power-to-learn.html"><i class="fa fa-check"></i><b>26</b> The power to learn</a></li>
+<li class="chapter" data-level="27" data-path="27-probabilisation-and-the-taming-of-machines.html"><a href="27-probabilisation-and-the-taming-of-machines.html"><i class="fa fa-check"></i><b>27</b> Probabilisation and the Taming of Machines}</a></li>
+<li class="chapter" data-level="28" data-path="28-data-reduces-uncertainty.html"><a href="28-data-reduces-uncertainty.html"><i class="fa fa-check"></i><b>28</b> Data reduces uncertainty?</a></li>
+<li class="chapter" data-level="29" data-path="29-machine-learning-as-statistics-inside-out.html"><a href="29-machine-learning-as-statistics-inside-out.html"><i class="fa fa-check"></i><b>29</b> Machine learning as statistics inside out</a></li>
+<li class="chapter" data-level="30" data-path="30-distributed-probabilities.html"><a href="30-distributed-probabilities.html"><i class="fa fa-check"></i><b>30</b> Distributed probabilities</a></li>
+<li class="chapter" data-level="31" data-path="31-naive-bayes-and-the-distribution-of-probabilities.html"><a href="31-naive-bayes-and-the-distribution-of-probabilities.html"><i class="fa fa-check"></i><b>31</b> Naive Bayes and the distribution of probabilities</a></li>
+<li class="chapter" data-level="32" data-path="32-spam-when-foralln-is-too-much.html"><a href="32-spam-when-foralln-is-too-much.html"><i class="fa fa-check"></i><b>32</b> Spam: when <span class="math inline">\(\forall{N}\)</span> is too much?</a></li>
+<li class="chapter" data-level="33" data-path="33-the-improbable-success-of-the-naive-bayes-classifier.html"><a href="33-the-improbable-success-of-the-naive-bayes-classifier.html"><i class="fa fa-check"></i><b>33</b> The improbable success of the Naive Bayes classifier</a></li>
+<li class="chapter" data-level="34" data-path="34-ancestral-probabilities-in-documents-inference-and-prediction.html"><a href="34-ancestral-probabilities-in-documents-inference-and-prediction.html"><i class="fa fa-check"></i><b>34</b> Ancestral probabilities in documents: inference and prediction</a></li>
+<li class="chapter" data-level="35" data-path="35-statistical-decompositions-bias-variance-and-observed-errors.html"><a href="35-statistical-decompositions-bias-variance-and-observed-errors.html"><i class="fa fa-check"></i><b>35</b> Statistical decompositions: bias, variance and observed errors</a></li>
+<li class="chapter" data-level="36" data-path="36-does-machine-learning-construct-a-new-statistical-reality.html"><a href="36-does-machine-learning-construct-a-new-statistical-reality.html"><i class="fa fa-check"></i><b>36</b> Does machine learning construct a new statistical reality?</a></li>
+<li class="chapter" data-level="37" data-path="37-patterns-and-differences.html"><a href="37-patterns-and-differences.html"><i class="fa fa-check"></i><b>37</b> Patterns and differences</a></li>
+<li class="chapter" data-level="38" data-path="38-splitting-and-the-growth-of-trees.html"><a href="38-splitting-and-the-growth-of-trees.html"><i class="fa fa-check"></i><b>38</b> Splitting and the growth of trees</a></li>
+<li class="chapter" data-level="39" data-path="39-differences-in-recursive-partitioning.html"><a href="39-differences-in-recursive-partitioning.html"><i class="fa fa-check"></i><b>39</b> 1984: Differences in recursive partitioning</a></li>
+<li class="chapter" data-level="40" data-path="40-limiting-differences.html"><a href="40-limiting-differences.html"><i class="fa fa-check"></i><b>40</b> Limiting differences</a></li>
+<li class="chapter" data-level="41" data-path="41-the-successful-dispersion-of-the-support-vector-machine.html"><a href="41-the-successful-dispersion-of-the-support-vector-machine.html"><i class="fa fa-check"></i><b>41</b> The successful dispersion of the support vector machine</a></li>
+<li class="chapter" data-level="42" data-path="42-differences-blur.html"><a href="42-differences-blur.html"><i class="fa fa-check"></i><b>42</b> Differences blur?</a></li>
+<li class="chapter" data-level="43" data-path="43-bending-the-decision-boundary.html"><a href="43-bending-the-decision-boundary.html"><i class="fa fa-check"></i><b>43</b> Bending the decision boundary</a></li>
+<li class="chapter" data-level="44" data-path="44-instituting-patterns.html"><a href="44-instituting-patterns.html"><i class="fa fa-check"></i><b>44</b> Instituting patterns</a></li>
+<li class="chapter" data-level="45" data-path="45-regularizing-and-materializing-objects.html"><a href="45-regularizing-and-materializing-objects.html"><i class="fa fa-check"></i><b>45</b> Regularizing and materializing objects}</a></li>
+<li class="chapter" data-level="46" data-path="46-genomic-referentiality-and-materiality.html"><a href="46-genomic-referentiality-and-materiality.html"><i class="fa fa-check"></i><b>46</b> Genomic referentiality and materiality</a></li>
+<li class="chapter" data-level="47" data-path="47-the-genome-as-threshold-object.html"><a href="47-the-genome-as-threshold-object.html"><i class="fa fa-check"></i><b>47</b> The genome as threshold object</a></li>
+<li class="chapter" data-level="48" data-path="48-genomic-knowledges-and-their-datasets.html"><a href="48-genomic-knowledges-and-their-datasets.html"><i class="fa fa-check"></i><b>48</b> Genomic knowledges and their datasets</a></li>
+<li class="chapter" data-level="49" data-path="49-the-advent-of-wide-dirty-and-mixed-data.html"><a href="49-the-advent-of-wide-dirty-and-mixed-data.html"><i class="fa fa-check"></i><b>49</b> The advent of ‘wide, dirty and mixed’ data</a></li>
+<li class="chapter" data-level="50" data-path="50-cross-validating-machine-learning-in-genomics.html"><a href="50-cross-validating-machine-learning-in-genomics.html"><i class="fa fa-check"></i><b>50</b> Cross-validating machine learning in genomics</a></li>
+<li class="chapter" data-level="51" data-path="51-proliferation-of-discoveries.html"><a href="51-proliferation-of-discoveries.html"><i class="fa fa-check"></i><b>51</b> Proliferation of discoveries</a></li>
+<li class="chapter" data-level="52" data-path="52-variations-in-the-object-or-in-the-machine-learner.html"><a href="52-variations-in-the-object-or-in-the-machine-learner.html"><i class="fa fa-check"></i><b>52</b> Variations in the object or in the machine learner?</a></li>
+<li class="chapter" data-level="53" data-path="53-whole-genome-functions.html"><a href="53-whole-genome-functions.html"><i class="fa fa-check"></i><b>53</b> Whole genome functions</a></li>
+<li class="chapter" data-level="54" data-path="54-propagating-subject-positions.html"><a href="54-propagating-subject-positions.html"><i class="fa fa-check"></i><b>54</b> Propagating subject positions}</a></li>
+<li class="chapter" data-level="55" data-path="55-propagation-across-human-machine-boundaries.html"><a href="55-propagation-across-human-machine-boundaries.html"><i class="fa fa-check"></i><b>55</b> Propagation across human-machine boundaries</a></li>
+<li class="chapter" data-level="56" data-path="56-competitive-positioning.html"><a href="56-competitive-positioning.html"><i class="fa fa-check"></i><b>56</b> Competitive positioning</a></li>
+<li class="chapter" data-level="57" data-path="57-a-privileged-machine-and-its-diagrammatic-forms.html"><a href="57-a-privileged-machine-and-its-diagrammatic-forms.html"><i class="fa fa-check"></i><b>57</b> A privileged machine and its diagrammatic forms</a></li>
+<li class="chapter" data-level="58" data-path="58-varying-subject-positions-in-code.html"><a href="58-varying-subject-positions-in-code.html"><i class="fa fa-check"></i><b>58</b> Varying subject positions in code</a></li>
+<li class="chapter" data-level="59" data-path="59-the-subjects-of-a-hidden-operation.html"><a href="59-the-subjects-of-a-hidden-operation.html"><i class="fa fa-check"></i><b>59</b> The subjects of a hidden operation</a></li>
+<li class="chapter" data-level="60" data-path="60-algorithms-that-propagate-errors.html"><a href="60-algorithms-that-propagate-errors.html"><i class="fa fa-check"></i><b>60</b> Algorithms that propagate errors</a></li>
+<li class="chapter" data-level="61" data-path="61-competitions-as-examination.html"><a href="61-competitions-as-examination.html"><i class="fa fa-check"></i><b>61</b> Competitions as examination</a></li>
+<li class="chapter" data-level="62" data-path="62-superimposing-power-and-knowledge.html"><a href="62-superimposing-power-and-knowledge.html"><i class="fa fa-check"></i><b>62</b> Superimposing power and knowledge</a></li>
+<li class="chapter" data-level="63" data-path="63-ranked-subject-positions.html"><a href="63-ranked-subject-positions.html"><i class="fa fa-check"></i><b>63</b> Ranked subject positions</a></li>
+<li class="chapter" data-level="64" data-path="64-conclusion-out-of-the-data.html"><a href="64-conclusion-out-of-the-data.html"><i class="fa fa-check"></i><b>64</b> Conclusion: Out of the Data}</a></li>
+<li class="chapter" data-level="65" data-path="65-machine-learners.html"><a href="65-machine-learners.html"><i class="fa fa-check"></i><b>65</b> 250,000 machine learners</a></li>
+<li class="chapter" data-level="66" data-path="66-a-summary-of-the-argument.html"><a href="66-a-summary-of-the-argument.html"><i class="fa fa-check"></i><b>66</b> A summary of the argument</a></li>
+<li class="chapter" data-level="67" data-path="67-in-situ-hybridization.html"><a href="67-in-situ-hybridization.html"><i class="fa fa-check"></i><b>67</b> In-situ hybridization</a></li>
+<li class="chapter" data-level="68" data-path="68-critical-operational-practice.html"><a href="68-critical-operational-practice.html"><i class="fa fa-check"></i><b>68</b> Critical operational practice?</a></li>
+<li class="chapter" data-level="69" data-path="69-obstacles-to-the-work-of-freeing-machine-learning.html"><a href="69-obstacles-to-the-work-of-freeing-machine-learning.html"><i class="fa fa-check"></i><b>69</b> Obstacles to the work of freeing machine learning</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning: Archaeology of a Data Practice</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="differences-blur" class="section level1">
+<h1><span class="header-section-number">42</span> Differences blur?</h1>
+<p>Decision boundaries change in two ways in support vector machines. They blur and bend, again affecting what counts as pattern.  The support vector machine addresses the problem of how to model differences when differences are blurred. An oft-repeated illustration of how the support vector machine transforms data appears in Cortes and Vapnik’s initial publication simply entitled ‘Support Vector Networks’ <span class="citation">[@Cortes_1995]</span>. They demonstrate how the support vector machine classifies handwritten digits drawn from a dataset supplied by the US Postal Service <span class="citation">[@LeCun_2012]</span>. Like <code>iris</code>, the US Postal Service digits and a larger version from the US National Institute of Standard (<code>mnist</code>) are standard machine learning dataset. They have been frequently used to measure the performance of competing learning algorithms.  In contrast to <code>iris</code>, the <code>mnist</code> is high dimensional. Each digit in the dataset is stored as a 16x16 pixel image. Image classification typically treats each pixel as a feature or variable in the input space. So each digit as represented by 16x16 pixels amounts to a 256 dimensional input space. By comparison, <code>iris</code> has five dimensions. Unsurprisingly, there are also many more digits in the US Postal Service Database than in flowers in <code>iris</code>. The <code>mnist</code> dataset has around 70,000. Aside from this dimensional growth, the handwritten digits aptly convey the blurring of differences. On the one hand, many people can easily recognise slight variations in handwritten digits with few errors. This is despite the many variations in handwriting that skew, morph and distort the ideal graphic forms of numbers.<a href="#fn73" class="footnoteRef" id="fnref73"><sup>73</sup></a></p>
+
+<p>In their experiments with digit recognition (shown in figure , Cortes and Vapnik contrast the error rates of decision trees (<code>CART</code> and <code>C4.5</code>), neural networks and the support vector machine working at various level of dimensionality. Support vector machines deal with blurred differences or continuous variations by superimposing two operations: ‘soft margins’ and ‘kernelisation.’ Nearly all expositions of the support vector machine including <span class="citation">[@Cortes_1995]</span> highlight the ‘soft margin’ that runs in parallel to the solid decision boundary. The support vector machine develops Fisher’s linear discriminant analysis since it searches for a separating hyperplane in the data.  While linear discriminant analysis constructs a hyperplane by finding the most likely linear boundary between classes based on all the data, the support vector machine searches for a hyperplane resting only on those cases in the data that lie near the boundary. It introduces the intuition that the best hyperplane differentiating classes will run near to the cases – the <em>support vectors</em> – that are most difficult to classify. Hard-to-classify cases become the ‘support vectors’  whose relative proximities tilt the decision surface in various directions. In contra-distinction to the <span class="math inline">\(N=\forall{\boldsymbol{X}}\)</span> proposition (discussed in chapter ), the machine learner discards much of the data. In contrast to linear discriminant analysis, as Ethem Alpayadin writes, ‘we do not care about correctly estimating the densities [probability distributions of variables] inside class regions; all we care about is the correct estimation of the <em>boundaries</em> between the class regions’ <span class="citation">[@Alpaydin_2010, 210]</span>.  </p>
+
+<p>Figure  has appeared in many slight variations in the last two decades. Such figures diagram classes by different point shapes, and the diagrammatic work of the classifier takes the shape of diagonal lines, the solid line marking the decision surface or hyperplane and the dotted lines marking the soft margins that separate the two classes. In Figure , the dotted lines represent a margin on either side of a hyperplane (the solid line). The support vector machine finds the hyperplane for which that margin or perpendicular distance between the margins is greatest. Of all the slightly different planes that might run between the two classes shown in that figure, the maximum separating hyperplane lies at the greatest distance from all the points of the different classes. The support vector classifier modifies the idea of the optimal separating hyperplane by accommodating inseparable or overlapping classes. This is something that other machine learners (for instance, the perceptron) cannot do. </p>
+<p>While the geometrical intuition here is that some data points (cases or observations) will lie on the opposite side of the decision surface to where they should be, the distance they lie on the wrong side of the separating hyperplane will be as small as possible. How are the lines showing in Figure  calculated? Locating the optimal separating hyperplane and a limited number of permitted mis-classifications presents a complicated optimisation problem. As <em>Elements of Statistical Learning</em>, following Cortes and Vapnik’s formulations, formalizes it, the problem can be stated in terms of minimization:</p>
+
+<p><span class="citation">[@Hastie_2009, 420]</span></p>
+<p>In equation , the optimisation problem is to minimize <span class="math inline">\(L_P\)</span>, the Lagrange primal function with respect to <span class="math inline">\(\beta, \beta_0\)</span> and <span class="math inline">\(\xi_i\)</span> <span class="citation">[@Hastie_2009, 420]</span>.  In this complicated optimisation problem (one that is difficult to understand without extensive mathematical background), familiar elements include the parameters <span class="math inline">\(\beta\)</span> in the linear form of <span class="math inline">\(x_i^T\beta + \beta_0\)</span>, which is the equation defining the hyperplane, as well as triple operations of addition (<span class="math inline">\(\sum\)</span>) of all the values <span class="math inline">\(\xi_i\)</span>, which calculate the distance that each case is on the wrong side of the margin. Correctly classified cases will, therefore, have <span class="math inline">\(x_i =0\)</span>.</p>
+<p>As always with mathematical functions, their diagrammatic relations, and the way in which they contain both the generalizing regularities (algebraic icons and indexes, the linear equation, the repeated summation of all values, the shaping parameters) and forms of variation (the presence of the misclassification measures <span class="math inline">\(\xi_i\)</span>) should focus our attention. What if elements that lie on the wrong side of the hyperplane were allowed? If that were possible, the support vector machine could deal with in-separable or overlapping classes, and hence with blurred patterns of difference. Given that support vector machine permits instances that lie on the wrong side of the separating hyperplane, irregular differences no longer function as errors (as they would appear in most linear classifiers such as linear discriminant analysis and logistic regression), but as elements in a ‘soft margin’ designed to accommodate inseparability and indistinctness. Equations such as equation  connect the diagrammatic intuition of a separating hyperplane with a set of steering movements controlled by parameters such as <span class="math inline">\(C\)</span>, which effectively controls the size of the margin, and <span class="math inline">\(\alpha\)</span>, which effectively bounds the proportion by which a predicted instance can be on the wrong side of the margins that define the hyperplane. In other words, as we have seen previously in cost-function optimisation (see chapter ), the learning in the machine consists in finding a way of transforming data into differences according to constraints. </p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="73">
+<li id="fn73"><p>Neural network researchers have heavily used the MNIST dataset. I discuss some of that work in chapter . The handwritten MNIST also appear in <em>Elements of Statistical Learning</em> , where they are used to compare the generalization error (see previous chapter) of a <em>k</em> nearest neighbours, convolutional neural network, and a ‘degree-9 polynomial’ support vector machine <span class="citation">[@Hastie_2009, 408]</span>.  What about the handwritten digits attracts so many machine learning techniques? The logistics of the US Postal Service aside (since the <code>mnist</code> datasets continue to be used by machine learners well after the problem of scrawl on letters has been sorted), the variations, the regularities, and the banal everydayness of these digits furnish a referential locus, whose existence as a facts, things or events in the world is less important than the relations of similarity and differences it poses.  The field of digitals becomes a site of differentiation not only of digits – the machine learners attempt to correctly classify the digits – but of the authority of different machine learning techniques and approaches. They become ways of announcing and delimiting the authority, the knowledge claims or ‘truth’ associated with the machine. The many uses of the<code>mnist</code> data documented by <span class="citation">[@LeCun_2012]</span> suggests something of the ancestral probabilisaton  of such datasets.<a href="42-differences-blur.html#fnref73">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="41-the-successful-dispersion-of-the-support-vector-machine.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="43-bending-the-decision-boundary.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

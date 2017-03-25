@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Machine Learning: Archaeology of a Data Practice</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Machine Learning: Archaeology of a Data Practice">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Machine Learning: Archaeology of a Data Practice" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Machine Learning: Archaeology of a Data Practice" />
+  
+  
+  
+
+<meta name="author" content="Adrian Mackenzie">
+
+
+<meta name="date" content="2016-12-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="33-the-improbable-success-of-the-naive-bayes-classifier.html">
+<link rel="next" href="35-statistical-decompositions-bias-variance-and-observed-errors.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="1-acknowledgments.html"><a href="1-acknowledgments.html"><i class="fa fa-check"></i><b>1</b> Acknowledgments</a></li>
+<li class="chapter" data-level="2" data-path="2-preface.html"><a href="2-preface.html"><i class="fa fa-check"></i><b>2</b> Preface</a></li>
+<li class="chapter" data-level="3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html"><i class="fa fa-check"></i><b>3</b> Introduction: Into the Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#three-accumulations-settings-data-and-devices"><i class="fa fa-check"></i><b>3.1</b> Three accumulations: settings, data and devices</a></li>
+<li class="chapter" data-level="3.2" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#who-or-what-is-a-machine-learner"><i class="fa fa-check"></i><b>3.2</b> Who or what is a machine learner?</a></li>
+<li class="chapter" data-level="3.3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#algorithmic-control-to-the-machine-learners"><i class="fa fa-check"></i><b>3.3</b> Algorithmic control to the machine learners?</a></li>
+<li class="chapter" data-level="3.4" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-archaeology-of-operations"><i class="fa fa-check"></i><b>3.4</b> The archaeology of operations</a></li>
+<li class="chapter" data-level="3.5" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#asymmetries-in-common-knowledge"><i class="fa fa-check"></i><b>3.5</b> Asymmetries in common knowledge</a></li>
+<li class="chapter" data-level="3.6" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#what-cannot-be-automated"><i class="fa fa-check"></i><b>3.6</b> What cannot be automated?</a></li>
+<li class="chapter" data-level="3.7" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#different-fields-in-machine-learning"><i class="fa fa-check"></i><b>3.7</b> Different fields in machine learning?</a></li>
+<li class="chapter" data-level="3.8" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-diagram-in-critical-thought"><i class="fa fa-check"></i><b>3.8</b> The diagram in critical thought</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html"><i class="fa fa-check"></i><b>4</b> Diagramming machines}</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#we-dont-have-to-write-programs"><i class="fa fa-check"></i><b>4.1</b> ‘We don’t have to write programs’?</a></li>
+<li class="chapter" data-level="4.2" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-elements-of-machine-learning"><i class="fa fa-check"></i><b>4.2</b> The elements of machine learning</a></li>
+<li class="chapter" data-level="4.3" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#who-reads-machine-learning-textbooks"><i class="fa fa-check"></i><b>4.3</b> Who reads machine learning textbooks?</a></li>
+<li class="chapter" data-level="4.4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#r-a-matrix-of-transformations"><i class="fa fa-check"></i><b>4.4</b> <code>R</code>: a matrix of transformations</a></li>
+<li class="chapter" data-level="4.5" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-obdurate-mathematical-glint-of-machine-learning"><i class="fa fa-check"></i><b>4.5</b> The obdurate mathematical glint of machine learning</a></li>
+<li class="chapter" data-level="4.6" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#cs229-2007-returning-again-and-again-to-certain-features"><i class="fa fa-check"></i><b>4.6</b> CS229, 2007: returning again and again to certain features</a></li>
+<li class="chapter" data-level="4.7" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-visible-learning-of-machine-learning"><i class="fa fa-check"></i><b>4.7</b> The visible learning of machine learning</a></li>
+<li class="chapter" data-level="4.8" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-diagram-of-an-operational-formation"><i class="fa fa-check"></i><b>4.8</b> The diagram of an operational formation</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html"><i class="fa fa-check"></i><b>5</b> Vectorisation and its consequences}</a></li>
+<li class="chapter" data-level="6" data-path="6-vector-space-and-geometry.html"><a href="6-vector-space-and-geometry.html"><i class="fa fa-check"></i><b>6</b> Vector space and geometry</a></li>
+<li class="chapter" data-level="7" data-path="7-mixing-places.html"><a href="7-mixing-places.html"><i class="fa fa-check"></i><b>7</b> Mixing places</a></li>
+<li class="chapter" data-level="8" data-path="8-truth-is-no-longer-in-the-table.html"><a href="8-truth-is-no-longer-in-the-table.html"><i class="fa fa-check"></i><b>8</b> Truth is no longer in the table?</a></li>
+<li class="chapter" data-level="9" data-path="9-the-epistopic-fault-line-in-tables.html"><a href="9-the-epistopic-fault-line-in-tables.html"><i class="fa fa-check"></i><b>9</b> The epistopic fault line in tables</a></li>
+<li class="chapter" data-level="10" data-path="10-surface-and-depths-the-problem-of-volume-in-data.html"><a href="10-surface-and-depths-the-problem-of-volume-in-data.html"><i class="fa fa-check"></i><b>10</b> Surface and depths: the problem of volume in data</a></li>
+<li class="chapter" data-level="11" data-path="11-vector-space-expansion.html"><a href="11-vector-space-expansion.html"><i class="fa fa-check"></i><b>11</b> Vector space expansion</a></li>
+<li class="chapter" data-level="12" data-path="12-drawing-lines-in-a-common-space-of-transformation.html"><a href="12-drawing-lines-in-a-common-space-of-transformation.html"><i class="fa fa-check"></i><b>12</b> Drawing lines in a common space of transformation</a></li>
+<li class="chapter" data-level="13" data-path="13-implicit-vectorization-in-code-and-infrastructures.html"><a href="13-implicit-vectorization-in-code-and-infrastructures.html"><i class="fa fa-check"></i><b>13</b> Implicit vectorization in code and infrastructures</a></li>
+<li class="chapter" data-level="14" data-path="14-lines-traversing-behind-the-light.html"><a href="14-lines-traversing-behind-the-light.html"><i class="fa fa-check"></i><b>14</b> Lines traversing behind the light</a></li>
+<li class="chapter" data-level="15" data-path="15-the-vectorised-table.html"><a href="15-the-vectorised-table.html"><i class="fa fa-check"></i><b>15</b> The vectorised table?</a></li>
+<li class="chapter" data-level="16" data-path="16-machines-finding-functions.html"><a href="16-machines-finding-functions.html"><i class="fa fa-check"></i><b>16</b> Machines finding functions}</a></li>
+<li class="chapter" data-level="17" data-path="17-learning-functions.html"><a href="17-learning-functions.html"><i class="fa fa-check"></i><b>17</b> Learning functions</a></li>
+<li class="chapter" data-level="18" data-path="18-supervised-unsupervised-reinforcement-learning-and-functions.html"><a href="18-supervised-unsupervised-reinforcement-learning-and-functions.html"><i class="fa fa-check"></i><b>18</b> Supervised, unsupervised, reinforcement learning and functions</a></li>
+<li class="chapter" data-level="19" data-path="19-which-function-operates.html"><a href="19-which-function-operates.html"><i class="fa fa-check"></i><b>19</b> Which function operates?</a></li>
+<li class="chapter" data-level="20" data-path="20-what-does-a-function-learn.html"><a href="20-what-does-a-function-learn.html"><i class="fa fa-check"></i><b>20</b> What does a function learn?</a></li>
+<li class="chapter" data-level="21" data-path="21-observing-with-curves-the-logistic-function.html"><a href="21-observing-with-curves-the-logistic-function.html"><i class="fa fa-check"></i><b>21</b> Observing with curves: the logistic function</a></li>
+<li class="chapter" data-level="22" data-path="22-the-cost-of-curves-in-machine-learning.html"><a href="22-the-cost-of-curves-in-machine-learning.html"><i class="fa fa-check"></i><b>22</b> The cost of curves in machine learning</a></li>
+<li class="chapter" data-level="23" data-path="23-curves-and-the-variation-in-models.html"><a href="23-curves-and-the-variation-in-models.html"><i class="fa fa-check"></i><b>23</b> Curves and the variation in models</a></li>
+<li class="chapter" data-level="24" data-path="24-observing-costs-losses-and-objectives-through-optimisation.html"><a href="24-observing-costs-losses-and-objectives-through-optimisation.html"><i class="fa fa-check"></i><b>24</b> Observing costs, losses and objectives through optimisation</a></li>
+<li class="chapter" data-level="25" data-path="25-gradients-as-partial-observers.html"><a href="25-gradients-as-partial-observers.html"><i class="fa fa-check"></i><b>25</b> Gradients as partial observers</a></li>
+<li class="chapter" data-level="26" data-path="26-the-power-to-learn.html"><a href="26-the-power-to-learn.html"><i class="fa fa-check"></i><b>26</b> The power to learn</a></li>
+<li class="chapter" data-level="27" data-path="27-probabilisation-and-the-taming-of-machines.html"><a href="27-probabilisation-and-the-taming-of-machines.html"><i class="fa fa-check"></i><b>27</b> Probabilisation and the Taming of Machines}</a></li>
+<li class="chapter" data-level="28" data-path="28-data-reduces-uncertainty.html"><a href="28-data-reduces-uncertainty.html"><i class="fa fa-check"></i><b>28</b> Data reduces uncertainty?</a></li>
+<li class="chapter" data-level="29" data-path="29-machine-learning-as-statistics-inside-out.html"><a href="29-machine-learning-as-statistics-inside-out.html"><i class="fa fa-check"></i><b>29</b> Machine learning as statistics inside out</a></li>
+<li class="chapter" data-level="30" data-path="30-distributed-probabilities.html"><a href="30-distributed-probabilities.html"><i class="fa fa-check"></i><b>30</b> Distributed probabilities</a></li>
+<li class="chapter" data-level="31" data-path="31-naive-bayes-and-the-distribution-of-probabilities.html"><a href="31-naive-bayes-and-the-distribution-of-probabilities.html"><i class="fa fa-check"></i><b>31</b> Naive Bayes and the distribution of probabilities</a></li>
+<li class="chapter" data-level="32" data-path="32-spam-when-foralln-is-too-much.html"><a href="32-spam-when-foralln-is-too-much.html"><i class="fa fa-check"></i><b>32</b> Spam: when <span class="math inline">\(\forall{N}\)</span> is too much?</a></li>
+<li class="chapter" data-level="33" data-path="33-the-improbable-success-of-the-naive-bayes-classifier.html"><a href="33-the-improbable-success-of-the-naive-bayes-classifier.html"><i class="fa fa-check"></i><b>33</b> The improbable success of the Naive Bayes classifier</a></li>
+<li class="chapter" data-level="34" data-path="34-ancestral-probabilities-in-documents-inference-and-prediction.html"><a href="34-ancestral-probabilities-in-documents-inference-and-prediction.html"><i class="fa fa-check"></i><b>34</b> Ancestral probabilities in documents: inference and prediction</a></li>
+<li class="chapter" data-level="35" data-path="35-statistical-decompositions-bias-variance-and-observed-errors.html"><a href="35-statistical-decompositions-bias-variance-and-observed-errors.html"><i class="fa fa-check"></i><b>35</b> Statistical decompositions: bias, variance and observed errors</a></li>
+<li class="chapter" data-level="36" data-path="36-does-machine-learning-construct-a-new-statistical-reality.html"><a href="36-does-machine-learning-construct-a-new-statistical-reality.html"><i class="fa fa-check"></i><b>36</b> Does machine learning construct a new statistical reality?</a></li>
+<li class="chapter" data-level="37" data-path="37-patterns-and-differences.html"><a href="37-patterns-and-differences.html"><i class="fa fa-check"></i><b>37</b> Patterns and differences</a></li>
+<li class="chapter" data-level="38" data-path="38-splitting-and-the-growth-of-trees.html"><a href="38-splitting-and-the-growth-of-trees.html"><i class="fa fa-check"></i><b>38</b> Splitting and the growth of trees</a></li>
+<li class="chapter" data-level="39" data-path="39-differences-in-recursive-partitioning.html"><a href="39-differences-in-recursive-partitioning.html"><i class="fa fa-check"></i><b>39</b> 1984: Differences in recursive partitioning</a></li>
+<li class="chapter" data-level="40" data-path="40-limiting-differences.html"><a href="40-limiting-differences.html"><i class="fa fa-check"></i><b>40</b> Limiting differences</a></li>
+<li class="chapter" data-level="41" data-path="41-the-successful-dispersion-of-the-support-vector-machine.html"><a href="41-the-successful-dispersion-of-the-support-vector-machine.html"><i class="fa fa-check"></i><b>41</b> The successful dispersion of the support vector machine</a></li>
+<li class="chapter" data-level="42" data-path="42-differences-blur.html"><a href="42-differences-blur.html"><i class="fa fa-check"></i><b>42</b> Differences blur?</a></li>
+<li class="chapter" data-level="43" data-path="43-bending-the-decision-boundary.html"><a href="43-bending-the-decision-boundary.html"><i class="fa fa-check"></i><b>43</b> Bending the decision boundary</a></li>
+<li class="chapter" data-level="44" data-path="44-instituting-patterns.html"><a href="44-instituting-patterns.html"><i class="fa fa-check"></i><b>44</b> Instituting patterns</a></li>
+<li class="chapter" data-level="45" data-path="45-regularizing-and-materializing-objects.html"><a href="45-regularizing-and-materializing-objects.html"><i class="fa fa-check"></i><b>45</b> Regularizing and materializing objects}</a></li>
+<li class="chapter" data-level="46" data-path="46-genomic-referentiality-and-materiality.html"><a href="46-genomic-referentiality-and-materiality.html"><i class="fa fa-check"></i><b>46</b> Genomic referentiality and materiality</a></li>
+<li class="chapter" data-level="47" data-path="47-the-genome-as-threshold-object.html"><a href="47-the-genome-as-threshold-object.html"><i class="fa fa-check"></i><b>47</b> The genome as threshold object</a></li>
+<li class="chapter" data-level="48" data-path="48-genomic-knowledges-and-their-datasets.html"><a href="48-genomic-knowledges-and-their-datasets.html"><i class="fa fa-check"></i><b>48</b> Genomic knowledges and their datasets</a></li>
+<li class="chapter" data-level="49" data-path="49-the-advent-of-wide-dirty-and-mixed-data.html"><a href="49-the-advent-of-wide-dirty-and-mixed-data.html"><i class="fa fa-check"></i><b>49</b> The advent of ‘wide, dirty and mixed’ data</a></li>
+<li class="chapter" data-level="50" data-path="50-cross-validating-machine-learning-in-genomics.html"><a href="50-cross-validating-machine-learning-in-genomics.html"><i class="fa fa-check"></i><b>50</b> Cross-validating machine learning in genomics</a></li>
+<li class="chapter" data-level="51" data-path="51-proliferation-of-discoveries.html"><a href="51-proliferation-of-discoveries.html"><i class="fa fa-check"></i><b>51</b> Proliferation of discoveries</a></li>
+<li class="chapter" data-level="52" data-path="52-variations-in-the-object-or-in-the-machine-learner.html"><a href="52-variations-in-the-object-or-in-the-machine-learner.html"><i class="fa fa-check"></i><b>52</b> Variations in the object or in the machine learner?</a></li>
+<li class="chapter" data-level="53" data-path="53-whole-genome-functions.html"><a href="53-whole-genome-functions.html"><i class="fa fa-check"></i><b>53</b> Whole genome functions</a></li>
+<li class="chapter" data-level="54" data-path="54-propagating-subject-positions.html"><a href="54-propagating-subject-positions.html"><i class="fa fa-check"></i><b>54</b> Propagating subject positions}</a></li>
+<li class="chapter" data-level="55" data-path="55-propagation-across-human-machine-boundaries.html"><a href="55-propagation-across-human-machine-boundaries.html"><i class="fa fa-check"></i><b>55</b> Propagation across human-machine boundaries</a></li>
+<li class="chapter" data-level="56" data-path="56-competitive-positioning.html"><a href="56-competitive-positioning.html"><i class="fa fa-check"></i><b>56</b> Competitive positioning</a></li>
+<li class="chapter" data-level="57" data-path="57-a-privileged-machine-and-its-diagrammatic-forms.html"><a href="57-a-privileged-machine-and-its-diagrammatic-forms.html"><i class="fa fa-check"></i><b>57</b> A privileged machine and its diagrammatic forms</a></li>
+<li class="chapter" data-level="58" data-path="58-varying-subject-positions-in-code.html"><a href="58-varying-subject-positions-in-code.html"><i class="fa fa-check"></i><b>58</b> Varying subject positions in code</a></li>
+<li class="chapter" data-level="59" data-path="59-the-subjects-of-a-hidden-operation.html"><a href="59-the-subjects-of-a-hidden-operation.html"><i class="fa fa-check"></i><b>59</b> The subjects of a hidden operation</a></li>
+<li class="chapter" data-level="60" data-path="60-algorithms-that-propagate-errors.html"><a href="60-algorithms-that-propagate-errors.html"><i class="fa fa-check"></i><b>60</b> Algorithms that propagate errors</a></li>
+<li class="chapter" data-level="61" data-path="61-competitions-as-examination.html"><a href="61-competitions-as-examination.html"><i class="fa fa-check"></i><b>61</b> Competitions as examination</a></li>
+<li class="chapter" data-level="62" data-path="62-superimposing-power-and-knowledge.html"><a href="62-superimposing-power-and-knowledge.html"><i class="fa fa-check"></i><b>62</b> Superimposing power and knowledge</a></li>
+<li class="chapter" data-level="63" data-path="63-ranked-subject-positions.html"><a href="63-ranked-subject-positions.html"><i class="fa fa-check"></i><b>63</b> Ranked subject positions</a></li>
+<li class="chapter" data-level="64" data-path="64-conclusion-out-of-the-data.html"><a href="64-conclusion-out-of-the-data.html"><i class="fa fa-check"></i><b>64</b> Conclusion: Out of the Data}</a></li>
+<li class="chapter" data-level="65" data-path="65-machine-learners.html"><a href="65-machine-learners.html"><i class="fa fa-check"></i><b>65</b> 250,000 machine learners</a></li>
+<li class="chapter" data-level="66" data-path="66-a-summary-of-the-argument.html"><a href="66-a-summary-of-the-argument.html"><i class="fa fa-check"></i><b>66</b> A summary of the argument</a></li>
+<li class="chapter" data-level="67" data-path="67-in-situ-hybridization.html"><a href="67-in-situ-hybridization.html"><i class="fa fa-check"></i><b>67</b> In-situ hybridization</a></li>
+<li class="chapter" data-level="68" data-path="68-critical-operational-practice.html"><a href="68-critical-operational-practice.html"><i class="fa fa-check"></i><b>68</b> Critical operational practice?</a></li>
+<li class="chapter" data-level="69" data-path="69-obstacles-to-the-work-of-freeing-machine-learning.html"><a href="69-obstacles-to-the-work-of-freeing-machine-learning.html"><i class="fa fa-check"></i><b>69</b> Obstacles to the work of freeing machine learning</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning: Archaeology of a Data Practice</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ancestral-probabilities-in-documents-inference-and-prediction" class="section level1">
+<h1><span class="header-section-number">34</span> Ancestral probabilities in documents: inference and prediction</h1>
+<p>Why is the Naive Bayes classifier is almost always demonstrated on the problem of filtering spam email <span class="citation">[@Conway_2012; @Schutt_2013, 93-113; @Kirk_2014, 53; @Lantz_2013, 92-93; @Flach_2012; @Ng_2008b]</span>, and in particular dealing with the abundance of spam emails mentioning a drug for erectile dysfunction sold under the tradename ‘Viagra’ (a drug that was itself the byproduct of the clinical trial for hypertension and heart disease)?  What are we to make of this regularity in production of statements? Admittedly spam, and spam trying to sell Viagra in particular, has been a very familiar part of most email since 1997 when Viagra was approved for sale, and of all the documents that machine learners mundanely encounter in quantity in those years, email might be the most numerous as well as one of the mundanely shared. Naive Bayes classifiers and variations of them also became practical devices in managing email traffic for most people, whether they know it or not, during the mid-1990s (see for instance, <a href="http://spamassassin.apache.org/">SpamAssassin</a>.(The other would be scientific publications. Many more recent machine learners train as classifiers on scientific publications <span class="citation">[@Blei_2007]</span> )</p>
+<p>From an archaeological standpoint, the reiteration of email spam filtering using Naive Bayes is the effect of another process, a process akin to the attribution of probability distributions to populations in the nineteenth century. Like many machine learners, Naive Bayes has one important lineage derived from the problem of classifying and retrieving documents amidst archives. The operational practice of document classification is specified in the element of the archive.  Genealogical affiliation with a particular problem such as document classification (or image recognition) generates many re-iterations and versions of machine learners over time. As Lucy Suchman and Randall Trigg wrote in their study of work on artificial intelligence,</p>
+<blockquote>
+<p>rather than beginning with documented instances of situated inference … researchers begin with … postulates and problems handed down by the ancestral communities of computer science, systems engineering, philosophical logic, and the like <span class="citation">[@Suchman_1992,174]</span>. </p>
+</blockquote>
+<p>While Bayes Theorem dates from the 18th century, the highly successive use of Naive Bayes classifiers in email spam filtering in recent decades effectively draws on an ancestral community of document classification and information retrieval methods reaching back to the mid-20th century.<a href="#fn59" class="footnoteRef" id="fnref59"><sup>59</sup></a> </p>
+<p>Early attempts to use what is now called Naive Bayes in the early 1960s re-iterated engagements with the evidential weight of documents that accompanied the emergence of probabilistic thinking as a quantification of belief in the seventeenth century <span class="citation">[@Hacking_1975, 35-49]</span>.  Working at the RAND Corporation in the early 1960s, M.E. Maron described how ‘automatic indexing’ of documents – Maron used papers published in computer engineering journals – could become ‘probabilistic automatic indexing.’ The necessary statistical assumption was:</p>
+<blockquote>
+<p>The fundamental thesis says, in effect, that statistics on kind, frequency, location, order, etc., of selected words are adequate to make reasonably good predictions about the subject matter of documents containing those words <span class="citation">[@Maron_1961, 406]</span> </p>
+</blockquote>
+<p>This thesis has remained somewhat fundamental in text classification and information retrieval applications, as well as many other machine learning approaches since. Maron’s work focused on a collection of several hundred abstracts of papers published in the March and June 1959 issues of the <em>IRE Transactions on Electronic Computers</em>. As in contemporary supervised learning, these abstracts were divided into two groups, a training and a test set (‘group 1’ and ‘group 2’ in Maron’s terminology <span class="citation">[@Maron_1961, 407]</span>), and the training set was classified according to 32 different categories that had already been in use by the Professional Group on Electronic Computers, the publishers of the <em>IRE Transactions</em>. Given these classifications, word counts for all distinct words in the abstracts were made, the most common terms (‘the’, ‘is’, ‘of’, ‘machine’, ‘data’, ‘computer’) and the most uncommon words removed, and the remaining set of around 1000 words were actually used for classification.</p>
+<p>This treatment of the abstracts as documents, then as lists of words, and then as frequencies of terms, and finally as a filtered list of most information rich terms continues in much document and text classification work today.  A typical contemporary information retrieval textbook such as <span class="citation">[@Manning_2008]</span> devotes a chapter to the topic, including the canonical discussion of how simplifying assumptions about language and meaning do not vitiate the Naive Bayes classifier. Whenever machine learners announce the unlikely efficacy of classifiers, we might attend to the ways in which previous ‘ancestral probabilisations’ and archival constitution of the domain in question prepare the ground for that success.  </p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="59">
+<li id="fn59"><p>The other lineage descends from medical diagnosis. For instance, starting in 1960, Homer Warner, Alan Toronto and George Veasy, working at the University of Utah and Latter-day Saints Hospital in Salt Lake City, began to develop a probabilistic computer model for diagnosis of heart disease <span class="citation">[@Warner_1961; @Warner_1964]</span>. Their model used exactly the same ‘equation of conditional probability’ we see in equation  but now used to ‘express the logical process used by a clinician in making a diagnosis based on clinical data’ <span class="citation">[@Warner_1961, 177]</span>. Despite the mention of logic in this description, the diagnostic model was thoroughly probabilistic in the sense that the model itself has no representation of logic included in its workings. Rather it calculates the probability of a given type of heart disease given ‘statistical data on the incidence of symptoms’ <span class="citation">[@Warner_1964, 558]</span>. Somewhat ironically, as they point out, physicians involved in preparing and submitting data to the diagnostic program improved the accuracy in their own diagnoses. In 1964, N.J Bailey was taking the same approach to medical diagnosis <span class="citation">[@Bailey_1965]</span>.   Heart disease to a central topic in machine learning (see chapter  for discussion of the <code>South African Heart Disease</code> dataset ).<a href="34-ancestral-probabilities-in-documents-inference-and-prediction.html#fnref59">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="33-the-improbable-success-of-the-naive-bayes-classifier.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="35-statistical-decompositions-bias-variance-and-observed-errors.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

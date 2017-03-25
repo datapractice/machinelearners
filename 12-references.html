@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Machine Learning: Archaeology of a Data Practice</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Machine Learning: Archaeology of a Data Practice">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Machine Learning: Archaeology of a Data Practice" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Machine Learning: Archaeology of a Data Practice" />
+  
+  
+  
+
+<meta name="author" content="Adrian Mackenzie">
+
+
+<meta name="date" content="2016-12-21">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="11-conclusion-out-of-the-data.html">
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="1-acknowledgments.html"><a href="1-acknowledgments.html"><i class="fa fa-check"></i><b>1</b> Acknowledgments</a></li>
+<li class="chapter" data-level="2" data-path="2-preface.html"><a href="2-preface.html"><i class="fa fa-check"></i><b>2</b> Preface</a></li>
+<li class="chapter" data-level="3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html"><i class="fa fa-check"></i><b>3</b> Introduction: Into the Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#three-accumulations-settings-data-and-devices"><i class="fa fa-check"></i><b>3.1</b> Three accumulations: settings, data and devices</a></li>
+<li class="chapter" data-level="3.2" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#who-or-what-is-a-machine-learner"><i class="fa fa-check"></i><b>3.2</b> Who or what is a machine learner?</a></li>
+<li class="chapter" data-level="3.3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#algorithmic-control-to-the-machine-learners"><i class="fa fa-check"></i><b>3.3</b> Algorithmic control to the machine learners?</a></li>
+<li class="chapter" data-level="3.4" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-archaeology-of-operations"><i class="fa fa-check"></i><b>3.4</b> The archaeology of operations</a></li>
+<li class="chapter" data-level="3.5" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#asymmetries-in-common-knowledge"><i class="fa fa-check"></i><b>3.5</b> Asymmetries in common knowledge</a></li>
+<li class="chapter" data-level="3.6" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#what-cannot-be-automated"><i class="fa fa-check"></i><b>3.6</b> What cannot be automated?</a></li>
+<li class="chapter" data-level="3.7" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#different-fields-in-machine-learning"><i class="fa fa-check"></i><b>3.7</b> Different fields in machine learning?</a></li>
+<li class="chapter" data-level="3.8" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-diagram-in-critical-thought"><i class="fa fa-check"></i><b>3.8</b> The diagram in critical thought</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html"><i class="fa fa-check"></i><b>4</b> Diagramming machines</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#we-dont-have-to-write-programs"><i class="fa fa-check"></i><b>4.1</b> ‘We don’t have to write programs’?</a></li>
+<li class="chapter" data-level="4.2" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-elements-of-machine-learning"><i class="fa fa-check"></i><b>4.2</b> The elements of machine learning</a></li>
+<li class="chapter" data-level="4.3" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#who-reads-machine-learning-textbooks"><i class="fa fa-check"></i><b>4.3</b> Who reads machine learning textbooks?</a></li>
+<li class="chapter" data-level="4.4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#r-a-matrix-of-transformations"><i class="fa fa-check"></i><b>4.4</b> <code>R</code>: a matrix of transformations</a></li>
+<li class="chapter" data-level="4.5" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-obdurate-mathematical-glint-of-machine-learning"><i class="fa fa-check"></i><b>4.5</b> The obdurate mathematical glint of machine learning</a></li>
+<li class="chapter" data-level="4.6" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#cs229-2007-returning-again-and-again-to-certain-features"><i class="fa fa-check"></i><b>4.6</b> CS229, 2007: returning again and again to certain features</a></li>
+<li class="chapter" data-level="4.7" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-visible-learning-of-machine-learning"><i class="fa fa-check"></i><b>4.7</b> The visible learning of machine learning</a></li>
+<li class="chapter" data-level="4.8" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-diagram-of-an-operational-formation"><i class="fa fa-check"></i><b>4.8</b> The diagram of an operational formation</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html"><i class="fa fa-check"></i><b>5</b> Vectorisation and its consequences</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#vector-space-and-geometry"><i class="fa fa-check"></i><b>5.1</b> Vector space and geometry</a></li>
+<li class="chapter" data-level="5.2" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#mixing-places"><i class="fa fa-check"></i><b>5.2</b> Mixing places</a></li>
+<li class="chapter" data-level="5.3" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#truth-is-no-longer-in-the-table"><i class="fa fa-check"></i><b>5.3</b> Truth is no longer in the table?</a></li>
+<li class="chapter" data-level="5.4" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#the-epistopic-fault-line-in-tables"><i class="fa fa-check"></i><b>5.4</b> The epistopic fault line in tables</a></li>
+<li class="chapter" data-level="5.5" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#surface-and-depths-the-problem-of-volume-in-data"><i class="fa fa-check"></i><b>5.5</b> Surface and depths: the problem of volume in data</a></li>
+<li class="chapter" data-level="5.6" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#vector-space-expansion"><i class="fa fa-check"></i><b>5.6</b> Vector space expansion</a></li>
+<li class="chapter" data-level="5.7" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#drawing-lines-in-a-common-space-of-transformation"><i class="fa fa-check"></i><b>5.7</b> Drawing lines in a common space of transformation</a></li>
+<li class="chapter" data-level="5.8" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#implicit-vectorization-in-code-and-infrastructures"><i class="fa fa-check"></i><b>5.8</b> Implicit vectorization in code and infrastructures</a></li>
+<li class="chapter" data-level="5.9" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#lines-traversing-behind-the-light"><i class="fa fa-check"></i><b>5.9</b> Lines traversing behind the light</a></li>
+<li class="chapter" data-level="5.10" data-path="5-vectorisation-and-its-consequences.html"><a href="5-vectorisation-and-its-consequences.html#the-vectorised-table"><i class="fa fa-check"></i><b>5.10</b> The vectorised table?</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html"><i class="fa fa-check"></i><b>6</b> Machines finding functions</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#learning-functions"><i class="fa fa-check"></i><b>6.1</b> Learning functions</a></li>
+<li class="chapter" data-level="6.2" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#supervised-unsupervised-reinforcement-learning-and-functions"><i class="fa fa-check"></i><b>6.2</b> Supervised, unsupervised, reinforcement learning and functions</a></li>
+<li class="chapter" data-level="6.3" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#which-function-operates"><i class="fa fa-check"></i><b>6.3</b> Which function operates?</a></li>
+<li class="chapter" data-level="6.4" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#what-does-a-function-learn"><i class="fa fa-check"></i><b>6.4</b> What does a function learn?</a></li>
+<li class="chapter" data-level="6.5" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#observing-with-curves-the-logistic-function"><i class="fa fa-check"></i><b>6.5</b> Observing with curves: the logistic function</a></li>
+<li class="chapter" data-level="6.6" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#the-cost-of-curves-in-machine-learning"><i class="fa fa-check"></i><b>6.6</b> The cost of curves in machine learning</a></li>
+<li class="chapter" data-level="6.7" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#curves-and-the-variation-in-models"><i class="fa fa-check"></i><b>6.7</b> Curves and the variation in models</a></li>
+<li class="chapter" data-level="6.8" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#observing-costs-losses-and-objectives-through-optimisation"><i class="fa fa-check"></i><b>6.8</b> Observing costs, losses and objectives through optimisation</a></li>
+<li class="chapter" data-level="6.9" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#gradients-as-partial-observers"><i class="fa fa-check"></i><b>6.9</b> Gradients as partial observers</a></li>
+<li class="chapter" data-level="6.10" data-path="6-machines-finding-functions.html"><a href="6-machines-finding-functions.html#the-power-to-learn"><i class="fa fa-check"></i><b>6.10</b> The power to learn</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html"><i class="fa fa-check"></i><b>7</b> Probabilisation and the Taming of Machines}</a><ul>
+<li class="chapter" data-level="7.1" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html#data-reduces-uncertainty"><i class="fa fa-check"></i><b>7.1</b> Data reduces uncertainty?</a></li>
+<li class="chapter" data-level="7.2" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html#machine-learning-as-statistics-inside-out"><i class="fa fa-check"></i><b>7.2</b> Machine learning as statistics inside out</a></li>
+<li class="chapter" data-level="7.3" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html#distributed-probabilities"><i class="fa fa-check"></i><b>7.3</b> Distributed probabilities</a></li>
+<li class="chapter" data-level="7.4" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html#naive-bayes-and-the-distribution-of-probabilities"><i class="fa fa-check"></i><b>7.4</b> Naive Bayes and the distribution of probabilities</a></li>
+<li class="chapter" data-level="7.5" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html#spam-when-foralln-is-too-much"><i class="fa fa-check"></i><b>7.5</b> Spam: when <span class="math inline">\(\forall{N}\)</span> is too much?</a></li>
+<li class="chapter" data-level="7.6" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html#the-improbable-success-of-the-naive-bayes-classifier"><i class="fa fa-check"></i><b>7.6</b> The improbable success of the Naive Bayes classifier</a></li>
+<li class="chapter" data-level="7.7" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html#ancestral-probabilities-in-documents-inference-and-prediction"><i class="fa fa-check"></i><b>7.7</b> Ancestral probabilities in documents: inference and prediction</a></li>
+<li class="chapter" data-level="7.8" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html#statistical-decompositions-bias-variance-and-observed-errors"><i class="fa fa-check"></i><b>7.8</b> Statistical decompositions: bias, variance and observed errors</a></li>
+<li class="chapter" data-level="7.9" data-path="7-probabilisation-and-the-taming-of-machines.html"><a href="7-probabilisation-and-the-taming-of-machines.html#does-machine-learning-construct-a-new-statistical-reality"><i class="fa fa-check"></i><b>7.9</b> Does machine learning construct a new statistical reality?</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-patterns-and-differences.html"><a href="8-patterns-and-differences.html"><i class="fa fa-check"></i><b>8</b> Patterns and differences</a><ul>
+<li class="chapter" data-level="8.1" data-path="8-patterns-and-differences.html"><a href="8-patterns-and-differences.html#splitting-and-the-growth-of-trees"><i class="fa fa-check"></i><b>8.1</b> Splitting and the growth of trees</a></li>
+<li class="chapter" data-level="8.2" data-path="8-patterns-and-differences.html"><a href="8-patterns-and-differences.html#differences-in-recursive-partitioning"><i class="fa fa-check"></i><b>8.2</b> 1984: Differences in recursive partitioning</a></li>
+<li class="chapter" data-level="8.3" data-path="8-patterns-and-differences.html"><a href="8-patterns-and-differences.html#limiting-differences"><i class="fa fa-check"></i><b>8.3</b> Limiting differences</a></li>
+<li class="chapter" data-level="8.4" data-path="8-patterns-and-differences.html"><a href="8-patterns-and-differences.html#the-successful-dispersion-of-the-support-vector-machine"><i class="fa fa-check"></i><b>8.4</b> The successful dispersion of the support vector machine</a></li>
+<li class="chapter" data-level="8.5" data-path="8-patterns-and-differences.html"><a href="8-patterns-and-differences.html#differences-blur"><i class="fa fa-check"></i><b>8.5</b> Differences blur?</a></li>
+<li class="chapter" data-level="8.6" data-path="8-patterns-and-differences.html"><a href="8-patterns-and-differences.html#bending-the-decision-boundary"><i class="fa fa-check"></i><b>8.6</b> Bending the decision boundary</a></li>
+<li class="chapter" data-level="8.7" data-path="8-patterns-and-differences.html"><a href="8-patterns-and-differences.html#instituting-patterns"><i class="fa fa-check"></i><b>8.7</b> Instituting patterns</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-regularizing-and-materializing-objects.html"><a href="9-regularizing-and-materializing-objects.html"><i class="fa fa-check"></i><b>9</b> Regularizing and materializing objects}</a><ul>
+<li class="chapter" data-level="9.1" data-path="9-regularizing-and-materializing-objects.html"><a href="9-regularizing-and-materializing-objects.html#genomic-referentiality-and-materiality"><i class="fa fa-check"></i><b>9.1</b> Genomic referentiality and materiality</a></li>
+<li class="chapter" data-level="9.2" data-path="9-regularizing-and-materializing-objects.html"><a href="9-regularizing-and-materializing-objects.html#the-genome-as-threshold-object"><i class="fa fa-check"></i><b>9.2</b> The genome as threshold object</a></li>
+<li class="chapter" data-level="9.3" data-path="9-regularizing-and-materializing-objects.html"><a href="9-regularizing-and-materializing-objects.html#genomic-knowledges-and-their-datasets"><i class="fa fa-check"></i><b>9.3</b> Genomic knowledges and their datasets</a></li>
+<li class="chapter" data-level="9.4" data-path="9-regularizing-and-materializing-objects.html"><a href="9-regularizing-and-materializing-objects.html#the-advent-of-wide-dirty-and-mixed-data"><i class="fa fa-check"></i><b>9.4</b> The advent of ‘wide, dirty and mixed’ data</a></li>
+<li class="chapter" data-level="9.5" data-path="9-regularizing-and-materializing-objects.html"><a href="9-regularizing-and-materializing-objects.html#cross-validating-machine-learning-in-genomics"><i class="fa fa-check"></i><b>9.5</b> Cross-validating machine learning in genomics</a></li>
+<li class="chapter" data-level="9.6" data-path="9-regularizing-and-materializing-objects.html"><a href="9-regularizing-and-materializing-objects.html#proliferation-of-discoveries"><i class="fa fa-check"></i><b>9.6</b> Proliferation of discoveries</a></li>
+<li class="chapter" data-level="9.7" data-path="9-regularizing-and-materializing-objects.html"><a href="9-regularizing-and-materializing-objects.html#variations-in-the-object-or-in-the-machine-learner"><i class="fa fa-check"></i><b>9.7</b> Variations in the object or in the machine learner?</a></li>
+<li class="chapter" data-level="9.8" data-path="9-regularizing-and-materializing-objects.html"><a href="9-regularizing-and-materializing-objects.html#whole-genome-functions"><i class="fa fa-check"></i><b>9.8</b> Whole genome functions</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html"><i class="fa fa-check"></i><b>10</b> Propagating subject positions}</a><ul>
+<li class="chapter" data-level="10.1" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html#propagation-across-human-machine-boundaries"><i class="fa fa-check"></i><b>10.1</b> Propagation across human-machine boundaries</a></li>
+<li class="chapter" data-level="10.2" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html#competitive-positioning"><i class="fa fa-check"></i><b>10.2</b> Competitive positioning</a></li>
+<li class="chapter" data-level="10.3" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html#a-privileged-machine-and-its-diagrammatic-forms"><i class="fa fa-check"></i><b>10.3</b> A privileged machine and its diagrammatic forms</a></li>
+<li class="chapter" data-level="10.4" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html#varying-subject-positions-in-code"><i class="fa fa-check"></i><b>10.4</b> Varying subject positions in code</a></li>
+<li class="chapter" data-level="10.5" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html#the-subjects-of-a-hidden-operation"><i class="fa fa-check"></i><b>10.5</b> The subjects of a hidden operation</a></li>
+<li class="chapter" data-level="10.6" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html#algorithms-that-propagate-errors"><i class="fa fa-check"></i><b>10.6</b> Algorithms that propagate errors</a></li>
+<li class="chapter" data-level="10.7" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html#competitions-as-examination"><i class="fa fa-check"></i><b>10.7</b> Competitions as examination</a></li>
+<li class="chapter" data-level="10.8" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html#superimposing-power-and-knowledge"><i class="fa fa-check"></i><b>10.8</b> Superimposing power and knowledge</a></li>
+<li class="chapter" data-level="10.9" data-path="10-propagating-subject-positions.html"><a href="10-propagating-subject-positions.html#ranked-subject-positions"><i class="fa fa-check"></i><b>10.9</b> Ranked subject positions</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-conclusion-out-of-the-data.html"><a href="11-conclusion-out-of-the-data.html"><i class="fa fa-check"></i><b>11</b> Conclusion: Out of the Data}</a><ul>
+<li class="chapter" data-level="11.1" data-path="11-conclusion-out-of-the-data.html"><a href="11-conclusion-out-of-the-data.html#machine-learners"><i class="fa fa-check"></i><b>11.1</b> 250,000 machine learners</a></li>
+<li class="chapter" data-level="11.2" data-path="11-conclusion-out-of-the-data.html"><a href="11-conclusion-out-of-the-data.html#a-summary-of-the-argument"><i class="fa fa-check"></i><b>11.2</b> A summary of the argument</a></li>
+<li class="chapter" data-level="11.3" data-path="11-conclusion-out-of-the-data.html"><a href="11-conclusion-out-of-the-data.html#in-situ-hybridization"><i class="fa fa-check"></i><b>11.3</b> In-situ hybridization</a></li>
+<li class="chapter" data-level="11.4" data-path="11-conclusion-out-of-the-data.html"><a href="11-conclusion-out-of-the-data.html#critical-operational-practice"><i class="fa fa-check"></i><b>11.4</b> Critical operational practice?</a></li>
+<li class="chapter" data-level="11.5" data-path="11-conclusion-out-of-the-data.html"><a href="11-conclusion-out-of-the-data.html#obstacles-to-the-work-of-freeing-machine-learning"><i class="fa fa-check"></i><b>11.5</b> Obstacles to the work of freeing machine learning</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-references.html"><a href="12-references.html"><i class="fa fa-check"></i><b>12</b> References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning: Archaeology of a Data Practice</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="references" class="section level1">
+<h1><span class="header-section-number">12</span> References</h1>
+
+<div id="refs" class="references">
+<div>
+<p>Abramowitz, Milton. 1965. <em>Handbook of Mathematical Functions : With Formulas,graphs,and Mathematical Tables</em>. Dover Books.</p>
+</div>
+<div>
+<p>Ackley, David H., Geoffrey E. Hinton, and Terrence J. Sejnowski. 1985. “A Learning Algorithm for Boltzmann Machines.” <em>Cognitive Science</em> 9 (1): 147–69. <a href="http://www.sciencedirect.com/science/article/pii/S0364021385800124" class="uri">http://www.sciencedirect.com/science/article/pii/S0364021385800124</a>.</p>
+</div>
+<div>
+<p>ACM. 2013. “John M. Chambers - Award Winner.” <em>Awards: Software System</em>. <a href="http://awards.acm.org/award_winners/chambers_6640862.cfm" class="uri">http://awards.acm.org/award_winners/chambers_6640862.cfm</a>.</p>
+</div>
+<div>
+<p>Adams, Vincanne, Michelle Murphy, and Adele E Clarke. 2009. “Anticipation: Technoscience, Life, Affect, Temporality.” <em>Subjectivity</em> 28 (1): 246–65. doi:<a href="https://doi.org/10.1057/sub.2009.18">10.1057/sub.2009.18</a>.</p>
+</div>
+<div>
+<p>Adler, Joseph, and Jörg Beyer. 2010. <em>R in a Nutshell</em>. O’Reilly Germany. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=IOmnlDvVZ_EC&amp;oi=fnd&amp;pg=PR5&amp;dq=r+in+a+nutshell&amp;ots=to8tKeDgSH&amp;sig=AzkSem6yUG6dsnij0R4NxfZP--w" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=IOmnlDvVZ_EC&amp;oi=fnd&amp;pg=PR5&amp;dq=r+in+a+nutshell&amp;ots=to8tKeDgSH&amp;sig=AzkSem6yUG6dsnij0R4NxfZP--w</a>.</p>
+</div>
+<div>
+<p>Agency, National Security. 2012. “SKYNET: Courier Detection via Machine Learning.” <em>The Intercept</em>. <a href="https://theintercept.com/document/2015/05/08/skynet-courier/" class="uri">https://theintercept.com/document/2015/05/08/skynet-courier/</a>.</p>
+</div>
+<div>
+<p>Alpaydin, Ethem. 2010. <em>Introduction to Machine Learning</em>. Cambridge, Massachusetts; London: MIT Press.</p>
+</div>
+<div>
+<p>Amoore, Louise. 2011. “Data Derivatives On the Emergence of a Security Risk Calculus for Our Times.” <em>Theory, Culture &amp; Society</em> 28 (6): 24–43. <a href="http://tcs.sagepub.com/content/28/6/24.short" class="uri">http://tcs.sagepub.com/content/28/6/24.short</a>.</p>
+</div>
+<div>
+<p>Anthony, Sebastian. 2012. “Google Compute Engine: For $2 Million/Day, Your Company Can Run the Third Fastest Supercomputer in the World | ExtremeTech.” <em>ExtremeTech</em>. <a href="http://www.extremetech.com/extreme/131962-google-compute-engine-for-2-millionday-your-company-can-run-the-third-fastest-supercomputer-in-the-world" class="uri">http://www.extremetech.com/extreme/131962-google-compute-engine-for-2-millionday-your-company-can-run-the-third-fastest-supercomputer-in-the-world</a>.</p>
+</div>
+<div>
+<p>Arendt, Hannah. 1998. <em>The Human Condition</em>. Chicago ; London: University of Chicago Press.</p>
+</div>
+<div>
+<p>Aristotle. 1975. <em>Aristotle’s Categories and de Interpretatione</em>. Translated by J.L. Ackrill. Oxford University Press.</p>
+</div>
+<div>
+<p>Arthur, Charles. 2015. “Artificial Intelligence: Don’t Fear AI. It’s Already on Your Phone and Useful.” <em>The Guardian</em>. June 15. <a href="http://www.theguardian.com/technology/2015/jun/15/artificial-intelligence-ai-smartphones-machine-learning" class="uri">http://www.theguardian.com/technology/2015/jun/15/artificial-intelligence-ai-smartphones-machine-learning</a>.</p>
+</div>
+<div>
+<p>Arthur, Heather. 2012. “Harthur/Kittydar.” <em>GitHub</em>. <a href="https://github.com/harthur/kittydar" class="uri">https://github.com/harthur/kittydar</a>.</p>
+</div>
+<div>
+<p>Bailey, N. T. J. 1965. <em>Probability Methods of Diagnosis Based on Small Samples</em>. London: HM Stationery Office, London.</p>
+</div>
+<div>
+<p>Barber, David. 2011. <em>Bayesian Reasoning and Machine Learning</em>. Cambridge; New York: Cambridge University Press.</p>
+</div>
+<div>
+<p>Barocas, Solon, Sophie Hood, and Malte Ziewitz. 2013. “Governing Algorithms: A Provocation Piece.” SSRN Scholarly Paper ID 2245322. Rochester, NY: Social Science Research Network. <a href="http://papers.ssrn.com/abstract=2245322" class="uri">http://papers.ssrn.com/abstract=2245322</a>.</p>
+</div>
+<div>
+<p>BBC. 2012. “Google ’Brain’ Machine Spots Cats.” <em>BBC News: Technology</em>, June 26. <a href="http://www.bbc.co.uk/news/technology-18595351" class="uri">http://www.bbc.co.uk/news/technology-18595351</a>.</p>
+</div>
+<div>
+<p>Beer, David, and Roger Burrows. 2013. “Popular Culture, Digital Archives and the New Social Life of Data.” <em>Theory, Culture &amp; Society</em>. <a href="http://tcs.sagepub.com/content/early/2013/04/15/0263276413476542.abstract" class="uri">http://tcs.sagepub.com/content/early/2013/04/15/0263276413476542.abstract</a>.</p>
+</div>
+<div>
+<p>Bellman, Richard. 1961. <em>Adaptive Control Processes: A Guided Tour</em>. Vol. 4. Princeton N.J.: Princeton University Press. <a href="http://www.getcited.org/pub/101191710" class="uri">http://www.getcited.org/pub/101191710</a>.</p>
+</div>
+<div>
+<p>Beniger, James R. 1986. <em>The Control Revolution: Technological and Economic Origins of the Information Society</em>. Harvard University Press.</p>
+</div>
+<div>
+<p>Beniger, James R., and Dorothy L. Robyn. 1978. “Quantitative Graphics in Statistics: A Brief History.” <em>The American Statistician</em> 32 (1): 1–11. doi:<a href="https://doi.org/10.2307/2683467">10.2307/2683467</a>.</p>
+</div>
+<div>
+<p>Berlant, L. 2007. “Nearly Utopian, Nearly Normal: Post-Fordist Affect in La Promesse and Rosetta.” <em>Public Culture</em> 19 (2): 273. <a href="http://lucian.uchicago.edu/blogs/politicalfeeling/files/2007/10/berlant-la-promesse.pdf" class="uri">http://lucian.uchicago.edu/blogs/politicalfeeling/files/2007/10/berlant-la-promesse.pdf</a>.</p>
+</div>
+<div>
+<p>Bertin, Jacques. 1983. <em>Semiology of Graphics: Diagrams, Networks, Maps</em>. Madison: University of Wisconsin Press.</p>
+</div>
+<div>
+<p>Bishop, Christopher M. 2006. <em>Pattern Recognition and Machine Learning</em>. Vol. 1. New York: Springer.</p>
+</div>
+<div>
+<p>Bishop, Christopher M., and others. 1995. <em>Neural Networks for Pattern Recognition</em>. Cambridge; New York: Cambridge University Press. <a href="http://www.engineering.upm.ro/master-ie/sacpi/mat_did/info068/docum/Neural%20Networks%20for%20Pattern%20Recognition.pdf">http://www.engineering.upm.ro/master-ie/sacpi/mat_did/info068/docum/Neural%20Networks%20for%20Pattern%20Recognition.pdf</a>.</p>
+</div>
+<div>
+<p>Blei, David M., and John D. Lafferty. 2007. “A Correlated Topic Model of Science.” <em>The Annals of Applied Statistics</em>, 17–35.</p>
+</div>
+<div>
+<p>Blei, David M., Andrew Y. Ng, and Michael I. Jordan. 2003. “Latent Dirichlet Allocation.” <em>The Journal of Machine Learning Research</em> 3: 993–1022. <a href="http://dl.acm.org/citation.cfm?id=944937" class="uri">http://dl.acm.org/citation.cfm?id=944937</a>.</p>
+</div>
+<div>
+<p>Bollas, Christopher. 2008. <em>The Evocative Object World</em>. London &amp; New York: Routledge.</p>
+</div>
+<div>
+<p>Borch, Christian. 2005. “Urban Imitations: Tarde’s Sociology Revisited.” <em>Theory Culture Society</em> 22 (3): 81–100.</p>
+</div>
+<div>
+<p>Bowker, Geoffrey. 2014. “Emerging Configurations of Knowledge Expression.” In <em>Media Technologies: Essays on Communication, Materiality, and Society</em>, edited by Tarleton Gillespie, Pablo Boczkowski, and Kirsten A. Foot, 99–118. Cambridge, MA: MIT Press. <a href="https://books.google.co.uk/books?hl=en&amp;lr=&amp;id=zeK2AgAAQBAJ&amp;oi=fnd&amp;pg=PA167&amp;dq=gillespie+tarleton&amp;ots=GmjJQZ-2ue&amp;sig=Omo2OeadgqNvz17IupCqELPagdg" class="uri">https://books.google.co.uk/books?hl=en&amp;lr=&amp;id=zeK2AgAAQBAJ&amp;oi=fnd&amp;pg=PA167&amp;dq=gillespie+tarleton&amp;ots=GmjJQZ-2ue&amp;sig=Omo2OeadgqNvz17IupCqELPagdg</a>.</p>
+</div>
+<div>
+<p>Boyd, Stephen, and Lieven Vandenberghe. 2004. <em>Convex Optimization</em>. Cambridge ; New York: Cambridge university press. <a href="https://books.google.co.uk/books?hl=en&amp;lr=&amp;id=IUZdAAAAQBAJ&amp;oi=fnd&amp;pg=PR11&amp;dq=boyd+convex&amp;ots=HMIBdk5GAj&amp;sig=3zx9GlXT4pYe2THUwk5i-tRJSlE" class="uri">https://books.google.co.uk/books?hl=en&amp;lr=&amp;id=IUZdAAAAQBAJ&amp;oi=fnd&amp;pg=PR11&amp;dq=boyd+convex&amp;ots=HMIBdk5GAj&amp;sig=3zx9GlXT4pYe2THUwk5i-tRJSlE</a>.</p>
+</div>
+<div>
+<p>Bratton, Benjamin H. 2016. <em>The Stack: On Software and Sovereignty</em>. 1 edition. Cambridge, Massachusetts: MIT Press.</p>
+</div>
+<div>
+<p>Breiman, Leo. 2001a. “Random Forests.” <em>Machine Learning</em> 45 (1): 5–32.</p>
+</div>
+<div>
+<p>———. 2001b. “Statistical Modeling: The Two Cultures (with Comments and a Rejoinder by the Author).” <em>Statistical Science</em> 16 (3): 199–231. <a href="http://projecteuclid.org/euclid.ss/1009213726" class="uri">http://projecteuclid.org/euclid.ss/1009213726</a>.</p>
+</div>
+<div>
+<p>Breiman, Leo, Jerome Friedman, Richard Olshen, Charles Stone, D. Steinberg, and P. Colla. 1984. “CART: Classification and Regression Trees.” <em>Wadsworth: Belmont, CA</em> 156.</p>
+</div>
+<div>
+<p>Brynjolfsson, Erik, and Andrew Mcafee. 2014. <em>The Second Machine Age - Work, Progress, and Prosperity in a Time of Brilliant Technologies</em>. New York: W. W. Norton &amp; Company.</p>
+</div>
+<div>
+<p>Campbell-Kelly, Martin. 2003. <em>From Airline Reservations to Sonic the Hedgehog: A History of the Software Industry</em>. Cambridge, MA: MIT Press.</p>
+</div>
+<div>
+<p>Cassirer, Ernst. 1923. <em>Substance and Function</em>. Translated by William Curtis Swabey and Marie Curtis Swabey. Chicago: Open Court Publishing.</p>
+</div>
+<div>
+<p>Chen, Xi, and Hemant Ishwaran. 2012. “Random Forests for Genomic Data Analysis.” <em>Genomics</em> 99 (6): 323–29. doi:<a href="https://doi.org/10.1016/j.ygeno.2012.04.003">10.1016/j.ygeno.2012.04.003</a>.</p>
+</div>
+<div>
+<p>Cheney-Lippold, John. 2011. “A New Algorithmic Identity Soft Biopolitics and the Modulation of Control.” <em>Theory, Culture &amp; Society</em> 28 (6): 164–81. <a href="http://tcs.sagepub.com/content/28/6/164.short" class="uri">http://tcs.sagepub.com/content/28/6/164.short</a>.</p>
+</div>
+<div>
+<p>Church, Alonzo. 1936. “A Note on the Entscheidungsproblem.” <em>Journal of Symbolic Logic</em> 1 (1): 40–41.</p>
+</div>
+<div>
+<p>———. 1996. <em>Introduction to Mathematical Logic</em>. Princeton N.J.: Princeton University Press.</p>
+</div>
+<div>
+<p>Cleveland, William S., Eric Grosse, and William M. Shyu. 1992. “Local Regression Models.” <em>Statistical Models in S</em>, 309–76. <a href="ftp://www.cs.bell-labs.com/cm/stat/doc/smoothing_econhb.ps" class="uri">ftp://www.cs.bell-labs.com/cm/stat/doc/smoothing_econhb.ps</a>.</p>
+</div>
+<div>
+<p>CNN. 2011. “40 Under 40: Ones to Watch.” <em>CNNMoney</em>. <a href="http://money.cnn.com/galleries/2011/news/companies/1110/gallery.40_under_40_ones_to_watch.fortune/" class="uri">http://money.cnn.com/galleries/2011/news/companies/1110/gallery.40_under_40_ones_to_watch.fortune/</a>.</p>
+</div>
+<div>
+<p>Coleman, Gabriella. 2012. <em>Coding Freedom: The Ethics and Aesthetics of Hacking</em>. Princeton N.J.: Princeton University Press.</p>
+</div>
+<div>
+<p>Collins, Harry M. 1990. <em>Artificial Experts: Social Knowledge and Intelligent Machines</em>. Inside Technology. Cambridge, MA.: MIT Press. <a href="http://www.citeulike.org/group/884/article/633745" class="uri">http://www.citeulike.org/group/884/article/633745</a>.</p>
+</div>
+<div>
+<p>Conway, Drew, and John Myles White. 2012. <em>Machine Learning for Hackers</em>. Sebastopol, CA: O’Reilly. <a href="http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=436647" class="uri">http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=436647</a>.</p>
+</div>
+<div>
+<p>Cortes, C., and V. Vapnik. 1995. “Support-Vector Networks.” <em>Machine Learning</em> 20 (3): 273–97. doi:<a href="https://doi.org/10.1023/A:1022627411411">10.1023/A:1022627411411</a>.</p>
+</div>
+<div>
+<p>Couldry, Nick. 2012. <em>Media, Society, World: Social Theory and Digital Media Practice</em>. Cambridge ; Malden, MA: Polity.</p>
+</div>
+<div>
+<p>Cover, Thomas, and Peter Hart. 1967. “Nearest Neighbor Pattern Classification.” <em>Information Theory, IEEE Transactions on</em> 13 (1): 21–27. <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1053964" class="uri">http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1053964</a>.</p>
+</div>
+<div>
+<p>Cox, Geoff. 2012. <em>Speaking Code: Coding as Aesthetic and Political Expression</em>. MIT Press. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=wgnSUL0zh5gC&amp;oi=fnd&amp;pg=PR2&amp;dq=code+speech+freedom+alex+mit+press&amp;ots=IzF3Hw5cJc&amp;sig=Zh_szUmz064Yd9-1ntF2WXmUBf4" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=wgnSUL0zh5gC&amp;oi=fnd&amp;pg=PR2&amp;dq=code+speech+freedom+alex+mit+press&amp;ots=IzF3Hw5cJc&amp;sig=Zh_szUmz064Yd9-1ntF2WXmUBf4</a>.</p>
+</div>
+<div>
+<p>Cramer, J. S. 2004. “The Early Origins of the Logit Model.” <em>Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences</em> 35 (4): 613–26.</p>
+</div>
+<div>
+<p>CRAN. 2010. “The Comprehensive R Archive Network.” <a href="http://www.stats.bris.ac.uk/R/" class="uri">http://www.stats.bris.ac.uk/R/</a>.</p>
+</div>
+<div>
+<p>Cranor, Lorrie Faith, and Brian A. LaMacchia. 1998. “Spam!” <em>Communications of the ACM</em> 41 (8): 74–83. <a href="http://dl.acm.org/citation.cfm?id=280336" class="uri">http://dl.acm.org/citation.cfm?id=280336</a>.</p>
+</div>
+<div>
+<p>Dahl, George. 2013. “Deep Learning How I Did It: Merck 1st Place Interview.” <em>No Free Hunch</em>. <a href="http://blog.kaggle.com/2012/11/01/deep-learning-how-i-did-it-merck-1st-place-interview/" class="uri">http://blog.kaggle.com/2012/11/01/deep-learning-how-i-did-it-merck-1st-place-interview/</a>.</p>
+</div>
+<div>
+<p>Deleuze, Gilles. 1988a. <em>Bergsonism</em>. New York: Zone Books.</p>
+</div>
+<div>
+<p>———. 1988b. <em>Foucault</em>. Translated by Seân Hand. Minneapolis: University of Minnesota Press.</p>
+</div>
+<div>
+<p>Deleuze, Gilles, and Félix Guattari. 1994. <em>What Is Philosophy?</em> Translated by Hugh Tomlinson. European Perspectives. New York; Chichester: Columbia University Press.</p>
+</div>
+<div>
+<p>Dempster, A. P., N. M. Laird, and D. B. Rubin. 1977. “Maximum Likelihood from Incomplete Data via the EM Algorithm.” <em>Journal of the Royal Statistical Society. Series B (Methodological)</em> 39 (1): 1–38.</p>
+</div>
+<div>
+<p>Derrida, Jacques. 1989. <em>Edmund Husserl’s Origin of Geometry, an Introduction</em>. Translated by John Leavey. Lincoln: University of Nebraska Press.</p>
+</div>
+<div>
+<p>Dettmers, Tim. 2015. “Which GPU(s) to Get for Deep Learning: My Experience and Advice for Using GPUs in.” <em>Deep Learning</em>. <a href="https://timdettmers.wordpress.com/2014/08/14/which-gpu-for-deep-learning/" class="uri">https://timdettmers.wordpress.com/2014/08/14/which-gpu-for-deep-learning/</a>.</p>
+</div>
+<div>
+<p>Dieleman, Sander. 2015. “Classifying Plankton with Deep Neural Networks.” <em>Sander Dieleman</em>. <a href="http://benanne.github.io/2015/03/17/plankton.html" class="uri">http://benanne.github.io/2015/03/17/plankton.html</a>.</p>
+</div>
+<div>
+<p>Domingos, Pedro. 2012. “A Few Useful Things to Know About Machine Learning.” <em>Communications of the ACM</em> 55 (10): 78–87. <a href="http://dl.acm.org/citation.cfm?id=2347755" class="uri">http://dl.acm.org/citation.cfm?id=2347755</a>.</p>
+</div>
+<div>
+<p>———. 2015. <em>The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World</em>. New York: Basic Civitas Books.</p>
+</div>
+<div>
+<p>Doyle, Peter. 1973. “The Use of Automatic Interaction Detector and Similar Search Procedures.” <em>Operational Research Quarterly</em>, 465–67.</p>
+</div>
+<div>
+<p>Dreyfus, Hubert L. 1972. <em>What Computers Can’t Do</em>. New York: Harper &amp; Row. <a href="http://philpapers.org/rec/DREWCC" class="uri">http://philpapers.org/rec/DREWCC</a>.</p>
+</div>
+<div>
+<p>———. 1992. <em>What Computers Still Can’t Do: A Critique of Artificial Reason</em>. Cambridge, MA: MIT Press. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=7vS2y-mQmpAC&amp;oi=fnd&amp;pg=PR9&amp;dq=dreyfus+what+computers&amp;ots=1UYeWGwxUC&amp;sig=Dwiwo2ys_PvqacqHxdXaBPo-Hs0" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=7vS2y-mQmpAC&amp;oi=fnd&amp;pg=PR9&amp;dq=dreyfus+what+computers&amp;ots=1UYeWGwxUC&amp;sig=Dwiwo2ys_PvqacqHxdXaBPo-Hs0</a>.</p>
+</div>
+<div>
+<p>Duda, Richard O., Peter E. Hart, and David G. Stork. 2012. <em>Pattern Classification</em>. New York; London: John Wiley &amp; Sons. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=Br33IRC3PkQC&amp;oi=fnd&amp;pg=PR3&amp;dq=Duda+pattern&amp;ots=2wyTOtgdDo&amp;sig=7jJ1BRioJDiwsN61L2gTkiRgqWY" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=Br33IRC3PkQC&amp;oi=fnd&amp;pg=PR3&amp;dq=Duda+pattern&amp;ots=2wyTOtgdDo&amp;sig=7jJ1BRioJDiwsN61L2gTkiRgqWY</a>.</p>
+</div>
+<div>
+<p>Durbin, Richard, Sean R. Eddy, Anders Krogh, and Graeme Mitchison. 1998. <em>Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids</em>. 1 edition. Cambridge, New York: Cambridge University Press.</p>
+</div>
+<div>
+<p>Edwards, Paul N. 1996. <em>The Closed World : Computers and the Politics of Discourse in Cold War</em>. Inside Technology. Cambridge, MA; London: MIT Press.</p>
+</div>
+<div>
+<p>Efron, B. 1979. “Bootstrap Methods: Another Look at the Jackknife.” <em>The Annals of Statistics</em> 7 (1): 1–26. <a href="http://projecteuclid.org/euclid.aos/1176344552" class="uri">http://projecteuclid.org/euclid.aos/1176344552</a>.</p>
+</div>
+<div>
+<p>Einhorn, Hillel J. 1972. “Alchemy in the Behavioral Sciences.” <em>Public Opinion Quarterly</em> 36 (3): 367–78. doi:<a href="https://doi.org/10.1086/268019">10.1086/268019</a>.</p>
+</div>
+<div>
+<p>Ensmenger, Nathan. 2012. “Is Chess the Drosophila of Artificial Intelligence? A Social History of an Algorithm.” <em>Social Studies of Science</em> 42 (1): 5–30. doi:<a href="https://doi.org/10.1177/0306312711424596">10.1177/0306312711424596</a>.</p>
+</div>
+<div>
+<p>Fico. 2015. “FICO | FICO.” <em>FICO | FICO Decisions</em>. <a href="http://www.fico.com/en/products/fico-analytic-modeler-decision-tree-professional" class="uri">http://www.fico.com/en/products/fico-analytic-modeler-decision-tree-professional</a>.</p>
+</div>
+<div>
+<p>Fisher, R.A. 1938. “The Statistical Utilization of Multiple Measurements.” <em>Annals of Human Genetics</em> 8 (4): 376–86.</p>
+</div>
+<div>
+<p>Fisher, Ronald A. 1936. “The Use of Multiple Measurements in Taxonomic Problems.” <em>Annals of Eugenics</em> 7 (2): 179–88. <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x/full" class="uri">http://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x/full</a>.</p>
+</div>
+<div>
+<p>Fix, Evelyn, and Joseph L. Hodges. 1951. “Discriminatory Analysis-Nonparametric Discrimination: Consistency Properties.” DTIC Document. <a href="http://oai.dtic.mil/oai/oai?verb=getRecord&amp;metadataPrefix=html&amp;identifier=ADA800276" class="uri">http://oai.dtic.mil/oai/oai?verb=getRecord&amp;metadataPrefix=html&amp;identifier=ADA800276</a>.</p>
+</div>
+<div>
+<p>Flach, Peter. 2012. <em>Machine Learning: The Art and Science of Algorithms That Make Sense of Data</em>. Cambridge University Press.</p>
+</div>
+<div>
+<p>Foucault, Michel. 1972. <em>The Archaeology of Knowledge and the Discourse on Language</em>. Translated by Allan Sheridan-Smith. New York: Pantheon Books.</p>
+</div>
+<div>
+<p>———. 1977. <em>Discipline and Punish: The Birth of the Prison</em>. Translated by Allan Sheridan-Smith. New York: Vintage.</p>
+</div>
+<div>
+<p>———. 1991. <em>The History of Sexuality</em>. Translated by Robert Hurley. London: Penguin : Viking : Pantheon.</p>
+</div>
+<div>
+<p>———. 1997. <em>Ethics: Subjectivity and Truth</em>. Edited by Paul Rabinow. New York: New Press.</p>
+</div>
+<div>
+<p>———. 1998. <em>The Will to Knowledge: The History of Sexuality</em>. Translated by Robert Hurley. Vol. 1. London: Penguin. <a href="http://philpapers.org/rec/FOUTWT" class="uri">http://philpapers.org/rec/FOUTWT</a>.</p>
+</div>
+<div>
+<p>———. 1992 [1966]. <em>The Order of Things: An Archaeology of Human Sciences</em>. Translated by Allan Sheridan-Smith. London: Routledge.</p>
+</div>
+<div>
+<p>Frey, Carl Benedikt, and Michael Osborne. 2013. “The Future of Employment: How Susceptible Are Jobs to Computerisation?” Oxford: Oxford Martin School, Oxford University. <a href="http://www.oxfordmartin.ox.ac.uk/publications/view/1314" class="uri">http://www.oxfordmartin.ox.ac.uk/publications/view/1314</a>.</p>
+</div>
+<div>
+<p>Friedman, Jerome H. 1997. “On Bias, Variance, 0/1loss, and the Curse-of-Dimensionality.” <em>Data Mining and Knowledge Discovery</em> 1 (1): 55–77. <a href="http://link.springer.com/article/10.1023/A:1009778005914" class="uri">http://link.springer.com/article/10.1023/A:1009778005914</a>.</p>
+</div>
+<div>
+<p>Fritsch, Stefan, and Frauke Guenther. 2012. <em>Neuralnet: Training of Neural Networks</em>. <a href="http://CRAN.R-project.org/package=neuralnet" class="uri">http://CRAN.R-project.org/package=neuralnet</a>.</p>
+</div>
+<div>
+<p>Fuller, Matthew, and Andrew Goffey. 2012. <em>Evil Media</em>. Cambridge, Mass: MIT Press.</p>
+</div>
+<div>
+<p>Galloway, Alexander. 2014. “The Cybernetic Hypothesis.” <em>Differences</em> 25 (1): 107–31. doi:<a href="https://doi.org/10.1215/10407391-2420021">10.1215/10407391-2420021</a>.</p>
+</div>
+<div>
+<p>Galloway, Alexander R. 2004. <em>Protocol: How Control Exists After Decentralization</em>. Leonardo (Series) (Cambridge, Mass.). Cambridge, Mass.: MIT Press.</p>
+</div>
+<div>
+<p>Garling, Caleb. 2015. “Andrew Ng: Why ’Deep Learning’ Is a Mandate for Humans, Not Just Machines | WIRED.” <em>Wired</em>. <a href="http://www.wired.com/2015/05/andrew-ng-deep-learning-mandate-humans-not-just-machines/" class="uri">http://www.wired.com/2015/05/andrew-ng-deep-learning-mandate-humans-not-just-machines/</a>.</p>
+</div>
+<div>
+<p>Gillespie, Tarleton. 2010. “The Politics of ’Platforms’.” <em>New Media &amp; Society</em> 12 (3): 347–64. doi:<a href="https://doi.org/10.1177/1461444809342738">10.1177/1461444809342738</a>.</p>
+</div>
+<div>
+<p>———. 2014. “The Relevance of Algorithms.” In <em>Media Technologies: Essays on Communication, Materiality, and Society</em>, edited by Tarleton Gillespie, Pablo Boczkowski, and Kirsten A. Foot, 167–94. Cambridge, MA: MIT Press. <a href="https://books.google.co.uk/books?hl=en&amp;lr=&amp;id=zeK2AgAAQBAJ&amp;oi=fnd&amp;pg=PA167&amp;dq=gillespie+tarleton&amp;ots=GmjJQZ-2ue&amp;sig=Omo2OeadgqNvz17IupCqELPagdg" class="uri">https://books.google.co.uk/books?hl=en&amp;lr=&amp;id=zeK2AgAAQBAJ&amp;oi=fnd&amp;pg=PA167&amp;dq=gillespie+tarleton&amp;ots=GmjJQZ-2ue&amp;sig=Omo2OeadgqNvz17IupCqELPagdg</a>.</p>
+</div>
+<div>
+<p>Gitelman, Lisa, ed. 2013. <em>“Raw Data” Is an Oxymoron</em>. Cambridge, Massachusetts ; London, England: MIT Press.</p>
+</div>
+<div>
+<p>Glorot, Xavier, and Yoshua Bengio. 2010. “Understanding the Difficulty of Training Deep Feedforward Neural Networks.” In <em>International Conference on Artificial Intelligence and Statistics</em>, 249–56. <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_GlorotB10.pdf" class="uri">http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_GlorotB10.pdf</a>.</p>
+</div>
+<div>
+<p>Gomes, Lee. 2014. “Machine-Learning Maestro Michael Jordan on the Delusions of Big Data and Other Huge Engineering Efforts - IEEE Spectrum.” October 3. <a href="http://spectrum.ieee.org/robotics/artificial-intelligence/machinelearning-maestro-michael-jordan-on-the-delusions-of-big-data-and-other-huge-engineering-efforts" class="uri">http://spectrum.ieee.org/robotics/artificial-intelligence/machinelearning-maestro-michael-jordan-on-the-delusions-of-big-data-and-other-huge-engineering-efforts</a>.</p>
+</div>
+<div>
+<p>Google. 2015. “TensorFlow – an Open Source Software Library for Machine Intelligence.” <a href="https://www.tensorflow.org/" class="uri">https://www.tensorflow.org/</a>.</p>
+</div>
+<div>
+<p>Gruber, John. 2004. “Markdown: Syntax.” <em>Daring Fireball: Markdown</em>. <a href="http://daringfireball.net/projects/markdown/" class="uri">http://daringfireball.net/projects/markdown/</a>.</p>
+</div>
+<div>
+<p>Guattari, Felix, and Gilles Deleuze. 1988. <em>A Thousand Plateaus: Capitalism and Schizophrenia</em>. London: Athlone, 1988.</p>
+</div>
+<div>
+<p>Guattari, Félix. 1984. <em>Molecular Revolution : Psychiatry and Politics</em>. Harmondsworth, Middlesex, England ; New York, N.Y., U.S.A.: Penguin.</p>
+</div>
+<div>
+<p>Gulcehre, Caglar. 2014. “Welcome to Deep Learning.” <em>Deep Learning</em>. <a href="http://deeplearning.net/" class="uri">http://deeplearning.net/</a>.</p>
+</div>
+<div>
+<p>Hacking, Ian. 1975. <em>The Emergence of Probability</em>. Cambridge ; New York: Cambridge University Press.</p>
+</div>
+<div>
+<p>———. 1990. <em>The Taming of Chance</em>. Cambridge University Press.</p>
+</div>
+<div>
+<p>Hallinan, Blake, and Ted Striphas. 2014. “Recommended for You: The Netflix Prize and the Production of Algorithmic Culture.” <em>New Media &amp; Society</em>, June, 1–21. doi:<a href="https://doi.org/10.1177/1461444814538646">10.1177/1461444814538646</a>.</p>
+</div>
+<div>
+<p>Halpern, Orit. 2015. <em>Beautiful Data</em>. Durham, N.C: Duke University Press.</p>
+</div>
+<div>
+<p>Hand, D. J., and K. M. Yu. 2001. “Idiot’s Bayes - Not so Stupid After All?” <em>International Statistical Review</em> 69 (3): 385–98. doi:<a href="https://doi.org/10.2307/1403452">10.2307/1403452</a>.</p>
+</div>
+<div>
+<p>Hansen, Mark B. N. 2015. <em>Feed-Forward: On the Future of Twenty-First-Century Media</em>. University of Chicago Press.</p>
+</div>
+<div>
+<p>Haraway, Donna. 1997. <em>Modest-Witness@Second-Millennium.FemaleMan-Meets-OncoMouse: Feminism and Technoscience</em>. New York ; London: Routledge.</p>
+</div>
+<div>
+<p>Hastie, Trevor, Robert Tibshirani, and Jerome H. Friedman. 2001. <em>The Elements of Statistical Learning: Data Mining, Inference, and Prediction</em>. 1st edition. New York: Springer.</p>
+</div>
+<div>
+<p>———. 2009. <em>The Elements of Statistical Learning: Data Mining, Inference, and Prediction</em>. 2nd edition. New York: Springer.</p>
+</div>
+<div>
+<p>Hayles, N. Katherine. 1999. <em>How We Became Posthuman : Virtual Bodies in Cybernetics, Literature, and</em>. Chicago, Ill. ; London: University of Chicago Press.</p>
+</div>
+<div>
+<p>Heis, Jeremy. 2014. “Ernst Cassirer’s Substanzbegriff Und Funktionsbegriff.” <em>HOPOS: The Journal of the International Society for the History of Philosophy of Science</em> 4 (2): 241–70. doi:<a href="https://doi.org/10.1086/676959">10.1086/676959</a>.</p>
+</div>
+<div>
+<p>Helmreich, Stefan. 2000. <em>Silicon Second Nature : Culturing Artificial Life in a Digital World</em>. Berkeley, Calif. ; London: University of California Press.</p>
+</div>
+<div>
+<p>Henson, Joseph, German Tischler, and Zemin Ning. 2012. “Next-Generation Sequencing and Large Genome Assemblies.” <em>Pharmacogenomics</em> 13 (8): 901–15. doi:<a href="https://doi.org/10.2217/pgs.12.72">10.2217/pgs.12.72</a>.</p>
+</div>
+<div>
+<p>Hey, T., S. Tansley, and K. Tolle, eds. 2009. <em>The Fourth Paradigm: Data-Intensive Scientific Discovery</em>. Microsoft Research.</p>
+</div>
+<div>
+<p>Hinton, Geoffrey E. 1989. “Connectionist Learning Procedures.” <em>Artificial Intelligence</em> 40 (1): 185–234. <a href="http://www.sciencedirect.com.ezproxy.lancs.ac.uk/science/article/pii/0004370289900490" class="uri">http://www.sciencedirect.com.ezproxy.lancs.ac.uk/science/article/pii/0004370289900490</a>.</p>
+</div>
+<div>
+<p>Hinton, Geoffrey E., and Ruslan R. Salakhutdinov. 2006. “Reducing the Dimensionality of Data with Neural Networks.” <em>Science</em> 313 (5786): 504–7. <a href="http://www.sciencemag.org/content/313/5786/504.short" class="uri">http://www.sciencemag.org/content/313/5786/504.short</a>.</p>
+</div>
+<div>
+<p>Hinton, Geoffrey E., Simon Osindero, and Yee-Whye Teh. 2006. “A Fast Learning Algorithm for Deep Belief Nets.” <em>Neural Computation</em> 18 (7): 1527–54. doi:<a href="https://doi.org/10.1162/neco.2006.18.7.1527">10.1162/neco.2006.18.7.1527</a>.</p>
+</div>
+<div>
+<p>Hof, Robert D. 2014. “Chinese Search Giant Baidu Thinks AI Pioneer Andrew Ng Can Help It Challenge Google and Become a Global Power.” <em>MIT Technology Review</em>. August 14. <a href="http://www.technologyreview.com/featuredstory/530016/a-chinese-internet-giant-starts-to-dream/" class="uri">http://www.technologyreview.com/featuredstory/530016/a-chinese-internet-giant-starts-to-dream/</a>.</p>
+</div>
+<div>
+<p>Hood, Leroy, and Daniel J. Kevles, eds. 1992. “Biology and Medicine in the Twenty-First Century.” In <em>The Code of Code</em>, 136–63. Cambridge MA: Harvard University Press. <a href="http://www.vjf.cnrs.fr/histrecmed/publications-electroniques/Leroy%20Hood.pdf">http://www.vjf.cnrs.fr/histrecmed/publications-electroniques/Leroy%20Hood.pdf</a>.</p>
+</div>
+<div>
+<p>Hothorn, Torsten. 2014. “CRAN Task View: Machine Learning &amp; Statistical Learning,” December. <a href="http://CRAN.R-project.org/view=MachineLearning" class="uri">http://CRAN.R-project.org/view=MachineLearning</a>.</p>
+</div>
+<div>
+<p>Hothorn, Torsten, Kurt Hornik, and Achim Zeileis. 2006. “Unbiased Recursive Partitioning: A Conditional Inference Framework.” <em>Journal of Computational and Graphical Statistics</em> 15 (3): 651–74.</p>
+</div>
+<div>
+<p>IBM. 2014. “IBM’s Watson Learns the Language of Science.” CTB10. August 28. <a href="https://www-03.ibm.com/press/us/en/pressrelease/44697.wss" class="uri">https://www-03.ibm.com/press/us/en/pressrelease/44697.wss</a>.</p>
+</div>
+<div>
+<p>ILSVRC. 2014. “ImageNet Large Scale Visual Recognition Competition 2014 (ILSVRC2014).” <a href="http://www.image-net.org/challenges/LSVRC/2014/" class="uri">http://www.image-net.org/challenges/LSVRC/2014/</a>.</p>
+</div>
+<div>
+<p>Inc., Google. 2012. “Behind the Compute Engine Demo at Google I/O 2012 Keynote - Google Compute Engine.” <a href="https://developers.google.com/compute/io" class="uri">https://developers.google.com/compute/io</a>.</p>
+</div>
+<div>
+<p>Isin, Engin, and Evelyn Ruppert. 2015. <em>Being Digital Citizens</em>. 1 edition. Rowman &amp; Littlefield International.</p>
+</div>
+<div>
+<p>Issenberg, Sasha. 2012. “The Definitive Story of How President Obama Mined Voter Data to Win A Second Term | MIT Technology Review.” <em>MIT Technology Review</em>. <a href="http://www.technologyreview.com/featuredstory/509026/how-obamas-team-used-big-data-to-rally-voters/" class="uri">http://www.technologyreview.com/featuredstory/509026/how-obamas-team-used-big-data-to-rally-voters/</a>.</p>
+</div>
+<div>
+<p>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. <em>An Introduction to Statistical Learning</em>. Springer. <a href="http://link.springer.com/content/pdf/10.1007/978-1-4614-7138-7.pdf" class="uri">http://link.springer.com/content/pdf/10.1007/978-1-4614-7138-7.pdf</a>.</p>
+</div>
+<div>
+<p>Jockers, Matthew L. 2013. <em>Macroanalysis: Digital Methods and Literary History</em>. Urbana: University of Illinois Press.</p>
+</div>
+<div>
+<p>Kaggle. 2012. “The Hewlett Foundation: Automated Essay Scoring | Kaggle.” <a href="https://www.kaggle.com/c/asap-aes" class="uri">https://www.kaggle.com/c/asap-aes</a>.</p>
+</div>
+<div>
+<p>———. 2015a. “About | Kaggle.” <a href="https://www.kaggle.com/about" class="uri">https://www.kaggle.com/about</a>.</p>
+</div>
+<div>
+<p>———. 2015b. “Competitions | Kaggle.” <a href="https://www.kaggle.com/solutions/competitions" class="uri">https://www.kaggle.com/solutions/competitions</a>.</p>
+</div>
+<div>
+<p>———. 2015c. “Data Science Jobs Forum | Kaggle.” <a href="https://www.kaggle.com/jobs" class="uri">https://www.kaggle.com/jobs</a>.</p>
+</div>
+<div>
+<p>———. 2015d. “Description - Facebook Recruiting IV: Human or Robot? | Kaggle.” <a href="https://www.kaggle.com/c/facebook-recruiting-iv-human-or-bot" class="uri">https://www.kaggle.com/c/facebook-recruiting-iv-human-or-bot</a>.</p>
+</div>
+<div>
+<p>———. 2015e. “Description - Leaping Leaderboard Leapfrogs | Kaggle.” <a href="https://www.kaggle.com/c/leapfrogging-leaderboards" class="uri">https://www.kaggle.com/c/leapfrogging-leaderboards</a>.</p>
+</div>
+<div>
+<p>Karpathy, Andrej. 2016. “Karpathy/Char-Rnn.” <em>GitHub</em>. <a href="https://github.com/karpathy/char-rnn" class="uri">https://github.com/karpathy/char-rnn</a>.</p>
+</div>
+<div>
+<p>KDD. 2013. “Call For KDD Cup.” <a href="http://www.kdd.org/kdd2013/call-for-cup" class="uri">http://www.kdd.org/kdd2013/call-for-cup</a>.</p>
+</div>
+<div>
+<p>Keating, Peter, and Alberto Cambrosio. 2012. “Too Many Numbers: Microarrays in Clinical Cancer Research.” <em>Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences</em> 43 (1): 37–51. doi:<a href="https://doi.org/10.1016/j.shpsc.2011.10.004">10.1016/j.shpsc.2011.10.004</a>.</p>
+</div>
+<div>
+<p>Khan, Javed, Jun S. Wei, Markus Ringner, Lao H. Saal, Marc Ladanyi, Frank Westermann, Frank Berthold, et al. 2001. “Classification and Diagnostic Prediction of Cancers Using Gene Expression Profiling and Artificial Neural Networks.” <em>Nature Medicine</em> 7 (6): 673–79. <a href="http://www.nature.com/nm/journal/v7/n6/abs/nm0601_673.html" class="uri">http://www.nature.com/nm/journal/v7/n6/abs/nm0601_673.html</a>.</p>
+</div>
+<div>
+<p>Kirk, Matthew. 2014. <em>Thoughtful Machine Learning: A Test-Driven Approach</em>. 1 edition. Sebastopol, Calif.: O’Reilly Media.</p>
+</div>
+<div>
+<p>Kitchin, Rob. 2014. “Big Data, New Epistemologies and Paradigm Shifts.” <em>Big Data &amp; Society</em> 1 (1): 2053951714528481. doi:<a href="https://doi.org/10.1177/2053951714528481">10.1177/2053951714528481</a>.</p>
+</div>
+<div>
+<p>Klimt, Bryan, and Yiming Yang. 2004. “The Enron Corpus: A New Dataset for Email Classification Research.” In <em>Machine Learning: ECML 2004</em>, 217–26. Springer. <a href="http://link.springer.com/chapter/10.1007/978-3-540-30115-8_22" class="uri">http://link.springer.com/chapter/10.1007/978-3-540-30115-8_22</a>.</p>
+</div>
+<div>
+<p>Krzywinski, Martin I, Jacqueline E Schein, Inanc Birol, Joseph Connors, Randy Gascoyne, Doug Horsman, Steven J Jones, and Marco A Marra. 2009. “Circos: An Information Aesthetic for Comparative Genomics.” <em>Genome Research</em>. doi:<a href="https://doi.org/10.1101/gr.092759.109">10.1101/gr.092759.109</a>.</p>
+</div>
+<div>
+<p>Kuhn, Thomas S. 1996. <em>The Structure of Scientific Revolutions</em>. Chicago, IL: University of Chicago Press.</p>
+</div>
+<div>
+<p>Lamport, Leslie, and A. LaTEX. 1986. <em>Document Preparation System</em>. Reading, MA: Addison-Wesley.</p>
+</div>
+<div>
+<p>Lander, Eric S., Lauren M. Linton, Bruce Birren, Chad Nusbaum, Michael C. Zody, Jennifer Baldwin, Keri Devon, et al. 2001. “Initial Sequencing and Analysis of the Human Genome.” <em>Nature</em> 409 (6822): 860–921. doi:<a href="https://doi.org/10.1038/35057062">10.1038/35057062</a>.</p>
+</div>
+<div>
+<p>Lanier, Jaron. 2013. <em>Who Owns the Future?</em> London: Allen Lane.</p>
+</div>
+<div>
+<p>Lantz, Brett. 2013. <em>Machine Learning with R</em>. Birmingham: Packt Publishing.</p>
+</div>
+<div>
+<p>Larsen, Jeff. 2012. “How ProPublica’s Message Machine Reverse Engineers Political Microtargeting.” <em>ProPublica</em>. <a href="http://www.propublica.org/nerds/item/how-propublicas-message-machine-reverse-engineers-political-microtargeting" class="uri">http://www.propublica.org/nerds/item/how-propublicas-message-machine-reverse-engineers-political-microtargeting</a>.</p>
+</div>
+<div>
+<p>Lash, Scott. 2007. “Power After Hegemony: Cultural Studies in Mutation?” <em>Theory, Culture &amp; Society</em> 24 (3): 55–78. <a href="http://tcs.sagepub.com/content/24/3/55.short" class="uri">http://tcs.sagepub.com/content/24/3/55.short</a>.</p>
+</div>
+<div>
+<p>Latour, Bruno. 1993. <em>We Have Never Been Modern</em>. New York ; London: Harvester Wheatsheaf.</p>
+</div>
+<div>
+<p>Lazzarato, Maurizio. 2014. <em>Signs and Machines: Capitalism and the Production of Subjectivity</em>. Cambridge, MA: Semiotext (e). <a href="http://mitpress.mit.edu/books/signs-and-machines" class="uri">http://mitpress.mit.edu/books/signs-and-machines</a>.</p>
+</div>
+<div>
+<p>Le, Quoc V., Marc’Aurelio Ranzato, Rajat Monga, Matthieu Devin, Kai Chen, Greg S. Corrado, Jeff Dean, and Andrew Y. Ng. 2011. “Building High-Level Features Using Large Scale Unsupervised Learning,” December. <a href="http://arxiv.org/abs/1112.6209" class="uri">http://arxiv.org/abs/1112.6209</a>.</p>
+</div>
+<div>
+<p><em>Lecture 10 | Machine Learning (Stanford)</em>. 2008. <a href="https://www.youtube.com/watch?v=0kWZoyNRxTY&amp;feature=youtube_gdata_player" class="uri">https://www.youtube.com/watch?v=0kWZoyNRxTY&amp;feature=youtube_gdata_player</a>.</p>
+</div>
+<div>
+<p><em>Lecture 13 | Machine Learning (Stanford)</em>. 2008. <a href="http://www.youtube.com/watch?v=LBtuYU-HfUg&amp;feature=youtube_gdata_player" class="uri">http://www.youtube.com/watch?v=LBtuYU-HfUg&amp;feature=youtube_gdata_player</a>.</p>
+</div>
+<div>
+<p><em>Lecture 6 | Machine Learning (Stanford)</em>. 2008. <a href="http://www.youtube.com/watch?v=qyyJKd-zXRE&amp;feature=youtube_gdata_player" class="uri">http://www.youtube.com/watch?v=qyyJKd-zXRE&amp;feature=youtube_gdata_player</a>.</p>
+</div>
+<div>
+<p><em>Lecture 7 | Machine Learning (Stanford)</em>. 2008. <a href="https://www.youtube.com/watch?v=s8B4A5ubw6c&amp;feature=youtube_gdata_player" class="uri">https://www.youtube.com/watch?v=s8B4A5ubw6c&amp;feature=youtube_gdata_player</a>.</p>
+</div>
+<div>
+<p><em>Lecture 9 | Machine Learning (Stanford)</em>. 2008. <a href="https://www.youtube.com/watch?v=tojaGtMPo5U&amp;feature=youtube_gdata_player" class="uri">https://www.youtube.com/watch?v=tojaGtMPo5U&amp;feature=youtube_gdata_player</a>.</p>
+</div>
+<div>
+<p>LeCun, Yann, and Corinna Cortes. 2012. “MNIST Handwritten Digit Database, Yann LeCun, Corinna Cortes and Chris Burges.” <a href="http://yann.lecun.com/exdb/mnist/" class="uri">http://yann.lecun.com/exdb/mnist/</a>.</p>
+</div>
+<div>
+<p>LeCun, Yann, Bernhard Boser, John S. Denker, Donnie Henderson, Richard E. Howard, Wayne Hubbard, and Lawrence D. Jackel. 1989. “Backpropagation Applied to Handwritten Zip Code Recognition.” <em>Neural Computation</em> 1 (4): 541–51. <a href="http://www.mitpressjournals.org/doi/abs/10.1162/neco.1989.1.4.541" class="uri">http://www.mitpressjournals.org/doi/abs/10.1162/neco.1989.1.4.541</a>.</p>
+</div>
+<div>
+<p>Lee, D. D., and H. S. Seung. 1999. “Learning the Parts of Objects by Non-Negative Matrix Factorization.” <em>Nature</em> 401 (6755): 788–91. doi:<a href="https://doi.org/10.1038/44565">10.1038/44565</a>.</p>
+</div>
+<div>
+<p>Leonelli, S. 2014. “What Difference Does Quantity Make? On the Epistemology of Big Data in Biology.” <em>Big Data &amp; Society</em> 1 (1): 1–11. <a href="http://bds.sagepub.com/content/1/1/2053951714534395.short" class="uri">http://bds.sagepub.com/content/1/1/2053951714534395.short</a>.</p>
+</div>
+<div>
+<p>Levine, Sergey, Peter Pastor, Alex Krizhevsky, and Deirdre Quillen. 2016. “Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection,” March. <a href="http://arxiv.org/abs/1603.02199" class="uri">http://arxiv.org/abs/1603.02199</a>.</p>
+</div>
+<div>
+<p>Levy, Steven. 2016. “How Google Is Remaking Itself as a ‘Machine Learning First’ Company.” <em>Medium</em>. June 32. <a href="https://backchannel.com/how-google-is-remaking-itself-as-a-machine-learning-first-company-ada63defcb70#.fj3u7o3t2" class="uri">https://backchannel.com/how-google-is-remaking-itself-as-a-machine-learning-first-company-ada63defcb70#.fj3u7o3t2</a>.</p>
+</div>
+<div>
+<p>Lury, Celia, Luciana Parisi, and Tiziana Terranova. 2012. “Introduction: The Becoming Topological of Culture.” <em>Theory, Culture &amp; Society</em> 29 (4-5): 3–35. doi:<a href="https://doi.org/10.1177/0263276412454552">10.1177/0263276412454552</a>.</p>
+</div>
+<div>
+<p>Lynch, Michael. 1993. <em>Scientific Practice and Ordinary Action : Ethnomethodology and Social</em>. Cambridge: Cambridge University Press.</p>
+</div>
+<div>
+<p>Mackenzie, Adrian. 1997. “Undecidability: The History and Time of the Universal Turing Machine.” <em>Configurations</em> 3: 359–79.</p>
+</div>
+<div>
+<p>———. 2006. <em>Cutting Code: Software and Sociality</em>. Digital Formations. New York: Peter Lang.</p>
+</div>
+<div>
+<p>———. 2010. “Every Thing Thinks: Sub-Representative Differences in Digital Video Codecs.” In <em>Deleuze in Science and Technology Studies</em>, 139–54. Oxford: Berghahn Publishers.</p>
+</div>
+<div>
+<p>———. 2011. “More Parts Than Elements: How Databases Multiply.” <em>Environment and Planning D: Society and Space</em> 29 (6): 335–50.</p>
+</div>
+<div>
+<p>———. 2012. “Sets.” In <em>Devices and the Happening of the Social</em>, edited by Celia Lury and Nina Wakeford, 219–31. Routledge.</p>
+</div>
+<div>
+<p>———. 2013a. “From Validating to Verifying: Public Appeals in Synthetic Biology.” <em>Science as Culture</em> 22 (4): 476–96. doi:<a href="https://doi.org/10.1080/14636778.2013.764067">10.1080/14636778.2013.764067</a>.</p>
+</div>
+<div>
+<p>———. 2013b. “’Wonderful People’: Programmers in the Regime of Anticipation.” <em>Subjectivity</em> 6 (4): 391–405.</p>
+</div>
+<div>
+<p>———. 2014a. “Multiplying Numbers Differently: An Epidemiology of Contagious Convolution.” <em>Distinktion: Scandinavian Journal of Social Theory</em> 15 (2): 189–207. <a href="http://www.tandfonline.com/doi/abs/10.1080/1600910X.2014.922110" class="uri">http://www.tandfonline.com/doi/abs/10.1080/1600910X.2014.922110</a>.</p>
+</div>
+<div>
+<p>———. 2014b. “UseR! Aggression, Alterity and Unbound Affects in Statistical Programming.” In <em>Fun and Software: Exploring Pleasure, Paradox and Pain in Computing</em>, edited by Olga Goriunova. New York: Bloomsbury Academic.</p>
+</div>
+<div>
+<p>———. 2015. “Distributive Numbers: A Post-Demographic Perspective on Probability.” In <em>Empirical Baroque</em>, edited by John Law and Evelyn Ruppert. Mattering Press.</p>
+</div>
+<div>
+<p>Mackenzie, Adrian, and Simon Monk. 2004. “From Cards to Code: How Extreme Programming Re-Embodies Programming as a Collective Practice.” <em>Computer Supported Cooperative Work (CSCW)</em> 13 (1): 91–117.</p>
+</div>
+<div>
+<p>Mackenzie, Adrian, Matthew Fuller, Andrew Goffey, Richard Mills, and Stuart Sharples. 2016. “Code Repositories as Expressions of Urban Life.” In <em>Code and the City</em>, edited by Rob Kitchin. London: Routledge.</p>
+</div>
+<div>
+<p>Mackenzie, Adrian, Richard Mills, Stuart Sharples, Matthew Fuller, and Andrew Goffey. 2015. “Digital Sociology in the Field of Devices.” In <em>Handbook of Sociology of the Arts and Culture</em>, edited by Mike Savage and Laurie Hanquinet. London &amp; New York: Routledge.</p>
+</div>
+<div>
+<p>Madrigal, Alexis C. 2014. “How Netflix Reverse Engineered Hollywood.” <em>The Atlantic</em>. <a href="http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/" class="uri">http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/</a>.</p>
+</div>
+<div>
+<p>Malley, James D., Karen G. Malley, and Sinisa Pajevic. 2011. <em>Statistical Learning for Biomedical Data</em>. 1st ed. Cambridge University Press.</p>
+</div>
+<div>
+<p>Manning, Christopher D., Prabhakar Raghavan, and Hinrich Schütze. 2008. <em>Introduction to Information Retrieval</em>. 1st ed. Cambridge University Press.</p>
+</div>
+<div>
+<p>Marchese, Dr Francis T. 2013. “Tables and Early Information Visualization.” In <em>Knowledge Visualization Currents</em>, edited by Francis T. Marchese and Ebad Banissi, 35–61. Springer London. <a href="http://link.springer.com/chapter/10.1007/978-1-4471-4303-1_3" class="uri">http://link.springer.com/chapter/10.1007/978-1-4471-4303-1_3</a>.</p>
+</div>
+<div>
+<p>Markoff, John. 2012. “In a Big Network of Computers, Evidence of Machine Learning.” <em>The New York Times</em>, June 25. <a href="http://www.nytimes.com/2012/06/26/technology/in-a-big-network-of-computers-evidence-of-machine-learning.html" class="uri">http://www.nytimes.com/2012/06/26/technology/in-a-big-network-of-computers-evidence-of-machine-learning.html</a>.</p>
+</div>
+<div>
+<p>Maron, M.E. 1961. “Automatic Indexing: An Experimental Inquiry.” <em>Journal of the Association for Computing Machinery</em> 8: 404–17.</p>
+</div>
+<div>
+<p>Marx, Karl. 1986. <em>Capital A Critique of Political Economy. The Process of Production of Capital</em>. Moscow: Progress.</p>
+</div>
+<div>
+<p>Mason, Hilary, dir. 2012. <em>Hilary Mason - Machine Learning for Hackers</em>. <a href="http://vimeo.com/43547079" class="uri">http://vimeo.com/43547079</a>.</p>
+</div>
+<div>
+<p>Massumi, Brian. 2002. <em>Parables for the Virtual</em>. Durham, N.C: Duke University Press.</p>
+</div>
+<div>
+<p>Matloff, Norman S. 2011. <em>Art of R Programming</em>. San Francisco: No Starch Press. <a href="http://www.books24x7.com/marc.asp?bookid=44507" class="uri">http://www.books24x7.com/marc.asp?bookid=44507</a>.</p>
+</div>
+<div>
+<p>Mayer-Schönberger, Viktor, and Kenneth Cukier. 2013. <em>Big Data: A Revolution That Will Transform How We Live, Work, and Think</em>. Boston: Eamon Dolan/Houghton Mifflin Harcourt. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=uy4lh-WEhhIC&amp;oi=fnd&amp;pg=PP1&amp;dq=schonberger+big+data&amp;ots=Jrk7hiJVHT&amp;sig=QVKugcrFF4Jq5eO7xd8exEEG_Hk" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=uy4lh-WEhhIC&amp;oi=fnd&amp;pg=PP1&amp;dq=schonberger+big+data&amp;ots=Jrk7hiJVHT&amp;sig=QVKugcrFF4Jq5eO7xd8exEEG_Hk</a>.</p>
+</div>
+<div>
+<p>McClelland, James L., and David E. Rumelhart. 1986. <em>Parallel Distributed Processing. Explorations in the Microstructure of Cognition</em>. Vol. 1. Cambridge, MA &amp; London: MIT Press.</p>
+</div>
+<div>
+<p>McKinney, Wes. 2012. <em>Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython</em>. Sebastapol, CA: O’Reilly &amp; Associates Inc. <a href="http://shop.oreilly.com/product/0636920023784.do" class="uri">http://shop.oreilly.com/product/0636920023784.do</a>.</p>
+</div>
+<div>
+<p>McMillan, Robert. 2013. “How Google Retooled Android With Help From Your Brain.” <em>WIRED</em>. February 18. <a href="http://www.wired.com/2013/02/android-neural-network/" class="uri">http://www.wired.com/2013/02/android-neural-network/</a>.</p>
+</div>
+<div>
+<p>McNally, Ruth, Adrian Mackenzie, Jennifer Tomomitsu, and Allison Hui. 2012. “Understanding the ’Intensive’ in ’Data Intensive Research’: Data Flows in Next Generation Sequencing and Environmental Networked Sensors.” <em>International Journal of Digital Curation</em> 7 (1): 81–94. <a href="http://www.ijdc.net/index.php/ijdc/issue/view/14" class="uri">http://www.ijdc.net/index.php/ijdc/issue/view/14</a>.</p>
+</div>
+<div>
+<p>Meza, Juan C. 2010. “Steepest Descent.” <em>Wiley Interdisciplinary Reviews: Computational Statistics</em> 2 (6): 719–22. doi:<a href="https://doi.org/10.1002/wics.117">10.1002/wics.117</a>.</p>
+</div>
+<div>
+<p>Minsky, Marvin, and Seymour Papert. 1969. “Perceptron: An Introduction to Computational Geometry.” <em>The MIT Press, Cambridge, Expanded Edition</em> 19: 88.</p>
+</div>
+<div>
+<p>Mitchell, Tom M. 1997. <em>Machine Learning</em>. New York, NY [u.a.: McGraw-Hill.</p>
+</div>
+<div>
+<p>Mnih, Volodymyr, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. 2013. “Playing Atari with Deep Reinforcement Learning,” December. <a href="http://arxiv.org/abs/1312.5602" class="uri">http://arxiv.org/abs/1312.5602</a>.</p>
+</div>
+<div>
+<p>Mnih, Volodymyr, Koray Kavukcuoglu, David Silver, Andrei A. Rusu, Joel Veness, Marc G. Bellemare, Alex Graves, et al. 2015. “Human-Level Control Through Deep Reinforcement Learning.” <em>Nature</em> 518 (7540): 529–33. doi:<a href="https://doi.org/10.1038/nature14236">10.1038/nature14236</a>.</p>
+</div>
+<div>
+<p>Mohamed, Abdel-rahman, Tara N. Sainath, George Dahl, Bhuvana Ramabhadran, Geoffrey E. Hinton, and Michael A. Picheny. 2011. “Deep Belief Networks Using Discriminative Features for Phone Recognition.” In, 5060–3. IEEE. doi:<a href="https://doi.org/10.1109/ICASSP.2011.5947494">10.1109/ICASSP.2011.5947494</a>.</p>
+</div>
+<div>
+<p>Mohr, John W., and Petko Bogdanov. 2013. “Introduction Models: What They Are and Why They Matter.” <em>Poetics</em> 41 (6): 545–69. doi:<a href="https://doi.org/10.1016/j.poetic.2013.10.001">10.1016/j.poetic.2013.10.001</a>.</p>
+</div>
+<div>
+<p>Mol, Annemarie. 2003. <em>The Body Multiple: Ontology in Medical Practice</em>. Durham, N.C: Duke University Press.</p>
+</div>
+<div>
+<p>Montfort, Nick, and Ian Bogost. 2009. <em>Racing the Beam: The Atari Video Computer System</em>. MIT Press.</p>
+</div>
+<div>
+<p>Moore, David S. 2009. <em>The Basic Practice of Statistics</em>. 5th Edition. New York; London: W. H. Freeman.</p>
+</div>
+<div>
+<p>Morgan, James N., and John A. Sonquist. 1963. “Problems in the Analysis of Survey Data, and a Proposal.” <em>Journal of the American Statistical Association</em> 58 (302): 415–34. <a href="http://amstat.tandfonline.com/doi/full/10.1080/01621459.1963.10500855" class="uri">http://amstat.tandfonline.com/doi/full/10.1080/01621459.1963.10500855</a>.</p>
+</div>
+<div>
+<p>Morton, Timothy. 2013. <em>Hyperobjects: Philosophy and Ecology After the End of the World</em>. Univ Of Minnesota Press.</p>
+</div>
+<div>
+<p>Muenchen, Robert A. 2014. “The Popularity of Data Analysis Software.” <em>R4stats.com</em>. <a href="http://r4stats.com/articles/popularity/" class="uri">http://r4stats.com/articles/popularity/</a>.</p>
+</div>
+<div>
+<p>Munster, Anna. 2013. <em>An Aesthesia of Networks: Conjunctive Experience in Art and Technology</em>. MIT Press. <a href="http://mitpress.mit.edu/books/aesthesia-networks/" class="uri">http://mitpress.mit.edu/books/aesthesia-networks/</a>.</p>
+</div>
+<div>
+<p>Myers, Eugene W., Granger G. Sutton, Art L. Delcher, Ian M. Dew, Dan P. Fasulo, Michael J. Flanigan, Saul A. Kravitz, et al. 2000. “A Whole-Genome Assembly of Drosophila.” <em>Science</em> 287 (5461): 2196–2204. <a href="http://www.sciencemag.org/content/287/5461/2196.short" class="uri">http://www.sciencemag.org/content/287/5461/2196.short</a>.</p>
+</div>
+<div>
+<p>NCBI. 2016. “Homo Sapiens Chromosome 15, GRCh38.p7 Primary Assembly,” June. <a href="http://www.ncbi.nlm.nih.gov/nuccore/NC_000015.10" class="uri">http://www.ncbi.nlm.nih.gov/nuccore/NC_000015.10</a>.</p>
+</div>
+<div>
+<p>Neyland, Daniel. 2015. “On Organizing Algorithms.” <em>Theory, Culture &amp; Society</em> 32 (1): 119–32. doi:<a href="https://doi.org/10.1177/0263276414530477">10.1177/0263276414530477</a>.</p>
+</div>
+<div>
+<p>Ng, Andrew, dir. 2008a. <em>Lecture 1 | Machine Learning (Stanford)</em>. <a href="http://www.youtube.com/watch?v=UzxYlbK2c7E&amp;feature=youtube_gdata_player" class="uri">http://www.youtube.com/watch?v=UzxYlbK2c7E&amp;feature=youtube_gdata_player</a>.</p>
+</div>
+<div>
+<p>———, dir. 2008b. <em>Lecture 2 | Machine Learning (Stanford)</em>. <a href="https://www.youtube.com/watch?v=5u4G23_OohI&amp;feature=youtube_gdata_player" class="uri">https://www.youtube.com/watch?v=5u4G23_OohI&amp;feature=youtube_gdata_player</a>.</p>
+</div>
+<div>
+<p>———, dir. 2008c. <em>Lecture 3 | Machine Learning (Stanford)</em>. <a href="https://www.youtube.com/watch?v=HZ4cvaztQEs&amp;feature=youtube_gdata_player" class="uri">https://www.youtube.com/watch?v=HZ4cvaztQEs&amp;feature=youtube_gdata_player</a>.</p>
+</div>
+<div>
+<p>NIST. 2012. “Gallery of Distributions.” <em>Engineering Statistics Handbook</em>. <a href="http://www.itl.nist.gov/div898/handbook/eda/section3/eda366.htm" class="uri">http://www.itl.nist.gov/div898/handbook/eda/section3/eda366.htm</a>.</p>
+</div>
+<div>
+<p>Olazaran, Mikel. 1996. “A Sociological Study of the Official History of the Perceptrons Controversy.” <em>Social Studies of Science</em> 26 (3): 611–59. doi:<a href="https://doi.org/10.1177/030631296026003005">10.1177/030631296026003005</a>.</p>
+</div>
+<div>
+<p>Pariser, Eli. 2011. <em>The Filter Bubble: What the Internet Is Hiding from You</em>. Penguin UK. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=-FWO0puw3nYC&amp;oi=fnd&amp;pg=PT3&amp;dq=eli+pariser&amp;ots=g2PoCtpQV-&amp;sig=3_CftKt2BPOwLVpT_OFzizJr_-c" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=-FWO0puw3nYC&amp;oi=fnd&amp;pg=PT3&amp;dq=eli+pariser&amp;ots=g2PoCtpQV-&amp;sig=3_CftKt2BPOwLVpT_OFzizJr_-c</a>.</p>
+</div>
+<div>
+<p>Parisi, Luciana. 2013. <em>Contagious Architecture: Computation, Aesthetics and Space</em>. Cambridge ; Malden, MA: MIT Press.</p>
+</div>
+<div>
+<p>Parry, R. M., W. Jones, T. H. Stokes, J. H. Phan, R. A. Moffitt, H. Fang, L. Shi, et al. 2010. “K-Nearest Neighbor Models for Microarray Gene Expression Analysis and Clinical Outcome Prediction.” <em>The Pharmacogenomics Journal</em> 10 (4): 292–309. <a href="http://www.nature.com/tpj/journal/v10/n4/abs/tpj201056a.html" class="uri">http://www.nature.com/tpj/journal/v10/n4/abs/tpj201056a.html</a>.</p>
+</div>
+<div>
+<p>Pasquinelli, Matteo. 2014. “Italian Operaismo and the Information Machine.” <em>Theory, Culture &amp; Society</em>, February, 1–20. doi:<a href="https://doi.org/10.1177/0263276413514117">10.1177/0263276413514117</a>.</p>
+</div>
+<div>
+<p>———. 2015. “Anomaly Detection: The Mathematization of the Abnormal in the Metadata Society.” In. Berlin. <a href="https://www.academia.edu/10369819/Anomaly_Detection_The_Mathematization_of_the_Abnormal_in_the_Metadata_Society" class="uri">https://www.academia.edu/10369819/Anomaly_Detection_The_Mathematization_of_the_Abnormal_in_the_Metadata_Society</a>.</p>
+</div>
+<div>
+<p>Pearson, Karl. 1901. “LIII. On Lines and Planes of Closest Fit to Systems of Points in Space.” <em>Philosophical Magazine Series 6</em> 2 (11): 559–72. doi:<a href="https://doi.org/10.1080/14786440109462720">10.1080/14786440109462720</a>.</p>
+</div>
+<div>
+<p>Pedregosa, F., G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, et al. 2011. “Scikit-Learn: Machine Learning in Python.” <em>Journal of Machine Learning Research</em> 12: 2825–30.</p>
+</div>
+<div>
+<p>Peirce, Charles Sanders. 1992. <em>The Essential Peirce: 1867-1893 V. 1: Selected Philosophical Writings</em>. John Wiley &amp; Sons.</p>
+</div>
+<div>
+<p>———. 1998. <em>The Essential Peirce - Volume 2: Selected Philosophical Writings: (1893-1913) V. 2</em>. Indiana University Press.</p>
+</div>
+<div>
+<p>Perez, Fernando, and Brian E. Granger. 2007. “IPython. A System for Interactive Scientific Computing.” <em>Computing in Science &amp; Engineering</em> 9 (3): 21–29. <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4160251" class="uri">http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4160251</a>.</p>
+</div>
+<div>
+<p>Petrova, Svetlana S., and Alexander D. Solov’ev. 1997. “The Origin of the Method of Steepest Descent.” <em>Historia Mathematica</em> 24 (4): 361–75. doi:<a href="https://doi.org/10.1006/hmat.1996.2146">10.1006/hmat.1996.2146</a>.</p>
+</div>
+<div>
+<p>Pevzner, Pavel A., Haixu Tang, and Michael S. Waterman. 2001. “An Eulerian Path Approach to DNA Fragment Assembly.” <em>Proceedings of the National Academy of Sciences</em> 98 (17): 9748–53. doi:<a href="https://doi.org/10.1073/pnas.171285098">10.1073/pnas.171285098</a>.</p>
+</div>
+<div>
+<p>Quinlan, J. Ross. 1986. “Induction of Decision Trees.” <em>Machine Learning</em> 1 (1): 81–106. <a href="http://link.springer.com/article/10.1023/A:1022643204877" class="uri">http://link.springer.com/article/10.1023/A:1022643204877</a>.</p>
+</div>
+<div>
+<p>Quinlan, John Ross. 1993. <em>C4. 5: Programs for Machine Learning</em>. Vol. 1. San Francisco, Calif.: Morgan Kaufmann. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=HExncpjbYroC&amp;oi=fnd&amp;pg=PR7&amp;dq=quinlan+c4.5&amp;ots=nKr8dYr51o&amp;sig=e8CDMoHt0VGemFkhf8z9VMA8KlI" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=HExncpjbYroC&amp;oi=fnd&amp;pg=PR7&amp;dq=quinlan+c4.5&amp;ots=nKr8dYr51o&amp;sig=e8CDMoHt0VGemFkhf8z9VMA8KlI</a>.</p>
+</div>
+<div>
+<p>Rabiner, Lawrence. 1989. “A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition.” <em>Proceedings of the IEEE</em> 77 (2): 257–86. <a href="http://ieeexplore.ieee.org.ezproxy.lancs.ac.uk/xpls/abs_all.jsp?arnumber=18626" class="uri">http://ieeexplore.ieee.org.ezproxy.lancs.ac.uk/xpls/abs_all.jsp?arnumber=18626</a>.</p>
+</div>
+<div>
+<p>Ramaswamy, Sridhar, Pablo Tamayo, Ryan Rifkin, Sayan Mukherjee, Chen-Hsiang Yeang, Michael Angelo, Christine Ladd, et al. 2001. “Multiclass Cancer Diagnosis Using Tumor Gene Expression Signatures.” <em>Proceedings of the National Academy of Sciences</em> 98 (26): 15149–54. <a href="http://www.pnas.org/content/98/26/15149.short" class="uri">http://www.pnas.org/content/98/26/15149.short</a>.</p>
+</div>
+<div>
+<p>RexerAnalytics. 2015. “Rexer Analytics 7th Annual Data Miner Survey - 2015.” <a href="http://www.rexeranalytics.com/Data-Miner-Survey-2015-Intro.html" class="uri">http://www.rexeranalytics.com/Data-Miner-Survey-2015-Intro.html</a>.</p>
+</div>
+<div>
+<p>Richert, Willi, and Luis Pedro Coelho. 2013. <em>Building Machine Learning Systems with Python</em>. Birmingham: Packt Publishing.</p>
+</div>
+<div>
+<p>Ripley, Brian. 1996. <em>Pattern Recognition and Neural Networks. 1996</em>. Cambridge ; New York: Cambridge University Press.</p>
+</div>
+<div>
+<p>———. 2014. <em>Tree: Classification and Regression Trees</em>. <a href="http://CRAN.R-project.org/package=tree" class="uri">http://CRAN.R-project.org/package=tree</a>.</p>
+</div>
+<div>
+<p>Robinson, Derek. 2008. “Function.” In <em>Software Studies: A Lexicon</em>, edited by M. Fuller, 101–10. The MIT Press.</p>
+</div>
+<div>
+<p>Rose, N. 2009. “Normality and Pathology in a Biomedical Age.” <em>Sociol. Rev.</em> 57: 66–83.<a href="://000275532000004" class="uri">://000275532000004</a>.</p>
+</div>
+<div>
+<p>Rosenblatt, F. 1958. “The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain.” <em>Psychological Review</em> 65 (6): 386–408. doi:<a href="https://doi.org/10.1037/h0042519">10.1037/h0042519</a>.</p>
+</div>
+<div>
+<p>Rumelhart, David E., Geoffrey E. Hinton, and Ronald J. Williams. 1985. “Learning Internal Representations by Error Propagation.” DTIC Document. <a href="http://oai.dtic.mil/oai/oai?verb=getRecord&amp;metadataPrefix=html&amp;identifier=ADA164453" class="uri">http://oai.dtic.mil/oai/oai?verb=getRecord&amp;metadataPrefix=html&amp;identifier=ADA164453</a>.</p>
+</div>
+<div>
+<p>———. 1986. “Learning Representations by Back-Propagating Errors.” <em>Nature</em> 323 (6088): 533–36. doi:<a href="https://doi.org/10.1038/323533a0">10.1038/323533a0</a>.</p>
+</div>
+<div>
+<p>Russell, Matthew A. 2011. <em>Mining the Social Web</em>. Sebastopol, CA: O’Reilly.</p>
+</div>
+<div>
+<p>Savage, M. 2009. “Contemporary Sociology and the Challenge of Descriptive Assemblage.” <em>European Journal of Social Theory</em> 12 (1): 155.</p>
+</div>
+<div>
+<p>Schutt, Rachel, and Cathy O’Neil. 2013. <em>Doing Data Science</em>. Sebastopol, Calif.: O’Reilly &amp; Associates Inc.</p>
+</div>
+<div>
+<p>Segaran, Toby. 2007. <em>Programming Collective Intelligence: Building Smart Web 2.0 Applications</em>. Sebastapol CA.: O’Reilly.</p>
+</div>
+<div>
+<p>Silver, David, Aja Huang, Chris J. Maddison, Arthur Guez, Laurent Sifre, George Van Den Driessche, Julian Schrittwieser, et al. 2016. “Mastering the Game of Go with Deep Neural Networks and Tree Search.” <em>Nature</em> 529 (7587): 484–89. <a href="http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html" class="uri">http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html</a>.</p>
+</div>
+<div>
+<p>Slikker, W, Jr. 2010. “Of Genomics and Bioinformatics.” <em>The Pharmacogenomics Journal</em> 10 (4): 245–46. doi:<a href="https://doi.org/10.1038/tpj.2010.59">10.1038/tpj.2010.59</a>.</p>
+</div>
+<div>
+<p>Smith, Marquard. 2013. “Theses on the Philosophy of History: The Work of Research in the Age of Digital Searchability and Distributability.” <em>Journal of Visual Culture</em> 12 (3): 375–403. doi:<a href="https://doi.org/10.1177/1470412913507505">10.1177/1470412913507505</a>.</p>
+</div>
+<div>
+<p>Stamey, Thomas A., Mitchell Caldwell, JOHN McNEAL, Rosalie Nolley, Marci Hemenez, and Joshua Downs. 2004. “The Prostate Specific Antigen Era in the United States Is over for Prostate Cancer: What Happened in the Last 20 Years?” <em>The Journal of Urology</em> 172 (4): 1297–1301. <a href="http://www.sciencedirect.com/science/article/pii/S002253470561155X" class="uri">http://www.sciencedirect.com/science/article/pii/S002253470561155X</a>.</p>
+</div>
+<div>
+<p>Stamey, Thomas A., John N. Kabalin, John E. McNeal, Iain M. Johnstone, F. Freiha, Elise A. Redwine, and Norman Yang. 1989. “Prostate Specific Antigen in the Diagnosis and Treatment of Adenocarcinoma of the Prostate. II. Radical Prostatectomy Treated Patients.” <em>The Journal of Urology</em> 141 (5): 1076–83. <a href="http://europepmc.org/abstract/med/2468795" class="uri">http://europepmc.org/abstract/med/2468795</a>.</p>
+</div>
+<div>
+<p>Steinberg, Dan, and Phillip Colla. 2009. “CART: Classification and Regression Trees.” <em>The Top Ten Algorithms in Data Mining</em>, 179–201. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=_kcEn-c9kYAC&amp;oi=fnd&amp;pg=PA179&amp;dq=dan+steinberg+cart&amp;ots=eQ7jtfUODm&amp;sig=Xs8kegu_D4DcrPhT6TUkB0LCV1A" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=_kcEn-c9kYAC&amp;oi=fnd&amp;pg=PA179&amp;dq=dan+steinberg+cart&amp;ots=eQ7jtfUODm&amp;sig=Xs8kegu_D4DcrPhT6TUkB0LCV1A</a>.</p>
+</div>
+<div>
+<p>Stengers, Isabelle. 2000. <em>The Invention of Modern Science</em>. Theory Out of Bounds ; V.19. Minneapolis ; London: University of Minnesota Press.</p>
+</div>
+<div>
+<p>———. 2005. “Deleuze and Guattari’s Last Enigmatic Message.” <em>Angelaki</em> 10 (1): 151–67.</p>
+</div>
+<div>
+<p>———. 2008. “Experimenting with Refrains: Subjectivity and the Challenge of Escaping Modern Dualism.” <em>Subjectivity</em> 22 (1): 38–59. doi:<a href="https://doi.org/10.1057/sub.2008.6">10.1057/sub.2008.6</a>.</p>
+</div>
+<div>
+<p>———. 2011. <em>Cosmopolitics II</em>. Translated by Robert Bononno. University of Minnesota Press.</p>
+</div>
+<div>
+<p>Stevens, Hallam. 2011. “Coding Sequences: A History of Sequence Comparison Algorithms as a Scientific Instrument.” <em>Perspectives on Science</em> 19 (3): 263–99. doi:<a href="https://doi.org/i:\%002010.1162/POSC_a_00042&lt;/p&gt;">i:\%002010.1162/POSC_a_00042&lt;/p&gt;</a>.</p>
+</div>
+<div>
+<p>———. 2013. <em>Life Out of Sequence: A Data-Driven History of Bioinformatics</em>. Chicago, London: University Of Chicago Press.</p>
+</div>
+<div>
+<p>Stigler, Stephen M. 1986. <em>The History of Statistics: The Measurement of Uncertainty Before 1900</em>. Cambridge, Mass.: Harvard University Press.</p>
+</div>
+<div>
+<p>———. 2002. <em>Statistics on the Table: The History of Statistical Concepts and Methods</em>. Harvard University Press. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=qQusWukdPa4C&amp;oi=fnd&amp;pg=PR9&amp;dq=stigler+concepts+statistics&amp;ots=6ekF1LqIQL&amp;sig=nNwRfar3NtBAIv-wAy-xp6WL7Ww" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=qQusWukdPa4C&amp;oi=fnd&amp;pg=PR9&amp;dq=stigler+concepts+statistics&amp;ots=6ekF1LqIQL&amp;sig=nNwRfar3NtBAIv-wAy-xp6WL7Ww</a>.</p>
+</div>
+<div>
+<p>Stone, Mervyn. 1974. “Cross-Validatory Choice and Assessment of Statistical Predictions.” <em>Journal of the Royal Statistical Society. Series B (Methodological)</em>, 111–47.</p>
+</div>
+<div>
+<p>Suchman, Lucy. 2006. <em>Human and Machine Reconfigurations: Plans and Situated Actions</em>. 2nd ed. Cambridge University Press.</p>
+</div>
+<div>
+<p>Suchman, Lucy A. 1987. <em>Plans and Situated Actions : The Problem of Human-Machine Communication</em>. Cambridge: Cambridge University Press.</p>
+</div>
+<div>
+<p>Suchman, Lucy A, and Randall H Trigg. 1992. “Artificial Intelligence as Craftwork.” In <em>Understanding Practice: Perspectives on Activity and Context</em>, edited by Seth Chaiklin and Jean Lave, 144–78. Cambridge ; New York: Cambridge University Press.</p>
+</div>
+<div>
+<p>Sunder Rajan, Kaushik. 2006. <em>Biocapital : The Constitution of Postgenomic Life</em>. Durham: Duke University Press.</p>
+</div>
+<div>
+<p>Tarde, Gabriel de. 1902. <em>Psychologie Économique</em>. Paris, F. Alcan.</p>
+</div>
+<div>
+<p>Teetor, Paul. 2011. <em>R Cookbook</em>. O’Reilly Media, Incorporated. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=KIHuSXyhawEC&amp;oi=fnd&amp;pg=PR5&amp;dq=teetor+R+cookbook&amp;ots=d4Uj6FIU_p&amp;sig=6QY0uaRENGFS3a1B6cmJ2I9yw1g" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=KIHuSXyhawEC&amp;oi=fnd&amp;pg=PR5&amp;dq=teetor+R+cookbook&amp;ots=d4Uj6FIU_p&amp;sig=6QY0uaRENGFS3a1B6cmJ2I9yw1g</a>.</p>
+</div>
+<div>
+<p>Thacker, Eugene. 2005. <em>The Global Genome : Biotechnology, Politics, and Culture</em>. Cambridge, Mass.: MIT Press.</p>
+</div>
+<div>
+<p>Therneau, Terry, Beth Atkinson, and Brian Ripley. 2015. <em>Rpart: Recursive Partitioning and Regression Trees</em>. <a href="http://CRAN.R-project.org/package=rpart" class="uri">http://CRAN.R-project.org/package=rpart</a>.</p>
+</div>
+<div>
+<p>Thrun, Sebastian, Mike Montemerlo, Hendrik Dahlkamp, David Stavens, Andrei Aron, James Diebel, Philip Fong, John Gale, Morgan Halpenny, and Gabriel Hoffmann. 2006. “Stanley: The Robot That Won the DARPA Grand Challenge.” <em>Journal of Field Robotics</em> 23 (9): 661–92. <a href="http://onlinelibrary.wiley.com/doi/10.1002/rob.20147/abstract" class="uri">http://onlinelibrary.wiley.com/doi/10.1002/rob.20147/abstract</a>.</p>
+</div>
+<div>
+<p>Tibshirani, Robert. 1996. “Regression Shrinkage and Selection via the Lasso.” <em>Journal of the Royal Statistical Society. Series B (Methodological)</em>, 267–88.</p>
+</div>
+<div>
+<p>Totaro, Paolo, and Domenico Ninno. 2014. “The Concept of Algorithm as an Interpretative Key of Modern Rationality.” <em>Theory, Culture &amp; Society</em>, 29–49. <a href="http://tcs.sagepub.com/content/early/2014/03/17/0263276413510051.abstract" class="uri">http://tcs.sagepub.com/content/early/2014/03/17/0263276413510051.abstract</a>.</p>
+</div>
+<div>
+<p>Tuv, E., A. Borisov, G. Runger, and K. Torkkola. 2009. “Feature Selection with Ensembles, Artificial Variables, and Redundancy Elimination.” <em>The Journal of Machine Learning Research</em> 10: 1341–66. <a href="http://dl.acm.org/citation.cfm?id=1577069.1755828" class="uri">http://dl.acm.org/citation.cfm?id=1577069.1755828</a>.</p>
+</div>
+<div>
+<p>Valiant, Leslie G. 1984. “A Theory of the Learnable.” <em>Communications of the ACM</em> 27 (11): 1134–42. <a href="http://dl.acm.org/citation.cfm?id=1972" class="uri">http://dl.acm.org/citation.cfm?id=1972</a>.</p>
+</div>
+<div>
+<p>Van Dijck, José. 2012. “Facebook and the Engineering of Connectivity: A Multi-Layered Approach to Social Media Platforms.” <em>Convergence: The International Journal of Research into New Media Technologies</em>, 1354856512457548. <a href="http://con.sagepub.com/content/early/2012/09/17/1354856512457548.abstract" class="uri">http://con.sagepub.com/content/early/2012/09/17/1354856512457548.abstract</a>.</p>
+</div>
+<div>
+<p>Vance, Ashlee. 2011. “This Tech Bubble Is Different.” <em>BusinessWeek: Magazine</em>, April 14. <a href="http://www.businessweek.com/magazine/content/11_17/b4225060960537.htm" class="uri">http://www.businessweek.com/magazine/content/11_17/b4225060960537.htm</a>.</p>
+</div>
+<div>
+<p>Vapnik, Vladimir. 1999. <em>The Nature of Statistical Learning Theory</em>. 2nd ed. 2000. Springer.</p>
+</div>
+<div>
+<p>Vapnik, Vladimir N., and A. Ya Chervonenkis. 1971. “On the Uniform Convergence of Relative Frequencies of Events to Their Probabilities.” <em>Theory of Probability &amp; Its Applications</em> 16 (2): 264–80. <a href="http://epubs.siam.org/doi/abs/10.1137/1116025" class="uri">http://epubs.siam.org/doi/abs/10.1137/1116025</a>.</p>
+</div>
+<div>
+<p>Venables, William N., and Brian D. Ripley. 2002. <em>Modern Applied Statistics with S</em>. Springer.</p>
+</div>
+<div>
+<p>Venter, J. Craig, Mark D. Adams, Eugene W. Myers, Peter W. Li, Richard J. Mural, Granger G. Sutton, Hamilton O. Smith, et al. 2001. “The Sequence of the Human Genome.” <em>Science</em> 291 (5507): 1304–51. doi:<a href="https://doi.org/10.1126/science.1058040">10.1126/science.1058040</a>.</p>
+</div>
+<div>
+<p>Virno, Paolo. 2004. <em>A Grammar of the Multitude : For an Analysis of Contemporary Forms of Life</em>. Semiotext(e) Foreign Agents Series. Los Angeles: Semiotext(e).</p>
+</div>
+<div>
+<p>Warner, Homer R., Alan F. Toronto, and L. George Veasy. 1964. “Experience with Baye’s Theorem for Computer Diagnosis of Congenital Heart Disease*.” <em>Annals of the New York Academy of Sciences</em> 115 (2): 558–67. doi:<a href="https://doi.org/10.1111/j.1749-6632.1964.tb50648.x">10.1111/j.1749-6632.1964.tb50648.x</a>.</p>
+</div>
+<div>
+<p>Warner, Homer R., Alan F. Toronto, L. George Veasey, and Robert Stephenson. 1961. “A Mathematical Approach to Medical Diagnosis: Application to Congenital Heart Disease.” <em>Jama</em> 177 (3): 177–83. <a href="http://jama.jamanetwork.com/article.aspx?articleid=331443" class="uri">http://jama.jamanetwork.com/article.aspx?articleid=331443</a>.</p>
+</div>
+<div>
+<p>Wasserman, Larry. 2003. <em>All of Statistics: A Concise Course in Statistical Inference</em>. New York: Springer.</p>
+</div>
+<div>
+<p><em>What We’re Learning from Online Education | Video on TED.com</em>. 2012. <a href="http://www.ted.com/talks/daphne_koller_what_we_re_learning_from_online_education.html" class="uri">http://www.ted.com/talks/daphne_koller_what_we_re_learning_from_online_education.html</a>.</p>
+</div>
+<div>
+<p>Whitehead, Alfred North. 1956. <em>Modes of Thought; Six Lectures Delivered in Wellesley College, Massachusetts, and Two Lectures in the University of Chicago</em>. New York, Cambridge University Press.</p>
+</div>
+<div>
+<p>———. 1960. <em>Process and Reality, an Essay in Cosmology</em>. New York, Macmillan.</p>
+</div>
+<div>
+<p>Wiener, Norbert. 1961. <em>Cybernetics, or, Control and Communication in the Animal and the Machine</em>. 2nd ed. Cambridge, MA: MITPress.</p>
+</div>
+<div>
+<p>Wikibooks. 2013. “R Programming - Wikibooks, Open Books for an Open World.” <a href="http://en.wikibooks.org/wiki/R_Programming" class="uri">http://en.wikibooks.org/wiki/R_Programming</a>.</p>
+</div>
+<div>
+<p>Wikipedia. 2013. “Perceptron.” <em>Wikipedia, the Free Encyclopedia</em>. <a href="http://en.wikipedia.org/w/index.php?title=Perceptron&amp;oldid=557301943" class="uri">http://en.wikipedia.org/w/index.php?title=Perceptron&amp;oldid=557301943</a>.</p>
+</div>
+<div>
+<p>Wilf, Eitan. 2013. “Toward an Anthropology of Computer-Mediated, Algorithmic Forms of Sociality.” <em>Current Anthropology</em> 54 (6): 716–39. doi:<a href="https://doi.org/10.1086/673321">10.1086/673321</a>.</p>
+</div>
+<div>
+<p>Wilson, Elizabeth A. 2010. <em>Affect and Artificial Intelligence</em>. University of Washington Press.</p>
+</div>
+<div>
+<p>Witten, Ian H., and Eibe Frank. 2005. <em>Data Mining: Practical Machine Learning Tools and Techniques</em>. Morgan Kaufmann. <a href="http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=QTnOcZJzlUoC&amp;oi=fnd&amp;pg=PR17&amp;dq=witten+data+mining&amp;ots=3gpEclZjOh&amp;sig=fJWant_52rRAyelcWkW1vEVFg3I" class="uri">http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=QTnOcZJzlUoC&amp;oi=fnd&amp;pg=PR17&amp;dq=witten+data+mining&amp;ots=3gpEclZjOh&amp;sig=fJWant_52rRAyelcWkW1vEVFg3I</a>.</p>
+</div>
+<div>
+<p>Wu, X., V. Kumar, J. Ross Quinlan, J. Ghosh, Q. Yang, H. Motoda, G. J McLachlan, et al. 2008. “Top 10 Algorithms in Data Mining.” <em>Knowledge and Information Systems</em> 14 (1): 1–37.</p>
+</div>
+<div>
+<p>Xie, Yihui. 2013. “Knitr: A General-Purpose Package for Dynamic Report Generation in R.” <em>R Package Version</em> 1.</p>
+</div>
+<div>
+<p>Xie, Yihui, and J. J. Allaire. 2012. “New Tools for Reproducible Research with R.” In. Warwick, UK. <a href="http://www.r-project.org/conferences/useR-2012/InvitedXieAllaire.pdf" class="uri">http://www.r-project.org/conferences/useR-2012/InvitedXieAllaire.pdf</a>.</p>
+</div>
+<div>
+<p>Zare, Douglas. 2012. “Difference Between Logistic Regression and Neural Networks - Cross Validated.” <em>CrossValidated</em>. December 7. <a href="http://stats.stackexchange.com/questions/43538/difference-between-logistic-regression-and-neural-networks" class="uri">http://stats.stackexchange.com/questions/43538/difference-between-logistic-regression-and-neural-networks</a>.</p>
+</div>
+<div>
+<p>Zerbino, D. R., B. Paten, and D. Haussler. 2012. “Integrating Genomes.” <em>Science</em> 336 (6078): 179–82. doi:<a href="https://doi.org/10.1126/science.1216830">10.1126/science.1216830</a>.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="11-conclusion-out-of-the-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

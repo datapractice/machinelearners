@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Machine Learning: Archaeology of a Data Practice</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Machine Learning: Archaeology of a Data Practice">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Machine Learning: Archaeology of a Data Practice" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Machine Learning: Archaeology of a Data Practice" />
+  
+  
+  
+
+<meta name="author" content="Adrian Mackenzie">
+
+
+<meta name="date" content="2016-12-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="8-which-function-operates.html">
+<link rel="next" href="10-observing-with-curves-the-logistic-function.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="1-acknowledgments.html"><a href="1-acknowledgments.html"><i class="fa fa-check"></i><b>1</b> Acknowledgments</a></li>
+<li class="chapter" data-level="2" data-path="2-preface.html"><a href="2-preface.html"><i class="fa fa-check"></i><b>2</b> Preface</a></li>
+<li class="chapter" data-level="3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html"><i class="fa fa-check"></i><b>3</b> Introduction: Into the Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#three-accumulations-settings-data-and-devices"><i class="fa fa-check"></i><b>3.1</b> Three accumulations: settings, data and devices</a></li>
+<li class="chapter" data-level="3.2" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#who-or-what-is-a-machine-learner"><i class="fa fa-check"></i><b>3.2</b> Who or what is a machine learner?</a></li>
+<li class="chapter" data-level="3.3" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#algorithmic-control-to-the-machine-learners"><i class="fa fa-check"></i><b>3.3</b> Algorithmic control to the machine learners?</a></li>
+<li class="chapter" data-level="3.4" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-archaeology-of-operations"><i class="fa fa-check"></i><b>3.4</b> The archaeology of operations</a></li>
+<li class="chapter" data-level="3.5" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#asymmetries-in-common-knowledge"><i class="fa fa-check"></i><b>3.5</b> Asymmetries in common knowledge</a></li>
+<li class="chapter" data-level="3.6" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#what-cannot-be-automated"><i class="fa fa-check"></i><b>3.6</b> What cannot be automated?</a></li>
+<li class="chapter" data-level="3.7" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#different-fields-in-machine-learning"><i class="fa fa-check"></i><b>3.7</b> Different fields in machine learning?</a></li>
+<li class="chapter" data-level="3.8" data-path="3-introduction-into-the-data.html"><a href="3-introduction-into-the-data.html#the-diagram-in-critical-thought"><i class="fa fa-check"></i><b>3.8</b> The diagram in critical thought</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html"><i class="fa fa-check"></i><b>4</b> Diagramming machines}</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#we-dont-have-to-write-programs"><i class="fa fa-check"></i><b>4.1</b> ‘We don’t have to write programs’?</a></li>
+<li class="chapter" data-level="4.2" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-elements-of-machine-learning"><i class="fa fa-check"></i><b>4.2</b> The elements of machine learning</a></li>
+<li class="chapter" data-level="4.3" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#who-reads-machine-learning-textbooks"><i class="fa fa-check"></i><b>4.3</b> Who reads machine learning textbooks?</a></li>
+<li class="chapter" data-level="4.4" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#r-a-matrix-of-transformations"><i class="fa fa-check"></i><b>4.4</b> <code>R</code>: a matrix of transformations</a></li>
+<li class="chapter" data-level="4.5" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-obdurate-mathematical-glint-of-machine-learning"><i class="fa fa-check"></i><b>4.5</b> The obdurate mathematical glint of machine learning</a></li>
+<li class="chapter" data-level="4.6" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#cs229-2007-returning-again-and-again-to-certain-features"><i class="fa fa-check"></i><b>4.6</b> CS229, 2007: returning again and again to certain features</a></li>
+<li class="chapter" data-level="4.7" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-visible-learning-of-machine-learning"><i class="fa fa-check"></i><b>4.7</b> The visible learning of machine learning</a></li>
+<li class="chapter" data-level="4.8" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-diagram-of-an-operational-formation"><i class="fa fa-check"></i><b>4.8</b> The diagram of an operational formation</a></li>
+<li class="chapter" data-level="4.9" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#vectorisation-and-its-consequences"><i class="fa fa-check"></i><b>4.9</b> Vectorisation and its consequences}</a></li>
+<li class="chapter" data-level="4.10" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#vector-space-and-geometry"><i class="fa fa-check"></i><b>4.10</b> Vector space and geometry</a></li>
+<li class="chapter" data-level="4.11" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#mixing-places"><i class="fa fa-check"></i><b>4.11</b> Mixing places</a></li>
+<li class="chapter" data-level="4.12" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#truth-is-no-longer-in-the-table"><i class="fa fa-check"></i><b>4.12</b> Truth is no longer in the table?</a></li>
+<li class="chapter" data-level="4.13" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-epistopic-fault-line-in-tables"><i class="fa fa-check"></i><b>4.13</b> The epistopic fault line in tables</a></li>
+<li class="chapter" data-level="4.14" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#surface-and-depths-the-problem-of-volume-in-data"><i class="fa fa-check"></i><b>4.14</b> Surface and depths: the problem of volume in data</a></li>
+<li class="chapter" data-level="4.15" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#vector-space-expansion"><i class="fa fa-check"></i><b>4.15</b> Vector space expansion</a></li>
+<li class="chapter" data-level="4.16" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#drawing-lines-in-a-common-space-of-transformation"><i class="fa fa-check"></i><b>4.16</b> Drawing lines in a common space of transformation</a></li>
+<li class="chapter" data-level="4.17" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#implicit-vectorization-in-code-and-infrastructures"><i class="fa fa-check"></i><b>4.17</b> Implicit vectorization in code and infrastructures</a></li>
+<li class="chapter" data-level="4.18" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#lines-traversing-behind-the-light"><i class="fa fa-check"></i><b>4.18</b> Lines traversing behind the light</a></li>
+<li class="chapter" data-level="4.19" data-path="4-diagramming-machines.html"><a href="4-diagramming-machines.html#the-vectorised-table"><i class="fa fa-check"></i><b>4.19</b> The vectorised table?</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-machines-finding-functions.html"><a href="5-machines-finding-functions.html"><i class="fa fa-check"></i><b>5</b> Machines finding functions}</a></li>
+<li class="chapter" data-level="6" data-path="6-learning-functions.html"><a href="6-learning-functions.html"><i class="fa fa-check"></i><b>6</b> Learning functions</a></li>
+<li class="chapter" data-level="7" data-path="7-supervised-unsupervised-reinforcement-learning-and-functions.html"><a href="7-supervised-unsupervised-reinforcement-learning-and-functions.html"><i class="fa fa-check"></i><b>7</b> Supervised, unsupervised, reinforcement learning and functions</a></li>
+<li class="chapter" data-level="8" data-path="8-which-function-operates.html"><a href="8-which-function-operates.html"><i class="fa fa-check"></i><b>8</b> Which function operates?</a></li>
+<li class="chapter" data-level="9" data-path="9-what-does-a-function-learn.html"><a href="9-what-does-a-function-learn.html"><i class="fa fa-check"></i><b>9</b> What does a function learn?</a></li>
+<li class="chapter" data-level="10" data-path="10-observing-with-curves-the-logistic-function.html"><a href="10-observing-with-curves-the-logistic-function.html"><i class="fa fa-check"></i><b>10</b> Observing with curves: the logistic function</a></li>
+<li class="chapter" data-level="11" data-path="11-the-cost-of-curves-in-machine-learning.html"><a href="11-the-cost-of-curves-in-machine-learning.html"><i class="fa fa-check"></i><b>11</b> The cost of curves in machine learning</a></li>
+<li class="chapter" data-level="12" data-path="12-curves-and-the-variation-in-models.html"><a href="12-curves-and-the-variation-in-models.html"><i class="fa fa-check"></i><b>12</b> Curves and the variation in models</a></li>
+<li class="chapter" data-level="13" data-path="13-observing-costs-losses-and-objectives-through-optimisation.html"><a href="13-observing-costs-losses-and-objectives-through-optimisation.html"><i class="fa fa-check"></i><b>13</b> Observing costs, losses and objectives through optimisation</a></li>
+<li class="chapter" data-level="14" data-path="14-gradients-as-partial-observers.html"><a href="14-gradients-as-partial-observers.html"><i class="fa fa-check"></i><b>14</b> Gradients as partial observers</a></li>
+<li class="chapter" data-level="15" data-path="15-the-power-to-learn.html"><a href="15-the-power-to-learn.html"><i class="fa fa-check"></i><b>15</b> The power to learn</a></li>
+<li class="chapter" data-level="16" data-path="16-probabilisation-and-the-taming-of-machines.html"><a href="16-probabilisation-and-the-taming-of-machines.html"><i class="fa fa-check"></i><b>16</b> Probabilisation and the Taming of Machines}</a></li>
+<li class="chapter" data-level="17" data-path="17-data-reduces-uncertainty.html"><a href="17-data-reduces-uncertainty.html"><i class="fa fa-check"></i><b>17</b> Data reduces uncertainty?</a></li>
+<li class="chapter" data-level="18" data-path="18-machine-learning-as-statistics-inside-out.html"><a href="18-machine-learning-as-statistics-inside-out.html"><i class="fa fa-check"></i><b>18</b> Machine learning as statistics inside out</a></li>
+<li class="chapter" data-level="19" data-path="19-distributed-probabilities.html"><a href="19-distributed-probabilities.html"><i class="fa fa-check"></i><b>19</b> Distributed probabilities</a></li>
+<li class="chapter" data-level="20" data-path="20-naive-bayes-and-the-distribution-of-probabilities.html"><a href="20-naive-bayes-and-the-distribution-of-probabilities.html"><i class="fa fa-check"></i><b>20</b> Naive Bayes and the distribution of probabilities</a></li>
+<li class="chapter" data-level="21" data-path="21-spam-when-foralln-is-too-much.html"><a href="21-spam-when-foralln-is-too-much.html"><i class="fa fa-check"></i><b>21</b> Spam: when <span class="math inline">\(\forall{N}\)</span> is too much?</a></li>
+<li class="chapter" data-level="22" data-path="22-the-improbable-success-of-the-naive-bayes-classifier.html"><a href="22-the-improbable-success-of-the-naive-bayes-classifier.html"><i class="fa fa-check"></i><b>22</b> The improbable success of the Naive Bayes classifier</a></li>
+<li class="chapter" data-level="23" data-path="23-ancestral-probabilities-in-documents-inference-and-prediction.html"><a href="23-ancestral-probabilities-in-documents-inference-and-prediction.html"><i class="fa fa-check"></i><b>23</b> Ancestral probabilities in documents: inference and prediction</a></li>
+<li class="chapter" data-level="24" data-path="24-statistical-decompositions-bias-variance-and-observed-errors.html"><a href="24-statistical-decompositions-bias-variance-and-observed-errors.html"><i class="fa fa-check"></i><b>24</b> Statistical decompositions: bias, variance and observed errors</a></li>
+<li class="chapter" data-level="25" data-path="25-does-machine-learning-construct-a-new-statistical-reality.html"><a href="25-does-machine-learning-construct-a-new-statistical-reality.html"><i class="fa fa-check"></i><b>25</b> Does machine learning construct a new statistical reality?</a></li>
+<li class="chapter" data-level="26" data-path="26-patterns-and-differences.html"><a href="26-patterns-and-differences.html"><i class="fa fa-check"></i><b>26</b> Patterns and differences</a></li>
+<li class="chapter" data-level="27" data-path="27-splitting-and-the-growth-of-trees.html"><a href="27-splitting-and-the-growth-of-trees.html"><i class="fa fa-check"></i><b>27</b> Splitting and the growth of trees</a></li>
+<li class="chapter" data-level="28" data-path="28-differences-in-recursive-partitioning.html"><a href="28-differences-in-recursive-partitioning.html"><i class="fa fa-check"></i><b>28</b> 1984: Differences in recursive partitioning</a></li>
+<li class="chapter" data-level="29" data-path="29-limiting-differences.html"><a href="29-limiting-differences.html"><i class="fa fa-check"></i><b>29</b> Limiting differences</a></li>
+<li class="chapter" data-level="30" data-path="30-the-successful-dispersion-of-the-support-vector-machine.html"><a href="30-the-successful-dispersion-of-the-support-vector-machine.html"><i class="fa fa-check"></i><b>30</b> The successful dispersion of the support vector machine</a></li>
+<li class="chapter" data-level="31" data-path="31-differences-blur.html"><a href="31-differences-blur.html"><i class="fa fa-check"></i><b>31</b> Differences blur?</a></li>
+<li class="chapter" data-level="32" data-path="32-bending-the-decision-boundary.html"><a href="32-bending-the-decision-boundary.html"><i class="fa fa-check"></i><b>32</b> Bending the decision boundary</a></li>
+<li class="chapter" data-level="33" data-path="33-instituting-patterns.html"><a href="33-instituting-patterns.html"><i class="fa fa-check"></i><b>33</b> Instituting patterns</a></li>
+<li class="chapter" data-level="34" data-path="34-regularizing-and-materializing-objects.html"><a href="34-regularizing-and-materializing-objects.html"><i class="fa fa-check"></i><b>34</b> Regularizing and materializing objects}</a></li>
+<li class="chapter" data-level="35" data-path="35-genomic-referentiality-and-materiality.html"><a href="35-genomic-referentiality-and-materiality.html"><i class="fa fa-check"></i><b>35</b> Genomic referentiality and materiality</a></li>
+<li class="chapter" data-level="36" data-path="36-the-genome-as-threshold-object.html"><a href="36-the-genome-as-threshold-object.html"><i class="fa fa-check"></i><b>36</b> The genome as threshold object</a></li>
+<li class="chapter" data-level="37" data-path="37-genomic-knowledges-and-their-datasets.html"><a href="37-genomic-knowledges-and-their-datasets.html"><i class="fa fa-check"></i><b>37</b> Genomic knowledges and their datasets</a></li>
+<li class="chapter" data-level="38" data-path="38-the-advent-of-wide-dirty-and-mixed-data.html"><a href="38-the-advent-of-wide-dirty-and-mixed-data.html"><i class="fa fa-check"></i><b>38</b> The advent of ‘wide, dirty and mixed’ data</a></li>
+<li class="chapter" data-level="39" data-path="39-cross-validating-machine-learning-in-genomics.html"><a href="39-cross-validating-machine-learning-in-genomics.html"><i class="fa fa-check"></i><b>39</b> Cross-validating machine learning in genomics</a></li>
+<li class="chapter" data-level="40" data-path="40-proliferation-of-discoveries.html"><a href="40-proliferation-of-discoveries.html"><i class="fa fa-check"></i><b>40</b> Proliferation of discoveries</a></li>
+<li class="chapter" data-level="41" data-path="41-variations-in-the-object-or-in-the-machine-learner.html"><a href="41-variations-in-the-object-or-in-the-machine-learner.html"><i class="fa fa-check"></i><b>41</b> Variations in the object or in the machine learner?</a></li>
+<li class="chapter" data-level="42" data-path="42-whole-genome-functions.html"><a href="42-whole-genome-functions.html"><i class="fa fa-check"></i><b>42</b> Whole genome functions</a></li>
+<li class="chapter" data-level="43" data-path="43-propagating-subject-positions.html"><a href="43-propagating-subject-positions.html"><i class="fa fa-check"></i><b>43</b> Propagating subject positions}</a></li>
+<li class="chapter" data-level="44" data-path="44-propagation-across-human-machine-boundaries.html"><a href="44-propagation-across-human-machine-boundaries.html"><i class="fa fa-check"></i><b>44</b> Propagation across human-machine boundaries</a></li>
+<li class="chapter" data-level="45" data-path="45-competitive-positioning.html"><a href="45-competitive-positioning.html"><i class="fa fa-check"></i><b>45</b> Competitive positioning</a></li>
+<li class="chapter" data-level="46" data-path="46-a-privileged-machine-and-its-diagrammatic-forms.html"><a href="46-a-privileged-machine-and-its-diagrammatic-forms.html"><i class="fa fa-check"></i><b>46</b> A privileged machine and its diagrammatic forms</a></li>
+<li class="chapter" data-level="47" data-path="47-varying-subject-positions-in-code.html"><a href="47-varying-subject-positions-in-code.html"><i class="fa fa-check"></i><b>47</b> Varying subject positions in code</a></li>
+<li class="chapter" data-level="48" data-path="48-the-subjects-of-a-hidden-operation.html"><a href="48-the-subjects-of-a-hidden-operation.html"><i class="fa fa-check"></i><b>48</b> The subjects of a hidden operation</a></li>
+<li class="chapter" data-level="49" data-path="49-algorithms-that-propagate-errors.html"><a href="49-algorithms-that-propagate-errors.html"><i class="fa fa-check"></i><b>49</b> Algorithms that propagate errors</a></li>
+<li class="chapter" data-level="50" data-path="50-competitions-as-examination.html"><a href="50-competitions-as-examination.html"><i class="fa fa-check"></i><b>50</b> Competitions as examination</a></li>
+<li class="chapter" data-level="51" data-path="51-superimposing-power-and-knowledge.html"><a href="51-superimposing-power-and-knowledge.html"><i class="fa fa-check"></i><b>51</b> Superimposing power and knowledge</a></li>
+<li class="chapter" data-level="52" data-path="52-ranked-subject-positions.html"><a href="52-ranked-subject-positions.html"><i class="fa fa-check"></i><b>52</b> Ranked subject positions</a></li>
+<li class="chapter" data-level="53" data-path="53-conclusion-out-of-the-data.html"><a href="53-conclusion-out-of-the-data.html"><i class="fa fa-check"></i><b>53</b> Conclusion: Out of the Data}</a></li>
+<li class="chapter" data-level="54" data-path="54-machine-learners.html"><a href="54-machine-learners.html"><i class="fa fa-check"></i><b>54</b> 250,000 machine learners</a></li>
+<li class="chapter" data-level="55" data-path="55-a-summary-of-the-argument.html"><a href="55-a-summary-of-the-argument.html"><i class="fa fa-check"></i><b>55</b> A summary of the argument</a></li>
+<li class="chapter" data-level="56" data-path="56-in-situ-hybridization.html"><a href="56-in-situ-hybridization.html"><i class="fa fa-check"></i><b>56</b> In-situ hybridization</a></li>
+<li class="chapter" data-level="57" data-path="57-critical-operational-practice.html"><a href="57-critical-operational-practice.html"><i class="fa fa-check"></i><b>57</b> Critical operational practice?</a></li>
+<li class="chapter" data-level="58" data-path="58-obstacles-to-the-work-of-freeing-machine-learning.html"><a href="58-obstacles-to-the-work-of-freeing-machine-learning.html"><i class="fa fa-check"></i><b>58</b> Obstacles to the work of freeing machine learning</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning: Archaeology of a Data Practice</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="what-does-a-function-learn" class="section level1">
+<h1><span class="header-section-number">9</span> What does a function learn?</h1>
+<p>We wish to know: in what sense does a machine learner learn? This question can now be re-framed: how to machine learners find functions? For critical thought, this is a vexing question, for if function-finding agency inheres in machines and devices, then the politics of human-machine relations, and the practices of knowledge production shift.  The philosopher of science Isabelle Stengers sets tight limits on functions:  </p>
+<blockquote>
+<p>No function can deal with learning, producing, or empowering new habits, as all require and achieve the production of different worlds, non-consensual worlds, actively diverging worlds <span class="citation">[@Stengers_2005, 162]</span></p>
+</blockquote>
+<p>If they cannot learn ‘new habits,’ what can functions learn? In some ways, Stengers would, on this reading, be taking a fairly conventional position on mathematical functions. They cannot learn or produce anything, only reproduce patterns implicit in their structure. Similar statements might be found in many philosophical writings on science and on mathematics in particular.<a href="#fn38" class="footnoteRef" id="fnref38"><sup>38</sup></a> But throughout in her writing Stengers explicitly affirms <em>experimental practice</em>, much of which depends on functions and their operations <span class="citation">[@Stengers_2008]</span>. It might be better to say that she limits the agency of functions in isolation in order to highlight their specific power in science: ‘celebrating the exceptional character of the experimental achievement very effectively limits the claims made in the name of science’ <span class="citation">[@Stengers_2011, 376]</span>. (Limiting claims made for science might save it from being totally re-purposed as a techno-economic innovation system. ) </p>
+<p>The connection between a given function and a given concrete experimental situation is highly contingent or indeed singular. Stengers argues that mathematical functions impinge on matters of fact via experimentally constructed relays:</p>
+<blockquote>
+<p>The reference of a mathematical function to an experimental matter of fact is neither some kind of right belonging to scientific reason nor is it an enigma, but actually the very meaning of an experimental achievement <span class="citation">[@Stengers_2005, 157]</span>. </p>
+</blockquote>
+<p>The generic term ‘reference’ here harbours a multitude of relations. The experimental achievement, the distinctive power of science, works through a tissue of relations that connect people, things, devices, facts (statements) and mathematical functions in a heterogeneous weave.<a href="#fn39" class="footnoteRef" id="fnref39"><sup>39</sup></a> Given that learning is not radically innate to machines, it might better be understood as an experimental achievement. When a biomedical researcher uses seeks to ‘estimate the probability that a critically-ill lupus patient will not survive the first 72 hours of an initial emergency hospital visit’ <span class="citation">[@Malley_2011, 5]</span>, they might estimate and evaluate their predictions using classical statistical approaches (analysis of variance, correlations, regression analysis, etc.). The question from Stengers’ standpoint is this: what happens to the structure of referrals through experiments and the existing knowledge when functions are said to learn?  In order to address this question, we need to delineate how functions function in machine learning. </p>
+<p>At first glance, machine learning as a field is not very experimental (even if it radically influences the conduct of experiments in many scientific fields; see chapter ). It lacks the apparatus, the instruments, the laboratories, field sites or clinics of experimental practice. Experimentation takes place principally in the form of rendering diagrammatically the relays or referrals between different functions as they traverse data.  They appear in graphic forms as plots. The diagrammatic entanglement of operation and observation in functions is not surprising. The historical invention of the term ‘function’ and a notation for writing functions by the philosopher G.W. Leibniz in the 17th century pertained to the problem of describing continuous variations in curves.  Functions for Leibniz describe variations in response to other changes (<span class="math inline">\(y\)</span> may change in response to a change in <span class="math inline">\(x\)</span>), but they can also describe tendencies in functions (as a derivative function  describes the sensitivity or rate of change of the slope of curve). Identifying and locating important tendencies or changes in functions – <em>singularities</em> in curves also preoccupies the function-finding done in machine learning. In contrast to the vector space that expands to accommodate all transformations, the many observational elements such as graphic objects stage observations of tendencies or change points. The experimental relay or referral, the power to confer on things the power to confer on the machine learner (human-machine) the power to speaker in their name <span class="citation">[@Stengers_2000, 89]</span>,  pivots around the double layer of functions. An operational function transforms the vector space and an observational function generates statements concerning degrees and rates of success, fit or error. </p>
+<p>While we have yet to see how a function can observe, we can readily see some of the effect of the coupling between operational and observational functions. In the several hundred colour graphic plots in <em>Elements of Statistical Learning</em>, a striking mixture of network diagrams, scatterplots, barcharts, histograms, heatmaps, boxplots, maps, contour plots, dendrograms and 3D plots exhibit different aspects of this tension between operation and observation. Many of these graphic forms are common in statistics as statements of variation or tendency in data (histograms and boxplots). Others relate specifically to machine learning (for instance, ROC – Receiver Operating Curve – or regularization path plots). A significant proportion of these graphics do not display data from experiments or measurements, but diagram variations in the operational function that transforms the data in relation to some criteria of observations (for instance, prediction errors or purity of classification). </p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="38">
+<li id="fn38"><p>A major reference here would be Ernst Cassirer <span class="citation">[@Cassirer_1923]</span> who posited a philosophical-historical shift from ontologies of substance reaching back to Aristotle’s categories <span class="citation">[@Aristotle_1975]</span> to a functional ontology emerging in 19th century as the notion of function was generalized across many mathematical and scientific fields. (See <span class="citation">[@Heis_2014]</span> for a recent account of the <em>FunktionBegriff</em> in Cassirer’s philosophy)   In a recent article, Paolo Totaro and Domenico Ninno suggest that the transition from substance to function occurs practically in the form of the algorithm <span class="citation">[@Totaro_2014]</span>.  The idea of computable functions lies at the base of theoretical computer science and has been a topic of interest in some social and cultural theory (e.g. <span class="citation">[@Parisi_2013]</span>; see also my <span class="citation">[@Mackenzie_1997]</span>), but Totaro and Ninno’s suggest that algorithmic processes, as the social practice of the function, form contradictory hybrids with remnants of substance, in particular, categories and classification. . They see bureaucratic logic, for instance, as hopelessly vitiated by a contradiction between classification and function. Machine learning, I’d suggest, is an important counter-example. It hybridises function and classification without any obvious contradiction. <a href="9-what-does-a-function-learn.html#fnref38">↩</a></p></li>
+<li id="fn39"><p>This point has often been made in the social studies of science; see <span class="citation">[@Latour_1993]</span> for a very high-level account.<a href="9-what-does-a-function-learn.html#fnref39">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="8-which-function-operates.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="10-observing-with-curves-the-logistic-function.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
