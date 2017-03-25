@@ -155,3 +155,7 @@ to list all the remaining figures needing conversion in a given chapter.
 
 ## Thu 26 Jan 2017 11:33:49 GMT
 - its taken a month, but I'm getting back to the formatting work; sorting out 06_probability.rmd 
+
+## Sat 25 Mar 2017 11:23:07 GMT
+- working again on gh-pages -- put a very rough version up, and renamed the repository to 'machine learners'
+
