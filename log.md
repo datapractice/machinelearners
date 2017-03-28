@@ -196,3 +196,6 @@ to list all the remaining figures needing conversion in a given chapter.
 
 ## Sat 25 Mar 2017 12:20:44 GMT
 - trying to fix gh pages -- made new url for book http://datapractice.github.io/machinelearners/. Adding it to preface. TODO: send to Ginny 
+
+## Tue 28 Mar 2017 14:38:02 BST
+- adding new copyedited files to work on -- this missing pieces 
