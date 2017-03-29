@@ -199,3 +199,6 @@ to list all the remaining figures needing conversion in a given chapter.
 
 ## Tue 28 Mar 2017 14:38:02 BST
 - adding new copyedited files to work on -- this missing pieces 
+
+## Wed 29 Mar 2017 11:45:50 BST
+- starting ch2 copyedits -- excellent, I see I've already done them. Only need to check copyeditor's changes ... 
