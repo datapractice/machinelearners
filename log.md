@@ -202,3 +202,7 @@ to list all the remaining figures needing conversion in a given chapter.
 
 ## Wed 29 Mar 2017 11:45:50 BST
 - starting ch2 copyedits -- excellent, I see I've already done them. Only need to check copyeditor's changes ... 
+
+## Thu 30 Mar 2017 12:03:08 BST
+- finishing copyedits and sending them
+
