@@ -193,7 +193,6 @@ to list all the remaining figures needing conversion in a given chapter.
 ## Fri 24 Mar 2017 13:05:21 GMT
 - had somehow missed promo copy messages -- now attending to promo copy in support/promo_copy.md 
 
-
 ## Sat 25 Mar 2017 12:20:44 GMT
 - trying to fix gh pages -- made new url for book http://datapractice.github.io/machinelearners/. Adding it to preface. TODO: send to Ginny 
 
@@ -206,3 +205,5 @@ to list all the remaining figures needing conversion in a given chapter.
 ## Thu 30 Mar 2017 12:03:08 BST
 - finishing copyedits and sending them
 
+## Mon 03 Apr 2017 23:40:20 BST
+- doing promo copy and sending this file: support/promo_copy.md  
