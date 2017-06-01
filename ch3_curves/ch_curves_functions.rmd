@@ -157,20 +157,20 @@ Sometimes these parameters can be varied so much as to suggest entirely differen
 # The cost of curves in machine learning
 
 ```{r logistic_occurrence, results='asis'}
-query = "select  distinct TI, PY, DE, TC from basic_refs where TC >100 and (TI like '%logistic%' or DE like '%logistic%')"
-res = dbGetQuery(con, query)
-logdf = res[order(res['TC'], decreasing=TRUE),]
-logdf = logdf[-c(1,2),]
-logdf$TI = sapply(logdf['TI'], simpleCap)
-logdf$DE = sapply(logdf$DE, simpleCap)
-logdf  = logdf[sample(nrow(logdf), 25),]
-logdf = logdf[order(logdf$PY),]
-logdf = logdf[c('PY', 'TI', 'DE', 'TC')]
-colnames(logdf) = c( 'Year','Title', 'Keywords', 'Citations')
-logdf = logdf[!duplicated(logdf['Title']),]
-logdf = head(logdf[order(logdf[,'Year']),],  20) 
-tab = xtable(logdf[-c(1,2),],  align=c("p{0.00\\textwidth}",  "p{0.1\\textwidth}","p{0.5\\textwidth}",  "p{0.3\\textwidth}", "p{0.10\\textwidth}"), label='tab:logistic_in_ml', caption='Sample of highly cited scientific publications referring to "logistic regression" in title or keyword')
-print(tab, type='latex', include.rownames=FALSE)
+    query = "select  distinct TI, PY, DE, TC from basic_refs where TC >100 and (TI like '%logistic%' or DE like '%logistic%')"
+    res = dbGetQuery(con, query)
+    logdf = res[order(res['TC'], decreasing=TRUE),]
+    logdf = logdf[-c(1,2),]
+    logdf$TI = sapply(logdf$TI, simpleCap)
+    logdf$DE = sapply(logdf$DE, simpleCap)
+    logdf  = logdf[sample(nrow(logdf), 25),]
+    logdf = logdf[order(logdf$PY),]
+    logdf = logdf[c('PY', 'TI', 'DE', 'TC')]
+    colnames(logdf) = c( 'Year','Title', 'Keywords', 'Citations')
+    logdf = logdf[!duplicated(logdf$Title),]
+    logdf = head(logdf[order(logdf[,'Year']),],  20) 
+    tab = xtable(logdf[-c(1,2),],  align=c("p{0.00\\textwidth}",  "p{0.1\\textwidth}","p{0.5\\textwidth}",  "p{0.3\\textwidth}", "p{0.10\\textwidth}"), label='tab:logistic_in_ml', caption='Sample of highly cited scientific publications referring to "logistic regression" in title or keyword')
+    print(tab, file='table4_2.tex', type='latex', include.rownames=FALSE)
 ```
 
 I have been suggesting that experimentality in machine learning consists in coupling operational and observational functions. If operational functions move through or transform the data, observational functions render the effects of those transformations visible. How does this take place practically?  The logistic function appears frequently in machine learning literature, prominently as part of perhaps the most vernacular machine learner, the logistic regression model (see table \ref{tab:logistic_in_ml} for a sample of well-cited publications). \index{machine learner!logistic regression}  Descriptions of logistic regression models appear in nearly all machine learning tutorials, textbooks and training courses (see Chapter 4 in [@Hastie_2009]). \index{science!biomedicine!machine learners in} In biomedical research, 'logistic regression is the default "simple" model for predicting a subject's group status' [@Malley_2011, 43]. As Malley et.al. suggest, 'it can be applied after a more complex learning machine has done the heavy lifting of identifying an important set of predictors given a very large list of candidate predictors' (43).  Especially in comparison to more complicated models, logistic regression models are relatively easy to interpret because they are superimpose the logistic function on the linear model that we have been discussing already (see figure \ref{fig:linreg_classifier_hastie} and also chapters \ref{ch:diagram} and \ref{ch:vector}).  As _Elements of Statistical Learning_  puts it: 'the logistic regression model arises from the desire to model the posterior probabilities of the $K$ classes via linear functions in $x$, while at the same time ensuring that they sum to one and remain in $[0,1]$' [@Hastie_2009, 119]. The logistic regression model predicts what class or category a particular instance is likely to belong to, but 'via linear functions in $x$.' 
