@@ -64,7 +64,7 @@ interdisc = intersect(stat, compsci)
 norm_terms <- function(x){
     y = str_replace(x, pattern='artificial ', '')
     z = str_replace(y, pattern='svm', 'support vector machine')
-    z = str_replace(z, pattern='em', 'expectation maximization')
+    z = str_replace(z, pattern='\\bem\\b', 'expectation maximization')
     z2 = str_replace(z, pattern='-', ' ')
     z2 = str_extract(z2, '(\\w+)( \\w+)?')
     return(z2)
@@ -89,7 +89,6 @@ de_split_yr <- function(x){
     return(df)
 }
 
-head(de_split_yr(res[12:15,]))
 
 tablify <- function(x) {
     z  = sort(table(de_plural(de_split(x))), decreasing=TRUE)
