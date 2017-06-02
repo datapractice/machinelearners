@@ -159,3 +159,7 @@ to list all the remaining figures needing conversion in a given chapter.
 ## Sat 25 Mar 2017 11:23:07 GMT
 - working again on gh-pages -- put a very rough version up, and renamed the repository to 'machine learners'
 
+
+## Fri 02 Jun 2017 08:17:07 BST
+- been doing proofs -- so many changes -- maybe I can never bring them all in here.
+- just fixed table problem in functions chapter. Need to rebuild with that. ... 
