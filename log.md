@@ -13,3 +13,8 @@
      - possible titles: predictive operationality and the invention of political institutions
      - to contextualise: Jasanoff's work on policy/government/science? Is science a key figure for me?
      - a key question (following Lynch on epistoics) -- how does something get described as a prediction? And what about all the things that are predictive, but not named as such? This is hardly ever talked about ...   
+
+## Fri 16 Jun 2017 12:39:47 BST
+- I don't what governance is. What is it? Is it the same as governing? Also, where does governmentality fit? 
+- downloaded 2500 records on governmentality and saved in support/gov.tsv 
+- working on titles more
