@@ -25,3 +25,9 @@
     - UK and Obama US reports on AI
     - need to look at very localized, mundane transformations
     - understanding of policy as the link between tech and social change; 
+    - has some stuff on fairness and why its not an interesting topic
+    - also on explainability and its requirements; 
+    - books to look at: Ian Goodfellow and the Cybersyn book 
+- TODO: check library for these - DONE
+- could just talk about the challenge of explainability based on 'vectorisation and its consequences' 
+- there's quite a lot happening in terms of fairness(?). Maybe
