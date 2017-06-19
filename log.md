@@ -18,3 +18,10 @@
 - I don't what governance is. What is it? Is it the same as governing? Also, where does governmentality fit? 
 - downloaded 2500 records on governmentality and saved in support/gov.tsv 
 - working on titles more
+
+## Mon 19 Jun 2017 15:26:08 BST
+- need to send the title, but don't want to do the new work.
+- listened to a podcast - twice -- interview with Andrew Hwang, global policy lead for AI at google. He doesn't seem to be able to talk about policy, but mentioned some useful examples and leads on it
+    - UK and Obama US reports on AI
+    - need to look at very localized, mundane transformations
+    - understanding of policy as the link between tech and social change; 
