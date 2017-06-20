@@ -8,7 +8,7 @@
         - maybe all datasets are problematic in that they are tables. A new mode of inhabiting the table. Isn't that my key argument? How would I exemplify that? By working through an example of what happens to an image in a CNN? What happens to faces, for instance, in the predictive classificatory orderings?  
      - what about GDELT as a system? How does that fit into governance?  
      - or what about the Google global fishing example? and how that compares with what the NSA does? Or the Facebook case? Or the role of Cambridge Analytics in elections? 
-     - could make my life a bit easier by using the the Planetary Settlement Project and the ways in which governance (biopolitical, economic, etc.) switches around to predictive operationality; maybe in all of these, the question is bringing governance to bear on that which previously had not been governed. The multiplicity. 
+     - could make my life a bit easier by using the Planetary Settlement Project and the ways in which governance (biopolitical, economic, etc.) switches around to predictive operationality; maybe in all of these, the question is bringing governance to bear on that which previously had not been governed. The multiplicity. 
      - But I don't do governance. what is governance? How does it related to governmentality?  could follow Barry who sees tech as an orientation to the political present. That could be a useful tension: predictive operationality and the invention of political institutions  
      - possible titles: predictive operationality and the invention of political institutions
      - to contextualise: Jasanoff's work on policy/government/science? Is science a key figure for me?
@@ -18,3 +18,14 @@
 - I don't what governance is. What is it? Is it the same as governing? Also, where does governmentality fit? 
 - downloaded 2500 records on governmentality and saved in support/gov.tsv 
 - working on titles more
+
+
+
+## Tue 20 Jun 2017 15:55:45 BST
+- been thinking that for me the arguments about fairness, discrimination, explainability all come too late. If governance is always part of the situation, and governmentality involves forms of observation, what happens with the change in observer?  
+- possible titles:
+    - Techniques of the Predictor;
+    - Vectorising things out: prediction and its consequences
+    - 
+- looking at literature -- key references cited around governmentality are Dean 1999, Foucault, 1991, Rose 1997, Foucault 2007, and Beck as well as Andrew Barry 1996 
+    
