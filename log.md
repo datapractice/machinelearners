@@ -1,5 +1,4 @@
 
-
 ## Fri 09 Jun 2017 10:20:14 BST
 - ideas for the Governing Prediction event in Paris september:
      - I don't want to do a new paper, so the question is: what do I have in the book that I can use to talk about governance;
@@ -19,13 +18,23 @@
 - downloaded 2500 records on governmentality and saved in support/gov.tsv 
 - working on titles more
 
-
+## Mon 19 Jun 2017 15:26:08 BST
+- need to send the title, but don't want to do the new work.
+- listened to a podcast - twice -- interview with Andrew Hwang, global policy lead for AI at google. He doesn't seem to be able to talk about policy, but mentioned some useful examples and leads on it
+    - UK and Obama US reports on AI
+    - need to look at very localized, mundane transformations
+    - understanding of policy as the link between tech and social change; 
+    - has some stuff on fairness and why its not an interesting topic
+    - also on explainability and its requirements; 
+    - books to look at: Ian Goodfellow and the Cybersyn book 
+- TODO: check library for these - DONE
+- could just talk about the challenge of explainability based on 'vectorisation and its consequences' 
+- there's quite a lot happening in terms of fairness(?). Maybe
 
 ## Tue 20 Jun 2017 15:55:45 BST
 - been thinking that for me the arguments about fairness, discrimination, explainability all come too late. If governance is always part of the situation, and governmentality involves forms of observation, what happens with the change in observer?  
 - possible titles:
     - Techniques of the Predictor;
     - Vectorising things out: prediction and its consequences
-    - 
 - looking at literature -- key references cited around governmentality are Dean 1999, Foucault, 1991, Rose 1997, Foucault 2007, and Beck as well as Andrew Barry 1996 
     
