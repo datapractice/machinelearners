@@ -27,7 +27,7 @@
     - has some stuff on fairness and why its not an interesting topic
     - also on explainability and its requirements; 
     - books to look at: Ian Goodfellow and the Cybersyn book 
-- TODO: check library for these - DONE
+- DONE: check library for these - DONE
 - could just talk about the challenge of explainability based on 'vectorisation and its consequences' 
 - there's quite a lot happening in terms of fairness(?). Maybe
 
@@ -37,4 +37,12 @@
     - Techniques of the Predictor;
     - Vectorising things out: prediction and its consequences
 - looking at literature -- key references cited around governmentality are Dean 1999, Foucault, 1991, Rose 1997, Foucault 2007, and Beck as well as Andrew Barry 1996 
-    
+
+## Fri 23 Jun 2017 14:08:42 BST
+- still wrestling a bit with writing this abstract -- I don't want to commit myself to new work. But did look at references that are most cited: Foucault, 2007 can be found at http://lib.myilibrary.com.ezproxy.lancs.ac.uk/Open.aspx?id=317917
+- put a quote from this at ~/notes/foucault_security_2007.md
+- abstract for Paris:
+
+> Techniques of the Predictor: generalizing complex populations
+
+> A strikingly active policy-oriented apparatus has begun to emerge around certain forms of prediction associated with technology platforms. Unlike the predictive models that have long been part of the sciences, a set of institutions, procedures, calculations and operations have begin to take shape around problems of opacity, discrimination,  ownership and extension of predictive models in populations. In this paper, I will suggest that the governmentality of prediction currently taking shape can be understood from the perspective of what we might term 'techniques of the predictor' (after Crary's 'techniques of the observer').  Techniques of the predictor mobilise specific operational statements (classifications, identifications, rankings and recommendations), and generalize their production in new populations. The emerging governmentality of prediction might be see as part of the regularization of this mobilizing production.          
