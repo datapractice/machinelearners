@@ -46,3 +46,7 @@
 > Techniques of the Predictor: generalizing complex populations
 
 > A strikingly active policy-oriented apparatus has begun to emerge around certain forms of prediction associated with technology platforms. Unlike the predictive models that have long been part of the sciences, a set of institutions, procedures, calculations and operations have begin to take shape around problems of opacity, discrimination,  ownership and extension of predictive models in populations. In this paper, I will suggest that the governmentality of prediction currently taking shape can be understood from the perspective of what we might term 'techniques of the predictor' (after Crary's 'techniques of the observer').  Techniques of the predictor mobilise specific operational statements (classifications, identifications, rankings and recommendations), and generalize their production in new populations. The emerging governmentality of prediction might be see as part of the regularization of this mobilizing production.          
+
+## Fri 30 Jun 2017 10:03:26 BST
+- downloaded Royal Society report on governance ~/archive/data_governance/data-management-governance.pdf
+- 
