@@ -72,6 +72,3 @@ We are not requesting to provide a full paper ahead of the conference. However, 
 On another note, there will be a dinner for all speakers on Tuesday 12th, please mark it down in your agenda.
 Don’t hesitate to write back if you have any question. I look forward to meeting you at the conference, and thanks again for taking part in it.
 
-Best wishes,
-
-David
