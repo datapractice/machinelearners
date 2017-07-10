@@ -49,4 +49,29 @@
 
 ## Fri 30 Jun 2017 10:03:26 BST
 - downloaded Royal Society report on governance ~/archive/data_governance/data-management-governance.pdf
-- 
+
+## Mon 10 Jul 2017 16:31:59 BST
+
+- I listened twice to that podcast from the google policy person -- its on the phone. 
+- Conference sent me this briefing:
+
+Thanks again for taking part in the conference in September in Paris. This message is to give you some background on the conference and its objectives, and provide some indications that may be useful to keep in mind when developing your talk.
+
+The conference concludes our three-year comparative project on computation, prediction and policy, in which we looked at the evolution of the dominant modes of computation used in the area of energy policy-making, chemicals regulation and crime control. The heterogeneity of the policies we looked at meant that we considered quite diverse forms of computation/modelling, which had in common to help institutions predict or anticipate future issues, making policy more future-oriented – at least rhetorically.
+
+The conference will also be comparative, with papers on modelling and computation in the area of security, transport, environment, energy, food and health. There will also be diversity in the practices, tools and cultures of modelling and computation that will be talked about, obviously, with some sectors discussing more established forms of statistical modelling, and others being on the more recent developments in terms of predictive analytics.
+
+This is an occasion to develop a more general analysis of how and why the practice of modelling and computation takes root in policy and governance. To be sure, predicting or anticipating futures, is a key reason. But looking across policy areas, one finds that prediction/anticipation means quite a diversity of things (time horizons differ, ambition to change futures also varies…), and one may also find that it is not always the main reason, in fact. Simulating the effects of a decision to avert some contestations seem an important reason, for instance in energy policy-making. In crime control, the adoption of predictive analytics seem to be less about actually knowing future crime with accuracy, than about short-term optimization of patrolling tactics and control over police officers in the field.
+
+In this context, it would be ideal if you could describe with as much clarity as possible, including for people that have little or no knowledge of the area you are investigating, the particular modelling practice that you are considering, describing the data, tools, time-horizons, theories, etc., that characterizes it, putting them in the context of the history of the field, or positioning them vis-à-vis other ways of modelling and computing in the area. But given that you are proposing a full framework, I think your paper will be strong on that anyway, and is pretty promising for our purpose.    
+
+Second, it would be very beneficial for the discussion and accumulation of findings across the conference to keep in mind and try answering the question of how and why has this or these particular way(s) of modelling/computing found its place in the policy area in question? How and why did it or they become a recognized expertise, and something that gets concretely used by the policy-making bodies and administrations involved? That is the question of our project and of the conference, the one that is posed by the rise of predictive analytics (supposedly against more “traditional” forms of modelling and simulation), and the one on which we would like the conference to provide answers. So it would be great to have your take on that question.
+
+We are not requesting to provide a full paper ahead of the conference. However, our plan is to provide participants and the audience with a compendium of short papers of between 1500 and 2000 words, summarizing your talk. It would be ideal if you could send me this by September 1st, so that it can be disseminated a few days before the event.
+
+On another note, there will be a dinner for all speakers on Tuesday 12th, please mark it down in your agenda.
+Don’t hesitate to write back if you have any question. I look forward to meeting you at the conference, and thanks again for taking part in it.
+
+Best wishes,
+
+David
