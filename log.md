@@ -72,3 +72,8 @@ We are not requesting to provide a full paper ahead of the conference. However, 
 On another note, there will be a dinner for all speakers on Tuesday 12th, please mark it down in your agenda.
 Don’t hesitate to write back if you have any question. I look forward to meeting you at the conference, and thanks again for taking part in it.
 
+## Tue 11 Jul 2017 16:09:51 BST
+- reading the Royal Society report.  and putting some excerpts in RoyalSocNotes.md
+- TODO: get the Select Committee on Big Data report, as mentioned in the google policy podcast
+- TODO: get this report The Royal Society. 2017 Machine learning: the power and promise of machines that learn by example. London: The Royal Society. ://royalsociety.org/topics-policy/projects/machine-learning/
+)
