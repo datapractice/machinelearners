@@ -75,5 +75,11 @@ Don’t hesitate to write back if you have any question. I look forward to meeti
 ## Tue 11 Jul 2017 16:09:51 BST
 - reading the Royal Society report.  and putting some excerpts in RoyalSocNotes.md
 - TODO: get the Select Committee on Big Data report, as mentioned in the google policy podcast
-- TODO: get this report The Royal Society. 2017 Machine learning: the power and promise of machines that learn by example. London: The Royal Society. ://royalsociety.org/topics-policy/projects/machine-learning/
-)
+- DONE: get this report The Royal Society. 2017 Machine learning: the power and promise of machines that learn by example. London: The Royal Society.
+https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/archive/data_governance/royal_soc_machine-learning-report_2017.pdf
+
+
+## Wed 12 Jul 2017 16:45:07 BST
+- making notes on the RoyalSoc ML things -- RoyalSoc_ML_2017.md
+
+
