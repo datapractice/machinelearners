@@ -83,3 +83,6 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 - making notes on the RoyalSoc ML things -- RoyalSoc_ML_2017.md
 
 
+
+## Thu 20 Jul 2017 10:11:15 BST
+- thinking on the bike ride home yesterday that the problem of  machine learning governance is its generalization. This makes it seem like specific governance should always be invoked; or that the problem is the context and the data governance. That's a problem. The point about  machine learning is that it has been constituted in an inter-disciplinary space, and its generalization has been part and parcel of its constitution. I should read against the grain of David Demortain's cfp?
