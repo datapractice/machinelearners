@@ -73,7 +73,7 @@ On another note, there will be a dinner for all speakers on Tuesday 12th, please
 Don’t hesitate to write back if you have any question. I look forward to meeting you at the conference, and thanks again for taking part in it.
 
 ## Tue 11 Jul 2017 16:09:51 BST
-- reading the Royal Society report.  and putting some excerpts in RoyalSocNotes.md
+- reading the Royal Society report.  and putting some excerpts in RoydalSocNotes.md
 - TODO: get the Select Committee on Big Data report, as mentioned in the google policy podcast
 - DONE: get this report The Royal Society. 2017 Machine learning: the power and promise of machines that learn by example. London: The Royal Society.
 https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/archive/data_governance/royal_soc_machine-learning-report_2017.pdf
@@ -82,7 +82,10 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 ## Wed 12 Jul 2017 16:45:07 BST
 - making notes on the RoyalSoc ML things -- RoyalSoc_ML_2017.md
 
-
-
 ## Thu 20 Jul 2017 10:11:15 BST
 - thinking on the bike ride home yesterday that the problem of  machine learning governance is its generalization. This makes it seem like specific governance should always be invoked; or that the problem is the context and the data governance. That's a problem. The point about  machine learning is that it has been constituted in an inter-disciplinary space, and its generalization has been part and parcel of its constitution. I should read against the grain of David Demortain's cfp?
+
+## Sun 13 Aug 2017 17:06:11 AEST
+- Listened to 'The Inquiry' on 'the Facebook algorithm' and how the NewsFeed was constructed around 2010. It might be a good example of to work with in this context.   
+- could possibly put this together with some of the stuff from the RoyalSociety and see if it works; 
+- could use Callon's idea of entanglement ... 
