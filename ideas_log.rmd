@@ -9,3 +9,6 @@
 - I'm still interested in Kaggle competitions -- could perhaps learn a lot from looking at the differences between those more closely. e.g. https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection could be worth a look
 
 
+
+## Wed 30 Aug 2017 16:48:26 BST
+- imagenet is a really obvious candidate to talk about the implications of my argument https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world/  
