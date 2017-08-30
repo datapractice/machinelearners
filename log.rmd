@@ -101,5 +101,8 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
     - 6 Sept brief revise
 - re-reading the cfp, and what the project is about; re-read my own abstract focused on techniques of the observer and its relation to populations; I see that it was focused on platforms; it would make sense to continue that idea, especially given the amount of work I've done on platforms recently ...  
 - might make sense to use the framing from platform sociology to do that. 
+- taking some notes on crary ~/notes/crary_techniques.md; could easily all-change 'vision' to 'prediction' in order to make an argument about governmentality as a response to a problem; 
+    - can now exemplify this with the interplay between the subject of prediction and the predictive subject ... 
+    - 
 
 
