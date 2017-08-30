@@ -36,7 +36,9 @@
 - possible titles:
     - Techniques of the Predictor;
     - Vectorising things out: prediction and its consequences
-- looking at literature -- key references cited around governmentality are Dean 1999, Foucault, 1991, Rose 1997, Foucault 2007, and Beck as well as Andrew Barry 1996 
+
+-   looking at literature -- key references cited around governmentality are Dean 1999, Foucault, 1991, Rose 1997, Foucault 2007, and Beck as well as Andrew Barry 1996
+
 
 ## Fri 23 Jun 2017 14:08:42 BST
 - still wrestling a bit with writing this abstract -- I don't want to commit myself to new work. But did look at references that are most cited: Foucault, 2007 can be found at http://lib.myilibrary.com.ezproxy.lancs.ac.uk/Open.aspx?id=317917
@@ -63,9 +65,9 @@ The conference will also be comparative, with papers on modelling and computatio
 
 This is an occasion to develop a more general analysis of how and why the practice of modelling and computation takes root in policy and governance. To be sure, predicting or anticipating futures, is a key reason. But looking across policy areas, one finds that prediction/anticipation means quite a diversity of things (time horizons differ, ambition to change futures also varies…), and one may also find that it is not always the main reason, in fact. Simulating the effects of a decision to avert some contestations seem an important reason, for instance in energy policy-making. In crime control, the adoption of predictive analytics seem to be less about actually knowing future crime with accuracy, than about short-term optimization of patrolling tactics and control over police officers in the field.
 
-In this context, it would be ideal if you could describe with as much clarity as possible, including for people that have little or no knowledge of the area you are investigating, the particular modelling practice that you are considering, describing the data, tools, time-horizons, theories, etc., that characterizes it, putting them in the context of the history of the field, or positioning them vis-à-vis other ways of modelling and computing in the area. But given that you are proposing a full framework, I think your paper will be strong on that anyway, and is pretty promising for our purpose.    
+In this context, it would be ideal if you could describe with as much clarity as possible, including for people that have little or no knowledge of the area you are investigating, **the particular modelling practice that you are considering, describing the data, tools, time-horizons, theories, etc., that characterizes it, putting them in the context of the history of the field, or positioning them vis-à-vis other ways of modelling and computing in the area.** But given that you are proposing a full framework, I think your paper will be strong on that anyway, and is pretty promising for our purpose.    
 
-Second, it would be very beneficial for the discussion and accumulation of findings across the conference to keep in mind and try answering the question of how and why has this or these particular way(s) of modelling/computing found its place in the policy area in question? How and why did it or they become a recognized expertise, and something that gets concretely used by the policy-making bodies and administrations involved? That is the question of our project and of the conference, the one that is posed by the rise of predictive analytics (supposedly against more “traditional” forms of modelling and simulation), and the one on which we would like the conference to provide answers. So it would be great to have your take on that question.
+Second, it would be very beneficial for the discussion and accumulation of findings across the conference to keep in mind and try answering the question of **how and why has this or these particular way(s) of modelling/computing found its place in the policy area in question?** How and why did it or they become a recognized expertise, and something that gets concretely used by the policy-making bodies and administrations involved? That is the question of our project and of the conference, the one that is posed by the rise of predictive analytics (supposedly against more “traditional” forms of modelling and simulation), and the one on which we would like the conference to provide answers. So it would be great to have your take on that question.
 
 We are not requesting to provide a full paper ahead of the conference. However, our plan is to provide participants and the audience with a compendium of short papers of between 1500 and 2000 words, summarizing your talk. It would be ideal if you could send me this by September 1st, so that it can be disseminated a few days before the event.
 
@@ -78,7 +80,6 @@ Don’t hesitate to write back if you have any question. I look forward to meeti
 - DONE: get this report The Royal Society. 2017 Machine learning: the power and promise of machines that learn by example. London: The Royal Society.
 https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/archive/data_governance/royal_soc_machine-learning-report_2017.pdf
 
-
 ## Wed 12 Jul 2017 16:45:07 BST
 - making notes on the RoyalSoc ML things -- RoyalSoc_ML_2017.md
 
@@ -89,3 +90,16 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 - Listened to 'The Inquiry' on 'the Facebook algorithm' and how the NewsFeed was constructed around 2010. It might be a good example of to work with in this context.   
 - could possibly put this together with some of the stuff from the RoyalSociety and see if it works; 
 - could use Callon's idea of entanglement ... 
+
+## Wed 30 Aug 2017 14:59:05 BST
+- back at work after summer holidays;  How can I use what I've argued in the book about vectorisation, functions as partial observers, probabilisation, hyperobjects and diagrammatic thought to frame an argument?
+- for 2000 words due 6 June
+    - 31 Aug 750
+    - 1 Sept 750
+    - 4 Sept revise
+    - 5 Sept enter revisions    
+    - 6 Sept brief revise
+- re-reading the cfp, and what the project is about; re-read my own abstract focused on techniques of the observer and its relation to populations; I see that it was focused on platforms; it would make sense to continue that idea, especially given the amount of work I've done on platforms recently ...  
+- might make sense to use the framing from platform sociology to do that. 
+
+
