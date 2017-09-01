@@ -1,33 +1,62 @@
-# Techniques of the Predictor: Generalizing Complex Populations
+# Techniques of the Predictor: Generalizing to Complex Populations
 
 ## Introduction
 
-- the pun in the title: 'the predictor' is a play on 'the observer,' the key figure/term in Jonathan Crary's book, _Techniques of the Observer_ [@Crary_TBA]. 
-- Predictors in machine learning refer to variables or features included in a predictive model used in inference or prediction.
-- Like Crary, I will argue that we see a transformation in prediction occurring, but one in which the position of the predictor switches between people and thing. 
-- specific models I will discuss include the logistic regression model widely used in classification, and its generalization in neural nets for classification.
-- the main argument I want to develop here concerns the ways in which prediction has recently become an object of regulation or governmentality in its own right. I appreciate that this runs in the opposite direction to the theme of the conference ('how prediction impinges on policy'). By examining how prediction becomes a topic of governmentality, we might also learn something about the way that prediction feeds into policy. 
-- Prediction, at least in the form of machine learning, becomes an object in the context of platforms and their complex populations of actors. 
-- Prediction is increasingly autonomised. Prediction is increasingly operationalized in ways that are closely linked to the growth of technological platforms such as social media, large-scale scientific instruments and device-networks.   
+Predictors in machine learning refer to variables or features included in a predictive model used in inference or prediction. Predictors are the so-called 'independent variables' in the statistical models that underpin nearly all machine learning. 
+There is wordplay in my title: 'the predictor' is a play on 'the observer,' the key figure/term in Jonathan Crary's book, _Techniques of the Observer: On Vision and Modernity in the Nineteenth Century_ [@Crary_TBA]. 
+
+> Though obviously one who sees, an observer is more importantly one who sees within a prescribed set of possibilities, one who is embedded in a system of conventions and limitations [@Crary_1991,6].
+
+Crary argues that seeing was transformed in the nineteenth century through the constitution of an observer, someone who sees in particular ways. The constitution of the observer required a set of scientific and cultural practices concerning vision. These practices remake 'the individual as observer into something calculable and regularizable and ... human vision into something measurable and thus exchangeable' (17). In the process, seeing itself was autonomized in apparatuses associated with the disciplined work of vision (19).    
+Like Crary, I will argue that we see a transformation in prediction occurring,  one in which the position of the **predictor** swaps between people and things. Prediction is inseparable from the practices, techniques, institutions and procedures of subjectification. At the same time, prediction, like sight, is being autonomized.    
+
+- Prediction, at least in the form of machine learning, becomes an object in the context of technological platforms and their complex populations of actors. 
+- The  specific models I will discuss include the logistic regression model widely used in classification, and its generalization in neural nets for classification.
 - Platforms and their platformization [@TBA - Paul Edwards article] are significant sites of predictive proliferation. Not only do they constitute sites of re-configured interaction of populations, ways of ordering the pluralities of communication and interaction, they pose ordering challenges that lead to a proliferation of predictions as part of a control strategy. It makes sense to think of platforms as a transformation in governmentality, and hence in the fabric of policy. 
-- Finally, predictions populate platforms with predictors in both senses of that term: the people who predictor and the features of populations that can be incorporated into predictive models through transformations of data that render them as variables in a predictive model.
-- I will endeavour, by reference to some recent formulations of policy for governance of prediction, to flesh out the implications of these transformations. 
+- Prediction is increasingly autonomised. Prediction is increasingly operationalized in ways that are closely linked to the growth of technological platforms such as social media, large-scale scientific instruments and device-networks.   
+- Predictions populate platforms with predictors in both senses of that term: the people who predictor and the features of populations that can be incorporated into predictive models through transformations of data that render them as variables in a predictive model.
 
-## Prediction as a form of vision
+The main implication I want to develop here concerns the ways in which prediction has recently become an object of regulation or governmentality in its own right. The growing governmentality of prediction does not stand apart from prediction itself, but is part of the constitution of the predictor.[^1] 
 
-- Let me begin by describing the  spread of the practice of prediction known as machine learning. Machine learning presents a challenge to our analytical imperatives to deal with specificity and singularity in case studies. I have argued elsewhere [@Mackenzie_2017] that the specificity of  machine learning resides in its generalization, its tendency to vectorize, functionalise and probabilise situations within operational formations. This is perhaps the only way to explain its extraordinary proliferation across sciences, biomedicine, industries, media and government in the last decades. Of course, it is possible to choose any number of case studies of machine learning predictions operating in specific locations, but perhaps the most high profile would be social media and internet platforms such as Facebook and Google, where a myriad of machine learners can be found.
-- The preliminary observation here is that we are not dealing with isolated, epistemically concentrated forms of prediction, but populations of predictors that respond to the exigencies of platforms. One brief example of this: `FBLearnerFlow` is a  machine learning pipeline developed and used by Facebook to allow predictions and predictive models to proliferate and populate every nook and cranny of the sprawling entanglement of systems it operates. According to its developers, roughly a million models have been developed using `FBLearnerFlow`. The simple point here is that we are not dealing with a single centre of predictive calculation, but a platformizing process in which predictions increasingly operate as ways of experimenting with, modulating and shaping the sometimes chaotic or unstable dynamics of social media platforms.  g
+Obviously the governance of machine learning is potentially a huge topic. I will focus on perhaps the simplest and most general claim characterising the emerging regimes of governance: generalization. 
+
+[^1]: I appreciate that this runs in the opposite direction to the theme of the conference ('how prediction impinges on policy'). By examining how prediction becomes a topic of governmentality, we might also learn something about the way that prediction feeds into policy. 
+
+## The proliferation of prediction: a generalizing apparatus
+
+- Let me begin by pointing to the  spread of the practice of prediction known as machine learning. The techniques and models grouped under machine learning come from diverse scientific and engineering fields. They include statistics, computer science, operations research, control theory and various specific fields such as psychology and even sociology. The techniques and practices vary in age, some dating from the 19th century and others from the last few years. 
+- Machine learning presents a challenge to our analytical imperatives to deal with specificity and singularity in case studies. I have argued elsewhere [@Mackenzie_2017] that the specificity of  machine learning resides in its generalization, its tendency to vectorize, functionalise and probabilise situations within operational formations. The apparatus of generalization is perhaps the only way to explain its extraordinary proliferation across sciences, biomedicine, industries, media and government in the last decades. Of course, it is possible to choose any number of case studies of machine learning predictions operating in specific locations, but perhaps the most high profile would be social media and internet platforms such as Facebook and Google, where a myriad of machine learners can be found.
+- *Generalization* also has a specific technical sense in machine learning practice. It refers to the capacity of a machine learner (again, like predictor, the term machine learner includes both people and things) to accurately predict or classify when confronted with new data or 'observations.' 
+- The capacity of machine learning to generalize or to learn from examples has often been discussed, and is a regular feature of accounts of machine learning:
+
+> Machine learning can carry out tasks of such complexity that the desired outputs could not be specified in programs based on step-by-step processes created by humans [@RoyalSociety_2017,19]. 
+
+Characteristically, the capacity of these techniques to predict is inseparable from their capacity to generalize from known examples to fresh or hitherto unseen examples. And this capacity to generalize, and hence their predictive power,  depends on the models ability to 'carry out tasks of such complexity' that programs to do them could not be specified step-by-step by human programmers, statisticians or engineers. (As we will see, this inhuman capacity also creates the governance problems and need for policy around machine learners.)    
+
+## The possibilities and impossibilities of generalizing
+
+The preliminary observation here is that we are not dealing with isolated, epistemically concentrated forms of prediction, but populations of predictors that respond to the exigencies of *platforms.* This aspect of machine learning is often neglected in the policy discussions. Machine learning nearly always takes place in situations where the complexity of the situation cannot be specified in programs of action. 
+
+One brief example of this: `FBLearnerFlow` is a  machine learning pipeline developed and used by Facebook to allow predictions and predictive models to proliferate and populate every nook and cranny of the sprawling entanglement of systems it operates. According to its developers, roughly a million models have been developed using `FBLearnerFlow`. The simple point here is that we are not dealing with a single centre of predictive calculation, but a platformizing process in which predictions increasingly operate as ways of experimenting with, modulating and shaping the sometimes chaotic or unstable dynamics of social media platforms.  
+
+- In this, and a myriad of other examples that could be given, prediction, and learning to predict takes place amidst populations of models of varying complexity. In some respects, we could say, machine learning is the practice of disciplining and automating the production of prediction, much as Crary argues that sight was autonomized in visual apparatuses of the 19th century. 
+
 -  This population of predictive models (involved in inference, classification, description, experimentation, etc.), is very much the target of observation. That is, their predictive performance -- their accuracy, their error rates, etc. -- attract very close scrutiny and observation. Indeed, this observation of prediction is perhaps the main concern of  machine learners in practice. Many of the practices that define  machine learning as a set of techniques ranging from the transformation of data into a set of predictors, features or variables in a vector space, implementation of various models and training of their operation through use of various techniques of optimisation, randomisation, probabilisation and competitive testing entail observation and visual ordering.
-HERE
 - the link between prediction & vision: Crary's main argument about vision
 - the form of observation that we see in machine learning can be understood as a 'partial observer of the function' in Deleuze and Guattari's terms.
 -
 
-## The proliferation of prediction
-
-## Prediction as observation
-
 ## The observers of prediction
+
+The Royal Society Report on  machine learning bears the title _Machine learning: the power and promise of computers that learn by example_ [@RoyalSociety_2017]. The section on governance of machine learning is rather brief, although that can be explained in part by the existence of another recent report on data governance [@RoyalSociety_TBA]. The report makes many recommendations concerning the development of machine learning for industrial, research and societal purposes. I'm interested, however, in the parts of the report that describe the development of policies for the governance of machine learning.  
+
+It is striking that the governance of the forms of prediction embodied in machine learning starts from the premise of specificity:
+
+> It is not appropriate to set up governance structures for machine learning per se. While there may be specific questions about the use of machine learning in specific circumstances, these should be handled in a sector-specific way, rather than via an overarching framework for all uses of machine learning; some sectors may have existing regulatory mechanisms that can manage, while in others there may not be these existing systems 12
+
+On the one hand, this recommendation appears to acknowledge the generalization of machine learning to many sectors. On the other hand, it insists on specificities of questions, circumstances and sector in opposing any general regulation of its practice.  Even if there is no contradiction or tension between the generalization of machine learning and the need to attend to its specificities, the form of governmentality envisioned here is not administrative practice. 
+
+HERE
 
 ## The observation of predictions
 

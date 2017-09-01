@@ -1,0 +1,1 @@
+/home/mackenza/notes/crary_techniques.md

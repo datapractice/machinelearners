@@ -111,3 +111,8 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 - TODO: look through the literature on governmentality for anything on policy. What is policy from the perspective of governmentality?
 - TODO: look at Amoore's stuff on this -- very relevant!
 - wrote 800 words on  machine learning; not sure how far I can get in describing any specific example, but maybe that doesn't matter. 
+
+## Fri 01 Sep 2017 08:57:37 BST
+- adding crary quotes 
+- added some of the royal society report stuff
+- got to about 1560 words -- want to make one simple point: the possibility of generalization in and of machine learning means a problem of governmentality that has to grapple with a population. But like all populations, a population of machine learners will pose problems of the unruly plurality, and a constant overstepping or impinging on the lines between person and thing, and indeed on the constitution of individual and group.

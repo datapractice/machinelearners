@@ -1,0 +1,1 @@
+/home/mackenza/notes/foucault_security_2007.md
