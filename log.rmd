@@ -63,7 +63,7 @@ The conference concludes our three-year comparative project on computation, pred
 
 The conference will also be comparative, with papers on modelling and computation in the area of security, transport, environment, energy, food and health. There will also be diversity in the practices, tools and cultures of modelling and computation that will be talked about, obviously, with some sectors discussing more established forms of statistical modelling, and others being on the more recent developments in terms of predictive analytics.
 
-This is an occasion to develop a more general analysis of how and why the practice of modelling and computation takes root in policy and governance. To be sure, predicting or anticipating futures, is a key reason. But looking across policy areas, one finds that prediction/anticipation means quite a diversity of things (time horizons differ, ambition to change futures also varies…), and one may also find that it is not always the main reason, in fact. Simulating the effects of a decision to avert some contestations seem an important reason, for instance in energy policy-making. In crime control, the adoption of predictive analytics seem to be less about actually knowing future crime with accuracy, than about short-term optimization of patrolling tactics and control over police officers in the field.
+This is an occasion to develop a more general analysis of **how and why the practice of modelling and computation takes root in policy and governance**. To be sure, predicting or anticipating futures, is a key reason. But looking across policy areas, one finds that prediction/anticipation means quite a diversity of things (time horizons differ, ambition to change futures also varies…), and one may also find that it is not always the main reason, in fact. Simulating the effects of a decision to avert some contestations seem an important reason, for instance in energy policy-making. In crime control, the adoption of predictive analytics seem to be less about actually knowing future crime with accuracy, than about short-term optimization of patrolling tactics and control over police officers in the field.
 
 In this context, it would be ideal if you could describe with as much clarity as possible, including for people that have little or no knowledge of the area you are investigating, **the particular modelling practice that you are considering, describing the data, tools, time-horizons, theories, etc., that characterizes it, putting them in the context of the history of the field, or positioning them vis-à-vis other ways of modelling and computing in the area.** But given that you are proposing a full framework, I think your paper will be strong on that anyway, and is pretty promising for our purpose.    
 
@@ -105,7 +105,6 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 - taking some notes on crary ~/notes/crary_techniques.md; could easily all-change 'vision' to 'prediction' in order to make an argument about governmentality as a response to a problem; 
     - can now exemplify this with the interplay between the subject of prediction and the predictive subject ... 
 
-
 ## Thu 31 Aug 2017 15:00:09 BST
 - started actual paper in governing_prediction.rmd. Plan written. 
 - TODO: look through the literature on governmentality for anything on policy. What is policy from the perspective of governmentality?
@@ -116,3 +115,15 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 - adding crary quotes 
 - added some of the royal society report stuff
 - got to about 1560 words -- want to make one simple point: the possibility of generalization in and of machine learning means a problem of governmentality that has to grapple with a population. But like all populations, a population of machine learners will pose problems of the unruly plurality, and a constant overstepping or impinging on the lines between person and thing, and indeed on the constitution of individual and group.
+
+## Mon 04 Sep 2017 10:13:27 BST
+- tweaking opening a bit -- what is my real point? That the autonomization of prediction means that models need to be governed? That is, the population of models in its unruly multiplicity becomes the object of governance?   
+- plan for today -- write 700 words or so focusing on the problem of governance ...  
+- here are the three main questions:
+    1 how and why the practice of modelling and computation takes root in policy and governance
+    2 how and why has this or these particular way(s) of modelling/computing found its place in the policy area in question?*
+    3 the particular modelling practice that you are considering, describing the data, tools, time-horizons, theories, etc., that characterizes it, putting them in the context of the history of the field, or positioning them vis-à-vis other ways of modelling and computing in the area.
+- I can answer number 3 quite easily, but the first two, which are more or less the same, is harder. Maybe I can bracket the 2nd one, and focus on the first, giving it a spin that relates to the practices of data governance ... It'd be way easier if I was discussing an example like rental prices or job ads on Kaggle. But then I could do that -- look at all the Kaggle competitions that involve policy in some way (even some of the current ones do ...)    
+- The point would be that the process of setting up competitions, opening up models to population constructors, and thereby affording their generalization -- this what energizes the field, and thereby changes the performativity of policy?        
+- got into an example -- the TSA passenger screening algorithm -- mainly because I wanted to illustrate the point above.
+- then restructured the argument around the example, putting in more data, and also moving things around a bit. 
