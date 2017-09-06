@@ -131,4 +131,9 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 ## Tue 05 Sep 2017 10:30:47 BST
 - 2 main parts of my argument about governance -- the impossibility of specificity; the reality of autonomisation/automation 
 - today: write the section that deals with the 'learning'/automation bit. 
-- did that mostly -- still needs an example of it in operation. But I'm going the conclusion on the premise of restriction to specificity 
+- did that mostly -- still needs an example of it in operation. But I'm doing the conclusion on the premise of restriction to specificity 
+
+## Wed 06 Sep 2017 10:16:43 BST
+- haven't developed the DHS example much around the actual models ... how can I do that given the models haven't been done yet?   
+- looked at Brian Farrar -- he is actually implementing stuff to begin with; downloaded image from https://www.kaggle.com/jbfarrar/preprocessing-pipeline-and-convnet-trainer and also the Alexnet paper (which I should use for operative images) to ~/archive/data_intensive/machine_learning/imagenet-classification-with-deep-convolutional-nn.pdf 
+- more less have a paper 4300 words (including quotes). governing_prediction.pdf
