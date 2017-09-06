@@ -120,10 +120,15 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 - tweaking opening a bit -- what is my real point? That the autonomization of prediction means that models need to be governed? That is, the population of models in its unruly multiplicity becomes the object of governance?   
 - plan for today -- write 700 words or so focusing on the problem of governance ...  
 - here are the three main questions:
-    1 how and why the practice of modelling and computation takes root in policy and governance
-    2 how and why has this or these particular way(s) of modelling/computing found its place in the policy area in question?*
-    3 the particular modelling practice that you are considering, describing the data, tools, time-horizons, theories, etc., that characterizes it, putting them in the context of the history of the field, or positioning them vis-à-vis other ways of modelling and computing in the area.
+    1. how and why the practice of modelling and computation takes root in policy and governance
+    2. how and why has this or these particular way(s) of modelling/computing found its place in the policy area in question?
+    3. the particular modelling practice that you are considering, describing the data, tools, time-horizons, theories, etc., that characterizes it, putting them in the context of the history of the field, or positioning them vis-à-vis other ways of modelling and computing in the area.
 - I can answer number 3 quite easily, but the first two, which are more or less the same, is harder. Maybe I can bracket the 2nd one, and focus on the first, giving it a spin that relates to the practices of data governance ... It'd be way easier if I was discussing an example like rental prices or job ads on Kaggle. But then I could do that -- look at all the Kaggle competitions that involve policy in some way (even some of the current ones do ...)    
 - The point would be that the process of setting up competitions, opening up models to population constructors, and thereby affording their generalization -- this what energizes the field, and thereby changes the performativity of policy?        
 - got into an example -- the TSA passenger screening algorithm -- mainly because I wanted to illustrate the point above.
 - then restructured the argument around the example, putting in more data, and also moving things around a bit. 
+
+## Tue 05 Sep 2017 10:30:47 BST
+- 2 main parts of my argument about governance -- the impossibility of specificity; the reality of autonomisation/automation 
+- today: write the section that deals with the 'learning'/automation bit. 
+- did that mostly -- still needs an example of it in operation. But I'm going the conclusion on the premise of restriction to specificity 

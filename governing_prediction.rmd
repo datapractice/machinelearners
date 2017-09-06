@@ -2,33 +2,37 @@
 
 ## Introduction
 
-'Predictors' in machine learning refer to variables or features included in a model used in inference or prediction. Predictors are the so-called 'independent variables' in the statistical models that underpin nearly all machine learning. There is wordplay in my title: 'the predictor' is a play on 'the observer,' the key figure/term in Jonathan Crary's book, _Techniques of the Observer: On Vision and Modernity in the Nineteenth Century_ [@Crary_1991]. 
+'Predictors' in machine learning -- the domain of prediction I will be discussing -- refer to variables or features forming part of a model used in inference or prediction. They are the so-called 'independent variables' in the statistical models that underpin nearly all machine learning.
+
+There is wordplay in my title: 'the predictor' is a play on 'the observer', the key figure/term in Jonathan Crary's book, _Techniques of the Observer: On Vision and Modernity in the Nineteenth Century_ [@Crary_1991]. 
 
 > Though obviously one who sees, an observer is more importantly one who sees within a prescribed set of possibilities, one who is embedded in a system of conventions and limitations [@Crary_1991,6].
 
 Crary argues that seeing was transformed in the nineteenth century through the constitution of an observer, someone who sees in particular ways. The constitution of the observer required a set of scientific and cultural practices concerning vision. These practices remake 'the individual as observer into something calculable and regularizable and ... human vision into something measurable and thus exchangeable' (17). In the process, seeing itself was autonomized in apparatuses associated with the disciplined work of vision (19).    
 
-Like Crary, I will argue that we see a transformation in prediction occurring,  one in which the position of the **predictor** swaps between people and things. Prediction is inseparable from the practices, techniques, institutions and procedures of subjectification. At the same time, and as a consequence, prediction, like sight, is being 'autonomized,' but in ways that elicit further efforts to govern prediction.    
+Like Crary, I will argue that prediction is presently undergoing a transformation,  a transformation in which the position of the **predictor** swaps between people and things. Prediction is inseparable from the practices, techniques, institutions and procedures of subjectification. At the same time, and as a consequence, prediction, like sight, is being 'autonomized,' but in ways that elicit further efforts to govern prediction.    
 
-My general argument here is that the population of predictors -- people and variables -- have become much more like the populations that are the conventional target of governmentality [@Foucault_2007]. That is, populations of predictors (people and data) become the general object of regulation, but in a new form. A particular operation -- **generalizing** -- will be at the centre discussion here. 
+My general argument here is that the population of predictors -- people and variables -- have become much more like the populations that are the conventional target of governmentality [@Foucault_2007]. That is, populations of predictors (people and data) become the general object of regulation as they multiply around predictions.  A particular predictive operation -- **generalization** -- will be at the centre discussion here. 
 
-I will work with one illustrative example: the 'Passenger Screening Algorithm Challenge -- Improve the Accuracy of the Department of Homeland Security threat recognition algorithms' (https://www.kaggle.com/c/passenger-screening-algorithm-challenge/data), a 'challenge' currently running on the data science/machine learning competition site/platform, Kaggle.com:      
+I will work with one illustrative example: the 'Passenger Screening Algorithm Challenge -- Improve the Accuracy of the Department of Homeland Security threat recognition algorithms' (https://www.kaggle.com/c/passenger-screening-algorithm-challenge/data), a 'data challenge' currently running on the data science/machine learning competition site/platform, Kaggle.com:      
 
 > Currently, TSA [Transportation Security Administration] purchases updated algorithms exclusively from the manufacturers of the scanning equipment used. These algorithms are proprietary, expensive, and often released in long cycles. In this competition, TSA is stepping outside their established procurement process and is challenging the broader data science community to help improve the accuracy of their threat prediction algorithms. Using a dataset of images collected on the latest generation of scanners, participants are challenged to identify the presence of simulated threats under a variety of object types, clothing types, and body types. Even a modest decrease in false alarms will help TSA significantly improve the passenger experience while maintaining high levels of security. [Passenger Screening Algorithm Challenge, Kaggle](https://www.kaggle.com/c/passenger-screening-algorithm-challenge)
 
 The predictions that might be made about 'threats' would affect passengers lives quite directly, mostly in the form of the length of time, and associated anxieties, of queuing at airport security in the USA. 
 
-## The observers of prediction
+## The goverance of prediction
 
-The recent Royal Society Report on  machine learning bears the title _Machine learning: the power and promise of computers that learn by example_ [@RoyalSociety_2017]. The section on governance of machine learning is rather brief, although that can be explained in part by the existence of another recent wide-ranging Royal Society report on data governance [@RoyalSociety_2016]. The machine learning report makes many recommendations concerning the development of machine learning for industrial, research and societal purposes. I'm interested, however, in the parts of the report that describe the development of policies for the governance of machine learning. 
+The starting point of recent attempts to govern machine learning is **specificity**. The recent Royal Society Report on  machine learning bears the title _Machine learning: the power and promise of computers that learn by example_ [@RoyalSociety_2017]. The section on governance of machine learning is rather brief, although that can be explained in part by the existence of another recent wide-ranging Royal Society report on data governance [@RoyalSociety_2016]. The machine learning report makes many recommendations concerning the development of machine learning for industrial, research and societal purposes. I'm interested, however, in the parts of the report that describe the development of policies for the governance of machine learning. 
 
-Recommendations for the governance of machine learning begin from a premise of specificity:
+Recommendations for the governance of machine learning begin with a restriction premised on specificity:
 
 > It is not appropriate to set up governance structures for machine learning per se. While there may be specific questions about the use of machine learning in specific circumstances, these should be handled in a sector-specific way, rather than via an overarching framework for all uses of machine learning; some sectors may have existing regulatory mechanisms that can manage, while in others there may not be these existing systems [@RoyalSociety_2017,12]. 
 
-On the one hand, this recommendation appears to acknowledge the generalization of machine learning to many sectors. On the other hand, it insists on specificities of questions, circumstances and sector in opposing any general regulation of its practice.  The simplest possible question here: is there a tension between the generalization of machine learning and the need to attend to its specificities? In the light of the mundane realities of machine learning as predictive practice, I would provisionally 'yes.'  
+On the one hand, this recommendation appears to acknowledge the generalization of machine learning to many sectors. On the other hand, it insists on specificities of questions, circumstances and sector in opposing any general regulation of machine learning practice.  The simplest possible question here: is there a tension between the generalization of machine learning and the need to attend to its specificities? In the light of the mundane realities of machine learning as predictive practice, I would provisionally 'yes.'  
 
-## The position of the predictors
+The tension between generalizations about machine learning and the need to attend to specificities lies at the heart of machine learning in two respects. The organisation of data in machine learning does not respect the boundaries of sectors or economic subdivisions, and nor does the automation of model-building respect the economic subdivision of labour. Predictors -- in both senses of the term -- multiply and migrate in machine learning. 
+
+## The population of predictors
 
 Prediction, at least in the form of machine learning, becomes an object in the context of technological platforms and their complex populations of actors. It is very difficult to understand the growth of  machine learning practice apart from platforms.  Platforms and their platformization [@TBA - Paul Edwards article] are significant sites of predictive proliferation. Not only do they constitute sites of re-configured interaction of populations, ways of ordering the pluralities of communication and interaction, they pose ordering challenges that lead to a proliferation of predictions as part of a control strategy. It makes sense to think of platforms as a key site in transformation of prediction, and hence in the fabric of predictive governmentality. 
 
@@ -61,50 +65,120 @@ It is difficult to concisely illustrate the data produced by the scanners. It is
 |1cb13f156bd436222447dd658180bd96_Zone15|0.0|
 |1cb13f156bd436222447dd658180bd96_Zone16|0.2|
 |1cb13f156bd436222447dd658180bd96_Zone17|0.8|
-|--------------------------------------|---|
+|---------------------------------------|---|
 
 In a machine learning model, the body threat zones shown in the Body Zone map are assigned a threat probability between 0 and 1 for each scanned individual. The scanned individual in the sample data has a unique ID, and the 17 threat zones. (It is interesting that the head is not a threat zone the DHS screening.)
 
-The model, whatever shape that it takes, has the task for taking 16 individual scans of a body taken at 22.5 degree angles part of the whole and assigning threat probabilities to the body zones 1-17.  The 16 images of each individual somehow contain the predictors or features on which the model will work, but how these predictors will be extracted, generated or constructed from the images and other data (for instance, the hundred or so metadata fields concerning the scanner itself) cannot be known in advanced of an actual model. 
+The model, whatever shape that it takes, has the task of making 16 individual scans of a body taken at 22.5 degree angles part of a whole and assigning threat probabilities to each of the body zones 1-17.  The 16 images of each individual somehow contain the predictors or features on which the model will work, but how these predictors will be extracted, generated or constructed from the images and other data (for instance, the hundred or so metadata fields concerning the scanner itself) cannot be known in advanced of an actual model. 
 
-The data analytic tools that machine learners use to work with such data are very widely available. In the case of the data science competitions on Kaggle.com, they are usually Python or R libraries. Indeed, the use of widely available, normally open-source software libraries to implement  machine learning models is very much a defining feature of the shift in 'techniques of the predictor' I am describing here.  Indeed, the DHS describes the motivation for the challenge in precisely these terms: the advance the accuracy of threat detection by changing models more rapidly and escaping the slow pace of proprietary software development. The prize money on offer -- \$USD1.5 million -- attests to value of such acceleration. 
+```
+    h['frequency'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['mat_velocity'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['num_pts'] = np.fromfile(fid, dtype = np.int32, count = 1)
+    h['num_polarization_channels'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['adc_min_voltage'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['adc_max_voltage'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['band_width'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['spare01'] = np.fromfile(fid, dtype = np.int16, count = 5)
+    h['polarization_type'] = np.fromfile(fid, dtype = np.int16, count = 4)
+    h['record_header_size'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['word_type'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['word_precision'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['min_data_value'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['max_data_value'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['avg_data_value'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['data_scale_factor'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['data_units'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['surf_removal'] = np.fromfile(fid, dtype = np.uint16, count = 1)
+    h['edge_weighting'] = np.fromfile(fid, dtype = np.uint16, count = 1)
+    h['x_units'] = np.fromfile(fid, dtype = np.uint16, count = 1)
+    h['y_units'] = np.fromfile(fid, dtype = np.uint16, count = 1)
+    h['z_units'] = np.fromfile(fid, dtype = np.uint16, count = 1)
+    h['t_units'] = np.fromfile(fid, dtype = np.uint16, count = 1)
+    h['spare02'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['x_return_speed'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['y_return_speed'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['z_return_speed'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['scan_orientation'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['scan_direction'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['data_storage_order'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['scanner_type'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['x_inc'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['y_inc'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['z_inc'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['t_inc'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['num_x_pts'] = np.fromfile(fid, dtype = np.int32, count = 1)
+    h['num_y_pts'] = np.fromfile(fid, dtype = np.int32, count = 1)
+    h['num_z_pts'] = np.fromfile(fid, dtype = np.int32, count = 1)
+    h['num_t_pts'] = np.fromfile(fid, dtype = np.int32, count = 1)
+    h['x_speed'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['y_speed'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['z_speed'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['x_acc'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['y_acc'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['z_acc'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['x_motor_res'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['y_motor_res'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['z_motor_res'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['x_encoder_res'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['y_encoder_res'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['z_encoder_res'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['depth_recon'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['x_max_travel'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['y_max_travel'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['elevation_offset_angle'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['roll_offset_angle'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['z_max_travel'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['azimuth_offset_angle'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['adc_type'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['spare06'] = np.fromfile(fid, dtype = np.int16, count = 1)
+    h['scanner_radius'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['x_offset'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['y_offset'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['z_offset'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['t_delay'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['range_gate_start'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['range_gate_end'] = np.fromfile(fid, dtype = np.float32, count = 1)
+    h['ahis_software_version'] = np.fromfile(fid, dtype = np.float32, count = 1)
+``` [613 words]
 
-## The main implication
+The code extract from one contestant's work on preparing the scanner data for modelling lists many different elements of the scanner itself that might be relevant to the final predictions: the 'software version', the   'azimuth offset angle,' etc.  The point here is that the number of predictors that might figure in the threat prediction algorithm is a matter of exploration, discovery and invention. The machine learning literature [@Hastie_2009; TBA] is replete with techniques of constructing, eliciting, finding or creating additional predictors in a bid to improve the accuracy of prediction. Indeed the very form of the data challenge or Kaggle  machine learning competition plays on that double sense of predictor: by enrolling large numbers of people in predictive work -- typical Kaggle competitions have several thousand entrants -- the 'Passenger Threat Screening' competition multiplies predictors in both senses of the term. More people or even a 'crowd' or undisciplined population constructing models will lead to the deployment of more predictors in the models. 
 
-The main implication I want to develop here concerns the ways in which prediction has recently become an object of regulation or governmentality in its own right. The growing governmentality of prediction does not stand apart from prediction itself, but is part of the constitution of the predictor.[^1] 
+The data analytic tools that machine learners use to work with such data are very widely available. In the case of the data science competitions on Kaggle.com, they are usually Python or R libraries. Indeed, the use of widely available, normally open-source software libraries to implement  machine learning models is very much a defining feature of the shift in 'techniques of the predictor' I am describing here.  Indeed, the DHS describes the aim of the challenge in precisely these terms:  advancing the accuracy of threat detection by changing models more rapidly and escaping the slow pace of proprietary software development. The prize money on offer -- \$USD1.5 million -- attests to value of such acceleration. 
 
-Obviously the governance of machine learning is potentially a huge topic. I will focus on perhaps the simplest and most general claim characterising the emerging regimes of governance: generalization. 
+## The main implication: generalization
+
+The second  main implication I want to develop here concerns the ways in which prediction itself multiplies in machine learning. This multiplication affects how machine learning has recently become an object of regulation or governmentality since the proliferation of prediction and its autonomisation (self-driving cars, AI, etc.) seems to pose 'existential threats' [@Gibbs_2017]. The growing governmentality of prediction does not stand apart from prediction itself, but is part of the constitution of the predictor.[^1] 
+
+I will focus on perhaps the simplest and most general claim characterising the emerging regimes of prediction associated with machine learning: generalization. Let me begin by pointing to the  spread or generalization of the practice. The techniques and models grouped under machine learning come from diverse scientific and engineering fields. They include statistics, computer science, operations research, control theory and various specific fields such as psychology and even sociology. The techniques and practices vary in age, some dating from the 19th century and others from the last few years. 
 
 [^1]: I appreciate that this runs in the opposite direction to the theme of the conference ('how prediction impinges on policy'). By examining how prediction becomes a topic of governmentality, we might also learn something about the way that prediction feeds into policy. 
 
-## The proliferation of prediction: a generalizing apparatus
+Machine learning presents a challenge to our analytical imperatives to deal with specificity and singularity in case studies. I have argued elsewhere [@Mackenzie_2017] that the specificity of  machine learning resides in its generalization, its tendency to vectorize, functionalise and probabilise situations within certain operational formations. The apparatus of generalization is perhaps the only way to explain its extraordinary proliferation across sectors of sciences, biomedicine, industries, media and government in the last decades. Of course, it is possible to choose any number of case studies of machine learning predictions operating in specific locations, but perhaps the most high profile would be social media and internet platforms such as Facebook and Google, where a myriad of machine learners can be found.
 
-Let me begin by pointing to the  spread of the practice of prediction known as machine learning. The techniques and models grouped under machine learning come from diverse scientific and engineering fields. They include statistics, computer science, operations research, control theory and various specific fields such as psychology and even sociology. The techniques and practices vary in age, some dating from the 19th century and others from the last few years. 
-
-Machine learning presents a challenge to our analytical imperatives to deal with specificity and singularity in case studies. I have argued elsewhere [@Mackenzie_2017] that the specificity of  machine learning resides in its generalization, its tendency to vectorize, functionalise and probabilise situations within operational formations. The apparatus of generalization is perhaps the only way to explain its extraordinary proliferation across sciences, biomedicine, industries, media and government in the last decades. Of course, it is possible to choose any number of case studies of machine learning predictions operating in specific locations, but perhaps the most high profile would be social media and internet platforms such as Facebook and Google, where a myriad of machine learners can be found.
-
-- *Generalization* also has a specific technical sense in machine learning practice. It refers to the capacity of a machine learner (again, like predictor, the term machine learner includes both people and things) to accurately predict or classify when confronted with new data or 'observations.' 
-- The capacity of machine learning to generalize or to learn from examples has often been discussed, and is a regular feature of accounts of machine learning:
+Generalization* also has a specific technical sense in machine learning practice. It refers to the capacity of a machine learner (again, like predictor, the term 'machine learner' includes both people and things) to accurately predict or classify when confronted with new data or 'observations.' The capacity of machine learning to generalize or to learn from examples has often been discussed, and is a regular feature of accounts of machine learning, including those focused on its governance:
 
 > Machine learning can carry out tasks of such complexity that the desired outputs could not be specified in programs based on step-by-step processes created by humans [@RoyalSociety_2017,19]. 
 
-Characteristically, the capacity of these techniques to predict is inseparable from their capacity to generalize from known examples to fresh or hitherto unseen examples. And this capacity to generalize, and hence their predictive power,  depends on the models ability to 'carry out tasks of such complexity' that programs to do them could not be specified step-by-step by human programmers, statisticians or engineers. (As we will see, this inhuman capacity also creates the governance problems and need for policy around machine learners.)    
+Characteristically, the capacity of these techniques to predict is equated  to their capacity to generalize from known examples (training data or test data) to fresh or hitherto unseen examples. And this capacity to generalize, and hence their predictive power, depends on the models ability to 'carry out tasks of such complexity' that programs to do them could not be specified step-by-step by human programmers, statisticians or engineers. (As we will see, this 'inhuman' capacity also creates the governance problems -- the 'existential threat' --  and need for regulatory policy around machine learners.)    
 
 ## The possibilities and impossibilities of generalizing
 
-The preliminary observation here is that we are not dealing with isolated, epistemically concentrated forms of prediction, but populations of predictors that respond to the exigencies of *platforms.* This aspect of machine learning is often neglected in the policy discussions. Machine learning nearly always takes place in situations where the complexity of the situation cannot be specified in programs of action. 
+A  preliminary observation here is that we are not dealing with isolated, epistemically concentrated devices, but populations of predictors that form part of *platforms.* This aspect of machine learning is often neglected in the policy discussions. Machine learning nearly always takes place in situations where the complexity of the situation cannot be specified in programs of action. The 'tasks of such complexity' that the Royal Society report mentions arise in the hyper-complex environments associated with media, biomedicine, security, urban transportation, etc.  One brief example of this: `FBLearnerFlow` is a  machine learning pipeline developed and used by Facebook to allow predictions and predictive models to proliferate and populate every nook and cranny of the sprawling entanglement of systems it operates. According to its developers, roughly a million models have been developed using `FBLearnerFlow`. The simple point here is that we are not dealing with a single centre of predictive calculation, but a platformizing process in which predictions increasingly operate as ways of experimenting with, modulating and shaping the sometimes chaotic or unstable dynamics of platforms.  In this, and a myriad of other examples that could be given, prediction, and learning to predict takes place amidst populations of models of varying complexity. In some respects, we could say, machine learning is the practice of disciplining and automating the production of prediction, much as Crary argues that sight was autonomized in visual apparatuses of the 19th century. 
 
-One brief example of this: `FBLearnerFlow` is a  machine learning pipeline developed and used by Facebook to allow predictions and predictive models to proliferate and populate every nook and cranny of the sprawling entanglement of systems it operates. According to its developers, roughly a million models have been developed using `FBLearnerFlow`. The simple point here is that we are not dealing with a single centre of predictive calculation, but a platformizing process in which predictions increasingly operate as ways of experimenting with, modulating and shaping the sometimes chaotic or unstable dynamics of social media platforms.  
+A second observation concern automation or autonomisation in platforms. Machine learners are an integral part of the autonomisation of platforms. We need only thing of self-driving cars or personalized online advertising as rough and ready cases of this autonomisation. But this automation of prediction, its conversion into an operational practice, does not occur automatically. It arises from careful observation or the work of predictors. A population of predictive models (focused on  inference, classification, description, experimentation, etc.) is always involved. This population itself  is very much the target of observation, examination, testing and competition. That is, their predictive performance -- their accuracy, their error rates, etc. -- attract very close scrutiny and observation. Indeed, this observation of prediction is perhaps the main concern of  machine learners in practice. Many of the practices that define  machine learning as a set of techniques ranging from the transformation of data into a set of predictors, features or variables in a vector space, implementation of various models and training of their operation through use of various techniques of optimisation, randomisation, probabilisation and competitive testing entail observation and visual ordering.
 
-- In this, and a myriad of other examples that could be given, prediction, and learning to predict takes place amidst populations of models of varying complexity. In some respects, we could say, machine learning is the practice of disciplining and automating the production of prediction, much as Crary argues that sight was autonomized in visual apparatuses of the 19th century. 
+At the very core of machine learning, the claim to learning rests on a mode of observation. How does a model assimilate the features or predictors of the training data, the data whose significance is known, in  producing predictions with traction on the unknown or hitherto unseen events that might occur? In all their varieties --  neural nets, convolutional neural ents,  support vector machines, linear regressions, decision tree classifiers, random forests, logistic regressions, _k_ nearest neighbours, _k_-means clustering, principal component analysis, linear discriminant analysis, Latent Dirichlet Allocation, etc. --  the measurement of errors, the adjustment of model parameters, the tuning and optimisation of predictions pivots on the observation of differences between many versions of the same or related models. The techniques deployed to generate many versions of the same model and to optimise their parameters vary quite widely in their underlying intuitions, but invariably rely on the cybernetic function-finding techniques.  The predictors in  machine learning are always involved in a form of observation or partial observation. Often what is observed is a curve: the curve of a cost or objective function used in optimising the accuracy or error rate of the model.
 
--  This population of predictive models (involved in inference, classification, description, experimentation, etc.), is very much the target of observation. That is, their predictive performance -- their accuracy, their error rates, etc. -- attract very close scrutiny and observation. Indeed, this observation of prediction is perhaps the main concern of  machine learners in practice. Many of the practices that define  machine learning as a set of techniques ranging from the transformation of data into a set of predictors, features or variables in a vector space, implementation of various models and training of their operation through use of various techniques of optimisation, randomisation, probabilisation and competitive testing entail observation and visual ordering.
+- TBA -- brief discussion of the objective function, maybe in the context of neural net?
 - the link between prediction & vision: Crary's main argument about vision
 - the form of observation that we see in machine learning can be understood as a 'partial observer of the function' in Deleuze and Guattari's terms.
--
 
-## The observation of predictions
+## Conclusion
 
+My argument has tended towards the idea that the current regulatory dilemmas and controversies associated with prediction revolve around the interplay, mutability, proliferation and diversity of predictors, both in the sense of people doing predictive work and the ongoing transformation of data (images, sounds, measurements, transactions, speech, text, etc.) into predictors. Machine learning, I have suggested, has a platform reality. It multiplies predictors in the sense of the group of people or crowds involved in predicting. It multiplies predictors in the sense of subsuming data in and across almost any sector as predictors. The learning in machine learning, I have suggested too, attests not simply to an automation or autonomisation of prediction, but to the gradual accumulation of regimes of observation, examining and testing suited to the comparison of many predictions. The learning in machine learning, its capacity to deal with complexity, attests to the accumulation of regimes of observation and their partial delegation to non-humans. The capacity of  machine learners to generalize, I have suggested, depends on both a loss of specificity for predictors (hence, machine learners come from many places, and can even be marshalled in crowds, as Kaggle.com does), and a generalization of regimes of prediction (so that the same kinds of models used in fisheries management will appear in passenger threat detection or astronomy). 
+
+What does this mean for governance? It might mean re-thinking the premise of restriction to specificity, or the idea that the regulation of machine learning should be sector-specific, to use the language of the Royal Society report. At simplest, what I have described  suggests  that differences between the general and the specific, differences that have been regarded as axiomatic in emerging policies governing machine learning, do not maintain a stable configuration. That is, it may not be possible to hold on to site or sector specificity in thinking about the governance of machine learning-based forms of prediction. The sectors are, it seems, re-defined  by the plurality of predictors and the generalization of prediction.  What does it mean that machine learners in France might be developing the predictive models that change the flow of passengers through security checkpoints at LA or Atlanta airports? 
 
 ## References
 
