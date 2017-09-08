@@ -143,3 +143,7 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 - did a version of the slides - adding as mackenzie_govern_predict.odp
 - cleaned up the opening argument a bit, added a few references and sent governing_prediction.pdf
 - TODO: if this was to develop -- add some of the lit on airport screening e.g. Lisa Parks on the impossibility of regulating the flow of objects Points of Departure: The Culture of US Airport Screening Lisa Parks Journal of Visual Culture, vol. 6, 2: pp. 183-200. , First Published Aug 1, 2007
+
+## Fri 08 Sep 2017 10:53:40 BST
+- going through text just once, quickly (< 1hour) to highlight main argument 
+- adding more images. Just realised I need to force that. 
