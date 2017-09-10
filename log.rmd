@@ -147,3 +147,41 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 ## Fri 08 Sep 2017 10:53:40 BST
 - going through text just once, quickly (< 1hour) to highlight main argument 
 - adding more images. Just realised I need to force that. 
+
+## Sun 10 Sep 2017 16:50:53 BST
+-  thoughts on the presentation:
+    - could drop the crary without losing too much
+- it'd be good to have in my head:
+    1. the first sentence or paragraph
+    2. the main headings, and a sense of what happens under each heading
+    3. the first sentence of conclusion
+- thinking about the first sentence:
+    - "Predictors in machine learning, the domain of prediction I will be discussing, are the variables or 'features' forming part of the model used in inference or prediction"
+    - each word in the sentence would be worth some time:
+         - how did they come to be called predictors? By whom?
+         - what is the 'domain of prediction' of machine learning, and how is it distinguished from other domains?
+         - how could we discuss a domain of prediction? On what terms? At what level of specificity or generality? 
+         - how does something become a variable? What varies? What does not vary?
+         - how does a variable differ from a feature? Where do features come from?
+         - how does a variable form part of a model? What are the other parts of a model? How they form a model?
+         - how is a model used in inference or prediction? Is all inference prediction?
+    - 7 questions on the first sentence -- that would lead to many questions? 
+- thinking about the structure - 6 sections, all focused on testing the claim about restriction to specificity:
+    - intro: **observers** + predictors (hall)
+    - governance of prediction: restrict to **specificity** (lounge)
+    - **population** of predictors (tv)
+    - multiplication of prediction: **generalization** (passage)
+    - **observation** of generalization (dining)
+    - conclusion (kitchen)
+- thinking about the concluding sentence:
+    - "Emerging regulatory controversies and dilemmas associated with machine learning prediction revolve around the diversity, interplay, mutability and proliferation of predictors, both in the sense of people doing prediction and in the ongoing transformation of all forms of data (sound, movement, images, measurement, text, transaction, etc.) into variables in models."
+    - probably even more questions here than in the first sentence of the paper. 
+        - where are regulatory problems emerging?
+        - what are the controversies?
+        - what are the dilemmas? How do they emerge?
+        - how does their emergence 'revolve around'?
+        - does that mean they don't deal with them? They remain centrifugal? Does it mean they pivot on them or are anchored in them?
+        - what connects the different dynamics of predictors (diversity, interplay, mutability and proliferation) -- is there a formation that gives rise to them?
+        - how do people and variables in models relate to each other in such a formation?
+        
+
