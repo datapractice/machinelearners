@@ -184,4 +184,10 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
         - what connects the different dynamics of predictors (diversity, interplay, mutability and proliferation) -- is there a formation that gives rise to them?
         - how do people and variables in models relate to each other in such a formation?
         
+## Mon 11 Sep 2017 18:41:25 CEST
+- adding more guidance to the slides to help people get the argument 
 
+## Wed 13 Sep 2017 11:52:27 CEST
+- possible journal http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1748-5991 
+- TODO: more regulatory stuff: The agenda includes keynote addresses from Professor Dame Wendy Hall, Professor of Computer Science, University of Southampton and Joint Lead, Government Review into Artificial Intelligence and Professor Phillip Nelson, Chief Executive, Engineering and Physical Sciences Research Council and Chair, Strategic Executive, RCUK, and is chaired by Lord Clement-Jones, Chairman, House of Lords Select Committee on Artificial Intelligence.
+- 
