@@ -1,1 +1,0 @@
-/home/mackenza/notes/RoySoc_ML_2017.md
