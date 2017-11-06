@@ -191,3 +191,15 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 - possible journal http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1748-5991 
 - TODO: more regulatory stuff: The agenda includes keynote addresses from Professor Dame Wendy Hall, Professor of Computer Science, University of Southampton and Joint Lead, Government Review into Artificial Intelligence and Professor Phillip Nelson, Chief Executive, Engineering and Physical Sciences Research Council and Chair, Strategic Executive, RCUK, and is chaired by Lord Clement-Jones, Chairman, House of Lords Select Committee on Artificial Intelligence.
 - 
+
+## Mon 06 Nov 2017 15:13:32 GMT
+- this slashdot posting:
+----
+Rise of the Machines Must Be Monitored, Say Global Finance Regulators // Slashdot
+https://tech.slashdot.org/story/17/11/01/1623207/rise-of-the-machines-must-be-monitored-say-global-finance-regulators?utm_source=rss1.0mainlinkanon&utm_medium=feed
+
+A reader shares a report: Replacing bank and insurance workers with machines risks creating a dependency on outside technology companies beyond the reach of regulators, the global Financial Stability Board (FSB) said on Wednesday. The FSB, which coordinates financial regulation across the Group of 20 Economies (G20), said in its first report on artificial intelligence (AI) and machine learning that the risks they pose need monitoring. AI and machine learning refer to technology that is replacing traditional methods to assess the creditworthiness of customers, to crunch data, price insurance contracts and spot profitable trades across markets. There are no international regulatory standards for AI and machine learning, but the FSB left open whether new rules are needed.
+
+Read more of this story at Slashdot.
+
+
