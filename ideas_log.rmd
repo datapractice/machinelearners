@@ -8,4 +8,6 @@
 ## Wed 15 Mar 2017 09:30:59 GMT
 - I'm still interested in Kaggle competitions -- could perhaps learn a lot from looking at the differences between those more closely. e.g. https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection could be worth a look
 
+## Tue 14 Nov 2017 13:24:37 GMT
+- still also have the idea of the model of machine learning and how it might include all the subjects, enunciations, operations and functions in as weighted variables, etc. -- this might be a figure that helps communicate with machine learners. 
 
