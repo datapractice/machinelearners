@@ -14,4 +14,5 @@
 ## Tue 14 Nov 2017 13:24:37 GMT
 - still also have the idea of the model of machine learning and how it might include all the subjects, enunciations, operations and functions in as weighted variables, etc. -- this might be a figure that helps communicate with machine learners. 
 
-
+## Sat 18 Nov 2017 15:44:12 GMT
+- didn't realise that anomaly and outlier detection mainly use machine learning; another possible area to write about; cf what that paper by Tobias Blanke and Aradau discusses in Paris
