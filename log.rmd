@@ -191,3 +191,9 @@ https://royalsociety.org/topics-policy/projects/machine-learning/ saved at ~/arc
 - possible journal http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1748-5991 
 - TODO: more regulatory stuff: The agenda includes keynote addresses from Professor Dame Wendy Hall, Professor of Computer Science, University of Southampton and Joint Lead, Government Review into Artificial Intelligence and Professor Phillip Nelson, Chief Executive, Engineering and Physical Sciences Research Council and Chair, Strategic Executive, RCUK, and is chaired by Lord Clement-Jones, Chairman, House of Lords Select Committee on Artificial Intelligence.
 - 
+
+## Tue 24 Apr 2018 19:30:04 BST
+- a long discussion of data-driven governance at the Roskilde data-relation event made me think 
+    (a) we could see the infographics of machine learning as a confusion, as a crisis-provoking instrument
+    (b) that the focus of governance is not so much the ostensible object of the data, but the nature of the organisation itself, its governance: data-driven governance could mean something quite different if the 'data' is taken to be one of those symbolic-material entities that is existing plurally; why do 'I' have a sense that data might do something except that it has been enriched in that way? So it would be good to have an account of this;
+    - also the point that governance is informally infrastructuralized through methods; 
