@@ -16,3 +16,6 @@
 
 ## Sat 18 Nov 2017 15:44:12 GMT
 - didn't realise that anomaly and outlier detection mainly use machine learning; another possible area to write about; cf what that paper by Tobias Blanke and Aradau discusses in Paris
+
+## Thu 07 Jun 2018 14:11:08 BST
+- Zuberi on statistics and the construction of race: how is that being re-done today in machine learning? 
