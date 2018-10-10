@@ -19,3 +19,24 @@
 
 ## Thu 07 Jun 2018 14:11:08 BST
 - Zuberi on statistics and the construction of race: how is that being re-done today in machine learning? 
+
+## Thu 11 Oct 2018 09:45:30 AEDT
+- xgboost as a classic data science library -- would be useful to track its growth on  Github and the like
+
+```{r xgb}
+library(xgboost)
+# load data
+data(agaricus.train, package = 'xgboost')
+data(agaricus.test, package = 'xgboost')
+train <- agaricus.train
+test <- agaricus.test
+# fit model
+bst <- xgboost(data = train$data, label = train$label, max_depth = 2, eta = 1, nrounds = 2,
+               nthread = 2, objective = "binary:logistic")
+importance  <- xgb.importance(feature_names = colnames(train), model=bst)
+xgb.plot.importance(importance_matrix = importance)
+# predict
+pred <- predict(bst, test$data)
+help.start()
+```
+
