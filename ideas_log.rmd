@@ -40,3 +40,8 @@ pred <- predict(bst, test$data)
 help.start()
 ```
 
+
+## Fri 02 Nov 2018 10:02:52 AEDT
+- meeting with Jenny Davis about the grandchallenge thing;
+- added the document as grandchallenge_proposal.pdf
+- looking at people in ANU computing on machine learning -- Bob Williamson, Lexing Xie, and Sylvie Thiebaux https://users.cecs.anu.edu.au/~thiebaux  and Marcus Hutter, universal artificial intelligence 
