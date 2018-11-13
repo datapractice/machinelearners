@@ -40,3 +40,6 @@ pred <- predict(bst, test$data)
 help.start()
 ```
 
+
+## Tue 13 Nov 2018 14:15:49 AEDT
+- discussing the many fairness kits for  machine learning with Anna -- what are they doing? Is that going to work? To do what?
