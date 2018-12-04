@@ -45,7 +45,8 @@ help.start()
 - discussing the many fairness kits for  machine learning with Anna -- what are they doing? Is that going to work? To do what?
 - this might be an occasion to do some ontography [@Lynch_2013]:
 
->conduct empirical studies of specific instances in which ontological questions are ‘in actuality decided through specific,
-historical, cultural, technological, scientific interventions’, and then, if one so chooses, to
-go further with experimental interventions.
+>conduct empirical studies of specific instances in which ontological questions are ‘in actuality decided through specific, historical, cultural, technological, scientific interventions’, and then, if one so chooses, to go further with experimental interventions.
 - that's actually Marres
+
+## Tue 04 Dec 2018 11:01:11 AEDT
+- AINow conference program https://ainowinstitute.org/ainow-program-2018.html has talks worth listening too 
