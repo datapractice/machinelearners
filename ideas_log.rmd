@@ -50,3 +50,19 @@ help.start()
 
 ## Tue 04 Dec 2018 11:01:11 AEDT
 - AINow conference program https://ainowinstitute.org/ainow-program-2018.html has talks worth listening too 
+
+## Mon 01 Apr 2019 15:29:45 AEDT
+- current hot research problems in  machine learning - see https://www.quora.com/What-are-the-current-research-problems-in-machine-learning-right-now
+1) Why deep learning works (a biggie)
+2) Theoretical guarantees of topological data analysis (stability, for instance)
+3) Sueprlearning and other meta-learning strategies
+4) Bayesian-based algorithms, particularly for deep learning and generalizable AI
+5) Quantum machine learning and how to convert algorithms to quantum systems (https://www.slideshare.net/Colle...)
+6) Hardware-interfacing algorithms that can leverage things like GPUs (kind of like XGBoost)
+7) Replacing linear algebra and numerical matrices with the tools of numerical algebraic geometry
+
+Many, many more!
+
+This reminds me a bit of the Test of Time talk given at NIPS 2017 about gradient descent; see notes for Susan Halford talk, late March 2019; green small notebook 
+
+
