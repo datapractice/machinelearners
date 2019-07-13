@@ -77,3 +77,6 @@ This reminds me a bit of the Test of Time talk given at NIPS 2017 about gradient
 - reading SciAm 2017(?) about prediction for mental health and education; predictive education? How does prediction fit with future more generally? Cf Halford talk on futures ...  
 - many articles and systems using dyslexia; and speaking of a post-dyslexic world because the time of reading has gone. See Gabrieli's work in Science and also the Diffusion Tensor Imaging. Fascinating that the prediction & humanitarian article at https://www.sciencedirect.com/science/article/pii/S0896627314009672 actually goes through the studies and lists the model used in terms of whether it is really predictive or not. I've not seen this criteria of prediction used before.  
 - 
+
+## Sat 13 Jul 2019 15:25:45 AEST
+- reading Becker on Ragin's boolean analysis. Suggests a very different way to model diversity and variations, a much more configurative way. Could machine learning be adapted for that? It would be as if you looked not for a single peak of optimisation, but the whole range of peaks, each of which might instance a different configuration. This would be a way of developing machine learning outside the linear tradition it comes from.   
