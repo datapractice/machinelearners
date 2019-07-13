@@ -37,6 +37,7 @@ importance  <- xgb.importance(feature_names = colnames(train), model=bst)
 xgb.plot.importance(importance_matrix = importance)
 # predict
 pred <- predict(bst, test$data)
+plot(pred)
 help.start()
 ```
 
