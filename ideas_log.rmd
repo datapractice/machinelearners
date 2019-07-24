@@ -86,3 +86,6 @@ This reminds me a bit of the Test of Time talk given at NIPS 2017 about gradient
 - reading Becker on Ragin's boolean analysis. Suggests a very different way to model diversity and variations, a much more configurative way. Could machine learning be adapted for that? It would be as if you looked not for a single peak of optimisation, but the whole range of peaks, each of which might instance a different configuration. This would be a way of developing machine learning outside the linear tradition it comes from.   
 - would need to think carefully how to do this. 
 
+
+## Wed 24 Jul 2019 14:17:52 AEST
+- the competion stuff continues -- AWS DeepRacer could be an example, as it promotes RL globally. See https://aws.amazon.com/deepracer; the international competition has different scores; what is happening there?
