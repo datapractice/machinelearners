@@ -1,0 +1,4 @@
+
+
+## Tue 25 May 2021 13:37:04
+-writing tip lexicon piece 500 words in machinelearning.rmd. Hard to work out what the ending will be. Some contemporary research? My hopes for machine learning? What machine learning does to writing? Machine learning ethnography? 
