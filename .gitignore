@@ -2,7 +2,6 @@
 *.swp
 *.png
 **/*.pdf
-*.jpg
 */cache
 cache/
 animations/

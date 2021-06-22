@@ -5,3 +5,52 @@
 
 ## Wed 02 Jun 2021 11:53:48
 - trying to cut it down to size 
+
+## Tue 22 Jun 2021 10:53:05
+- have revamped it quite a lot to get it to make sense, but still doesn't really finish. Is the ending about belief?  
+- I cut out what's below:
+
+--------------
+
+Down there, torrents of social media and disruptive platformisation, a rush hour of scientific publications and surging funding calls, data science initiatives and AI hubs coalesce medicine, shopping, elections, policing, driving, banking, taxation, extinctions, music and cooking into the X-factors of machine learning. 
+
+The contrails of machine learning arc across the skies as it generalizes.
+Caught up in the slipstream, tonnes of CO_2 in my wake, I land in Paris, Venice, Stockholm, London, Utrecht, Berlin, Dublin, Barcelona,  and many smaller terminals. But the logistic expression only gets me so far. In the arrival halls,   two queues form, one for facts and one for values.  On the facts, there is the sciencing up of data science @data_science work, the statistical practices of biomedicine or ecology that have better differentiated breast cancer sub-types, tracked migrating whales, identified illegal fish catches, not to mention AlphaGo playing Go at a superhuman technical level, all not just pivoting but pirouetting on machine learning. Competitive wins are part of the dazzle. In every scientific and technological sub-field and in the social sciences and humanities too, reviews of machine learning appear describing the imperative to embrace the logistic techniques, or lose.
+
+
+Value regimes crowd into arrivals too. The traffic through the Alan Turing Institute, bastioned in the British Library, includes machine learners, ethicists, philosophers, artists, policy-analysts and social scientists, as well as me. The Royal Society *and* McKinsey & Company  issue reports on machine learning and its social challenges. On campuses, data science institutes and initiatives seat computer scientists, statisticians, epidemiologists and sociologists around  tables, nudging and prodding the latter towards responsibility for ethical and social dimensions. Controversies of algorithmic bias, discrimination and inequality boil over in elections, welfare payments, state and corporate surveillance.  The racialising @GWF9VZBZ#Benjamin_2019, gendering, and stratifications of the classifiers become matters of algorithmic justice, ethics  @EYKFFDBD#Amoore_2020 and governmentality @BYKXJUTX#Aradau_Aradau_2017.
+
+Writing on the back of napkins only get you so far on the learning curve. 'What about regulation?' The question comes after my public lecture on machine learning. I'm flustered, and flippant in response. I shut the question down, like an irritable border official handing back yet another passport in a long queue.  It weighs me down, as if all the dazzling inclusions of the proposition, have been rejected. Regulation, a topic that Keating and Cambrosio had already figured at the centre of their account of biomedical platforms a decade earlier @38ZTSKGX#Keating_Cambrosio_2003 surges to the front of stage.
+
+
+I struggle to retrieve my baggage on arrival, not because of any lack of organisation or efficiency. 
+
+, perhaps because all around the me the fact-value split is taking hold of discussion about it.   
+I'm scripted by it. Machine learning has delegated something to me, perhaps one of its contradictions: become a machine learner and think about it at the same time. It's a classic ANT-case in reverse. The artefactual is scripting the factual.  It's a sobering thought. I'm working as part of the propagation of the function finding. I'm help find a function.  
+In the office, my laptop fan is making too much noise because its trying to build a model of a platform
+I try to model the distribution of activities of a few tens of million people and a few million projects. On a laptop.
+all around me, machine learning is ramping up
+My proposition? that we might include something more through ml? and that the practices itself might become more observable, common because of that?
+I like what I find in the propagation of machine learning. It's inclusion of so many things in the world: ecosystems, media platforms, patterns of infection, etc. Its as if there is a quasi-common ground, a space for composition of collectives, something different to the familiar institutions. Perhaps not.
+
+
+Struggling with a massive literature
+Coping with millions of repositories
+Drowning in streams of social media, twitter, youtube and news announcements
+Surrounded by funding calls and projects, especially a mushrooming of data science and machine learning projects; including many in universities as well as Google, etc.
+
+# Getting it wrong in practice
+
+I never make it to the Copenhagen Machine Learning Meetups, not once during several months in Copenhagen in 2014. The meetups, usually early evening,  clash with my non-research commitments, like taking kids to the park after school.  An evening meetup at the offices of King!, the makers of Kandy Krush Saga, a particularly juicy instance of algorithmic absorption, is on my calendar. But I don't go.  
+
+It is possible that my frustrations at missing fieldwork, of building an ethnographic archive of experience on which I can draw, are trivial. And the desire to be in a field, to have a  field site, to somehow ground research in peoples and their practicing, to move away from my desk and screen, to cycle along the lovely streets, waterfronts and urban conviviality of the city, to meet the intelligent, good-humoured Danish machine learners, is strong.  There is a countervailing desire, strongly felt, in the way that a toothache might be, acting this whole time. It shadows my every analytical move, vexing my attempts to find something redeeming in machine learning. 
+
+
+# How to end
+
+I'm in the Park, Kron Prinzessen Gaden. The museum has the crown jewels. Further along, the Botanic gardens have the collections from the colonies. Further along, the gallery has the landscapes and the modernists.  
+- latour's learning curve, the ability to keep track, the inclusion of many things in the collective; the need to rank, classify, the procedures that allow that to be followed, and articulated. Propositions with habits. 
+The  stasis of flight dissolves. Anxieties of border control, a wrestling match  with bags, and the confusion of a new city's local transport and its fare machines take over.  
+'Doors to manual'.
+
+- sending machinelearning.docx as the version; had to add the image of the logreg
