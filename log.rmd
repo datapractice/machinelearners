@@ -54,3 +54,7 @@ The  stasis of flight dissolves. Anxieties of border control, a wrestling match 
 'Doors to manual'.
 
 - sending machinelearning.docx as the version; had to add the image of the logreg
+
+## Mon 28 Jun 2021 09:27:54
+- BRW returns with McKenzie_machinelearning BRW.docx 
+- I rewrite there McKenzie_machinelearning BRW_AM.docx and send back. The method of tracing is the key idea.  

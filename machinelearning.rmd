@@ -40,7 +40,8 @@ Or is it, as William James @BD5IBJKX#James_1935  might see it, a form of experie
 We wind through it, subscripted, superscripted and supervised, passing through gates such as the 'bias' $\beta_0$,  feeling the weights of the model parameters $\hat{\beta}$, pulled apart by the exponential function, and lined up again by the summing operator $\sigma$, the operator those nod says 'yes, go through', or 'no, stand here.' 
 
 The dazzle of technicalities rarely benefits understandings of technical practice, except perhaps in  this one respect: 
-we need to be somehow transported for there to be experience of them: 'it is only by risking our persons from one hour to another that we live at all' @TQXNHIUK#James_1956 [p.34]. 
+we need to be somehow transported for there to be experience of them.
+'It is only by risking our persons from one hour to another that we live at all' @TQXNHIUK#James_1956 [p.34]. 
 The stark simplicity of the expression still dazzles me almost as much as it did in 2014 (see @HU8RHD7Q#Mackenzie_2017 for one attempt to manage that risk). 
 If I am transported by a technique, dazzled by it, how do I move? There is no flight without queues, scans and controls, all the costs and losses of movement. So I see the expression now not so much as a brilliant idea scribbled on a paper napkin, or the map of a landscape laid out below, but  a full body scanner in which we stand with arms raised  @GWF9VZBZ#Benjamin_2019, @EYKFFDBD#Amoore_2020. 
 
